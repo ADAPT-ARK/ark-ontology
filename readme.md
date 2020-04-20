@@ -1,7 +1,7 @@
-#ARK Ontologies
-	This repository is used to update the ARK ontologies (Cube, Amarach, Projects and Terminologies) and provides a content negotiation configuration to serve different content using the ontologies. This repository allows to upload the ontologies and update the content negotation.
+# ARK Ontologies
+This repository is used to update the ARK ontologies (Cube, Amarach, Projects and Terminologies) and provides a content negotiation configuration to serve different content using the ontologies. This repository allows to upload the ontologies and update the content negotation.
 	
-##To update the ontologies on your local machine
+## To update the ontologies on your local machine
 			1. clone the repository to your local machine
 			2. update the ontologies and their corresponding html files
 			3. Update the .htaccess file if you make an additional files or change the file names
