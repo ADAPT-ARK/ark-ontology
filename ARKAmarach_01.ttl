@@ -1,0 +1,594 @@
+@prefix arkam: <https://ark.adaptcentre.ie/Ontologies/ARKAmarach#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vocab: <http://purl.org/vocab/vann/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+arkam: a owl:NamedIndividual,
+        owl:Ontology ;
+    dc:contributor "Conor Nolan",
+        "Jessica Brown",
+        "Nick McDonald",
+        "Rob Brennan" ;
+    dc:creator "Yalemisew Abgaz" ;
+    dc:description "A model for representing concepts, relationships and axioms for Aviation Risk Knowledge flight operaiton reporting system."@en ;
+    dc:issued "02/07/2019" ;
+    dc:modified "02/07/2019" ;
+    dc:publisher "https://www.ARKAmarach.adaptcentre.ie/" ;
+    dc:rights "https://creativecommons.org/licenses/by-nc/4.0/" ;
+    dc:title "Access Risk Knowledge Ontology Amarach Report Ontology"@en ;
+    vocab:preferredNamespacePrefix "ARKAM" ;
+    vocab:preferredNamespaceUri "https://ARKAmarach.adaptcentre.ie/Ontologies/ARKAmarach#" ;
+    owl:versionIRI <https://ARKAmarach.adaptcentre.ie/Ontologies/ARKAmarach/0.1> ;
+    owl:versionInfo "0.1" .
+
+arkam:AKHstationLowInStock a owl:DatatypeProperty ;
+    rdfs:label "AKH station low in stock"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:ASLLTDOperationalStatus a owl:Class ;
+    rdfs:label "ASL LTD Operational Status"@en ;
+    dc:description "Information about ASL ltd aircraft, crew, operational status etc. "@en ;
+    rdfs:comment ""@en .
+
+arkam:AVI a owl:DatatypeProperty ;
+    rdfs:label "AVI"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:AerLingusOperationalStatus a owl:Class ;
+    rdfs:label "Aer Lingus Operational Status"@en ;
+    dc:description "Information about Aer Lingus regional aircraft, crew, operational status etc. "@en ;
+    rdfs:comment ""@en .
+
+arkam:LDMCRStatus a owl:DatatypeProperty .
+
+arkam:Maintenance a owl:Class ;
+    rdfs:label "Maintenance"@en ;
+    dc:description "Information about fleet technical issues and planned overnight maintenance"@en ;
+    rdfs:comment "Maintenance could include both technical issue or a planned overnight maintenance of a given aircraft"@en .
+
+arkam:SecurityType rdfs:label "Security type"@en ;
+    dc:description "The type of the security situation where evere there is one"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:StandbyAircraft a owl:Class ;
+    rdfs:label "Standby Aircraft"@en ;
+    dc:description "An aircraft which is standby to replace any other aircraft in a similar route"@en ;
+    rdfs:comment "This information includes the available number and the availability time. There is risk associated?"@en .
+
+arkam:StandbycabinCrew dc:description "Information about the number and details of standby crew"@en .
+
+arkam:WCHC a owl:DatatypeProperty ;
+    rdfs:label "WCHC"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range xsd:int .
+
+arkam:WCHR a owl:DatatypeProperty ;
+    rdfs:label "WCHR"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range xsd:int .
+
+arkam:WCHS a owl:DatatypeProperty ;
+    rdfs:label "WCHS"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range xsd:int .
+
+arkam:aircraftRegistrationNo a owl:DatatypeProperty ;
+    rdfs:label "Aircraft registration number"@en ;
+    dc:description "The aircraft registration number "@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:aircraftType a owl:DatatypeProperty ;
+    rdfs:label "Aircraft type"@en ;
+    dc:description "The type of the aircraft"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:availableNumber a owl:DatatypeProperty ;
+    rdfs:label "Available number"@en ;
+    dc:description "The number of Available standby aircrafts"@en ;
+    rdfs:range xsd:int .
+
+arkam:availableTime a owl:DatatypeProperty ;
+    rdfs:label "Available time"@en ;
+    dc:description "The time of available standby aircraft"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:base a owl:DatatypeProperty ;
+    rdfs:label "Base"@en ;
+    dc:description "The base location of a standby pilot?"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:booked a owl:DatatypeProperty ;
+    rdfs:label "Booked"@en ;
+    dc:description "nèeds detail"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:cabinCrewE a owl:DatatypeProperty ;
+    rdfs:label "Cabin crew E"@en ;
+    dc:description "The number of standby cabin crew"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:cabinCrewL a owl:DatatypeProperty ;
+    rdfs:label "Cabin crew L"@en ;
+    dc:description "The number of standby cabin crew"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:cabinCrewM a owl:DatatypeProperty ;
+    rdfs:label "Cabin crew M"@en ;
+    dc:description "The number of standby cabin crew"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:captainE a owl:DatatypeProperty ;
+    rdfs:label "Captain E"@en ;
+    dc:description "The number of standby captains E"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:captainL a owl:DatatypeProperty ;
+    rdfs:label "Captain L"@en ;
+    dc:description "The number of standy captains L"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:captainM a owl:DatatypeProperty ;
+    rdfs:label "Captain "@en ;
+    dc:description "The number of standby captains M"@en ;
+    rdfs:range rdfs:Literal .
+
+<https://ark.adaptcentre.ie/Ontologies/ARKAmarach#color?> a owl:DatatypeProperty ;
+    rdfs:label "Color"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:connection a owl:DatatypeProperty ;
+    rdfs:label "Connection"@en ;
+    dc:description "The number of connectionsin the cancellation"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:crewChangeNote a owl:DatatypeProperty ;
+    rdfs:label "Crew change note"@en ;
+    dc:description "A note about the crew change"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:crewCouplingNote a owl:DatatypeProperty ;
+    rdfs:label "Crew coupling note"@en ;
+    dc:description "A note about the crew coupling"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:dayTrippers a owl:DatatypeProperty ;
+    rdfs:label "Day trippers"@en ;
+    dc:description "The number of daytrippers for firstwave cancellations"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:de-iceingPortal a owl:DatatypeProperty ;
+    rdfs:label "De-icing portal"@en ;
+    dc:description "The information regarding de-icing of an aircraft"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:estimatedServiceTime a owl:DatatypeProperty ;
+    rdfs:label "Estimated service time"@en ;
+    dc:description "The estimated service time of an aircraft"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:firstOfficerE a owl:DatatypeProperty ;
+    rdfs:label "First officer E"@en ;
+    dc:description "The number of standby first officers R"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:firstOfficerL a owl:DatatypeProperty ;
+    rdfs:label "First officer L" ;
+    dc:description "The number of standby first officers L"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:firstOfficerM a owl:DatatypeProperty ;
+    rdfs:label "First officer M"@en ;
+    dc:description "The number of standby first officers M"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:firstWaveZone a owl:DatatypeProperty ;
+    rdfs:label "First wave zone"@en ;
+    dc:description "The zone of the first wave flights (dub eur, dub-lhr etc)"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:flightNumber a owl:DatatypeProperty ;
+    rdfs:label "Flight number"@en ;
+    dc:description "The flight number"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:guestBooked a owl:DatatypeProperty ;
+    rdfs:label "Guest booked"@en ;
+    dc:description "The total number of guests booked in that day"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:hasAircraftStatus a owl:ObjectProperty ;
+    rdfs:label "has aircraft status"@en ;
+    dc:description "Relates the aircraft status with a given report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:AircraftStatus .
+
+arkam:hasCityJetInformation a owl:ObjectProperty ;
+    dc:description "A relationship linking a report with City Jet information"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:CityJetInformation .
+
+arkam:hasCrewChange a owl:ObjectProperty ;
+    rdfs:label "has crew change"@en ;
+    dc:description "The crew change information a report contains"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:CrewChange .
+
+arkam:hasCrewCoupling a owl:ObjectProperty ;
+    rdfs:label "has crew coupling"@en ;
+    dc:description "The crew coupling information a report contains"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:CrewCoupling .
+
+arkam:hasFlightLoad rdfs:label "has flight load"@en ;
+    dc:description "Links a report with a flight load"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:FlightLoad .
+
+arkam:hasFlightTurnAround a owl:ObjectProperty ;
+    rdfs:label "has flight turnaround"@en ;
+    dc:description "The flight turnaround information a report contains"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:FlightsWithTurnaround .
+
+arkam:hasFocusFlight a owl:ObjectProperty ;
+    rdfs:label "has focus flight"@en ;
+    dc:description "Relates the focus flight information with a given report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:FocusedFlight .
+
+arkam:hasFutureIssue a owl:ObjectProperty ;
+    rdfs:label "has future issue"@en ;
+    dc:description "Relates the information about the future issue with a report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:FutureIssue .
+
+arkam:hasInboundRoutesWithPax a owl:ObjectProperty ;
+    rdfs:label "has inbound route"@en ;
+    dc:description "Links a route with a report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:Route .
+
+arkam:hasIrregularOperation a owl:ObjectProperty ;
+    rdfs:label "has irregular operation"@en ;
+    dc:description "The irregular operation information contained in a Report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:IrregularOperation .
+
+arkam:hasLongHaulEstBoundArrival a owl:ObjectProperty .
+
+arkam:hasMainLineStandby a owl:ObjectProperty ;
+    rdfs:label "has mainline standby"@en ;
+    dc:description "Relates the mainline standby information with a given report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:MainLineStandby .
+
+arkam:hasOperationalIssue a owl:ObjectProperty ;
+    rdfs:label "has operational issue"@en ;
+    dc:description "Relates the information about operational issue with a report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:OperationalIssue .
+
+arkam:hasOperationalStatus a owl:ObjectProperty ;
+    rdfs:label "has operational status"@en ;
+    dc:description "The hasOperationalStatus relationship relates the report with the operational status information"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:OperationalStatus .
+
+arkam:hasOptionForCancellation a owl:ObjectProperty ;
+    rdfs:label "has option for cancellation"@en ;
+    dc:description "A property that links a report with the cancellation options for flights"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:Cancellation .
+
+arkam:hasOverBooking a owl:ObjectProperty ;
+    rdfs:label "has overbooking"@en ;
+    dc:description "A property that links the report with the details of flight overbooking"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:OverBooking .
+
+arkam:hasOvernightMaintenance a owl:ObjectProperty ;
+    rdfs:label "has overnight maintenance"@en ;
+    dc:description "links an overnight maintenance information with a specific report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:OvernightMaintenance .
+
+arkam:hasPBZFlight a owl:ObjectProperty ;
+    rdfs:label "has PBZ flight"@en ;
+    dc:description "this property relates the PBZ flight information with the a given report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:PBZFlight .
+
+arkam:hasPRMSpecialHandling a owl:ObjectProperty ;
+    rdfs:label "has PRM special Handling"@en ;
+    dc:description "A property that links the report with PRM special handling"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:PRMSpecialHandling .
+
+arkam:hasReportParticipant a owl:ObjectProperty ;
+    rdfs:label "has report participant"@en ;
+    dc:description "A relationship linking a report with the participants in the report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:Participant .
+
+arkam:hasSecurity a owl:ObjectProperty ;
+    rdfs:label "has security"@en ;
+    dc:description "A relationship which links a report with security information"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:Security .
+
+arkam:hasStandbyCabinCrew a owl:ObjectProperty ;
+    rdfs:label "has standby cabin crew"@en ;
+    dc:description "Relates the cabin crew information with a report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:StandbyCabinCrew .
+
+arkam:hasStandbyPilot a owl:ObjectProperty ;
+    rdfs:label "has standby pilot"@en ;
+    dc:description "Relates the standby pilots information with a report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:StandbyPilot .
+
+arkam:hasTransferDetail a owl:ObjectProperty ;
+    rdfs:label "has transfer detail"@en ;
+    dc:description "Links a report with the transfer information"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:Transfer .
+
+arkam:hasWalkOutFlight a owl:ObjectProperty ;
+    rdfs:label "has walkout flight"@en ;
+    dc:description "Relates the walkout information with a given report"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:WalkOutFlight .
+
+arkam:hasWeather a owl:ObjectProperty ;
+    rdfs:label "has weather"@en ;
+    dc:description "Links a report with the weather information"@en ;
+    rdfs:domain arkam:Report ;
+    rdfs:range arkam:Weather .
+
+arkam:hascityJetInformation rdfs:label "has City Jet Information"@en .
+
+arkam:humanRemain a owl:DatatypeProperty ;
+    rdfs:label "Human remain"@en ;
+    dc:description "Information about the presence of a human remain on a flight"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:inbound a owl:DatatypeProperty ;
+    rdfs:label "Inbound"@en ;
+    dc:description "The number of inbound transferes. Needs detail"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:lDMCRStatus rdfs:label "IDMCR status"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:loadFactor a owl:DatatypeProperty ;
+    rdfs:label "Load factor"@en ;
+    dc:description "The percentage of load of all the aircrafts in a day"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:maintenanceDetail a owl:DatatypeProperty ;
+    rdfs:label "Maintenance detail"@en ;
+    dc:description "Information about the maintenance of an aircraft"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:network a owl:DatatypeProperty ;
+    rdfs:label "Network" ;
+    dc:description "Represents the category of the network of flights as short-haul, long-haul, regional etc"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:note a owl:DatatypeProperty ;
+    rdfs:label "Note"@en ;
+    dc:description "A note about future flight issues"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:number a owl:DatatypeProperty ;
+    rdfs:label "Number"@en ;
+    dc:description "A number "@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:numberOfEscorts a owl:DatatypeProperty ;
+    rdfs:label "Number of escorts"@en ;
+    dc:description "The number of passengers travelling with a person under security"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:onwardDestinationFlight a owl:DatatypeProperty ;
+    rdfs:label "Onward destination flight"@en ;
+    dc:description "The flight number of onward destination flights"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:onwardTotal a owl:DatatypeProperty ;
+    rdfs:label "Onward total" ;
+    dc:description "The total number of passengers travelling onwards"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:operation a owl:DatatypeProperty ;
+    rdfs:label "Operation"@en ;
+    dc:description "needs detail"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:operationalStatusNote a owl:DatatypeProperty ;
+    rdfs:label "Operational status" ;
+    dc:description "Note about the operational status of an aircraft"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:otherInformation a owl:DatatypeProperty ;
+    rdfs:label "Other information"@en ;
+    dc:description "Any related information related to security"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:outboundTransfer a owl:DatatypeProperty ;
+    rdfs:label "Outbound transfers"@en ;
+    dc:description "Number of outbound transfers"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:participantName a owl:DatatypeProperty ;
+    rdfs:label "Participants"@en ;
+    dc:description "The name of the parties that are involved in the preparation of Amarach report"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:participantStatus a owl:DatatypeProperty ;
+    rdfs:label "Participant status"@en ;
+    dc:description "The status of the parties that are expected to involve in the preparation of the Amarach report"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:plannedAircraftStatus a owl:DatatypeProperty ;
+    rdfs:label "Planned aircraft status"@en ;
+    dc:description "The detail description of the planned aircraft status"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:recoveryOverview a owl:DatatypeProperty ;
+    rdfs:label "Recovery overview"@en ;
+    dc:description "The details of the revocery plan"@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:risk a owl:DatatypeProperty ;
+    rdfs:label "Risk"@en ;
+    dc:description "The risk associated with weather "@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:securityType a owl:DatatypeProperty .
+
+arkam:weatherRisk a owl:DatatypeProperty ;
+    rdfs:label "Weather risk"@en ;
+    dc:description "The risk associated with weather "@en ;
+    rdfs:range rdfs:Literal .
+
+arkam:AircraftStatus a owl:Class ;
+    rdfs:label "Aircraft Status"@en ;
+    rdfs:comment "The aircraft status detail contains information related to the Aircraft switches, AKH Stations low in stock, de-icing and LDMCR status.",
+        "This information needs a better name"@en .
+
+arkam:Cancellation a owl:Class ;
+    rdfs:label "Cancellation"@en ;
+    dc:description "Information about options of cancelation of a given flight zone"@en ;
+    rdfs:comment "This information is not about individual flight, but groups of flights based on zones?"@en .
+
+arkam:CityJetInformation a owl:Class ;
+    rdfs:label "City Jet Information"@en ;
+    dc:description "Description of City jet flights and crew "@en ;
+    rdfs:comment ""@en .
+
+arkam:CrewChange a owl:Class ;
+    rdfs:label "Crew Changes"@en ;
+    dc:description "Information about the crew changes in LHR. Involves crew transportation to/from hotel"@en ;
+    rdfs:comment ""@en .
+
+arkam:CrewCoupling a owl:Class ;
+    rdfs:label "Crew Coupling"@en ;
+    dc:description "Information about crew coupling with greater than 10 hrs FDP"@en ;
+    rdfs:comment "Contains flight information and time. Needs further clarification?"@en .
+
+arkam:FlightLoad a owl:Class ;
+    rdfs:label "Flight Load"@en ;
+    dc:description "A high-level load information of flights aggregated based on their network (short-haul, long-haul and regional)"@en ;
+    rdfs:comment "Flight load may be used to indicate the number of booked guests, the load factor, indicator if human remain presents in any of the flights"@en .
+
+arkam:FlightsWithTurnaround a owl:Class ;
+    rdfs:label "Flights with  Turnaround"@en ;
+    dc:description "Flights that have a turnaround time less than 40 minutes"@en ;
+    rdfs:comment "The label requires further revision"@en .
+
+arkam:FocusedFlight a owl:Class ;
+    rdfs:label "Focused Flight"@en ;
+    dc:description ""@en ;
+    rdfs:comment ""@en .
+
+arkam:FutureIssue a owl:Class ;
+    rdfs:label "Future Issue"@en ;
+    dc:description "A detailed description of any future operational issue affecting the operations of the airline"@en ;
+    rdfs:comment "A free text "@en .
+
+arkam:IrregularOperation a owl:Class ;
+    rdfs:label "Irregular Operation"@en ;
+    dc:description "A description of long stopped crew, unscheduled overnights and risks to OTP"@en ;
+    rdfs:comment ""@en .
+
+arkam:MainLineStandby a owl:Class ;
+    rdfs:label "Main Line Standby"@en ;
+    dc:description "The standby details of mainline aricrafts" ;
+    rdfs:comment "needs more detail"@en .
+
+arkam:OperationalIssue a owl:Class ;
+    rdfs:label "Operational Issue"@en ;
+    dc:description "A detailed description of any operational issue affecting the operations of the airline"@en ;
+    rdfs:comment "A free text "@en .
+
+arkam:OperationalStatus a owl:Class ;
+    rdfs:label "Operational Status" ;
+    dc:description "The operational status of an air craft" ;
+    rdfs:comment "needs more detail" .
+
+arkam:OverBooking a owl:Class ;
+    rdfs:label "Overbooking"@en ;
+    dc:description "Information describing an overbooking on a given flight"@en ;
+    rdfs:comment "Overbooking is Nil when there is no overbooked flight"@en .
+
+arkam:OvernightMaintenance a owl:Class ;
+    rdfs:label "Overnight Maintenance"@en ;
+    dc:description "Overnight maintenance schedule" ;
+    rdfs:comment "needs more detail"@en .
+
+arkam:PBZFlight a owl:Class ;
+    rdfs:label "PBZ Flight"@en ;
+    dc:description ""@en ;
+    rdfs:comment ""@en .
+
+arkam:PRMSpecialHandling a owl:Class ;
+    rdfs:label "PRM Special Handling"@en ;
+    dc:description "The information about flights that have PRM special handling including wheel chairs. This information is given per flight."@en ;
+    rdfs:comment "This information needs further description to elaborate the acronyms used such as (PRM, WCHC, WCHR, WCHS)"@en .
+
+arkam:Participant a owl:Class ;
+    rdfs:label "Amarach Report Participants"@en ;
+    dc:description "Information about the participants in the preparation of the Amarach report"@en ;
+    rdfs:comment ""@en .
+
+arkam:Route a owl:Class ;
+    rdfs:label "Route"@en ;
+    dc:description "information about the inbound routes that have greater than 10  number of connecting passengers"@en ;
+    rdfs:comment "" .
+
+arkam:Security a owl:Class ;
+    rdfs:label "Security"@en ;
+    dc:description "Information describing if a given flight has passengers that require a special security "@en ;
+    rdfs:comment "This information is filled when the flight has INAD, Deportee or a prisoner"@en .
+
+arkam:StandbyCabinCrew a owl:Class ;
+    rdfs:label "Standby Cabin Crew"@en ;
+    rdfs:comment ""@en .
+
+arkam:StandbyPilot a owl:Class ;
+    rdfs:label "Standby Pilot"@en ;
+    dc:description "information about the number and details of standby pilots"@en ;
+    rdfs:comment "Pilots categorised by Aircraft types"@en .
+
+arkam:Transfer a owl:Class ;
+    rdfs:label "Transfer"@en ;
+    dc:description "Information about the transfer details of the inboud and outbound connecting flights"@en ;
+    rdfs:comment "This information is compiled per flight and contains color coded entries. Check this?"@en .
+
+arkam:WalkOutFlight a owl:Class ;
+    rdfs:label "Walkout Flight"@en ;
+    dc:description "needs more detail"@en ;
+    rdfs:comment ""@en .
+
+arkam:Weather a owl:Class ;
+    rdfs:label "Weather"@en ;
+    dc:description "The state of the atmosphere at a particular airport or flight route"@en ;
+    rdfs:comment "Weather is used in its current form in the report"@en .
+
+arkam:Report a owl:Class ;
+    rdfs:label "Report" ;
+    dc:description "The Daily Amarach report prepared by Aer Lingus" ;
+    rdfs:comment "Amarach report" .
+
