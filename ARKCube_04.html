@@ -1,12 +1,1703 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ARK CUBE Ontology</title>
+    <title>Access Risk Knowledge Cube Questionnaire Ontology</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 80px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://ark.adaptcentre.ie/Ontologies/ARKCube#",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, Trinity College Dublin (Prof Nick Mcdonald and his team) developed the cube methodology which uses a series of questions categrised into project phases, dimensions and aspects of realities. The ARKCube ontology models the cube methodology and modelled the process, content and outcome using a semantic model (ARK Cube ontology).</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Access Risk Knowledge Cube Questionnaire Ontology"
+      }
+    ]
+  }
+]
+    </script>
 </head>
 <body>
-    <H1 style= 'color:red'>ARK CUBE Ontology.</h1>
-					
-					<h2> Html version Coming soon. Please use <a href= "/Ontologies/ARKCube_04.ttl"> ARK Cube</a> for downloading the ontology in turtle version.</H2>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
+<h1>Access Risk Knowledge Cube Questionnaire Ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            https://www.ARKAmarach.adaptcentre.ie/<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            Yalemisew Abgaz<br/>
+        </dd>
+        <dt>Contributors(s)</dt>
+        <dd>
+            Rob Brennan<br/>
+            Natalia Duda<br/>
+            Nick Mcdonald<br/>
+            Junli Liang<br/>
+        </dd>
+        <dt>Version Information</dt>
+        <dd>0.4</dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="ARKCube_04.owl">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, Trinity College Dublin (Prof Nick Mcdonald and his team) developed the cube methodology which uses a series of questions categrised into project phases, dimensions and aspects of realities. The ARKCube ontology models the cube methodology and modelled the process, content and outcome using a semantic model (ARK Cube ontology).</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: black;">&nbsp;</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+<section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Activity">Activity</a></li>
+        <li><a href="#Answer">Answer</a></li>
+        <li><a href="#AspectofReality">Aspect of Reality</a></li>
+        <li><a href="#Context">Context</a></li>
+        <li><a href="#Culture">Culture</a></li>
+        <li><a href="#DevelopStage">Develop Stage</a></li>
+        <li><a href="#Evidence">Evidence</a></li>
+        <li><a href="#EvidenceRule">Evidence Rule</a></li>
+        <li><a href="#FunctionalSystem">Functional System</a></li>
+        <li><a href="#Goal">Goal</a></li>
+        <li><a href="#ImplementStage">Implement Stage</a></li>
+        <li><a href="#InformationandKnowledge">Information and Knowledge</a></li>
+        <li><a href="#Mechanism">Mechanism</a></li>
+        <li><a href="#Outcome">Outcome</a></li>
+        <li><a href="#PlanandPrepareStage">Plan and Prepare Stage</a></li>
+        <li><a href="#Priority">Priority</a></li>
+        <li><a href="#ProblemStage">Problem Stage</a></li>
+        <li><a href="#Process/Sequence">Process/Sequence</a></li>
+        <li><a href="#Question">Question</a></li>
+        <li><a href="#Questionnaire">Questionnaire</a></li>
+        <li><a href="#Report">Report</a></li>
+        <li><a href="#Sensemaking">Sensemaking</a></li>
+        <li><a href="#Social">Social</a></li>
+        <li><a href="#SolutionStage">Solution Stage</a></li>
+        <li><a href="#Stage">Stage</a></li>
+        <li><a href="#SystemDimension">System Dimension</a></li>
+        <li><a href="#VerifyandEmbedStage">Verify and Embed Stage</a></li>
+    </ul>
+    <div class="entity class" id="Activity">
+        <h3>Activity<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The condition in which things are happening or being done. Activity refers to the measurable activity within the system.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality">AspectOfReality</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Answer">
+        <h3>Answer<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A written account in response to a question asked.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#answerText">answerText</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule">hasEvidenceRule</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence">hasEvidence</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf">isEvidenceRuleOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer">hasAnswer</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="AspectofReality">
+        <h3>Aspect of Reality<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Aspect of Reality is a dimension which explores the Functional System, Activity, Sensemaking and Culture across four System Dimensions: Goals, Process, Social, and Knowledge and Information.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking">SenseMaking</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Culture">Culture</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity">Activity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem">FunctionalSystem</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Context">
+        <h3>Context<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Context</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Wider circumstances of the system.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Culture">
+        <h3>Culture<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Culture</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A set of collective attitudes, values, goals and practices that characterize a community or system</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality">AspectOfReality</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="DevelopStage">
+        <h3>Develop Stage<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A develop stage question is a cube  question which is asked at the development stage of the cube questionnaire.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage">Stage</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Evidence">
+        <h3>Evidence<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Information provided to prove something is true or valid.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="EvidenceRule">
+        <h3>Evidence Rule<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#EvidenceRule</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A rule provided to evaluate an evidence.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="FunctionalSystem">
+        <h3>Functional System<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The Functional System refers to the basic causal structure of the system and the relationships that produce outcomes.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality">AspectOfReality</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Goal">
+        <h3>Goal<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Goal</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An aim or desired outcome.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension">SystemDimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ImplementStage">
+        <h3>Implement Stage<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An implement stage question is a cube question which is asked at the implementation stage of the cube questionnaire.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage">Stage</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="InformationandKnowledge">
+        <h3>Information and Knowledge<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#InformationKnowledge</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Knowledge gained through communication, research, instruction.
+Familiarity gained by personal experience, vicariously or through collective processes</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension">SystemDimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Mechanism">
+        <h3>Mechanism<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Mechanism</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The way in which something is transformed, produced, circulated.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Outcome">
+        <h3>Outcome<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Outcome</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The end product of a purposive activity.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="PlanandPrepareStage">
+        <h3>Plan and Prepare Stage<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A plan and prepare stage question is a cube question which is asked at the planning stage of the cube questionnaire.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage">Stage</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Priority">
+        <h3>Priority<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Priority</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The fact or condition of being regarded or treated as more important than others.</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ProblemStage">
+        <h3>Problem Stage<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A problem stage question is a cube question which is asked at the problem stage of the cube questionnaire</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage">Stage</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Process/Sequence">
+        <h3>Process/Sequence<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The key activity of the operation; a sequence of activities and stages through which an initial state is transformed into the final state</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension">SystemDimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Question">
+        <h3>Question<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Question</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A question is an expression used to request information about a specific topic. A question may be asked in various forms and may seek different kinds of answers.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDimension">hasDimension</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer">hasAnswer</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasStage">hasStage</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf">isSubquestionOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion">hasSubquestion</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAspect">hasAspect</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion">hasSubquestion</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasQuestion">hasQuestion</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf">isSubquestionOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Questionnaire">
+        <h3>Questionnaire<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A set of structured questions which seek information on a topic of interest from respndents.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasQuestion">hasQuestion</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Report">
+        <h3>Report<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Report</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A written account of an activity or investigation?</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Sensemaking">
+        <h3>Sensemaking<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Sensemaking focuses on the different ways people understand the situation they are in and how they respond to it, while Culture represents the shared values, norms, expectations of various parties in the organization.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality">AspectOfReality</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Social">
+        <h3>Social<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Social</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Dimension relating to a community or its organization.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension">SystemDimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SolutionStage">
+        <h3>Solution Stage<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A solution stage question is a cube question which is asked at the solution stage of the cube questionnaire.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage">Stage</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Stage">
+        <h3>Stage<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A stage is the stage on the cube questionnaire.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage">SolutionStage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage">ImplementStage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage">VerifyEmbedStage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage">PlanPrepareStage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage">DevelopStage</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage">ProblemStage</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SystemDimension">
+        <h3>System Dimension<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This focuses on the Goals, Process, Social, and Knowledge and Information.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#InformationKnowledge">InformationKnowledge</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Goal">Goal</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Social">Social</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence">ProcessSequence</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="VerifyandEmbedStage">
+        <h3>Verify and Embed Stage<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>A verify stage question is a cube  question which is asked at the verification stage of the cube questionnaire.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage">Stage</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hasanswer">has answer</a></li>
+        <li><a href="#hasaspect">has aspect</a></li>
+        <li><a href="#hascontext">has context</a></li>
+        <li><a href="#hasdimension">has dimension</a></li>
+        <li><a href="#hasevidence">has evidence</a></li>
+        <li><a href="#hasevidencerule">has evidence rule</a></li>
+        <li><a href="#hasmechanism">has mechanism</a></li>
+        <li><a href="#hasoutcome">has outcome</a></li>
+        <li><a href="#hasquestion">has question</a></li>
+        <li><a href="#hasstage">has stage</a></li>
+        <li><a href="#hassubquestion">has subquestion</a></li>
+        <li><a href="#isanswerof">is answer of</a></li>
+        <li><a href="#isaspectof">is aspect of</a></li>
+        <li><a href="#iscontextof">is context of</a></li>
+        <li><a href="#isdimensionof">is dimension of</a></li>
+        <li><a href="#isevidenceof">is evidence of</a></li>
+        <li><a href="#isevidenceruleof">is evidence rule of</a></li>
+        <li><a href="#ismechanismof">is mechanism of</a></li>
+        <li><a href="#isoutcomeof">is outcome of</a></li>
+        <li><a href="#isquestionof">is question of</a></li>
+        <li><a href="#isstageof">is stage of</a></li>
+        <li><a href="#issubquestionof">is subquestion of</a></li>
+    </ul>
+    <div class="entity property" id="hasanswer">
+        <h3>has answer<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links the answer to the question.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf">isAnswerOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer">Answer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasaspect">
+        <h3>has aspect<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAspect</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A question has an aspect.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf">isAspectOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hascontext">
+        <h3>has context<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A phase of a project has a context.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="isContextOf">isContextOf</a>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isContextOf">isContextOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasdimension">
+        <h3>has dimension<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDimension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A question has dimension.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf">isDimensionOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasevidence">
+        <h3>has evidence<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An answer has its own evidence.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceOf">isEvidenceOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer">Answer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasevidencerule">
+        <h3>has evidence rule<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links evidence rule with  question.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf">isEvidenceRuleOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer">Answer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasmechanism">
+        <h3>has mechanism<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property links the project phase with Mechanism.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf">isMechanismOf</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="isMechanismOf">isMechanismOf</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasoutcome">
+        <h3>has outcome<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasOutcome</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents the outcome of the phases of a project.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf">isOutcomeOf</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="isOutcomeOf">isOutcomeOf</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasquestion">
+        <h3>has question<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasQuestion</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A cube questionnaire has cube question.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf">isQuestionOf</a><sup class="sup-op" title="object property">op</sup>
+                    <a href="isQuestionOf">isQuestionOf</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire">Questionnaire</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasstage">
+        <h3>has stage<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasStage</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A project analysis has different phases.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isStageOf">isStageOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hassubquestion">
+        <h3>has subquestion<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links the subquestion of a question
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf">isSubquestionOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isanswerof">
+        <h3>is answer of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links the answer to the question.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isaspectof">
+        <h3>is aspect of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links the aspect of a question
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="iscontextof">
+        <h3>is context of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isContextOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A phase of a project has a context.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isdimensionof">
+        <h3>is dimension of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links the dimension of a question
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isevidenceof">
+        <h3>is evidence of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An answer has its own evidence.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isevidenceruleof">
+        <h3>is evidence rule of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An answer has its own evidence.
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer">Answer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="ismechanismof">
+        <h3>is mechanism of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This property links the project phase with Mechanism.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isoutcomeof">
+        <h3>is outcome of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links  the outcome of the phases of a project.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isquestionof">
+        <h3>is question of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A cube questionnaire has cube question.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isstageof">
+        <h3>is stage of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isStageOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A project analysis has different phases.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issubquestionof">
+        <h3>is subquestion of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Represents and links the subquestion of a question
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#analyticsdata">analytics data</a></li>
+        <li><a href="#answertext">answer text</a></li>
+        <li><a href="#answeredby">answered by</a></li>
+        <li><a href="#answereddate">answered date</a></li>
+        <li><a href="#comment">comment</a></li>
+        <li><a href="#designby">design by</a></li>
+        <li><a href="#designeddate">designed date</a></li>
+        <li><a href="#evidencerule">evidence rule</a></li>
+        <li><a href="#evidencetext">evidence text</a></li>
+        <li><a href="#informant">informant</a></li>
+        <li><a href="#priority">priority</a></li>
+        <li><a href="#questiontext">question text</a></li>
+        <li><a href="#reportto">report to</a></li>
+        <li><a href="#version">version</a></li>
+    </ul>
+    <div class="entity property" id="analyticsdata">
+        <h3>analytics data<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#analyticsData</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Data that can support/comes from some analytics.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="answertext">
+        <h3>answer text<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#answerText</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The a textual answer to the cube question.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer">Answer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="answeredby">
+        <h3>answered by<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#answeredBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The name/username of the person who answered the question.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="answereddate">
+        <h3>answered date<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#answeredDate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The date on which the answer is provided to the system.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="comment">
+        <h3>comment<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#coomment</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    A comment provided about the project.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="designby">
+        <h3>design by<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#designedBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The person who designed the project analysis and the cube questionnaire.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="designeddate">
+        <h3>designed date<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#designedDate</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The date on which the project is designed.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="evidencerule">
+        <h3>evidence rule<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Evidence rule is the rules which are supplied to handle rules.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="evidencetext">
+        <h3>evidence text<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceText</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The text which describes the evidence.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="informant">
+        <h3>informant<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#informant</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The person who provides information about the project questions.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="priority">
+        <h3>priority<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#priority</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The priority assigned to something. High, medium, low or no priority.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="questiontext">
+        <h3>question text<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#questionText</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The text of the cube question. This represents the actual question asked.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="reportto">
+        <h3>report to<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#reportTo</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The person/office to whom the result of the analysis is reported.
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="version">
+        <h3>version<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#version</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The version of the project.
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="annotationproperties">
+    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#creator">creator</a></li>
+        <li><a href="#date">date</a></li>
+        <li><a href="#inverseOf">inverseOf</a></li>
+    </ul>
+    <div class="entity property" id="creator">
+        <h3>creator<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/elements/1.1/creator</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="date">
+        <h3>date<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/elements/1.1/date</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="inverseOf">
+        <h3>inverseOf<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/2002/07/owl#inverseOf</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+    </ul>
+    <div class="entity named_individual" id="None">
+        <h3>None<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://ark.adaptcentre.ie/Ontologies/ARKCube#
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This ontology supports the cube questionnaire developed by TCD
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://ark.adaptcentre.ie/Ontologies/ARKCube#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vocab</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+<section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+</section>
 </body>
 </html>

@@ -1,12 +1,1188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>ARK Project Ontology</title>
+    <title>Access Risk Knowledge Projects Ontology</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 80px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-cp,
+        .sup-cl {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-cp {
+            color:orange;
+        }
+
+        .sup-cl {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "https://ark.adaptcentre.ie/Ontologies/ARKProjects#",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>A model for representing concepts, relationships and axioms for Access Risk Knowledge for organisational risk analysis and management.</p>"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Access Risk Knowledge Projects Ontology"
+      }
+    ],
+    "https://schema.org/rights": [
+      {
+        "@value": "https://creativecommons.org/licenses/by/3.0/at/deed.en"
+      }
+    ]
+  }
+]
+    </script>
 </head>
 <body>
-    <h1 style= 'color:red'>ARK Projects Ontology.</h1>
-					
-					<h2> Html version Coming soon. Please use <a href= "/Ontologies/ARKProjects_01.ttl"> ARK Projects</a> for downloading the ontology in turtle version.</H2>
+<div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">pyLODE</a></div>
+<h1>Access Risk Knowledge Projects Ontology</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>IRI</dt>
+        <dd><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#</code></dd>
+        <dt>Publisher(s)</dt>
+        <dd>
+            https://www.ark.adaptcentre.ie/<br/>
+        </dd>
+        <dt>Creator(s)</dt>
+        <dd>
+            Yalemisew Abgaz<br/>
+        </dd>
+        <dt>Contributors(s)</dt>
+        <dd>
+            Rob Brennan<br/>
+            Junli Liang<br/>
+            Nick McDonald<br/>
+            Natalia Duda<br/>
+        </dd>
+        <dt>Version Information</dt>
+        <dd>0.1</dd>
+        <dt>Rights</dt>
+        <dd>https://creativecommons.org/licenses/by/3.0/at/deed.en</dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="ARKProjects_01.owl">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>A model for representing concepts, relationships and axioms for Access Risk Knowledge for organisational risk analysis and management.</p>
+    </div>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: black;">&nbsp;</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+<section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Project">Project</a></li>
+        <li><a href="#ProjectAnalysis">Project Analysis</a></li>
+        <li><a href="#User">User</a></li>
+    </ul>
+    <div class="entity class" id="Project">
+        <h3>Project<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>An individual or collaborative enterprise that is carefully planned to achieve a particular aim.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#DesignedBy">DesignedBy</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Status">Status</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">hasReadOnlyUser</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">isSubProjectOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">hasSubProject</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">hasCollaborator</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ReportTo">ReportTo</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">hasOwner</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#OrganisationName">OrganisationName</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">hasProjectAnalysis</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Name">Name</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">isSubProjectOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">isCollaboratorOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">isReadOnlyUserOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">isProjectAnalysisOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">isOwnerOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">hasSubProject</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="ProjectAnalysis">
+        <h3>Project Analysis<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Efficacy">Efficacy</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Value">Value</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Viability">Viability</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectedGain">ProjectedGain</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectedValue">ProjectedValue</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">isProjectAnalysisOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Importance">Importance</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#PotentialLoss">PotentialLoss</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">hasProjectAnalysis</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="User">
+        <h3>User<sup title="class" class="sup-c">c</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#User</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>The user of the ARK projects application</p>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">isOwnerOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">isCollaboratorOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">isReadOnlyUserOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">hasCollaborator</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">hasOwner</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">hasReadOnlyUser</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hascollaborator">has collaborator</a></li>
+        <li><a href="#hasowner">has owner</a></li>
+        <li><a href="#hasprojectanalysis">has project analysis</a></li>
+        <li><a href="#hasreadonlyuser">has readonly user</a></li>
+        <li><a href="#hassubproject">has subproject</a></li>
+        <li><a href="#iscollaboratorof">is collaborator of</a></li>
+        <li><a href="#isownerof">is owner of</a></li>
+        <li><a href="#isprojectanalysisof">is project analysis of</a></li>
+        <li><a href="#isreadonlyuserof">is readonlyuser of</a></li>
+        <li><a href="#issubprojectof">is subproject of</a></li>
+    </ul>
+    <div class="entity property" id="hascollaborator">
+        <h3>has collaborator<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">isCollaboratorOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasowner">
+        <h3>has owner<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates the Project with its owner User. The owner has a full read/write/grant access rights.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">isOwnerOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasprojectanalysis">
+        <h3>has project analysis<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates a Project with all the analysis done on the Project.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">isProjectAnalysisOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasreadonlyuser">
+        <h3>has readonly user<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">isReadOnlyUserOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hassubproject">
+        <h3>has subproject<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relate a Project with its subproject. A Project can have one or more subprojects within it.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">isSubProjectOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="iscollaboratorof">
+        <h3>is collaborator of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates the collaborating User with a project. 
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="hasCollaborator">hasCollaborator</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isownerof">
+        <h3>is owner of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates the Owner User with a Project. The owner has a full read/write/grant access rights.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="hasOwner">hasOwner</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isprojectanalysisof">
+        <h3>is project analysis of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates a Project Analysis with its Project.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="hasProjectAnalysis">hasProjectAnalysis</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isreadonlyuserof">
+        <h3>is readonlyuser of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates the ReadOnlyUser with a Project. 
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="hasReadOnlyUser">hasReadOnlyUser</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="issubprojectof">
+        <h3>is subproject of<sup title="object property" class="sup-op">op</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Relates a project with its parent Project.
+                </td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="hasSubProject">hasSubProject</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#Datastatus">Data status</a></li>
+        <li><a href="#Designedby">Designed by</a></li>
+        <li><a href="#Efficacy">Efficacy</a></li>
+        <li><a href="#importance">importance</a></li>
+        <li><a href="#Projectname">Project name</a></li>
+        <li><a href="#Organisationname">Organisation name</a></li>
+        <li><a href="#Potentialloss">Potential loss</a></li>
+        <li><a href="#Projectedgain">Projected gain</a></li>
+        <li><a href="#Projectedvalue">Projected value</a></li>
+        <li><a href="#Reportto">Report to</a></li>
+        <li><a href="#ProjectStatus">Project Status</a></li>
+        <li><a href="#Value">Value</a></li>
+        <li><a href="#Viablity">Viablity</a></li>
+    </ul>
+    <div class="entity property" id="Datastatus">
+        <h3>Data status<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#DataStatus</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The status of the data. Deleted  when the data is deleted by the user
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Designedby">
+        <h3>Designed by<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#DesignedBy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The user who designed the project.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Efficacy">
+        <h3>Efficacy<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#Efficacy</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The efficacy of the solution.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="importance">
+        <h3>importance<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#Importance</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Importance of the problem under analysis.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Projectname">
+        <h3>Project name<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#Name</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The name of a project
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Organisationname">
+        <h3>Organisation name<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#OrganisationName</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The name of the organisation 
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Potentialloss">
+        <h3>Potential loss<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#PotentialLoss</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Potential loss due to the problem.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Projectedgain">
+        <h3>Projected gain<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectedGain</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The gain achieved by the project.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Projectedvalue">
+        <h3>Projected value<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectedValue</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The projected value of the project.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Reportto">
+        <h3>Report to<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#ReportTo</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The person to whom the analysis is reported to.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="ProjectStatus">
+        <h3>Project Status<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#Status</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    The current status of a project
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Value">
+        <h3>Value<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#Value</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="Viablity">
+        <h3>Viablity<sup title="datatype property" class="sup-dp">dp</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#Viability</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Viability of the proposed solution.
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">ProjectAnalysis</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="annotationproperties">
+    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#description">description</a></li>
+        <li><a href="#inverseOf">inverseOf</a></li>
+    </ul>
+    <div class="entity property" id="description">
+        <h3>description<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://purl.org/dc/elements/1.1/description</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="inverseOf">
+        <h3>inverseOf<sup title="annotation property" class="sup-ap">ap</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td><code>http://www.w3.org/2002/07/owl#inverseOf</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+
+<section id="namedindividuals">
+    <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+    </ul>
+    <div class="entity named_individual" id="None">
+        <h3>None<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>IRI</th>
+                <td>
+                  <code>
+                      https://ark.adaptcentre.ie/Ontologies/ARKProjects#
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Classes(s)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Ontology">owl:Ontology</a><br/>
+            </dd>
+        </table>
+    </div>
+</section>
+
+<section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>:</dt>
+        <dd><code>https://ark.adaptcentre.ie/Ontologies/ARKProjects#</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>ns1</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>https://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>vocab</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xml</dt>
+        <dd><code>http://www.w3.org/XML/1998/namespace</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+<section id="legend">
+    <h2>Legend</h2>
+    <table class="entity">
+        <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+        <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+        <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+        <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+        <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+        <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+        <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+    </table>
+</section>
 </body>
 </html>
