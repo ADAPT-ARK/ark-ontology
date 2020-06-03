@@ -1,14 +1,13 @@
 # ARK Ontologies
-This repository is used to update the ARK ontologies (Cube, Amarach, Projects and Terminologies) and provides a content negotiation configuration to serve different content using the ontologies. This repository allows to upload the ontologies and update the content negotation.
+This repository is used to update the ARK ontologies (Cube, Amarach, Projects and Terminologies) and provides a content negotiation configuration following Linked Data guidelines.
 	
 ## To update the ontologies on your local machine
-			1. clone the repository to your local machine
-			2. update the ontologies and their corresponding html files
-			3. Update the .htaccess file if you make an additional files or change the file names
-			4. Push the repository
+1. Clone the repository to your local machine
+1. Update the ontologies (owl files)
+1. Generate the documentation into their specific folders - ARKAmarach, ARKCube, ARKProjects, etc. Documentation can be generated using using [WIDOCO](https://github.com/dgarijo/Widoco) (jar available in the repository)
+1. Note that the .htaccess file in the Ontologies folder redirects to ARKCube/index-en.html 
+1. If you generate a new .htaccess file then you must update it in each folder changing `RewriteBase /ONTOLOGY_NAME` to `RewriteBase /Ontologies/ONTOLOGY_NAME`
 	
 ##	Server side
 	
-	Pull the repository under your web folder (e.g /var/www/html/)
-	Once you pull the repository you will have the ontologies folder.
-	Now you can serve different content.
+Considering that Apache server has been installed, you can pull the repository under your web folder (e.g /var/www/html/ if using default configurations).

@@ -1,38 +1,8 @@
-# Do not remove this line, otherwise mod_rewrite rules will stop working
-RewriteBase /Ontologies
+Options -MultiViews
 
-# Rewrite engine setup<br/> 
 RewriteEngine On
 
+RewriteBase /Ontologies
 
-AddType application/rdf+xml .owl
-
-AddType application/rdf+xml .rdf .owl
-
-AddType text/turtle .ttl
-
-# Rewrite rule to serve HTML content<br/>
-
-RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/turtle|text/html|application/xhtml\+xml)
-RewriteCond %{HTTP_ACCEPT} text/html [OR]
-RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
 RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
-RewriteRule ^ARKCube$ ARKCube_04.html [R=303,L]
-RewriteRule ^ARKProjects$ ARKProjects_01.html [R=303,L]
-RewriteRule ^ARKAmarach$ ARKAmarach_01.html [R=303,L]
-RewriteRule ^ARKTerminologies$ ARKTerminologies_01.html [R=303,L]
-
-# Rewrite rule to serve RDF/XML content if requested
-RewriteCond %{HTTP_ACCEPT} application/rdf\+xml [OR]
-RewriteCond %{HTTP_ACCEPT} text/turtle 
-RewriteRule ^ARKCube$ ARKCube_04.ttl [R=303,L]
-RewriteRule ^ARKProjects$ ARKProjects_01.ttl [R=303,L]
-RewriteRule ^ARKAmarach$ ARKAmarach_01.ttl [R=303,L]
-RewriteRule ^ARKTerminologies$ ARKTerminologies_01.ttl [R=303,L]
-
-
-# Choose the default response
-RewriteRule ^ARKCube$ ARKCube_04.html [R=303,L]
-RewriteRule ^ARKProjects$ ARKProjects_01.html [R=303,L]
-RewriteRule ^ARKAmarach$ ARKAmarach_01.html [R=303,L]
-RewriteRule ^ARKTerminologies$ ARKTerminologies_01.html [R=303,L]
+RewriteRule ^$ ARKCube/index-en.html [R=303,L]

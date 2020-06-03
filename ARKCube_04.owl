@@ -9,22 +9,22 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vocab="http://purl.org/vocab/vann/">
     <owl:Ontology rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#">
-        <owl:versionIRI rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube/0.4"/>
+        <owl:versionIRI rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube"/>
+        <dc:contributor xml:lang="en">Ademar Crotti Junior</dc:contributor>
         <dc:contributor xml:lang="en">Junli Liang</dc:contributor>
         <dc:contributor xml:lang="en">Natalia Duda</dc:contributor>
         <dc:contributor xml:lang="en">Nick Mcdonald</dc:contributor>
         <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
         <dc:creator xml:lang="en">Yalemisew Abgaz</dc:creator>
-        <dc:issued>02/07/2019</dc:issued>
         <dc:modified>182/04/2020</dc:modified>
         <dc:publisher>https://www.ARKAmarach.adaptcentre.ie/</dc:publisher>
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:title xml:lang="en">Access Risk Knowledge Cube Questionnaire Ontology</dc:title>
         <vocab:preferredNamespacePrefix>ARKC</vocab:preferredNamespacePrefix>
         <vocab:preferredNamespaceUri>https://ARKAmarach.adaptcentre.ie/Ontologies/ARKCube#</vocab:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, Trinity College Dublin (Prof Nick Mcdonald and his team) developed the cube methodology which uses a series of questions categrised into project phases, dimensions and aspects of realities. The ARKCube ontology models the cube methodology and modelled the process, content and outcome using a semantic model (ARK Cube ontology).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, Trinity College Dublin (Prof Nick Mcdonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology).</rdfs:comment>
         <rdfs:comment xml:lang="en">This ontology supports the cube questionnaire developed by TCD</rdfs:comment>
-        <owl:versionInfo>0.4</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -40,6 +40,12 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
@@ -49,6 +55,42 @@
     <!-- http://purl.org/dc/elements/1.1/date -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 
@@ -83,11 +125,25 @@
     
 
 
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact -->
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"/>
+        <dc:creator>Ademar</dc:creator>
+        <dc:date>2020-05-20T14:31:50.607524</dc:date>
+        <rdfs:comment>Associates an evidence to artefacts</rdfs:comment>
+        <rdfs:label>has artefact</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAspect -->
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAspect">
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-13T17:06:24+00:00</dc:date>
         <rdfs:comment>A question has an aspect.</rdfs:comment>
@@ -100,6 +156,7 @@
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext">
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#isContextOf"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Context"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-01-29T16:05:29+00:00</dc:date>
         <rdfs:comment>A phase of a project has a context.</rdfs:comment>
@@ -109,11 +166,25 @@
     
 
 
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDataset -->
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDataset">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+        <dc:creator>Ademar</dc:creator>
+        <dc:date>2020-05-15T14:18:45.087269</dc:date>
+        <rdfs:comment>Evidence may contain dataset descriptions</rdfs:comment>
+        <rdfs:label>has dataset</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDimension -->
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDimension">
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-18T14:52:55+00:00</dc:date>
         <rdfs:comment>A question has dimension.</rdfs:comment>
@@ -125,10 +196,12 @@
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence -->
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence">
-        <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence"/>
+        <dc:contributor>Ademar</dc:contributor>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-18T13:07:27+00:00</dc:date>
+        <dc:modified>2020-05-20T12:28:07.518488</dc:modified>
         <rdfs:comment xml:lang="en">An answer has its own evidence.</rdfs:comment>
         <rdfs:label xml:lang="en">has evidence</rdfs:label>
     </owl:ObjectProperty>
@@ -152,6 +225,7 @@
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism">
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Mechanism"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-01-29T16:05:38+00:00</dc:date>
         <rdfs:comment>This property links the project phase with Mechanism.</rdfs:comment>
@@ -165,6 +239,7 @@
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasOutcome">
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Outcome"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-01-29T16:05:21+00:00</dc:date>
         <rdfs:comment>Represents the outcome of the phases of a project.</rdfs:comment>
@@ -194,6 +269,7 @@
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasStage">
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#isStageOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-13T17:06:09+00:00</dc:date>
         <rdfs:comment>A project analysis has different phases.</rdfs:comment>
@@ -256,17 +332,6 @@
         <dc:date>2020-01-27T16:14:57+00:00</dc:date>
         <rdfs:comment>Represents and links the dimension of a question</rdfs:comment>
         <rdfs:label xml:lang="en">is dimension of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceOf -->
-
-    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceOf">
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yalemisew</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-30T14:24:07Z</dc:date>
-        <rdfs:comment xml:lang="en">An answer has its own evidence.</rdfs:comment>
-        <rdfs:label xml:lang="en">is evidence of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -396,13 +461,37 @@
     
 
 
-    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#coomment -->
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#artefactText -->
 
-    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#coomment">
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#artefactText">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:creator>Ademar</dc:creator>
+        <dc:date>2020-05-20T14:31:50.607524</dc:date>
+        <rdfs:comment>A textual description of an artefact.</rdfs:comment>
+        <rdfs:label>artefact text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#comment -->
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#comment">
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-02-25T12:35:59+00:00</dc:date>
         <rdfs:comment xml:lang="en">A comment provided about the project.</rdfs:comment>
         <rdfs:label xml:lang="en">comment</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#designDate -->
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#designDate">
+        <dc:creator>yalemisew</dc:creator>
+        <dc:date>2019-11-13T17:02:42+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The date on which the project is designed.</rdfs:comment>
+        <rdfs:label xml:lang="en">design date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -414,17 +503,6 @@
         <dc:date>2019-11-13T17:02:27+00:00</dc:date>
         <rdfs:comment xml:lang="en">The person who designed the project analysis and the cube questionnaire.</rdfs:comment>
         <rdfs:label xml:lang="en">design by</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#designedDate -->
-
-    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#designedDate">
-        <dc:creator>yalemisew</dc:creator>
-        <dc:date>2019-11-13T17:02:42+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The date on which the project is designed.</rdfs:comment>
-        <rdfs:label xml:lang="en">designed date</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -443,10 +521,27 @@
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceText -->
 
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceText">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:contributor>Ademar</dc:contributor>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-02-03T16:15:11+00:00</dc:date>
+        <dc:modified>2020-05-20T12:28:07.518488</dc:modified>
         <rdfs:comment xml:lang="en">The text which describes the evidence.</rdfs:comment>
         <rdfs:label xml:lang="en">evidence text</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#file -->
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#file">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:creator>Ademar</dc:creator>
+        <dc:date>2020-05-15T14:18:45.087269</dc:date>
+        <rdfs:comment>Path to file</rdfs:comment>
+        <rdfs:label>file</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -517,6 +612,12 @@
     
 
 
+    <!-- http://www.w3.org/2000/01/rdf-schema#Resource -->
+
+    <owl:Class rdf:about="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    
+
+
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity -->
 
     <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity">
@@ -536,6 +637,17 @@
         <dc:date>2019-11-13T15:29:27+00:00</dc:date>
         <rdfs:comment xml:lang="en">A written account in response to a question asked.</rdfs:comment>
         <rdfs:label xml:lang="en">Answer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact -->
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact">
+        <dc:creator>Ademar</dc:creator>
+        <dc:date>2020-05-20T14:31:50.607524</dc:date>
+        <rdfs:comment>Evidences are associated to an evidence collection. An evidence may be, for example, a dataset containing information relevant to the an answer</rdfs:comment>
+        <rdfs:label>Artefact</rdfs:label>
     </owl:Class>
     
 
@@ -589,9 +701,11 @@
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence -->
 
     <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence">
+        <dc:contributor>Ademar</dc:contributor>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-18T13:05:52+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Information provided to prove something is true or valid.</rdfs:comment>
+        <dc:modified>2020-05-20T14:31:50.607524</dc:modified>
+        <rdfs:comment xml:lang="en">An evidence is composed of artefacts and are associated to a given to an answer.</rdfs:comment>
         <rdfs:label>Evidence</rdfs:label>
     </owl:Class>
     
@@ -847,5 +961,5 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
 
-<!-- Generated by the OWL API (version 4.5.6.2018-09-06T00:27:41Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 

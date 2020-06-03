@@ -1,0 +1,698 @@
+@prefix : <https://ark.adaptcentre.ie/Ontologies/ARKCube#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://ark.adaptcentre.ie/Ontologies/ARKCube#> .
+
+<https://ark.adaptcentre.ie/Ontologies/ARKCube#> rdf:type owl:Ontology ;
+                                                  owl:versionIRI <https://ark.adaptcentre.ie/Ontologies/ARKCube> ;
+                                                  <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior"@en ,
+                                                                                                "Junli Liang"@en ,
+                                                                                                "Natalia Duda"@en ,
+                                                                                                "Nick Mcdonald"@en ,
+                                                                                                "Rob Brennan"@en ;
+                                                  <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz"@en ;
+                                                  <http://purl.org/dc/elements/1.1/modified> "182/04/2020" ;
+                                                  <http://purl.org/dc/elements/1.1/publisher> "https://www.ARKAmarach.adaptcentre.ie/" ;
+                                                  <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
+                                                  <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube Questionnaire Ontology"@en ;
+                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKC" ;
+                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ARKAmarach.adaptcentre.ie/Ontologies/ARKCube#" ;
+                                                  rdfs:comment "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, Trinity College Dublin (Prof Nick Mcdonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ,
+                                                               "This ontology supports the cube questionnaire developed by TCD"@en ;
+                                                  owl:versionInfo 0.5 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#inverseOf
+owl:inverseOf rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer
+:hasAnswer rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isAnswerOf ;
+           rdfs:domain :Question ;
+           rdfs:range :Answer ;
+           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+           <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:07:21+00:00" ;
+           rdfs:comment "Represents and links the answer to the question." ;
+           rdfs:label "has answer"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact
+:hasArtefact rdf:type owl:ObjectProperty ;
+             rdfs:domain :Evidence ;
+             rdfs:range :Artefact ;
+             <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
+             <http://purl.org/dc/elements/1.1/date> "2020-05-20T14:31:50.607524" ;
+             rdfs:comment "Associates an evidence to artefacts" ;
+             rdfs:label "has artefact" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAspect
+:hasAspect rdf:type owl:ObjectProperty ;
+           owl:inverseOf :isAspectOf ;
+           rdfs:domain :Question ;
+           rdfs:range :AspectOfReality ;
+           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+           <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:24+00:00" ;
+           rdfs:comment "A question has an aspect." ;
+           rdfs:label "has aspect"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext
+:hasContext rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isContextOf ;
+            rdfs:range :Context ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:05:29+00:00" ;
+            rdfs:comment "A phase of a project has a context." ;
+            rdfs:label "has context"@en ;
+            owl:inverseOf "isContextOf" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDataset
+:hasDataset rdf:type owl:ObjectProperty ;
+            rdfs:domain :Artefact ;
+            rdfs:range rdfs:Resource ;
+            <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-05-15T14:18:45.087269" ;
+            rdfs:comment "Evidence may contain dataset descriptions" ;
+            rdfs:label "has dataset" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDimension
+:hasDimension rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isDimensionOf ;
+              rdfs:domain :Question ;
+              rdfs:range :SystemDimension ;
+              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2019-11-18T14:52:55+00:00" ;
+              rdfs:comment "A question has dimension." ;
+              rdfs:label "has dimension" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence
+:hasEvidence rdf:type owl:ObjectProperty ;
+             rdfs:domain :Answer ;
+             rdfs:range :Evidence ;
+             <http://purl.org/dc/elements/1.1/contributor> "Ademar" ;
+             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+             <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:27+00:00" ;
+             <http://purl.org/dc/elements/1.1/modified> "2020-05-20T12:28:07.518488" ;
+             rdfs:comment "An answer has its own evidence."@en ;
+             rdfs:label "has evidence"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule
+:hasEvidenceRule rdf:type owl:ObjectProperty ;
+                 owl:inverseOf :isEvidenceRuleOf ;
+                 rdfs:domain :Answer ;
+                 <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+                 <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:41+00:00" ;
+                 rdfs:comment "Represents and links evidence rule with  question." ;
+                 rdfs:label "has evidence rule"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism
+:hasMechanism rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isMechanismOf ;
+              rdfs:range :Mechanism ;
+              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:05:38+00:00" ;
+              rdfs:comment "This property links the project phase with Mechanism." ;
+              rdfs:label "has mechanism"@en ;
+              owl:inverseOf "isMechanismOf" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasOutcome
+:hasOutcome rdf:type owl:ObjectProperty ;
+            owl:inverseOf :isOutcomeOf ;
+            rdfs:range :Outcome ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:05:21+00:00" ;
+            rdfs:comment "Represents the outcome of the phases of a project." ;
+            rdfs:label "has outcome"@en ;
+            owl:inverseOf "isOutcomeOf" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasQuestion
+:hasQuestion rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isQuestionOf ;
+             rdfs:domain :Questionnaire ;
+             rdfs:range :Question ;
+             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+             <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:05:48+00:00" ;
+             rdfs:comment "A cube questionnaire has cube question." ;
+             rdfs:label "has question"@en ;
+             owl:inverseOf "isQuestionOf" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasStage
+:hasStage rdf:type owl:ObjectProperty ;
+          owl:inverseOf :isStageOf ;
+          rdfs:domain :Question ;
+          rdfs:range :Stage ;
+          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+          <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" ;
+          rdfs:comment "A project analysis has different phases." ;
+          rdfs:label "has stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion
+:hasSubquestion rdf:type owl:ObjectProperty ;
+                owl:inverseOf :isSubquestionOf ;
+                rdfs:domain :Question ;
+                rdfs:range :Question ;
+                <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+                <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:16:56+00:00" ;
+                rdfs:comment "Represents and links the subquestion of a question" ;
+                rdfs:label "has subquestion"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf
+:isAnswerOf rdf:type owl:ObjectProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:13:46+00:00" ;
+            rdfs:comment "Represents and links the answer to the question." ;
+            rdfs:label "is answer of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf
+:isAspectOf rdf:type owl:ObjectProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:14:19+00:00" ;
+            rdfs:comment "Represents and links the aspect of a question" ;
+            rdfs:label "is aspect of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isContextOf
+:isContextOf rdf:type owl:ObjectProperty ;
+             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+             <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:05:05+00:00" ;
+             rdfs:comment "A phase of a project has a context." ;
+             rdfs:label "is context of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf
+:isDimensionOf rdf:type owl:ObjectProperty ;
+               <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:14:57+00:00" ;
+               rdfs:comment "Represents and links the dimension of a question" ;
+               rdfs:label "is dimension of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf
+:isEvidenceRuleOf rdf:type owl:ObjectProperty ;
+                  rdfs:range :Answer ;
+                  <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+                  <http://purl.org/dc/elements/1.1/date> "2020-04-30T14:26:07Z"^^xsd:dateTime ;
+                  rdfs:comment "An answer has its own evidence."@en ;
+                  rdfs:label "is evidence rule of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf
+:isMechanismOf rdf:type owl:ObjectProperty ;
+               <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:04:52+00:00" ;
+               rdfs:comment "This property links the project phase with Mechanism." ;
+               rdfs:label "is mechanism of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf
+:isOutcomeOf rdf:type owl:ObjectProperty ;
+             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+             <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:05:13+00:00" ;
+             rdfs:comment "Represents and links  the outcome of the phases of a project." ;
+             rdfs:label "is outcome of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf
+:isQuestionOf rdf:type owl:ObjectProperty ;
+              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:34:21+00:00" ;
+              rdfs:comment "A cube questionnaire has cube question."@en ;
+              rdfs:label "is question of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isStageOf
+:isStageOf rdf:type owl:ObjectProperty ;
+           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+           <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:14:48+00:00" ;
+           rdfs:comment "A project analysis has different phases." ;
+           rdfs:label "is stage of"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf
+:isSubquestionOf rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Question ;
+                 rdfs:range :Question ;
+                 <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+                 <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:17:09+00:00" ;
+                 rdfs:comment "Represents and links the subquestion of a question" ;
+                 rdfs:label "is subquestion of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#analyticsData
+:analyticsData rdf:type owl:DatatypeProperty ;
+               <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-01-27T17:06:19+00:00" ;
+               rdfs:comment "Data that can support/comes from some analytics."@en ;
+               rdfs:label "analytics data"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#answerText
+:answerText rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Answer ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:24+00:00" ;
+            rdfs:comment "The a textual answer to the cube question."@en ;
+            rdfs:label "answer text"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#answeredBy
+:answeredBy rdf:type owl:DatatypeProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:04+00:00" ;
+            rdfs:comment "The name/username of the person who answered the question."@en ;
+            rdfs:label "answered by"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#answeredDate
+:answeredDate rdf:type owl:DatatypeProperty ;
+              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:14+00:00" ;
+              rdfs:comment "The date on which the answer is provided to the system."@en ;
+              rdfs:label "answered date"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#artefactText
+:artefactText rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Artefact ;
+              rdfs:range rdfs:Literal ;
+              <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-05-20T14:31:50.607524" ;
+              rdfs:comment "A textual description of an artefact." ;
+              rdfs:label "artefact text" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#comment
+:comment rdf:type owl:DatatypeProperty ;
+         <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+         <http://purl.org/dc/elements/1.1/date> "2020-02-25T12:35:59+00:00" ;
+         rdfs:comment "A comment provided about the project."@en ;
+         rdfs:label "comment"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#designDate
+:designDate rdf:type owl:DatatypeProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:42+00:00" ;
+            rdfs:comment "The date on which the project is designed."@en ;
+            rdfs:label "design date"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#designedBy
+:designedBy rdf:type owl:DatatypeProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:27+00:00" ;
+            rdfs:comment "The person who designed the project analysis and the cube questionnaire."@en ;
+            rdfs:label "design by"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule
+:evidenceRule rdf:type owl:DatatypeProperty ;
+              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-01-27T17:07:55+00:00" ;
+              rdfs:comment "Evidence rule is the rules which are supplied to handle rules."@en ;
+              rdfs:label "evidence rule"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceText
+:evidenceText rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Evidence ;
+              rdfs:range rdfs:Literal ;
+              <http://purl.org/dc/elements/1.1/contributor> "Ademar" ;
+              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-02-03T16:15:11+00:00" ;
+              <http://purl.org/dc/elements/1.1/modified> "2020-05-20T12:28:07.518488" ;
+              rdfs:comment "The text which describes the evidence."@en ;
+              rdfs:label "evidence text"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#file
+:file rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Artefact ;
+      rdfs:range rdfs:Literal ;
+      <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
+      <http://purl.org/dc/elements/1.1/date> "2020-05-15T14:18:45.087269" ;
+      rdfs:comment "Path to file" ;
+      rdfs:label "file" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#informant
+:informant rdf:type owl:DatatypeProperty ;
+           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+           <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:10:48+00:00" ;
+           rdfs:comment "The person who provides information about the project questions."@en ;
+           rdfs:label "informant"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#priority
+:priority rdf:type owl:DatatypeProperty ;
+          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+          <http://purl.org/dc/elements/1.1/date> "2020-01-27T17:12:01+00:00" ;
+          rdfs:comment "The priority assigned to something. High, medium, low or no priority."@en ;
+          rdfs:label "priority"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#questionText
+:questionText rdf:type owl:DatatypeProperty ;
+              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:49+00:00" ;
+              rdfs:comment "The text of the cube question. This represents the actual question asked."@en ;
+              rdfs:label "question text"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#reportTo
+:reportTo rdf:type owl:DatatypeProperty ;
+          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+          <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:01:31+00:00" ;
+          rdfs:comment "The person/office to whom the result of the analysis is reported."@en ;
+          rdfs:label "report to"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#version
+:version rdf:type owl:DatatypeProperty ;
+         <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+         <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:55+00:00" ;
+         rdfs:comment "The version of the project."@en ;
+         rdfs:label "version"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+rdfs:Resource rdf:type owl:Class .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity
+:Activity rdf:type owl:Class ;
+          rdfs:subClassOf :AspectOfReality ;
+          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+          <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:07+00:00" ;
+          rdfs:comment "The condition in which things are happening or being done. Activity refers to the measurable activity within the system."@en ;
+          rdfs:label "Activity"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer
+:Answer rdf:type owl:Class ;
+        <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+        <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:27+00:00" ;
+        rdfs:comment "A written account in response to a question asked."@en ;
+        rdfs:label "Answer"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact
+:Artefact rdf:type owl:Class ;
+          <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
+          <http://purl.org/dc/elements/1.1/date> "2020-05-20T14:31:50.607524" ;
+          rdfs:comment "Evidences are associated to an evidence collection. An evidence may be, for example, a dataset containing information relevant to the an answer" ;
+          rdfs:label "Artefact" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality
+:AspectOfReality rdf:type owl:Class ;
+                 <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                 <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:56+00:00" ;
+                 rdfs:comment "Aspect of Reality is a dimension which explores the Functional System, Activity, Sensemaking and Culture across four System Dimensions: Goals, Process, Social, and Knowledge and Information."@en ;
+                 rdfs:label "Aspect of Reality"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Context
+:Context rdf:type owl:Class ;
+         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+         <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:24+00:00" ;
+         rdfs:comment "Wider circumstances of the system."@en ;
+         rdfs:label "Context"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Culture
+:Culture rdf:type owl:Class ;
+         rdfs:subClassOf :AspectOfReality ;
+         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+         <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:07+00:00" ;
+         rdfs:comment "A set of collective attitudes, values, goals and practices that characterize a community or system"@en ;
+         rdfs:label "Culture"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage
+:DevelopStage rdf:type owl:Class ;
+              rdfs:subClassOf :Stage ;
+              <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
+              rdfs:comment "A develop stage question is a cube  question which is asked at the development stage of the cube questionnaire."@en ;
+              rdfs:label "Develop Stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence
+:Evidence rdf:type owl:Class ;
+          <http://purl.org/dc/elements/1.1/contributor> "Ademar" ;
+          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+          <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:05:52+00:00" ;
+          <http://purl.org/dc/elements/1.1/modified> "2020-05-20T14:31:50.607524" ;
+          rdfs:comment "An evidence is composed of artefacts and are associated to a given to an answer."@en ;
+          rdfs:label "Evidence" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#EvidenceRule
+:EvidenceRule rdf:type owl:Class ;
+              <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:06:49+00:00" ;
+              rdfs:comment "A rule provided to evaluate an evidence."@en ;
+              rdfs:label "Evidence Rule"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem
+:FunctionalSystem rdf:type owl:Class ;
+                  rdfs:subClassOf :AspectOfReality ;
+                  <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                  <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:07+00:00" ;
+                  rdfs:comment "The Functional System refers to the basic causal structure of the system and the relationships that produce outcomes."@en ;
+                  rdfs:label "Functional System"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Goal
+:Goal rdf:type owl:Class ;
+      rdfs:subClassOf :SystemDimension ;
+      <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+      <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:27:46+00:00" ;
+      rdfs:comment "An aim or desired outcome."@en ;
+      rdfs:label "Goal"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage
+:ImplementStage rdf:type owl:Class ;
+                rdfs:subClassOf :Stage ;
+                <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
+                rdfs:comment "An implement stage question is a cube question which is asked at the implementation stage of the cube questionnaire."@en ;
+                rdfs:label "Implement Stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#InformationKnowledge
+:InformationKnowledge rdf:type owl:Class ;
+                      rdfs:subClassOf :SystemDimension ;
+                      <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                      <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:27:46+00:00" ;
+                      rdfs:comment """Knowledge gained through communication, research, instruction.
+Familiarity gained by personal experience, vicariously or through collective processes"""@en ;
+                      rdfs:label "Information and Knowledge"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Mechanism
+:Mechanism rdf:type owl:Class ;
+           <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+           <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:31+00:00" ;
+           rdfs:comment "The way in which something is transformed, produced, circulated."@en ;
+           rdfs:label "Mechanism"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Outcome
+:Outcome rdf:type owl:Class ;
+         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+         <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:39+00:00" ;
+         rdfs:comment "The end product of a purposive activity."@en ;
+         rdfs:label "Outcome"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage
+:PlanPrepareStage rdf:type owl:Class ;
+                  rdfs:subClassOf :Stage ;
+                  <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                  <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
+                  rdfs:comment "A plan and prepare stage question is a cube question which is asked at the planning stage of the cube questionnaire."@en ;
+                  rdfs:label "Plan and Prepare Stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Priority
+:Priority rdf:type owl:Class ;
+          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+          <http://purl.org/dc/elements/1.1/date> "2019-11-19T16:20:56+00:00" ;
+          rdfs:comment "The fact or condition of being regarded or treated as more important than others."@en ;
+          rdfs:label "Priority"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage
+:ProblemStage rdf:type owl:Class ;
+              rdfs:subClassOf :Stage ;
+              <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+              <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:22:54+00:00" ;
+              rdfs:comment "A problem stage question is a cube question which is asked at the problem stage of the cube questionnaire"@en ;
+              rdfs:label "Problem Stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence
+:ProcessSequence rdf:type owl:Class ;
+                 rdfs:subClassOf :SystemDimension ;
+                 <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                 <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:27:46+00:00" ;
+                 rdfs:comment "The key activity of the operation; a sequence of activities and stages through which an initial state is transformed into the final state"@en ;
+                 rdfs:label "Process/Sequence"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Question
+:Question rdf:type owl:Class ;
+          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+          <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:20:23+00:00" ;
+          rdfs:comment "A question is an expression used to request information about a specific topic. A question may be asked in various forms and may seek different kinds of answers."@en ;
+          rdfs:label "Question"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire
+:Questionnaire rdf:type owl:Class ;
+               <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+               <http://purl.org/dc/elements/1.1/date> "2019-11-13T14:18:47+00:00" ;
+               rdfs:comment "A set of structured questions which seek information on a topic of interest from respndents."@en ;
+               rdfs:label "Questionnaire"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Report
+:Report rdf:type owl:Class ;
+        <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+        <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:08+00:00" ;
+        rdfs:comment "A written account of an activity or investigation?"@en ;
+        rdfs:label "Report"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking
+:SenseMaking rdf:type owl:Class ;
+             rdfs:subClassOf :AspectOfReality ;
+             <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+             <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:07+00:00" ;
+             rdfs:comment "Sensemaking focuses on the different ways people understand the situation they are in and how they respond to it, while Culture represents the shared values, norms, expectations of various parties in the organization."@en ;
+             rdfs:label "Sensemaking"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Social
+:Social rdf:type owl:Class ;
+        rdfs:subClassOf :SystemDimension ;
+        <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+        <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:27:46+00:00" ;
+        rdfs:comment "Dimension relating to a community or its organization."@en ;
+        rdfs:label "Social"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage
+:SolutionStage rdf:type owl:Class ;
+               rdfs:subClassOf :Stage ;
+               <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+               <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
+               rdfs:comment "A solution stage question is a cube question which is asked at the solution stage of the cube questionnaire."@en ;
+               rdfs:label "Solution Stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage
+:Stage rdf:type owl:Class ;
+       <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+       <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:21:31+00:00" ;
+       rdfs:comment "A stage is the stage on the cube questionnaire."@en ;
+       rdfs:label "Stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension
+:SystemDimension rdf:type owl:Class ;
+                 <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                 <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:28:50+00:00" ;
+                 rdfs:comment "This focuses on the Goals, Process, Social, and Knowledge and Information."@en ;
+                 rdfs:label "System Dimension"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage
+:VerifyEmbedStage rdf:type owl:Class ;
+                  rdfs:subClassOf :Stage ;
+                  <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
+                  <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
+                  rdfs:comment "A verify stage question is a cube  question which is asked at the verification stage of the cube questionnaire."@en ;
+                  rdfs:label "Verify and Embed Stage"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#
+<https://ark.adaptcentre.ie/Ontologies/ARKCube#> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

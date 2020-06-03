@@ -1,0 +1,1402 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#"
+     xml:base="https://ark.adaptcentre.ie/Ontologies/ARKAmarach"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#">
+        <owl:versionIRI rdf:resource="https://ARKAmarach.adaptcentre.ie/Ontologies/ARKAmarach/0.1"/>
+        <dc:contributor>Conor Nolan</dc:contributor>
+        <dc:contributor>Jessica Brown</dc:contributor>
+        <dc:contributor>Nick McDonald</dc:contributor>
+        <dc:contributor>Rob Brennan</dc:contributor>
+        <dc:creator>Yalemisew Abgaz</dc:creator>
+        <dc:description xml:lang="en">A model for representing concepts, relationships and axioms for Aviation Risk Knowledge flight operaiton reporting system.</dc:description>
+        <dc:modified>02/07/2019</dc:modified>
+        <dc:publisher>https://www.ARKAmarach.adaptcentre.ie/</dc:publisher>
+        <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
+        <dc:title xml:lang="en">Access Risk Knowledge Ontology Amarach Report Ontology</dc:title>
+        <vann:preferredNamespacePrefix>ARKAM</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://ARKAmarach.adaptcentre.ie/Ontologies/ARKAmarach#</vann:preferredNamespaceUri>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasAircraftStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasAircraftStatus">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AircraftStatus"/>
+        <dc:description xml:lang="en">Relates the aircraft status with a given report</dc:description>
+        <rdfs:label xml:lang="en">has aircraft status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasCityJetInformation -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasCityJetInformation">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CityJetInformation"/>
+        <dc:description xml:lang="en">A relationship linking a report with City Jet information</dc:description>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasCrewChange -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasCrewChange">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CrewChange"/>
+        <dc:description xml:lang="en">The crew change information a report contains</dc:description>
+        <rdfs:label xml:lang="en">has crew change</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasCrewCoupling -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasCrewCoupling">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CrewCoupling"/>
+        <dc:description xml:lang="en">The crew coupling information a report contains</dc:description>
+        <rdfs:label xml:lang="en">has crew coupling</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFlightLoad -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFlightLoad">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FlightLoad"/>
+        <dc:description xml:lang="en">Links a report with a flight load</dc:description>
+        <rdfs:label xml:lang="en">has flight load</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFlightTurnAround -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFlightTurnAround">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FlightsWithTurnaround"/>
+        <dc:description xml:lang="en">The flight turnaround information a report contains</dc:description>
+        <rdfs:label xml:lang="en">has flight turnaround</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFocusFlight -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFocusFlight">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FocusedFlight"/>
+        <dc:description xml:lang="en">Relates the focus flight information with a given report</dc:description>
+        <rdfs:label xml:lang="en">has focus flight</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFutureIssue -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasFutureIssue">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FutureIssue"/>
+        <dc:description xml:lang="en">Relates the information about the future issue with a report</dc:description>
+        <rdfs:label xml:lang="en">has future issue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasInboundRoutesWithPax -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasInboundRoutesWithPax">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Route"/>
+        <dc:description xml:lang="en">Links a route with a report</dc:description>
+        <rdfs:label xml:lang="en">has inbound route</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasIrregularOperation -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasIrregularOperation">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#IrregularOperation"/>
+        <dc:description xml:lang="en">The irregular operation information contained in a Report</dc:description>
+        <rdfs:label xml:lang="en">has irregular operation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasLongHaulEstBoundArrival -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasLongHaulEstBoundArrival"/>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasMainLineStandby -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasMainLineStandby">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#MainLineStandby"/>
+        <dc:description xml:lang="en">Relates the mainline standby information with a given report</dc:description>
+        <rdfs:label xml:lang="en">has mainline standby</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOperationalIssue -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOperationalIssue">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OperationalIssue"/>
+        <dc:description xml:lang="en">Relates the information about operational issue with a report</dc:description>
+        <rdfs:label xml:lang="en">has operational issue</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOperationalStatus -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOperationalStatus">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OperationalStatus"/>
+        <dc:description xml:lang="en">The hasOperationalStatus relationship relates the report with the operational status information</dc:description>
+        <rdfs:label xml:lang="en">has operational status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOptionForCancellation -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOptionForCancellation">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Cancellation"/>
+        <dc:description xml:lang="en">A property that links a report with the cancellation options for flights</dc:description>
+        <rdfs:label xml:lang="en">has option for cancellation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOverBooking -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOverBooking">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OverBooking"/>
+        <dc:description xml:lang="en">A property that links the report with the details of flight overbooking</dc:description>
+        <rdfs:label xml:lang="en">has overbooking</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOvernightMaintenance -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasOvernightMaintenance">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OvernightMaintenance"/>
+        <dc:description xml:lang="en">links an overnight maintenance information with a specific report</dc:description>
+        <rdfs:label xml:lang="en">has overnight maintenance</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasPBZFlight -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasPBZFlight">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#PBZFlight"/>
+        <dc:description xml:lang="en">this property relates the PBZ flight information with the a given report</dc:description>
+        <rdfs:label xml:lang="en">has PBZ flight</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasPRMSpecialHandling -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasPRMSpecialHandling">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#PRMSpecialHandling"/>
+        <dc:description xml:lang="en">A property that links the report with PRM special handling</dc:description>
+        <rdfs:label xml:lang="en">has PRM special Handling</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasReportParticipant -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasReportParticipant">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Participant"/>
+        <dc:description xml:lang="en">A relationship linking a report with the participants in the report</dc:description>
+        <rdfs:label xml:lang="en">has report participant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasSecurity -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasSecurity">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Security"/>
+        <dc:description xml:lang="en">A relationship which links a report with security information</dc:description>
+        <rdfs:label xml:lang="en">has security</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasStandbyCabinCrew -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasStandbyCabinCrew">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyCabinCrew"/>
+        <dc:description xml:lang="en">Relates the cabin crew information with a report</dc:description>
+        <rdfs:label xml:lang="en">has standby cabin crew</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasStandbyPilot -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasStandbyPilot">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyPilot"/>
+        <dc:description xml:lang="en">Relates the standby pilots information with a report</dc:description>
+        <rdfs:label xml:lang="en">has standby pilot</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasTransferDetail -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasTransferDetail">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Transfer"/>
+        <dc:description xml:lang="en">Links a report with the transfer information</dc:description>
+        <rdfs:label xml:lang="en">has transfer detail</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasWalkOutFlight -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasWalkOutFlight">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WalkOutFlight"/>
+        <dc:description xml:lang="en">Relates the walkout information with a given report</dc:description>
+        <rdfs:label xml:lang="en">has walkout flight</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasWeather -->
+
+
+    <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hasWeather">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Weather"/>
+        <dc:description xml:lang="en">Links a report with the weather information</dc:description>
+        <rdfs:label xml:lang="en">has weather</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AKHstationLowInStock -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AKHstationLowInStock">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">AKH station low in stock</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AVI -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AVI">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">AVI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#LDMCRStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#LDMCRStatus"/>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#SecurityType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#SecurityType">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The type of the security situation where evere there is one</dc:description>
+        <rdfs:label xml:lang="en">Security type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WCHC -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WCHC">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">WCHC</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WCHR -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WCHR">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">WCHR</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WCHS -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WCHS">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">WCHS</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#aircraftRegistrationNo -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#aircraftRegistrationNo">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The aircraft registration number </dc:description>
+        <rdfs:label xml:lang="en">Aircraft registration number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#aircraftType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#aircraftType">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The type of the aircraft</dc:description>
+        <rdfs:label xml:lang="en">Aircraft type</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#availableNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#availableNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <dc:description xml:lang="en">The number of Available standby aircrafts</dc:description>
+        <rdfs:label xml:lang="en">Available number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#availableTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#availableTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The time of available standby aircraft</dc:description>
+        <rdfs:label xml:lang="en">Available time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#base -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#base">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The base location of a standby pilot?</dc:description>
+        <rdfs:label xml:lang="en">Base</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#booked -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#booked">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">nèeds detail</dc:description>
+        <rdfs:label xml:lang="en">Booked</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#cabinCrewE -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#cabinCrewE">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby cabin crew</dc:description>
+        <rdfs:label xml:lang="en">Cabin crew E</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#cabinCrewL -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#cabinCrewL">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby cabin crew</dc:description>
+        <rdfs:label xml:lang="en">Cabin crew L</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#cabinCrewM -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#cabinCrewM">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby cabin crew</dc:description>
+        <rdfs:label xml:lang="en">Cabin crew M</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#captainE -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#captainE">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby captains E</dc:description>
+        <rdfs:label xml:lang="en">Captain E</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#captainL -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#captainL">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standy captains L</dc:description>
+        <rdfs:label xml:lang="en">Captain L</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#captainM -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#captainM">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby captains M</dc:description>
+        <rdfs:label xml:lang="en">Captain </rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#connection -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#connection">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of connectionsin the cancellation</dc:description>
+        <rdfs:label xml:lang="en">Connection</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#crewChangeNote -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#crewChangeNote">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">A note about the crew change</dc:description>
+        <rdfs:label xml:lang="en">Crew change note</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#crewCouplingNote -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#crewCouplingNote">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">A note about the crew coupling</dc:description>
+        <rdfs:label xml:lang="en">Crew coupling note</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#dayTrippers -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#dayTrippers">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of daytrippers for firstwave cancellations</dc:description>
+        <rdfs:label xml:lang="en">Day trippers</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#de-iceingPortal -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#de-iceingPortal">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The information regarding de-icing of an aircraft</dc:description>
+        <rdfs:label xml:lang="en">De-icing portal</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#estimatedServiceTime -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#estimatedServiceTime">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The estimated service time of an aircraft</dc:description>
+        <rdfs:label xml:lang="en">Estimated service time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstOfficerE -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstOfficerE">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby first officers R</dc:description>
+        <rdfs:label xml:lang="en">First officer E</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstOfficerL -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstOfficerL">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby first officers L</dc:description>
+        <rdfs:label>First officer L</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstOfficerM -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstOfficerM">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of standby first officers M</dc:description>
+        <rdfs:label xml:lang="en">First officer M</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstWaveZone -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#firstWaveZone">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The zone of the first wave flights (dub eur, dub-lhr etc)</dc:description>
+        <rdfs:label xml:lang="en">First wave zone</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#flightNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#flightNumber">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The flight number</dc:description>
+        <rdfs:label xml:lang="en">Flight number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#guestBooked -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#guestBooked">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The total number of guests booked in that day</dc:description>
+        <rdfs:label xml:lang="en">Guest booked</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#humanRemain -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#humanRemain">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">Information about the presence of a human remain on a flight</dc:description>
+        <rdfs:label xml:lang="en">Human remain</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#inbound -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#inbound">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of inbound transferes. Needs detail</dc:description>
+        <rdfs:label xml:lang="en">Inbound</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#lDMCRStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#lDMCRStatus">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">IDMCR status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#loadFactor -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#loadFactor">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The percentage of load of all the aircrafts in a day</dc:description>
+        <rdfs:label xml:lang="en">Load factor</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#maintenanceDetail -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#maintenanceDetail">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">Information about the maintenance of an aircraft</dc:description>
+        <rdfs:label xml:lang="en">Maintenance detail</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#network -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#network">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">Represents the category of the network of flights as short-haul, long-haul, regional etc</dc:description>
+        <rdfs:label>Network</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#note -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#note">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">A note about future flight issues</dc:description>
+        <rdfs:label xml:lang="en">Note</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#number -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#number">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">A number </dc:description>
+        <rdfs:label xml:lang="en">Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#numberOfEscorts -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#numberOfEscorts">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The number of passengers travelling with a person under security</dc:description>
+        <rdfs:label xml:lang="en">Number of escorts</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#onwardDestinationFlight -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#onwardDestinationFlight">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The flight number of onward destination flights</dc:description>
+        <rdfs:label xml:lang="en">Onward destination flight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#onwardTotal -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#onwardTotal">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The total number of passengers travelling onwards</dc:description>
+        <rdfs:label>Onward total</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#operation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#operation">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">Operation</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#operationalStatusNote -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#operationalStatusNote">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">Note about the operational status of an aircraft</dc:description>
+        <rdfs:label>Operational status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#otherInformation -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#otherInformation">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">Any related information related to security</dc:description>
+        <rdfs:label xml:lang="en">Other information</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#outboundTransfer -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#outboundTransfer">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">Number of outbound transfers</dc:description>
+        <rdfs:label xml:lang="en">Outbound transfers</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#participantName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#participantName">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The name of the parties that are involved in the preparation of Amarach report</dc:description>
+        <rdfs:label xml:lang="en">Participants</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#participantStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#participantStatus">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The status of the parties that are expected to involve in the preparation of the Amarach report</dc:description>
+        <rdfs:label xml:lang="en">Participant status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#plannedAircraftStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#plannedAircraftStatus">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The detail description of the planned aircraft status</dc:description>
+        <rdfs:label xml:lang="en">Planned aircraft status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#recoveryOverview -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#recoveryOverview">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The details of the revocery plan</dc:description>
+        <rdfs:label xml:lang="en">Recovery overview</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#risk -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#risk">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The risk associated with weather </dc:description>
+        <rdfs:label xml:lang="en">Risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#securityType -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#securityType"/>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#weatherRisk -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#weatherRisk">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">The risk associated with weather </dc:description>
+        <rdfs:label xml:lang="en">Weather risk</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#color? -->
+
+
+    <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#color?">
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description xml:lang="en">needs detail</dc:description>
+        <rdfs:label xml:lang="en">Color</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#ASLLTDOperationalStatus -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#ASLLTDOperationalStatus">
+        <dc:description xml:lang="en">Information about ASL ltd aircraft, crew, operational status etc. </dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">ASL LTD Operational Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AerLingusOperationalStatus -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AerLingusOperationalStatus">
+        <dc:description xml:lang="en">Information about Aer Lingus regional aircraft, crew, operational status etc. </dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Aer Lingus Operational Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AircraftStatus -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#AircraftStatus">
+        <rdfs:comment xml:lang="en">This information needs a better name</rdfs:comment>
+        <rdfs:comment>The aircraft status detail contains information related to the Aircraft switches, AKH Stations low in stock, de-icing and LDMCR status.</rdfs:comment>
+        <rdfs:label xml:lang="en">Aircraft Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Cancellation -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Cancellation">
+        <dc:description xml:lang="en">Information about options of cancelation of a given flight zone</dc:description>
+        <rdfs:comment xml:lang="en">This information is not about individual flight, but groups of flights based on zones?</rdfs:comment>
+        <rdfs:label xml:lang="en">Cancellation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CityJetInformation -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CityJetInformation">
+        <dc:description xml:lang="en">Description of City jet flights and crew </dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">City Jet Information</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CrewChange -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CrewChange">
+        <dc:description xml:lang="en">Information about the crew changes in LHR. Involves crew transportation to/from hotel</dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Crew Changes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CrewCoupling -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#CrewCoupling">
+        <dc:description xml:lang="en">Information about crew coupling with greater than 10 hrs FDP</dc:description>
+        <rdfs:comment xml:lang="en">Contains flight information and time. Needs further clarification?</rdfs:comment>
+        <rdfs:label xml:lang="en">Crew Coupling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FlightLoad -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FlightLoad">
+        <dc:description xml:lang="en">A high-level load information of flights aggregated based on their network (short-haul, long-haul and regional)</dc:description>
+        <rdfs:comment xml:lang="en">Flight load may be used to indicate the number of booked guests, the load factor, indicator if human remain presents in any of the flights</rdfs:comment>
+        <rdfs:label xml:lang="en">Flight Load</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FlightsWithTurnaround -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FlightsWithTurnaround">
+        <dc:description xml:lang="en">Flights that have a turnaround time less than 40 minutes</dc:description>
+        <rdfs:comment xml:lang="en">The label requires further revision</rdfs:comment>
+        <rdfs:label xml:lang="en">Flights with  Turnaround</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FocusedFlight -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FocusedFlight">
+        <dc:description xml:lang="en"></dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Focused Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FutureIssue -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#FutureIssue">
+        <dc:description xml:lang="en">A detailed description of any future operational issue affecting the operations of the airline</dc:description>
+        <rdfs:comment xml:lang="en">A free text </rdfs:comment>
+        <rdfs:label xml:lang="en">Future Issue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#IrregularOperation -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#IrregularOperation">
+        <dc:description xml:lang="en">A description of long stopped crew, unscheduled overnights and risks to OTP</dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Irregular Operation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#MainLineStandby -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#MainLineStandby">
+        <dc:description>The standby details of mainline aricrafts</dc:description>
+        <rdfs:comment xml:lang="en">needs more detail</rdfs:comment>
+        <rdfs:label xml:lang="en">Main Line Standby</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Maintenance -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Maintenance">
+        <dc:description xml:lang="en">Information about fleet technical issues and planned overnight maintenance</dc:description>
+        <rdfs:comment xml:lang="en">Maintenance could include both technical issue or a planned overnight maintenance of a given aircraft</rdfs:comment>
+        <rdfs:label xml:lang="en">Maintenance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OperationalIssue -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OperationalIssue">
+        <dc:description xml:lang="en">A detailed description of any operational issue affecting the operations of the airline</dc:description>
+        <rdfs:comment xml:lang="en">A free text </rdfs:comment>
+        <rdfs:label xml:lang="en">Operational Issue</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OperationalStatus -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OperationalStatus">
+        <dc:description>The operational status of an air craft</dc:description>
+        <rdfs:comment>needs more detail</rdfs:comment>
+        <rdfs:label>Operational Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OverBooking -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OverBooking">
+        <dc:description xml:lang="en">Information describing an overbooking on a given flight</dc:description>
+        <rdfs:comment xml:lang="en">Overbooking is Nil when there is no overbooked flight</rdfs:comment>
+        <rdfs:label xml:lang="en">Overbooking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OvernightMaintenance -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#OvernightMaintenance">
+        <dc:description>Overnight maintenance schedule</dc:description>
+        <rdfs:comment xml:lang="en">needs more detail</rdfs:comment>
+        <rdfs:label xml:lang="en">Overnight Maintenance</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#PBZFlight -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#PBZFlight">
+        <dc:description xml:lang="en"></dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">PBZ Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#PRMSpecialHandling -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#PRMSpecialHandling">
+        <dc:description xml:lang="en">The information about flights that have PRM special handling including wheel chairs. This information is given per flight.</dc:description>
+        <rdfs:comment xml:lang="en">This information needs further description to elaborate the acronyms used such as (PRM, WCHC, WCHR, WCHS)</rdfs:comment>
+        <rdfs:label xml:lang="en">PRM Special Handling</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Participant -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Participant">
+        <dc:description xml:lang="en">Information about the participants in the preparation of the Amarach report</dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Amarach Report Participants</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Report">
+        <dc:description>The Daily Amarach report prepared by Aer Lingus</dc:description>
+        <rdfs:comment>Amarach report</rdfs:comment>
+        <rdfs:label>Report</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Route -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Route">
+        <dc:description xml:lang="en">information about the inbound routes that have greater than 10  number of connecting passengers</dc:description>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label xml:lang="en">Route</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Security -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Security">
+        <dc:description xml:lang="en">Information describing if a given flight has passengers that require a special security </dc:description>
+        <rdfs:comment xml:lang="en">This information is filled when the flight has INAD, Deportee or a prisoner</rdfs:comment>
+        <rdfs:label xml:lang="en">Security</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyAircraft -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyAircraft">
+        <dc:description xml:lang="en">An aircraft which is standby to replace any other aircraft in a similar route</dc:description>
+        <rdfs:comment xml:lang="en">This information includes the available number and the availability time. There is risk associated?</rdfs:comment>
+        <rdfs:label xml:lang="en">Standby Aircraft</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyCabinCrew -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyCabinCrew">
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Standby Cabin Crew</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyPilot -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbyPilot">
+        <dc:description xml:lang="en">information about the number and details of standby pilots</dc:description>
+        <rdfs:comment xml:lang="en">Pilots categorised by Aircraft types</rdfs:comment>
+        <rdfs:label xml:lang="en">Standby Pilot</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Transfer -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Transfer">
+        <dc:description xml:lang="en">Information about the transfer details of the inboud and outbound connecting flights</dc:description>
+        <rdfs:comment xml:lang="en">This information is compiled per flight and contains color coded entries. Check this?</rdfs:comment>
+        <rdfs:label xml:lang="en">Transfer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WalkOutFlight -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#WalkOutFlight">
+        <dc:description xml:lang="en">needs more detail</dc:description>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <rdfs:label xml:lang="en">Walkout Flight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Weather -->
+
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#Weather">
+        <dc:description xml:lang="en">The state of the atmosphere at a particular airport or flight route</dc:description>
+        <rdfs:comment xml:lang="en">Weather is used in its current form in the report</rdfs:comment>
+        <rdfs:label xml:lang="en">Weather</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKAmarach# -->
+
+
+    <owl:NamedIndividual rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#StandbycabinCrew">
+        <dc:description xml:lang="en">Information about the number and details of standby crew</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKAmarach#hascityJetInformation">
+        <rdfs:label xml:lang="en">has City Jet Information</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+
+
