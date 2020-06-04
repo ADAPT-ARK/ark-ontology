@@ -81,7 +81,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  owl:inverseOf :isCollaboratorOf ;
                  rdfs:domain :Project ;
                  rdfs:range :User ;
-                 <http://purl.org/dc/elements/1.1/description> "Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights."@en ;
                  rdfs:comment "Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights."@en ;
                  rdfs:label "has collaborator"@en .
 
@@ -91,7 +90,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           owl:inverseOf :isOwnerOf ;
           rdfs:domain :Project ;
           rdfs:range :User ;
-          <http://purl.org/dc/elements/1.1/description> "Relates the Project with its owner User. The owner has a full read/write/grant access rights."@en ;
           rdfs:comment "Relates the Project with its owner User. The owner has a full read/write/grant access rights."@en ;
           rdfs:label "has owner"@en .
 
@@ -101,7 +99,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     owl:inverseOf :isProjectAnalysisOf ;
                     rdfs:domain :Project ;
                     rdfs:range :ProjectAnalysis ;
-                    <http://purl.org/dc/elements/1.1/description> "Relates a Project with all the analysis done on the Project."@en ;
                     rdfs:comment "Relates a Project with all the analysis done on the Project."@en ;
                     rdfs:label "has project analysis"@en .
 
@@ -111,7 +108,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  owl:inverseOf :isReadOnlyUserOf ;
                  rdfs:domain :Project ;
                  rdfs:range :User ;
-                 <http://purl.org/dc/elements/1.1/description> "Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right."@en ;
                  rdfs:comment "Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right."@en ;
                  rdfs:label "has readonly user"@en .
 
@@ -122,7 +118,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdf:type owl:TransitiveProperty ;
                rdfs:domain :Project ;
                rdfs:range :Project ;
-               <http://purl.org/dc/elements/1.1/description> "Relate a Project with its subproject. A Project can have one or more subprojects within it."@en ;
                rdfs:comment "Relate a Project with its subproject. A Project can have one or more subprojects within it."@en ;
                rdfs:label "has subproject"@en .
 
@@ -131,7 +126,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :isCollaboratorOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
                   rdfs:range :Project ;
-                  <http://purl.org/dc/elements/1.1/description> "Relates the collaborating User with a project. "@en ;
                   rdfs:comment "Relates the collaborating User with a project. "@en ;
                   rdfs:label "is collaborator of"@en ;
                   owl:inverseOf "hasCollaborator" .
@@ -141,7 +135,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :isOwnerOf rdf:type owl:ObjectProperty ;
            rdfs:domain :User ;
            rdfs:range :Project ;
-           <http://purl.org/dc/elements/1.1/description> "Relates the Owner User with a Project. The owner has a full read/write/grant access rights."@en ;
            rdfs:comment "Relates the Owner User with a Project. The owner has a full read/write/grant access rights."@en ;
            rdfs:label "is owner of"@en ;
            owl:inverseOf "hasOwner" .
@@ -151,7 +144,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :isProjectAnalysisOf rdf:type owl:ObjectProperty ;
                      rdfs:domain :ProjectAnalysis ;
                      rdfs:range :Project ;
-                     <http://purl.org/dc/elements/1.1/description> "Relates a Project Analysis with its Project."@en ;
                      rdfs:comment "Relates a Project Analysis with its Project."@en ;
                      rdfs:label "is project analysis of"@en ;
                      owl:inverseOf "hasProjectAnalysis" .
@@ -161,7 +153,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :isReadOnlyUserOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
                   rdfs:range :Project ;
-                  <http://purl.org/dc/elements/1.1/description> "Relates the ReadOnlyUser with a Project. "@en ;
                   rdfs:comment "Relates the ReadOnlyUser with a Project. "@en ;
                   rdfs:label "is readonlyuser of"@en ;
                   owl:inverseOf "hasReadOnlyUser" .
@@ -171,7 +162,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :isSubProjectOf rdf:type owl:ObjectProperty ;
                 rdfs:domain :Project ;
                 rdfs:range :Project ;
-                <http://purl.org/dc/elements/1.1/description> "Relates a project with its parent Project."@en ;
                 rdfs:comment "Relates a project with its parent Project."@en ;
                 rdfs:label "is subproject of"@en ;
                 owl:inverseOf "hasSubProject" .
@@ -185,7 +175,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :dataStatus rdf:type owl:DatatypeProperty ;
             rdfs:domain owl:Thing ;
             rdfs:range rdfs:Literal ;
-            <http://purl.org/dc/elements/1.1/description> "The status of the data. Deleted  when the data is deleted by the user"@en ;
             rdfs:comment "The status of the data. Deleted  when the data is deleted by the user"@en ;
             rdfs:label "data status"@en .
 
@@ -194,7 +183,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :designedBy rdf:type owl:DatatypeProperty ;
             rdfs:domain :Project ;
             rdfs:range rdfs:Literal ;
-            <http://purl.org/dc/elements/1.1/description> "The user who designed the project."@en ;
             rdfs:comment "The user who designed the project."@en ;
             rdfs:label "designed by"@en .
 
@@ -203,7 +191,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :efficacy rdf:type owl:DatatypeProperty ;
           rdfs:domain :ProjectAnalysis ;
           rdfs:range rdfs:Literal ;
-          <http://purl.org/dc/elements/1.1/description> "The efficacy of the solution."@en ;
           rdfs:comment "The efficacy of the solution."@en ;
           rdfs:label "efficacy"@en .
 
@@ -212,7 +199,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :importance rdf:type owl:DatatypeProperty ;
             rdfs:domain :ProjectAnalysis ;
             rdfs:range rdfs:Literal ;
-            <http://purl.org/dc/elements/1.1/description> "Importance of the problem under analysis."@en ;
             rdfs:comment "Importance of the problem under analysis."@en ;
             rdfs:label "importance"@en .
 
@@ -221,7 +207,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :name rdf:type owl:DatatypeProperty ;
       rdfs:domain :Project ;
       rdfs:range rdfs:Literal ;
-      <http://purl.org/dc/elements/1.1/description> "The name of a project"@en ;
       rdfs:comment "The name of a project"@en ;
       rdfs:label "project name"@en .
 
@@ -230,7 +215,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :organisationName rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Project ;
                   rdfs:range rdfs:Literal ;
-                  <http://purl.org/dc/elements/1.1/description> "The name of the organisation "@en ;
                   rdfs:comment "The name of the organisation "@en ;
                   rdfs:label "organisation name"@en .
 
@@ -239,7 +223,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :potentialLoss rdf:type owl:DatatypeProperty ;
                rdfs:domain :ProjectAnalysis ;
                rdfs:range rdfs:Literal ;
-               <http://purl.org/dc/elements/1.1/description> "Potential loss"@en ;
                rdfs:comment "Potential loss due to the problem."@en ;
                rdfs:label "potential loss"@en .
 
@@ -248,7 +231,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :projectedGain rdf:type owl:DatatypeProperty ;
                rdfs:domain :ProjectAnalysis ;
                rdfs:range rdfs:Literal ;
-               <http://purl.org/dc/elements/1.1/description> "The gain achieved by the project."@en ;
                rdfs:comment "The gain achieved by the project."@en ;
                rdfs:label "projected gain"@en .
 
@@ -257,7 +239,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :projectedValue rdf:type owl:DatatypeProperty ;
                 rdfs:domain :ProjectAnalysis ;
                 rdfs:range rdfs:Literal ;
-                <http://purl.org/dc/elements/1.1/description> "The projected value of the project."@en ;
                 rdfs:comment "The projected value of the project."@en ;
                 rdfs:label "projected value"@en .
 
@@ -266,7 +247,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :reportTo rdf:type owl:DatatypeProperty ;
           rdfs:domain :Project ;
           rdfs:range rdfs:Literal ;
-          <http://purl.org/dc/elements/1.1/description> "The person to whom the analysis is reported to."@en ;
           rdfs:comment "The person to whom the analysis is reported to."@en ;
           rdfs:label "report to"@en .
 
@@ -275,7 +255,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :status rdf:type owl:DatatypeProperty ;
         rdfs:domain :Project ;
         rdfs:range rdfs:Literal ;
-        <http://purl.org/dc/elements/1.1/description> "The current status of a project"@en ;
         rdfs:comment "The current status of a project"@en ;
         rdfs:label "project Status"@en .
 
@@ -284,7 +263,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :value rdf:type owl:DatatypeProperty ;
        rdfs:domain :ProjectAnalysis ;
        rdfs:range rdfs:Literal ;
-       <http://purl.org/dc/elements/1.1/description> "An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources."@en ;
        rdfs:comment "An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources."@en ;
        rdfs:label "value"@en .
 
@@ -293,7 +271,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :viability rdf:type owl:DatatypeProperty ;
            rdfs:domain :ProjectAnalysis ;
            rdfs:range rdfs:Literal ;
-           <http://purl.org/dc/elements/1.1/description> "Viability of the proposed solution."@en ;
            rdfs:comment "Viability of the proposed solution."@en ;
            rdfs:label "viablity"@en .
 

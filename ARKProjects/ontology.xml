@@ -138,7 +138,6 @@
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
-        <dc:description xml:lang="en">Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights.</dc:description>
         <rdfs:comment xml:lang="en">Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights.</rdfs:comment>
         <rdfs:label xml:lang="en">has collaborator</rdfs:label>
     </owl:ObjectProperty>
@@ -152,7 +151,6 @@
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
-        <dc:description xml:lang="en">Relates the Project with its owner User. The owner has a full read/write/grant access rights.</dc:description>
         <rdfs:comment xml:lang="en">Relates the Project with its owner User. The owner has a full read/write/grant access rights.</rdfs:comment>
         <rdfs:label xml:lang="en">has owner</rdfs:label>
     </owl:ObjectProperty>
@@ -166,7 +164,6 @@
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
-        <dc:description xml:lang="en">Relates a Project with all the analysis done on the Project.</dc:description>
         <rdfs:comment xml:lang="en">Relates a Project with all the analysis done on the Project.</rdfs:comment>
         <rdfs:label xml:lang="en">has project analysis</rdfs:label>
     </owl:ObjectProperty>
@@ -180,7 +177,6 @@
         <owl:inverseOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
-        <dc:description xml:lang="en">Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right.</dc:description>
         <rdfs:comment xml:lang="en">Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right.</rdfs:comment>
         <rdfs:label xml:lang="en">has readonly user</rdfs:label>
     </owl:ObjectProperty>
@@ -195,7 +191,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
-        <dc:description xml:lang="en">Relate a Project with its subproject. A Project can have one or more subprojects within it.</dc:description>
         <rdfs:comment xml:lang="en">Relate a Project with its subproject. A Project can have one or more subprojects within it.</rdfs:comment>
         <rdfs:label xml:lang="en">has subproject</rdfs:label>
     </owl:ObjectProperty>
@@ -208,7 +203,6 @@
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
-        <dc:description xml:lang="en">Relates the collaborating User with a project. </dc:description>
         <rdfs:comment xml:lang="en">Relates the collaborating User with a project. </rdfs:comment>
         <rdfs:label xml:lang="en">is collaborator of</rdfs:label>
         <owl:inverseOf>hasCollaborator</owl:inverseOf>
@@ -222,7 +216,6 @@
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
-        <dc:description xml:lang="en">Relates the Owner User with a Project. The owner has a full read/write/grant access rights.</dc:description>
         <rdfs:comment xml:lang="en">Relates the Owner User with a Project. The owner has a full read/write/grant access rights.</rdfs:comment>
         <rdfs:label xml:lang="en">is owner of</rdfs:label>
         <owl:inverseOf>hasOwner</owl:inverseOf>
@@ -236,7 +229,6 @@
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
-        <dc:description xml:lang="en">Relates a Project Analysis with its Project.</dc:description>
         <rdfs:comment xml:lang="en">Relates a Project Analysis with its Project.</rdfs:comment>
         <rdfs:label xml:lang="en">is project analysis of</rdfs:label>
         <owl:inverseOf>hasProjectAnalysis</owl:inverseOf>
@@ -250,7 +242,6 @@
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
-        <dc:description xml:lang="en">Relates the ReadOnlyUser with a Project. </dc:description>
         <rdfs:comment xml:lang="en">Relates the ReadOnlyUser with a Project. </rdfs:comment>
         <rdfs:label xml:lang="en">is readonlyuser of</rdfs:label>
         <owl:inverseOf>hasReadOnlyUser</owl:inverseOf>
@@ -264,7 +255,6 @@
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
-        <dc:description xml:lang="en">Relates a project with its parent Project.</dc:description>
         <rdfs:comment xml:lang="en">Relates a project with its parent Project.</rdfs:comment>
         <rdfs:label xml:lang="en">is subproject of</rdfs:label>
         <owl:inverseOf>hasSubProject</owl:inverseOf>
@@ -290,7 +280,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The status of the data. Deleted  when the data is deleted by the user</dc:description>
         <rdfs:comment xml:lang="en">The status of the data. Deleted  when the data is deleted by the user</rdfs:comment>
         <rdfs:label xml:lang="en">data status</rdfs:label>
     </owl:DatatypeProperty>
@@ -303,7 +292,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#designedBy">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The user who designed the project.</dc:description>
         <rdfs:comment xml:lang="en">The user who designed the project.</rdfs:comment>
         <rdfs:label xml:lang="en">designed by</rdfs:label>
     </owl:DatatypeProperty>
@@ -316,7 +304,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#efficacy">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The efficacy of the solution.</dc:description>
         <rdfs:comment xml:lang="en">The efficacy of the solution.</rdfs:comment>
         <rdfs:label xml:lang="en">efficacy</rdfs:label>
     </owl:DatatypeProperty>
@@ -329,7 +316,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#importance">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">Importance of the problem under analysis.</dc:description>
         <rdfs:comment xml:lang="en">Importance of the problem under analysis.</rdfs:comment>
         <rdfs:label xml:lang="en">importance</rdfs:label>
     </owl:DatatypeProperty>
@@ -342,7 +328,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#name">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The name of a project</dc:description>
         <rdfs:comment xml:lang="en">The name of a project</rdfs:comment>
         <rdfs:label xml:lang="en">project name</rdfs:label>
     </owl:DatatypeProperty>
@@ -355,7 +340,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#organisationName">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The name of the organisation </dc:description>
         <rdfs:comment xml:lang="en">The name of the organisation </rdfs:comment>
         <rdfs:label xml:lang="en">organisation name</rdfs:label>
     </owl:DatatypeProperty>
@@ -368,7 +352,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">Potential loss</dc:description>
         <rdfs:comment xml:lang="en">Potential loss due to the problem.</rdfs:comment>
         <rdfs:label xml:lang="en">potential loss</rdfs:label>
     </owl:DatatypeProperty>
@@ -381,7 +364,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The gain achieved by the project.</dc:description>
         <rdfs:comment xml:lang="en">The gain achieved by the project.</rdfs:comment>
         <rdfs:label xml:lang="en">projected gain</rdfs:label>
     </owl:DatatypeProperty>
@@ -394,7 +376,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The projected value of the project.</dc:description>
         <rdfs:comment xml:lang="en">The projected value of the project.</rdfs:comment>
         <rdfs:label xml:lang="en">projected value</rdfs:label>
     </owl:DatatypeProperty>
@@ -407,7 +388,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#reportTo">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The person to whom the analysis is reported to.</dc:description>
         <rdfs:comment xml:lang="en">The person to whom the analysis is reported to.</rdfs:comment>
         <rdfs:label xml:lang="en">report to</rdfs:label>
     </owl:DatatypeProperty>
@@ -420,7 +400,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#status">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">The current status of a project</dc:description>
         <rdfs:comment xml:lang="en">The current status of a project</rdfs:comment>
         <rdfs:label xml:lang="en">project Status</rdfs:label>
     </owl:DatatypeProperty>
@@ -433,7 +412,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#value">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources.</dc:description>
         <rdfs:comment xml:lang="en">An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources.</rdfs:comment>
         <rdfs:label xml:lang="en">value</rdfs:label>
     </owl:DatatypeProperty>
@@ -446,7 +424,6 @@
     <owl:DatatypeProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#viability">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-        <dc:description xml:lang="en">Viability of the proposed solution.</dc:description>
         <rdfs:comment xml:lang="en">Viability of the proposed solution.</rdfs:comment>
         <rdfs:label xml:lang="en">viablity</rdfs:label>
     </owl:DatatypeProperty>
