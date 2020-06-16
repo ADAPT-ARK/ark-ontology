@@ -192,6 +192,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              owl:inverseOf "isQuestionOf" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept
+:hasRelatedConcept rdf:type owl:ObjectProperty ;
+                   rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
+                   rdfs:comment "Links entites in ARK Cube to related concepts in ARK terminologies." ;
+                   rdfs:label "has related concept" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
           owl:inverseOf :isStageOf ;
@@ -444,6 +452,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
 rdfs:Resource rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity
