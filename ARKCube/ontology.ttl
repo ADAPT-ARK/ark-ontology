@@ -13,16 +13,17 @@
                                                                                                 "Natalia Duda"@en ,
                                                                                                 "Nick Mcdonald"@en ,
                                                                                                 "Rob Brennan"@en ;
-                                                  <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz"@en ;
-                                                  <http://purl.org/dc/elements/1.1/modified> "182/04/2020" ;
-                                                  <http://purl.org/dc/elements/1.1/publisher> "https://www.ARKAmarach.adaptcentre.ie/" ;
+                                                  <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ,
+                                                                                            "Yalemisew Abgaz"@en ;
+                                                  <http://purl.org/dc/elements/1.1/modified> "1/10/2020" ;
+                                                  <http://purl.org/dc/elements/1.1/publisher> "https://openark.adaptcentre.ie/" ;
                                                   <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
-                                                  <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube Questionnaire Ontology"@en ;
+                                                  <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube  Ontology"@en ;
                                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKC" ;
-                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ARKAmarach.adaptcentre.ie/Ontologies/ARKCube#" ;
-                                                  rdfs:comment "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, Trinity College Dublin (Prof Nick Mcdonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ,
-                                                               "This ontology supports the cube questionnaire developed by TCD"@en ;
-                                                  owl:versionInfo 0.5 .
+                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKCube#" ;
+                                                  rdfs:comment "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ,
+                                                               "This ontology supports the cube risk management methodology and questionnaire developed by the Centre for Innovative Human Systems, Trinity College Dublin"@en ;
+                                                  owl:versionInfo 0.6 .
 
 #################################################################
 #    Annotation properties
@@ -72,6 +73,26 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#additionalControl
+:additionalControl rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Risk ;
+                   rdfs:range :Control ;
+                   <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                   <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                   rdfs:comment "Used to link new controls that are required with a risk in a risk assessment."@en ;
+                   rdfs:label "has addtional required control"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#assignedPerson
+:assignedPerson rdf:type owl:ObjectProperty ;
+                rdfs:domain :Action ;
+                rdfs:range :Person ;
+                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                rdfs:comment "Used to connect an action with the person assigned to perform it."@en ;
+                rdfs:label "assigned person"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer
 :hasAnswer rdf:type owl:ObjectProperty ;
            owl:inverseOf :isAnswerOf ;
@@ -104,6 +125,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:label "has aspect"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasCause
+:hasCause rdf:type owl:ObjectProperty ;
+          rdfs:domain :riskDescription ;
+          rdfs:range :Cause ;
+          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+          rdfs:comment "Links a risk description to a cause."@en ;
+          rdfs:label "has cause"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext
 :hasContext rdf:type owl:ObjectProperty ;
             owl:inverseOf :isContextOf ;
@@ -123,6 +154,26 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             <http://purl.org/dc/elements/1.1/date> "2020-05-15T14:18:45.087269" ;
             rdfs:comment "Evidence may contain dataset descriptions" ;
             rdfs:label "has dataset" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDeliverable
+:hasDeliverable rdf:type owl:ObjectProperty ;
+                rdfs:domain :Action ;
+                rdfs:range :Deliverable ;
+                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                rdfs:comment "Links an action and its deliverable"@en ;
+                rdfs:label "has deliverable"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite
+:hasDeptServiceSite rdf:type owl:ObjectProperty ;
+                    rdfs:domain :RiskAssessmentRecord ;
+                    rdfs:range :OrganisationalUnit ;
+                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                    <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
+                    rdfs:comment "Links risk assessment with a site or organisatioal unit."@en ;
+                    rdfs:label "has dept,/service site"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDimension
@@ -158,6 +209,56 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  rdfs:label "has evidence rule"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasExistingControl
+:hasExistingControl rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Risk ;
+                    rdfs:range :Control ;
+                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                    <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                    rdfs:comment "Used in the HSE risk assessment form to link existing control measures with a risk."@en ;
+                    rdfs:label "has existing control"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction
+:hasHgChoNasFunction rdf:type owl:ObjectProperty ;
+                     rdfs:domain :RiskAssessmentRecord ;
+                     rdfs:range :OrganisationalUnit ;
+                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                     rdfs:comment "Links a risk assessment and the relevant organisational unit."@en ;
+                     rdfs:label "has HG/CHO/NAS/function"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService
+:hasHospitalSiteOrService rdf:type owl:ObjectProperty ;
+                          rdfs:domain :RiskAssessmentRecord ;
+                          rdfs:range :OrganisationalUnit ;
+                          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                          rdfs:comment "Links asssessment form and location/organisational unit" ;
+                          rdfs:label "has hospital site/service" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasImpact
+:hasImpact rdf:type owl:ObjectProperty ;
+           rdfs:domain :riskDescription ;
+           rdfs:range :Impact ;
+           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+           <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+           rdfs:comment "Links a risk and its impact."@en ;
+           rdfs:label "has impact"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood
+:hasLikelihood rdf:type owl:ObjectProperty ;
+               rdfs:domain :Risk ;
+               rdfs:range :Likelihood ;
+               <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+               rdfs:comment "Links a risk  to a likelihood of it occurring."@en ;
+               rdfs:label "has likelihood"@en ,
+                          "Rob Brennan" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism
 :hasMechanism rdf:type owl:ObjectProperty ;
               owl:inverseOf :isMechanismOf ;
@@ -180,6 +281,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             owl:inverseOf "isOutcomeOf" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasPrimaryImpactArea
+:hasPrimaryImpactArea rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Risk ;
+                      rdfs:range :ImpactCategory ;
+                      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                      <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                      rdfs:comment "HSE risk assessment form."@en ;
+                      rdfs:label "has primary impact category"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasQuestion
 :hasQuestion rdf:type owl:ObjectProperty ;
              owl:inverseOf :isQuestionOf ;
@@ -198,6 +309,71 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                    <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
                    rdfs:comment "Links entites in ARK Cube to related concepts in ARK terminologies." ;
                    rdfs:label "has related concept" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRisk
+:hasRisk rdf:type owl:ObjectProperty ;
+         rdfs:domain :RiskAssessmentRecord ;
+         rdfs:range :Risk ;
+         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+         rdfs:comment "Links a risk assessment to a risk."@en ;
+         rdfs:label "has risk"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour
+:hasRiskColour rdf:type owl:ObjectProperty ;
+               rdfs:domain :RiskRating ;
+               rdfs:range :RiskColour ;
+               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+               rdfs:comment "Links a risk class with a specific colour."@en ;
+               rdfs:label "has risk colour"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator
+:hasRiskCoordinator rdf:type owl:ObjectProperty ;
+                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                    <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                    rdfs:comment "Links risk to risk coordinator in risk assessment."@en ;
+                    rdfs:label "has risk coordinator"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription
+:hasRiskDescription rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Risk ;
+                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                    <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                    rdfs:comment "Use ICC (impact, cause, context) format when describing risk."@en ;
+                    rdfs:label "has risk description"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskOwner
+:hasRiskOwner rdf:type owl:ObjectProperty ;
+              rdfs:domain :Risk ;
+              rdfs:range :Person ;
+              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+              rdfs:label "has risk owner"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating
+:hasRiskRating rdf:type owl:ObjectProperty ;
+               rdfs:domain :Risk ;
+               rdfs:range :RiskRating ;
+               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+               rdfs:label "has risk rating" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskStatus
+:hasRiskStatus rdf:type owl:ObjectProperty ;
+               rdfs:domain :Risk ;
+               rdfs:range :RiskStatus ;
+               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+               rdfs:comment "Links a risk to its current status."@en ;
+               rdfs:label "has risk status"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasStage
@@ -220,6 +396,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:16:56+00:00" ;
                 rdfs:comment "Represents and links the subquestion of a question" ;
                 rdfs:label "has subquestion"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#has_division
+:has_division rdf:type owl:ObjectProperty ;
+              rdfs:domain :RiskAssessmentRecord ;
+              rdfs:range :OrganisationalUnit ;
+              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+              rdfs:comment "Links a risk assessment and a healthcare division."@en ;
+              rdfs:label "has division"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf
@@ -309,6 +495,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency
+:actualFrequency rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Likelihood ;
+                 rdfs:range rdf:PlainLiteral ;
+                 <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                 <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+                 rdfs:comment "Defines the range of the likelihood value for a risk in terms of frequency"@en ;
+                 rdfs:label "actual frequency"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#analyticsData
 :analyticsData rdf:type owl:DatatypeProperty ;
                <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
@@ -352,6 +548,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:label "artefact text" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#assessmentDate
+:assessmentDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain :RiskAssessmentRecord ;
+                rdfs:range xsd:dateTime ;
+                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                rdfs:comment "Used in a HSE risk assessment form."@en ;
+                rdfs:label "date of assessment"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#comment
 :comment rdf:type owl:DatatypeProperty ;
          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
@@ -374,6 +580,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:27+00:00" ;
             rdfs:comment "The person who designed the project analysis and the cube questionnaire."@en ;
             rdfs:label "design by"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#dueDate
+:dueDate rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Action ;
+         rdfs:range xsd:dateTime ;
+         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+         rdfs:comment "Used to link an action with the date it is due."@en ;
+         rdfs:label "due date"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule
@@ -414,12 +630,31 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:label "informant"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Person ;
+      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+      <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+      rdfs:comment "Holds the full name of a person as a string."@en ;
+      rdfs:label "person"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#priority
 :priority rdf:type owl:DatatypeProperty ;
           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
           <http://purl.org/dc/elements/1.1/date> "2020-01-27T17:12:01+00:00" ;
           rdfs:comment "The priority assigned to something. High, medium, low or no priority."@en ;
           rdfs:label "priority"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#probability
+:probability rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Likelihood ;
+             rdfs:range xsd:float ;
+             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
+             <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en ;
+             rdfs:comment "Defines the probability of a risk likelihood category."@en ;
+             rdfs:label "probability"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#questionText
@@ -436,6 +671,61 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:01:31+00:00" ;
           rdfs:comment "The person/office to whom the result of the analysis is reported."@en ;
           rdfs:label "report to"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId
+:riskAssessmentId rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :RiskAssessmentRecord ;
+                  <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                  <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
+                  rdfs:comment "Risk assesment identifier"@en ;
+                  rdfs:label "unique ID number"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#riskSource
+:riskSource rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Risk ;
+            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-09-29t09:09:10+00:00" ;
+            rdfs:comment "The source from which the risk was identified e.g. Incident Management, Audit, Health and Safety Risk Assessment, Inspection Report, Complaint."@en ;
+            rdfs:label "risk source"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#riskType
+:riskType rdf:type owl:DatatypeProperty ;
+          rdfs:domain :RiskAssessmentRecord ;
+          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+          rdfs:comment "Links risk assessment with a risk type"@en ;
+          rdfs:label "risk type"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#score
+:score rdf:type owl:DatatypeProperty ;
+       rdfs:range xsd:int ;
+       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+       <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+       rdfs:comment "Defines a numerical value for a risk rating, risk likelihood or impact based on the HSE risk tables."@en ;
+       rdfs:label "score"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#signature
+:signature rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :Person ;
+           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+           rdfs:comment "Used to hold a signature of the responsibel person in a risk assessment."@en ;
+           rdfs:label "signature"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription
+:textualDescription rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                    <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                    rdfs:comment "Used for trextual description of a risk impact or other type."@en ;
+                    rdfs:label "textual description"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#version
@@ -458,6 +748,18 @@ rdfs:Resource rdf:type owl:Class .
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Action
+:Action rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :textualDescription ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
+                        ] ;
+        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+        <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+        rdfs:label "Action"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity
 :Activity rdf:type owl:Class ;
           rdfs:subClassOf :AspectOfReality ;
@@ -465,6 +767,30 @@ rdfs:Resource rdf:type owl:Class .
           <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:07+00:00" ;
           rdfs:comment "The condition in which things are happening or being done. Activity refers to the measurable activity within the system."@en ;
           rdfs:label "Activity"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#AlmostCertain
+:AlmostCertain rdf:type owl:Class ;
+               rdfs:subClassOf [ owl:intersectionOf ( :Likelihood
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :actualFrequency ;
+                                                        owl:hasValue "At least monthly"@en
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :probability ;
+                                                        owl:hasValue "0.99"^^xsd:float
+                                                      ]
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :score ;
+                                                        owl:hasValue "5"^^xsd:int
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+               rdfs:comment "HSE defintion."@en ;
+               rdfs:label "Almost Certain"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer
@@ -491,12 +817,38 @@ rdfs:Resource rdf:type owl:Class .
                  rdfs:label "Aspect of Reality"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Cause
+:Cause rdf:type owl:Class ;
+       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                         owl:onProperty :textualDescription ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
+                       ] ;
+       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+       rdfs:comment "The cause of a risk. Used for risk description in ICC format."@en ;
+       rdfs:label "Cause"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Context
 :Context rdf:type owl:Class ;
          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:24+00:00" ;
          rdfs:comment "Wider circumstances of the system."@en ;
          rdfs:label "Context"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Control
+:Control rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :textualDescription ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
+                         ] ;
+         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+         rdfs:comment "A mechanism, process, procedure or action which can be verified, which seeks to reduce the likelihood and/or consequence of a risk. Controls include any process, policy, device, practice, or other  actions which modify risk. They can exist or be required as additional in order to further mitigate the risk."@en ;
+         rdfs:label "Control"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Culture
@@ -506,6 +858,19 @@ rdfs:Resource rdf:type owl:Class .
          <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:07+00:00" ;
          rdfs:comment "A set of collective attitudes, values, goals and practices that characterize a community or system"@en ;
          rdfs:label "Culture"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Deliverable
+:Deliverable rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :textualDescription ;
+                               owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange xsd:string
+                             ] ;
+             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+             rdfs:comment "The output of an action."@en ;
+             rdfs:label "Deliverable"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage
@@ -535,6 +900,22 @@ rdfs:Resource rdf:type owl:Class .
               rdfs:label "Evidence Rule"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact
+:ExtremeImpact rdf:type owl:Class ;
+               rdfs:subClassOf [ owl:intersectionOf ( :Impact
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :score ;
+                                                        owl:hasValue "5"^^xsd:int
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ;
+               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+               rdfs:comment "Uses HSE impact table for definition."@en ;
+               rdfs:label "Extreme Impact"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem
 :FunctionalSystem rdf:type owl:Class ;
                   rdfs:subClassOf :AspectOfReality ;
@@ -551,6 +932,38 @@ rdfs:Resource rdf:type owl:Class .
       <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:27:46+00:00" ;
       rdfs:comment "An aim or desired outcome."@en ;
       rdfs:label "Goal"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#HighRisk
+:HighRisk rdf:type owl:Class ;
+          rdfs:subClassOf :RiskRating ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasRiskColour ;
+                            owl:hasValue :red
+                          ] ;
+          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+          <http://purl.org/dc/elements/1.1/date> "Red (High Risk)"@en ,
+                                                 "2020-09-29T09:09:10+00:00" ;
+          rdfs:comment "Risks rating red (high risk) are intolerable that is they cannot be accepted and require significant management focus to mitigate them. Risk action (treatment) plans should be developed; the actions required assigned to action owners and their completion should be monitored by the relevant Management Team."@en ;
+          rdfs:label "Red (High Risk)"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact
+:Impact rdf:type owl:Class ;
+        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+        <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+        rdfs:comment "The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event."@en ;
+        rdfs:label "Impact"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory
+:ImpactCategory rdf:type owl:Class ;
+                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                rdfs:comment "The HSE in its Integrated Risk Management Policy identified  risk impact areas to be managed."@en ;
+                rdfs:label "Impact Area"@en ,
+                           "Impact Category"@en ,
+                           "Risk Category"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage
@@ -572,12 +985,138 @@ Familiarity gained by personal experience, vicariously or through collective pro
                       rdfs:label "Information and Knowledge"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood
+:Likelihood rdf:type owl:Class ;
+            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00"@en ;
+            rdfs:comment "The chance of something happening (also described as the probability or frequency of an event occurring)."@en ;
+            rdfs:label "Likelihood"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Likely
+:Likely rdf:type owl:Class ;
+        rdfs:subClassOf [ owl:intersectionOf ( :Likelihood
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :actualFrequency ;
+                                                 owl:hasValue "Bimonthly"@en
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :probability ;
+                                                 owl:hasValue "0.75"^^xsd:float
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :score ;
+                                                 owl:hasValue "4"^^xsd:int
+                                               ]
+                                             ) ;
+                          rdf:type owl:Class
+                        ] .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#LowRisk
+:LowRisk rdf:type owl:Class ;
+         rdfs:subClassOf :RiskRating ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasRiskColour ;
+                           owl:hasValue :green
+                         ] ;
+         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+         rdfs:comment "Risks rating as green (low risk) are acceptable in that the additional effort required to reduce the risk further may be disproportional to the level of inherent risk and management efforts and resources may be better placed elsewhere. Alternatively the Management Team may consider not to accept it but rather that some additional action is indicated and justified."@en ;
+         rdfs:label "Green (Low Risk)"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact
+:MajorImpact rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :Impact
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :score ;
+                                                      owl:hasValue "4"^^xsd:int
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+             rdfs:comment "Defined by HSE impact table."@en ;
+             rdfs:label "Major Impact"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Mechanism
 :Mechanism rdf:type owl:Class ;
            <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
            <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:31+00:00" ;
            rdfs:comment "The way in which something is transformed, produced, circulated."@en ;
            rdfs:label "Mechanism"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#MediumRisk
+:MediumRisk rdf:type owl:Class ;
+            rdfs:subClassOf :RiskRating ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasRiskColour ;
+                              owl:hasValue :amber
+                            ] ;
+            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
+            <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en ;
+            rdfs:comment "Risks rating amber (medium risk) are trickier, in that on the one hand they are not intolerable (high risk) or acceptable (low risk). Whilst all reasonable efforts should be taken to reduce the risk to  a low rating this may not be possible given constraints within the overall system or indeed by applying the additional effort required to mitigate it further other opportunities will be lost. Such risks require consideration by the Management Team and it may be that a decision is taken to accept the risk but keep it under review (monitor) with an option to open it for further management in the future."@en ;
+            rdfs:label "Amber (Medium Risk)"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact
+:MinorImpact rdf:type owl:Class ;
+             rdfs:subClassOf [ owl:intersectionOf ( :Impact
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :score ;
+                                                      owl:hasValue "2"^^xsd:int
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] ;
+             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+             rdfs:comment "Defined by HSE impact table."@en ;
+             rdfs:label "Minor Impact"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact
+:ModerateImpact rdf:type owl:Class ;
+                rdfs:subClassOf [ owl:intersectionOf ( :Impact
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty :score ;
+                                                         owl:hasValue "3"^^xsd:int
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                rdfs:comment "Defined by HSE impact table."@en ;
+                rdfs:label "Moderate Impact"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact
+:NegligibleImpact rdf:type owl:Class ;
+                  rdfs:subClassOf [ owl:intersectionOf ( :Impact
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :score ;
+                                                           owl:hasValue "1"^^xsd:int
+                                                         ]
+                                                       ) ;
+                                    rdf:type owl:Class
+                                  ] ;
+                  <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                  <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10"@en ;
+                  rdfs:comment "Uses HSE impact table definition."@en ;
+                  rdfs:label "Negligible Impact"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit
+:OrganisationalUnit rdf:type owl:Class ;
+                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                    <http://purl.org/dc/elements/1.1/date> "2020-09-29t09:09:10+00:00" ;
+                    rdfs:comment "Holds details of some organisation, e.g departments, branches or statutory bodies."@en ;
+                    rdfs:label "Organisational Unit"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Outcome
@@ -588,6 +1127,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
          rdfs:label "Outcome"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Person
+:Person rdf:type owl:Class ;
+        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+        <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+        rdfs:comment "Defines a person, for example in an organisation."@en ;
+        rdfs:label "Person"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage
 :PlanPrepareStage rdf:type owl:Class ;
                   rdfs:subClassOf :Stage ;
@@ -595,6 +1142,26 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
                   rdfs:comment "A plan and prepare stage question is a cube question which is asked at the planning stage of the cube questionnaire."@en ;
                   rdfs:label "Plan and Prepare Stage"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Possible
+:Possible rdf:type owl:Class ;
+          rdfs:subClassOf [ owl:intersectionOf ( :Likelihood
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :actualFrequency ;
+                                                   owl:hasValue "Occurs every 1-2 years"@en
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :probability ;
+                                                   owl:hasValue "0.5"^^xsd:float
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :score ;
+                                                   owl:hasValue "3"^^xsd:int
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Priority
@@ -639,12 +1206,76 @@ Familiarity gained by personal experience, vicariously or through collective pro
                rdfs:label "Questionnaire"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#RareRemote
+:RareRemote rdf:type owl:Class ;
+            rdfs:subClassOf [ owl:intersectionOf ( :Likelihood
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :actualFrequency ;
+                                                     owl:hasValue "Occurs every 5 years"@en
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :probability ;
+                                                     owl:hasValue "0.01"^^xsd:float
+                                                   ]
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty :score ;
+                                                     owl:hasValue "1"^^xsd:int
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+            rdfs:comment "HSE defintion. A type of likelihood."@en ;
+            rdfs:label "Rare/Remote"@en .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Report
 :Report rdf:type owl:Class ;
         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
         <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:08+00:00" ;
         rdfs:comment "A written account of an activity or investigation?"@en ;
         rdfs:label "Report"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk
+:Risk rdf:type owl:Class ;
+      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+      <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+      rdfs:comment "Risk is the effect of uncertainty on objectives. It is measured in terms of consequences and likelihood. In the context of the HSE and its services, it is any condition or circumstance which may impact on the achievement of objectives and/or have a significant impact on the day-to-day operations. This includes failing to maximise any opportunity that would help the HSE or service meet its objectives."@en ;
+      rdfs:label "Risk"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord
+:RiskAssessmentRecord rdf:type owl:Class ;
+                      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                      <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                      rdfs:comment "Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields."@en ;
+                      rdfs:label "Risk Assessment Record (Form)"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskColour
+:RiskColour rdf:type owl:Class ;
+            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
+            rdfs:comment "A specific colour is allocated to each risk rating class."@en ;
+            rdfs:label "Risk Colour"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating
+:RiskRating rdf:type owl:Class ;
+            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+            rdfs:comment "The estimated level of risk taking into consideration the existing controls in place. Defined by cross-referencing the impact and likelihood in the risk matrix."@en ;
+            rdfs:label "Risk Rating"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus
+:RiskStatus rdf:type owl:Class ;
+            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+            <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+            rdfs:comment "Used to record the status of a risk."@en ;
+            rdfs:label "Risk Status"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking
@@ -690,6 +1321,26 @@ Familiarity gained by personal experience, vicariously or through collective pro
                  rdfs:label "System Dimension"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#Unlikely
+:Unlikely rdf:type owl:Class ;
+          rdfs:subClassOf [ owl:intersectionOf ( :Likelihood
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :actualFrequency ;
+                                                   owl:hasValue "Occurs every 2-5 years"@en
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :probability ;
+                                                   owl:hasValue "0.1"^^xsd:float
+                                                 ]
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :score ;
+                                                   owl:hasValue "2"^^xsd:int
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage
 :VerifyEmbedStage rdf:type owl:Class ;
                   rdfs:subClassOf :Stage ;
@@ -699,12 +1350,65 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   rdfs:label "Verify and Embed Stage"@en .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription
+:riskDescription rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasContext ;
+                                   owl:someValuesFrom :Context
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :textualDescription ;
+                                   owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] ;
+                 <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                 rdfs:comment "Desribes a risk in ICC (Impact, Cause, Context) format."@en ,
+                              "Rob Brennan" ;
+                 rdfs:label "Risk Description"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> rdf:type owl:NamedIndividual .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#amber
+:amber rdf:type owl:NamedIndividual ,
+                :RiskColour ;
+       rdfs:label "amber"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#closed
+:closed rdf:type owl:NamedIndividual ,
+                 :RiskStatus ;
+        rdfs:label "closed"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#green
+:green rdf:type owl:NamedIndividual ,
+                :RiskColour ;
+       rdfs:label "green"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#monitor
+:monitor rdf:type owl:NamedIndividual ,
+                  :RiskStatus ;
+         rdfs:label "monitor"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#open
+:open rdf:type owl:NamedIndividual ,
+               :RiskStatus ;
+      rdfs:label "open"@en .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKCube#red
+:red rdf:type owl:NamedIndividual ,
+              :RiskColour ;
+     rdfs:label "red"@en .
 
 
 ###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
