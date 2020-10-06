@@ -7,7 +7,7 @@
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/contributor> "Rob Brennan"@en .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz"@en .
-<https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/modified> "1/10/2020" .
+<https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/modified> "6/10/2020" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/publisher> "https://openark.adaptcentre.ie/" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube  Ontology"@en .
@@ -15,7 +15,7 @@
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKCube#" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://www.w3.org/2000/01/rdf-schema#comment> "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology supports the cube risk management methodology and questionnaire developed by the Centre for Innovative Human Systems, Trinity College Dublin"@en .
-<https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://www.w3.org/2002/07/owl#versionInfo> "0.6"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://ark.adaptcentre.ie/Ontologies/ARKCube#> <http://www.w3.org/2002/07/owl#versionInfo> "0.61"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # #################################################################
@@ -63,6 +63,16 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/elements/hasRiskContext
+<http://purl.org/dc/elements/hasRiskContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://purl.org/dc/elements/hasRiskContext> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext> .
+<http://purl.org/dc/elements/hasRiskContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription> .
+<http://purl.org/dc/elements/hasRiskContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/elements/RiskContext> .
+<http://purl.org/dc/elements/hasRiskContext> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
+<http://purl.org/dc/elements/hasRiskContext> <http://purl.org/dc/elements/1.1/date> "2020-Oct-05T15:08:54+00:00" .
+<http://purl.org/dc/elements/hasRiskContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Specialised sub-property of hasContext used for linking a RiskDescription with a RiskContext."@en .
+<http://purl.org/dc/elements/hasRiskContext> <http://www.w3.org/2000/01/rdf-schema#label> "has risk context"@en .
 # 
 # https://ark.adaptcentre.ie/Ontologies/ARKCube#additionalControl
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#additionalControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -299,6 +309,8 @@
 # 
 # https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk> .
+<https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator> <http://www.w3.org/2000/01/rdf-schema#range> <https://ark.adaptcentre.ie/Ontologies/ARKCube#Person> .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator> <http://www.w3.org/2000/01/rdf-schema#comment> "Links risk to risk coordinator in risk assessment."@en .
@@ -574,7 +586,7 @@
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#name> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#name> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds the full name of a person as a string."@en .
-<https://ark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#label> "person"@en .
+<https://ark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 # 
 # https://ark.adaptcentre.ie/Ontologies/ARKCube#priority
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#priority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -670,6 +682,13 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/elements/RiskContext
+<http://purl.org/dc/elements/RiskContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://ark.adaptcentre.ie/Ontologies/ARKCube#Context> .
+<http://purl.org/dc/elements/RiskContext> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
+<http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to relate HSE concept of the context of a risk to CUBE concept of context."@en .
+<http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Context"@en .
 # 
 # http://www.w3.org/2000/01/rdf-schema#Resource
 <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1287,13 +1306,9 @@ _:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
 _:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext> .
-_:genid68 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://ark.adaptcentre.ie/Ontologies/ARKCube#Context> .
-<https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid69 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid69 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid68 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid68 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Desribes a risk in ICC (Impact, Cause, Context) format."@en .
 <https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Rob Brennan" .

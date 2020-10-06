@@ -390,15 +390,6 @@
 }, {
   "@id" : "_:genid68",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Context"
-  } ]
-}, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "0"
@@ -441,6 +432,51 @@
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/elements/RiskContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to relate HSE concept of the context of a risk to CUBE concept of context."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Context"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/hasRiskContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-Oct-05T15:08:54+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Specialised sub-property of hasContext used for linking a RiskDescription with a RiskContext."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has risk context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/dc/elements/RiskContext"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext"
+  } ]
+}, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -482,7 +518,7 @@
     "@value" : "Yalemisew Abgaz"
   } ],
   "http://purl.org/dc/elements/1.1/modified" : [ {
-    "@value" : "1/10/2020"
+    "@value" : "6/10/2020"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
     "@value" : "https://openark.adaptcentre.ie/"
@@ -512,7 +548,7 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.6"
+    "@value" : "0.61"
   } ]
 }, {
   "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Action",
@@ -2409,9 +2445,15 @@
     "@language" : "en",
     "@value" : "Links risk to risk coordinator in risk assessment."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has risk coordinator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Person"
   } ]
 }, {
   "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription",
@@ -2780,7 +2822,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "person"
+    "@value" : "name"
   } ]
 }, {
   "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#open",
@@ -2910,8 +2952,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid68"
-  }, {
-    "@id" : "_:genid69"
   } ]
 }, {
   "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskSource",
