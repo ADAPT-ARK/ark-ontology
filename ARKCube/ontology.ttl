@@ -15,7 +15,7 @@
                                                                                                 "Rob Brennan"@en ;
                                                   <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ,
                                                                                             "Yalemisew Abgaz"@en ;
-                                                  <http://purl.org/dc/elements/1.1/modified> "1/10/2020" ;
+                                                  <http://purl.org/dc/elements/1.1/modified> "6/10/2020" ;
                                                   <http://purl.org/dc/elements/1.1/publisher> "https://openark.adaptcentre.ie/" ;
                                                   <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
                                                   <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube  Ontology"@en ;
@@ -23,7 +23,7 @@
                                                   <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKCube#" ;
                                                   rdfs:comment "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ,
                                                                "This ontology supports the cube risk management methodology and questionnaire developed by the Centre for Innovative Human Systems, Trinity College Dublin"@en ;
-                                                  owl:versionInfo 0.6 .
+                                                  owl:versionInfo 0.61 .
 
 #################################################################
 #    Annotation properties
@@ -72,6 +72,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://purl.org/dc/elements/hasRiskContext
+<http://purl.org/dc/elements/hasRiskContext> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf :hasContext ;
+                                             rdfs:domain :riskDescription ;
+                                             rdfs:range <http://purl.org/dc/elements/RiskContext> ;
+                                             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
+                                             <http://purl.org/dc/elements/1.1/date> "2020-Oct-05T15:08:54+00:00" ;
+                                             rdfs:comment "Specialised sub-property of hasContext used for linking a RiskDescription with a RiskContext."@en ;
+                                             rdfs:label "has risk context"@en .
+
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#additionalControl
 :additionalControl rdf:type owl:ObjectProperty ;
@@ -333,6 +344,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator
 :hasRiskCoordinator rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Risk ;
+                    rdfs:range :Person ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
                     rdfs:comment "Links risk to risk coordinator in risk assessment."@en ;
@@ -636,7 +649,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
       rdfs:comment "Holds the full name of a person as a string."@en ;
-      rdfs:label "person"@en .
+      rdfs:label "name"@en .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#priority
@@ -739,6 +752,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.org/dc/elements/RiskContext
+<http://purl.org/dc/elements/RiskContext> rdf:type owl:Class ;
+                                          rdfs:subClassOf :Context ;
+                                          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
+                                          rdfs:comment "Used to relate HSE concept of the context of a risk to CUBE concept of context."@en ;
+                                          rdfs:label "Risk Context"@en .
+
 
 ###  http://www.w3.org/2000/01/rdf-schema#Resource
 rdfs:Resource rdf:type owl:Class .
@@ -1353,10 +1374,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription
 :riskDescription rdf:type owl:Class ;
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasContext ;
-                                   owl:someValuesFrom :Context
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty :textualDescription ;
                                    owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange xsd:string

@@ -17,7 +17,7 @@
         <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:creator xml:lang="en">Yalemisew Abgaz</dc:creator>
-        <dc:modified>1/10/2020</dc:modified>
+        <dc:modified>6/10/2020</dc:modified>
         <dc:publisher>https://openark.adaptcentre.ie/</dc:publisher>
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:title xml:lang="en">Access Risk Knowledge Cube  Ontology</dc:title>
@@ -25,7 +25,7 @@
         <vann:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/ARKCube#</vann:preferredNamespaceUri>
         <rdfs:comment xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology).</rdfs:comment>
         <rdfs:comment xml:lang="en">This ontology supports the cube risk management methodology and questionnaire developed by the Centre for Innovative Human Systems, Trinity College Dublin</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.6</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -121,6 +121,21 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/hasRiskContext -->
+
+
+    <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/hasRiskContext">
+        <rdfs:subPropertyOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext"/>
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"/>
+        <rdfs:range rdf:resource="http://purl.org/dc/elements/RiskContext"/>
+        <dc:creator xml:lang="en">Rob Brennan</dc:creator>
+        <dc:date>2020-Oct-05T15:08:54+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Specialised sub-property of hasContext used for linking a RiskDescription with a RiskContext.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk context</rdfs:label>
+    </owl:ObjectProperty>
     
 
 
@@ -486,6 +501,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator">
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links risk to risk coordinator in risk assessment.</rdfs:comment>
@@ -929,7 +946,7 @@
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Holds the full name of a person as a string.</rdfs:comment>
-        <rdfs:label xml:lang="en">person</rdfs:label>
+        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1084,6 +1101,18 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/RiskContext -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/elements/RiskContext">
+        <rdfs:subClassOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Context"/>
+        <dc:creator xml:lang="en">Rob Brennan</dc:creator>
+        <rdfs:comment xml:lang="en">Used to relate HSE concept of the context of a risk to CUBE concept of context.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Context</rdfs:label>
+    </owl:Class>
     
 
 
@@ -1971,12 +2000,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext"/>
-                <owl:someValuesFrom rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Context"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>

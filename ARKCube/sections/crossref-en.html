@@ -192,6 +192,9 @@ This section provides details for each class and property defined by Access Risk
             title="https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskColour">Risk Colour</a>
       </li>
       <li>
+         <a href="#http://purl.org/dc/elements/RiskContext" title="http://purl.org/dc/elements/RiskContext">Risk Context</a>
+      </li>
+      <li>
          <a href="#riskDescription"
             title="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription">Risk Description</a>
       </li>
@@ -504,6 +507,11 @@ This section provides details for each class and property defined by Access Risk
          <dd>Yalemisew</dd>
       </dl>
       <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#http://purl.org/dc/elements/RiskContext" title="http://purl.org/dc/elements/RiskContext">Risk Context</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasContext"
@@ -1143,7 +1151,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dt>is in domain of</dt>
          <dd>
             <a href="#name"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKCube#name">person</a>
+               title="https://ark.adaptcentre.ie/Ontologies/ARKCube#name">name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#signature"
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#signature">signature</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -1152,6 +1160,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dd>
             <a href="#assignedPerson"
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#assignedPerson">assigned person</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskCoordinator"
+               title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator">has risk coordinator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskOwner"
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskOwner">has risk owner</a>
             <sup class="type-op" title="object property">op</sup>
@@ -1444,6 +1454,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood">has likelihood</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasPrimaryImpactArea"
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasPrimaryImpactArea">has primary impact category</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskCoordinator"
+               title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator">has risk coordinator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskDescription"
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription">has risk description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskOwner"
@@ -1542,6 +1554,34 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://purl.org/dc/elements/RiskContext">
+      <h3>Risk Context<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/RiskContext</p>
+      <div class="comment">
+         <span class="markdown">Used to relate HSE concept of the context of a risk to CUBE concept of context.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Rob Brennan</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Context"
+               title="https://ark.adaptcentre.ie/Ontologies/ARKCube#Context">Context</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#http://purl.org/dc/elements/hasRiskContext" title="http://purl.org/dc/elements/hasRiskContext">has risk context</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="riskDescription">
       <h3>Risk Description<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -1565,6 +1605,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasCause">has cause</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasImpact"
                title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasImpact">has impact</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://purl.org/dc/elements/hasRiskContext" title="http://purl.org/dc/elements/hasRiskContext">has risk context</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1959,6 +2000,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
             title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour">has risk colour</a>
       </li>
       <li>
+         <a href="#http://purl.org/dc/elements/hasRiskContext" title="http://purl.org/dc/elements/hasRiskContext">has risk context</a>
+      </li>
+      <li>
          <a href="#hasRiskCoordinator"
             title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator">has risk coordinator</a>
       </li>
@@ -2269,6 +2313,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </dl>
       <div class="description">
          <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#http://purl.org/dc/elements/hasRiskContext" title="http://purl.org/dc/elements/hasRiskContext">has risk context</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Context"
@@ -2947,6 +2996,46 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://purl.org/dc/elements/hasRiskContext">
+      <h3>has risk context<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/elements/hasRiskContext</p>
+      <div class="comment">
+         <span class="markdown">Specialised sub-property of hasContext used for linking a RiskDescription with a RiskContext.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>2020-Oct-05T15:08:54+00:00</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Rob Brennan</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasContext"
+                  title="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext">has context</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#riskDescription"
+                  title="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription">Risk Description</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://purl.org/dc/elements/RiskContext" title="http://purl.org/dc/elements/RiskContext">Risk Context</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasRiskCoordinator">
       <h3>has risk coordinator<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -2965,6 +3054,22 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dt>Authors:</dt>
          <dd>Rob Brennan</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Risk"
+                  title="https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Person"
+                  title="https://ark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasRiskDescription">
       <h3>has risk description<sup class="type-op" title="object property">op</sup>
@@ -3549,7 +3654,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </li>
       <li>
          <a href="#name"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKCube#name">person</a>
+            title="https://ark.adaptcentre.ie/Ontologies/ARKCube#name">name</a>
       </li>
       <li>
          <a href="#priority"
@@ -3979,7 +4084,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </dl>
    </div>
    <div class="entity" id="name">
-      <h3>person<sup class="type-dp" title="data property">dp</sup>
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
