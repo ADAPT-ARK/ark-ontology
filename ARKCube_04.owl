@@ -15,7 +15,7 @@
         <dc:creator xml:lang="en">Yalemisew Abgaz</dc:creator>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:title xml:lang="en">Access Risk Knowledge Cube  Ontology</dc:title>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</owl:versionInfo>
+        <dc:modified>27/10/2020</dc:modified>
         <vocab:preferredNamespacePrefix>ARKC</vocab:preferredNamespacePrefix>
         <dc:contributor xml:lang="en">Junli Liang</dc:contributor>
         <dc:publisher>https://openark.adaptcentre.ie/</dc:publisher>
@@ -26,7 +26,7 @@
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
         <rdfs:comment xml:lang="en">This ontology supports the cube risk management methodology and questionnaire developed by the Centre for Innovative Human Systems, Trinity College Dublin</rdfs:comment>
-        <dc:modified>6/10/2020</dc:modified>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.62</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -477,6 +477,7 @@
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Use ICC (impact, cause, context) format when describing risk.</rdfs:comment>
@@ -1046,6 +1047,7 @@
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#Action -->
 
     <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#Action">
+        <rdfs:subClassOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Control"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
