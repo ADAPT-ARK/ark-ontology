@@ -15,9 +15,9 @@
         <dc:creator xml:lang="en">Yalemisew Abgaz</dc:creator>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:title xml:lang="en">Access Risk Knowledge Cube  Ontology</dc:title>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.61</owl:versionInfo>
         <vocab:preferredNamespacePrefix>ARKC</vocab:preferredNamespacePrefix>
         <dc:contributor xml:lang="en">Junli Liang</dc:contributor>
+        <dc:modified>28/10/2020</dc:modified>
         <dc:publisher>https://openark.adaptcentre.ie/</dc:publisher>
         <dc:contributor xml:lang="en">Ademar Crotti Junior</dc:contributor>
         <dc:contributor xml:lang="en">Nick Mcdonald</dc:contributor>
@@ -26,7 +26,7 @@
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
         <rdfs:comment xml:lang="en">This ontology supports the cube risk management methodology and questionnaire developed by the Centre for Innovative Human Systems, Trinity College Dublin</rdfs:comment>
-        <dc:modified>6/10/2020</dc:modified>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.63</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -117,7 +117,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/hasRiskContext">
         <rdfs:subPropertyOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext"/>
-        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"/>
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"/>
         <rdfs:range rdf:resource="http://purl.org/dc/elements/RiskContext"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-Oct-05T15:08:54+00:00</dc:date>
@@ -197,7 +197,7 @@
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#hasCause -->
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasCause">
-        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"/>
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Cause"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
@@ -344,7 +344,7 @@
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#hasImpact -->
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasImpact">
-        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"/>
+        <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"/>
         <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
@@ -477,6 +477,7 @@
 
     <owl:ObjectProperty rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription">
         <rdfs:domain rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
+        <rdfs:range rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Use ICC (impact, cause, context) format when describing risk.</rdfs:comment>
@@ -992,7 +993,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used for trextual description of a risk impact or other type.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used for textual description of a risk impact or other type.</rdfs:comment>
         <rdfs:label xml:lang="en">textual description</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1046,6 +1047,7 @@
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#Action -->
 
     <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#Action">
+        <rdfs:subClassOf rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#Control"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
@@ -1736,6 +1738,24 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription -->
+
+    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Desribes a risk in ICC (Impact, Cause, Context) format.</rdfs:comment>
+        <rdfs:comment>Rob Brennan</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Description</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating -->
 
     <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating">
@@ -1850,24 +1870,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:date>2019-11-13T15:26:37+00:00</dc:date>
         <rdfs:comment xml:lang="en">A verify stage question is a cube  question which is asked at the verification stage of the cube questionnaire.</rdfs:comment>
         <rdfs:label xml:lang="en">Verify and Embed Stage</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription -->
-
-    <owl:Class rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Desribes a risk in ICC (Impact, Cause, Context) format.</rdfs:comment>
-        <rdfs:comment>Rob Brennan</rdfs:comment>
-        <rdfs:label xml:lang="en">Risk Description</rdfs:label>
     </owl:Class>
     
 
