@@ -1,0 +1,1712 @@
+@prefix : <https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#> .
+
+<https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#> rdf:type owl:Ontology ;
+                                                               <http://purl.org/dc/terms/contributor> "Rob Brennan" ;
+                                                               <http://purl.org/dc/terms/description> "Health terminologies used in ARK." ;
+                                                               <http://purl.org/dc/terms/title> "ARK Health terminologies." ;
+                                                               <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKHealthTerms" ;
+                                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#." ;
+                                                               rdfs:comment "Health terminologies used in ARK." ;
+                                                               owl:versionInfo "0.1" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos#definition
+<http://www.w3.org/2004/02/skos#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos#prefLabel
+<http://www.w3.org/2004/02/skos#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos#Concept
+<http://www.w3.org/2004/02/skos#Concept> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ActionOwners
+:ActionOwners rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1" ;
+              rdfs:comment "Assigned to tasks as part of risk assessment process (p8)" ;
+              rdfs:label "Action Owners" ;
+              <http://www.w3.org/2004/02/skos#definition> "Assigned to tasks as part of risk assessment process (p8)" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Action Owners" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ActionsDueAndComplete
+:ActionsDueAndComplete rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "12/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                       rdfs:label "Actions Due and Complete" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Actions Due and Complete" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ActionsDueAndIncomplete
+:ActionsDueAndIncomplete rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                         <http://purl.org/dc/terms/created> "12/09/2020" ;
+                         <http://purl.org/dc/terms/creator> "Rob" ;
+                         <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                         rdfs:label "Actions Due and Incomplete" ;
+                         <http://www.w3.org/2004/02/skos#prefLabel> "Actions Due and Incomplete" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ActionsDueForTheNextPeriod
+:ActionsDueForTheNextPeriod rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos#Concept> ;
+                            <http://purl.org/dc/terms/created> "12/09/2020" ;
+                            <http://purl.org/dc/terms/creator> "Rob" ;
+                            <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                            rdfs:label "Actions Due for the NextPeriod" ;
+                            <http://www.w3.org/2004/02/skos#prefLabel> "Actions Due for the NextPeriod" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ActionsRequired
+:ActionsRequired rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "09/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                 rdfs:label "Actions Required" ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Actions Required" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#AdditionalControls
+:AdditionalControls rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "09/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                    rdfs:label "Additional Controls" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Additional Controls" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#AdversePublicityOrReputation
+:AdversePublicityOrReputation rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos#Concept> ;
+                              <http://purl.org/dc/terms/created> "08/09/2020" ;
+                              <http://purl.org/dc/terms/creator> "Rob" ;
+                              <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                              rdfs:comment "Adverse publicity in the media, loss of public confidence in a service or the organisation e.g. poor service performance." ;
+                              rdfs:label "Adverse Publicity/Reputation" ;
+                              <http://www.w3.org/2004/02/skos#definition> "Adverse publicity in the media, loss of public confidence in a service or the organisation e.g. poor service performance." ;
+                              <http://www.w3.org/2004/02/skos#prefLabel> "Adverse Publicity/Reputation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Anticipate
+:Anticipate rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "07/09/2020" ;
+            <http://purl.org/dc/terms/creator> "Rob" ;
+            <http://purl.org/dc/terms/source> "HSE Part 1" ;
+            rdfs:comment "Anticipation involves thinking ahead and envisioning the things that are most likely to contribute to risk or safety failures. Safety from this perspective therefore involves looking ahead and identifying the hazards and risks that may cause harm if left unmanaged." ;
+            rdfs:label "Anticipate" ;
+            <http://www.w3.org/2004/02/skos#definition> "Anticipation involves thinking ahead and envisioning the things that are most likely to contribute to risk or safety failures. Safety from this perspective therefore involves looking ahead and identifying the hazards and risks that may cause harm if left unmanaged." ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Anticipate" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Audit
+:Audit rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos#Concept> ;
+       <http://purl.org/dc/terms/created> "07/09/2020" ,
+                                          "08/09/2020" ;
+       <http://purl.org/dc/terms/creator> "Rob" ;
+       <http://purl.org/dc/terms/source> "HSE Part 1" ,
+                                         "HSE Part 2" ;
+       rdfs:label "Audit" ;
+       <http://www.w3.org/2004/02/skos#prefLabel> "Audit" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Avoidance
+:Avoidance rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos#Concept> ;
+           <http://purl.org/dc/terms/created> "09/09/2020" ;
+           <http://purl.org/dc/terms/creator> "Rob" ;
+           <http://purl.org/dc/terms/source> "HSE Part 2" ;
+           rdfs:label "Avoidance" ;
+           <http://www.w3.org/2004/02/skos#prefLabel> "Avoidance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#BusinessContinuity
+:BusinessContinuity rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "08/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                    rdfs:comment "Issues that would affect an organisations ability to provide service e.g. deregistration, fire, flood, ICT or electric outage, industrial strikes." ;
+                    rdfs:label "Business Continuity" ;
+                    <http://www.w3.org/2004/02/skos#definition> "Issues that would affect an organisations ability to provide service e.g. deregistration, fire, flood, ICT or electric outage, industrial strikes." ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Business Continuity" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#BusinessPlan
+:BusinessPlan rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1" ;
+              rdfs:label "Business Plan" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Business Plan" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Care
+:Care rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos#Concept> ;
+      <http://purl.org/dc/terms/created> "08/09/2020" ;
+      <http://purl.org/dc/terms/creator> "Rob" ;
+      <http://purl.org/dc/terms/source> "HSE Part 2" ;
+      rdfs:label "Care" ;
+      <http://www.w3.org/2004/02/skos#prefLabel> "Care" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Claim
+:Claim rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos#Concept> ;
+       <http://purl.org/dc/terms/created> "08/09/2020" ;
+       <http://purl.org/dc/terms/creator> "Rob" ;
+       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+       rdfs:label "Claim" ;
+       <http://www.w3.org/2004/02/skos#prefLabel> "Claim" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ClosedStatus
+:ClosedStatus rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "09/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 2" ;
+              rdfs:label "Closed" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Closed" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#CommitteeOversight
+:CommitteeOversight rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "08/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                    rdfs:label "Committee Oversight" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Committee Oversight" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#CommunicateAndConsultProcess
+:CommunicateAndConsultProcess rdf:type owl:NamedIndividual ,
+                                       <http://www.w3.org/2004/02/skos#Concept> ;
+                              <http://purl.org/dc/terms/created> "07/09/2020" ;
+                              <http://purl.org/dc/terms/creator> "Rob" ;
+                              <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000" ;
+                              rdfs:label "Communicate and Consult Process" ;
+                              <http://www.w3.org/2004/02/skos#prefLabel> "Communicate and Consult Process" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#CommunityEngagement
+:CommunityEngagement rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos#Concept> ;
+                     <http://purl.org/dc/terms/created> "08/09/2020" ;
+                     <http://purl.org/dc/terms/creator> "Rob" ;
+                     <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                     rdfs:label "Community Engagement" ;
+                     <http://www.w3.org/2004/02/skos#prefLabel> "Community Engagement" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#CommunityHealth
+:CommunityHealth rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "08/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                 rdfs:label "Community Health" ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Community Health" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Complaint
+:Complaint rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos#Concept> ;
+           <http://purl.org/dc/terms/created> "07/09/2020" ;
+           <http://purl.org/dc/terms/creator> "Rob" ;
+           <http://purl.org/dc/terms/source> "HSE Part 1" ;
+           rdfs:label "Complaint" ;
+           <http://www.w3.org/2004/02/skos#prefLabel> "Complaint" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Compliance
+:Compliance rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "08/09/2020" ;
+            <http://purl.org/dc/terms/creator> "Rob" ;
+            <http://purl.org/dc/terms/source> "HSE Part 2" ;
+            rdfs:comment "Failure to comply with HIQA/MHC standards, Codes of Practice or Conduct set by professional regulators, relevant legislation e.g. Safety, Health and Welfare at Work Act, Financial Regulations etc." ;
+            rdfs:label "Compliance" ;
+            <http://www.w3.org/2004/02/skos#definition> "Failure to comply with HIQA/MHC standards, Codes of Practice or Conduct set by professional regulators, relevant legislation e.g. Safety, Health and Welfare at Work Act, Financial Regulations etc." ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Compliance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ControlStatus
+:ControlStatus rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "09/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 2" ;
+               rdfs:label "Control Status" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Control Status" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Culture
+:Culture rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos#Concept> ;
+         <http://purl.org/dc/terms/created> "07/09/2020" ;
+         <http://purl.org/dc/terms/creator> "Rob" ;
+         <http://purl.org/dc/terms/source> "HSE Part 1" ;
+         rdfs:label "Culture" ;
+         <http://www.w3.org/2004/02/skos#prefLabel> "Culture" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Directorate
+:Directorate rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "07/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 1" ;
+             rdfs:comment "The Directorate is the governing authority of the HSE established following the enactment of the Health Service Executive (Governance) Act 2013." ;
+             rdfs:label "Directorate" ;
+             <http://www.w3.org/2004/02/skos#definition> "The Directorate is the governing authority of the HSE established following the enactment of the Health Service Executive (Governance) Act 2013." ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Directorate" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#EducationAndTraining
+:EducationAndTraining rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos#Concept> ;
+                      <http://purl.org/dc/terms/created> "08/09/2020" ;
+                      <http://purl.org/dc/terms/creator> "Rob" ;
+                      <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                      rdfs:label "Education and Training" ;
+                      <http://www.w3.org/2004/02/skos#prefLabel> "Education and Training" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Elimination
+:Elimination rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "09/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 2" ;
+             rdfs:label "Elimination" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Elimination" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Environment
+:Environment rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "08/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 2" ;
+             rdfs:comment "Releases of substances that would have a detrimental environmental impact e.g. chemical spills, poor waste management practices, radiological leaks." ;
+             rdfs:label "Environment" ;
+             <http://www.w3.org/2004/02/skos#definition> "Releases of substances that would have a detrimental environmental impact e.g. chemical spills, poor waste management practices, radiological leaks." ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Environment" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#EnvironmentOfCare
+:EnvironmentOfCare rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "07/09/2020" ;
+                   <http://purl.org/dc/terms/creator> "Rob" ;
+                   <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                   rdfs:label "Environment of Care" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Environment of Care" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#EquipmentAndResources
+:EquipmentAndResources rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "08/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                       rdfs:label "Equipment and Resources" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Equipment and Resources" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#EstablishingTheContext
+:EstablishingTheContext rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos#Concept> ;
+                        <http://purl.org/dc/terms/created> "07/09/2020" ;
+                        <http://purl.org/dc/terms/creator> "Rob" ;
+                        <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000" ;
+                        rdfs:comment "Defining the external and internal parameters to be taken into account when managing risk, and setting the scope and risk criteria for the risk management policy." ;
+                        rdfs:label "Establish the Context" ;
+                        <http://www.w3.org/2004/02/skos#definition> "Defining the external and internal parameters to be taken into account when managing risk, and setting the scope and risk criteria for the risk management policy." ;
+                        <http://www.w3.org/2004/02/skos#prefLabel> "Establish the Context" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ExistingControlMeasures
+:ExistingControlMeasures rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                         <http://purl.org/dc/terms/created> "09/09/2020" ;
+                         <http://purl.org/dc/terms/creator> "Rob" ;
+                         <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                         rdfs:label "Existing Control Measures" ;
+                         <http://www.w3.org/2004/02/skos#prefLabel> "Existing Control Measures" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ExistingControlsWhoseStatusHasChanged
+:ExistingControlsWhoseStatusHasChanged rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/2004/02/skos#Concept> ;
+                                       <http://purl.org/dc/terms/created> "12/09/2020" ;
+                                       <http://purl.org/dc/terms/creator> "Rob" ;
+                                       <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                                       rdfs:label "Existing Controls Whose Status has Changed" ;
+                                       <http://www.w3.org/2004/02/skos#prefLabel> "Existing Controls Whose Status has Changed" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ExternalAudit
+:ExternalAudit rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "08/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 2" ;
+               rdfs:label "External Audit" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "External Audit" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ExternalFactor
+:ExternalFactor rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "08/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                rdfs:label "External Factor" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "External Factor" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ExternalInspection
+:ExternalInspection rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "08/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                    rdfs:label "External Inspection" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "External Inspection" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ExternalStakeholderConsultation
+:ExternalStakeholderConsultation rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos#Concept> ;
+                                 <http://purl.org/dc/terms/created> "08/09/2020" ;
+                                 <http://purl.org/dc/terms/creator> "Rob" ;
+                                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                                 rdfs:label "External Stakeholder Consultation" ;
+                                 <http://www.w3.org/2004/02/skos#prefLabel> "External Stakeholder Consultation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Facilities
+:Facilities rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "08/09/2020" ;
+            <http://purl.org/dc/terms/creator> "Rob" ;
+            <http://purl.org/dc/terms/source> "HSE Part 2" ;
+            rdfs:label "Facilities" ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Facilities" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Finance
+:Finance rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos#Concept> ;
+         <http://purl.org/dc/terms/created> "08/09/2020" ;
+         <http://purl.org/dc/terms/creator> "Rob" ;
+         <http://purl.org/dc/terms/source> "HSE Part 2" ;
+         rdfs:label "Finance" ;
+         <http://www.w3.org/2004/02/skos#prefLabel> "Finance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#FinancialLoss
+:FinancialLoss rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "08/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 2" ;
+               rdfs:comment "Fraud, claims, budgetary overruns." ;
+               rdfs:label "Financial Loss" ;
+               <http://www.w3.org/2004/02/skos#definition> "Fraud, claims, budgetary overruns." ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Financial Loss" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HSAInvestigation
+:HSAInvestigation rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "08/09/2020" ;
+                  <http://purl.org/dc/terms/creator> "Rob" ;
+                  <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                  rdfs:label "HSA Investigation" ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "HSA Investigation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HSEsIntegratedRiskManamgementPolicyAndGuidanceDocuments
+:HSEsIntegratedRiskManamgementPolicyAndGuidanceDocuments rdf:type owl:NamedIndividual ,
+                                                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                                                         <http://purl.org/dc/terms/created> "07/09/2020" ;
+                                                         <http://purl.org/dc/terms/creator> "Rob" ;
+                                                         <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                                                         rdfs:label "HSE's Integrated Risk Manamgement Policy and Guidance documents" ;
+                                                         <http://www.w3.org/2004/02/skos#prefLabel> "HSE's Integrated Risk Manamgement Policy and Guidance documents" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HarmToAPerson
+:HarmToAPerson rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "07/09/2020" ,
+                                                  "08/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 1" ,
+                                                 "HSE Part 2" ;
+               rdfs:comment "Any physical or psychological injury or damage to the health of a person, including both temporary and permanent injury" ,
+                            "Physical or psychological injury related to a person i.e. service user, staff member or member of the public." ;
+               rdfs:label "Harm to a Person" ,
+                          "Harm to a person" ;
+               <http://www.w3.org/2004/02/skos#definition> "Any physical or psychological injury or damage to the health of a person, including both temporary and permanent injury" ,
+                                                           "Physical or psychological injury related to a person i.e. service user, staff member or member of the public." ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Harm to a Person" ,
+                                                          "Harm to a person" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HarmToAThing
+:HarmToAThing rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1" ;
+              rdfs:comment "Damage to a thing may include damage to facilities or systems; for example environmental, financial, data protection breach, etc." ;
+              rdfs:label "Harm to a thing" ;
+              <http://www.w3.org/2004/02/skos#definition> "Damage to a thing may include damage to facilities or systems; for example environmental, financial, data protection breach, etc." ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Harm to a thing" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Hazard
+:Hazard rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos#Concept> ;
+        <http://purl.org/dc/terms/created> "07/09/2020" ;
+        <http://purl.org/dc/terms/creator> "Rob" ;
+        <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+        rdfs:comment "A potential source of harm or adverse health effect on a person or persons." ;
+        rdfs:label "Hazard" ;
+        <http://www.w3.org/2004/02/skos#definition> "A potential source of harm or adverse health effect on a person or persons." ;
+        <http://www.w3.org/2004/02/skos#prefLabel> "Hazard" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HealthAndSafetyRiskAssessment
+:HealthAndSafetyRiskAssessment rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos#Concept> ;
+                               <http://purl.org/dc/terms/created> "07/09/2020" ;
+                               <http://purl.org/dc/terms/creator> "Rob" ;
+                               <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                               rdfs:label "Health and Safety Risk Assessment" ;
+                               <http://www.w3.org/2004/02/skos#prefLabel> "Health and Safety Risk Assessment" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HumanResources
+:HumanResources rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "08/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                rdfs:label "Human Resources" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Human Resources" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ICCApproach
+:ICCApproach rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "12/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 2" ;
+             rdfs:comment "ICC approach to risk description (Impact, Cause, Context)" ;
+             rdfs:label "ICC Approach" ;
+             <http://www.w3.org/2004/02/skos#definition> "ICC approach to risk description (Impact, Cause, Context)" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "ICC Approach" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#IdentifyRisk
+:IdentifyRisk rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "12/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 3" ;
+              rdfs:label "Identify Risk" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Identify Risk" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ImmediateAction
+:ImmediateAction rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "09/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                 rdfs:label "Immediate Action" ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Immediate Action" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ImpactArea
+:ImpactArea rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "08/09/2020" ;
+            <http://purl.org/dc/terms/creator> "Rob" ;
+            <http://purl.org/dc/terms/source> "HSE Part 2" ;
+            rdfs:label "Impact Area" ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Impact Area" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ImplementAction
+:ImplementAction rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "12/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                 rdfs:label "Implement Action" ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Implement Action" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Improvement
+:Improvement rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "07/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 1" ;
+             rdfs:label "Improvement" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Improvement" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Incident
+:Incident rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos#Concept> ;
+          <http://purl.org/dc/terms/created> "08/09/2020" ;
+          <http://purl.org/dc/terms/creator> "Rob" ;
+          <http://purl.org/dc/terms/source> "HSE Part 2" ;
+          rdfs:label "Incident" ;
+          <http://www.w3.org/2004/02/skos#prefLabel> "Incident" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#IncidentManagement
+:IncidentManagement rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "07/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                    rdfs:label "Incident Management" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Incident Management" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InclusionOfNewRisks
+:InclusionOfNewRisks rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos#Concept> ;
+                     <http://purl.org/dc/terms/created> "12/09/2020" ;
+                     <http://purl.org/dc/terms/creator> "Rob" ;
+                     <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                     rdfs:label "Inclusion of new Risks on the Risk Register" ;
+                     <http://www.w3.org/2004/02/skos#prefLabel> "Inclusion of new Risks on the Risk Register" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#IndividualStaff
+:IndividualStaff rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "08/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                 rdfs:label "Individual Staff" ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Individual Staff" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InformationSystemsAndTechnology
+:InformationSystemsAndTechnology rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos#Concept> ;
+                                 <http://purl.org/dc/terms/created> "08/09/2020" ;
+                                 <http://purl.org/dc/terms/creator> "Rob" ;
+                                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                                 rdfs:label "Information Systems and Technology" ;
+                                 <http://www.w3.org/2004/02/skos#prefLabel> "Information Systems and Technology" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InitialRiskRating
+:InitialRiskRating rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "09/09/2020" ;
+                   <http://purl.org/dc/terms/creator> "Rob" ;
+                   <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                   rdfs:label "Initial Risk Rating" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Initial Risk Rating" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InspectionReport
+:InspectionReport rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "07/09/2020" ;
+                  <http://purl.org/dc/terms/creator> "Rob" ;
+                  <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                  rdfs:label "Inspection Report" ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "Inspection Report" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InternalAuditAndInspection
+:InternalAuditAndInspection rdf:type owl:NamedIndividual ,
+                                     <http://www.w3.org/2004/02/skos#Concept> ;
+                            <http://purl.org/dc/terms/created> "08/09/2020" ;
+                            <http://purl.org/dc/terms/creator> "Rob" ;
+                            <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                            rdfs:label "Internal Audit and Inspection" ;
+                            <http://www.w3.org/2004/02/skos#prefLabel> "Internal Audit and Inspection" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InternalFactor
+:InternalFactor rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "08/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                rdfs:label "Internal Factor" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Internal Factor" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InternalInvestigation
+:InternalInvestigation rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "08/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                       rdfs:label "Internal Investigation" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Internal Investigation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LeadershipAndGovernance
+:LeadershipAndGovernance rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                         <http://purl.org/dc/terms/created> "08/09/2020" ;
+                         <http://purl.org/dc/terms/creator> "Rob" ;
+                         <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                         rdfs:label "Leadership and Governance" ;
+                         <http://www.w3.org/2004/02/skos#prefLabel> "Leadership and Governance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LearnAndImprove
+:LearnAndImprove rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "07/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                 rdfs:comment "Integrating safety information in order to identify areas where safety improvement is required." ;
+                 rdfs:label "Learn and Improve" ;
+                 <http://www.w3.org/2004/02/skos#definition> "Integrating safety information in order to identify areas where safety improvement is required." ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Learn and Improve" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LegalAndRegulatoryContext
+:LegalAndRegulatoryContext rdf:type owl:NamedIndividual ,
+                                    <http://www.w3.org/2004/02/skos#Concept> ;
+                           <http://purl.org/dc/terms/created> "08/09/2020" ;
+                           <http://purl.org/dc/terms/creator> "Rob" ;
+                           <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                           rdfs:label "LegalAndRegulatoryContext" ;
+                           <http://www.w3.org/2004/02/skos#prefLabel> "LegalAndRegulatoryContext" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Legislation
+:Legislation rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "08/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 2" ;
+             rdfs:label "Legislation" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Legislation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LikelyOutcome
+:LikelyOutcome rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "09/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 2" ;
+               rdfs:label "Likely Outcome" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Likely Outcome" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LineManager
+:LineManager rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "07/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+             rdfs:comment "A person with responsibility for directly managing individual employees or teams. In turn, they report to a higher level of management on the performance and well-being of the employees or teams they manage." ;
+             rdfs:label "Line Manager" ;
+             <http://www.w3.org/2004/02/skos#definition> "A person with responsibility for directly managing individual employees or teams. In turn, they report to a higher level of management on the performance and well-being of the employees or teams they manage." ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Line Manager" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ManagementPlan
+:ManagementPlan rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "08/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                rdfs:comment "For example where the management of a risk requires the supervision of staff, or assurance in relation to the systems already in place" ;
+                rdfs:label "Management Plan" ;
+                <http://www.w3.org/2004/02/skos#definition> "For example where the management of a risk requires the supervision of staff, or assurance in relation to the systems already in place" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Management Plan" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ManagementTeam
+:ManagementTeam rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "07/09/2020" ,
+                                                   "08/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 1" ,
+                                                  "HSE Part 2" ;
+                rdfs:label "Management Team" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Management Team" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ManagementTeamMeeting
+:ManagementTeamMeeting rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "12/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                       rdfs:label "Management Team Meeting" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Management Team Meeting" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Manager
+:Manager rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos#Concept> ;
+         <http://purl.org/dc/terms/created> "07/09/2020" ;
+         <http://purl.org/dc/terms/creator> "Rob" ;
+         <http://purl.org/dc/terms/source> "HSE Part 1" ;
+         rdfs:label "Manager" ;
+         <http://www.w3.org/2004/02/skos#prefLabel> "Manager" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#MeasureControlAndMonitor
+:MeasureControlAndMonitor rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos#Concept> ;
+                          <http://purl.org/dc/terms/created> "12/09/2020" ;
+                          <http://purl.org/dc/terms/creator> "Rob" ;
+                          <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                          rdfs:label "Measure Control and Monitor" ;
+                          <http://www.w3.org/2004/02/skos#prefLabel> "Measure Control and Monitor" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Monitor
+:Monitor rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos#Concept> ;
+         <http://purl.org/dc/terms/created> "07/09/2020" ;
+         <http://purl.org/dc/terms/creator> "Rob" ;
+         <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+         rdfs:comment "To check, supervise, observe critically or record the progress of an activity, action or system on a regular basis in order to identify change." ;
+         rdfs:label "Monitor" ;
+         <http://www.w3.org/2004/02/skos#definition> "To check, supervise, observe critically or record the progress of an activity, action or system on a regular basis in order to identify change." ;
+         <http://www.w3.org/2004/02/skos#prefLabel> "Monitor" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#MonitorAndReviewProcess
+:MonitorAndReviewProcess rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                         <http://purl.org/dc/terms/created> "07/09/2020" ;
+                         <http://purl.org/dc/terms/creator> "Rob" ;
+                         <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000" ;
+                         rdfs:label "Monitor and Review Process" ;
+                         <http://www.w3.org/2004/02/skos#prefLabel> "Monitor and Review Process" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#MonitorStatus
+:MonitorStatus rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "09/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 2" ;
+               rdfs:label "Monitor" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Monitor" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#NationalSurvey
+:NationalSurvey rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "08/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                rdfs:label "National Survey" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "National Survey" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ObjectivesAndProjects
+:ObjectivesAndProjects rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "08/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                       rdfs:comment "Project slippage and failure to meet objectives of projects." ;
+                       rdfs:label "Objectives and Projects" ;
+                       <http://www.w3.org/2004/02/skos#definition> "Project slippage and failure to meet objectives of projects." ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Objectives and Projects" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#OmbudsmanReport
+:OmbudsmanReport rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "08/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                 rdfs:label "Ombudsman Report" ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Ombudsman Report" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#OpenStatus
+:OpenStatus rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "09/09/2020" ;
+            <http://purl.org/dc/terms/creator> "Rob" ;
+            <http://purl.org/dc/terms/source> "HSE Part 2" ;
+            rdfs:label "Open" ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Open" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#OperationalObjectives
+:OperationalObjectives rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "08/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                       rdfs:label "Operational Objectives" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Operational Objectives" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#OperationalRisk
+:OperationalRisk rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "07/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                 rdfs:comment "Operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks." ;
+                 rdfs:label "Operational Risk" ;
+                 <http://www.w3.org/2004/02/skos#definition> "Operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks." ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Operational Risk" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#OrganisationalContext
+:OrganisationalContext rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "08/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                       rdfs:label "Organisational Context" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Organisational Context" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PerformanceMonitoring
+:PerformanceMonitoring rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "08/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                       rdfs:label "Performance Monitoring" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Performance Monitoring" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PhysicalEnvironment
+:PhysicalEnvironment rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos#Concept> ;
+                     <http://purl.org/dc/terms/created> "08/09/2020" ;
+                     <http://purl.org/dc/terms/creator> "Rob" ;
+                     <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                     rdfs:label "Physical Environment" ;
+                     <http://www.w3.org/2004/02/skos#prefLabel> "Physical Environment" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PlanAction
+:PlanAction rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "12/09/2020" ;
+            <http://purl.org/dc/terms/creator> "Rob" ;
+            <http://purl.org/dc/terms/source> "HSE Part 3" ;
+            rdfs:label "Plan Action" ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Plan Action" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PolicyProcedureProtocolGuidelines
+:PolicyProcedureProtocolGuidelines rdf:type owl:NamedIndividual ,
+                                            <http://www.w3.org/2004/02/skos#Concept> ;
+                                   <http://purl.org/dc/terms/created> "08/09/2020" ;
+                                   <http://purl.org/dc/terms/creator> "Rob" ;
+                                   <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                                   rdfs:label "Policy Procedure Protocol Guidelines" ;
+                                   <http://www.w3.org/2004/02/skos#prefLabel> "Policy Procedure Protocol Guidelines" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PrimaryImpactArea
+:PrimaryImpactArea rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "09/09/2020" ;
+                   <http://purl.org/dc/terms/creator> "Rob" ;
+                   <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                   rdfs:label "Primary Impact Area" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Primary Impact Area" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ProcessesAndSystems
+:ProcessesAndSystems rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos#Concept> ;
+                     <http://purl.org/dc/terms/created> "08/09/2020" ;
+                     <http://purl.org/dc/terms/creator> "Rob" ;
+                     <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                     rdfs:label "Processes and Systems" ;
+                     <http://www.w3.org/2004/02/skos#prefLabel> "Processes and Systems" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ProjectRisk
+:ProjectRisk rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "07/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+             rdfs:comment "Project risks relate to the achievement and delivery of the project objectives and outcomes. The majority of project risks are short term in nature and exist for the term of the project, whilst some will be on-going and re-classified at the end of the project. Projects can be defined as temporary, with the aim of delivering outcomes within a specified timeframe." ;
+             rdfs:label "Project Risk" ;
+             <http://www.w3.org/2004/02/skos#definition> "Project risks relate to the achievement and delivery of the project objectives and outcomes. The majority of project risks are short term in nature and exist for the term of the project, whilst some will be on-going and re-classified at the end of the project. Projects can be defined as temporary, with the aim of delivering outcomes within a specified timeframe." ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Project Risk" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#QualityPatientSafety-RiskManager-Advisors
+:QualityPatientSafety-RiskManager-Advisors rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/2004/02/skos#Concept> ;
+                                           <http://purl.org/dc/terms/created> "07/09/2020" ;
+                                           <http://purl.org/dc/terms/creator> "Rob" ;
+                                           <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                                           rdfs:label "Quality Patient Safety/Risk Manager/Advisors" ;
+                                           <http://www.w3.org/2004/02/skos#prefLabel> "Quality Patient Safety/Risk Manager/Advisors" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RecomendedRe-Ratings
+:RecomendedRe-Ratings rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos#Concept> ;
+                      <http://purl.org/dc/terms/created> "12/09/2020" ;
+                      <http://purl.org/dc/terms/creator> "Rob" ;
+                      <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                      rdfs:label "Recomended Re-Ratings" ;
+                      <http://www.w3.org/2004/02/skos#prefLabel> "Recomended Re-Ratings" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RecommendedDe-escalation
+:RecommendedDe-escalation rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos#Concept> ;
+                          <http://purl.org/dc/terms/created> "12/09/2020" ;
+                          <http://purl.org/dc/terms/creator> "Rob" ;
+                          <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                          rdfs:label "Recommended De-escalations" ;
+                          <http://www.w3.org/2004/02/skos#prefLabel> "Recommended De-escalations" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RecommendedStatusChanges
+:RecommendedStatusChanges rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos#Concept> ;
+                          <http://purl.org/dc/terms/created> "12/09/2020" ;
+                          <http://purl.org/dc/terms/creator> "Rob" ;
+                          <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                          rdfs:label "Recommended Status Changes" ;
+                          <http://www.w3.org/2004/02/skos#prefLabel> "Recommended Status Changes" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ReductionAtSource
+:ReductionAtSource rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "09/09/2020" ;
+                   <http://purl.org/dc/terms/creator> "Rob" ;
+                   <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                   rdfs:label "Reduction at Source" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Reduction at Source" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ReductionViaAdministrativeControls
+:ReductionViaAdministrativeControls rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/2004/02/skos#Concept> ;
+                                    <http://purl.org/dc/terms/created> "09/09/2020" ;
+                                    <http://purl.org/dc/terms/creator> "Rob" ;
+                                    <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                                    rdfs:label "Reduction via Administrative Controls" ;
+                                    <http://www.w3.org/2004/02/skos#prefLabel> "Reduction via Administrative Controls" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RegulatoryCompliance
+:RegulatoryCompliance rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos#Concept> ;
+                      <http://purl.org/dc/terms/created> "08/09/2020" ;
+                      <http://purl.org/dc/terms/creator> "Rob" ;
+                      <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                      rdfs:label "Regulatory Compliance" ;
+                      <http://www.w3.org/2004/02/skos#prefLabel> "Regulatory Compliance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RegulatoryInvestigation
+:RegulatoryInvestigation rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                         <http://purl.org/dc/terms/created> "08/09/2020" ;
+                         <http://purl.org/dc/terms/creator> "Rob" ;
+                         <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                         rdfs:label "Regulatory Investigation" ;
+                         <http://www.w3.org/2004/02/skos#prefLabel> "Regulatory Investigation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Research
+:Research rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos#Concept> ;
+          <http://purl.org/dc/terms/created> "08/09/2020" ;
+          <http://purl.org/dc/terms/creator> "Rob" ;
+          <http://purl.org/dc/terms/source> "HSE Part 2" ;
+          rdfs:label "Research" ;
+          <http://www.w3.org/2004/02/skos#prefLabel> "Research" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ResidualRiskRating
+:ResidualRiskRating rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "07/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                    rdfs:comment "The remaining level of risk after all treatment plans have been implemented." ;
+                    rdfs:label "Residual Risk Rating" ;
+                    <http://www.w3.org/2004/02/skos#definition> "The remaining level of risk after all treatment plans have been implemented." ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Residual Risk Rating" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Respond
+:Respond rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos#Concept> ;
+         <http://purl.org/dc/terms/created> "07/09/2020" ;
+         <http://purl.org/dc/terms/creator> "Rob" ;
+         <http://purl.org/dc/terms/source> "HSE Part 1" ;
+         rdfs:comment "Using information from incident management to inform a proactive approach to managing risk. Data relating to incidents which occur is a critical source of information about risk. Incident data can be used both to identify risk and also to monitor the effectiveness of actions taken to prevent its recurrence." ;
+         rdfs:label "Respond" ;
+         <http://www.w3.org/2004/02/skos#definition> "Using information from incident management to inform a proactive approach to managing risk. Data relating to incidents which occur is a critical source of information about risk. Incident data can be used both to identify risk and also to monitor the effectiveness of actions taken to prevent its recurrence." ;
+         <http://www.w3.org/2004/02/skos#prefLabel> "Respond" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Review
+:Review rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos#Concept> ;
+        <http://purl.org/dc/terms/created> "09/09/2020" ;
+        <http://purl.org/dc/terms/creator> "Rob" ;
+        <http://purl.org/dc/terms/source> "HSE Part 2" ;
+        rdfs:label "Review" ;
+        <http://www.w3.org/2004/02/skos#prefLabel> "Review" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Risk-QPSAdvisors
+:Risk-QPSAdvisors rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "12/09/2020" ;
+                  <http://purl.org/dc/terms/creator> "Rob" ;
+                  <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                  rdfs:label "Risk/QPS Advisors" ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "Risk/QPS Advisors" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskAcceptance
+:RiskAcceptance rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "07/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                rdfs:comment "Informed decision to take a particular risk." ;
+                rdfs:label "Risk Acceptance" ;
+                <http://www.w3.org/2004/02/skos#definition> "Informed decision to take a particular risk." ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Risk Acceptance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskAdvisor
+:RiskAdvisor rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "08/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 2" ;
+             rdfs:label "Risk Advisor" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Risk Advisor" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskAnalysis
+:RiskAnalysis rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000" ;
+              rdfs:label "Risk Analysis" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Risk Analysis" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskAnalysisAndEvalution
+:RiskAnalysisAndEvalution rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos#Concept> ;
+                          <http://purl.org/dc/terms/created> "12/09/2020" ;
+                          <http://purl.org/dc/terms/creator> "Rob" ;
+                          <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                          rdfs:label "Risk Analysis and Evalution" ;
+                          <http://www.w3.org/2004/02/skos#prefLabel> "Risk Analysis and Evalution" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskAppetite
+:RiskAppetite rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+              rdfs:comment "Amount and type of risk that an organisation is willing to pursue or retain." ;
+              rdfs:label "Risk Appetite" ;
+              <http://www.w3.org/2004/02/skos#definition> "Amount and type of risk that an organisation is willing to pursue or retain." ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Risk Appetite" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskAssessment
+:RiskAssessment rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "07/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                rdfs:comment "Overall process of risk identification, risk analysis and risk evaluation." ;
+                rdfs:label "Risk Assessment" ;
+                <http://www.w3.org/2004/02/skos#definition> "Overall process of risk identification, risk analysis and risk evaluation." ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Risk Assessment" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskAvoidance
+:RiskAvoidance rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "07/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+               rdfs:comment "Informed decision not to be involved in, or to withdraw from, an activity in order not to be exposed to a particular risk. Risk avoidance may increase the significance of other risks or may lead to the loss of opportunities for gain." ;
+               rdfs:label "Risk Avoidance" ;
+               <http://www.w3.org/2004/02/skos#definition> "Informed decision not to be involved in, or to withdraw from, an activity in order not to be exposed to a particular risk. Risk avoidance may increase the significance of other risks or may lead to the loss of opportunities for gain." ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Risk Avoidance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskCategories
+:RiskCategories rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "07/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                rdfs:comment "The categories used by the organisation to group similar opportunities or risks for the purposes of reporting and assigning responsibility." ;
+                rdfs:label "Risk Categories" ;
+                <http://www.w3.org/2004/02/skos#definition> "The categories used by the organisation to group similar opportunities or risks for the purposes of reporting and assigning responsibility." ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Risk Categories" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskCriteria
+:RiskCriteria rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+              rdfs:comment "Terms of reference against which the significance of a risk is evaluated." ;
+              rdfs:label "Risk Criteria" ;
+              <http://www.w3.org/2004/02/skos#definition> "Terms of reference against which the significance of a risk is evaluated." ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Risk Criteria" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskDe-Escalation
+:RiskDe-Escalation rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "12/09/2020" ;
+                   <http://purl.org/dc/terms/creator> "Rob" ;
+                   <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                   rdfs:comment "In instances where a risk was notified to and accepted onto the register of a more Senior Manager for oversight it may be that following the implementation of actions the rating of the risk may have reduced to an acceptable or tolerable level or where remaining actions lie within the control of the Manager at the level below. In such circumstances a decision may be taken to ‘close’ the risk on the register and to de-escalate it onto the register of the Manager on the level below. Such risks when added to the register below are given a risk status of ‘open’ on that register and are reviewed at the next Management Team meeting of that Manager." ;
+                   rdfs:label "Risk De-Escalation" ;
+                   <http://www.w3.org/2004/02/skos#definition> "In instances where a risk was notified to and accepted onto the register of a more Senior Manager for oversight it may be that following the implementation of actions the rating of the risk may have reduced to an acceptable or tolerable level or where remaining actions lie within the control of the Manager at the level below. In such circumstances a decision may be taken to ‘close’ the risk on the register and to de-escalate it onto the register of the Manager on the level below. Such risks when added to the register below are given a risk status of ‘open’ on that register and are reviewed at the next Management Team meeting of that Manager." ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Risk De-Escalation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskEvaluation
+:RiskEvaluation rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "07/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                rdfs:comment "Process of comparing the results of risk analysis with risk criteria to determine whether the risk and/or its magnitude is acceptable or tolerable." ;
+                rdfs:label "Risk Evaluation" ;
+                <http://www.w3.org/2004/02/skos#definition> "Process of comparing the results of risk analysis with risk criteria to determine whether the risk and/or its magnitude is acceptable or tolerable." ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Risk Evaluation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskIdentification
+:RiskIdentification rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "07/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                    rdfs:comment "A systematic process applied to the organisation’s objectives and activities to identify possible risk sources and causes and potential consequences or impacts should a risk occur." ;
+                    rdfs:label "Risk Identification" ;
+                    <http://www.w3.org/2004/02/skos#definition> "A systematic process applied to the organisation’s objectives and activities to identify possible risk sources and causes and potential consequences or impacts should a risk occur." ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Risk Identification" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskInclusionCriteria
+:RiskInclusionCriteria rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "12/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                       rdfs:label "Risk Inclusion Criteria" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Risk Inclusion Criteria" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskLead
+:RiskLead rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos#Concept> ;
+          <http://purl.org/dc/terms/created> "12/09/2020" ;
+          <http://purl.org/dc/terms/creator> "Rob" ;
+          <http://purl.org/dc/terms/source> "HSE Part 3" ;
+          rdfs:label "Risk Lead" ;
+          <http://www.w3.org/2004/02/skos#prefLabel> "Risk Lead" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskManagement
+:RiskManagement rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "07/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                rdfs:comment "Coordinated activities to direct and control an organisation with regard to risk." ;
+                rdfs:label "Risk Management" ;
+                <http://www.w3.org/2004/02/skos#definition> "Coordinated activities to direct and control an organisation with regard to risk." ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Risk Management" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskManagementMeeting
+:RiskManagementMeeting rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "12/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                       rdfs:label "Risk Management Meeting" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Risk Management Meeting" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskManagementProcess
+:RiskManagementProcess rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "07/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+                       rdfs:comment "sameAs" ;
+                       rdfs:label "Risk Management Process" ;
+                       <http://www.w3.org/2004/02/skos#definition> "sameAs" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Risk Management Process" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskManagementProfessionals
+:RiskManagementProfessionals rdf:type owl:NamedIndividual ,
+                                      <http://www.w3.org/2004/02/skos#Concept> ;
+                             <http://purl.org/dc/terms/created> "07/09/2020" ;
+                             <http://purl.org/dc/terms/creator> "Rob" ;
+                             <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                             rdfs:label "Risk management professionals" ;
+                             <http://www.w3.org/2004/02/skos#prefLabel> "Risk management professionals" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskManager
+:RiskManager rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "07/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 1" ;
+             rdfs:label "Risk Manager" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Risk Manager" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskMatrix
+:RiskMatrix rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "07/09/2020" ;
+            <http://purl.org/dc/terms/creator> "Rob" ;
+            <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+            rdfs:comment "Tool for ranking and displaying risks by defining ranges for consequence and likelihood." ;
+            rdfs:label "Risk Matrix" ;
+            <http://www.w3.org/2004/02/skos#definition> "Tool for ranking and displaying risks by defining ranges for consequence and likelihood." ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Risk Matrix" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskNotification
+:RiskNotification rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "12/09/2020" ;
+                  <http://purl.org/dc/terms/creator> "Rob" ;
+                  <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                  rdfs:comment "Communication and notification of risk from one level of the organisation to another." ;
+                  rdfs:label "Risk Notification" ;
+                  <http://www.w3.org/2004/02/skos#definition> "Communication and notification of risk from one level of the organisation to another." ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "Risk Notification" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskProfile
+:RiskProfile rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "07/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+             rdfs:comment "A risk profile is a written description of a set of risks. A risk profile can include the risks that the entire organisation must manage or only those that a particular function or part of the organisation must address. (In the HSE, a services risk profile is set out in their risk register)." ;
+             rdfs:label "Risk Profile" ;
+             <http://www.w3.org/2004/02/skos#definition> "A risk profile is a written description of a set of risks. A risk profile can include the risks that the entire organisation must manage or only those that a particular function or part of the organisation must address. (In the HSE, a services risk profile is set out in their risk register)." ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Risk Profile" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskRe-Rating
+:RiskRe-Rating rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "12/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 3" ;
+               rdfs:comment "With the completion of some or all of the actions the level of risk (the rating) may be reassessed in order to consider whether its likelihood or impact score has reduced." ;
+               rdfs:label "Risk Re-Rating" ;
+               <http://www.w3.org/2004/02/skos#definition> "With the completion of some or all of the actions the level of risk (the rating) may be reassessed in order to consider whether its likelihood or impact score has reduced." ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Risk Re-Rating" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskRegister
+:RiskRegister rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+              rdfs:comment "A risk register is a database of assessed risks that face any organisation at any one time. Always changing to reflect the dynamic nature of risks and the organisation’s management of them, its purpose is to help managers prioritise available resources to minimise risk and target improvements to best effect." ;
+              rdfs:label "Risk Register" ;
+              <http://www.w3.org/2004/02/skos#definition> "A risk register is a database of assessed risks that face any organisation at any one time. Always changing to reflect the dynamic nature of risks and the organisation’s management of them, its purpose is to help managers prioritise available resources to minimise risk and target improvements to best effect." ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Risk Register" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskRegisterReview
+:RiskRegisterReview rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "12/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                    rdfs:label "Reviewing the Entirety of the Risk Register" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Reviewing the Entirety of the Risk Register" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskStatusChange
+:RiskStatusChange rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "12/09/2020" ;
+                  <http://purl.org/dc/terms/creator> "Rob" ;
+                  <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                  rdfs:label "Chaning Risk Status" ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "Chaning Risk Status" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RiskTolerance
+:RiskTolerance rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "07/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+               rdfs:comment "An organisation’s or stakeholder’s readiness to bear the risk after risk treatment in order to achieve its objectives." ;
+               rdfs:label "Risk Tolerance" ;
+               <http://www.w3.org/2004/02/skos#definition> "An organisation’s or stakeholder’s readiness to bear the risk after risk treatment in order to achieve its objectives." ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Risk Tolerance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RisksNotifiedFromAnotherOrganisationLevel
+:RisksNotifiedFromAnotherOrganisationLevel rdf:type owl:NamedIndividual ,
+                                                    <http://www.w3.org/2004/02/skos#Concept> ;
+                                           <http://purl.org/dc/terms/created> "12/09/2020" ;
+                                           <http://purl.org/dc/terms/creator> "Rob" ;
+                                           <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                                           rdfs:label "Risks Notified From Another Organisation Level" ;
+                                           <http://www.w3.org/2004/02/skos#prefLabel> "Risks Notified From Another Organisation Level" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SafetyAlert
+:SafetyAlert rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "08/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 2" ;
+             rdfs:label "Safety Alert" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Safety Alert" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SafetyElements
+:SafetyElements rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "07/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                rdfs:label "Safety Elements" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Safety Elements" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SecondaryImpact
+:SecondaryImpact rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "08/09/2020" ;
+                 <http://purl.org/dc/terms/creator> "Rob" ;
+                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                 rdfs:label "Secondary Impact" ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Secondary Impact" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SeniorManager
+:SeniorManager rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "12/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 3" ;
+               rdfs:label "Senior Manager" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Senior Manager" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceContext
+:ServiceContext rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "08/09/2020" ;
+                <http://purl.org/dc/terms/creator> "Rob" ;
+                <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                rdfs:label "Service Context" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Service Context" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceDevelopment
+:ServiceDevelopment rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "07/09/2020" ;
+                    <http://purl.org/dc/terms/creator> "Rob" ;
+                    <http://purl.org/dc/terms/source> "HSE Part 1" ;
+                    rdfs:label "Service Development" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Service Development" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceObjectives
+:ServiceObjectives rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "08/09/2020" ;
+                   <http://purl.org/dc/terms/creator> "Rob" ;
+                   <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                   rdfs:label "Service Objectives" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Service Objectives" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServicePlan
+:ServicePlan rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "07/09/2020" ;
+             <http://purl.org/dc/terms/creator> "Rob" ;
+             <http://purl.org/dc/terms/source> "HSE Part 1" ;
+             rdfs:label "Service Plan" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Service Plan" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceUserConsultation
+:ServiceUserConsultation rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                         <http://purl.org/dc/terms/created> "08/09/2020" ;
+                         <http://purl.org/dc/terms/creator> "Rob" ;
+                         <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                         rdfs:label "Service User Consultation" ;
+                         <http://www.w3.org/2004/02/skos#prefLabel> "Service User Consultation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceUserExperience
+:ServiceUserExperience rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "08/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                       rdfs:comment "Negative service user experience that may have a negative impact on outcome, limit their engagement with a service or lead to a complaint." ;
+                       rdfs:label "Service User Experience" ;
+                       <http://www.w3.org/2004/02/skos#definition> "Negative service user experience that may have a negative impact on outcome, limit their engagement with a service or lead to a complaint." ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Service User Experience" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceUsers
+:ServiceUsers rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "07/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 1" ;
+              rdfs:label "Service Users" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Service Users" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SignificantRisks
+:SignificantRisks rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "12/09/2020" ;
+                  <http://purl.org/dc/terms/creator> "Rob" ;
+                  <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                  rdfs:comment "Risks that need oversight by a Management Team" ;
+                  rdfs:label "Significant Risks" ;
+                  <http://www.w3.org/2004/02/skos#definition> "Risks that need oversight by a Management Team" ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "Significant Risks" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SourcesOfRiskInformation
+:SourcesOfRiskInformation rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos#Concept> ;
+                          <http://purl.org/dc/terms/created> "08/09/2020" ;
+                          <http://purl.org/dc/terms/creator> "Rob" ;
+                          <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                          rdfs:label "Sources of Risk Information" ;
+                          <http://www.w3.org/2004/02/skos#prefLabel> "Sources of Risk Information" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#StaffConsultation
+:StaffConsultation rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "08/09/2020" ;
+                   <http://purl.org/dc/terms/creator> "Rob" ;
+                   <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                   rdfs:label "Staff Consultation" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Staff Consultation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Stakeholders
+:Stakeholders rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "08/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 2" ;
+              rdfs:label "Stakeholders" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Stakeholders" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Standards
+:Standards rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos#Concept> ;
+           <http://purl.org/dc/terms/created> "08/09/2020" ;
+           <http://purl.org/dc/terms/creator> "Rob" ;
+           <http://purl.org/dc/terms/source> "HSE Part 2" ;
+           rdfs:label "Standards" ;
+           <http://www.w3.org/2004/02/skos#prefLabel> "Standards" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#StrategicObjectives
+:StrategicObjectives rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos#Concept> ;
+                     <http://purl.org/dc/terms/created> "08/09/2020" ;
+                     <http://purl.org/dc/terms/creator> "Rob" ;
+                     <http://purl.org/dc/terms/source> "HSE Part 2" ;
+                     rdfs:label "Strategic Objectives" ;
+                     <http://www.w3.org/2004/02/skos#prefLabel> "Strategic Objectives" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#StrategicRisk
+:StrategicRisk rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "07/09/2020" ;
+               <http://purl.org/dc/terms/creator> "Rob" ;
+               <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+               rdfs:comment "A strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan." ;
+               rdfs:label "Strategic Risk" ;
+               <http://www.w3.org/2004/02/skos#definition> "A strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan." ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Strategic Risk" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Teaching
+:Teaching rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos#Concept> ;
+          <http://purl.org/dc/terms/created> "08/09/2020" ;
+          <http://purl.org/dc/terms/creator> "Rob" ;
+          <http://purl.org/dc/terms/source> "HSE Part 2" ;
+          rdfs:label "Teaching" ;
+          <http://www.w3.org/2004/02/skos#prefLabel> "Teaching" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Transferance
+:Transferance rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "09/09/2020" ;
+              <http://purl.org/dc/terms/creator> "Rob" ;
+              <http://purl.org/dc/terms/source> "HSE Part 2" ;
+              rdfs:label "Transferance" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Transferance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Treatment
+:Treatment rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos#Concept> ;
+           <http://purl.org/dc/terms/created> "07/09/2020" ;
+           <http://purl.org/dc/terms/creator> "Rob" ;
+           <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
+           rdfs:comment "Additional mechanisms, processes, procedures or actions to be implemented, which seek to reduce the current likelihood and/or consequence and reach the Residual Risk Rating." ;
+           rdfs:label "Treatment" ;
+           <http://www.w3.org/2004/02/skos#definition> "Additional mechanisms, processes, procedures or actions to be implemented, which seek to reduce the current likelihood and/or consequence and reach the Residual Risk Rating." ;
+           <http://www.w3.org/2004/02/skos#prefLabel> "Treatment" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#UpdatingExistingRisks
+:UpdatingExistingRisks rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "12/09/2020" ;
+                       <http://purl.org/dc/terms/creator> "Rob" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 3" ;
+                       rdfs:label "Updating Existing Risks on a Risk Register" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Updating Existing Risks on a Risk Register" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Vigilance
+:Vigilance rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos#Concept> ;
+           <http://purl.org/dc/terms/created> "07/09/2020" ;
+           <http://purl.org/dc/terms/creator> "Rob" ;
+           <http://purl.org/dc/terms/source> "HSE Part 1" ;
+           rdfs:comment "Being alert to the potential of harm occurring within the workplace. The heightened sense of awareness that you need to adopt and engender within the workplace to ensure ongoing safety in the delivery of services." ;
+           rdfs:label "Vigilance" ;
+           <http://www.w3.org/2004/02/skos#definition> "Being alert to the potential of harm occurring within the workplace. The heightened sense of awareness that you need to adopt and engender within the workplace to ensure ongoing safety in the delivery of services." ;
+           <http://www.w3.org/2004/02/skos#prefLabel> "Vigilance" .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
