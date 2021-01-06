@@ -9,7 +9,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
   "@id" : "_:genid10",
@@ -18,11 +18,77 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "0"
   } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence"
+  } ]
+}, {
+  "@id" : "_:genid100",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid106"
+    }, {
+      "@id" : "_:genid104"
+    }, {
+      "@id" : "_:genid102"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid102",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskInChange"
+  } ]
+}, {
+  "@id" : "_:genid104",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain"
+  } ]
+}, {
+  "@id" : "_:genid106",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance"
+  } ]
+}, {
+  "@id" : "_:genid107",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+    }, {
+      "@id" : "_:genid113"
+    }, {
+      "@id" : "_:genid111"
+    }, {
+      "@id" : "_:genid109"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid109",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -35,7 +101,27 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid111",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability"
+  } ]
+}, {
+  "@id" : "_:genid113",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "Occurs every 2-5 years"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -48,57 +134,69 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
   "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
     }, {
-      "@id" : "_:genid15"
+      "@id" : "_:genid16"
     } ]
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "5"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#red"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
   } ]
 }, {
   "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
-    }, {
-      "@id" : "_:genid24"
-    }, {
-      "@id" : "_:genid22"
-    }, {
-      "@id" : "_:genid20"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#red"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour"
   } ]
 }, {
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
     }, {
       "@id" : "_:genid8"
     }, {
@@ -109,286 +207,50 @@
   } ]
 }, {
   "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+    }, {
+      "@id" : "_:genid26"
+    }, {
+      "@id" : "_:genid24"
+    }, {
+      "@id" : "_:genid22"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "4"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#float",
     "@value" : "0.75"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#probability"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@language" : "en",
     "@value" : "Bimonthly"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
   } ]
 }, {
-  "@id" : "_:genid26",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#green"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour"
-  } ]
-}, {
-  "@id" : "_:genid27",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact"
-    }, {
-      "@id" : "_:genid29"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid29",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "4"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid31",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#amber"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour"
-  } ]
-}, {
-  "@id" : "_:genid32",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact"
-    }, {
-      "@id" : "_:genid34"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "2"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid36",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact"
-    }, {
-      "@id" : "_:genid38"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "3"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "5"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid40",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact"
-    }, {
-      "@id" : "_:genid42"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid42",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid44",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
-    }, {
-      "@id" : "_:genid50"
-    }, {
-      "@id" : "_:genid48"
-    }, {
-      "@id" : "_:genid46"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid46",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "3"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid48",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#float",
-    "@value" : "0.5"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#probability"
-  } ]
-}, {
-  "@id" : "_:genid50",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@language" : "en",
-    "@value" : "Occurs every 1-2 years"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
-  } ]
-}, {
-  "@id" : "_:genid52",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
-    }, {
-      "@id" : "_:genid58"
-    }, {
-      "@id" : "_:genid56"
-    }, {
-      "@id" : "_:genid54"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid54",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid56",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#float",
-    "@value" : "0.01"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#probability"
-  } ]
-}, {
-  "@id" : "_:genid58",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@language" : "en",
-    "@value" : "Occurs every 5 years"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
-  } ]
-}, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#float",
-    "@value" : "0.99"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#probability"
-  } ]
-}, {
-  "@id" : "_:genid60",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
-    }, {
-      "@id" : "_:genid66"
-    }, {
-      "@id" : "_:genid64"
-    }, {
-      "@id" : "_:genid62"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid62",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "2"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid64",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#float",
-    "@value" : "0.1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#probability"
-  } ]
-}, {
-  "@id" : "_:genid66",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#hasValue" : [ {
-    "@language" : "en",
-    "@value" : "Occurs every 2-5 years"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
-  } ]
-}, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -398,7 +260,378 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#green"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    }, {
+      "@id" : "_:genid32"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#amber"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    }, {
+      "@id" : "_:genid37"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
+  } ]
+}, {
+  "@id" : "_:genid39",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    }, {
+      "@id" : "_:genid41"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
+  } ]
+}, {
+  "@id" : "_:genid41",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    }, {
+      "@id" : "_:genid45"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+    }, {
+      "@id" : "_:genid53"
+    }, {
+      "@id" : "_:genid51"
+    }, {
+      "@id" : "_:genid49"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.5"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "Occurs every 1-2 years"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
+  } ]
+}, {
+  "@id" : "_:genid55",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid58",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected"
+  } ]
+}, {
+  "@id" : "_:genid59",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.99"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability"
+  } ]
+}, {
+  "@id" : "_:genid60",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected"
+  } ]
+}, {
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+    }, {
+      "@id" : "_:genid67"
+    }, {
+      "@id" : "_:genid65"
+    }, {
+      "@id" : "_:genid63"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid63",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
+  } ]
+}, {
+  "@id" : "_:genid65",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "0.01"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability"
+  } ]
+}, {
+  "@id" : "_:genid67",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#hasValue" : [ {
+    "@language" : "en",
+    "@value" : "Occurs every 5 years"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
+  } ]
+}, {
+  "@id" : "_:genid69",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid70",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid77"
+    }, {
+      "@id" : "_:genid75"
+    }, {
+      "@id" : "_:genid73"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid75",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasPotentialLoss"
+  } ]
+}, {
+  "@id" : "_:genid77",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance"
+  } ]
+}, {
+  "@id" : "_:genid78",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid79",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid85"
+    }, {
+      "@id" : "_:genid83"
+    }, {
+      "@id" : "_:genid81"
+    } ]
   } ]
 }, {
   "@id" : "_:genid8",
@@ -408,7 +641,124 @@
     "@value" : "At least monthly"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency"
+  } ]
+}, {
+  "@id" : "_:genid81",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskInChange"
+  } ]
+}, {
+  "@id" : "_:genid83",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain"
+  } ]
+}, {
+  "@id" : "_:genid85",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance"
+  } ]
+}, {
+  "@id" : "_:genid86",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid92"
+    }, {
+      "@id" : "_:genid90"
+    }, {
+      "@id" : "_:genid88"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid88",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability"
+  } ]
+}, {
+  "@id" : "_:genid90",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedRiskInChange"
+  } ]
+}, {
+  "@id" : "_:genid92",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain"
+  } ]
+}, {
+  "@id" : "_:genid93",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "_:genid99"
+    }, {
+      "@id" : "_:genid97"
+    }, {
+      "@id" : "_:genid95"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid95",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedRisk"
+  } ]
+}, {
+  "@id" : "_:genid97",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain"
+  } ]
+}, {
+  "@id" : "_:genid99",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEfficacy"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
@@ -418,6 +768,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/modified",
@@ -447,7 +800,26 @@
     "@value" : "Risk Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Context"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Context"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/hasQuestionnaire",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-11-17T14:22:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to link a project with a CUBE analysis questionnaire."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has questionnaire"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/hasRiskContext",
@@ -464,7 +836,7 @@
     "@value" : "Specialised sub-property of hasContext used for linking a RiskDescription with a RiskContext."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -474,7 +846,7 @@
     "@id" : "http://purl.org/dc/elements/RiskContext"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasContext"
   } ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
@@ -492,8 +864,8 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@language" : "en",
     "@value" : "Ademar Crotti Junior"
@@ -517,8 +889,12 @@
     "@language" : "en",
     "@value" : "Yalemisew Abgaz"
   } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."
+  } ],
   "http://purl.org/dc/elements/1.1/modified" : [ {
-    "@value" : "6/10/2020"
+    "@value" : "18/12/2020"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
     "@value" : "https://openark.adaptcentre.ie/"
@@ -539,19 +915,16 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."
-  }, {
-    "@language" : "en",
-    "@value" : "This ontology supports the cube risk management methodology and questionnaire developed by the Centre for Innovative Human Systems, Trinity College Dublin"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "@value" : "0.61"
+    "@value" : "0.7"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Action",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Action",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -564,10 +937,12 @@
     "@value" : "Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"
+  }, {
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Activity",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Activity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -584,10 +959,10 @@
     "@value" : "Activity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#AlmostCertain",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AlmostCertain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -607,7 +982,7 @@
     "@id" : "_:genid2"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -622,9 +997,12 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Answer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid10"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Ademar"
@@ -639,7 +1017,7 @@
     "@value" : "Artefact"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -656,7 +1034,7 @@
     "@value" : "Aspect of Reality"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Cause",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -673,10 +1051,10 @@
     "@value" : "Cause"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid11"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Context",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Context",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -693,7 +1071,7 @@
     "@value" : "Context"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Control",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -710,10 +1088,10 @@
     "@value" : "Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid11"
+    "@id" : "_:genid12"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Culture",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Culture",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -730,10 +1108,10 @@
     "@value" : "Culture"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Deliverable",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -750,10 +1128,10 @@
     "@value" : "Deliverable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid12"
+    "@id" : "_:genid13"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -770,10 +1148,28 @@
     "@value" : "Develop Stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE solution stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Efficacy"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@value" : "Ademar"
@@ -795,7 +1191,7 @@
     "@value" : "Evidence"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#EvidenceRule",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#EvidenceRule",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -812,7 +1208,7 @@
     "@value" : "Evidence Rule"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -829,10 +1225,10 @@
     "@value" : "Extreme Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid14"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -849,10 +1245,33 @@
     "@value" : "Functional System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Goal",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE solution stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gain Achieved"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain"
+  }, {
+    "@id" : "_:genid18"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Goal",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -869,10 +1288,10 @@
     "@value" : "Goal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#HighRisk",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HighRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -892,12 +1311,12 @@
     "@value" : "Red (High Risk)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
   }, {
-    "@id" : "_:genid17"
+    "@id" : "_:genid19"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -914,7 +1333,7 @@
     "@value" : "Impact"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -937,7 +1356,7 @@
     "@value" : "Risk Category"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -954,10 +1373,24 @@
     "@value" : "Implement Stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#InformationKnowledge",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE problem stage."
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#InformationKnowledge",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -974,10 +1407,10 @@
     "@value" : "Information and Knowledge"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -995,13 +1428,31 @@
     "@value" : "Likelihood"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likely",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likely",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid20"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#LowRisk",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "CUBE risk analysis factor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid28"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LowRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1018,12 +1469,12 @@
     "@value" : "Green (Low Risk)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid29"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1040,10 +1491,10 @@
     "@value" : "Major Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid27"
+    "@id" : "_:genid30"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Mechanism",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1060,7 +1511,7 @@
     "@value" : "Mechanism"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#MediumRisk",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MediumRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@language" : "en",
@@ -1079,12 +1530,12 @@
     "@value" : "Amber (Medium Risk)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
   }, {
-    "@id" : "_:genid31"
+    "@id" : "_:genid34"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1101,10 +1552,10 @@
     "@value" : "Minor Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid35"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1121,10 +1572,10 @@
     "@value" : "Moderate Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid39"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1142,10 +1593,10 @@
     "@value" : "Negligible Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid43"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1162,7 +1613,7 @@
     "@value" : "Organisational Unit"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Outcome",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1179,7 +1630,7 @@
     "@value" : "Outcome"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Person",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1196,7 +1647,7 @@
     "@value" : "Person"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1213,16 +1664,55 @@
     "@value" : "Plan and Prepare Stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Possible",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Possible",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2020-09-29T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "HSE defintion. A type of Risk Assessment likelihood."
+  }, {
+    "@language" : "en",
+    "@value" : "Possible"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid44"
+    "@id" : "_:genid47"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Priority",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "CUBE Problem Stage. Loss is the fact of no longer having something or having less of it than before."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Potential Loss"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain"
+  }, {
+    "@id" : "_:genid55"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1239,7 +1729,7 @@
     "@value" : "Priority"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1256,10 +1746,10 @@
     "@value" : "Problem Stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1276,10 +1766,80 @@
     "@value" : "Process/Sequence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE solution stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Projected Gain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain"
+  }, {
+    "@id" : "_:genid56"
+  }, {
+    "@id" : "_:genid57"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE plan stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Projected Reliability of Gain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain"
+  }, {
+    "@id" : "_:genid58"
+  }, {
+    "@id" : "_:genid59"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Projected Risk Rating"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+  }, {
+    "@id" : "_:genid60"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1296,7 +1856,7 @@
     "@value" : "Question"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1313,7 +1873,7 @@
     "@value" : "Questionnaire"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RareRemote",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RareRemote",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1330,10 +1890,31 @@
     "@value" : "Rare/Remote"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid61"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Report",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE implement  stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reliability of Gain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid69"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1350,7 +1931,7 @@
     "@value" : "Report"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1365,9 +1946,33 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid70"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE problem stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Assessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid71"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1384,7 +1989,7 @@
     "@value" : "Risk Assessment Record (Form)"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskColour",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskColour",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1402,7 +2007,89 @@
     "@value" : "Risk Colour"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-09-29T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Desribes a risk in ICC (Impact, Cause, Context) format."
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid78"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE plan stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Implementation Assessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid79"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE plan stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk in Change Assessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid86"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE solution stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Mitigation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid93"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1419,7 +2106,7 @@
     "@value" : "Risk Rating"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1436,7 +2123,28 @@
     "@value" : "Risk Status"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE plan stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Verification Assessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid100"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1453,10 +2161,10 @@
     "@value" : "Sensemaking"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Social",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Social",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1473,10 +2181,10 @@
     "@value" : "Social"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1493,10 +2201,10 @@
     "@value" : "Solution Stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1513,7 +2221,7 @@
     "@value" : "Stage"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1530,13 +2238,29 @@
     "@value" : "System Dimension"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Unlikely",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Unlikely",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-09-29T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "HSE definition. A type of Risk Assessment likelihood."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unlikely"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid60"
+    "@id" : "_:genid107"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Yalemisew"
@@ -1553,10 +2277,28 @@
     "@value" : "Verify and Embed Stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "en",
+    "@value" : "Identfied during the CUBE plan stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Viability"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1569,7 +2311,7 @@
     "@value" : "Defines the range of the likelihood value for a risk in terms of frequency"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1579,7 +2321,7 @@
     "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#additionalControl",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#additionalControl",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1592,24 +2334,24 @@
     "@value" : "Used to link new controls that are required with a risk in a risk assessment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has addtional required control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Control"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#amber",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskColour" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#amber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskColour" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "amber"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#analyticsData",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1626,7 +2368,7 @@
     "@value" : "analytics data"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#answerText",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#answerText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1639,14 +2381,14 @@
     "@value" : "The a textual answer to the cube question."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "answer text"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#answeredBy",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#answeredBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1663,7 +2405,7 @@
     "@value" : "answered by"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#answeredDate",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#answeredDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1680,7 +2422,7 @@
     "@value" : "answered date"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#artefactText",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#artefactText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Ademar"
@@ -1692,7 +2434,7 @@
     "@value" : "A textual description of an artefact."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "artefact text"
@@ -1701,7 +2443,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#assessmentDate",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#assessmentDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1714,7 +2456,7 @@
     "@value" : "Used in a HSE risk assessment form."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1724,7 +2466,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#assignedPerson",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#assignedPerson",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1737,24 +2479,24 @@
     "@value" : "Used to connect an action with the person assigned to perform it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Action"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "assigned person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Person"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#closed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#closed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "closed"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#comment",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#comment",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1771,7 +2513,7 @@
     "@value" : "comment"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#designDate",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1788,7 +2530,7 @@
     "@value" : "design date"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#designedBy",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1805,7 +2547,7 @@
     "@value" : "design by"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#dueDate",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1818,7 +2560,7 @@
     "@value" : "Used to link an action with the date it is due."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Action"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1828,7 +2570,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1845,7 +2587,7 @@
     "@value" : "evidence rule"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#evidenceText",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@value" : "Ademar"
@@ -1864,7 +2606,7 @@
     "@value" : "The text which describes the evidence."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1874,7 +2616,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#file",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#file",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Ademar"
@@ -1886,7 +2628,7 @@
     "@value" : "Path to file"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "file"
@@ -1895,14 +2637,14 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#green",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskColour" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#green",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskColour" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "green"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1914,20 +2656,20 @@
     "@value" : "Represents and links the answer to the question."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has answer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Ademar"
@@ -1939,16 +2681,16 @@
     "@value" : "Associates an evidence to artefacts"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has artefact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasAspect",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasAspect",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -1960,20 +2702,20 @@
     "@value" : "A question has an aspect."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has aspect"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasCause",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasCause",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1986,17 +2728,17 @@
     "@value" : "Links a risk description to a cause."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has cause"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Cause"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasContext",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasContext",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2012,15 +2754,15 @@
     "@value" : "has context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Context"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Context"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isContextOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isContextOf"
   }, {
     "@value" : "isContextOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDataset",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Ademar"
@@ -2032,7 +2774,7 @@
     "@value" : "Evidence may contain dataset descriptions"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has dataset"
@@ -2041,7 +2783,7 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Resource"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDeliverable",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeliverable",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2054,17 +2796,17 @@
     "@value" : "Links an action and its deliverable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Action"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has deliverable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Deliverable"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2077,17 +2819,17 @@
     "@value" : "Links risk assessment with a site or organisatioal unit."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has dept,/service site"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasDimension",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDimension",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2099,19 +2841,40 @@
     "@value" : "A question has dimension."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has dimension"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEfficacy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has efficacy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
     "@value" : "Ademar"
@@ -2129,18 +2892,15 @@
     "@language" : "en",
     "@value" : "An answer has its own evidence."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has evidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2152,17 +2912,17 @@
     "@value" : "Represents and links evidence rule with  question."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has evidence rule"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasExistingControl",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasExistingControl",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2175,17 +2935,17 @@
     "@value" : "Used in the HSE risk assessment form to link existing control measures with a risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has existing control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Control"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2198,17 +2958,17 @@
     "@value" : "Links a risk assessment and the relevant organisational unit."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has HG/CHO/NAS/function"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2220,16 +2980,16 @@
     "@value" : "Links asssessment form and location/organisational unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has hospital site/service"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2242,17 +3002,32 @@
     "@value" : "Links a risk and its impact."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has importance"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@value" : "2020-09-22T09:53:21+00:00"
@@ -2262,7 +3037,7 @@
     "@value" : "Links a risk  to a likelihood of it occurring."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2271,10 +3046,10 @@
     "@value" : "Rob Brennan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2290,15 +3065,15 @@
     "@value" : "has mechanism"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Mechanism"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf"
   }, {
     "@value" : "isMechanismOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasOutcome",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOutcome",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2314,15 +3089,36 @@
     "@value" : "has outcome"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Outcome"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf"
   }, {
     "@value" : "isOutcomeOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasPrimaryImpactArea",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasPotentialLoss",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has potential loss"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasPrimaryImpactArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2335,17 +3131,94 @@
     "@value" : "HSE risk assessment form."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has primary impact category"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasQuestion",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has projected gain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has projected reliability of gain"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has projected risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedRiskInChange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  }, {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has projected risk in change"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasQuestion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2357,22 +3230,22 @@
     "@value" : "A cube questionnaire has cube question."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf"
   }, {
     "@value" : "isQuestionOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Ademar"
@@ -2387,7 +3260,27 @@
     "@value" : "has related concept"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRisk",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasResidualRiskRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  }, {
+    "@language" : "en",
+    "@value" : "has residual risk rating"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2400,17 +3293,17 @@
     "@value" : "Links a risk assessment to a risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2423,17 +3316,17 @@
     "@value" : "Links a risk class with a specific colour."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has risk colour"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskColour"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskColour"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2446,17 +3339,17 @@
     "@value" : "Links risk to risk coordinator in risk assessment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has risk coordinator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Person"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2469,14 +3362,38 @@
     "@value" : "Use ICC (impact, cause, context) format when describing risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has risk description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskOwner",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskInChange",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has risk in change"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskOwner",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2485,17 +3402,17 @@
     "@value" : "2020-09-29T09:09:10+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has risk owner"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Person"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2503,17 +3420,14 @@
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@value" : "2020-09-22T09:53:21+00:00"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has risk rating"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasRiskStatus",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2526,17 +3440,17 @@
     "@value" : "Links a risk to its current status."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has risk status"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasStage",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2548,20 +3462,20 @@
     "@value" : "A project analysis has different phases."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has stage"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isStageOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isStageOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2573,20 +3487,20 @@
     "@value" : "Represents and links the subquestion of a question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has subquestion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#has_division",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2599,17 +3513,41 @@
     "@value" : "Links a risk assessment and a healthcare division."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has division"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#informant",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has viability"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#informant",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2626,7 +3564,7 @@
     "@value" : "informant"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2642,7 +3580,7 @@
     "@value" : "is answer of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isAspectOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2658,7 +3596,7 @@
     "@value" : "is aspect of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isContextOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isContextOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2674,7 +3612,7 @@
     "@value" : "is context of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isDimensionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2690,7 +3628,7 @@
     "@value" : "is dimension of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isEvidenceRuleOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2708,10 +3646,10 @@
     "@value" : "is evidence rule of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Answer"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isMechanismOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2727,7 +3665,7 @@
     "@value" : "is mechanism of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2743,7 +3681,26 @@
     "@value" : "is outcome of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2020-12-18T13:34:27+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to annotate a value, for example a risk, that is predicted or estimated."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is projected"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2760,7 +3717,7 @@
     "@value" : "is question of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isStageOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isStageOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2776,7 +3733,7 @@
     "@value" : "is stage of"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2788,24 +3745,42 @@
     "@value" : "Represents and links the subquestion of a question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is subquestion of"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Question"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#monitor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowViability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumViability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "monitor"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#name",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2818,21 +3793,21 @@
     "@value" : "Holds the full name of a person as a string."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Person"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "name"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#open",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#open",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "open"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#priority",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#priority",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2849,7 +3824,7 @@
     "@value" : "priority"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#probability",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@language" : "en",
@@ -2864,7 +3839,7 @@
     "@value" : "Defines the probability of a risk likelihood category."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2874,7 +3849,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#questionText",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2891,14 +3866,14 @@
     "@value" : "question text"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#red",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskColour" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#red",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskColour" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "red"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#reportTo",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#reportTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
@@ -2915,7 +3890,7 @@
     "@value" : "report to"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2928,33 +3903,14 @@
     "@value" : "Risk assesment identifier"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "unique ID number"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskDescription",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2020-09-29T09:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Desribes a risk in ICC (Impact, Cause, Context) format."
-  }, {
-    "@value" : "Rob Brennan"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Risk Description"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid68"
-  } ]
-}, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskSource",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#riskSource",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2967,14 +3923,14 @@
     "@value" : "The source from which the risk was identified e.g. Incident Management, Audit, Health and Safety Risk Assessment, Inspection Report, Complaint."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "risk source"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#riskType",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#riskType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2987,14 +3943,14 @@
     "@value" : "Links risk assessment with a risk type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "risk type"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#score",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -3014,7 +3970,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#signature",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#signature",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -3027,7 +3983,7 @@
     "@value" : "Used to hold a signature of the responsibel person in a risk assessment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#Person"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3037,7 +3993,7 @@
     "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#textualDescription",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -3047,7 +4003,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Used for trextual description of a risk impact or other type."
+    "@value" : "Used for textual description of a risk impact or other type."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3057,7 +4013,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://ark.adaptcentre.ie/Ontologies/ARKCube#version",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#version",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "yalemisew"
