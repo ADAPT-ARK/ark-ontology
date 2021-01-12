@@ -7,17 +7,23 @@
 @base <https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#> .
 
 <https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#> rdf:type owl:Ontology ;
+                                                               <http://purl.org/dc/terms/abstract> "Health terminologies used in ARK" ;
                                                                <http://purl.org/dc/terms/contributor> "Rob Brennan" ;
-                                                               <http://purl.org/dc/terms/description> "Health terminologies used in ARK." ;
-                                                               <http://purl.org/dc/terms/title> "ARK Health terminologies." ;
+                                                               <http://purl.org/dc/terms/description> "This ontology defines the health terminologies, taken from the HSE Integrated Risk Management Policy and the HSE Integrated Risk Management Framework, used in the ARK system" ;
+                                                               <http://purl.org/dc/terms/title> "ARK Health terminologies" ;
                                                                <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKHealthTerms" ;
-                                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#." ;
-                                                               rdfs:comment "Health terminologies used in ARK." ;
+                                                               <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#" ;
+                                                               rdfs:comment "Health terminologies used in ARK" ,
+                                                                            "This ontology defines the health terminologies, taken from the HSE Integrated Risk Management Policy and the HSE Integrated Risk Management Framework, used in the ARK system" ;
                                                                owl:versionInfo "0.1" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
@@ -70,6 +76,18 @@
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Accountability
+:Accountability rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "18/12/202" ;
+                <http://purl.org/dc/terms/creator> "Lucy" ;
+                <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                rdfs:comment "Being answerable to another person or organisation for decisions, behaviour and any consequences" ;
+                rdfs:label "Accountability" ;
+                <http://www.w3.org/2004/02/skos#definition> "Being answerable to another person or organisation for decisions, behaviour and any consequences" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Accountability" .
+
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ActionOwners
 :ActionOwners rdf:type owl:NamedIndividual ,
@@ -133,6 +151,18 @@
                     <http://www.w3.org/2004/02/skos#prefLabel> "Additional Controls" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#AdverseEvent
+:AdverseEvent rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "18/12/2020" ;
+              <http://purl.org/dc/terms/creator> "Lucy" ;
+              <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+              rdfs:comment "An incident which results in harm, which may or may not be the result of an error." ;
+              rdfs:label "Adverse event" ;
+              <http://www.w3.org/2004/02/skos#definition> "An incident which results in harm, which may or may not be the result of an error." ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Adverse event" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#AdversePublicityOrReputation
 :AdversePublicityOrReputation rdf:type owl:NamedIndividual ,
                                        <http://www.w3.org/2004/02/skos#Concept> ;
@@ -143,6 +173,18 @@
                               rdfs:label "Adverse Publicity/Reputation" ;
                               <http://www.w3.org/2004/02/skos#definition> "Adverse publicity in the media, loss of public confidence in a service or the organisation e.g. poor service performance." ;
                               <http://www.w3.org/2004/02/skos#prefLabel> "Adverse Publicity/Reputation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#AfterActionReview
+:AfterActionReview rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "18/12/2020" ;
+                   <http://purl.org/dc/terms/creator> "Lucy" ;
+                   <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                   rdfs:comment "An After Action Review (AAR) is a structured facilitated discussion of an event, the outcome of which enables the individuals involved in the event to understand why the outcome differed from that which was expected and what learning can be identified to assist improvement" ;
+                   rdfs:label "After Action Review" ;
+                   <http://www.w3.org/2004/02/skos#definition> "An After Action Review (AAR) is a structured facilitated discussion of an event, the outcome of which enables the individuals involved in the event to understand why the outcome differed from that which was expected and what learning can be identified to assist improvement" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "After Action Review" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Anticipate
@@ -157,15 +199,32 @@
             <http://www.w3.org/2004/02/skos#prefLabel> "Anticipate" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Apology
+:Apology rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos#Concept> ;
+         <http://purl.org/dc/terms/created> "18/12/2020" ;
+         <http://purl.org/dc/terms/creator> "Lucy" ;
+         <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+         rdfs:comment "“Apology”, in relation to an open disclosure of a patient safety incident, means an expression of sympathy or regret.(Civil Liability (Amendment) Act 2017)It is a genuine expression of being sorry for what has happened." ;
+         rdfs:label "Apology" ;
+         <http://www.w3.org/2004/02/skos#definition> "“Apology”, in relation to an open disclosure of a patient safety incident, means an expression of sympathy or regret.(Civil Liability (Amendment) Act 2017)It is a genuine expression of being sorry for what has happened." ;
+         <http://www.w3.org/2004/02/skos#prefLabel> "Apology" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Audit
 :Audit rdf:type owl:NamedIndividual ,
                 <http://www.w3.org/2004/02/skos#Concept> ;
        <http://purl.org/dc/terms/created> "07/09/2020" ,
-                                          "08/09/2020" ;
-       <http://purl.org/dc/terms/creator> "Rob" ;
-       <http://purl.org/dc/terms/source> "HSE Part 1" ,
+                                          "08/09/2020" ,
+                                          "18/12/2020" ;
+       <http://purl.org/dc/terms/creator> "Lucy" ,
+                                          "Rob" ;
+       <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ,
+                                         "HSE Part 1" ,
                                          "HSE Part 2" ;
+       rdfs:comment "The assessment of performance against any standards and criteria (clinical and non-clinical) in a health, mental health or social care service" ;
        rdfs:label "Audit" ;
+       <http://www.w3.org/2004/02/skos#definition> "The assessment of performance against any standards and criteria (clinical and non-clinical) in a health, mental health or social care service" ;
        <http://www.w3.org/2004/02/skos#prefLabel> "Audit" .
 
 
@@ -177,6 +236,18 @@
            <http://purl.org/dc/terms/source> "HSE Part 2" ;
            rdfs:label "Avoidance" ;
            <http://www.w3.org/2004/02/skos#prefLabel> "Avoidance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#BestPractices
+:BestPractices rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "18/12/2020" ;
+               <http://purl.org/dc/terms/creator> "Lucy" ;
+               <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+               rdfs:comment "Clinical, scientific or professional practices that are recognised by a majority of professionals in a particular field. These practices are typically evidence based and consensus-driven" ;
+               rdfs:label "Best Practices" ;
+               <http://www.w3.org/2004/02/skos#definition> "Clinical, scientific or professional practices that are recognised by a majority of professionals in a particular field. These practices are typically evidence based and consensus-driven" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Best Practices" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#BusinessContinuity
@@ -211,6 +282,42 @@
       <http://www.w3.org/2004/02/skos#prefLabel> "Care" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Category1Incident
+:Category1Incident rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "18/12/2020" ;
+                   <http://purl.org/dc/terms/creator> "Lucy" ;
+                   <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                   rdfs:comment "Clinical and non-clinical incidents rated as Major or Extreme as per the HSE’s Risk Impact Table" ;
+                   rdfs:label "Category 1 Incident" ;
+                   <http://www.w3.org/2004/02/skos#definition> "Clinical and non-clinical incidents rated as Major or Extreme as per the HSE’s Risk Impact Table" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Category 1 Incident" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Category2Incident
+:Category2Incident rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "18/12/2020" ;
+                   <http://purl.org/dc/terms/creator> "Lucy" ;
+                   <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                   rdfs:comment "Clinical and non-clinical incidents rated as Moderate as per the HSE’s Risk Impact Table" ;
+                   rdfs:label "Category 2 Incident" ;
+                   <http://www.w3.org/2004/02/skos#definition> "Clinical and non-clinical incidents rated as Moderate as per the HSE’s Risk Impact Table" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Category 2 Incident" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Category3Incident
+:Category3Incident rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "18/12/2020" ;
+                   <http://purl.org/dc/terms/creator> "Lucy" ;
+                   <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                   rdfs:comment "Clinical and non-clinical incidents rated as Minor or Negligible as per the HSE’s Risk Impact Table" ;
+                   rdfs:label "Category 3 Incident" ;
+                   <http://www.w3.org/2004/02/skos#definition> "Clinical and non-clinical incidents rated as Minor or Negligible as per the HSE’s Risk Impact Table" ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Category 3 Incident" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Claim
 :Claim rdf:type owl:NamedIndividual ,
                 <http://www.w3.org/2004/02/skos#Concept> ;
@@ -219,6 +326,30 @@
        <http://purl.org/dc/terms/source> "HSE Part 2" ;
        rdfs:label "Claim" ;
        <http://www.w3.org/2004/02/skos#prefLabel> "Claim" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ClinicalAudit
+:ClinicalAudit rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "18/12/2020" ;
+               <http://purl.org/dc/terms/creator> "Lucy" ;
+               <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+               rdfs:comment "A quality improvement process that seeks to improve care and outcomes through systematic review of care against explicit criteria and the implementation of change" ;
+               rdfs:label "Clinical audit" ;
+               <http://www.w3.org/2004/02/skos#definition> "A quality improvement process that seeks to improve care and outcomes through systematic review of care against explicit criteria and the implementation of change" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Clinical audit" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ClinicalGovernance
+:ClinicalGovernance rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                    rdfs:comment "A system through which service providers are accountable for continuously improving the quality of their clinical practice and safeguarding high standards of care by creating an environment in which excellence in clinical care will flourish. This includes mechanisms for monitoring clinical quality and safety through structured programmes, for example, clinical audit." ;
+                    rdfs:label "Clinical Governance" ;
+                    <http://www.w3.org/2004/02/skos#definition> "A system through which service providers are accountable for continuously improving the quality of their clinical practice and safeguarding high standards of care by creating an environment in which excellence in clinical care will flourish. This includes mechanisms for monitoring clinical quality and safety through structured programmes, for example, clinical audit." ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Clinical Governance" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ClosedStatus
@@ -271,14 +402,52 @@
                  <http://www.w3.org/2004/02/skos#prefLabel> "Community Health" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Competence
+:Competence rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "18/12/2020" ;
+            <http://purl.org/dc/terms/creator> "Lucy" ;
+            <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+            rdfs:comment "The knowledge, skills, abilities, behaviours, experience and expertise to be able to perform a particular task and activity." ;
+            rdfs:label "Competence" ;
+            <http://www.w3.org/2004/02/skos#definition> "The knowledge, skills, abilities, behaviours, experience and expertise to be able to perform a particular task and activity." ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Competence" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Complaint
 :Complaint rdf:type owl:NamedIndividual ,
                     <http://www.w3.org/2004/02/skos#Concept> ;
            <http://purl.org/dc/terms/created> "07/09/2020" ;
            <http://purl.org/dc/terms/creator> "Rob" ;
            <http://purl.org/dc/terms/source> "HSE Part 1" ;
+           rdfs:comment "The Health Act 2004 defines a complaint as:A complaint means a complaint made about any action of the Executive, or a Service Provider (see definition below) that, is claimed does not accord with fair or sound administration practice, adversely affects the person by whom, or on whose behalf, the complaint is made" ;
            rdfs:label "Complaint" ;
+           <http://www.w3.org/2004/02/skos#definition> "The Health Act 2004 defines a complaint as:A complaint means a complaint made about any action of the Executive, or a Service Provider (see definition below) that, is claimed does not accord with fair or sound administration practice, adversely affects the person by whom, or on whose behalf, the complaint is made" ;
            <http://www.w3.org/2004/02/skos#prefLabel> "Complaint" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ComplaintManager
+:ComplaintManager rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "18/12/2020" ;
+                  <http://purl.org/dc/terms/creator> "Lucy" ;
+                  <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                  rdfs:comment "A person delegated by their organisation for the purpose of championing the feedback management process, including the routine monitoring and review of same" ;
+                  rdfs:label "Complaint Manager" ;
+                  <http://www.w3.org/2004/02/skos#definition> "A person delegated by their organisation for the purpose of championing the feedback management process, including the routine monitoring and review of same" ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "Complaint Manager" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ComplaintsOfficer
+:ComplaintsOfficer rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "18/12/2020" ;
+                   <http://purl.org/dc/terms/creator> "Lucy" ;
+                   <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                   rdfs:comment "A person designated by the HSE for the purpose of dealing with complaints made to it in accordance with procedures established under section 49 (1) of the Health Act 2004 or a person designated by a service provider with whom the HSE has an arrangement under section 38 of the Health Act 2004 or given assistance under section 39 of the Health Act 2004." ;
+                   rdfs:label "Complaints Officer" ;
+                   <http://www.w3.org/2004/02/skos#definition> "A person designated by the HSE for the purpose of dealing with complaints made to it in accordance with procedures established under section 49 (1) of the Health Act 2004 or a person designated by a service provider with whom the HSE has an arrangement under section 38 of the Health Act 2004 or given assistance under section 39 of the Health Act 2004." ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Complaints Officer" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Compliance
@@ -291,6 +460,42 @@
             rdfs:label "Compliance" ;
             <http://www.w3.org/2004/02/skos#definition> "Failure to comply with HIQA/MHC standards, Codes of Practice or Conduct set by professional regulators, relevant legislation e.g. Safety, Health and Welfare at Work Act, Financial Regulations etc." ;
             <http://www.w3.org/2004/02/skos#prefLabel> "Compliance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ConcernsAndEnquiries
+:ConcernsAndEnquiries rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos#Concept> ;
+                      <http://purl.org/dc/terms/created> "18/12/2020" ;
+                      <http://purl.org/dc/terms/creator> "Lucy" ;
+                      <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                      rdfs:comment "A concern or enquiry is a problem raised that can be resolved/responded to straight away, (by the end of the next working day). These are not reported as complaints and fall outside the complaints management arrangements" ;
+                      rdfs:label "Concerns and Enquiries" ;
+                      <http://www.w3.org/2004/02/skos#definition> "A concern or enquiry is a problem raised that can be resolved/responded to straight away, (by the end of the next working day). These are not reported as complaints and fall outside the complaints management arrangements" ;
+                      <http://www.w3.org/2004/02/skos#prefLabel> "Concerns and Enquiries" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ConfidentialRecipient
+:ConfidentialRecipient rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "18/12/2020" ;
+                       <http://purl.org/dc/terms/creator> "Lucy" ;
+                       <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                       rdfs:comment "The Confidential Recipient is an independent person appointed by the HSE to receive concerns and allegations of abuse, negligence, mistreatment or poor care practices in HSE or HSE funded residential care facilities from patients, service users, relevant person(s), other concerned individuals and staff members" ;
+                       rdfs:label "Confidential Recipient" ;
+                       <http://www.w3.org/2004/02/skos#definition> "The Confidential Recipient is an independent person appointed by the HSE to receive concerns and allegations of abuse, negligence, mistreatment or poor care practices in HSE or HSE funded residential care facilities from patients, service users, relevant person(s), other concerned individuals and staff members" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Confidential Recipient" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ContributoryFactor
+:ContributoryFactor rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                    rdfs:comment "A circumstance, action or influence which is thought to have played a part in the origin or development of an incident or to increase the risk of an incident." ;
+                    rdfs:label "Contributory Factor" ;
+                    <http://www.w3.org/2004/02/skos#definition> "A circumstance, action or influence which is thought to have played a part in the origin or development of an incident or to increase the risk of an incident." ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Contributory Factor" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ControlStatus
@@ -309,8 +514,34 @@
          <http://purl.org/dc/terms/created> "07/09/2020" ;
          <http://purl.org/dc/terms/creator> "Rob" ;
          <http://purl.org/dc/terms/source> "HSE Part 1" ;
+         rdfs:comment "The shared attitudes, beliefs and values that define a group or groups of people and shape and influence perceptions and behaviours." ;
          rdfs:label "Culture" ;
+         <http://www.w3.org/2004/02/skos#definition> "The shared attitudes, beliefs and values that define a group or groups of people and shape and influence perceptions and behaviours." ;
          <http://www.w3.org/2004/02/skos#prefLabel> "Culture" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#DangerousOccurrences
+:DangerousOccurrences rdf:type owl:NamedIndividual ,
+                               <http://www.w3.org/2004/02/skos#Concept> ;
+                      <http://purl.org/dc/terms/created> "18/12/2020" ;
+                      <http://purl.org/dc/terms/creator> "Lucy" ;
+                      <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                      rdfs:comment "Dangerous occurrences may result from a sequence of events and circumstances involving a combination of unsafe acts, unsafe conditions, system failures, human factors and/or omissions. It most directly relates to the term ‘reportable circumstance’ as defined by the WHO (2009)" ;
+                      rdfs:label "DangerousOccurrences" ;
+                      <http://www.w3.org/2004/02/skos#definition> "Dangerous occurrences may result from a sequence of events and circumstances involving a combination of unsafe acts, unsafe conditions, system failures, human factors and/or omissions. It most directly relates to the term ‘reportable circumstance’ as defined by the WHO (2009)" ;
+                      <http://www.w3.org/2004/02/skos#prefLabel> "DangerousOccurrences" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Data
+:Data rdf:type owl:NamedIndividual ,
+               <http://www.w3.org/2004/02/skos#Concept> ;
+      <http://purl.org/dc/terms/created> "18/12/2020" ;
+      <http://purl.org/dc/terms/creator> "Lucy" ;
+      <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+      rdfs:comment "Data are numbers, symbols, words, images, graphics that have yet to be organised or analysed" ;
+      rdfs:label "Data" ;
+      <http://www.w3.org/2004/02/skos#definition> "Data are numbers, symbols, words, images, graphics that have yet to be organised or analysed" ;
+      <http://www.w3.org/2004/02/skos#prefLabel> "Data" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Directorate
@@ -333,6 +564,18 @@
                       <http://purl.org/dc/terms/source> "HSE Part 2" ;
                       rdfs:label "Education and Training" ;
                       <http://www.w3.org/2004/02/skos#prefLabel> "Education and Training" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Effective
+:Effective rdf:type owl:NamedIndividual ,
+                    <http://www.w3.org/2004/02/skos#Concept> ;
+           <http://purl.org/dc/terms/created> "18/12/2020" ;
+           <http://purl.org/dc/terms/creator> "Lucy" ;
+           <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+           rdfs:comment "A measure of the extent to which a specific intervention, procedure, treatment or service, when delivered, does what is intended for a specific population." ;
+           rdfs:label "Effective" ;
+           <http://www.w3.org/2004/02/skos#definition> "A measure of the extent to which a specific intervention, procedure, treatment or service, when delivered, does what is intended for a specific population." ;
+           <http://www.w3.org/2004/02/skos#prefLabel> "Effective" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Elimination
@@ -377,6 +620,18 @@
                        <http://www.w3.org/2004/02/skos#prefLabel> "Equipment and Resources" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Error
+:Error rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos#Concept> ;
+       <http://purl.org/dc/terms/created> "18/12/2020" ;
+       <http://purl.org/dc/terms/creator> "Lucy" ;
+       <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+       rdfs:comment "The failure of a planned action to be completed as intended or use of a wrong inappropriate or incorrect plan to achieve an aim." ;
+       rdfs:label "Error" ;
+       <http://www.w3.org/2004/02/skos#definition> "The failure of a planned action to be completed as intended or use of a wrong inappropriate or incorrect plan to achieve an aim." ;
+       <http://www.w3.org/2004/02/skos#prefLabel> "Error" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#EstablishingTheContext
 :EstablishingTheContext rdf:type owl:NamedIndividual ,
                                  <http://www.w3.org/2004/02/skos#Concept> ;
@@ -387,6 +642,30 @@
                         rdfs:label "Establish the Context" ;
                         <http://www.w3.org/2004/02/skos#definition> "Defining the external and internal parameters to be taken into account when managing risk, and setting the scope and risk criteria for the risk management policy." ;
                         <http://www.w3.org/2004/02/skos#prefLabel> "Establish the Context" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Evaluation
+:Evaluation rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "18/12/2020" ;
+            <http://purl.org/dc/terms/creator> "Lucy" ;
+            <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+            rdfs:comment "A formal process to determine the extent to which the planned or desired outcomes of an intervention are achieved." ;
+            rdfs:label "Evaluation" ;
+            <http://www.w3.org/2004/02/skos#definition> "A formal process to determine the extent to which the planned or desired outcomes of an intervention are achieved." ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Evaluation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Evidence
+:Evidence rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos#Concept> ;
+          <http://purl.org/dc/terms/created> "18/12/2020" ;
+          <http://purl.org/dc/terms/creator> "Lucy" ;
+          <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+          rdfs:comment "The consistent and systematic identification, analysis and selection of data and information to evaluate options and make decisions in relation to a specific question." ;
+          rdfs:label "Evidence" ;
+          <http://www.w3.org/2004/02/skos#definition> "The consistent and systematic identification, analysis and selection of data and information to evaluate options and make decisions in relation to a specific question." ;
+          <http://www.w3.org/2004/02/skos#prefLabel> "Evidence" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ExistingControlMeasures
@@ -459,6 +738,18 @@
             <http://www.w3.org/2004/02/skos#prefLabel> "Facilities" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#FairProceduresAndNaturalJustice
+:FairProceduresAndNaturalJustice rdf:type owl:NamedIndividual ,
+                                          <http://www.w3.org/2004/02/skos#Concept> ;
+                                 <http://purl.org/dc/terms/created> "18/12/2020" ;
+                                 <http://purl.org/dc/terms/creator> "Lucy" ;
+                                 <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                                 rdfs:comment "Natural justice is legal language for two ancient rules from the Romans who believed that some legal principles were self-evident and did not require a statutory basis.The first is a rule against bias and is known as “nemo iudex in causa sua”.It means that no person can judge a case in which they have an interest.The second rule “Audi alteram partem” means “hear the other side too”. It is most often used to refer to the principle that no person should be judged without a fair hearing in which each party is given the opportunity to respond to the evidence against them" ;
+                                 rdfs:label "Fair Procedures and Natural Justice" ;
+                                 <http://www.w3.org/2004/02/skos#definition> "Natural justice is legal language for two ancient rules from the Romans who believed that some legal principles were self-evident and did not require a statutory basis.The first is a rule against bias and is known as “nemo iudex in causa sua”.It means that no person can judge a case in which they have an interest.The second rule “Audi alteram partem” means “hear the other side too”. It is most often used to refer to the principle that no person should be judged without a fair hearing in which each party is given the opportunity to respond to the evidence against them" ;
+                                 <http://www.w3.org/2004/02/skos#prefLabel> "Fair Procedures and Natural Justice" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Finance
 :Finance rdf:type owl:NamedIndividual ,
                   <http://www.w3.org/2004/02/skos#Concept> ;
@@ -481,6 +772,18 @@
                <http://www.w3.org/2004/02/skos#prefLabel> "Financial Loss" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Findings
+:Findings rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos#Concept> ;
+          <http://purl.org/dc/terms/created> "18/12/2020" ;
+          <http://purl.org/dc/terms/creator> "Lucy" ;
+          <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+          rdfs:comment "1) Factors that, if corrected, would likely have prevented the incident or mitigated the harm;2) Factors that if corrected, would not have prevented the incident or mitigated the harm, but are important for patient/staff safety or safe patient care in general (incidental findings); and3) Mitigating factors – factors that did not allow the incident to have more serious consequences and represent solid safeguards that should be kept in place.(Ref: Canadian Incident Analysis Framework – Canadian Patient Safety Institute 2012)" ;
+          rdfs:label "Findings" ;
+          <http://www.w3.org/2004/02/skos#definition> "1) Factors that, if corrected, would likely have prevented the incident or mitigated the harm;2) Factors that if corrected, would not have prevented the incident or mitigated the harm, but are important for patient/staff safety or safe patient care in general (incidental findings); and3) Mitigating factors – factors that did not allow the incident to have more serious consequences and represent solid safeguards that should be kept in place.(Ref: Canadian Incident Analysis Framework – Canadian Patient Safety Institute 2012)" ;
+          <http://www.w3.org/2004/02/skos#prefLabel> "Findings" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HSAInvestigation
 :HSAInvestigation rdf:type owl:NamedIndividual ,
                            <http://www.w3.org/2004/02/skos#Concept> ;
@@ -489,16 +792,6 @@
                   <http://purl.org/dc/terms/source> "HSE Part 2" ;
                   rdfs:label "HSA Investigation" ;
                   <http://www.w3.org/2004/02/skos#prefLabel> "HSA Investigation" .
-
-
-###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HSEsIntegratedRiskManamgementPolicyAndGuidanceDocuments
-:HSEsIntegratedRiskManamgementPolicyAndGuidanceDocuments rdf:type owl:NamedIndividual ,
-                                                                  <http://www.w3.org/2004/02/skos#Concept> ;
-                                                         <http://purl.org/dc/terms/created> "07/09/2020" ;
-                                                         <http://purl.org/dc/terms/creator> "Rob" ;
-                                                         <http://purl.org/dc/terms/source> "HSE Part 1" ;
-                                                         rdfs:label "HSE's Integrated Risk Manamgement Policy and Guidance documents" ;
-                                                         <http://www.w3.org/2004/02/skos#prefLabel> "HSE's Integrated Risk Manamgement Policy and Guidance documents" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HarmToAPerson
@@ -551,6 +844,42 @@
                                <http://purl.org/dc/terms/source> "HSE Part 1" ;
                                rdfs:label "Health and Safety Risk Assessment" ;
                                <http://www.w3.org/2004/02/skos#prefLabel> "Health and Safety Risk Assessment" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HealthInformation
+:HealthInformation rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "18/12/2020" ;
+                   <http://purl.org/dc/terms/creator> "Lucy" ;
+                   <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                   rdfs:comment "Information, recorded in any form, which is created or communicated by an organisation or individual relating to the past, present or future, physical or mental health or social care of an individual (also referred to as a cohort). Health information also includes information relating to the management of the health care system." ;
+                   rdfs:label "Health Information" ;
+                   <http://www.w3.org/2004/02/skos#definition> "Information, recorded in any form, which is created or communicated by an organisation or individual relating to the past, present or future, physical or mental health or social care of an individual (also referred to as a cohort). Health information also includes information relating to the management of the health care system." ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Health Information" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HealthServiceProvider
+:HealthServiceProvider rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "18/12/2020" ;
+                       <http://purl.org/dc/terms/creator> "Lucy" ;
+                       <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                       rdfs:comment "(a) a person, other than a health practitioner, who provides one or more health services (b) a health practitioner who, or a partnership which, provides a health service and does not provide that health service for, or on behalf of, or through or in connection with (whether by reason of employment or otherwise), a person referred to in paragraph (a)" ;
+                       rdfs:label "Health Service Provider" ;
+                       <http://www.w3.org/2004/02/skos#definition> "(a) a person, other than a health practitioner, who provides one or more health services (b) a health practitioner who, or a partnership which, provides a health service and does not provide that health service for, or on behalf of, or through or in connection with (whether by reason of employment or otherwise), a person referred to in paragraph (a)" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Health Service Provider" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HumanFactors
+:HumanFactors rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "18/12/2020" ;
+              <http://purl.org/dc/terms/creator> "Lucy" ;
+              <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+              rdfs:comment "An understanding of human limitations, designing the workplace and the equipment healthcare providers use to allow for variability in humans and human performance." ;
+              rdfs:label "Human Factors" ;
+              <http://www.w3.org/2004/02/skos#definition> "An understanding of human limitations, designing the workplace and the equipment healthcare providers use to allow for variability in humans and human performance." ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Human Factors" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HumanResources
@@ -630,8 +959,10 @@
                    <http://www.w3.org/2004/02/skos#Concept> ;
           <http://purl.org/dc/terms/created> "08/09/2020" ;
           <http://purl.org/dc/terms/creator> "Rob" ;
-          <http://purl.org/dc/terms/source> "HSE Part 2" ;
+          <http://purl.org/dc/terms/source> "HSE Part 2/HSE Incident Management Framework/HSE Incident Management Framework - Guidance 2020" ;
+          rdfs:comment "An event or circumstance which could have, or did, lead to unintended and/or unnecessary harm. Incidents include adverse events which result in harm; near-misses which could have resulted in harm, but did not cause harm, either by chance or timely intervention; and staff or service user complaints which are associated with harm." ;
           rdfs:label "Incident" ;
+          <http://www.w3.org/2004/02/skos#definition> "An event or circumstance which could have, or did, lead to unintended and/or unnecessary harm. Incidents include adverse events which result in harm; near-misses which could have resulted in harm, but did not cause harm, either by chance or timely intervention; and staff or service user complaints which are associated with harm." ;
           <http://www.w3.org/2004/02/skos#prefLabel> "Incident" .
 
 
@@ -643,6 +974,42 @@
                     <http://purl.org/dc/terms/source> "HSE Part 1" ;
                     rdfs:label "Incident Management" ;
                     <http://www.w3.org/2004/02/skos#prefLabel> "Incident Management" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#IncidentReview
+:IncidentReview rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "18/12/2020" ;
+                <http://purl.org/dc/terms/creator> "Lucy" ;
+                <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                rdfs:comment "Incident review involves a structured analysis and is conducted using best practice methods, to determine what happened, how it happened, why it happened, and whether there are learning points for the service, wider organisation, or nationally" ;
+                rdfs:label "Incident Review" ;
+                <http://www.w3.org/2004/02/skos#definition> "Incident review involves a structured analysis and is conducted using best practice methods, to determine what happened, how it happened, why it happened, and whether there are learning points for the service, wider organisation, or nationally" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Incident Review" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#IncidentType
+:IncidentType rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/2004/02/skos#Concept> ;
+              <http://purl.org/dc/terms/created> "18/12/2020" ;
+              <http://purl.org/dc/terms/creator> "Lucy" ;
+              <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+              rdfs:comment "A descriptive term for a category made up of incidents of a common nature grouped because of shared, agreed features" ;
+              rdfs:label "Incident type" ;
+              <http://www.w3.org/2004/02/skos#definition> "A descriptive term for a category made up of incidents of a common nature grouped because of shared, agreed features" ;
+              <http://www.w3.org/2004/02/skos#prefLabel> "Incident type" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#IncidentalFindings
+:IncidentalFindings rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                    rdfs:comment "Issue(s) that arose in the process of delivering and managing health services identified during the course of a review which the reviewers consider did not impact on the outcomes but which serve to identify issues for system improvement e.g. issues relating to documentation, communications etc" ;
+                    rdfs:label "Incidental Findings" ;
+                    <http://www.w3.org/2004/02/skos#definition> "Issue(s) that arose in the process of delivering and managing health services identified during the course of a review which the reviewers consider did not impact on the outcomes but which serve to identify issues for system improvement e.g. issues relating to documentation, communications etc" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Incidental Findings" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InclusionOfNewRisks
@@ -695,6 +1062,18 @@
                   <http://www.w3.org/2004/02/skos#prefLabel> "Inspection Report" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#IntegratedRiskManagement
+:IntegratedRiskManagement rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos#Concept> ;
+                          <http://purl.org/dc/terms/created> "18/12/2020" ;
+                          <http://purl.org/dc/terms/creator> "Lucy" ;
+                          <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020" ;
+                          rdfs:comment "A continuous proactive and systematic process to understand, manage and communicate risk from an organisation-wide perspective." ;
+                          rdfs:label "Integrated Risk Management" ;
+                          <http://www.w3.org/2004/02/skos#definition> "A continuous proactive and systematic process to understand, manage and communicate risk from an organisation-wide perspective." ;
+                          <http://www.w3.org/2004/02/skos#prefLabel> "Integrated Risk Management" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#InternalAuditAndInspection
 :InternalAuditAndInspection rdf:type owl:NamedIndividual ,
                                      <http://www.w3.org/2004/02/skos#Concept> ;
@@ -723,6 +1102,18 @@
                        <http://purl.org/dc/terms/source> "HSE Part 2" ;
                        rdfs:label "Internal Investigation" ;
                        <http://www.w3.org/2004/02/skos#prefLabel> "Internal Investigation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#JustCulture
+:JustCulture rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "18/12/2020" ;
+             <http://purl.org/dc/terms/creator> "Lucy" ;
+             <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+             rdfs:comment "Just culture refers to a values based supportive model of shared accountability." ;
+             rdfs:label "Just Culture" ;
+             <http://www.w3.org/2004/02/skos#definition> "Just culture refers to a values based supportive model of shared accountability." ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Just Culture" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LeadershipAndGovernance
@@ -787,6 +1178,30 @@
              rdfs:label "Line Manager" ;
              <http://www.w3.org/2004/02/skos#definition> "A person with responsibility for directly managing individual employees or teams. In turn, they report to a higher level of management on the performance and well-being of the employees or teams they manage." ;
              <http://www.w3.org/2004/02/skos#prefLabel> "Line Manager" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LocalAccountableOfficer
+:LocalAccountableOfficer rdf:type owl:NamedIndividual ,
+                                  <http://www.w3.org/2004/02/skos#Concept> ;
+                         <http://purl.org/dc/terms/created> "18/12/2020" ;
+                         <http://purl.org/dc/terms/creator> "Lucy" ;
+                         <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                         rdfs:comment "This is the local manager who is responsible for the service in which the incident occurred e.g. ADON, Person in Charge, Business Manager, Clinical Lead" ;
+                         rdfs:label "Local Accountable Officer" ;
+                         <http://www.w3.org/2004/02/skos#definition> "This is the local manager who is responsible for the service in which the incident occurred e.g. ADON, Person in Charge, Business Manager, Clinical Lead" ;
+                         <http://www.w3.org/2004/02/skos#prefLabel> "Local Accountable Officer" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#LookBackReview
+:LookBackReview rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "18/12/2020" ;
+                <http://purl.org/dc/terms/creator> "Lucy" ;
+                <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                rdfs:comment "Review where a number of people may have been exposed to a specific hazard in order to identify if any of those exposed have been harmed and how to take care of them" ;
+                rdfs:label "Look Back Review" ;
+                <http://www.w3.org/2004/02/skos#definition> "Review where a number of people may have been exposed to a specific hazard in order to identify if any of those exposed have been harmed and how to take care of them" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Look Back Review" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ManagementPlan
@@ -875,6 +1290,30 @@
                <http://www.w3.org/2004/02/skos#prefLabel> "Monitor" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Monitoring
+:Monitoring rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "18/12/2020" ;
+            <http://purl.org/dc/terms/creator> "Lucy" ;
+            <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+            rdfs:comment "Systematic process of gathering information and tracking change over time. Monitoring provides a verification of progress towards achievement of objectives and goals" ;
+            rdfs:label "Monitoring" ;
+            <http://www.w3.org/2004/02/skos#definition> "Systematic process of gathering information and tracking change over time. Monitoring provides a verification of progress towards achievement of objectives and goals" ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "Monitoring" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#NationalIncidentReportingForm
+:NationalIncidentReportingForm rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos#Concept> ;
+                               <http://purl.org/dc/terms/created> "18/12/2020" ;
+                               <http://purl.org/dc/terms/creator> "Lucy" ;
+                               <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                               rdfs:comment "The National Incident Report Form (NIRF) was developed by the State Claims Agency in conjunction with all stakeholders including the HSE and voluntary hospitals. Use of a NIRF assures the accuracy of data and clarity of information being reported. There are four forms in total; Person, Property, Crash/Collision and Dangerous Occurrences/Reportable Circumstance i.e. Dangerous Occurrences/Reportable Circumstances." ;
+                               rdfs:label "National Incident Reporting Form" ;
+                               <http://www.w3.org/2004/02/skos#definition> "The National Incident Report Form (NIRF) was developed by the State Claims Agency in conjunction with all stakeholders including the HSE and voluntary hospitals. Use of a NIRF assures the accuracy of data and clarity of information being reported. There are four forms in total; Person, Property, Crash/Collision and Dangerous Occurrences/Reportable Circumstance i.e. Dangerous Occurrences/Reportable Circumstances." ;
+                               <http://www.w3.org/2004/02/skos#prefLabel> "National Incident Reporting Form" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#NationalSurvey
 :NationalSurvey rdf:type owl:NamedIndividual ,
                          <http://www.w3.org/2004/02/skos#Concept> ;
@@ -883,6 +1322,30 @@
                 <http://purl.org/dc/terms/source> "HSE Part 2" ;
                 rdfs:label "National Survey" ;
                 <http://www.w3.org/2004/02/skos#prefLabel> "National Survey" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#NearMiss
+:NearMiss rdf:type owl:NamedIndividual ,
+                   <http://www.w3.org/2004/02/skos#Concept> ;
+          <http://purl.org/dc/terms/created> "18/12/2020" ;
+          <http://purl.org/dc/terms/creator> "Lucy" ;
+          <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+          rdfs:comment "An incident that was prevented from occurring due to timely intervention or chance and which there are reasonable grounds for believing could have resulted, if it had not been so prevented, in unintended or unanticipated injury or harm to a service user during the provision of a health service to that service user.(National Standards for the Conduct of Reviews of Patient Safety Incidents)" ;
+          rdfs:label "Near Miss" ;
+          <http://www.w3.org/2004/02/skos#definition> "An incident that was prevented from occurring due to timely intervention or chance and which there are reasonable grounds for believing could have resulted, if it had not been so prevented, in unintended or unanticipated injury or harm to a service user during the provision of a health service to that service user.(National Standards for the Conduct of Reviews of Patient Safety Incidents)" ;
+          <http://www.w3.org/2004/02/skos#prefLabel> "Near Miss" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#NoHarmIncident
+:NoHarmIncident rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "18/12/2020" ;
+                <http://purl.org/dc/terms/creator> "Lucy" ;
+                <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                rdfs:comment "An incident occurs which reaches the service user but results in no injury to the service user. Harm is avoided by chance or because of mitigating circumstances." ;
+                rdfs:label "No Harm Incident" ;
+                <http://www.w3.org/2004/02/skos#definition> "An incident occurs which reaches the service user but results in no injury to the service user. Harm is avoided by chance or because of mitigating circumstances." ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "No Harm Incident" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ObjectivesAndProjects
@@ -905,6 +1368,18 @@
                  <http://purl.org/dc/terms/source> "HSE Part 2" ;
                  rdfs:label "Ombudsman Report" ;
                  <http://www.w3.org/2004/02/skos#prefLabel> "Ombudsman Report" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#OpenDisclosure
+:OpenDisclosure rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "18/12/2020" ;
+                <http://purl.org/dc/terms/creator> "Lucy" ;
+                <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                rdfs:comment "Open disclosure is defined as an open, consistent, compassionate and timely approach to communicating with patients and, where appropriate, their relevant person following patient safety incidents. It includes expressing regret for what has happened, keeping the patient informed and providing reassurance in relation to on-going care and treatment, learning and the steps being taken by the health services provider to try to prevent a recurrence of the incident. (HSE 2019)" ;
+                rdfs:label "Open Disclosure" ;
+                <http://www.w3.org/2004/02/skos#definition> "Open disclosure is defined as an open, consistent, compassionate and timely approach to communicating with patients and, where appropriate, their relevant person following patient safety incidents. It includes expressing regret for what has happened, keeping the patient informed and providing reassurance in relation to on-going care and treatment, learning and the steps being taken by the health services provider to try to prevent a recurrence of the incident. (HSE 2019)" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Open Disclosure" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#OpenStatus
@@ -949,6 +1424,42 @@
                        <http://www.w3.org/2004/02/skos#prefLabel> "Organisational Context" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PatientSafety
+:PatientSafety rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "18/12/2020" ;
+               <http://purl.org/dc/terms/creator> "Lucy" ;
+               <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+               rdfs:comment "The term used nationally and internationally to describe the freedom from unnecessary harm or potential harm associated with healthcare services and the reduction of risk of unnecessary harm to an acceptable minimum (World Health Organisation, 2009). Where the term patient is used to describe ‘patient safety incident’, ‘quality and patient safety committees’ or ‘patient safety data’, it is intended to encompass all definitions of people who use health (including mental health) care services e.g. service users in both acute and community health care settings" ;
+               rdfs:label "Patient Safety" ;
+               <http://www.w3.org/2004/02/skos#definition> "The term used nationally and internationally to describe the freedom from unnecessary harm or potential harm associated with healthcare services and the reduction of risk of unnecessary harm to an acceptable minimum (World Health Organisation, 2009). Where the term patient is used to describe ‘patient safety incident’, ‘quality and patient safety committees’ or ‘patient safety data’, it is intended to encompass all definitions of people who use health (including mental health) care services e.g. service users in both acute and community health care settings" ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Patient Safety" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PatientSafetyData
+:PatientSafetyData rdf:type owl:NamedIndividual ,
+                            <http://www.w3.org/2004/02/skos#Concept> ;
+                   <http://purl.org/dc/terms/created> "18/12/2020" ;
+                   <http://purl.org/dc/terms/creator> "Lucy" ;
+                   <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                   rdfs:comment "The broad and heterogeneous information that includes, but is not limited to, the description of incidents with medical errors or near misses, their causes, the follow-up corrective actions, interventions that reduce future risk, and patient safety hazards." ;
+                   rdfs:label "Patient safety data" ;
+                   <http://www.w3.org/2004/02/skos#definition> "The broad and heterogeneous information that includes, but is not limited to, the description of incidents with medical errors or near misses, their causes, the follow-up corrective actions, interventions that reduce future risk, and patient safety hazards." ;
+                   <http://www.w3.org/2004/02/skos#prefLabel> "Patient safety data" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PatientSafetyIncident
+:PatientSafetyIncident rdf:type owl:NamedIndividual ,
+                                <http://www.w3.org/2004/02/skos#Concept> ;
+                       <http://purl.org/dc/terms/created> "18/12/2020" ;
+                       <http://purl.org/dc/terms/creator> "Lucy" ;
+                       <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020" ;
+                       rdfs:comment "A patient safety incident, in relation to the provision of a health service to a patient by a health services provider, means “an incident which occurs during the course of the provision of a health service”" ;
+                       rdfs:label "Patient Safety Incident" ;
+                       <http://www.w3.org/2004/02/skos#definition> "A patient safety incident, in relation to the provision of a health service to a patient by a health services provider, means “an incident which occurs during the course of the provision of a health service”" ;
+                       <http://www.w3.org/2004/02/skos#prefLabel> "Patient Safety Incident" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PerformanceMonitoring
 :PerformanceMonitoring rdf:type owl:NamedIndividual ,
                                 <http://www.w3.org/2004/02/skos#Concept> ;
@@ -957,6 +1468,30 @@
                        <http://purl.org/dc/terms/source> "HSE Part 2" ;
                        rdfs:label "Performance Monitoring" ;
                        <http://www.w3.org/2004/02/skos#prefLabel> "Performance Monitoring" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Person
+:Person rdf:type owl:NamedIndividual ,
+                 <http://www.w3.org/2004/02/skos#Concept> ;
+        <http://purl.org/dc/terms/created> "18/12/2020" ;
+        <http://purl.org/dc/terms/creator> "Lucy" ;
+        <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+        rdfs:comment "This refers to individual people e.g. service users, patients, members of staff, carers, relevant person(s) and visitors" ;
+        rdfs:label "Person" ;
+        <http://www.w3.org/2004/02/skos#definition> "This refers to individual people e.g. service users, patients, members of staff, carers, relevant person(s) and visitors" ;
+        <http://www.w3.org/2004/02/skos#prefLabel> "Person" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PersonAffected
+:PersonAffected rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "18/12/2020" ;
+                <http://purl.org/dc/terms/creator> "Lucy" ;
+                <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                rdfs:comment "This refers to individual people e.g. service users, patients, employees, carers, relevant persons and visitors that may be affected as a consequence of an incident occurring. Persons can be affected either directly or indirectly." ;
+                rdfs:label "Person Affected" ;
+                <http://www.w3.org/2004/02/skos#definition> "This refers to individual people e.g. service users, patients, employees, carers, relevant persons and visitors that may be affected as a consequence of an incident occurring. Persons can be affected either directly or indirectly." ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Person Affected" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#PhysicalEnvironment
@@ -1019,6 +1554,42 @@
              rdfs:label "Project Risk" ;
              <http://www.w3.org/2004/02/skos#definition> "Project risks relate to the achievement and delivery of the project objectives and outcomes. The majority of project risks are short term in nature and exist for the term of the project, whilst some will be on-going and re-classified at the end of the project. Projects can be defined as temporary, with the aim of delivering outcomes within a specified timeframe." ;
              <http://www.w3.org/2004/02/skos#prefLabel> "Project Risk" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ProtectedDisclosure
+:ProtectedDisclosure rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos#Concept> ;
+                     <http://purl.org/dc/terms/created> "18/12/2020" ;
+                     <http://purl.org/dc/terms/creator> "Lucy" ;
+                     <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                     rdfs:comment "Protected Disclosure describes a procedure where staff members have reasonable grounds for believing that the health or welfare of patients/clients or the public may be put at risk, or where there is waste of public funds or legal obligations are not being met, can report these so that the matter can be investigated. The Protected Disclosures of Information as provided for in the Health Act 2004 (as amended by the Health Act 2007) legislation also provides statutory protection for health service staff from penalisation as a result of making a protected disclosure in accordance with this procedure." ;
+                     rdfs:label "Protected Disclosure" ;
+                     <http://www.w3.org/2004/02/skos#definition> "Protected Disclosure describes a procedure where staff members have reasonable grounds for believing that the health or welfare of patients/clients or the public may be put at risk, or where there is waste of public funds or legal obligations are not being met, can report these so that the matter can be investigated. The Protected Disclosures of Information as provided for in the Health Act 2004 (as amended by the Health Act 2007) legislation also provides statutory protection for health service staff from penalisation as a result of making a protected disclosure in accordance with this procedure." ;
+                     <http://www.w3.org/2004/02/skos#prefLabel> "Protected Disclosure" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Pseudonymisation
+:Pseudonymisation rdf:type owl:NamedIndividual ,
+                           <http://www.w3.org/2004/02/skos#Concept> ;
+                  <http://purl.org/dc/terms/created> "18/12/2020" ;
+                  <http://purl.org/dc/terms/creator> "Lucy" ;
+                  <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                  rdfs:comment "Replacing any identifying characteristics of data with a pseudonym, or, in other words, a value which does not allow the data subject to be directly identified.Ref. Guidance Note: Guidance on Anonymisation and Pseudonymisation. Data Protection Commission. June 2019" ;
+                  rdfs:label "Pseudonymisation" ;
+                  <http://www.w3.org/2004/02/skos#definition> "Replacing any identifying characteristics of data with a pseudonym, or, in other words, a value which does not allow the data subject to be directly identified.Ref. Guidance Note: Guidance on Anonymisation and Pseudonymisation. Data Protection Commission. June 2019" ;
+                  <http://www.w3.org/2004/02/skos#prefLabel> "Pseudonymisation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#QPSAdvisor
+:QPSAdvisor rdf:type owl:NamedIndividual ,
+                     <http://www.w3.org/2004/02/skos#Concept> ;
+            <http://purl.org/dc/terms/created> "18/12/2020" ;
+            <http://purl.org/dc/terms/creator> "Lucy" ;
+            <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+            rdfs:comment "For consistency purposes this term is used throughout the document to refer to the person whose role it is to advise and support a service in relation to their Quality and Patient Safety processes and response. It is noted that the title given to this role can vary between services e.g. Quality & Safety Manager, Quality, Risk and Safety Manager etc" ;
+            rdfs:label "QPS Advisor" ;
+            <http://www.w3.org/2004/02/skos#definition> "For consistency purposes this term is used throughout the document to refer to the person whose role it is to advise and support a service in relation to their Quality and Patient Safety processes and response. It is noted that the title given to this role can vary between services e.g. Quality & Safety Manager, Quality, Risk and Safety Manager etc" ;
+            <http://www.w3.org/2004/02/skos#prefLabel> "QPS Advisor" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#QualityPatientSafety-RiskManager-Advisors
@@ -1101,6 +1672,30 @@
                          <http://www.w3.org/2004/02/skos#prefLabel> "Regulatory Investigation" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#RelevantPerson
+:RelevantPerson rdf:type owl:NamedIndividual ,
+                         <http://www.w3.org/2004/02/skos#Concept> ;
+                <http://purl.org/dc/terms/created> "18/12/2020" ;
+                <http://purl.org/dc/terms/creator> "Lucy" ;
+                <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020" ;
+                rdfs:comment "“Relevant person”, in relation to a patient, means a person;(a) who is;(i) a parent, guardian, son or daughter,(ii) a spouse, or(iii) a civil partner of the patient,(b) who is cohabiting with the patientor(c) whom the patient has nominated in writing to the health services provider as a person to whom clinical information in relation to the patient may be disclosed(Civil Liability (Amendment) Act 2017)" ;
+                rdfs:label "Relevant Person" ;
+                <http://www.w3.org/2004/02/skos#definition> "“Relevant person”, in relation to a patient, means a person;(a) who is;(i) a parent, guardian, son or daughter,(ii) a spouse, or(iii) a civil partner of the patient,(b) who is cohabiting with the patientor(c) whom the patient has nominated in writing to the health services provider as a person to whom clinical information in relation to the patient may be disclosed(Civil Liability (Amendment) Act 2017)" ;
+                <http://www.w3.org/2004/02/skos#prefLabel> "Relevant Person" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ReportableCircumstance
+:ReportableCircumstance rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos#Concept> ;
+                        <http://purl.org/dc/terms/created> "18/12/2020" ;
+                        <http://purl.org/dc/terms/creator> "Lucy" ;
+                        <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                        rdfs:comment "A situation in which there was significant potential for harm, but no incident occurred. (WHO Conceptual Framework for the International Classification for Patient Safety 2009)." ;
+                        rdfs:label "Reportable Circumstance" ;
+                        <http://www.w3.org/2004/02/skos#definition> "A situation in which there was significant potential for harm, but no incident occurred. (WHO Conceptual Framework for the International Classification for Patient Safety 2009)." ;
+                        <http://www.w3.org/2004/02/skos#prefLabel> "Reportable Circumstance" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Research
 :Research rdf:type owl:NamedIndividual ,
                    <http://www.w3.org/2004/02/skos#Concept> ;
@@ -1143,6 +1738,18 @@
         <http://purl.org/dc/terms/source> "HSE Part 2" ;
         rdfs:label "Review" ;
         <http://www.w3.org/2004/02/skos#prefLabel> "Review" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ReviewCommissioner
+:ReviewCommissioner rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                    rdfs:comment "The person who commissions an incident review. For Category 1 incidents it is the Senior Accountable Officer (SAO) or person who has a direct reporting relationship to the SAO. For Category 2 incidents it is the Local Accountable Officer." ;
+                    rdfs:label "Review Commissioner" ;
+                    <http://www.w3.org/2004/02/skos#definition> "The person who commissions an incident review. For Category 1 incidents it is the Senior Accountable Officer (SAO) or person who has a direct reporting relationship to the SAO. For Category 2 incidents it is the Local Accountable Officer." ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Review Commissioner" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Risk-QPSAdvisors
@@ -1340,10 +1947,10 @@
                                 <http://www.w3.org/2004/02/skos#Concept> ;
                        <http://purl.org/dc/terms/created> "07/09/2020" ;
                        <http://purl.org/dc/terms/creator> "Rob" ;
-                       <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009" ;
-                       rdfs:comment "sameAs" ;
+                       <http://purl.org/dc/terms/source> "HSE Part 1/ISO 31000:2009, HSE Incident Management Framework - Guidance 2020" ;
+                       rdfs:comment "The systematic application of management policies, policies and practices to the activities of communicating, consulting, establishing the context, and identifying, analysing, evaluating, treating, monitoring and reviewing risk" ;
                        rdfs:label "Risk Management Process" ;
-                       <http://www.w3.org/2004/02/skos#definition> "sameAs" ;
+                       <http://www.w3.org/2004/02/skos#definition> "The systematic application of management policies, policies and practices to the activities of communicating, consulting, establishing the context, and identifying, analysing, evaluating, treating, monitoring and reviewing risk" ;
                        <http://www.w3.org/2004/02/skos#prefLabel> "Risk Management Process" .
 
 
@@ -1479,6 +2086,18 @@
              <http://www.w3.org/2004/02/skos#prefLabel> "Safety Alert" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SafetyCulture
+:SafetyCulture rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/2004/02/skos#Concept> ;
+               <http://purl.org/dc/terms/created> "18/12/2020" ;
+               <http://purl.org/dc/terms/creator> "Lucy" ;
+               <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+               rdfs:comment "An integrated pattern of individual and organisational behaviour, based upon shared beliefs and values, which continuously seeks to minimise service user harm which may result from the processes of care delivery." ;
+               rdfs:label "Safety culture" ;
+               <http://www.w3.org/2004/02/skos#definition> "An integrated pattern of individual and organisational behaviour, based upon shared beliefs and values, which continuously seeks to minimise service user harm which may result from the processes of care delivery." ;
+               <http://www.w3.org/2004/02/skos#prefLabel> "Safety culture" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SafetyElements
 :SafetyElements rdf:type owl:NamedIndividual ,
                          <http://www.w3.org/2004/02/skos#Concept> ;
@@ -1499,6 +2118,18 @@
                  <http://www.w3.org/2004/02/skos#prefLabel> "Secondary Impact" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SeniorAccountableOfficer
+:SeniorAccountableOfficer rdf:type owl:NamedIndividual ,
+                                   <http://www.w3.org/2004/02/skos#Concept> ;
+                          <http://purl.org/dc/terms/created> "18/12/2020" ;
+                          <http://purl.org/dc/terms/creator> "Lucy" ;
+                          <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                          rdfs:comment "n the context of the management of an incident, the Senior Accountable Officer is the person who has ultimate accountability and responsibility for the services within the area where the incident occurred. In a hospital group it would be a person with delegated responsibility for a service and reporting directly to the Hospital Group CEO, e.g. a hospital manager or the person delegated with overall responsibility for the management of a clinical directorate or service, in a CHO it could be the Head of Service and in the case of the NAS, it could be the NAS corporate area manager" ;
+                          rdfs:label "Senior Accountable Officer" ;
+                          <http://www.w3.org/2004/02/skos#definition> "n the context of the management of an incident, the Senior Accountable Officer is the person who has ultimate accountability and responsibility for the services within the area where the incident occurred. In a hospital group it would be a person with delegated responsibility for a service and reporting directly to the Hospital Group CEO, e.g. a hospital manager or the person delegated with overall responsibility for the management of a clinical directorate or service, in a CHO it could be the Head of Service and in the case of the NAS, it could be the NAS corporate area manager" ;
+                          <http://www.w3.org/2004/02/skos#prefLabel> "Senior Accountable Officer" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SeniorManager
 :SeniorManager rdf:type owl:NamedIndividual ,
                         <http://www.w3.org/2004/02/skos#Concept> ;
@@ -1507,6 +2138,42 @@
                <http://purl.org/dc/terms/source> "HSE Part 3" ;
                rdfs:label "Senior Manager" ;
                <http://www.w3.org/2004/02/skos#prefLabel> "Senior Manager" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SeriousIncidentManagementTeam
+:SeriousIncidentManagementTeam rdf:type owl:NamedIndividual ,
+                                        <http://www.w3.org/2004/02/skos#Concept> ;
+                               <http://purl.org/dc/terms/created> "18/12/2020" ;
+                               <http://purl.org/dc/terms/creator> "Lucy" ;
+                               <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020" ;
+                               rdfs:comment "A Serious Incident Management Team is a group whose role it is to oversee the management of all serious incidents relating to the service. It is also convened following notification of a Category 1 incident. It is chaired by the Senior Accountable Officer (SAO) or a person nominated by the SAO who has a direct reporting relationship to the SAO. Decisions in relation to the review of Category 1 incidents must be made within one working week of notification of the incident to the SAO" ;
+                               rdfs:label "Serious Incident Management Team" ;
+                               <http://www.w3.org/2004/02/skos#definition> "A Serious Incident Management Team is a group whose role it is to oversee the management of all serious incidents relating to the service. It is also convened following notification of a Category 1 incident. It is chaired by the Senior Accountable Officer (SAO) or a person nominated by the SAO who has a direct reporting relationship to the SAO. Decisions in relation to the review of Category 1 incidents must be made within one working week of notification of the incident to the SAO" ;
+                               <http://www.w3.org/2004/02/skos#prefLabel> "Serious Incident Management Team" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SeriousReportableEvent
+:SeriousReportableEvent rdf:type owl:NamedIndividual ,
+                                 <http://www.w3.org/2004/02/skos#Concept> ;
+                        <http://purl.org/dc/terms/created> "18/12/2020" ;
+                        <http://purl.org/dc/terms/creator> "Lucy" ;
+                        <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                        rdfs:comment "Serious Reportable Events (SREs) are a defined subset of incidents which are either serious or that should not occur if the available preventative measures have been effectively implemented by healthcare providers. Serious Reportable Events are mandatorily reportable by services to the Senior Accountable Officer." ;
+                        rdfs:label "Serious Reportable Event" ;
+                        <http://www.w3.org/2004/02/skos#definition> "Serious Reportable Events (SREs) are a defined subset of incidents which are either serious or that should not occur if the available preventative measures have been effectively implemented by healthcare providers. Serious Reportable Events are mandatorily reportable by services to the Senior Accountable Officer." ;
+                        <http://www.w3.org/2004/02/skos#prefLabel> "Serious Reportable Event" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Service
+:Service rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/2004/02/skos#Concept> ;
+         <http://purl.org/dc/terms/created> "18/12/2020" ;
+         <http://purl.org/dc/terms/creator> "Lucy" ;
+         <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+         rdfs:comment "Please note that the term “service” as used throughout these guidelines refers to services provided by a Health Services Provider (as defined in the CLA 2017)." ;
+         rdfs:label "Service" ;
+         <http://www.w3.org/2004/02/skos#definition> "Please note that the term “service” as used throughout these guidelines refers to services provided by a Health Services Provider (as defined in the CLA 2017)." ;
+         <http://www.w3.org/2004/02/skos#prefLabel> "Service" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceContext
@@ -1549,6 +2216,30 @@
              <http://www.w3.org/2004/02/skos#prefLabel> "Service Plan" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceProvider
+:ServiceProvider rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "18/12/2020" ;
+                 <http://purl.org/dc/terms/creator> "Lucy" ;
+                 <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                 rdfs:comment "(External to HSE) Part 7, Section 38 of the Health Act 2004 defines a Service Provider as a person with whom the Executive enters into an arrangement for the provision of a health or personal social service on behalf of the Executive, e.g. Nursing Homes, non-statutory Residential/Respite Homes/Centres etc." ;
+                 rdfs:label "Service Provider" ;
+                 <http://www.w3.org/2004/02/skos#definition> "(External to HSE) Part 7, Section 38 of the Health Act 2004 defines a Service Provider as a person with whom the Executive enters into an arrangement for the provision of a health or personal social service on behalf of the Executive, e.g. Nursing Homes, non-statutory Residential/Respite Homes/Centres etc." ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Service Provider" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceUser
+:ServiceUser rdf:type owl:NamedIndividual ,
+                      <http://www.w3.org/2004/02/skos#Concept> ;
+             <http://purl.org/dc/terms/created> "18/12/2020" ;
+             <http://purl.org/dc/terms/creator> "Lucy" ;
+             <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+             rdfs:comment "The term “service user” in relation to a health services provider means a person to whom a health service is, or has been, provided" ;
+             rdfs:label "Service User" ;
+             <http://www.w3.org/2004/02/skos#definition> "The term “service user” in relation to a health services provider means a person to whom a health service is, or has been, provided" ;
+             <http://www.w3.org/2004/02/skos#prefLabel> "Service User" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceUserConsultation
 :ServiceUserConsultation rdf:type owl:NamedIndividual ,
                                   <http://www.w3.org/2004/02/skos#Concept> ;
@@ -1557,6 +2248,18 @@
                          <http://purl.org/dc/terms/source> "HSE Part 2" ;
                          rdfs:label "Service User Consultation" ;
                          <http://www.w3.org/2004/02/skos#prefLabel> "Service User Consultation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceUserDesignatedSupportPerson
+:ServiceUserDesignatedSupportPerson rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/2004/02/skos#Concept> ;
+                                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020" ;
+                                    rdfs:comment "This person is a contact point for the service user/relevant person(s) impacted by an incident." ;
+                                    rdfs:label "Service User Designated Support Person" ;
+                                    <http://www.w3.org/2004/02/skos#definition> "This person is a contact point for the service user/relevant person(s) impacted by an incident." ;
+                                    <http://www.w3.org/2004/02/skos#prefLabel> "Service User Designated Support Person" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#ServiceUserExperience
@@ -1603,6 +2306,18 @@
                           <http://www.w3.org/2004/02/skos#prefLabel> "Sources of Risk Information" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Staff
+:Staff rdf:type owl:NamedIndividual ,
+                <http://www.w3.org/2004/02/skos#Concept> ;
+       <http://purl.org/dc/terms/created> "18/12/2020" ;
+       <http://purl.org/dc/terms/creator> "Lucy" ;
+       <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+       rdfs:comment "(a) a person who(i) has entered into, or works under (or where the employment has ceased, had entered into or worked under), a contract of employment, with the health services provider, or(ii) is (or was) placed for the purpose of vocational training with the health services provider, and(b) a fixed-term employee of the health services provider, and a reference to an employee, in relation to a health services provider, shall be construed as a reference to an employee employed by that health services provider.In line with the definition of Employee as defined in the (Civil Liability Amendment Act, 2017)" ;
+       rdfs:label "Staff" ;
+       <http://www.w3.org/2004/02/skos#definition> "(a) a person who(i) has entered into, or works under (or where the employment has ceased, had entered into or worked under), a contract of employment, with the health services provider, or(ii) is (or was) placed for the purpose of vocational training with the health services provider, and(b) a fixed-term employee of the health services provider, and a reference to an employee, in relation to a health services provider, shall be construed as a reference to an employee employed by that health services provider.In line with the definition of Employee as defined in the (Civil Liability Amendment Act, 2017)" ;
+       <http://www.w3.org/2004/02/skos#prefLabel> "Staff" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#StaffConsultation
 :StaffConsultation rdf:type owl:NamedIndividual ,
                             <http://www.w3.org/2004/02/skos#Concept> ;
@@ -1611,6 +2326,18 @@
                    <http://purl.org/dc/terms/source> "HSE Part 2" ;
                    rdfs:label "Staff Consultation" ;
                    <http://www.w3.org/2004/02/skos#prefLabel> "Staff Consultation" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#StaffLiaisonPerson
+:StaffLiaisonPerson rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                    rdfs:comment "This person is a contact point at service delivery level for the staff member involved in an incident." ;
+                    rdfs:label "Staff Liaison Person" ;
+                    <http://www.w3.org/2004/02/skos#definition> "This person is a contact point at service delivery level for the staff member involved in an incident." ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Staff Liaison Person" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Stakeholders
@@ -1633,6 +2360,18 @@
            <http://www.w3.org/2004/02/skos#prefLabel> "Standards" .
 
 
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#StatementOfFindings
+:StatementOfFindings rdf:type owl:NamedIndividual ,
+                              <http://www.w3.org/2004/02/skos#Concept> ;
+                     <http://purl.org/dc/terms/created> "18/12/2020" ;
+                     <http://purl.org/dc/terms/creator> "Lucy" ;
+                     <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                     rdfs:comment "Statements which describe the relationships between the contributing factors and the incident and/or outcome. (See definition of Findings above)." ;
+                     rdfs:label "Statement of Findings" ;
+                     <http://www.w3.org/2004/02/skos#definition> "Statements which describe the relationships between the contributing factors and the incident and/or outcome. (See definition of Findings above)." ;
+                     <http://www.w3.org/2004/02/skos#prefLabel> "Statement of Findings" .
+
+
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#StrategicObjectives
 :StrategicObjectives rdf:type owl:NamedIndividual ,
                               <http://www.w3.org/2004/02/skos#Concept> ;
@@ -1653,6 +2392,30 @@
                rdfs:label "Strategic Risk" ;
                <http://www.w3.org/2004/02/skos#definition> "A strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan." ;
                <http://www.w3.org/2004/02/skos#prefLabel> "Strategic Risk" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SuspectedHarmEvent
+:SuspectedHarmEvent rdf:type owl:NamedIndividual ,
+                             <http://www.w3.org/2004/02/skos#Concept> ;
+                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                    rdfs:comment "A suspected harm event is an incident which is an event or circumstance which could have or did lead to unintended and/or unnecessary harm (WHO)" ;
+                    rdfs:label "Suspected Harm Event" ;
+                    <http://www.w3.org/2004/02/skos#definition> "A suspected harm event is an incident which is an event or circumstance which could have or did lead to unintended and/or unnecessary harm (WHO)" ;
+                    <http://www.w3.org/2004/02/skos#prefLabel> "Suspected Harm Event" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#SystemsAnalysis
+:SystemsAnalysis rdf:type owl:NamedIndividual ,
+                          <http://www.w3.org/2004/02/skos#Concept> ;
+                 <http://purl.org/dc/terms/created> "18/12/2020" ;
+                 <http://purl.org/dc/terms/creator> "Lucy" ;
+                 <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020" ;
+                 rdfs:comment "A methodical review of an incident which involves the collection of data from the literature, records (general records in the case of non-clinical incidents and healthcare records in the case of clinical incidents), individual interviews with those involved where the incident occurred and analysis of this data to establish the chronology of events that led up to the incident, identifying findings that the reviewers considered had an effect on the eventual harm, the contributory factors, and recommended control actions to address the contributory factors to prevent future harm arising as far as is reasonably practicable. The principles of systems analysis can be applied using a comprehensive, concise or aggregate approach." ;
+                 rdfs:label "Systems Analysis" ;
+                 <http://www.w3.org/2004/02/skos#definition> "A methodical review of an incident which involves the collection of data from the literature, records (general records in the case of non-clinical incidents and healthcare records in the case of clinical incidents), individual interviews with those involved where the incident occurred and analysis of this data to establish the chronology of events that led up to the incident, identifying findings that the reviewers considered had an effect on the eventual harm, the contributory factors, and recommended control actions to address the contributory factors to prevent future harm arising as far as is reasonably practicable. The principles of systems analysis can be applied using a comprehensive, concise or aggregate approach." ;
+                 <http://www.w3.org/2004/02/skos#prefLabel> "Systems Analysis" .
 
 
 ###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#Teaching
@@ -1707,6 +2470,38 @@
            rdfs:label "Vigilance" ;
            <http://www.w3.org/2004/02/skos#definition> "Being alert to the potential of harm occurring within the workplace. The heightened sense of awareness that you need to adopt and engender within the workplace to ensure ongoing safety in the delivery of services." ;
            <http://www.w3.org/2004/02/skos#prefLabel> "Vigilance" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HSE%E2%80%99s%20Integrated%20Risk%20Management%20Policy%20and%20Guidance%20documents
+<https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#HSE%E2%80%99s%20Integrated%20Risk%20Management%20Policy%20and%20Guidance%20documents> rdf:type owl:NamedIndividual ,
+                                                                                                                                                           <http://www.w3.org/2004/02/skos#Concept> ;
+                                                                                                                                                  <http://purl.org/dc/terms/created> "07/09/2020" ;
+                                                                                                                                                  <http://purl.org/dc/terms/creator> "Rob" ;
+                                                                                                                                                  <http://purl.org/dc/terms/source> "HSE Part 1" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#NationalIncidentManagementSystem(NIMS)
+<https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#NationalIncidentManagementSystem(NIMS)> rdf:type owl:NamedIndividual ,
+                                                                                                             <http://www.w3.org/2004/02/skos#Concept> ;
+                                                                                                    <http://purl.org/dc/terms/created> "18/12/2020" ;
+                                                                                                    <http://purl.org/dc/terms/creator> "Lucy" ;
+                                                                                                    <http://purl.org/dc/terms/source> "HSE Incident Management Framework - Guidance 2020" ;
+                                                                                                    rdfs:comment "The National Incident Management System, hosted by the State Claims Agency, is a highly secure web-based database which facilitates direct reporting of adverse events by State authorities and healthcare enterprises; it is the single designated system for reporting of all incidents in the public healthcare system i.e. for HSE and HSE funded services." ;
+                                                                                                    rdfs:label "National Incident Management System (NIMS)" ;
+                                                                                                    <http://www.w3.org/2004/02/skos#definition> "The National Incident Management System, hosted by the State Claims Agency, is a highly secure web-based database which facilitates direct reporting of adverse events by State authorities and healthcare enterprises; it is the single designated system for reporting of all incidents in the public healthcare system i.e. for HSE and HSE funded services." ;
+                                                                                                    <http://www.w3.org/2004/02/skos#prefLabel> "National Incident Management System (NIMS)" .
+
+
+###  https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#TheNationalTreasuryManagementAgency(NTMA)
+<https://ark.adaptcentre.ie/Ontologies/ARKHealthTerminology#TheNationalTreasuryManagementAgency(NTMA)> rdf:type owl:NamedIndividual ,
+                                                                                                                <http://www.w3.org/2004/02/skos#Concept> ;
+                                                                                                       <http://purl.org/dc/terms/created> "18/12/2020" ;
+                                                                                                       <http://purl.org/dc/terms/creator> "Lucy" ;
+                                                                                                       <http://purl.org/dc/terms/source> "HSE Incident Management Framework 2020 / HSE Incident Management Framework - Guidance 2020" ;
+                                                                                                       rdfs:comment "The NTMA is a State body which operates with a commercial remit to provide asset and liability management services to Government and is designated as the State Claims Agency when it performs the claims and risk management functions delegated to it under the National Treasury Management Agency (Amendment) Act, 2000" ;
+                                                                                                       rdfs:label "The National Treasury Management Agency (NTMA)" ;
+                                                                                                       <http://www.w3.org/2004/02/skos#definition> "The NTMA is a State body which operates with a commercial remit to provide asset and liability management services to Government and is designated as the State Claims Agency when it performs the claims and risk management functions delegated to it under the National Treasury Management Agency (Amendment) Act, 2000" ;
+                                                                                                       <http://www.w3.org/2004/02/skos#prefLabel> "The National Treasury Management Agency (NTMA)" .
 
 
 ###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
