@@ -1316,6 +1316,22 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Assessment -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Assessment">
+        <dc:creator xml:lang="en">Rob Brennan</dc:creator>
+        <dc:date xml:lang="en">2021-01-12T16:28:00+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Assessment of:
+    Risk (or Operational risk)
+    (Potential) mitigation of risk
+    (Potential) Risk in Change
+    Risk in Implementation (actual risk in change) / Implementation risk
+    Residual risk (verified following implementation)</rdfs:comment>
+        <rdfs:label xml:lang="en">Assessment</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause">
@@ -2070,6 +2086,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Assessment"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2140,6 +2157,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Assessment"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2169,6 +2187,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Assessment"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2198,6 +2217,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Assessment"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2250,6 +2270,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Assessment"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
