@@ -15,8 +15,7 @@
         <dc:creator xml:lang="en">Yalemisew Abgaz</dc:creator>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:title xml:lang="en">Access Risk Knowledge Cube  Ontology</dc:title>
-        <dc:modified>18/12/2020</dc:modified>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.7</owl:versionInfo>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.71</owl:versionInfo>
         <vocab:preferredNamespacePrefix>ARKC</vocab:preferredNamespacePrefix>
         <dc:contributor xml:lang="en">Junli Liang</dc:contributor>
         <dc:publisher>https://openark.adaptcentre.ie/</dc:publisher>
@@ -27,6 +26,7 @@
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
         <dc:description xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology).</dc:description>
+        <dc:modified>12/1/2021</dc:modified>
     </owl:Ontology>
     
 
@@ -122,6 +122,7 @@
     <!-- http://purl.org/dc/elements/hasQuestionnaire -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/dc/elements/hasQuestionnaire">
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-11-17T14:22:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Used to link a project with a CUBE analysis questionnaire.</rdfs:comment>
@@ -326,6 +327,7 @@
         <dc:date>2019-11-18T13:07:41+00:00</dc:date>
         <rdfs:comment>Represents and links evidence rule with  question.</rdfs:comment>
         <rdfs:label xml:lang="en">has evidence rule</rdfs:label>
+        <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
     
 
@@ -339,6 +341,19 @@
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Used in the HSE risk assessment form to link existing control measures with a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">has existing control</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasGainAchieved -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasGainAchieved">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved"/>
+        <dc:creator xml:lang="en">Rob Brennan</dc:creator>
+        <dc:date xml:lang="en">2020-12-18T13:34:27+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Connects risk verifaction assessment with gain achieved</rdfs:comment>
+        <rdfs:label xml:lang="en">has gain achieved</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -385,6 +400,7 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance">
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-18T13:34:27+00:00</dc:date>
         <rdfs:label xml:lang="en">has importance</rdfs:label>
@@ -473,6 +489,8 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-18T13:34:27+00:00</dc:date>
         <rdfs:label xml:lang="en">has projected reliability of gain</rdfs:label>
@@ -530,14 +548,27 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain"/>
+        <dc:creator xml:lang="en">Rob Brennan</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-12T16:28:00+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Connects a risk implimentation assessment with a reliability of gain value</rdfs:comment>
+        <rdfs:label xml:lang="en">has reliability of gain</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasResidualRiskRating -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasResidualRiskRating">
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
-        <dc:creator xml:lang="en">has residual risk rating</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-18T13:34:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">has residual risk rating</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -686,6 +717,7 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability">
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-18T13:34:27+00:00</dc:date>
         <rdfs:label xml:lang="en">has viability</rdfs:label>
@@ -2116,7 +2148,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain"/>
+                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain"/>
                         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -2222,16 +2254,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasGainAchieved"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance"/>
                         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedReliabilityOfGain"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-                    </owl:Restriction>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskInChange"/>
-                        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
