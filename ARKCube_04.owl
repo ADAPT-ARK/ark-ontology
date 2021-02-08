@@ -18,6 +18,8 @@
         <dc:title xml:lang="en">Access Risk Knowledge Cube  Ontology</dc:title>
         <vocab:preferredNamespacePrefix>ARKC</vocab:preferredNamespacePrefix>
         <dc:contributor xml:lang="en">Junli Liang</dc:contributor>
+        <dc:modified>08/02/2021</dc:modified>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.81</owl:versionInfo>
         <dc:publisher>https://openark.adaptcentre.ie/</dc:publisher>
         <dc:contributor xml:lang="en">Ademar Crotti Junior</dc:contributor>
         <dc:contributor xml:lang="en">Nick Mcdonald</dc:contributor>
@@ -25,9 +27,7 @@
         <vocab:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/ARKCube#</vocab:preferredNamespaceUri>
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
-        <dc:modified>12/1/2029</dc:modified>
         <dc:description xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology).</dc:description>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -280,6 +280,17 @@
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links an action and its deliverable</rdfs:comment>
         <rdfs:label xml:lang="en">has deliverable</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDelivery -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDelivery">
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-08T15:43:16+00:00</dc:date>
+        <rdfs:label xml:lang="en">has delivery</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -714,6 +725,17 @@
         <dc:date>2020-01-27T16:16:56+00:00</dc:date>
         <rdfs:comment>Represents and links the subquestion of a question</rdfs:comment>
         <rdfs:label xml:lang="en">has subquestion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSustainability -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSustainability">
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-08T15:43:16+00:00</dc:date>
+        <rdfs:label xml:lang="en">has sustainability</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1393,6 +1415,18 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-08T15:43:16+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A type of obligation to act rating associated with the verify stage of a project.</rdfs:comment>
+        <rdfs:label xml:lang="en">Delivery</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage">
@@ -1408,9 +1442,10 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
-        <dc:description xml:lang="en">Identfied during the CUBE solution stage.</dc:description>
+        <dc:description xml:lang="en">A type of obligation to act rating Identified during the CUBE solution stage.</dc:description>
         <rdfs:label xml:lang="en">Efficacy</rdfs:label>
     </owl:Class>
     
@@ -1550,9 +1585,10 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
-        <dc:description xml:lang="en">Identfied during the CUBE problem stage.</dc:description>
+        <dc:description xml:lang="en">A type of obligation to act rating identified during the CUBE problem stage.</dc:description>
     </owl:Class>
     
 
@@ -1699,6 +1735,17 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:date xml:lang="en">2020-09-29 09:09:10</dc:date>
         <rdfs:comment xml:lang="en">Uses HSE impact table definition.</rdfs:comment>
         <rdfs:label xml:lang="en">Negligible Impact</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating">
+        <dc:creator xml:lang="en">Rob Brennan</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-08T15:43:16+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Used in the CUBE project analysis process to assign a weight or priority to the obligation to act generated at a specific project stage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Obligation to Act Rating</rdfs:label>
     </owl:Class>
     
 
@@ -2193,6 +2240,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-08T15:43:16+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A type of obligation to act rating identified during the Implementation stage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Sustainability</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension">
@@ -2219,6 +2278,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
         <dc:description xml:lang="en">Identfied during the CUBE plan stage.</dc:description>
@@ -2334,6 +2394,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy">
@@ -2358,6 +2426,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#highSustainability -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highSustainability">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability">
@@ -2377,6 +2453,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Likely</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"/>
     </owl:NamedIndividual>
     
 
@@ -2405,10 +2489,26 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#lowSustainability -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowSustainability">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#lowViability -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowViability">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"/>
     </owl:NamedIndividual>
     
 
@@ -2437,6 +2537,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:date xml:lang="en">2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Risks rating amber (medium risk) are trickier, in that on the one hand they are not intolerable (high risk) or acceptable (low risk). Whilst all reasonable efforts should be taken to reduce the risk to  a low rating this may not be possible given constraints within the overall system or indeed by applying the additional effort required to mitigate it further other opportunities will be lost. Such risks require consideration by the Management Team and it may be that a decision is taken to accept the risk but keep it under review (monitor) with an option to open it for further management in the future.</rdfs:comment>
         <rdfs:label xml:lang="en">Amber (Medium Risk)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumSustainability -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumSustainability">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability"/>
     </owl:NamedIndividual>
     
 
