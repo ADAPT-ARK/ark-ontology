@@ -5,9 +5,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:vocab="http://purl.org/vocab/vann/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:ns1="http://purl.org/dc/terms/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#">
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects"/>
@@ -23,7 +23,7 @@
         <dc:title xml:lang="en">Access Risk Knowledge Projects Ontology</dc:title>
         <owl:versionInfo>0.2</owl:versionInfo>
         <vocab:preferredNamespacePrefix>ARKP</vocab:preferredNamespacePrefix>
-        <ns1:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
+        <dcterms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
         <vocab:preferredNamespaceUri>https://ark.adaptcentre.ie/Ontologies/ARKProjects#</vocab:preferredNamespaceUri>
         <dc:contributor>Natalia Duda</dc:contributor>
     </owl:Ontology>
@@ -433,16 +433,6 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Agent -->
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Agent">
-        <dc:creator>Lucy McKenna</dc:creator>
-        <rdfs:comment>A User or an Organisation that bears some form of responsibility for an Entity such as a Project or a Project Analysis.</rdfs:comment>
-        <rdfs:label>Agent</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential">
@@ -469,7 +459,7 @@
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">
         <dc:creator>Lucy McKenna</dc:creator>
-        <rdfs:comment>A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other data fields that are associated with project, a risk or the Cube questionnaire/analysis.</rdfs:comment>
+        <rdfs:comment>A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data..</rdfs:comment>
         <rdfs:label>DataEntity</rdfs:label>
     </owl:Class>
     
@@ -482,14 +472,6 @@
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment>Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released.</rdfs:comment>
         <rdfs:label>Internal</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Organisation -->
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Organisation">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Agent"/>
     </owl:Class>
     
 
@@ -547,13 +529,13 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Sensitive -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory -->
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Sensitive">
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory">
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal"/>
         <dc:creator>Lucy McKenna</dc:creator>
-        <rdfs:comment>Restricted information that contains personal data which has been deemed sensitive. Sensitive personal data, as defined by the General Data Protection Regulation (GDPR) Article 9, is special category personal data that reveals a person&apos;s  race, ethnic origin, political opinion, religious or philosophical beliefes, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation.</rdfs:comment>
-        <rdfs:label>Sensitive</rdfs:label>
+        <rdfs:comment>Special Category personal data, as defined by the General Data Protection Regulation (GDPR) Article 9, is any information that reveals a person&apos;s race, ethnic origin, political opinion, religious or philosophical beliefes, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation.</rdfs:comment>
+        <rdfs:label>Special Category</rdfs:label>
     </owl:Class>
     
 
@@ -561,7 +543,6 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#User -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Agent"/>
         <dc:description xml:lang="en">The user of the ARK projects application</dc:description>
         <rdfs:comment xml:lang="en">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser</rdfs:comment>
         <rdfs:label xml:lang="en">User</rdfs:label>
