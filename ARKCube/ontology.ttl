@@ -12,7 +12,8 @@
                                                                                                     "Junli Liang"@en ,
                                                                                                     "Natalia Duda"@en ,
                                                                                                     "Nick Mcdonald"@en ,
-                                                                                                    "Rob Brennan"@en ;
+                                                                                                    "Rob Brennan"@en ,
+                                                                                                    "Lucy McKenna" ;
                                                       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ,
                                                                                                 "Yalemisew Abgaz"@en ;
                                                       <http://purl.org/dc/elements/1.1/description> "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ;
@@ -71,6 +72,26 @@
 
 ###  http://www.w3.org/2002/07/owl#inverseOf
 owl:inverseOf rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#category
+<http://www.w3.org/ns/prov#category> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#component
+<http://www.w3.org/ns/prov#component> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#definition
+<http://www.w3.org/ns/prov#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#dm
+<http://www.w3.org/ns/prov#dm> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/prov#n
+<http://www.w3.org/ns/prov#n> rdf:type owl:AnnotationProperty .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#:actualFrequency
@@ -216,8 +237,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:range :OrganisationalUnit ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
-                    rdfs:comment "Links risk assessment with a site or organisatioal unit."@en ;
-                    rdfs:label "has dept,/service site"@en .
+                    rdfs:comment "Links a risk assessment with an organisational unit."@en ;
+                    rdfs:label "has dept/service site"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDimension
@@ -295,10 +316,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService
 :hasHospitalSiteOrService rdf:type owl:ObjectProperty ;
                           rdfs:domain :RiskAssessmentRecord ;
-                          rdfs:range :OrganisationalUnit ;
+                          rdfs:range :Organisation ;
                           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                          rdfs:comment "Links asssessment form and location/organisational unit" ;
+                          rdfs:comment "Links a risk asssessment with an organisation."@en ;
                           rdfs:label "has hospital site/service" .
 
 
@@ -339,6 +360,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:comment "This property links the project phase with Mechanism." ;
               rdfs:label "has mechanism"@en ;
               owl:inverseOf "isMechanismOf" .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit
+:hasOrganisationalUnit rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Organisation ;
+                       rdfs:range :OrganisationalUnit ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-03-10T10:27:14+00:00"^^xsd:dateTimeStamp ;
+                       rdfs:comment "Links an Organisation with an organisational unit or department within the Organisation."@en ;
+                       rdfs:label "has organisational unit" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOutcome
@@ -521,6 +552,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:label "has risk status"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType
+:hasRiskType rdf:type owl:ObjectProperty ;
+             rdfs:domain :Risk ;
+             rdfs:range :RiskType ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:37:52.608523" ;
+             rdfs:comment "Links a risk to a specific risk type." ;
+             rdfs:label "has risk type" .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
           owl:inverseOf :isStageOf ;
@@ -566,6 +607,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"^^xsd:dateTime ;
                rdfs:label "has viability"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#holdsPost
+:holdsPost rdf:type owl:ObjectProperty ;
+           rdfs:domain :Person ;
+           rdfs:range :Post ;
+           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:10:33+00:00"^^xsd:dateTimeStamp ;
+           rdfs:comment "Links a Person to their Post or position within an Organisation." ;
+           rdfs:label "holds post"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isAnswerOf
@@ -617,6 +668,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:label "is mechanism of"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isMemberOf
+:isMemberOf rdf:type owl:ObjectProperty ;
+            rdfs:domain :Person ;
+            rdfs:range :Organisation ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:39:10+00:00"^^xsd:dateTimeStamp ;
+            rdfs:comment "Links a Person to an Organisation or an Organisational Unit."@en ;
+            rdfs:label "is member of"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf
 :isOutcomeOf rdf:type owl:ObjectProperty ;
              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
@@ -649,6 +710,26 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:17:09+00:00" ;
                  rdfs:comment "Represents and links the subquestion of a question" ;
                  rdfs:label "is subquestion of"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo
+:reportsTo rdf:type owl:ObjectProperty ;
+           rdfs:domain :Person ;
+           rdfs:range :Person ;
+           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:15:41+00:00"^^xsd:dateTimeStamp ;
+           rdfs:comment "A reporting relationship between Persons in an Organisation."@en ;
+           rdfs:label "reports to"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith
+:worksWith rdf:type owl:ObjectProperty ;
+           rdfs:domain :Person ;
+           rdfs:range :Person ;
+           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:11:51+00:00"^^xsd:dateTimeStamp ;
+           rdfs:comment "Links a Person to another Person working as part of the same team in an Organisation."@en ;
+           rdfs:label "works with"@en .
 
 
 #################################################################
@@ -800,10 +881,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#name
 :name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Person ;
+      rdfs:domain <http://www.w3.org/ns/prov#Agent> ;
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-      rdfs:comment "Holds the full name of a person as a string."@en ;
+      rdfs:comment "Holds the full name of a person, organisation or organisational unit as a string."@en ;
       rdfs:label "name"@en .
 
 
@@ -833,12 +914,12 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:label "question text"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#reportTo
-:reportTo rdf:type owl:DatatypeProperty ;
-          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
-          <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:01:31+00:00" ;
-          rdfs:comment "The person/office to whom the result of the analysis is reported."@en ;
-          rdfs:label "report to"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#reportAnalysisTo
+:reportAnalysisTo rdf:type owl:DatatypeProperty ;
+                  <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+                  <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:01:31+00:00" ;
+                  rdfs:comment "The person/office to whom the result of the analysis is reported."@en ;
+                  rdfs:label "report analyis to"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId
@@ -928,6 +1009,17 @@ rdfs:Resource rdf:type owl:Class .
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
 
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
+                                  rdfs:label "Agent" ;
+                                  <http://www.w3.org/ns/prov#category> "starting-point" ;
+                                  <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
+                                  <http://www.w3.org/ns/prov#definition> "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en ;
+                                  <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
+                                  <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Action
 :Action rdf:type owl:Class ;
         rdfs:subClassOf :Control ,
@@ -952,7 +1044,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer
 :Answer rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
+        rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :hasEvidence ;
                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                           owl:onClass :Evidence
@@ -965,9 +1058,10 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact
 :Artefact rdf:type owl:Class ;
+          rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
           <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
           <http://purl.org/dc/elements/1.1/date> "2020-05-20T14:31:50.607524" ;
-          rdfs:comment "Evidences are associated to an evidence collection. An evidence may be, for example, a dataset containing information relevant to the an answer" ;
+          rdfs:comment "Artefacts are associated to an evidence collection. An artefact may be, for example, a dataset containing information relevant to an answer." ;
           rdfs:label "Artefact" .
 
 
@@ -981,7 +1075,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause
 :Cause rdf:type owl:Class ;
-       rdfs:subClassOf [ rdf:type owl:Restriction ;
+       rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :textualDescription ;
                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                          owl:onDataRange rdf:PlainLiteral
@@ -994,7 +1089,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Context
 :Context rdf:type owl:Class ;
-         rdfs:subClassOf [ rdf:type owl:Restriction ;
+         rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :textualDescription ;
                            owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                            owl:onDataRange rdf:PlainLiteral
@@ -1069,11 +1165,12 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence
 :Evidence rdf:type owl:Class ;
+          rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
           <http://purl.org/dc/elements/1.1/contributor> "Ademar" ;
           <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
           <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:05:52+00:00" ;
           <http://purl.org/dc/elements/1.1/modified> "2020-05-20T14:31:50.607524" ;
-          rdfs:comment "An evidence is composed of artefacts and are associated to a given to an answer."@en ;
+          rdfs:comment "Evidence is composed of artefacts and are associated with an answer."@en ;
           rdfs:label "Evidence" .
 
 
@@ -1135,7 +1232,8 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact
 :Impact rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
+        rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :textualDescription ;
                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                           owl:onDataRange rdf:PlainLiteral
@@ -1192,7 +1290,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain
 :LossOrGain rdf:type owl:Class ;
-            rdfs:subClassOf [ rdf:type owl:Restriction ;
+            rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                            [ rdf:type owl:Restriction ;
                               owl:onProperty :textualDescription ;
                               owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                               owl:onDataRange rdf:PlainLiteral
@@ -1220,7 +1319,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism
 :Mechanism rdf:type owl:Class ;
-           rdfs:subClassOf [ rdf:type owl:Restriction ;
+           rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :textualDescription ;
                              owl:minCardinality "1"^^xsd:nonNegativeInteger
                            ] ;
@@ -1286,21 +1386,32 @@ Familiarity gained by personal experience, vicariously or through collective pro
                        rdfs:label "Obligation to Act Rating"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation
+:Organisation rdf:type owl:Class ;
+              rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              <http://purl.org/dc/elements/1.1/date> "2021-03-10T10:21:03+00:00" ;
+              rdfs:comment "A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service."@en ;
+              rdfs:label "Organisation" .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit
 :OrganisationalUnit rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    rdfs:subClassOf :Organisation ,
+                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty :textualDescription ;
                                       owl:minCardinality "1"^^xsd:nonNegativeInteger
                                     ] ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29t09:09:10+00:00" ;
-                    rdfs:comment "Holds details of some organisation, e.g departments, branches or statutory bodies."@en ;
+                    rdfs:comment "A unit that part of an Organisation, e.g., a ward, department, branch or statutory body,  and that only has full recognition within the context of that Organisation. In particular the unit would not be regarded as a legal entity in its own right."@en ;
                     rdfs:label "Organisational Unit"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome
 :Outcome rdf:type owl:Class ;
-         rdfs:subClassOf [ rdf:type owl:Restriction ;
+         rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :textualDescription ;
                            owl:minCardinality "1"^^xsd:nonNegativeInteger
                          ] ;
@@ -1312,7 +1423,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 :Person rdf:type owl:Class ;
-        rdfs:subClassOf [ rdf:type owl:Restriction ;
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :textualDescription ;
                           owl:minCardinality "1"^^xsd:nonNegativeInteger
                         ] ;
@@ -1329,6 +1441,13 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
                   rdfs:comment "A plan and prepare stage question is a cube question which is asked at the planning stage of the cube questionnaire."@en ;
                   rdfs:label "Plan and Prepare Stage"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Post
+:Post rdf:type owl:Class ;
+      <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:38:03+00:00" ;
+      rdfs:comment "A position within an organisation."@en ;
+      rdfs:label "Post"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss
@@ -1373,7 +1492,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis
 :ProjectAnalysis rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                 rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasStage ;
                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass :Stage
@@ -1452,6 +1572,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire
 :Questionnaire rdf:type owl:Class ;
+               rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
                <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
                <http://purl.org/dc/elements/1.1/date> "2019-11-13T14:18:47+00:00" ;
                rdfs:comment "A set of structured questions which seek information on a topic of interest from respndents."@en ;
@@ -1460,7 +1581,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain
 :ReliabilityOfGain rdf:type owl:Class ;
-                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                   rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty :textualDescription ;
                                      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                      owl:onDataRange xsd:string
@@ -1473,15 +1595,17 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Report
 :Report rdf:type owl:Class ;
+        rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
         <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:08+00:00" ;
-        rdfs:comment "A written account of an activity or investigation?"@en ;
+        rdfs:comment "A written account of an activity or investigation"@en ;
         rdfs:label "Report"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk
 :Risk rdf:type owl:Class ;
-      rdfs:subClassOf [ rdf:type owl:Restriction ;
+      rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :hasRiskRating ;
                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onClass :RiskRating
@@ -1508,6 +1632,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord
 :RiskAssessmentRecord rdf:type owl:Class ;
+                      rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
                       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
                       rdfs:comment "Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields."@en ;
@@ -1516,7 +1641,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription
 :RiskDescription rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                 rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
+                                 [ rdf:type owl:Restriction ;
                                    owl:onProperty :textualDescription ;
                                    owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                                    owl:onDataRange rdf:PlainLiteral
@@ -1593,6 +1719,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
             rdfs:comment "Used to record the status of a risk."@en ;
             rdfs:label "Risk Status"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType
+:RiskType rdf:type owl:Class ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:41:26+00:00" ;
+          rdfs:comment "The type of risk being assessed in a risk assessment form." ;
+          rdfs:label "Risk Type" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment
@@ -1679,6 +1813,13 @@ Familiarity gained by personal experience, vicariously or through collective pro
            rdfs:label "Viability"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> rdf:type owl:Class ;
+                                                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                                                                   rdfs:comment "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data.."@en ;
+                                                                   rdfs:label "Data Entity"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -1737,13 +1878,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
              rdfs:label "Environment"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#finance
-:finance rdf:type owl:NamedIndividual ,
-                  :ImpactCategory ;
-         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-         <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-         rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
-         rdfs:label "Finnance"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss
+:financialLoss rdf:type owl:NamedIndividual ,
+                        :ImpactCategory ;
+               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
+               rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
+               rdfs:label "" ,
+                          "Financial Loss" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson
@@ -1882,6 +2024,15 @@ Familiarity gained by personal experience, vicariously or through collective pro
       rdfs:label "open"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#operational
+:operational rdf:type owl:NamedIndividual ,
+                      :RiskType ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:46:14+00:00" ;
+             rdfs:comment "As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks." ;
+             rdfs:label "Operational" .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#possible
 :possible rdf:type owl:NamedIndividual ,
                    :Likelihood ;
@@ -1915,6 +2066,15 @@ Familiarity gained by personal experience, vicariously or through collective pro
                        rdfs:label "Service User Experience"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic
+:strategic rdf:type owl:NamedIndividual ,
+                    :RiskType ;
+           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:45:13+00:00" ;
+           rdfs:comment "As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan." ;
+           rdfs:label "Strategic"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely
 :unlikely rdf:type owl:NamedIndividual ,
                    :Likelihood ;
@@ -1927,4 +2087,4 @@ Familiarity gained by personal experience, vicariously or through collective pro
           rdfs:label "Unlikely"@en .
 
 
-###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
