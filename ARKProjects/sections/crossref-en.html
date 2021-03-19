@@ -5,19 +5,55 @@ This section provides details for each class and property defined by Access Risk
    <ul class="hlist">
       <li>
          <a href="#AdminUser"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser">AdminUser</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser">AdminUser</a>
+      </li>
+      <li>
+         <a href="#Confidential"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential">Confidential</a>
+      </li>
+      <li>
+         <a href="#DataClassification"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
+      </li>
+      <li>
+         <a href="#DataEntity"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">Data Entity</a>
+      </li>
+      <li>
+         <a href="#Internal"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal">Internal</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
+      </li>
+      <li>
+         <a href="#Personal"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal">Personal</a>
       </li>
       <li>
          <a href="#Project"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
       </li>
       <li>
          <a href="#ProjectAnalysis"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+      </li>
+      <li>
+         <a href="#Public"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Public">Public</a>
+      </li>
+      <li>
+         <a href="#Restricted"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted">Restricted</a>
+      </li>
+      <li>
+         <a href="#SpecialCategory"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory">Special Category</a>
       </li>
       <li>
          <a href="#User"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
       </li>
    </ul>
    <div class="entity" id="AdminUser">
@@ -26,7 +62,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser</p>
       <div class="comment">
          <span class="markdown">An admin user has access to all projects.</span>
       </div>
@@ -38,7 +74,188 @@ This section provides details for each class and property defined by Access Risk
          <dt>has super-classes</dt>
          <dd>
             <a href="#User"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Confidential">
+      <h3>Confidential<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential</p>
+      <div class="comment">
+         <span class="markdown">Confidential information is defined as information which is protected by Irish and/or E.U. legislation or regulations, HSE policies or legal contracts. The unauthorised or accidental disclosure of this information could adversely impact the organisation, its patients, its staff and its business partners.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataClassification"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataClassification">
+      <h3>Data Classification<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification</p>
+      <div class="comment">
+         <span class="markdown">Use to classifiy the sensitivity of data e.g., a project, an analysis or part of an analysis.  Data classification values are adapted from the HSE Information Classification &amp; Handling Policy.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataEntity"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">Data Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Confidential"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential">Confidential</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Internal"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal">Internal</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Public"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Public">Public</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Restricted"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted">Restricted</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#'has_data_classification'"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#'has_data_classification'">has data classification</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="DataEntity">
+      <h3>Data Entity<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity</p>
+      <div class="comment">
+         <span class="markdown">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data..</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#DataClassification"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Project"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectAnalysis"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#'has_data_classification'"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#'has_data_classification'">has data classification</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Internal">
+      <h3>Internal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal</p>
+      <div class="comment">
+         <span class="markdown">Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataClassification"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">
+      <h3>Person<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#Person</p>
+      <div class="comment">
+         <span class="markdown">Defines a person, for example in an organisation.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>29T09:09:10+00:00/09/2020</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Rob Brennan</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Agent">agent</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#User"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Personal">
+      <h3>Personal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal</p>
+      <div class="comment">
+         <span class="markdown">Restricted information that contains personal data. Personal data, as defined by the General Data Protection Regulation (GDPR), is any data that relates to a person or that could be used to identify a person.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Restricted"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted">Restricted</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#SpecialCategory"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory">Special Category</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -49,59 +266,65 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project</p>
       <div class="comment">
          <span class="markdown">An individual or collaborative enterprise that is carefully planned to achieve a particular aim.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataEntity"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">Data Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#designedBy"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#designedBy">designed by</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#designedBy">designed by</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasCollaborator"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOwner"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasProjectAnalysis"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasReadOnlyUser"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSubProject"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isSubProjectOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#organisationName"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#organisationName">organisation name</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#organisationName">organisation name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#status"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#status">project Status</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#status">project Status</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#name"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#name">project name</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#name">project name</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#reportTo"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#reportTo">report to</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#reportTo">report to</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasSubProject"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isCollaboratorOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isOwnerOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isProjectAnalysisOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isReadOnlyUserOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isSubProjectOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#ProjectAnalysis"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
             <sup class="type-c" title="class">c</sup>, <a href="#User"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -112,43 +335,124 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis</p>
       <div class="comment">
          <span class="markdown">Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataEntity"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">Data Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#efficacy"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#efficacy">efficacy</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#efficacy">efficacy</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#importance"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#importance">importance</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#importance">importance</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#isProjectAnalysisOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#potentialLoss"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss">potential loss</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss">potential loss</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#projectedGain"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain">projected gain</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain">projected gain</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#projectedValue"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue">projected value</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue">projected value</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#value"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#value">value</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#value">value</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#viability"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#viability">viablity</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#viability">viablity</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasProjectAnalysis"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#Project"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
             <sup class="type-c" title="class">c</sup>, <a href="#User"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Public">
+      <h3>Public<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#Public</p>
+      <div class="comment">
+         <span class="markdown">Public information is defined as information that is available to the general public and is intended for distribution outside an organisation. There would be no impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataClassification"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Restricted">
+      <h3>Restricted<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted</p>
+      <div class="comment">
+         <span class="markdown">Restricted information is defined as highly sensitive confidential information. The unauthorised or accidental disclosure of this information would seriously and adversely impact the organisation, its patients, its staff and its business partners.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataClassification"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Personal"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal">Personal</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="SpecialCategory">
+      <h3>Special Category<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory</p>
+      <div class="comment">
+         <span class="markdown">Special Category personal data, as defined by the General Data Protection Regulation (GDPR) Article 9, is any information that reveals a person's race, ethnic origin, political opinion, religious or philosophical beliefes, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Personal"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal">Personal</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -159,7 +463,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#User</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#User</p>
       <div class="comment">
          <span class="markdown">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser</span>
       </div>
@@ -167,38 +471,44 @@ This section provides details for each class and property defined by Access Risk
          <span class="markdown">The user of the ARK projects application</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#AdminUser"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser">AdminUser</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser">AdminUser</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#isCollaboratorOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isOwnerOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isReadOnlyUserOf"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasCollaborator"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOwner"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasReadOnlyUser"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is disjoint with</dt>
          <dd>
             <a href="#Project"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProjectAnalysis"
-               title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -208,43 +518,47 @@ This section provides details for each class and property defined by Access Risk
    <ul class="hlist">
       <li>
          <a href="#hasCollaborator"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
+      </li>
+      <li>
+         <a href="#'has_data_classification'"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#'has_data_classification'">has data classification</a>
       </li>
       <li>
          <a href="#hasOwner"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
       </li>
       <li>
          <a href="#hasProjectAnalysis"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
       </li>
       <li>
          <a href="#hasReadOnlyUser"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
       </li>
       <li>
          <a href="#hasSubProject"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
       </li>
       <li>
          <a href="#isCollaboratorOf"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
       </li>
       <li>
          <a href="#isOwnerOf"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
       </li>
       <li>
          <a href="#isProjectAnalysisOf"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
       </li>
       <li>
          <a href="#isReadOnlyUserOf"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
       </li>
       <li>
          <a href="#isSubProjectOf"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
       </li>
    </ul>
    <div class="entity" id="hasCollaborator">
@@ -253,7 +567,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator</p>
       <div class="comment">
          <span class="markdown">Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights.</span>
       </div>
@@ -262,20 +576,51 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#User"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#isCollaboratorOf"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="'has_data_classification'">
+      <h3>has data classification<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#'has_data_classification'</p>
+      <div class="comment">
+         <span class="markdown">Ascribes a data classification level to an Entity.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#DataEntity"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">Data Entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#DataClassification"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
       </div>
@@ -286,7 +631,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner</p>
       <div class="comment">
          <span class="markdown">Relates the Project with its owner User. The owner has a full read/write/grant access rights.</span>
       </div>
@@ -295,19 +640,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#User"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#isOwnerOf"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -319,7 +664,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis</p>
       <div class="comment">
          <span class="markdown">Relates a Project with all the analysis done on the Project.</span>
       </div>
@@ -328,19 +673,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#isProjectAnalysisOf"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -352,7 +697,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser</p>
       <div class="comment">
          <span class="markdown">Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right.</span>
       </div>
@@ -361,19 +706,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#User"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#isReadOnlyUserOf"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -385,7 +730,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject</p>
       <div class="comment">
          <span class="markdown">Relate a Project with its subproject. A Project can have one or more subprojects within it.</span>
       </div>
@@ -396,19 +741,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#isSubProjectOf"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -420,7 +765,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf</p>
       <div class="comment">
          <span class="markdown">Relates the collaborating User with a project. </span>
       </div>
@@ -429,19 +774,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#User"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasCollaborator"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -453,7 +798,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf</p>
       <div class="comment">
          <span class="markdown">Relates the Owner User with a Project. The owner has a full read/write/grant access rights.</span>
       </div>
@@ -462,19 +807,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#User"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasOwner"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -486,7 +831,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf</p>
       <div class="comment">
          <span class="markdown">Relates a Project Analysis with its Project.</span>
       </div>
@@ -495,19 +840,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -519,7 +864,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf</p>
       <div class="comment">
          <span class="markdown">Relates the ReadOnlyUser with a Project. </span>
       </div>
@@ -528,19 +873,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#User"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasReadOnlyUser"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser">has readonly user</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -552,7 +897,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf</p>
       <div class="comment">
          <span class="markdown">Relates a project with its parent Project.</span>
       </div>
@@ -561,19 +906,19 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
             <dd>
                <a href="#hasSubProject"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject">has subproject</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -584,55 +929,55 @@ This section provides details for each class and property defined by Access Risk
    <ul class="hlist">
       <li>
          <a href="#dataStatus"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus">data status</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus">data status</a>
       </li>
       <li>
          <a href="#designedBy"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#designedBy">designed by</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#designedBy">designed by</a>
       </li>
       <li>
          <a href="#efficacy"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#efficacy">efficacy</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#efficacy">efficacy</a>
       </li>
       <li>
          <a href="#importance"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#importance">importance</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#importance">importance</a>
       </li>
       <li>
          <a href="#organisationName"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#organisationName">organisation name</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#organisationName">organisation name</a>
       </li>
       <li>
          <a href="#potentialLoss"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss">potential loss</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss">potential loss</a>
       </li>
       <li>
          <a href="#name"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#name">project name</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#name">project name</a>
       </li>
       <li>
          <a href="#status"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#status">project Status</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#status">project Status</a>
       </li>
       <li>
          <a href="#projectedGain"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain">projected gain</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain">projected gain</a>
       </li>
       <li>
          <a href="#projectedValue"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue">projected value</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue">projected value</a>
       </li>
       <li>
          <a href="#reportTo"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#reportTo">report to</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#reportTo">report to</a>
       </li>
       <li>
          <a href="#value"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#value">value</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#value">value</a>
       </li>
       <li>
          <a href="#viability"
-            title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#viability">viablity</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#viability">viablity</a>
       </li>
    </ul>
    <div class="entity" id="dataStatus">
@@ -641,7 +986,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus</p>
       <div class="comment">
          <span class="markdown">The status of the data. Deleted  when the data is deleted by the user</span>
       </div>
@@ -665,7 +1010,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#designedBy</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#designedBy</p>
       <div class="comment">
          <span class="markdown">The user who designed the project.</span>
       </div>
@@ -674,7 +1019,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -690,7 +1035,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#efficacy</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#efficacy</p>
       <div class="comment">
          <span class="markdown">The efficacy of the solution.</span>
       </div>
@@ -699,7 +1044,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -715,7 +1060,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#importance</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#importance</p>
       <div class="comment">
          <span class="markdown">Importance of the problem under analysis.</span>
       </div>
@@ -724,7 +1069,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -740,7 +1085,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#organisationName</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#organisationName</p>
       <div class="comment">
          <span class="markdown">The name of the organisation </span>
       </div>
@@ -749,7 +1094,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -765,7 +1110,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss</p>
       <div class="comment">
          <span class="markdown">Potential loss due to the problem.</span>
       </div>
@@ -774,7 +1119,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -790,7 +1135,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#name</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#name</p>
       <div class="comment">
          <span class="markdown">The name of a project</span>
       </div>
@@ -799,7 +1144,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -815,7 +1160,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#status</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#status</p>
       <div class="comment">
          <span class="markdown">The current status of a project</span>
       </div>
@@ -824,7 +1169,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -840,7 +1185,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain</p>
       <div class="comment">
          <span class="markdown">The gain achieved by the project.</span>
       </div>
@@ -849,7 +1194,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -865,7 +1210,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue</p>
       <div class="comment">
          <span class="markdown">The projected value of the project.</span>
       </div>
@@ -874,7 +1219,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -890,7 +1235,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#reportTo</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#reportTo</p>
       <div class="comment">
          <span class="markdown">The person to whom the analysis is reported to.</span>
       </div>
@@ -899,7 +1244,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#Project"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -915,7 +1260,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#value</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#value</p>
       <div class="comment">
          <span class="markdown">An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources.</span>
       </div>
@@ -924,7 +1269,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -940,7 +1285,7 @@ This section provides details for each class and property defined by Access Risk
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://ark.adaptcentre.ie/Ontologies/ARKProjects#viability</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#viability</p>
       <div class="comment">
          <span class="markdown">Viability of the proposed solution.</span>
       </div>
@@ -949,7 +1294,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>has domain</dt>
             <dd>
                <a href="#ProjectAnalysis"
-                  title="https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>

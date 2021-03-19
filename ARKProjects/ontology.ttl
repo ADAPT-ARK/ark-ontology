@@ -1,28 +1,29 @@
-@prefix : <https://ark.adaptcentre.ie/Ontologies/ARKProjects#> .
+@prefix : <https://openark.adaptcentre.ie/Ontologies/ARKProjects#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://ark.adaptcentre.ie/Ontologies/ARKProjects#> .
+@base <https://openark.adaptcentre.ie/Ontologies/ARKProjects#> .
 
-<https://ark.adaptcentre.ie/Ontologies/ARKProjects#> rdf:type owl:Ontology ;
-                                                      owl:versionIRI <https://ark.adaptcentre.ie/Ontologies/ARKProjects> ;
-                                                      <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior" ,
-                                                                                                    "Junli Liang" ,
-                                                                                                    "Natalia Duda" ,
-                                                                                                    "Nick McDonald" ,
-                                                                                                    "Rob Brennan" ;
-                                                      <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz" ;
-                                                      <http://purl.org/dc/elements/1.1/description> "A model for representing concepts, relationships and axioms for Access Risk Knowledge for organisational risk analysis and management."@en ;
-                                                      <http://purl.org/dc/elements/1.1/modified> "18/04/2020" ;
-                                                      <http://purl.org/dc/elements/1.1/publisher> "https://www.ark.adaptcentre.ie/" ;
-                                                      <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
-                                                      <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Projects Ontology"@en ;
-                                                      <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
-                                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKP" ;
-                                                      <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ark.adaptcentre.ie/Ontologies/ARKProjects#" ;
-                                                      owl:versionInfo "0.2" .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#> rdf:type owl:Ontology ;
+                                                          owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKProjects> ;
+                                                          <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior" ,
+                                                                                                        "Junli Liang" ,
+                                                                                                        "Lucy McKenna" ,
+                                                                                                        "Natalia Duda" ,
+                                                                                                        "Nick McDonald" ,
+                                                                                                        "Rob Brennan" ;
+                                                          <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz" ;
+                                                          <http://purl.org/dc/elements/1.1/description> "A model for representing concepts, relationships and axioms for Access Risk Knowledge for organisational risk analysis and management."@en ;
+                                                          <http://purl.org/dc/elements/1.1/modified> "18/04/2020" ;
+                                                          <http://purl.org/dc/elements/1.1/publisher> "https://www.ark.adaptcentre.ie/" ;
+                                                          <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
+                                                          <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Projects Ontology"@en ;
+                                                          <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
+                                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKP" ;
+                                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ark.adaptcentre.ie/Ontologies/ARKProjects#" ;
+                                                          owl:versionInfo "0.2" .
 
 #################################################################
 #    Annotation properties
@@ -34,6 +35,10 @@
 
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/description
@@ -76,7 +81,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator
 :hasCollaborator rdf:type owl:ObjectProperty ;
                  owl:inverseOf :isCollaboratorOf ;
                  rdfs:domain :Project ;
@@ -85,7 +90,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  rdfs:label "has collaborator"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner
 :hasOwner rdf:type owl:ObjectProperty ;
           owl:inverseOf :isOwnerOf ;
           rdfs:domain :Project ;
@@ -94,7 +99,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           rdfs:label "has owner"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis
 :hasProjectAnalysis rdf:type owl:ObjectProperty ;
                     owl:inverseOf :isProjectAnalysisOf ;
                     rdfs:domain :Project ;
@@ -103,7 +108,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:label "has project analysis"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser
 :hasReadOnlyUser rdf:type owl:ObjectProperty ;
                  owl:inverseOf :isReadOnlyUserOf ;
                  rdfs:domain :Project ;
@@ -112,7 +117,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  rdfs:label "has readonly user"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject
 :hasSubProject rdf:type owl:ObjectProperty ;
                owl:inverseOf :isSubProjectOf ;
                rdf:type owl:TransitiveProperty ;
@@ -122,7 +127,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:label "has subproject"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf
 :isCollaboratorOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
                   rdfs:range :Project ;
@@ -131,7 +136,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                   owl:inverseOf "hasCollaborator" .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf
 :isOwnerOf rdf:type owl:ObjectProperty ;
            rdfs:domain :User ;
            rdfs:range :Project ;
@@ -140,7 +145,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            owl:inverseOf "hasOwner" .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf
 :isProjectAnalysisOf rdf:type owl:ObjectProperty ;
                      rdfs:domain :ProjectAnalysis ;
                      rdfs:range :Project ;
@@ -149,7 +154,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                      owl:inverseOf "hasProjectAnalysis" .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf
 :isReadOnlyUserOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
                   rdfs:range :Project ;
@@ -158,7 +163,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                   owl:inverseOf "hasReadOnlyUser" .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf
 :isSubProjectOf rdf:type owl:ObjectProperty ;
                 rdfs:domain :Project ;
                 rdfs:range :Project ;
@@ -167,11 +172,24 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 owl:inverseOf "hasSubProject" .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#'has_data_classification'
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#'has_data_classification'> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain :DataEntity ;
+                                                                                  rdfs:range :DataClassification ;
+                                                                                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                                                                                  rdfs:comment "Ascribes a data classification level to an Entity." ;
+                                                                                  rdfs:label "has data classification" .
+
+
 #################################################################
 #    Data properties
 #################################################################
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> rdf:type owl:DatatypeProperty .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus
 :dataStatus rdf:type owl:DatatypeProperty ;
             rdfs:domain owl:Thing ;
             rdfs:range rdfs:Literal ;
@@ -179,7 +197,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             rdfs:label "data status"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#designedBy
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#designedBy
 :designedBy rdf:type owl:DatatypeProperty ;
             rdfs:domain :Project ;
             rdfs:range rdfs:Literal ;
@@ -187,7 +205,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             rdfs:label "designed by"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#efficacy
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#efficacy
 :efficacy rdf:type owl:DatatypeProperty ;
           rdfs:domain :ProjectAnalysis ;
           rdfs:range rdfs:Literal ;
@@ -195,7 +213,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           rdfs:label "efficacy"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#importance
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#importance
 :importance rdf:type owl:DatatypeProperty ;
             rdfs:domain :ProjectAnalysis ;
             rdfs:range rdfs:Literal ;
@@ -203,7 +221,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             rdfs:label "importance"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#name
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:domain :Project ;
       rdfs:range rdfs:Literal ;
@@ -211,7 +229,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
       rdfs:label "project name"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#organisationName
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#organisationName
 :organisationName rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Project ;
                   rdfs:range rdfs:Literal ;
@@ -219,7 +237,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                   rdfs:label "organisation name"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss
 :potentialLoss rdf:type owl:DatatypeProperty ;
                rdfs:domain :ProjectAnalysis ;
                rdfs:range rdfs:Literal ;
@@ -227,7 +245,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:label "potential loss"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain
 :projectedGain rdf:type owl:DatatypeProperty ;
                rdfs:domain :ProjectAnalysis ;
                rdfs:range rdfs:Literal ;
@@ -235,7 +253,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:label "projected gain"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue
 :projectedValue rdf:type owl:DatatypeProperty ;
                 rdfs:domain :ProjectAnalysis ;
                 rdfs:range rdfs:Literal ;
@@ -243,7 +261,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 rdfs:label "projected value"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#reportTo
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#reportTo
 :reportTo rdf:type owl:DatatypeProperty ;
           rdfs:domain :Project ;
           rdfs:range rdfs:Literal ;
@@ -251,7 +269,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           rdfs:label "report to"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#status
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#status
 :status rdf:type owl:DatatypeProperty ;
         rdfs:domain :Project ;
         rdfs:range rdfs:Literal ;
@@ -259,7 +277,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
         rdfs:label "project Status"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#value
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#value
 :value rdf:type owl:DatatypeProperty ;
        rdfs:domain :ProjectAnalysis ;
        rdfs:range rdfs:Literal ;
@@ -267,7 +285,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
        rdfs:label "value"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#viability
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#viability
 :viability rdf:type owl:DatatypeProperty ;
            rdfs:domain :ProjectAnalysis ;
            rdfs:range rdfs:Literal ;
@@ -279,7 +297,24 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> ;
+                                                                             owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                           ] ;
+                                                           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                                                           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                                                           rdfs:comment "Defines a person, for example in an organisation."@en ;
+                                                           rdfs:label "Person"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser
 :AdminUser rdf:type owl:Class ;
            rdfs:subClassOf :User ;
            <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
@@ -287,31 +322,89 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:label "AdminUser" .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#Project
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential
+:Confidential rdf:type owl:Class ;
+              rdfs:subClassOf :DataClassification ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              rdfs:comment "Confidential information is defined as information which is protected by Irish and/or E.U. legislation or regulations, HSE policies or legal contracts. The unauthorised or accidental disclosure of this information could adversely impact the organisation, its patients, its staff and its business partners."@en ;
+              rdfs:label "Confidential"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification
+:DataClassification rdf:type owl:Class ;
+                    rdfs:subClassOf :DataEntity ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    rdfs:comment "Use to classifiy the sensitivity of data e.g., a project, an analysis or part of an analysis.  Data classification values are adapted from the HSE Information Classification & Handling Policy."@en ;
+                    rdfs:label "Data Classification"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity
+:DataEntity rdf:type owl:Class ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            rdfs:comment "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data.."@en ;
+            rdfs:label "Data Entity"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal
+:Internal rdf:type owl:Class ;
+          rdfs:subClassOf :DataClassification ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          rdfs:comment "Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released."@en ;
+          rdfs:label "Internal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal
+:Personal rdf:type owl:Class ;
+          rdfs:subClassOf :Restricted ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          rdfs:comment "Restricted information that contains personal data. Personal data, as defined by the General Data Protection Regulation (GDPR), is any data that relates to a person or that could be used to identify a person."@en ;
+          rdfs:label "Personal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project
 :Project rdf:type owl:Class ;
+         rdfs:subClassOf :DataEntity ;
          rdfs:comment "An individual or collaborative enterprise that is carefully planned to achieve a particular aim."@en ;
          rdfs:label "Project"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis
 :ProjectAnalysis rdf:type owl:Class ;
+                 rdfs:subClassOf :DataEntity ;
                  rdfs:comment "Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc"@en ;
                  rdfs:label "Project Analysis"@en .
 
 
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#User
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Public
+:Public rdf:type owl:Class ;
+        rdfs:subClassOf :DataClassification ;
+        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+        rdfs:comment "Public information is defined as information that is available to the general public and is intended for distribution outside an organisation. There would be no impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released."@en ;
+        rdfs:label "Public"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted
+:Restricted rdf:type owl:Class ;
+            rdfs:subClassOf :DataClassification ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            rdfs:comment "Restricted information is defined as highly sensitive confidential information. The unauthorised or accidental disclosure of this information would seriously and adversely impact the organisation, its patients, its staff and its business partners."@en ;
+            rdfs:label "Restricted"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory
+:SpecialCategory rdf:type owl:Class ;
+                 rdfs:subClassOf :Personal ;
+                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                 rdfs:comment "Special Category personal data, as defined by the General Data Protection Regulation (GDPR) Article 9, is any information that reveals a person's race, ethnic origin, political opinion, religious or philosophical beliefes, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation."@en ;
+                 rdfs:label "Special Category"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#User
 :User rdf:type owl:Class ;
+      rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> ;
       <http://purl.org/dc/elements/1.1/description> "The user of the ARK projects application"@en ;
       rdfs:comment "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser"@en ;
       rdfs:label "User"@en .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://ark.adaptcentre.ie/Ontologies/ARKProjects#
-<https://ark.adaptcentre.ie/Ontologies/ARKProjects#> rdf:type owl:NamedIndividual .
 
 
 #################################################################
@@ -326,4 +419,4 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ] .
 
 
-###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
