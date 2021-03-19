@@ -5,9 +5,9 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:vocab="http://purl.org/vocab/vann/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:ns1="http://purl.org/dc/terms/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#">
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects"/>
@@ -23,7 +23,8 @@
         <dc:title xml:lang="en">Access Risk Knowledge Projects Ontology</dc:title>
         <owl:versionInfo>0.2</owl:versionInfo>
         <vocab:preferredNamespacePrefix>ARKP</vocab:preferredNamespacePrefix>
-        <ns1:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
+        <dc:contributor>Lucy McKenna</dc:contributor>
+        <dcterms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
         <vocab:preferredNamespaceUri>https://ark.adaptcentre.ie/Ontologies/ARKProjects#</vocab:preferredNamespaceUri>
         <dc:contributor>Natalia Duda</dc:contributor>
     </owl:Ontology>
@@ -50,6 +51,12 @@
     <!-- http://purl.org/dc/elements/1.1/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/date -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -239,6 +246,18 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#&apos;has_data_classification&apos; -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#&apos;has_data_classification&apos;">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment>Ascribes a data classification level to an Entity.</rdfs:comment>
+        <rdfs:label>has data classification</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -247,6 +266,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
     
 
 
@@ -404,6 +429,30 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#Agent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Person -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Defines a person, for example in an organisation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser">
@@ -415,9 +464,64 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Confidential">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Confidential information is defined as information which is protected by Irish and/or E.U. legislation or regulations, HSE policies or legal contracts. The unauthorised or accidental disclosure of this information could adversely impact the organisation, its patients, its staff and its business partners.</rdfs:comment>
+        <rdfs:label xml:lang="en">Confidential</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Use to classifiy the sensitivity of data e.g., a project, an analysis or part of an analysis.  Data classification values are adapted from the HSE Information Classification &amp; Handling Policy.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Classification</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data..</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released.</rdfs:comment>
+        <rdfs:label xml:lang="en">Internal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Restricted information that contains personal data. Personal data, as defined by the General Data Protection Regulation (GDPR), is any data that relates to a person or that could be used to identify a person.</rdfs:comment>
+        <rdfs:label xml:lang="en">Personal</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
         <rdfs:comment xml:lang="en">An individual or collaborative enterprise that is carefully planned to achieve a particular aim.</rdfs:comment>
         <rdfs:label xml:lang="en">Project</rdfs:label>
     </owl:Class>
@@ -427,8 +531,42 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
         <rdfs:comment xml:lang="en">Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc</rdfs:comment>
         <rdfs:label xml:lang="en">Project Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Public -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Public">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Public information is defined as information that is available to the general public and is intended for distribution outside an organisation. There would be no impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released.</rdfs:comment>
+        <rdfs:label xml:lang="en">Public</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Restricted">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Restricted information is defined as highly sensitive confidential information. The unauthorised or accidental disclosure of this information would seriously and adversely impact the organisation, its patients, its staff and its business partners.</rdfs:comment>
+        <rdfs:label xml:lang="en">Restricted</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#SpecialCategory">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Special Category personal data, as defined by the General Data Protection Regulation (GDPR) Article 9, is any information that reveals a person&apos;s race, ethnic origin, political opinion, religious or philosophical beliefes, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Special Category</rdfs:label>
     </owl:Class>
     
 
@@ -436,27 +574,11 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#User -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:description xml:lang="en">The user of the ARK projects application</dc:description>
         <rdfs:comment xml:lang="en">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser</rdfs:comment>
         <rdfs:label xml:lang="en">User</rdfs:label>
     </owl:Class>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://ark.adaptcentre.ie/Ontologies/ARKProjects# -->
-
-    <owl:NamedIndividual rdf:about="https://ark.adaptcentre.ie/Ontologies/ARKProjects#"/>
     
 
 
@@ -480,5 +602,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.3.20160319-0906) https://github.com/owlcs/owlapi -->
 
