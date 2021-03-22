@@ -271,20 +271,11 @@
 # #################################################################
 # 
 # 
-# http://www.w3.org/ns/prov#Agent
-<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a person, for example in an organisation."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -309,8 +300,10 @@ _:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data.."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data on the ARK Platform."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of prov:Entity."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Data Entity"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal
@@ -363,8 +356,9 @@ _:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/
 # https://openark.adaptcentre.ie/Ontologies/ARKProjects#User
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
-<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://purl.org/dc/elements/1.1/description> "The user of the ARK projects application"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://www.w3.org/2000/01/rdf-schema#comment> "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://purl.org/dc/elements/1.1/description> "A user of the ARK Platform."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://www.w3.org/2000/01/rdf-schema#comment> "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://www.w3.org/2000/01/rdf-schema#comment> "A User is a subclass of arkc:Person." .
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://www.w3.org/2000/01/rdf-schema#label> "User"@en .
 # 
 # 
@@ -376,16 +370,16 @@ _:genid1 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/
 # #################################################################
 # 
 # 
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid2 <http://www.w3.org/2002/07/owl#members> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid1 <http://www.w3.org/2002/07/owl#members> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
