@@ -7,6 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:vocab="http://purl.org/vocab/vann/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:arkp="https://openark.adaptcentre.ie/Ontologies/ARKProjects#"
      xmlns:ARKCube="https://ark.adaptcentre.ie/Ontologies/ARKCube#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -28,8 +29,8 @@
         <vocab:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/ARKCube#</vocab:preferredNamespaceUri>
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
-        <dc:description xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology).</dc:description>
         <dc:contributor>Lucy McKenna</dc:contributor>
+        <dc:description xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology).</dc:description>
     </owl:Ontology>
     
 
@@ -1192,7 +1193,6 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#name -->
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#name">
-        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Holds the full name of a person, organisation or organisational unit as a string.</rdfs:comment>
@@ -1373,15 +1373,7 @@
 
     <!-- http://www.w3.org/ns/prov#Agent -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
-        <rdfs:label>Agent</rdfs:label>
-        <prov:category>starting-point</prov:category>
-        <prov:component>agents-responsibility</prov:component>
-        <prov:definition xml:lang="en">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity. </prov:definition>
-        <prov:dm rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent</prov:dm>
-        <prov:n rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent</prov:n>
-    </owl:Class>
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
     
 
 
@@ -1428,6 +1420,7 @@
         </rdfs:subClassOf>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-13T15:29:27+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">A written account in response to a question asked.</rdfs:comment>
         <rdfs:label xml:lang="en">Answer</rdfs:label>
     </owl:Class>
@@ -1440,6 +1433,7 @@
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
         <dc:creator>Ademar</dc:creator>
         <dc:date>2020-05-20T14:31:50.607524</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment>Artefacts are associated to an evidence collection. An artefact may be, for example, a dataset containing information relevant to an answer.</rdfs:comment>
         <rdfs:label>Artefact</rdfs:label>
     </owl:Class>
@@ -1470,6 +1464,7 @@
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">The cause of a risk. Used for risk description in ICC format.</rdfs:comment>
         <rdfs:label xml:lang="en">Cause</rdfs:label>
     </owl:Class>
@@ -1489,6 +1484,7 @@
         </rdfs:subClassOf>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2020-01-28T16:34:24+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">Wider circumstances of the system.</rdfs:comment>
         <rdfs:label xml:lang="en">Context</rdfs:label>
     </owl:Class>
@@ -1587,6 +1583,7 @@
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-18T13:05:52+00:00</dc:date>
         <dc:modified>2020-05-20T14:31:50.607524</dc:modified>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">Evidence is composed of artefacts and are associated with an answer.</rdfs:comment>
         <rdfs:label>Evidence</rdfs:label>
     </owl:Class>
@@ -1682,6 +1679,7 @@
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event.</rdfs:comment>
         <rdfs:label xml:lang="en">Impact</rdfs:label>
     </owl:Class>
@@ -1761,6 +1759,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date xml:lang="en">2020-12-18T13:34:27+00:00</dc:date>
         <dc:description xml:lang="en">CUBE risk analysis factor</dc:description>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
+        <rdfs:label>Loss or Gain</rdfs:label>
     </owl:Class>
     
 
@@ -1799,6 +1799,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2020-01-28T16:34:31+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">The way in which something is transformed, produced, circulated.</rdfs:comment>
         <rdfs:label xml:lang="en">Mechanism</rdfs:label>
     </owl:Class>
@@ -1889,6 +1890,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date>2021-03-10T10:21:03+00:00</dc:date>
         <rdfs:comment xml:lang="en">A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service.</rdfs:comment>
+        <rdfs:comment xml:lang="en">arkc:Organisation is a subclass of prov:Agent.</rdfs:comment>
         <rdfs:label>Organisation</rdfs:label>
     </owl:Class>
     
@@ -1924,6 +1926,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2020-01-28T16:34:39+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">The end product of a purposive activity.</rdfs:comment>
         <rdfs:label xml:lang="en">Outcome</rdfs:label>
     </owl:Class>
@@ -1943,6 +1946,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Defines a person, for example in an organisation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">arkc:Person is a subclass of prov:Agent.</rdfs:comment>
         <rdfs:label xml:lang="en">Person</rdfs:label>
     </owl:Class>
     
@@ -2037,6 +2041,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date xml:lang="en">2021-01-12T16:28:00+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">In the CUBE methodology this is an assessment of:
     Risk (or Operational risk) in the problem stage
     (Potential) mitigation of risk in the solution stage
@@ -2140,6 +2145,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-13T14:18:47+00:00</dc:date>
         <rdfs:comment xml:lang="en">A set of structured questions which seek information on a topic of interest from respndents.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:label xml:lang="en">Questionnaire</rdfs:label>
     </owl:Class>
     
@@ -2159,6 +2165,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
         <dc:description xml:lang="en">Identfied during the CUBE implement  stage.</dc:description>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:label xml:lang="en">Reliability of Gain</rdfs:label>
     </owl:Class>
     
@@ -2170,6 +2177,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-18T13:07:08+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">A written account of an activity or investigation</rdfs:comment>
         <rdfs:label xml:lang="en">Report</rdfs:label>
     </owl:Class>
@@ -2189,6 +2197,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">Risk is the effect of uncertainty on objectives. It is measured in terms of consequences and likelihood. In the context of the HSE and its services, it is any condition or circumstance which may impact on the achievement of objectives and/or have a significant impact on the day-to-day operations. This includes failing to maximise any opportunity that would help the HSE or service meet its objectives.</rdfs:comment>
         <rdfs:label xml:lang="en">Risk</rdfs:label>
     </owl:Class>
@@ -2220,6 +2229,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields.</rdfs:comment>
         <rdfs:label xml:lang="en">Risk Assessment Record (Form)</rdfs:label>
     </owl:Class>
@@ -2238,6 +2248,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
             </owl:Restriction>
         </rdfs:subClassOf>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">Desribes a risk in ICC (Impact, Cause, Context) format.</rdfs:comment>
         <rdfs:comment>Rob Brennan</rdfs:comment>
         <rdfs:label xml:lang="en">Risk Description</rdfs:label>
@@ -2464,11 +2475,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity -->
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">
-        <dc:creator>Lucy McKenna</dc:creator>
-        <rdfs:comment xml:lang="en">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data..</rdfs:comment>
-        <rdfs:label xml:lang="en">Data Entity</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
     
 
 

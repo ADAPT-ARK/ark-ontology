@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://ark.adaptcentre.ie/Ontologies/ARKProjects#"
      xml:base="https://ark.adaptcentre.ie/Ontologies/ARKProjects"
+     xmlns:arkc="https://openark.adaptcentre.ie/Ontologies/ARKCube#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -8,6 +9,7 @@
      xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:vocab="http://purl.org/vocab/vann/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:arkp="https://openark.adaptcentre.ie/Ontologies/ARKProjects#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#">
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects"/>
@@ -429,27 +431,15 @@
     
 
 
-    <!-- http://www.w3.org/ns/prov#Agent -->
+    <!-- http://www.w3.org/ns/prov#Entity -->
 
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent"/>
+    <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity"/>
     
 
 
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Person -->
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
-                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Defines a person, for example in an organisation.</rdfs:comment>
-        <rdfs:label xml:lang="en">Person</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
     
 
 
@@ -489,8 +479,10 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator>Lucy McKenna</dc:creator>
-        <rdfs:comment xml:lang="en">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data..</rdfs:comment>
+        <rdfs:comment xml:lang="en">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data on the ARK Platform.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A subclass of prov:Entity.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Entity</rdfs:label>
     </owl:Class>
     
@@ -575,8 +567,9 @@
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
-        <dc:description xml:lang="en">The user of the ARK projects application</dc:description>
-        <rdfs:comment xml:lang="en">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser</rdfs:comment>
+        <dc:description xml:lang="en">A user of the ARK Platform.</dc:description>
+        <rdfs:comment>A User is a subclass of arkc:Person.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser.</rdfs:comment>
         <rdfs:label xml:lang="en">User</rdfs:label>
     </owl:Class>
     
