@@ -18,7 +18,7 @@
         <dc:contributor>Nick McDonald</dc:contributor>
         <dc:contributor>Rob Brennan</dc:contributor>
         <dc:creator>Yalemisew Abgaz</dc:creator>
-        <dc:description xml:lang="en">A model for representing concepts, relationships and axioms for Access Risk Knowledge for organisational risk analysis and management.</dc:description>
+        <dc:description xml:lang="en">A model for representing concepts, relationships and axioms for organisational risk analysis and management on the Access Risk Knowledge (ARK) Platform.</dc:description>
         <dc:modified>18/04/2020</dc:modified>
         <dc:publisher>https://www.ark.adaptcentre.ie/</dc:publisher>
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
@@ -512,7 +512,6 @@
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment xml:lang="en">Use to classifiy the sensitivity of data e.g., a project, an analysis or part of an analysis.  Data classification values are adapted from the HSE Information Classification &amp; Handling Policy.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Classification</rdfs:label>
@@ -620,9 +619,8 @@
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
-        <dc:description xml:lang="en">A user of the ARK Platform.</dc:description>
+        <dc:description xml:lang="en">A User of the ARK Platform. A User is a subclass of arkc:Person.</dc:description>
         <rdfs:comment xml:lang="en">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser.</rdfs:comment>
-        <rdfs:comment>A User is a subclass of arkc:Person.</rdfs:comment>
         <rdfs:label xml:lang="en">User</rdfs:label>
     </owl:Class>
     
