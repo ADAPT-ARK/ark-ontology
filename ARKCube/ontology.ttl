@@ -881,7 +881,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#name
 :name rdf:type owl:DatatypeProperty ;
-      rdfs:domain <http://www.w3.org/ns/prov#Agent> ;
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
       rdfs:comment "Holds the full name of a person, organisation or organisational unit as a string."@en ;
@@ -1010,14 +1009,7 @@ rdfs:Resource rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Agent
-<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
-                                  rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
-                                  rdfs:label "Agent" ;
-                                  <http://www.w3.org/ns/prov#category> "starting-point" ;
-                                  <http://www.w3.org/ns/prov#component> "agents-responsibility" ;
-                                  <http://www.w3.org/ns/prov#definition> "An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent's activity. "@en ;
-                                  <http://www.w3.org/ns/prov#dm> "http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent"^^xsd:anyURI ;
-                                  <http://www.w3.org/ns/prov#n> "http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent"^^xsd:anyURI .
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Action
@@ -1052,7 +1044,8 @@ rdfs:Resource rdf:type owl:Class .
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
         <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:27+00:00" ;
-        rdfs:comment "A written account in response to a question asked."@en ;
+        rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                     "A written account in response to a question asked."@en ;
         rdfs:label "Answer"@en .
 
 
@@ -1061,7 +1054,8 @@ rdfs:Resource rdf:type owl:Class .
           rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
           <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
           <http://purl.org/dc/elements/1.1/date> "2020-05-20T14:31:50.607524" ;
-          rdfs:comment "Artefacts are associated to an evidence collection. An artefact may be, for example, a dataset containing information relevant to an answer." ;
+          rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                       "Artefacts are associated to an evidence collection. An artefact may be, for example, a dataset containing information relevant to an answer." ;
           rdfs:label "Artefact" .
 
 
@@ -1083,7 +1077,8 @@ rdfs:Resource rdf:type owl:Class .
                        ] ;
        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
        <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-       rdfs:comment "The cause of a risk. Used for risk description in ICC format."@en ;
+       rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                    "The cause of a risk. Used for risk description in ICC format."@en ;
        rdfs:label "Cause"@en .
 
 
@@ -1097,7 +1092,8 @@ rdfs:Resource rdf:type owl:Class .
                          ] ;
          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:24+00:00" ;
-         rdfs:comment "Wider circumstances of the system."@en ;
+         rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                      "Wider circumstances of the system."@en ;
          rdfs:label "Context"@en .
 
 
@@ -1170,7 +1166,8 @@ rdfs:Resource rdf:type owl:Class .
           <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
           <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:05:52+00:00" ;
           <http://purl.org/dc/elements/1.1/modified> "2020-05-20T14:31:50.607524" ;
-          rdfs:comment "Evidence is composed of artefacts and are associated with an answer."@en ;
+          rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                       "Evidence is composed of artefacts and are associated with an answer."@en ;
           rdfs:label "Evidence" .
 
 
@@ -1240,7 +1237,8 @@ rdfs:Resource rdf:type owl:Class .
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-        rdfs:comment "The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event."@en ;
+        rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                     "The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event."@en ;
         rdfs:label "Impact"@en .
 
 
@@ -1298,7 +1296,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
                             ] ;
             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
             <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"@en ;
-            <http://purl.org/dc/elements/1.1/description> "CUBE risk analysis factor"@en .
+            <http://purl.org/dc/elements/1.1/description> "CUBE risk analysis factor"@en ;
+            rdfs:comment "A subclass of arkp:DataEntity."@en ;
+            rdfs:label "Loss or Gain" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact
@@ -1326,7 +1326,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                            ] ;
            <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
            <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:31+00:00" ;
-           rdfs:comment "The way in which something is transformed, produced, circulated."@en ;
+           rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                        "The way in which something is transformed, produced, circulated."@en ;
            rdfs:label "Mechanism"@en .
 
 
@@ -1391,7 +1392,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
               rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
               <http://purl.org/dc/elements/1.1/date> "2021-03-10T10:21:03+00:00" ;
-              rdfs:comment "A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service."@en ;
+              rdfs:comment "A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service."@en ,
+                           "arkc:Organisation is a subclass of prov:Agent."@en ;
               rdfs:label "Organisation" .
 
 
@@ -1417,7 +1419,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                          ] ;
          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:39+00:00" ;
-         rdfs:comment "The end product of a purposive activity."@en ;
+         rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                      "The end product of a purposive activity."@en ;
          rdfs:label "Outcome"@en .
 
 
@@ -1430,7 +1433,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-        rdfs:comment "Defines a person, for example in an organisation."@en ;
+        rdfs:comment "Defines a person, for example in an organisation."@en ,
+                     "arkc:Person is a subclass of prov:Agent."@en ;
         rdfs:label "Person"@en .
 
 
@@ -1500,7 +1504,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                  ] ;
                  <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                  <http://purl.org/dc/elements/1.1/date> "2021-01-12T16:28:00+00:00"@en ;
-                 rdfs:comment """In the CUBE methodology this is an assessment of:
+                 rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                              """In the CUBE methodology this is an assessment of:
     Risk (or Operational risk) in the problem stage
     (Potential) mitigation of risk in the solution stage
     (Potential) Risk in Change in the planning stage
@@ -1575,7 +1580,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
                <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
                <http://purl.org/dc/elements/1.1/date> "2019-11-13T14:18:47+00:00" ;
-               rdfs:comment "A set of structured questions which seek information on a topic of interest from respndents."@en ;
+               rdfs:comment "A set of structured questions which seek information on a topic of interest from respndents."@en ,
+                            "A subclass of arkp:DataEntity."@en ;
                rdfs:label "Questionnaire"@en .
 
 
@@ -1590,6 +1596,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                    <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" ;
                    <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE implement  stage."@en ;
+                   rdfs:comment "A subclass of arkp:DataEntity."@en ;
                    rdfs:label "Reliability of Gain"@en .
 
 
@@ -1598,7 +1605,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
         rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
         <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:08+00:00" ;
-        rdfs:comment "A written account of an activity or investigation"@en ;
+        rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                     "A written account of an activity or investigation"@en ;
         rdfs:label "Report"@en .
 
 
@@ -1612,7 +1620,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                       ] ;
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-      rdfs:comment "Risk is the effect of uncertainty on objectives. It is measured in terms of consequences and likelihood. In the context of the HSE and its services, it is any condition or circumstance which may impact on the achievement of objectives and/or have a significant impact on the day-to-day operations. This includes failing to maximise any opportunity that would help the HSE or service meet its objectives."@en ;
+      rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                   "Risk is the effect of uncertainty on objectives. It is measured in terms of consequences and likelihood. In the context of the HSE and its services, it is any condition or circumstance which may impact on the achievement of objectives and/or have a significant impact on the day-to-day operations. This includes failing to maximise any opportunity that would help the HSE or service meet its objectives."@en ;
       rdfs:label "Risk"@en .
 
 
@@ -1635,7 +1644,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                       rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
                       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                      rdfs:comment "Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields."@en ;
+                      rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                                   "Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields."@en ;
                       rdfs:label "Risk Assessment Record (Form)"@en .
 
 
@@ -1648,7 +1658,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                    owl:onDataRange rdf:PlainLiteral
                                  ] ;
                  <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                 rdfs:comment "Desribes a risk in ICC (Impact, Cause, Context) format."@en ,
+                 rdfs:comment "A subclass of arkp:DataEntity."@en ,
+                              "Desribes a risk in ICC (Impact, Cause, Context) format."@en ,
                               "Rob Brennan" ;
                  rdfs:label "Risk Description"@en .
 
@@ -1814,10 +1825,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity
-<https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> rdf:type owl:Class ;
-                                                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                   rdfs:comment "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data.."@en ;
-                                                                   rdfs:label "Data Entity"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> rdf:type owl:Class .
 
 
 #################################################################

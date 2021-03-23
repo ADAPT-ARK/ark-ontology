@@ -297,21 +297,12 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://www.w3.org/ns/prov#Agent
-<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ,
-                                                                           [ rdf:type owl:Restriction ;
-                                                                             owl:onProperty <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> ;
-                                                                             owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                                                           ] ;
-                                                           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-                                                           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                                                           rdfs:comment "Defines a person, for example in an organisation."@en ;
-                                                           rdfs:label "Person"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> rdf:type owl:Class .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser
@@ -340,8 +331,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity
 :DataEntity rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-            rdfs:comment "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data.."@en ;
+            rdfs:comment "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data on the ARK Platform."@en ,
+                         "A subclass of prov:Entity."@en ;
             rdfs:label "Data Entity"@en .
 
 
@@ -402,8 +395,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#User
 :User rdf:type owl:Class ;
       rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> ;
-      <http://purl.org/dc/elements/1.1/description> "The user of the ARK projects application"@en ;
-      rdfs:comment "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser"@en ;
+      <http://purl.org/dc/elements/1.1/description> "A user of the ARK Platform."@en ;
+      rdfs:comment "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser."@en ,
+                   "A User is a subclass of arkc:Person." ;
       rdfs:label "User"@en .
 
 

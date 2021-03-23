@@ -1,15 +1,5 @@
 [ {
   "@id" : "_:genid1",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
-  } ]
-}, {
-  "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -57,30 +47,11 @@
   "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/ns/prov#Agent",
+  "@id" : "http://www.w3.org/ns/prov#Entity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Rob Brennan"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2020-09-29T09:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Defines a person, for example in an organisation."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Person"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/prov#Agent"
-  }, {
-    "@id" : "_:genid1"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
@@ -210,11 +181,17 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data.."
+    "@value" : "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data on the ARK Platform."
+  }, {
+    "@language" : "en",
+    "@value" : "A subclass of prov:Entity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Data Entity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/ns/prov#Entity"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal",
@@ -334,11 +311,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "The user of the ARK projects application"
+    "@value" : "A user of the ARK Platform."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser"
+    "@value" : "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser."
+  }, {
+    "@value" : "A User is a subclass of arkc:Person."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

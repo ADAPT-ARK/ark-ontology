@@ -24,10 +24,6 @@ This section provides details for each class and property defined by Access Risk
             title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Internal">Internal</a>
       </li>
       <li>
-         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
-      </li>
-      <li>
          <a href="#Personal"
             title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Personal">Personal</a>
       </li>
@@ -151,13 +147,18 @@ This section provides details for each class and property defined by Access Risk
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity</p>
       <div class="comment">
-         <span class="markdown">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data..</span>
+         <span class="markdown">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data on the ARK Platform.</span>
       </div>
       <dl>
          <dt>Authors:</dt>
          <dd>Lucy McKenna</dd>
       </dl>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Entity">entity</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#DataClassification"
@@ -195,38 +196,6 @@ This section provides details for each class and property defined by Access Risk
          <dd>
             <a href="#DataClassification"
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataClassification">Data Classification</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">
-      <h3>Person<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#Person</p>
-      <div class="comment">
-         <span class="markdown">Defines a person, for example in an organisation.</span>
-      </div>
-      <dl>
-         <dt>Date:</dt>
-         <dd>29T09:09:10+00:00/09/2020</dd>
-      </dl>
-      <dl>
-         <dt>Authors:</dt>
-         <dd>Rob Brennan</dd>
-      </dl>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <span class="dotted" title="http://www.w3.org/ns/prov#Agent">agent</span>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#User"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -465,16 +434,16 @@ This section provides details for each class and property defined by Access Risk
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#User</p>
       <div class="comment">
-         <span class="markdown">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser</span>
+         <span class="markdown">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser.</span>
       </div>
       <div class="info">
-         <span class="markdown">The user of the ARK projects application</span>
+         <span class="markdown">A user of the ARK Platform.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">person</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
