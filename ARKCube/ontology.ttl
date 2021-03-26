@@ -145,7 +145,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 rdfs:domain :Action ;
                 rdfs:range :Person ;
                 <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
                 rdfs:comment "Used to connect an action with the person assigned to perform it."@en ;
                 rdfs:label "assigned person"@en .
 
@@ -580,6 +580,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" ;
           rdfs:comment "A project analysis has different phases." ;
           rdfs:label "has stage"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation
+:hasSubOrganisation rdf:type owl:ObjectProperty ;
+                    rdfs:domain :Organisation ;
+                    rdfs:range :Organisation ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:53:10+00:00"^^xsd:dateTime ;
+                    rdfs:comment "Represents a hierarchical containment of Organisations; indicates an Organisation which is a sub-part or child of a parent Organisation."@en ;
+                    rdfs:label "has sub-organisation"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion
@@ -1397,7 +1407,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
               rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
               <http://purl.org/dc/elements/1.1/date> "2021-03-10T10:21:03+00:00" ;
-              rdfs:comment "A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service."@en ,
+              rdfs:comment "A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service. An organization can be part of or contain other organisations."@en ,
                            "arkc:Organisation is a subclass of prov:Agent."@en ;
               rdfs:label "Organisation" .
 
@@ -1837,11 +1847,6 @@ A subclass of arkp:DataEntity."""@en ;
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> rdf:type owl:Class .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#User
-<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> rdf:type owl:Class ;
-                                                             rdfs:subClassOf :Person .
-
-
 #################################################################
 #    Individuals
 #################################################################
@@ -1869,7 +1874,7 @@ A subclass of arkp:DataEntity."""@en ;
                          :Role ;
                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                 <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:03+00:00"^^xsd:dateTime ;
-                rdfs:comment "Including, but not limited to, doctors, nurses, midwives, paramedics, healthcare assistants, health & social care professionals (HSCPs), and allied health staff who work directly with patients/clients."@en ;
+                rdfs:comment "Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users."@en ;
                 rdfs:label "Frontline Staff"@en .
 
 
@@ -1878,7 +1883,7 @@ A subclass of arkp:DataEntity."""@en ;
                             :Role ;
                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                    <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:47+00:00"^^xsd:dateTime ;
-                   rdfs:comment "Responsible for managing the delivery of quality patient care and services. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en ;
+                   rdfs:comment "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en ;
                    rdfs:label "Operations Manager"@en .
 
 
@@ -1896,7 +1901,7 @@ A subclass of arkp:DataEntity."""@en ;
                         :Role ;
                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:16+00:00"^^xsd:dateTime ;
-               rdfs:comment "Directs the collection, measurement and presentation of data required for monitoring service quality and patient/client safety indicators. Assures compliance with regulations and standards."@en ;
+               rdfs:comment "Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards."@en ;
                rdfs:label "Safety Manager"@en .
 
 
@@ -1905,7 +1910,7 @@ A subclass of arkp:DataEntity."""@en ;
                       :Role ;
              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
              <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^xsd:dateTime ;
-             rdfs:comment "Manager of a particular area or group of healthcare staff within an organisation e.g. ward manager, nursing manager."@en ;
+             rdfs:comment "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en ;
              rdfs:label "Unit Manager"@en .
 
 
@@ -1928,6 +1933,30 @@ A subclass of arkp:DataEntity."""@en ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
                rdfs:comment "HSE definition. A type of Risk Assessment likelihood."@en ;
                rdfs:label "Almost Certain"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation
+:balbrigganFireStation rdf:type owl:NamedIndividual ,
+                                :Organisation ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:12:27+00:00"^^xsd:dateTime ;
+                       rdfs:label "Balbriggan Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal
+:beaconRenal rdf:type owl:NamedIndividual ,
+                      :Organisation ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:14:34+00:00"^^xsd:dateTime ;
+             rdfs:label "Beacon Renal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation
+:blanchardstownFireStation rdf:type owl:NamedIndividual ,
+                                    :Organisation ;
+                           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                           <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                           rdfs:label "Blanchardstown Fire Station"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity
@@ -1954,6 +1983,54 @@ A subclass of arkp:DataEntity."""@en ;
             rdfs:label "Compliance "@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation
+:dolphinsBarnFireStation rdf:type owl:NamedIndividual ,
+                                  :Organisation ;
+                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                         <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                         rdfs:label "Dolphins Barn Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation
+:donnybrookFireStation rdf:type owl:NamedIndividual ,
+                                :Organisation ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                       rdfs:label "Donnybrook Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade
+:dublinFireBrigade rdf:type owl:NamedIndividual ,
+                            :Organisation ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:14:43+00:00"^^xsd:dateTime ;
+                   rdfs:label "Dublin Fire Brigade"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet
+:dublinFireBrigadeHeadquartersTaraStreet rdf:type owl:NamedIndividual ,
+                                                  :Organisation ;
+                                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                                         <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                                         rdfs:label "Dublin Fire Brigade Headquarters Tara Street"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage
+:dublinFireBrigadeStoresAndGarage rdf:type owl:NamedIndividual ,
+                                           :Organisation ;
+                                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                                  <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                                  rdfs:label "Dublin Fire Brigade Stores and Garage"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation
+:dunLaoghaireFireStation rdf:type owl:NamedIndividual ,
+                                  :Organisation ;
+                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                         <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                         rdfs:label "Dún Laoghaire Fire Station"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#environment
 :environment rdf:type owl:NamedIndividual ,
                       :ImpactCategory ;
@@ -1973,6 +2050,22 @@ A subclass of arkp:DataEntity."""@en ;
                           "Financial Loss" .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation
+:finglasFireStation rdf:type owl:NamedIndividual ,
+                             :Organisation ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                    rdfs:label "Finglas Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter
+:firefighter rdf:type owl:NamedIndividual ,
+                      :Post ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:07:12+00:00"^^xsd:dateTime ;
+             rdfs:label "Firefighter"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson
 :harmToAPerson rdf:type owl:NamedIndividual ,
                         :ImpactCategory ;
@@ -1980,6 +2073,14 @@ A subclass of arkp:DataEntity."""@en ;
                <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
                rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
                rdfs:label "Harm to a Person"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant
+:healthcareAssistant rdf:type owl:NamedIndividual ,
+                              :Post ;
+                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:07:32+00:00"^^xsd:dateTime ;
+                     rdfs:label "Healthcare Assistant"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery
@@ -2010,6 +2111,14 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability
 :highViability rdf:type owl:NamedIndividual ,
                         :Viability .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation
+:kilbarrackFireStation rdf:type owl:NamedIndividual ,
+                                :Organisation ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                       rdfs:label "Kilbarrack Fire Station"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#likely
@@ -2054,6 +2163,14 @@ A subclass of arkp:DataEntity."""@en ;
                        :Viability .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor
+:medicalDoctor rdf:type owl:NamedIndividual ,
+                        :Post ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:06+00:00"^^xsd:dateTime ;
+               rdfs:label "Medical Doctor"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery
 :mediumDelivery rdf:type owl:NamedIndividual ,
                          :Delivery .
@@ -2094,6 +2211,22 @@ A subclass of arkp:DataEntity."""@en ;
          rdfs:label "monitor"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation
+:northStrandFireStation rdf:type owl:NamedIndividual ,
+                                 :Organisation ;
+                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                        <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                        rdfs:label "North Strand Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse
+:nurse rdf:type owl:NamedIndividual ,
+                :Post ;
+       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+       <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:34+00:00"^^xsd:dateTime ;
+       rdfs:label "Nurse"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People
 :objectives-People rdf:type owl:NamedIndividual ,
                             :ImpactCategory ;
@@ -2116,6 +2249,30 @@ A subclass of arkp:DataEntity."""@en ;
              <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:46:14+00:00" ;
              rdfs:comment "As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks." ;
              rdfs:label "Operational" .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#other
+:other rdf:type owl:NamedIndividual ,
+                :Post ;
+       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+       <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:46+00:00"^^xsd:dateTime ;
+       rdfs:label "Other"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic
+:paramedic rdf:type owl:NamedIndividual ,
+                    :Post ;
+           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:51+00:00"^^xsd:dateTime ;
+           rdfs:label "Paramedic"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation
+:phibsboroughFireStation rdf:type owl:NamedIndividual ,
+                                  :Organisation ;
+                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                         <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^xsd:dateTime ;
+                         rdfs:label "Phibsborough Fire Station"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#possible
@@ -2142,6 +2299,14 @@ A subclass of arkp:DataEntity."""@en ;
             rdfs:label "Rare/Remote"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation
+:rathfarnhamFireStation rdf:type owl:NamedIndividual ,
+                                 :Organisation ;
+                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                        <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^xsd:dateTime ;
+                        rdfs:label "Rathfarnham Fire Station"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience
 :serviceUserExperience rdf:type owl:NamedIndividual ,
                                 :ImpactCategory ;
@@ -2151,6 +2316,38 @@ A subclass of arkp:DataEntity."""@en ;
                        rdfs:label "Service User Experience"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation
+:skerriesFireStation rdf:type owl:NamedIndividual ,
+                              :Organisation ;
+                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^xsd:dateTime ;
+                     rdfs:label "Skerries Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner
+:socialWorkPractitioner rdf:type owl:NamedIndividual ,
+                                 :Post ;
+                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                        <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:09:01+00:00"^^xsd:dateTime ;
+                        rdfs:label "Social Work Practitioner"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#stJamesHospital
+:stJamesHospital rdf:type owl:NamedIndividual ,
+                          :Organisation ;
+                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:14:51+00:00"^^xsd:dateTime ;
+                 rdfs:label "St. James's Hospital"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#stewartsCare
+:stewartsCare rdf:type owl:NamedIndividual ,
+                       :Organisation ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:15:12+00:00"^^xsd:dateTime ;
+              rdfs:label "Stewarts Care"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic
 :strategic rdf:type owl:NamedIndividual ,
                     :RiskType ;
@@ -2158,6 +2355,30 @@ A subclass of arkp:DataEntity."""@en ;
            <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:45:13+00:00" ;
            rdfs:comment "As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan." ;
            rdfs:label "Strategic"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation
+:swordsFireStation rdf:type owl:NamedIndividual ,
+                            :Organisation ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^xsd:dateTime ;
+                   rdfs:label "Swords Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation
+:tallaghtFireStation rdf:type owl:NamedIndividual ,
+                              :Organisation ;
+                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^xsd:dateTime ;
+                     rdfs:label "Tallaght Fire Station"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#tusla
+:tusla rdf:type owl:NamedIndividual ,
+                :Organisation ;
+       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+       <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:15:27+00:00"^^xsd:dateTime ;
+       rdfs:label "Tusla"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely

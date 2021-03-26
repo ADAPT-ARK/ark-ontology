@@ -216,7 +216,7 @@
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Used to connect an action with the person assigned to perform it.</rdfs:comment>
         <rdfs:label xml:lang="en">assigned person</rdfs:label>
     </owl:ObjectProperty>
@@ -783,6 +783,19 @@
         <dc:date>2019-11-13T17:06:09+00:00</dc:date>
         <rdfs:comment>A project analysis has different phases.</rdfs:comment>
         <rdfs:label xml:lang="en">has stage</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:53:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Represents a hierarchical containment of Organisations; indicates an Organisation which is a sub-part or child of a parent Organisation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has sub-organisation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1897,7 +1910,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date>2021-03-10T10:21:03+00:00</dc:date>
-        <rdfs:comment xml:lang="en">A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A group of people who work together in an organized way for a shared purpose e.g., a hospital, a clinic or a service. An organization can be part of or contain other organisations.</rdfs:comment>
         <rdfs:comment xml:lang="en">arkc:Organisation is a subclass of prov:Agent.</rdfs:comment>
         <rdfs:label>Organisation</rdfs:label>
     </owl:Class>
@@ -2494,14 +2507,6 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#User -->
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
-    </owl:Class>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2543,7 +2548,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Role"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:46:03+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Including, but not limited to, doctors, nurses, midwives, paramedics, healthcare assistants, health &amp; social care professionals (HSCPs), and allied health staff who work directly with patients/clients.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users.</rdfs:comment>
         <rdfs:label xml:lang="en">Frontline Staff</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2555,7 +2560,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Role"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:46:47+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Responsible for managing the delivery of quality patient care and services. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE).</rdfs:comment>
         <rdfs:label xml:lang="en">Operations Manager</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2579,7 +2584,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Role"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:49:16+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Directs the collection, measurement and presentation of data required for monitoring service quality and patient/client safety indicators. Assures compliance with regulations and standards.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards.</rdfs:comment>
         <rdfs:label xml:lang="en">Safety Manager</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2591,7 +2596,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Role"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:49:54+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Manager of a particular area or group of healthcare staff within an organisation e.g. ward manager, nursing manager.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager.</rdfs:comment>
         <rdfs:label xml:lang="en">Unit Manager</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2620,6 +2625,39 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Almost Certain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:12:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Balbriggan Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:14:34+00:00</dc:date>
+        <rdfs:label xml:lang="en">Beacon Renal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Blanchardstown Fire Station</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2657,6 +2695,72 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Dolphins Barn Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Donnybrook Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:14:43+00:00</dc:date>
+        <rdfs:label xml:lang="en">Dublin Fire Brigade</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Dublin Fire Brigade Headquarters Tara Street</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Dublin Fire Brigade Stores and Garage</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Dún Laoghaire Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#environment -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#environment">
@@ -2682,6 +2786,28 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Finglas Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:07:12+00:00</dc:date>
+        <rdfs:label xml:lang="en">Firefighter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson">
@@ -2690,6 +2816,17 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
         <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
         <rdfs:label xml:lang="en">Harm to a Person</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:07:32+00:00</dc:date>
+        <rdfs:label xml:lang="en">Healthcare Assistant</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2738,6 +2875,17 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Kilbarrack Fire Station</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2805,6 +2953,17 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:08:06+00:00</dc:date>
+        <rdfs:label xml:lang="en">Medical Doctor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery">
@@ -2866,6 +3025,28 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">North Strand Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:08:34+00:00</dc:date>
+        <rdfs:label xml:lang="en">Nurse</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People">
@@ -2895,6 +3076,39 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <dc:date>2021-03-10T14:46:14+00:00</dc:date>
         <rdfs:comment>As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks.</rdfs:comment>
         <rdfs:label>Operational</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#other -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#other">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:08:46+00:00</dc:date>
+        <rdfs:label xml:lang="en">Other</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:08:51+00:00</dc:date>
+        <rdfs:label xml:lang="en">Paramedic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:13:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Phibsborough Fire Station</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2929,6 +3143,17 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:14:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Rathfarnham Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience">
@@ -2941,6 +3166,50 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:14:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Skerries Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:09:01+00:00</dc:date>
+        <rdfs:label xml:lang="en">Social Work Practitioner</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#stJamesHospital -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#stJamesHospital">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:14:51+00:00</dc:date>
+        <rdfs:label xml:lang="en">St. James&apos;s Hospital</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#stewartsCare -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#stewartsCare">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:15:12+00:00</dc:date>
+        <rdfs:label xml:lang="en">Stewarts Care</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic">
@@ -2949,6 +3218,39 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <dc:date>2021-03-10T14:45:13+00:00</dc:date>
         <rdfs:comment>As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan.</rdfs:comment>
         <rdfs:label xml:lang="en">Strategic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:14:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Swords Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T15:14:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Tallaght Fire Station</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#tusla -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#tusla">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-26T14:15:27+00:00</dc:date>
+        <rdfs:label xml:lang="en">Tusla</rdfs:label>
     </owl:NamedIndividual>
     
 
