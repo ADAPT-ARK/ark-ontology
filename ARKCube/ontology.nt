@@ -516,15 +516,6 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#comment> "A project analysis has different phases." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#label> "has stage"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:53:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a hierarchical containment of Organisations; indicates an Organisation which is a sub-part or child of a parent Organisation."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-organisation"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf> .
@@ -1613,7 +1604,7 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:31:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "A role associated with a Post."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a role that a Person can take in an organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking
@@ -1690,62 +1681,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # #################################################################
 # 
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:48:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://www.w3.org/2000/01/rdf-schema#label> "Board Member"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://www.w3.org/2000/01/rdf-schema#comment> "Plays a role in the management of activities and staff resources in an area of specialisation."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://www.w3.org/2000/01/rdf-schema#label> "Clinical Specialist"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://www.w3.org/2000/01/rdf-schema#comment> "Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://www.w3.org/2000/01/rdf-schema#label> "Frontline Staff"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://www.w3.org/2000/01/rdf-schema#label> "Operations Manager"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:33+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://www.w3.org/2000/01/rdf-schema#comment> "Responsible for all aspects of operations and for overseeing the functioning of the organisation."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation Executive"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Manager"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://www.w3.org/2000/01/rdf-schema#label> "Unit Manager"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
@@ -1765,26 +1700,12 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/2000/01/rdf-schema#label> "Almost Certain"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:12:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#balbrigganFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Balbriggan Fire Station"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:14:34+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://www.w3.org/2000/01/rdf-schema#label> "Beacon Renal"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#blanchardstownFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Blanchardstown Fire Station"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1807,47 +1728,12 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/2000/01/rdf-schema#label> "Compliance "@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dolphinsBarnFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Dolphins Barn Fire Station"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#donnybrookFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Donnybrook Fire Station"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:14:43+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade> <http://www.w3.org/2000/01/rdf-schema#label> "Dublin Fire Brigade"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeHeadquartersTaraStreet> <http://www.w3.org/2000/01/rdf-schema#label> "Dublin Fire Brigade Headquarters Tara Street"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigadeStoresAndGarage> <http://www.w3.org/2000/01/rdf-schema#label> "Dublin Fire Brigade Stores and Garage"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#dunLaoghaireFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Dún Laoghaire Fire Station"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#environment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1866,20 +1752,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://www.w3.org/2000/01/rdf-schema#label> "" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://www.w3.org/2000/01/rdf-schema#label> "Financial Loss" .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#finglasFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Finglas Fire Station"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:07:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#firefighter> <http://www.w3.org/2000/01/rdf-schema#label> "Firefighter"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
@@ -1887,13 +1759,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Harm to a Person"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:07:32+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#healthcareAssistant> <http://www.w3.org/2000/01/rdf-schema#label> "Healthcare Assistant"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1918,13 +1783,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#kilbarrackFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Kilbarrack Fire Station"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#likely
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1961,13 +1819,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowViability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowViability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:06+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#medicalDoctor> <http://www.w3.org/2000/01/rdf-schema#label> "Medical Doctor"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> .
@@ -2001,20 +1852,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/2000/01/rdf-schema#label> "monitor"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#northStrandFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "North Strand Fire Station"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:34+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#nurse> <http://www.w3.org/2000/01/rdf-schema#label> "Nurse"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
@@ -2035,27 +1872,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#operational> <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:46:14+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#operational> <http://www.w3.org/2000/01/rdf-schema#comment> "As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#operational> <http://www.w3.org/2000/01/rdf-schema#label> "Operational" .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#other
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#other> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#other> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:46+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#other> <http://www.w3.org/2000/01/rdf-schema#label> "Other"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:08:51+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#paramedic> <http://www.w3.org/2000/01/rdf-schema#label> "Paramedic"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:13:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#phibsboroughFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Phibsborough Fire Station"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#possible
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2079,13 +1895,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/2000/01/rdf-schema#label> "Rare/Remote"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rathfarnhamFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Rathfarnham Fire Station"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
@@ -2093,20 +1902,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Service User Experience"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#skerriesFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Skerries Fire Station"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:09:01+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#socialWorkPractitioner> <http://www.w3.org/2000/01/rdf-schema#label> "Social Work Practitioner"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#stJamesHospital
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#stJamesHospital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2129,20 +1924,6 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic> <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:45:13+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic> <http://www.w3.org/2000/01/rdf-schema#comment> "As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic> <http://www.w3.org/2000/01/rdf-schema#label> "Strategic"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#swordsFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Swords Fire Station"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation> <http://purl.org/dc/elements/1.1/date> "2021-03-26T15:14:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#tallaghtFireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Tallaght Fire Station"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#tusla
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#tusla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
