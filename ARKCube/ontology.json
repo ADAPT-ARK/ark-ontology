@@ -1140,14 +1140,11 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The HSE in its Integrated Risk Management Policy identified  risk impact areas to be managed."
+    "@value" : "The primary area impacted by a Risk. The HSE Risk Assessment tool identifies eight primary impact areas."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Impact Area"
-  }, {
-    "@language" : "en",
-    "@value" : "Risk Impact Category"
+    "@value" : "Primary Impact Category"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage",
@@ -1182,6 +1179,10 @@
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
     "@value" : "A type of obligation to act rating identified during the CUBE problem stage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Importance"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"
@@ -3689,13 +3690,25 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highRisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Red (High Risk)"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highSustainability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Sustainability"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Viability"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#holdsPost",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -3991,13 +4004,25 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowRisk",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Green (Low Risk)"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowSustainability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Low Sustainability"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowViability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Low Viability"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery" ]
@@ -4020,7 +4045,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks rating amber (medium risk) are trickier, in that on the one hand they are not intolerable (high risk) or acceptable (low risk). Whilst all reasonable efforts should be taken to reduce the risk to  a low rating this may not be possible given constraints within the overall system or indeed by applying the additional effort required to mitigate it further other opportunities will be lost. Such risks require consideration by the Management Team and it may be that a decision is taken to accept the risk but keep it under review (monitor) with an option to open it for further management in the future."
+    "@value" : "Amber (medium risk) risk ratings are trickier in that they are not intolerable (high risk) or acceptable (low risk). Whilst all reasonable efforts should be taken to reduce the risk to  a low rating this may not be possible given constraints within the overall system or indeed by applying the additional effort required to mitigate it further other opportunities will be lost. Such risks require consideration by the Management Team and it may be that a decision is taken to accept the risk but keep it under review (monitor) with an option to open it for further management in the future."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4028,10 +4053,18 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumSustainability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium Sustainability"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumViability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium Viability"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
