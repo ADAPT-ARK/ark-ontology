@@ -761,19 +761,6 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole -->
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Role"/>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:37:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Post to a Role associated with that Post.</rdfs:comment>
-        <rdfs:label xml:lang="en">has role</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage">
@@ -819,7 +806,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment and a healthcare division.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a risk assessment with a healthcare division.</rdfs:comment>
         <rdfs:label xml:lang="en">has division</rdfs:label>
     </owl:ObjectProperty>
     
@@ -978,11 +965,25 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2021-03-10T11:15:41+00:00</dc:date>
-        <rdfs:comment xml:lang="en">A reporting relationship between Persons in an Organisation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A reporting relationship between Persons or Posts in an Organisation.</rdfs:comment>
         <rdfs:label xml:lang="en">reports to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -995,7 +996,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2021-03-10T11:11:51+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Person to another Person working as part of the same team in an Organisation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links people who work together within an Organisation.</rdfs:comment>
         <rdfs:label xml:lang="en">works with</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1206,8 +1207,14 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#name -->
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#name">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Holds the full name of a person, organisation or organisational unit as a string.</rdfs:comment>
@@ -2383,17 +2390,6 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Role -->
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Role">
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:31:03+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Denotes a role that a Person can take in an organisation.</rdfs:comment>
-        <rdfs:label xml:lang="en">Role</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking">
@@ -2502,6 +2498,83 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:48:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies.</rdfs:comment>
+        <rdfs:label xml:lang="en">Board Member</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:47:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plays a role in the management of activities and staff resources in an area of specialisation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Clinical Specialist</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:46:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users.</rdfs:comment>
+        <rdfs:label xml:lang="en">Frontline Staff</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:46:47+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE).</rdfs:comment>
+        <rdfs:label xml:lang="en">Operations Manager</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:47:33+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Responsible for all aspects of operations and for overseeing the functioning of the organisation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organisation Executive</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:49:16+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards.</rdfs:comment>
+        <rdfs:label xml:lang="en">Safety Manager</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:49:54+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit Manager</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
