@@ -246,6 +246,8 @@ This section provides details for each class and property defined by Access Risk
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator">has collaborator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOwner"
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOwningOrganisation"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwningOrganisation">has owning organisation</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasProjectAnalysis"
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasReadOnlyUser"
@@ -275,7 +277,7 @@ This section provides details for each class and property defined by Access Risk
             <sup class="type-op" title="object property">op</sup>, <a href="#isProjectAnalysisOf"
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf">is project analysis of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isReadOnlyUserOf"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonly user of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isSubProjectOf"
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf">is subproject of</a>
             <sup class="type-op" title="object property">op</sup>
@@ -446,12 +448,14 @@ This section provides details for each class and property defined by Access Risk
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#isCollaboratorOf"
+            <a href="#hasPlatformRole"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasPlatformRole">has platform role</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isCollaboratorOf"
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf">is collaborator of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isOwnerOf"
                title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf">is owner of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#isReadOnlyUserOf"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+               title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonly user of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
@@ -490,6 +494,14 @@ This section provides details for each class and property defined by Access Risk
             title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner">has owner</a>
       </li>
       <li>
+         <a href="#hasOwningOrganisation"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwningOrganisation">has owning organisation</a>
+      </li>
+      <li>
+         <a href="#hasPlatformRole"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasPlatformRole">has platform role</a>
+      </li>
+      <li>
          <a href="#hasProjectAnalysis"
             title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis">has project analysis</a>
       </li>
@@ -515,7 +527,7 @@ This section provides details for each class and property defined by Access Risk
       </li>
       <li>
          <a href="#isReadOnlyUserOf"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonly user of</a>
       </li>
       <li>
          <a href="#isSubProjectOf"
@@ -619,6 +631,68 @@ This section provides details for each class and property defined by Access Risk
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasOwningOrganisation">
+      <h3>has owning organisation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwningOrganisation</p>
+      <div class="comment">
+         <span class="markdown">Links a project to its owning organisation.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Project"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project">Project</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation">organisation</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasPlatformRole">
+      <h3>has platform role<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasPlatformRole</p>
+      <div class="comment">
+         <span class="markdown">Links a User to their Platform Role.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#User"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">User</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasProjectAnalysis">
       <h3>has project analysis<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -679,7 +753,7 @@ This section provides details for each class and property defined by Access Risk
             <dt>is inverse of</dt>
             <dd>
                <a href="#isReadOnlyUserOf"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonlyuser of</a>
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf">is readonly user of</a>
                <sup class="type-op" title="object property">op</sup>
             </dd>
          </dl>
@@ -820,7 +894,7 @@ This section provides details for each class and property defined by Access Risk
       </div>
    </div>
    <div class="entity" id="isReadOnlyUserOf">
-      <h3>is readonlyuser of<sup class="type-op" title="object property">op</sup>
+      <h3>is readonly user of<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
@@ -1264,6 +1338,227 @@ This section provides details for each class and property defined by Access Risk
             </dd>
          </dl>
       </div>
+   </div>
+</div><div id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#boardMember"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#boardMember">Board Member</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#clinicalSpecialist"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#clinicalSpecialist">Clinical Specialist</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#frontlineStaff"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#frontlineStaff">Frontline Staff</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#operationsManager"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#operationsManager">Operations Manager</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationExecutive"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationExecutive">Organisation Executive</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#safetyManager"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#safetyManager">Safety Manager</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#unitManager"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#unitManager">Unit Manager</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#boardMember">
+      <h3>Board Member<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#boardMember</p>
+      <div class="comment">
+         <span class="markdown">Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>23T18:48:03+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#clinicalSpecialist">
+      <h3>Clinical Specialist<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#clinicalSpecialist</p>
+      <div class="comment">
+         <span class="markdown">Plays a role in the management of activities and staff resources in an area of specialisation.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>23T18:47:03+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#frontlineStaff">
+      <h3>Frontline Staff<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#frontlineStaff</p>
+      <div class="comment">
+         <span class="markdown">Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>23T18:46:03+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#operationsManager">
+      <h3>Operations Manager<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#operationsManager</p>
+      <div class="comment">
+         <span class="markdown">Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE).</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>23T18:46:47+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationExecutive">
+      <h3>Organisation Executive<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationExecutive</p>
+      <div class="comment">
+         <span class="markdown">Responsible for all aspects of operations and for overseeing the functioning of the organisation.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>23T18:47:33+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#safetyManager">
+      <h3>Safety Manager<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#safetyManager</p>
+      <div class="comment">
+         <span class="markdown">Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>23T18:49:16+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#unitManager">
+      <h3>Unit Manager<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#unitManager</p>
+      <div class="comment">
+         <span class="markdown">Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>23T18:49:54+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#PlatformRole">platform role</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

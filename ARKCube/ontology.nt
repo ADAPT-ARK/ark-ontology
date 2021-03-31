@@ -498,15 +498,6 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk to a specific risk type." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType> <http://www.w3.org/2000/01/rdf-schema#label> "has risk type" .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:37:21+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Post to a Role associated with that Post."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isStageOf> .
@@ -539,7 +530,7 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk assessment and a healthcare division."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk assessment with a healthcare division."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://www.w3.org/2000/01/rdf-schema#label> "has division"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability
@@ -642,11 +633,27 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/2000/01/rdf-schema#range> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Post> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:15:41+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A reporting relationship between Persons in an Organisation."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A reporting relationship between Persons or Posts in an Organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo> <http://www.w3.org/2000/01/rdf-schema#label> "reports to"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith
@@ -655,7 +662,7 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith> <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:11:51+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTimeStamp> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Person to another Person working as part of the same team in an Organisation."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Links people who work together within an Organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith> <http://www.w3.org/2000/01/rdf-schema#label> "works with"@en .
 # 
 # 
@@ -796,8 +803,15 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#name
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds the full name of a person, organisation or organisational unit as a string."@en .
@@ -900,11 +914,11 @@
 # http://purl.org/dc/elements/RiskContext
 <http://purl.org/dc/elements/RiskContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> .
-<http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <http://purl.org/dc/elements/RiskContext> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#comment> "The context of a Risk. Used for risk description in ICC (impact, cause, context) format. Used to relate HSE concept of the context of a risk to CUBE concept of context."@en .
 <http://purl.org/dc/elements/RiskContext> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Context"@en .
@@ -921,11 +935,11 @@ _:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Action
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action"@en .
@@ -941,11 +955,11 @@ _:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence> .
-_:genid3 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence> .
+_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://www.w3.org/2000/01/rdf-schema#comment> "A written account in response to a question asked. A subclass of arkp:DataEntity."@en .
@@ -969,11 +983,11 @@ _:genid3 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid4 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause> <http://www.w3.org/2000/01/rdf-schema#comment> "The cause of a Risk. Used for risk description in ICC (impact, cause, context) format. A subclass of arkp:DataEntity."@en .
@@ -982,11 +996,11 @@ _:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Context
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:24+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Context> <http://www.w3.org/2000/01/rdf-schema#comment> "Wider circumstances of the system. A subclass of arkp:DataEntity."@en .
@@ -994,11 +1008,11 @@ _:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Control
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid15 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> <http://www.w3.org/2000/01/rdf-schema#comment> "A mechanism, process, procedure or action which can be verified, which seeks to reduce the likelihood and/or consequence of a risk. Controls include any process, policy, device, practice, or other  actions which modify risk. They can exist or be required as additional in order to further mitigate the risk."@en .
@@ -1014,11 +1028,11 @@ _:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid7 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable> <http://www.w3.org/2000/01/rdf-schema#comment> "The output of an action."@en .
@@ -1067,18 +1081,18 @@ _:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
-_:genid10 <http://www.w3.org/2002/07/owl#hasValue> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
+_:genid19 <http://www.w3.org/2002/07/owl#hasValue> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses HSE impact table for definition."@en .
@@ -1095,11 +1109,11 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid21 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE solution stage."@en .
@@ -1116,11 +1130,11 @@ _:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid22 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> <http://www.w3.org/2000/01/rdf-schema#comment> "The imact of a Risk. Used for risk description in ICC (impact, cause, context) format. The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event. A subclass of arkp:DataEntity."@en .
@@ -1167,11 +1181,11 @@ _:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid23 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> <http://purl.org/dc/elements/1.1/description> "CUBE risk analysis factor"@en .
@@ -1180,57 +1194,7 @@ _:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
-_:genid17 <http://www.w3.org/2002/07/owl#hasValue> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined by HSE impact table."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid19 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:31+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#comment> "The way in which something is transformed, produced, circulated. A subclass of arkp:DataEntity."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#label> "Mechanism"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
-_:genid20 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
-_:genid22 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined by HSE impact table."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
 _:genid24 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid27 .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
@@ -1239,9 +1203,59 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid26 .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
-_:genid26 <http://www.w3.org/2002/07/owl#hasValue> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid26 <http://www.w3.org/2002/07/owl#hasValue> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined by HSE impact table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid28 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:31+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#comment> "The way in which something is transformed, produced, circulated. A subclass of arkp:DataEntity."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> <http://www.w3.org/2000/01/rdf-schema#label> "Mechanism"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
+_:genid31 <http://www.w3.org/2002/07/owl#hasValue> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined by HSE impact table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
+_:genid35 <http://www.w3.org/2002/07/owl#hasValue> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Defined by HSE impact table."@en .
@@ -1249,18 +1263,18 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
-_:genid28 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid31 .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
-_:genid30 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
+_:genid39 <http://www.w3.org/2002/07/owl#hasValue> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Uses HSE impact table definition."@en .
@@ -1285,10 +1299,10 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid32 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid41 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> <http://purl.org/dc/elements/1.1/date> "2020-09-29t09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit that part of an Organisation, e.g., a ward, department, branch or statutory body,  and that only has full recognition within the context of that Organisation. In particular the unit would not be regarded as a legal entity in its own right."@en .
@@ -1297,10 +1311,10 @@ _:genid32 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid33 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid42 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:39+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The end product of a purposive activity. A subclass of arkp:DataEntity."@en .
@@ -1309,10 +1323,10 @@ _:genid33 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid34 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid43 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a person, for example in an organisation."@en .
@@ -1337,11 +1351,11 @@ _:genid34 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid35 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid35 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid44 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> <http://purl.org/dc/elements/1.1/description> "CUBE Problem Stage. Loss is the fact of no longer having something or having less of it than before."@en .
@@ -1373,11 +1387,11 @@ _:genid35 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> .
-_:genid36 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid36 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> .
+_:genid45 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid45 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://purl.org/dc/elements/1.1/date> "2021-01-12T16:28:00+00:00"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "In the CUBE methodology this is an assessment of:\n    Risk (or Operational risk) in the problem stage.\n    (Potential) mitigation of risk in the solution stage.\n    (Potential) Risk in Change in the planning stage.\n    Risk in Implementation (actual risk in change) / Implementation risk in the implementation stage.\n    Residual risk (verified following implementation) in the verify stage.\n\nA subclass of arkp:DataEntity."@en .
@@ -1386,15 +1400,15 @@ _:genid36 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
-_:genid37 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid38 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid38 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
+_:genid46 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid47 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid47 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE solution stage."@en .
@@ -1403,15 +1417,15 @@ _:genid38 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
-_:genid39 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid40 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid40 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
+_:genid48 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid49 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid49 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE plan stage."@en .
@@ -1420,21 +1434,21 @@ _:genid40 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
-_:genid41 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
+_:genid50 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating> <http://www.w3.org/2000/01/rdf-schema#label> "Projected Risk Rating"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Question
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> .
-_:genid42 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid42 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> .
+_:genid51 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:20:23+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://www.w3.org/2000/01/rdf-schema#comment> "A question is an expression used to request information about a specific topic. A question may be asked in various forms and may seek different kinds of answers."@en .
@@ -1451,11 +1465,11 @@ _:genid42 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid43 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid43 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid52 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE implement  stage."@en .
@@ -1473,11 +1487,11 @@ _:genid43 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> .
-_:genid44 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid44 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> .
+_:genid53 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid53 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk is the effect of uncertainty on objectives. It is measured in terms of consequences and likelihood. In the context of the HSE and its services, it is any condition or circumstance which may impact on the achievement of objectives and/or have a significant impact on the day-to-day operations. This includes failing to maximise any opportunity that would help the HSE or service meet its objectives. A subclass of arkp:DataEntity."@en .
@@ -1486,11 +1500,11 @@ _:genid44 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance> .
-_:genid45 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid45 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance> .
+_:genid54 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid54 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessment> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE problem stage."@en .
@@ -1507,11 +1521,11 @@ _:genid45 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
-_:genid46 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid46 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> .
+_:genid55 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid55 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Desribes a risk in ICC (Impact, Cause, Context) format. A subclass of arkp:DataEntity."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Rob Brennan" .
@@ -1520,11 +1534,11 @@ _:genid46 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance> .
-_:genid47 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid47 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance> .
+_:genid56 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid56 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE plan stage."@en .
@@ -1533,11 +1547,11 @@ _:genid47 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability> .
-_:genid48 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid48 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability> .
+_:genid57 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid57 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskInChangeAssessment> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE plan stage."@en .
@@ -1546,11 +1560,11 @@ _:genid48 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEfficacy> .
-_:genid49 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid49 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEfficacy> .
+_:genid58 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE solution stage."@en .
@@ -1558,16 +1572,16 @@ _:genid49 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
-_:genid50 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid50 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
-_:genid51 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid51 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#int> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected> .
+_:genid59 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid59 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> .
+_:genid60 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "0"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid60 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The estimated level of risk taking into consideration the existing controls in place. Defined by cross-referencing the impact and likelihood in the risk matrix."@en .
@@ -1590,22 +1604,15 @@ _:genid51 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance> .
-_:genid52 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance> .
+_:genid61 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://purl.org/dc/elements/1.1/description> "Identfied during the CUBE plan stage."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Verification Assessment"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#Role
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:31:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a role that a Person can take in an organisation."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1680,6 +1687,55 @@ _:genid52 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # #
 # #################################################################
 # 
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:48:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember> <http://www.w3.org/2000/01/rdf-schema#label> "Board Member"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://www.w3.org/2000/01/rdf-schema#comment> "Plays a role in the management of activities and staff resources in an area of specialisation."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist> <http://www.w3.org/2000/01/rdf-schema#label> "Clinical Specialist"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://www.w3.org/2000/01/rdf-schema#comment> "Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff> <http://www.w3.org/2000/01/rdf-schema#label> "Frontline Staff"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager> <http://www.w3.org/2000/01/rdf-schema#label> "Operations Manager"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:33+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://www.w3.org/2000/01/rdf-schema#comment> "Responsible for all aspects of operations and for overseeing the functioning of the organisation."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation Executive"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Manager"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager> <http://www.w3.org/2000/01/rdf-schema#label> "Unit Manager"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

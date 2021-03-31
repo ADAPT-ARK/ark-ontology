@@ -562,16 +562,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:label "has risk type" .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRole
-:hasRole rdf:type owl:ObjectProperty ;
-         rdfs:domain :Post ;
-         rdfs:range :Role ;
-         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-         <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:37:21+00:00"^^xsd:dateTime ;
-         rdfs:comment "Links a Post to a Role associated with that Post."@en ;
-         rdfs:label "has role"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
           owl:inverseOf :isStageOf ;
@@ -607,7 +597,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:range :OrganisationalUnit ;
               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-              rdfs:comment "Links a risk assessment and a healthcare division."@en ;
+              rdfs:comment "Links a risk assessment with a healthcare division."@en ;
               rdfs:label "has division"@en .
 
 
@@ -724,11 +714,19 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo
 :reportsTo rdf:type owl:ObjectProperty ;
-           rdfs:domain :Person ;
-           rdfs:range :Person ;
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Person
+                                       :Post
+                                     )
+                       ] ;
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :Person
+                                      :Post
+                                    )
+                      ] ;
            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
            <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:15:41+00:00"^^xsd:dateTimeStamp ;
-           rdfs:comment "A reporting relationship between Persons in an Organisation."@en ;
+           rdfs:comment "A reporting relationship between Persons or Posts in an Organisation."@en ;
            rdfs:label "reports to"@en .
 
 
@@ -738,7 +736,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:range :Person ;
            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
            <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:11:51+00:00"^^xsd:dateTimeStamp ;
-           rdfs:comment "Links a Person to another Person working as part of the same team in an Organisation."@en ;
+           rdfs:comment "Links people who work together within an Organisation."@en ;
            rdfs:label "works with"@en .
 
 
@@ -891,8 +889,11 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#name
 :name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Organisation ,
-                  :Person ;
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Organisation
+                                  :Person
+                                )
+                  ] ;
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
       rdfs:comment "Holds the full name of a person, organisation or organisational unit as a string."@en ;
@@ -1755,14 +1756,6 @@ A subclass of arkp:DataEntity."""@en ;
                             rdfs:label "Risk Verification Assessment"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Role
-:Role rdf:type owl:Class ;
-      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-      <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:31:03+00:00"^^xsd:dateTime ;
-      rdfs:comment "Denotes a role that a Person can take in an organisation."@en ;
-      rdfs:label "Role"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#SenseMaking
 :SenseMaking rdf:type owl:Class ;
              rdfs:subClassOf :AspectOfReality ;
@@ -1840,6 +1833,62 @@ A subclass of arkp:DataEntity."""@en ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#BoardMember
+:BoardMember rdf:type owl:NamedIndividual ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:48:03+00:00"^^xsd:dateTime ;
+             rdfs:comment "Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies."@en ;
+             rdfs:label "Board Member"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ClinicalSpecialist
+:ClinicalSpecialist rdf:type owl:NamedIndividual ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:03+00:00"^^xsd:dateTime ;
+                    rdfs:comment "Plays a role in the management of activities and staff resources in an area of specialisation."@en ;
+                    rdfs:label "Clinical Specialist"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#FrontlineStaff
+:FrontlineStaff rdf:type owl:NamedIndividual ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:03+00:00"^^xsd:dateTime ;
+                rdfs:comment "Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users."@en ;
+                rdfs:label "Frontline Staff"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#OperationsManager
+:OperationsManager rdf:type owl:NamedIndividual ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:47+00:00"^^xsd:dateTime ;
+                   rdfs:comment "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en ;
+                   rdfs:label "Operations Manager"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation_Executive
+:Organisation_Executive rdf:type owl:NamedIndividual ;
+                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                        <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:33+00:00"^^xsd:dateTime ;
+                        rdfs:comment "Responsible for all aspects of operations and for overseeing the functioning of the organisation."@en ;
+                        rdfs:label "Organisation Executive"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#SafetyManager
+:SafetyManager rdf:type owl:NamedIndividual ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:16+00:00"^^xsd:dateTime ;
+               rdfs:comment "Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards."@en ;
+               rdfs:label "Safety Manager"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#UnitManager
+:UnitManager rdf:type owl:NamedIndividual ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^xsd:dateTime ;
+             rdfs:comment "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en ;
+             rdfs:label "Unit Manager"@en .
+
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation
 :adversePublicity-Reputation rdf:type owl:NamedIndividual ,
