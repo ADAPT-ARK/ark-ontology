@@ -111,7 +111,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasPlatformRole
 :hasPlatformRole rdf:type owl:ObjectProperty ;
                  rdfs:domain :User ;
-                 rdfs:range :PlatformRole ;
                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                  rdfs:comment "Links a User to their Platform Role."@en ;
                  rdfs:label "has platform role"@en .
@@ -429,67 +428,60 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #    Individuals
 #################################################################
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#boardMember
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#boardMember> rdf:type owl:NamedIndividual ,
-                                                                         :PlatformRole ;
-                                                                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:48:03+00:00"^^xsd:dateTime ;
-                                                                rdfs:comment "Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies."@en ;
-                                                                rdfs:label "Board Member"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#boardMember
+:boardMember rdf:type owl:NamedIndividual ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:48:03+00:00"^^xsd:dateTime ;
+             rdfs:comment "Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies."@en ;
+             rdfs:label "Board Member"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#clinicalSpecialist
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#clinicalSpecialist> rdf:type owl:NamedIndividual ,
-                                                                                :PlatformRole ;
-                                                                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                       <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:03+00:00"^^xsd:dateTime ;
-                                                                       rdfs:comment "Plays a role in the management of activities and staff resources in an area of specialisation."@en ;
-                                                                       rdfs:label "Clinical Specialist"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#clinicalSpecialist
+:clinicalSpecialist rdf:type owl:NamedIndividual ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:03+00:00"^^xsd:dateTime ;
+                    rdfs:comment "Plays a role in the management of activities and staff resources in an area of specialisation."@en ;
+                    rdfs:label "Clinical Specialist"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#frontlineStaff
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#frontlineStaff> rdf:type owl:NamedIndividual ,
-                                                                            :PlatformRole ;
-                                                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                   <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:03+00:00"^^xsd:dateTime ;
-                                                                   rdfs:comment "Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users."@en ;
-                                                                   rdfs:label "Frontline Staff"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#frontlineStaff
+:frontlineStaff rdf:type owl:NamedIndividual ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:03+00:00"^^xsd:dateTime ;
+                rdfs:comment "Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users."@en ;
+                rdfs:label "Frontline Staff"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#operationsManager
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#operationsManager> rdf:type owl:NamedIndividual ,
-                                                                               :PlatformRole ;
-                                                                      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                      <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:47+00:00"^^xsd:dateTime ;
-                                                                      rdfs:comment "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en ;
-                                                                      rdfs:label "Operations Manager"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#operationsManager
+:operationsManager rdf:type owl:NamedIndividual ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:47+00:00"^^xsd:dateTime ;
+                   rdfs:comment "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en ;
+                   rdfs:label "Operations Manager"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationExecutive
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationExecutive> rdf:type owl:NamedIndividual ,
-                                                                                   :PlatformRole ;
-                                                                          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                          <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:33+00:00"^^xsd:dateTime ;
-                                                                          rdfs:comment "Responsible for all aspects of operations and for overseeing the functioning of the organisation."@en ;
-                                                                          rdfs:label "Organisation Executive"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#organisationExecutive
+:organisationExecutive rdf:type owl:NamedIndividual ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:33+00:00"^^xsd:dateTime ;
+                       rdfs:comment "Responsible for all aspects of operations and for overseeing the functioning of the organisation."@en ;
+                       rdfs:label "Organisation Executive"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#safetyManager
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#safetyManager> rdf:type owl:NamedIndividual ,
-                                                                           :PlatformRole ;
-                                                                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                  <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:16+00:00"^^xsd:dateTime ;
-                                                                  rdfs:comment "Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards."@en ;
-                                                                  rdfs:label "Safety Manager"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#safetyManager
+:safetyManager rdf:type owl:NamedIndividual ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:16+00:00"^^xsd:dateTime ;
+               rdfs:comment "Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards."@en ;
+               rdfs:label "Safety Manager"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unitManager
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unitManager> rdf:type owl:NamedIndividual ,
-                                                                         :PlatformRole ;
-                                                                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                                                                <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^xsd:dateTime ;
-                                                                rdfs:comment "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en ;
-                                                                rdfs:label "Unit Manager"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#unitManager
+:unitManager rdf:type owl:NamedIndividual ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^xsd:dateTime ;
+             rdfs:comment "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en ;
+             rdfs:label "Unit Manager"@en .
 
 
 #################################################################
