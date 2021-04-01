@@ -514,6 +514,18 @@
     "@value" : "1"
   } ]
 }, {
+  "@id" : "_:genid62",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+    }, {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+    }, {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#User"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
@@ -1584,6 +1596,20 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An individual or collaborative enterprise that is carefully planned to achieve a particular aim."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -2233,7 +2259,6 @@
     "@value" : "Almost Certain"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency" : [ {
-    "@language" : "en",
     "@value" : "At least monthly"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
@@ -2419,7 +2444,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "closed"
+    "@value" : "Closed"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#comment",
@@ -2456,6 +2481,23 @@
     "@value" : "Compliance "
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The status of the data. Deleted when the data is deleted by the user."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "data status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -2484,10 +2526,19 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The person who designed the project analysis and the cube questionnaire."
+  }, {
+    "@language" : "en",
+    "@value" : "The user who designed the project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "design by"
+    "@value" : "designed by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade",
@@ -2525,6 +2576,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The efficacy of the solution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "efficacy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#environment",
@@ -3216,6 +3284,26 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Project with all the analysis done on the Project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has project analysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -3597,6 +3685,26 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isStageOf"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relate a Project with its subproject. A Project can have one or more subprojects within it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has subproject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -3681,13 +3789,25 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Delivery"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Efficacy"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High Importance"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ],
@@ -3731,6 +3851,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#importance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Importance of the problem under analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "importance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#informant",
@@ -3891,6 +4028,26 @@
     "@value" : "is outcome of"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a Project Analysis with its Project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is project analysis of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@value" : "hasProjectAnalysis"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -3943,6 +4100,26 @@
     "@value" : "is stage of"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a project with its parent Project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is subproject of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@value" : "hasSubProject"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -3982,7 +4159,6 @@
     "@value" : "Likely"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency" : [ {
-    "@language" : "en",
     "@value" : "Bimonthly"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
@@ -3995,13 +4171,25 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Low Delivery"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Low Efficacy"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Low Importance"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#lowRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ],
@@ -4025,13 +4213,25 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium Delivery"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium Efficacy"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Medium Importance"
+  } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumRisk",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ],
@@ -4070,7 +4270,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "monitor"
+    "@value" : "Monitor"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#name",
@@ -4084,6 +4284,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Holds the full name of a person, organisation or organisational unit as a string."
+  }, {
+    "@language" : "en",
+    "@value" : "The name of a project"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "_:genid7"
@@ -4091,6 +4294,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People",
@@ -4114,7 +4320,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "open"
+    "@value" : "Open"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#operational",
@@ -4130,6 +4336,23 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Operational"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name of the organisation "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "organisation name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#possible",
@@ -4151,7 +4374,6 @@
     "@value" : "Possible"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency" : [ {
-    "@language" : "en",
     "@value" : "Occurs every 1-2 years"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
@@ -4161,6 +4383,23 @@
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Potential loss due to the problem."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "potential loss"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#priority",
@@ -4205,6 +4444,74 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name of a Project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "project name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The current status of a project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "project status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The gain achieved by the project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "projected gain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The projected value of the project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "projected value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -4241,7 +4548,6 @@
     "@value" : "Rare/Remote"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency" : [ {
-    "@language" : "en",
     "@value" : "Occurs every 5 years"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
@@ -4508,7 +4814,6 @@
     "@value" : "Unlikely"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency" : [ {
-    "@language" : "en",
     "@value" : "Occurs every 2-3 years"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
@@ -4518,6 +4823,23 @@
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "2"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#version",
@@ -4535,6 +4857,23 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "version"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#viability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Viability of the proposed solution."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "viablity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith",
@@ -4562,5 +4901,22 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Project Analysis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#User",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

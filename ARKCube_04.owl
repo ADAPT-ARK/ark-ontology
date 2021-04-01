@@ -1,17 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://openark.adaptcentre.ie/Ontologies/ARKCube#"
      xml:base="https://openark.adaptcentre.ie/Ontologies/ARKCube"
+     xmlns:arkc="https://openark.adaptcentre.ie/Ontologies/ARKCube#:"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:vocab="http://purl.org/vocab/vann/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:arkp="https://openark.adaptcentre.ie/Ontologies/ARKProjects#"
+     xmlns:arkp="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#"
      xmlns:ARKCube="https://ark.adaptcentre.ie/Ontologies/ARKCube#"
      xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
-     xmlns:ARKCube1="https://openark.adaptcentre.ie/Ontologies/ARKCube#:">
+     xmlns:ARKCube1="https://openark.adaptcentre.ie/Ontologies/ARKCube#">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#">
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube"/>
         <dc:contributor xml:lang="en">Natalia Duda</dc:contributor>
@@ -550,6 +551,18 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis">
+        <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:comment xml:lang="en">Relates a Project with all the analysis done on the Project.</rdfs:comment>
+        <rdfs:label xml:lang="en">has project analysis</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain">
@@ -774,6 +787,19 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject">
+        <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:comment xml:lang="en">Relate a Project with its subproject. A Project can have one or more subprojects within it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has subproject</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion">
@@ -927,6 +953,18 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:comment xml:lang="en">Relates a Project Analysis with its Project.</rdfs:comment>
+        <rdfs:label xml:lang="en">is project analysis of</rdfs:label>
+        <owl:inverseOf>hasProjectAnalysis</owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf">
@@ -945,6 +983,18 @@
         <dc:date>2020-01-27T16:14:48+00:00</dc:date>
         <rdfs:comment>A project analysis has different phases.</rdfs:comment>
         <rdfs:label xml:lang="en">is stage of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:comment xml:lang="en">Relates a project with its parent Project.</rdfs:comment>
+        <rdfs:label xml:lang="en">is subproject of</rdfs:label>
+        <owl:inverseOf>hasSubProject</owl:inverseOf>
     </owl:ObjectProperty>
     
 
@@ -1108,6 +1158,17 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The status of the data. Deleted when the data is deleted by the user.</rdfs:comment>
+        <rdfs:label xml:lang="en">data status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate -->
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate">
@@ -1122,10 +1183,13 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy -->
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-13T17:02:27+00:00</dc:date>
         <rdfs:comment xml:lang="en">The person who designed the project analysis and the cube questionnaire.</rdfs:comment>
-        <rdfs:label xml:lang="en">design by</rdfs:label>
+        <rdfs:comment xml:lang="en">The user who designed the project.</rdfs:comment>
+        <rdfs:label xml:lang="en">designed by</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1139,6 +1203,17 @@
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Used to link an action with the date it is due.</rdfs:comment>
         <rdfs:label xml:lang="en">due date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The efficacy of the solution.</rdfs:comment>
+        <rdfs:label xml:lang="en">efficacy</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1182,6 +1257,17 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#importance -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#importance">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Importance of the problem under analysis.</rdfs:comment>
+        <rdfs:label xml:lang="en">importance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#informant -->
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#informant">
@@ -1215,10 +1301,34 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Holds the full name of a person, organisation or organisational unit as a string.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The name of a project</rdfs:comment>
         <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The name of the organisation </rdfs:comment>
+        <rdfs:label xml:lang="en">organisation name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Potential loss due to the problem.</rdfs:comment>
+        <rdfs:label xml:lang="en">potential loss</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1243,6 +1353,50 @@
         <dc:date xml:lang="en">2020-09-23T09:53:21+00:00</dc:date>
         <rdfs:comment xml:lang="en">Defines the probability of a risk likelihood category.</rdfs:comment>
         <rdfs:label xml:lang="en">probability</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The name of a Project.</rdfs:comment>
+        <rdfs:label xml:lang="en">project name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The current status of a project</rdfs:comment>
+        <rdfs:label xml:lang="en">project status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The gain achieved by the project.</rdfs:comment>
+        <rdfs:label xml:lang="en">projected gain</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">The projected value of the project.</rdfs:comment>
+        <rdfs:label xml:lang="en">projected value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1341,6 +1495,17 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#value -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#value">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#version -->
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#version">
@@ -1348,6 +1513,17 @@
         <dc:date>2019-11-13T17:02:55+00:00</dc:date>
         <rdfs:comment xml:lang="en">The version of the project.</rdfs:comment>
         <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#viability -->
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#viability">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:comment xml:lang="en">Viability of the proposed solution.</rdfs:comment>
+        <rdfs:label xml:lang="en">viablity</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2043,6 +2219,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Project -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
+        <rdfs:comment xml:lang="en">An individual or collaborative enterprise that is carefully planned to achieve a particular aim.</rdfs:comment>
+        <rdfs:label xml:lang="en">Project</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">
@@ -2490,6 +2676,22 @@ A subclass of arkp:DataEntity.</rdfs:comment>
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
+        <rdfs:comment xml:lang="en">Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc</rdfs:comment>
+        <rdfs:label xml:lang="en">Project Analysis</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKProjects#User -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -2517,7 +2719,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
-        <actualFrequency xml:lang="en">At least monthly</actualFrequency>
+        <actualFrequency>At least monthly</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Rob Brennan</dc:creator>
@@ -2555,7 +2757,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#closed">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus"/>
-        <rdfs:label xml:lang="en">closed</rdfs:label>
+        <rdfs:label xml:lang="en">Closed</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2624,6 +2826,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"/>
+        <rdfs:label xml:lang="en">High Delivery</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2632,6 +2835,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy"/>
+        <rdfs:label xml:lang="en">High Efficacy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2640,6 +2844,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance"/>
+        <rdfs:label xml:lang="en">High Importance</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2675,7 +2880,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#likely">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
-        <actualFrequency xml:lang="en">Bimonthly</actualFrequency>
+        <actualFrequency>Bimonthly</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.75</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Rob Brennan</dc:creator>
@@ -2690,6 +2895,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"/>
+        <rdfs:label xml:lang="en">Low Delivery</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2698,6 +2904,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy"/>
+        <rdfs:label xml:lang="en">Low Efficacy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2706,6 +2913,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance"/>
+        <rdfs:label xml:lang="en">Low Importance</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2741,6 +2949,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"/>
+        <rdfs:label xml:lang="en">Medium Delivery</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2749,6 +2958,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy"/>
+        <rdfs:label xml:lang="en">Medium Efficacy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2757,6 +2967,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance"/>
+        <rdfs:label xml:lang="en">Medium Importance</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2795,7 +3006,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus"/>
-        <rdfs:label xml:lang="en">monitor</rdfs:label>
+        <rdfs:label xml:lang="en">Monitor</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2816,7 +3027,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#open">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus"/>
-        <rdfs:label xml:lang="en">open</rdfs:label>
+        <rdfs:label xml:lang="en">Open</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2837,7 +3048,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#possible">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
-        <actualFrequency xml:lang="en">Occurs every 1-2 years</actualFrequency>
+        <actualFrequency>Occurs every 1-2 years</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
@@ -2852,7 +3063,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
-        <actualFrequency xml:lang="en">Occurs every 5 years</actualFrequency>
+        <actualFrequency>Occurs every 5 years</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
@@ -2924,7 +3135,7 @@ A subclass of arkp:DataEntity.</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
-        <actualFrequency xml:lang="en">Occurs every 2-3 years</actualFrequency>
+        <actualFrequency>Occurs every 2-3 years</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
@@ -2932,6 +3143,25 @@ A subclass of arkp:DataEntity.</rdfs:comment>
         <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Unlikely</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+            <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis"/>
+            <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
