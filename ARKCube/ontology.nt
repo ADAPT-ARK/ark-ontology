@@ -355,6 +355,14 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasPrimaryImpactArea> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE risk assessment form."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasPrimaryImpactArea> <http://www.w3.org/2000/01/rdf-schema#label> "has primary impact category"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Project with all the analysis done on the Project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "has project analysis"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> .
@@ -507,6 +515,15 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#comment> "A project analysis has different phases." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#label> "has stage"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relate a Project with its subproject. A Project can have one or more subprojects within it."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#label> "has subproject"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf> .
@@ -608,6 +625,14 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents and links  the outcome of the phases of a project." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isOutcomeOf> <http://www.w3.org/2000/01/rdf-schema#label> "is outcome of"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Project Analysis with its Project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf> <http://www.w3.org/2000/01/rdf-schema#label> "is project analysis of"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf> <http://www.w3.org/2002/07/owl#inverseOf> "hasProjectAnalysis" .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
@@ -621,6 +646,14 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isStageOf> <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:14:48+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isStageOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A project analysis has different phases." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isStageOf> <http://www.w3.org/2000/01/rdf-schema#label> "is stage of"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a project with its parent Project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf> <http://www.w3.org/2000/01/rdf-schema#label> "is subproject of"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf> <http://www.w3.org/2002/07/owl#inverseOf> "hasSubProject" .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -737,6 +770,13 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#comment> <http://www.w3.org/2000/01/rdf-schema#comment> "A comment provided about the project."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of the data. Deleted when the data is deleted by the user."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus> <http://www.w3.org/2000/01/rdf-schema#label> "data status"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
@@ -746,10 +786,13 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The person who designed the project analysis and the cube questionnaire."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/2000/01/rdf-schema#label> "design by"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The user who designed the project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/2000/01/rdf-schema#label> "designed by"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -759,6 +802,13 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to link an action with the date it is due."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate> <http://www.w3.org/2000/01/rdf-schema#label> "due date"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy> <http://www.w3.org/2000/01/rdf-schema#comment> "The efficacy of the solution."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy> <http://www.w3.org/2000/01/rdf-schema#label> "efficacy"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -787,6 +837,13 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#file> <http://www.w3.org/2000/01/rdf-schema#comment> "Path to file" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#file> <http://www.w3.org/2000/01/rdf-schema#label> "file" .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#importance
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#importance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#importance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#importance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#importance> <http://www.w3.org/2000/01/rdf-schema#comment> "Importance of the problem under analysis."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#importance> <http://www.w3.org/2000/01/rdf-schema#label> "importance"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#informant
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#informant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#informant> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
@@ -812,10 +869,26 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds the full name of a person, organisation or organisational unit as a string."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a project"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of the organisation "@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName> <http://www.w3.org/2000/01/rdf-schema#label> "organisation name"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss> <http://www.w3.org/2000/01/rdf-schema#comment> "Potential loss due to the problem."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss> <http://www.w3.org/2000/01/rdf-schema#label> "potential loss"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#priority
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#priority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -832,6 +905,34 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the probability of a risk likelihood category."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a Project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName> <http://www.w3.org/2000/01/rdf-schema#label> "project name"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The current status of a project"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus> <http://www.w3.org/2000/01/rdf-schema#label> "project status"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain> <http://www.w3.org/2000/01/rdf-schema#comment> "The gain achieved by the project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain> <http://www.w3.org/2000/01/rdf-schema#label> "projected gain"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The projected value of the project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue> <http://www.w3.org/2000/01/rdf-schema#label> "projected value"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -895,12 +996,26 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Used for textual description of a risk impact or other type."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#label> "textual description"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#value
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#value> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#value> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#value> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#version
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#version> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#version> <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:55+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#version> <http://www.w3.org/2000/01/rdf-schema#comment> "The version of the project."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#viability
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#viability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#viability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#viability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#viability> <http://www.w3.org/2000/01/rdf-schema#comment> "Viability of the proposed solution."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#viability> <http://www.w3.org/2000/01/rdf-schema#label> "viablity"@en .
 # 
 # 
 # 
@@ -1384,6 +1499,12 @@ _:genid44 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence> <http://www.w3.org/2000/01/rdf-schema#comment> "The key activity of the operation; a sequence of activities and stages through which an initial state is transformed into the final state"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Process/Sequence"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#Project
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual or collaborative enterprise that is carefully planned to achieve a particular aim."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
@@ -1679,6 +1800,15 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Project Analysis"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKProjects#User
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # 
 # 
 # #################################################################
@@ -1699,7 +1829,7 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "At least monthly"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "At least monthly" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.99"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
@@ -1725,7 +1855,7 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#closed
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/2000/01/rdf-schema#label> "closed"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/2000/01/rdf-schema#label> "Closed"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1770,14 +1900,17 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "High Delivery"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy> <http://www.w3.org/2000/01/rdf-schema#label> "High Efficacy"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance> <http://www.w3.org/2000/01/rdf-schema#label> "High Importance"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highRisk
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1797,7 +1930,7 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#likely
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Bimonthly"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Bimonthly" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.75"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
@@ -1808,14 +1941,17 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Low Delivery"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy> <http://www.w3.org/2000/01/rdf-schema#label> "Low Efficacy"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Low Importance"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#lowRisk
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1835,14 +1971,17 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Delivery"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Efficacy"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance> <http://www.w3.org/2000/01/rdf-schema#label> "Medium Importance"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumRisk
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1865,7 +2004,7 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/2000/01/rdf-schema#label> "monitor"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/2000/01/rdf-schema#label> "Monitor"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1878,7 +2017,7 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#open
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#open> <http://www.w3.org/2000/01/rdf-schema#label> "open"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#open> <http://www.w3.org/2000/01/rdf-schema#label> "Open"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#operational
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#operational> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1891,7 +2030,7 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#possible
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 1-2 years"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 1-2 years" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.5"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
@@ -1902,7 +2041,7 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 5 years"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 5 years" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.01"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
@@ -1950,12 +2089,33 @@ _:genid61 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.i
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 2-3 years"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 2-3 years" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.1"^^<http://www.w3.org/2001/XMLSchema#float> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://www.w3.org/2000/01/rdf-schema#label> "Unlikely"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid62 <http://www.w3.org/2002/07/owl#members> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

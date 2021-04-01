@@ -402,6 +402,15 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                       rdfs:label "has primary impact category"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis
+:hasProjectAnalysis rdf:type owl:ObjectProperty ;
+                    owl:inverseOf :isProjectAnalysisOf ;
+                    rdfs:domain :Project ;
+                    rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+                    rdfs:comment "Relates a Project with all the analysis done on the Project."@en ;
+                    rdfs:label "has project analysis"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain
 :hasProjectedGain rdf:type owl:ObjectProperty ;
                   rdfs:domain :RiskMitigation ;
@@ -572,6 +581,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           rdfs:label "has stage"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject
+:hasSubProject rdf:type owl:ObjectProperty ;
+               owl:inverseOf :isSubProjectOf ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:domain :Project ;
+               rdfs:range :Project ;
+               rdfs:comment "Relate a Project with its subproject. A Project can have one or more subprojects within it."@en ;
+               rdfs:label "has subproject"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion
 :hasSubquestion rdf:type owl:ObjectProperty ;
                 owl:inverseOf :isSubquestionOf ;
@@ -686,6 +705,15 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:label "is outcome of"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjectAnalysisOf
+:isProjectAnalysisOf rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+                     rdfs:range :Project ;
+                     rdfs:comment "Relates a Project Analysis with its Project."@en ;
+                     rdfs:label "is project analysis of"@en ;
+                     owl:inverseOf "hasProjectAnalysis" .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf
 :isQuestionOf rdf:type owl:ObjectProperty ;
               <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
@@ -700,6 +728,15 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:14:48+00:00" ;
            rdfs:comment "A project analysis has different phases." ;
            rdfs:label "is stage of"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubProjectOf
+:isSubProjectOf rdf:type owl:ObjectProperty ;
+                rdfs:domain :Project ;
+                rdfs:range :Project ;
+                rdfs:comment "Relates a project with its parent Project."@en ;
+                rdfs:label "is subproject of"@en ;
+                owl:inverseOf "hasSubProject" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isSubquestionOf
@@ -815,6 +852,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
          rdfs:label "comment"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus
+:dataStatus rdf:type owl:DatatypeProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "The status of the data. Deleted when the data is deleted by the user."@en ;
+            rdfs:label "data status"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate
 :designDate rdf:type owl:DatatypeProperty ;
             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
@@ -825,10 +870,13 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy
 :designedBy rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Project ;
+            rdfs:range rdfs:Literal ;
             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
             <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:27+00:00" ;
-            rdfs:comment "The person who designed the project analysis and the cube questionnaire."@en ;
-            rdfs:label "design by"@en .
+            rdfs:comment "The person who designed the project analysis and the cube questionnaire."@en ,
+                         "The user who designed the project."@en ;
+            rdfs:label "designed by"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate
@@ -839,6 +887,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
          rdfs:comment "Used to link an action with the date it is due."@en ;
          rdfs:label "due date"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy
+:efficacy rdf:type owl:DatatypeProperty ;
+          rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+          rdfs:range rdfs:Literal ;
+          rdfs:comment "The efficacy of the solution."@en ;
+          rdfs:label "efficacy"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule
@@ -871,6 +927,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
       rdfs:label "file" .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#importance
+:importance rdf:type owl:DatatypeProperty ;
+            rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+            rdfs:range rdfs:Literal ;
+            rdfs:comment "Importance of the problem under analysis."@en ;
+            rdfs:label "importance"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#informant
 :informant rdf:type owl:DatatypeProperty ;
            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
@@ -894,10 +958,28 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                                   :Person
                                 )
                   ] ;
+      rdfs:range rdfs:Literal ;
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-      rdfs:comment "Holds the full name of a person, organisation or organisational unit as a string."@en ;
+      rdfs:comment "Holds the full name of a person, organisation or organisational unit as a string."@en ,
+                   "The name of a project"@en ;
       rdfs:label "name"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName
+:organisationName rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Project ;
+                  rdfs:range rdfs:Literal ;
+                  rdfs:comment "The name of the organisation "@en ;
+                  rdfs:label "organisation name"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss
+:potentialLoss rdf:type owl:DatatypeProperty ;
+               rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "Potential loss due to the problem."@en ;
+               rdfs:label "potential loss"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#priority
@@ -916,6 +998,38 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en ;
              rdfs:comment "Defines the probability of a risk likelihood category."@en ;
              rdfs:label "probability"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName
+:projectName rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Project ;
+             rdfs:range rdfs:Literal ;
+             rdfs:comment "The name of a Project."@en ;
+             rdfs:label "project name"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus
+:projectStatus rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Project ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "The current status of a project"@en ;
+               rdfs:label "project status"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedGain
+:projectedGain rdf:type owl:DatatypeProperty ;
+               rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+               rdfs:range rdfs:Literal ;
+               rdfs:comment "The gain achieved by the project."@en ;
+               rdfs:label "projected gain"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#projectedValue
+:projectedValue rdf:type owl:DatatypeProperty ;
+                rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+                rdfs:range rdfs:Literal ;
+                rdfs:comment "The projected value of the project."@en ;
+                rdfs:label "projected value"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText
@@ -988,12 +1102,28 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:label "textual description"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+       rdfs:range rdfs:Literal ;
+       rdfs:comment "An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources."@en ;
+       rdfs:label "value"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#version
 :version rdf:type owl:DatatypeProperty ;
          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:55+00:00" ;
          rdfs:comment "The version of the project."@en ;
          rdfs:label "version"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#viability
+:viability rdf:type owl:DatatypeProperty ;
+           rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> ;
+           rdfs:range rdfs:Literal ;
+           rdfs:comment "Viability of the proposed solution."@en ;
+           rdfs:label "viablity"@en .
 
 
 #################################################################
@@ -1500,6 +1630,13 @@ Familiarity gained by personal experience, vicariously or through collective pro
                  rdfs:label "Process/Sequence"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Project
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
+         rdfs:comment "An individual or collaborative enterprise that is carefully planned to achieve a particular aim."@en ;
+         rdfs:label "Project"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis
 :ProjectAnalysis rdf:type owl:Class ;
                  rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ,
@@ -1830,6 +1967,17 @@ A subclass of arkp:DataEntity."""@en ;
 <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> rdf:type owl:Class .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
+                                                                        rdfs:comment "Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc"@en ;
+                                                                        rdfs:label "Project Analysis"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#User
+<https://openark.adaptcentre.ie/Ontologies/ARKProjects#User> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -1846,7 +1994,7 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain
 :almostCertain rdf:type owl:NamedIndividual ,
                         :Likelihood ;
-               :actualFrequency "At least monthly"@en ;
+               :actualFrequency "At least monthly" ;
                :probability "0.99"^^xsd:float ;
                :score "5"^^xsd:int ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
@@ -1875,7 +2023,7 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#closed
 :closed rdf:type owl:NamedIndividual ,
                  :RiskStatus ;
-        rdfs:label "closed"@en .
+        rdfs:label "Closed"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance
@@ -1925,17 +2073,20 @@ A subclass of arkp:DataEntity."""@en ;
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery
 :highDelivery rdf:type owl:NamedIndividual ,
-                       :Delivery .
+                       :Delivery ;
+              rdfs:label "High Delivery"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#highEfficacy
 :highEfficacy rdf:type owl:NamedIndividual ,
-                       :Efficacy .
+                       :Efficacy ;
+              rdfs:label "High Efficacy"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#highImportance
 :highImportance rdf:type owl:NamedIndividual ,
-                         :Importance .
+                         :Importance ;
+                rdfs:label "High Importance"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#highRisk
@@ -1959,7 +2110,7 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#likely
 :likely rdf:type owl:NamedIndividual ,
                  :Likelihood ;
-        :actualFrequency "Bimonthly"@en ;
+        :actualFrequency "Bimonthly" ;
         :probability "0.75"^^xsd:float ;
         :score "4"^^xsd:int ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
@@ -1970,17 +2121,20 @@ A subclass of arkp:DataEntity."""@en ;
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery
 :lowDelivery rdf:type owl:NamedIndividual ,
-                      :Delivery .
+                      :Delivery ;
+             rdfs:label "Low Delivery"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#lowEfficacy
 :lowEfficacy rdf:type owl:NamedIndividual ,
-                      :Efficacy .
+                      :Efficacy ;
+             rdfs:label "Low Efficacy"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#lowImportance
 :lowImportance rdf:type owl:NamedIndividual ,
-                        :Importance .
+                        :Importance ;
+               rdfs:label "Low Importance"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#lowRisk
@@ -2003,17 +2157,20 @@ A subclass of arkp:DataEntity."""@en ;
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery
 :mediumDelivery rdf:type owl:NamedIndividual ,
-                         :Delivery .
+                         :Delivery ;
+                rdfs:label "Medium Delivery"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumEfficacy
 :mediumEfficacy rdf:type owl:NamedIndividual ,
-                         :Efficacy .
+                         :Efficacy ;
+                rdfs:label "Medium Efficacy"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumImportance
 :mediumImportance rdf:type owl:NamedIndividual ,
-                           :Importance .
+                           :Importance ;
+                  rdfs:label "Medium Importance"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumRisk
@@ -2040,7 +2197,7 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor
 :monitor rdf:type owl:NamedIndividual ,
                   :RiskStatus ;
-         rdfs:label "monitor"@en .
+         rdfs:label "Monitor"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People
@@ -2055,7 +2212,7 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#open
 :open rdf:type owl:NamedIndividual ,
                :RiskStatus ;
-      rdfs:label "open"@en .
+      rdfs:label "Open"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#operational
@@ -2070,7 +2227,7 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#possible
 :possible rdf:type owl:NamedIndividual ,
                    :Likelihood ;
-          :actualFrequency "Occurs every 1-2 years"@en ;
+          :actualFrequency "Occurs every 1-2 years" ;
           :probability "0.5"^^xsd:float ;
           :score "3"^^xsd:int ;
           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
@@ -2082,7 +2239,7 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote
 :rareRemote rdf:type owl:NamedIndividual ,
                      :Likelihood ;
-            :actualFrequency "Occurs every 5 years"@en ;
+            :actualFrequency "Occurs every 5 years" ;
             :probability "0.01"^^xsd:float ;
             :score "1"^^xsd:int ;
             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
@@ -2136,13 +2293,25 @@ A subclass of arkp:DataEntity."""@en ;
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely
 :unlikely rdf:type owl:NamedIndividual ,
                    :Likelihood ;
-          :actualFrequency "Occurs every 2-3 years"@en ;
+          :actualFrequency "Occurs every 2-3 years" ;
           :probability "0.1"^^xsd:float ;
           :score "2"^^xsd:int ;
           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
           rdfs:comment "HSE definition. A type of Risk Assessment likelihood."@en ;
           rdfs:label "Unlikely"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Project
+                <https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis>
+                <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User>
+              )
+] .
 
 
 ###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
