@@ -15,11 +15,12 @@
                                                                                                         "Nick McDonald" ,
                                                                                                         "Rob Brennan" ;
                                                           <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz" ;
-                                                          <http://purl.org/dc/elements/1.1/description> "A model for representing concepts, relationships and axioms for organisational risk analysis and management on the Access Risk Knowledge (ARK) Platform."@en ;
-                                                          <http://purl.org/dc/elements/1.1/modified> "18/04/2020" ;
+                                                          <http://purl.org/dc/elements/1.1/description> "An ontology for modelling for users, data classification & access controls on the Access Risk Knowledge (ARK) Platform."@en ;
+                                                          <http://purl.org/dc/elements/1.1/modified> "18/04/2020" ,
+                                                                                                     "31/03/2021" ;
                                                           <http://purl.org/dc/elements/1.1/publisher> "https://www.ark.adaptcentre.ie/" ;
                                                           <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
-                                                          <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Projects Ontology"@en ;
+                                                          <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Platform Ontology"@en ;
                                                           <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
                                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKP" ;
                                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://ark.adaptcentre.ie/Ontologies/ARKProjects#" ;
@@ -84,7 +85,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasCollaborator
 :hasCollaborator rdf:type owl:ObjectProperty ;
                  owl:inverseOf :isCollaboratorOf ;
-                 rdfs:domain :Project ;
+                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
                  rdfs:range :User ;
                  rdfs:comment "Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights."@en ;
                  rdfs:label "has collaborator"@en .
@@ -93,7 +94,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwner
 :hasOwner rdf:type owl:ObjectProperty ;
           owl:inverseOf :isOwnerOf ;
-          rdfs:domain :Project ;
+          rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
           rdfs:range :User ;
           rdfs:comment "Relates the Project with its owner User. The owner has a full read/write/grant access rights."@en ;
           rdfs:label "has owner"@en .
@@ -101,7 +102,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasOwningOrganisation
 :hasOwningOrganisation rdf:type owl:ObjectProperty ;
-                       rdfs:domain :Project ;
+                       rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
                        rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> ;
                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                        rdfs:comment "Links a project to its owning organisation."@en ;
@@ -117,38 +118,19 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  rdfs:label "has platform role"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasProjectAnalysis
-:hasProjectAnalysis rdf:type owl:ObjectProperty ;
-                    owl:inverseOf :isProjectAnalysisOf ;
-                    rdfs:domain :Project ;
-                    rdfs:range :ProjectAnalysis ;
-                    rdfs:comment "Relates a Project with all the analysis done on the Project."@en ;
-                    rdfs:label "has project analysis"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasReadOnlyUser
 :hasReadOnlyUser rdf:type owl:ObjectProperty ;
                  owl:inverseOf :isReadOnlyUserOf ;
-                 rdfs:domain :Project ;
+                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
                  rdfs:range :User ;
                  rdfs:comment "Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right."@en ;
                  rdfs:label "has readonly user"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#hasSubProject
-:hasSubProject rdf:type owl:ObjectProperty ;
-               owl:inverseOf :isSubProjectOf ;
-               rdf:type owl:TransitiveProperty ;
-               rdfs:domain :Project ;
-               rdfs:range :Project ;
-               rdfs:comment "Relate a Project with its subproject. A Project can have one or more subprojects within it."@en ;
-               rdfs:label "has subproject"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isCollaboratorOf
 :isCollaboratorOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
-                  rdfs:range :Project ;
+                  rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
                   rdfs:comment "Relates the collaborating User with a project. "@en ;
                   rdfs:label "is collaborator of"@en ;
                   owl:inverseOf "hasCollaborator" .
@@ -157,37 +139,19 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isOwnerOf
 :isOwnerOf rdf:type owl:ObjectProperty ;
            rdfs:domain :User ;
-           rdfs:range :Project ;
+           rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
            rdfs:comment "Relates the Owner User with a Project. The owner has a full read/write/grant access rights."@en ;
            rdfs:label "is owner of"@en ;
            owl:inverseOf "hasOwner" .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isProjectAnalysisOf
-:isProjectAnalysisOf rdf:type owl:ObjectProperty ;
-                     rdfs:domain :ProjectAnalysis ;
-                     rdfs:range :Project ;
-                     rdfs:comment "Relates a Project Analysis with its Project."@en ;
-                     rdfs:label "is project analysis of"@en ;
-                     owl:inverseOf "hasProjectAnalysis" .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isReadOnlyUserOf
 :isReadOnlyUserOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :User ;
-                  rdfs:range :Project ;
+                  rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
                   rdfs:comment "Relates the ReadOnlyUser with a Project. "@en ;
                   rdfs:label "is readonly user of"@en ;
                   owl:inverseOf "hasReadOnlyUser" .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#isSubProjectOf
-:isSubProjectOf rdf:type owl:ObjectProperty ;
-                rdfs:domain :Project ;
-                rdfs:range :Project ;
-                rdfs:comment "Relates a project with its parent Project."@en ;
-                rdfs:label "is subproject of"@en ;
-                owl:inverseOf "hasSubProject" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#'has_data_classification'
@@ -197,118 +161,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                                                                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                                                                   rdfs:comment "Ascribes a data classification level to an Entity." ;
                                                                                   rdfs:label "has data classification" .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> rdf:type owl:DatatypeProperty .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#dataStatus
-:dataStatus rdf:type owl:DatatypeProperty ;
-            rdfs:domain owl:Thing ;
-            rdfs:range rdfs:Literal ;
-            rdfs:comment "The status of the data. Deleted  when the data is deleted by the user"@en ;
-            rdfs:label "data status"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#designedBy
-:designedBy rdf:type owl:DatatypeProperty ;
-            rdfs:domain :Project ;
-            rdfs:range rdfs:Literal ;
-            rdfs:comment "The user who designed the project."@en ;
-            rdfs:label "designed by"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#efficacy
-:efficacy rdf:type owl:DatatypeProperty ;
-          rdfs:domain :ProjectAnalysis ;
-          rdfs:range rdfs:Literal ;
-          rdfs:comment "The efficacy of the solution."@en ;
-          rdfs:label "efficacy"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#importance
-:importance rdf:type owl:DatatypeProperty ;
-            rdfs:domain :ProjectAnalysis ;
-            rdfs:range rdfs:Literal ;
-            rdfs:comment "Importance of the problem under analysis."@en ;
-            rdfs:label "importance"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#name
-:name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :Project ;
-      rdfs:range rdfs:Literal ;
-      rdfs:comment "The name of a project"@en ;
-      rdfs:label "project name"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#organisationName
-:organisationName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Project ;
-                  rdfs:range rdfs:Literal ;
-                  rdfs:comment "The name of the organisation "@en ;
-                  rdfs:label "organisation name"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#potentialLoss
-:potentialLoss rdf:type owl:DatatypeProperty ;
-               rdfs:domain :ProjectAnalysis ;
-               rdfs:range rdfs:Literal ;
-               rdfs:comment "Potential loss due to the problem."@en ;
-               rdfs:label "potential loss"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedGain
-:projectedGain rdf:type owl:DatatypeProperty ;
-               rdfs:domain :ProjectAnalysis ;
-               rdfs:range rdfs:Literal ;
-               rdfs:comment "The gain achieved by the project."@en ;
-               rdfs:label "projected gain"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#projectedValue
-:projectedValue rdf:type owl:DatatypeProperty ;
-                rdfs:domain :ProjectAnalysis ;
-                rdfs:range rdfs:Literal ;
-                rdfs:comment "The projected value of the project."@en ;
-                rdfs:label "projected value"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#reportTo
-:reportTo rdf:type owl:DatatypeProperty ;
-          rdfs:domain :Project ;
-          rdfs:range rdfs:Literal ;
-          rdfs:comment "The person to whom the analysis is reported to."@en ;
-          rdfs:label "report to"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#status
-:status rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Project ;
-        rdfs:range rdfs:Literal ;
-        rdfs:comment "The current status of a project"@en ;
-        rdfs:label "project Status"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#value
-:value rdf:type owl:DatatypeProperty ;
-       rdfs:domain :ProjectAnalysis ;
-       rdfs:range rdfs:Literal ;
-       rdfs:comment "An entity’s value is created, preserved, eroded or realized based on the relationship between the benefits derived from resources deployed and the cost of those resources."@en ;
-       rdfs:label "value"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#viability
-:viability rdf:type owl:DatatypeProperty ;
-           rdfs:domain :ProjectAnalysis ;
-           rdfs:range rdfs:Literal ;
-           rdfs:comment "Viability of the proposed solution."@en ;
-           rdfs:label "viablity"@en .
 
 
 #################################################################
@@ -325,6 +177,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Project
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> rdf:type owl:Class .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#AdminUser
@@ -380,20 +236,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
               rdfs:comment "The role of a User on the ARK Platform."@en ;
               rdfs:label "Platform Role"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Project
-:Project rdf:type owl:Class ;
-         rdfs:subClassOf :DataEntity ;
-         rdfs:comment "An individual or collaborative enterprise that is carefully planned to achieve a particular aim."@en ;
-         rdfs:label "Project"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#ProjectAnalysis
-:ProjectAnalysis rdf:type owl:Class ;
-                 rdfs:subClassOf :DataEntity ;
-                 rdfs:comment "Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc"@en ;
-                 rdfs:label "Project Analysis"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#Public
@@ -477,6 +319,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                        rdfs:label "Organisation Executive"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#platformAdministrator
+:platformAdministrator rdf:type owl:NamedIndividual ,
+                                :PlatformRole ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       rdfs:comment "An administrator of the ARK Platform."@en ;
+                       rdfs:label "Platform Administrator"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKProjects#safetyManager
 :safetyManager rdf:type owl:NamedIndividual ,
                         :PlatformRole ;
@@ -493,18 +343,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^xsd:dateTime ;
              rdfs:comment "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en ;
              rdfs:label "Unit Manager"@en .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Project
-                :ProjectAnalysis
-                :User
-              )
-] .
 
 
 ###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
