@@ -21,7 +21,7 @@
                                                       <http://purl.org/dc/elements/1.1/publisher> "https://openark.adaptcentre.ie/" ;
                                                       <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
                                                       <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube  Ontology"@en ;
-                                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "ARKC" ;
+                                                      <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkc" ;
                                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKCube#" ;
                                                       rdfs:comment "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ;
                                                       owl:versionInfo 0.81 .
@@ -773,7 +773,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:range :Person ;
            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
            <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:11:51+00:00"^^xsd:dateTimeStamp ;
-           rdfs:comment "Links people who work together within an Organisation."@en ;
+           rdfs:comment "Links people who work together within, or across, Organisations."@en ;
            rdfs:label "works with"@en .
 
 
@@ -787,7 +787,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  rdfs:range rdf:PlainLiteral ;
                  <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                  <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-                 rdfs:comment "Defines the range of the likelihood value for a risk in terms of frequency"@en ;
+                 rdfs:comment "Defines the range of the likelihood value for a risk in terms of frequency."@en ;
                  rdfs:label "actual frequency"@en .
 
 
@@ -797,6 +797,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                <http://purl.org/dc/elements/1.1/date> "2020-01-27T17:06:19+00:00" ;
                rdfs:comment "Data that can support/comes from some analytics."@en ;
                rdfs:label "analytics data"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#answerDate
+:answerDate rdf:type owl:DatatypeProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:14+00:00" ;
+            rdfs:comment "The date on which the answer is provided to the system."@en ;
+            rdfs:label "answer date"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#answerText
@@ -816,14 +824,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             rdfs:label "answered by"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#answeredDate
-:answeredDate rdf:type owl:DatatypeProperty ;
-              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
-              <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:14+00:00" ;
-              rdfs:comment "The date on which the answer is provided to the system."@en ;
-              rdfs:label "answered date"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#artefactText
 :artefactText rdf:type owl:DatatypeProperty ;
               rdfs:domain :Artefact ;
@@ -840,7 +840,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 rdfs:range xsd:dateTime ;
                 <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                 <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                rdfs:comment "Used in a HSE risk assessment form."@en ;
+                rdfs:comment "The date of the risk assessment."@en ;
                 rdfs:label "date of assessment"@en .
 
 
@@ -923,7 +923,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
       rdfs:range rdfs:Literal ;
       <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
       <http://purl.org/dc/elements/1.1/date> "2020-05-15T14:18:45.087269" ;
-      rdfs:comment "Path to file" ;
+      rdfs:comment "Path to file." ;
       rdfs:label "file" .
 
 
@@ -954,24 +954,19 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:domain [ rdf:type owl:Class ;
-                    owl:unionOf ( :Organisation
+                    owl:unionOf ( :OrganisationalUnit
                                   :Person
+                                  :Project
                                 )
                   ] ;
       rdfs:range rdfs:Literal ;
+      <http://purl.org/dc/elements/1.1/contributor> "Lucy McKenna" ;
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-      rdfs:comment "Holds the full name of a person, organisation or organisational unit as a string."@en ,
-                   "The name of a project"@en ;
+      <http://purl.org/dc/elements/1.1/modified> "2021-04-23T17:22:07+00:00"^^xsd:dateTime ;
+      rdfs:comment "Holds the full name of a Person, Project, or Organisational Unit as a string."@en ,
+                   "The name of a project."@en ;
       rdfs:label "name"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#organisationName
-:organisationName rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :Project ;
-                  rdfs:range rdfs:Literal ;
-                  rdfs:comment "The name of the organisation "@en ;
-                  rdfs:label "organisation name"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss
@@ -998,14 +993,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en ;
              rdfs:comment "Defines the probability of a risk likelihood category."@en ;
              rdfs:label "probability"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#projectName
-:projectName rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Project ;
-             rdfs:range rdfs:Literal ;
-             rdfs:comment "The name of a Project."@en ;
-             rdfs:label "project name"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus
@@ -1053,7 +1040,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                   rdfs:domain :RiskAssessmentRecord ;
                   <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                   <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
-                  rdfs:comment "Risk assesment identifier"@en ;
+                  rdfs:comment "A risk assesment identifier."@en ;
                   rdfs:label "unique ID number"@en .
 
 
@@ -1071,7 +1058,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           rdfs:domain :RiskAssessmentRecord ;
           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-          rdfs:comment "Links risk assessment with a risk type"@en ;
+          rdfs:comment "Links a risk assessment with a risk type."@en ;
           rdfs:label "risk type"@en .
 
 
@@ -1981,6 +1968,22 @@ A subclass of arkp:DataEntity."""@en ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#DublinCityUniversity
+:DublinCityUniversity rdf:type owl:NamedIndividual ,
+                               :Organisation ;
+                      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                      rdfs:label "Dublin City University"@en ,
+                                 "2021-04-23T17:06:12+00:00"^^xsd:dateTime .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#TrinityCollegeDublin
+:TrinityCollegeDublin rdf:type owl:NamedIndividual ,
+                               :Organisation ;
+                      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                      rdfs:label "Trinity College Dublin"@en ,
+                                 "2021-04-23T17:05:12+00:00"^^xsd:dateTime .
+
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation
 :adversePublicity-Reputation rdf:type owl:NamedIndividual ,

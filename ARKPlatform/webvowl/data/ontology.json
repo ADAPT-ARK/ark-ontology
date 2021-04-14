@@ -27,7 +27,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Lucy McKenna",
+        "value" : "Natalia Duda",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -37,45 +37,45 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Natalia Duda",
+        "value" : "Ademar Crotti Junior",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Lucy McKenna",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Nick McDonald",
         "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Ademar Crotti Junior",
-        "type" : "label"
       } ],
       "rights" : [ {
         "identifier" : "rights",
         "language" : "undefined",
-        "value" : "https://creativecommons.org/licenses/by/3.0/at/deed.en",
-        "type" : "iri"
+        "value" : "https://creativecommons.org/licenses/by-nc/4.0/",
+        "type" : "label"
       }, {
         "identifier" : "rights",
         "language" : "undefined",
-        "value" : "https://creativecommons.org/licenses/by-nc/4.0/",
-        "type" : "label"
+        "value" : "https://creativecommons.org/licenses/by/3.0/at/deed.en",
+        "type" : "iri"
       } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
-        "value" : "ARKP",
+        "value" : "arkp",
         "type" : "label"
       } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "31/03/2021",
+        "value" : "18/04/2020",
         "type" : "label"
       }, {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "18/04/2020",
+        "value" : "31/03/2021",
         "type" : "label"
       } ],
       "publisher" : [ {
@@ -84,16 +84,16 @@
         "value" : "https://www.ark.adaptcentre.ie/",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://ark.adaptcentre.ie/Ontologies/ARKProjects#",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
         "value" : "0.2",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#",
         "type" : "label"
       } ],
       "title" : [ {
@@ -311,6 +311,30 @@
         "en" : "Platform Administrator"
       }
     }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform",
+      "annotations" : {
+        "date" : [ {
+          "identifier" : "date",
+          "language" : "undefined",
+          "value" : "2021-03-23T18:47:33+00:00",
+          "type" : "label"
+        } ],
+        "creator" : [ {
+          "identifier" : "creator",
+          "language" : "undefined",
+          "value" : "Lucy McKenna",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Responsible for all aspects of operations and for overseeing the functioning of the organisation."
+      },
+      "labels" : {
+        "IRI-based" : "organisationExecutive",
+        "en" : "Organisation Executive"
+      }
+    }, {
       "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#frontlineStaff",
       "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform",
       "annotations" : {
@@ -357,30 +381,6 @@
       "labels" : {
         "IRI-based" : "clinicalSpecialist",
         "en" : "Clinical Specialist"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform",
-      "annotations" : {
-        "date" : [ {
-          "identifier" : "date",
-          "language" : "undefined",
-          "value" : "2021-03-23T18:47:33+00:00",
-          "type" : "label"
-        } ],
-        "creator" : [ {
-          "identifier" : "creator",
-          "language" : "undefined",
-          "value" : "Lucy McKenna",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Responsible for all aspects of operations and for overseeing the functioning of the organisation."
-      },
-      "labels" : {
-        "IRI-based" : "organisationExecutive",
-        "en" : "Organisation Executive"
       }
     }, {
       "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#boardMember",
@@ -846,6 +846,21 @@
     "attributes" : [ "object" ],
     "id" : "30"
   }, {
+    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator",
+    "inverse" : "22",
+    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasCollaborator",
+      "en" : "has collaborator"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights."
+    },
+    "attributes" : [ "object" ],
+    "id" : "31"
+  }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasPlatformRole",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform",
     "range" : "27",
@@ -864,21 +879,6 @@
     "domain" : "12",
     "comment" : {
       "en" : "Links a User to their Platform Role."
-    },
-    "attributes" : [ "object" ],
-    "id" : "31"
-  }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator",
-    "inverse" : "22",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "hasCollaborator",
-      "en" : "has collaborator"
-    },
-    "domain" : "13",
-    "comment" : {
-      "en" : "Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights."
     },
     "attributes" : [ "object" ],
     "id" : "32"
