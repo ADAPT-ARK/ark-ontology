@@ -96,7 +96,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           owl:inverseOf :isOwnerOf ;
           rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
           rdfs:range :User ;
-          rdfs:comment "Relates the Project with its owner User. The owner has a full read/write/grant access rights."@en ;
+          rdfs:comment "Relates the Project with its owning User(s). The owner has a full read/write/grant access rights."@en ;
           rdfs:label "has owner"@en .
 
 
@@ -156,7 +156,11 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> rdf:type owl:ObjectProperty ;
-                                                                                  rdfs:domain :DataEntity ;
+                                                                                  rdfs:domain [ rdf:type owl:Class ;
+                                                                                                owl:unionOf ( :AccessControlEntity
+                                                                                                              :DataEntity
+                                                                                                            )
+                                                                                              ] ;
                                                                                   rdfs:range :DataClassification ;
                                                                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                                                                   rdfs:comment "Ascribes a data classification level to an Entity." ;
@@ -181,6 +185,28 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Project
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity
+:AccessControlEntity rdf:type owl:Class ;
+                     rdfs:subClassOf [ owl:intersectionOf ( <http://www.w3.org/ns/prov#Entity>
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasOwningOrganisation ;
+                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation>
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> ;
+                                                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                              owl:onClass :DataClassification
+                                                            ]
+                                                          ) ;
+                                       rdf:type owl:Class
+                                     ] ;
+                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-04-14T14:28:36+00:00"^^xsd:dateTime ;
+                     rdfs:comment "An entity or aggregate, such as a Project or Risk Register, that can be used to control user access to data."@en ;
+                     rdfs:label "Access Control Entity"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AdminUser
@@ -210,8 +236,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :DataEntity rdf:type owl:Class ;
             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-            rdfs:comment "A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data on the ARK Platform."@en ,
-                         "A subclass of prov:Entity."@en ;
+            rdfs:comment "An indiviudal unit or aggregate of data on the ARK Platform."@en ;
             rdfs:label "Data Entity"@en .
 
 
@@ -221,6 +246,15 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
           rdfs:comment "Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released."@en ;
           rdfs:label "Internal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#NotSet
+:NotSet rdf:type owl:Class ;
+        rdfs:subClassOf :DataClassification ;
+        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+        <http://purl.org/dc/elements/1.1/date> "2021-04-14T14:26:51+00:00"^^xsd:dateTime ;
+        rdfs:comment "The data classification level has not been set."@en ;
+        rdfs:label "Not Set"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Personal
