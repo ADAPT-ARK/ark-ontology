@@ -25,8 +25,8 @@
         <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
         <dc:title xml:lang="en">Access Risk Knowledge Platform Ontology</dc:title>
         <terms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
-        <vann:preferredNamespacePrefix>ARKP</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri>https://ark.adaptcentre.ie/Ontologies/ARKProjects#</vann:preferredNamespaceUri>
+        <vann:preferredNamespacePrefix>arkp</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/ARKProjects#</vann:preferredNamespaceUri>
         <owl:versionInfo>0.2</owl:versionInfo>
     </owl:Ontology>
     
@@ -160,7 +160,7 @@
         <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
-        <rdfs:comment xml:lang="en">Relates the Project with its owner User. The owner has a full read/write/grant access rights.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates the Project with its owning User(s). The owner has a full read/write/grant access rights.</rdfs:comment>
         <rdfs:label xml:lang="en">has owner</rdfs:label>
     </owl:ObjectProperty>
     
@@ -248,7 +248,14 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#&apos;has_data_classification&apos;">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment>Ascribes a data classification level to an Entity.</rdfs:comment>
@@ -297,6 +304,35 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#&apos;has_data_classification&apos;"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-14T14:28:36+00:00</dc:date>
+        <rdfs:comment xml:lang="en">An entity or aggregate, such as a Project or Risk Register, that can be used to control user access to data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Access Control Entity</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AdminUser -->
 
 
@@ -338,8 +374,7 @@
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <dc:creator>Lucy McKenna</dc:creator>
-        <rdfs:comment xml:lang="en">A data entity can be Project, a Project Analysis, a Risk, a Cube question or any other unit of data on the ARK Platform.</rdfs:comment>
-        <rdfs:comment xml:lang="en">A subclass of prov:Entity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An indiviudal unit or aggregate of data on the ARK Platform.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Entity</rdfs:label>
     </owl:Class>
     
@@ -353,6 +388,19 @@
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment xml:lang="en">Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released.</rdfs:comment>
         <rdfs:label xml:lang="en">Internal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#NotSet -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#NotSet">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-14T14:26:51+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The data classification level has not been set.</rdfs:comment>
+        <rdfs:label xml:lang="en">Not Set</rdfs:label>
     </owl:Class>
     
 
