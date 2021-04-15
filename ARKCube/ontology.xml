@@ -237,9 +237,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#answeredBy">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>yalemisew</dc:creator>
-        <dc:date>2019-11-13T17:03:04+00:00</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-13T17:03:04+00:00</dc:date>
         <rdfs:comment xml:lang="en">The name/username of the person who answered the question.</rdfs:comment>
         <rdfs:label xml:lang="en">answered by</rdfs:label>
     </owl:ObjectProperty>
@@ -335,10 +336,18 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasContext">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Context"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-01-29T16:05:29+00:00</dc:date>
-        <rdfs:comment>A phase of a project has a context.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The context of a project phase.</rdfs:comment>
         <rdfs:label xml:lang="en">has context</rdfs:label>
         <owl:inverseOf>isContextOf</owl:inverseOf>
     </owl:ObjectProperty>
@@ -703,7 +712,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept">
-        <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <dc:creator>Ademar</dc:creator>
         <rdfs:comment>Links entites in ARK Cube to related concepts in ARK terminologies.</rdfs:comment>
         <rdfs:label>has related concept</rdfs:label>
@@ -748,6 +758,20 @@
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a risk assessment to a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-15T22:46:04+00:00</dc:creator>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <rdfs:comment xml:lang="en">Links a Risk Register to a Risk Assessment Record.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk assessment record</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -863,10 +887,11 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-13T17:06:09+00:00</dc:date>
-        <rdfs:comment>A project analysis has different phases.</rdfs:comment>
+        <rdfs:comment>A project analysis has different stages.</rdfs:comment>
         <rdfs:label xml:lang="en">has stage</rdfs:label>
     </owl:ObjectProperty>
     
@@ -2170,16 +2195,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
-                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
@@ -3367,10 +3388,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
             <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
             <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"/>
             <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister"/>
-            <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
