@@ -142,9 +142,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#answeredBy
 :answeredBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Question ;
             rdfs:range :Person ;
             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
-            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:04+00:00" ;
+            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:04+00:00"^^xsd:dateTime ;
             rdfs:comment "The name/username of the person who answered the question."@en ;
             rdfs:label "answered by"@en .
 
@@ -212,10 +213,15 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasContext
 :hasContext rdf:type owl:ObjectProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Project
+                                        :ProjectAnalysis
+                                      )
+                        ] ;
             rdfs:range :Context ;
             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
             <http://purl.org/dc/elements/1.1/date> "2020-01-29T16:05:29+00:00" ;
-            rdfs:comment "A phase of a project has a context." ;
+            rdfs:comment "The context of a project phase."@en ;
             rdfs:label "has context"@en ;
             owl:inverseOf "isContextOf" .
 
@@ -472,7 +478,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept
 :hasRelatedConcept rdf:type owl:ObjectProperty ;
-                   rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
+                   rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
+                   rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
                    <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
                    rdfs:comment "Links entites in ARK Cube to related concepts in ARK terminologies." ;
                    rdfs:label "has related concept" .
@@ -505,6 +512,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
          rdfs:comment "Links a risk assessment to a risk."@en ;
          rdfs:label "has risk"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord
+:hasRiskAssessmentRecord rdf:type owl:ObjectProperty ;
+                         rdfs:domain :RiskRegister ;
+                         rdfs:range :RiskAssessmentRecord ;
+                         <http://purl.org/dc/elements/1.1/creator> "2021-04-15T22:46:04+00:00"^^xsd:dateTime ,
+                                                                   "Lucy McKenna" ;
+                         rdfs:comment "Links a Risk Register to a Risk Assessment Record."@en ;
+                         rdfs:label "has risk assessment record"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour
@@ -584,10 +601,11 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
+          rdfs:domain :ProjectAnalysis ;
           rdfs:range :Stage ;
           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
           <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" ;
-          rdfs:comment "A project analysis has different phases." ;
+          rdfs:comment "A project analysis has different stages." ;
           rdfs:label "has stage"@en .
 
 
@@ -1477,13 +1495,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 :Person rdf:type owl:Class ;
-        rdfs:subClassOf [ owl:intersectionOf ( <http://www.w3.org/ns/prov#Agent>
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :textualDescription ;
-                                                 owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                               ]
-                                             ) ;
-                          rdf:type owl:Class
+        rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :textualDescription ;
+                          owl:minCardinality "1"^^xsd:nonNegativeInteger
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
@@ -2289,10 +2304,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Project
+  owl:members ( :Person
+                :Project
                 :ProjectAnalysis
                 :RiskRegister
-                <https://openark.adaptcentre.ie/Ontologies/ARKProjects#User>
               )
 ] .
 

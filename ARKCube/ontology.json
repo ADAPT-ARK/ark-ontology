@@ -3,19 +3,19 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
     }, {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"
     } ]
   } ]
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Context"
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
     }, {
-      "@id" : "_:genid12"
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"
     } ]
   } ]
 }, {
@@ -144,19 +144,6 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid12",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
-  } ]
-}, {
   "@id" : "_:genid121",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
@@ -210,6 +197,16 @@
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"
     }, {
       "@id" : "_:genid131"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Context"
+    }, {
+      "@id" : "_:genid15"
     } ]
   } ]
 }, {
@@ -272,16 +269,6 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"
-    }, {
-      "@id" : "_:genid16"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid140",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
@@ -299,17 +286,40 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
+    }, {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
     }, {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"
     }, {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister"
-    }, {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#User"
     } ]
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"
+    }, {
+      "@id" : "_:genid19"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -322,17 +332,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
     }, {
-      "@id" : "_:genid20"
+      "@id" : "_:genid23"
     } ]
   } ]
 }, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -345,17 +355,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidence"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
     }, {
-      "@id" : "_:genid24"
+      "@id" : "_:genid27"
     } ]
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -368,43 +378,43 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
     }, {
-      "@id" : "_:genid28"
+      "@id" : "_:genid31"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
-  } ]
-}, {
-  "@id" : "_:genid30",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
   "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -417,17 +427,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
     }, {
-      "@id" : "_:genid34"
+      "@id" : "_:genid37"
     } ]
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
@@ -437,50 +447,27 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain"
     }, {
-      "@id" : "_:genid38"
+      "@id" : "_:genid41"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid38",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "0"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"
+    }, {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
-    }, {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Post"
     } ]
   } ]
 }, {
-  "@id" : "_:genid40",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
-    }, {
-      "@id" : "_:genid42"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -493,17 +480,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
     }, {
-      "@id" : "_:genid46"
+      "@id" : "_:genid45"
     } ]
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -516,17 +503,40 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
+    }, {
+      "@id" : "_:genid49"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "0"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
+  } ]
+}, {
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
     }, {
-      "@id" : "_:genid50"
+      "@id" : "_:genid53"
     } ]
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
@@ -536,17 +546,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
     }, {
-      "@id" : "_:genid54"
+      "@id" : "_:genid57"
     } ]
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -556,17 +566,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
     }, {
-      "@id" : "_:genid58"
+      "@id" : "_:genid61"
     } ]
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid61",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
@@ -576,17 +586,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
     }, {
-      "@id" : "_:genid62"
+      "@id" : "_:genid65"
     } ]
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
@@ -596,17 +606,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
     }, {
-      "@id" : "_:genid66"
+      "@id" : "_:genid69"
     } ]
   } ]
 }, {
-  "@id" : "_:genid66",
+  "@id" : "_:genid69",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#hasValue" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
@@ -614,16 +624,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score"
-  } ]
-}, {
-  "@id" : "_:genid68",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
-    }, {
-      "@id" : "_:genid70"
-    } ]
   } ]
 }, {
   "@id" : "_:genid7",
@@ -636,7 +636,17 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid70",
+  "@id" : "_:genid71",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
+    }, {
+      "@id" : "_:genid73"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid73",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -646,17 +656,17 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
       "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
     }, {
-      "@id" : "_:genid74"
+      "@id" : "_:genid77"
     } ]
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -666,17 +676,7 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"
   } ]
 }, {
-  "@id" : "_:genid76",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://www.w3.org/ns/prov#Agent"
-    }, {
-      "@id" : "_:genid78"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid78",
+  "@id" : "_:genid79",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -841,7 +841,7 @@
     "@value" : "Risk Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/hasQuestionnaire",
@@ -1010,7 +1010,7 @@
     "@value" : "Action"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Activity",
@@ -1050,7 +1050,7 @@
     "@value" : "Answer"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid21"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact",
@@ -1106,7 +1106,7 @@
     "@value" : "Cause"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid22"
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Context",
@@ -1126,7 +1126,7 @@
     "@value" : "Context"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid26"
+    "@id" : "_:genid29"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control",
@@ -1146,7 +1146,7 @@
     "@value" : "Control"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid30"
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Culture",
@@ -1186,7 +1186,7 @@
     "@value" : "Deliverable"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid31"
+    "@id" : "_:genid34"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery",
@@ -1323,7 +1323,7 @@
     "@value" : "Extreme Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid35"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem",
@@ -1364,7 +1364,7 @@
     "@value" : "Gain Achieved"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Goal",
@@ -1404,7 +1404,7 @@
     "@value" : "Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid40"
+    "@id" : "_:genid43"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory",
@@ -1521,7 +1521,7 @@
     "@value" : "Loss or Gain"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid44"
+    "@id" : "_:genid47"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact",
@@ -1541,7 +1541,7 @@
     "@value" : "Major Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid48"
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism",
@@ -1561,7 +1561,7 @@
     "@value" : "Mechanism"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid52"
+    "@id" : "_:genid55"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact",
@@ -1581,7 +1581,7 @@
     "@value" : "Minor Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid56"
+    "@id" : "_:genid59"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact",
@@ -1601,7 +1601,7 @@
     "@value" : "Moderate Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid60"
+    "@id" : "_:genid63"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact",
@@ -1622,7 +1622,7 @@
     "@value" : "Negligible Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid64"
+    "@id" : "_:genid67"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating",
@@ -1683,7 +1683,7 @@
     "@value" : "Organisational Unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid68"
+    "@id" : "_:genid71"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome",
@@ -1703,7 +1703,7 @@
     "@value" : "Outcome"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid72"
+    "@id" : "_:genid75"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person",
@@ -1726,7 +1726,9 @@
     "@value" : "Person"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid76"
+    "@id" : "http://www.w3.org/ns/prov#Agent"
+  }, {
+    "@id" : "_:genid79"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage",
@@ -2584,11 +2586,15 @@
     "@value" : "yalemisew"
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2019-11-13T17:03:04+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "The name/username of the person who answered the question."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3069,7 +3075,11 @@
     "@value" : "2020-01-29T16:05:29+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A phase of a project has a context."
+    "@language" : "en",
+    "@value" : "The context of a project phase."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3657,10 +3667,13 @@
     "@value" : "Links entites in ARK Cube to related concepts in ARK terminologies."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has related concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain",
@@ -3730,6 +3743,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-04-15T22:46:04+00:00"
+  }, {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a Risk Register to a Risk Assessment Record."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has risk assessment record"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour",
@@ -3906,7 +3942,10 @@
     "@value" : "2019-11-13T17:06:09+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A project analysis has different phases."
+    "@value" : "A project analysis has different stages."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4583,7 +4622,7 @@
     "@value" : "report analysis to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#reportsTo",
@@ -4600,14 +4639,14 @@
     "@value" : "A reporting relationship between Persons or Posts in an Organisation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid7"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "reports to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId",

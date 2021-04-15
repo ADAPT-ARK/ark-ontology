@@ -1392,7 +1392,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </dl>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <span class="dotted" title="http://www.w3.org/ns/prov#Agent">agent</span>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#holdsPost"
@@ -1422,6 +1425,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <sup class="type-op" title="object property">op</sup>, <a href="#worksWith"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith">works with</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is disjoint with</dt>
+         <dd>
+            <a href="#Project"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project">Project</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectAnalysis"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#RiskRegister"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister">Risk Register</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1671,12 +1684,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#ProjectAnalysis"
+            <a href="#Person"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProjectAnalysis"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RiskRegister"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister">Risk Register</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">user</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1711,7 +1724,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dd>
             <a href="#efficacy"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#efficacy">efficacy</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#importance"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasStage"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage">has stage</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#importance"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#importance">importance</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#potentialLoss"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss">potential loss</a>
@@ -1733,12 +1748,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#Project"
+            <a href="#Person"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Project"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project">Project</a>
             <sup class="type-c" title="class">c</sup>, <a href="#RiskRegister"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister">Risk Register</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">user</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1856,7 +1871,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasAnswer"
+            <a href="#answeredBy"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#answeredBy">answered by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasAnswer"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer">has answer</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasAspect"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasAspect">has aspect</a>
@@ -2097,6 +2114,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId">unique ID number</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasRiskAssessmentRecord"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord">has risk assessment record</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="http://purl.org/dc/elements/RiskContext">
@@ -2326,14 +2349,20 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasRiskAssessmentRecord"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord">has risk assessment record</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is disjoint with</dt>
          <dd>
-            <a href="#Project"
+            <a href="#Person"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Project"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project">Project</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProjectAnalysis"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
-            <sup class="type-c" title="class">c</sup>, <span class="dotted"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#User">user</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2884,6 +2913,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRisk">has risk</a>
       </li>
       <li>
+         <a href="#hasRiskAssessmentRecord"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord">has risk assessment record</a>
+      </li>
+      <li>
          <a href="#hasRiskColour"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour">has risk colour</a>
       </li>
@@ -2987,6 +3020,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Question"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Person"
@@ -3249,7 +3288,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasContext</p>
       <div class="comment">
-         <span class="markdown">A phase of a project has a context.</span>
+         <span class="markdown">The context of a project phase.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3265,6 +3304,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <dd>
                <a href="#http://purl.org/dc/elements/hasRiskContext" title="http://purl.org/dc/elements/hasRiskContext">has risk context</a>
                <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Project"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project">Project</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ProjectAnalysis"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
+               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -4197,6 +4246,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dl>
             <dt>has domain</dt>
             <dd>
+               <span class="dotted"
+                     title="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity">data entity</span>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
                <span class="dotted" title="http://www.w3.org/2004/02/skos/core#Concept">concept</span>
                <sup class="type-c" title="class">c</sup>
             </dd>
@@ -4300,6 +4355,38 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <dd>
                <a href="#Risk"
                   title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRiskAssessmentRecord">
+      <h3>has risk assessment record<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord</p>
+      <div class="comment">
+         <span class="markdown">Links a Risk Register to a Risk Assessment Record.</span>
+      </div>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>2021-04-15T22:46:04+00:00</dd>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#RiskRegister"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRegister">Risk Register</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#RiskAssessmentRecord"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord">Risk Assessment Record (Form)</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -4612,7 +4699,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage</p>
       <div class="comment">
-         <span class="markdown">A project analysis has different phases.</span>
+         <span class="markdown">A project analysis has different stages.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -4624,6 +4711,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ProjectAnalysis"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Stage"

@@ -15,7 +15,7 @@
                                                                                                         "Nick McDonald" ,
                                                                                                         "Rob Brennan" ;
                                                           <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz" ;
-                                                          <http://purl.org/dc/elements/1.1/description> "An ontology for modelling for users, data classification & access controls on the Access Risk Knowledge (ARK) Platform."@en ;
+                                                          <http://purl.org/dc/elements/1.1/description> "An ontology for modelling for users, data classifications & access controls on the Access Risk Knowledge (ARK) Platform."@en ;
                                                           <http://purl.org/dc/elements/1.1/modified> "18/04/2020" ,
                                                                                                      "31/03/2021" ;
                                                           <http://purl.org/dc/elements/1.1/publisher> "https://www.ark.adaptcentre.ie/" ;
@@ -189,8 +189,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity
 :AccessControlEntity rdf:type owl:Class ;
-                     rdfs:subClassOf [ owl:intersectionOf ( <http://www.w3.org/ns/prov#Entity>
-                                                            [ rdf:type owl:Restriction ;
+                     rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ,
+                                     [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                               owl:onProperty :hasOwningOrganisation ;
                                                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                               owl:onClass <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation>

@@ -14,7 +14,6 @@
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#">
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform"/>
         <dc:modified>18/04/2020</dc:modified>
-        <dc:description xml:lang="en">An ontology for modelling for users, data classification &amp; access controls on the Access Risk Knowledge (ARK) Platform.</dc:description>
         <dc:creator>Yalemisew Abgaz</dc:creator>
         <dc:publisher>https://www.ark.adaptcentre.ie/</dc:publisher>
         <dc:modified>31/03/2021</dc:modified>
@@ -28,6 +27,7 @@
         <owl:versionInfo>0.2</owl:versionInfo>
         <vocab:preferredNamespacePrefix>arkp</vocab:preferredNamespacePrefix>
         <dc:contributor>Lucy McKenna</dc:contributor>
+        <dc:description xml:lang="en">An ontology for modelling for users, data classifications &amp; access controls on the Access Risk Knowledge (ARK) Platform.</dc:description>
         <dcterms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
         <dc:contributor>Natalia Duda</dc:contributor>
     </owl:Ontology>
@@ -281,10 +281,10 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation"/>
                         <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
