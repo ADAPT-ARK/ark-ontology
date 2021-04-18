@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://skos-play.sparna.fr/play/visualize -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <script src="./visualize-tree_files/d3.v3.min.js" charset="utf-8"></script>
+    <script src="./visualize-tree_files/jquery.min.js"></script>
+    <link href="./visualize-tree_files/bootstrap.min.css" rel="stylesheet">
+    <script src="./visualize-tree_files/bootstrap.min.js"></script>
+    
+    <style type="text/css">
+
+.node circle {
+  cursor: pointer;
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node text {
+  font-size: 12px;
+}
+
+path.link {
+  fill: none;
+  stroke: #aaa;
+  stroke-width: 3px;
+}
+
+.ext-link {
+  font-weight: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="header" style="text-align:center; font-size: 0.9em;">
+  		<span id="help-popover" data-original-title="" title="" style="text-decoration: underline; cursor: pointer;"><i class="icon-info-sign"></i>help</span>
+  	</div>
+    <div id="body">
+    </div>
+    <script type="text/javascript">
+
+var m = [20, 120, 20, 120],
+    w = 1280 - m[1] - m[3],
+    h = 800 - m[0] - m[2],
+    i = 0,
+    root;
+
+var tree = d3.layout.tree()
+    .size([h, w]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var vis = d3.select("#body").append("svg:svg")
+    .attr("width", w + m[1] + m[3])
+    .attr("height", h + m[0] + m[2])
+  	.append("svg:g")
+    .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+
+
+  var dataset ={"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#","name":"Hospital Adverse Incidents Categories and Subcategories terminology","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AccesstoServices","name":"Access to services","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DelaytoAccessServices","name":"Delay to Access Services","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FailuretoAccessServices","name":"Failure to Access Services","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AnaestheticRelatedEvent","name":"Anaesthetic Related Event","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Anaphylaxis","name":"Anaphylaxis","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Bronchospasm","name":"Bronchospasm","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#CardiacEvent","name":"Cardiac Event","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#EquipmentFailure_Malfunction","name":"Equipment Failure or Malfunction","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#HaemodynamicEvent","name":"Haemodynamic Event","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Haemorrhage","name":"Haemorrhage","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Intubation_AirwayEvent","name":"Intubation or Airway Event","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MalignantHyperpyrexia","name":"Malignant Hyperpyrexia","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MedicationRelatedEvent","name":"Medication related event","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Other","name":"Other","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BloodTransfusion","name":"Blood Transfusion","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AdverseReactiontoBloodProducts","name":"Adverse reaction to blood products","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BloodInfusedatIncorrectRate","name":"Blood infused at incorrect rate","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BloodProductGiventoWrongPatient","name":"Blood Product given to wrong patient","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BloodProductIncorrectlyStored","name":"Blood product incorrectly stored","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BloodProductRecall","name":"Blood Product Recall","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BloodWastage","name":"Blood wastage","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FailureofTransportationCollectionSystem","name":"Failure of transportation or collection system","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#HaemovigilanceTraceability","name":"Haemovigilance or Traceability","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectBloodProductGiven","name":"Incorrect Blood Product given","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectNoPrescriptionforBlood","name":"Incorrect or no prescription for blood","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InjuryArisingfromDonation","name":"Injury arising from donation","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MislabelledSampleTransfusion","name":"Mislabelled sample (transfusion)","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#OmissionofBloodProduct","name":"Omission of blood product","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Diagnosis","name":"Diagnosis","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DelayedDiagnosis","name":"Delayed diagnosis","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Failure-DelaytoReportTestResults","name":"Failure or Delay to report test results","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectTestPerformed","name":"Incorrect Test performed","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Misdiagnosis","name":"Misdiagnosis","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MislabelledTestResultorSample","name":"Mislabelled Test Result or Sample","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MissingTestResultsorSample","name":"Missing Test results or Sample","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#TestResultIncorrect","name":"Test Result Incorrect","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DignityAndPrivacy","name":"Dignity & Privacy","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#EnvironmentUnsuitable","name":"Environment unsuitable","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#LackofPrivacy","name":"Lack of Privacy","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DischargefromServices","name":"Discharge from Services","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#HospitalDischargeDuetoBreachofBehaviourContract","name":"Hospital Discharge due to breach of behaviour contract","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncompleteDischarge","name":"Incomplete Discharge","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PatientSelfDischargedAgainstMedicalAdvice","name":"Patient Self-Discharged or Against Medical Advice","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnexpectedReadmission","name":"Unexpected readmission","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#EnvironmentalHazards","name":"Environmental Hazards","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AirConditioningVentilationExtractionSystemsSafety","name":"Air Conditioning or Ventilation or Extraction systems safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BreachofFirePolicy","name":"Breach of fire policy","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BreachofSmokingPolicy","name":"Breach of smoking policy","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ChemicalSafety","name":"Chemical Safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ElectricalSafety","name":"Electrical safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ExposuretoAirPollutant","name":"Exposure to Air pollutant","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Overcrowding","name":"Overcrowding","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PestControl","name":"Pest control","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnsafeEnvironmentLightingTemperatureNoise","name":"Unsafe Environment (lighting, temperature, noise)","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#WaterSafety","name":"Water safety","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#EquipmentDeviceIssue","name":"Equipment or Device Issue","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Failure-MalfunctionofMedicalDeviceorEquipment","name":"Failure or Malfunction of Medical device or Equipment","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectDeviceorEquipmentUsed","name":"Incorrect Device or Equipment used","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnavailabilityofMedicalDeviceorEquipment","name":"Unavailability of Medical device or Equipment","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Fire","name":"Fire","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FalseFireAlarmActivation","name":"False Fire Alarm Activation","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FireAccidental","name":"Fire - Accidental","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FireNonAccidentalorArson","name":"Fire - Non-Accidental or Arson","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Handover","name":"Handover","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FailureinEffectiveHandover","name":"Failure in effective handover","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FailuretoCommunicate","name":"Failure to Communicate","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Hazard","name":"Hazard","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AsbestosSafety","name":"Asbestos Safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ChemicalSafety","name":"Chemical Safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#CytotoxicSafety","name":"Cytotoxic Safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ElectricalSafety","name":"Electrical safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Gas-FumeSafety","name":"Gas or Fume Safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectDisposalofClinicalWaste","name":"Incorrect disposal of clinical waste","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#RadiationSafety_NonMedicalUse","name":"Radiation Safety (Non-Medical use)","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#SharpsSafety","name":"Sharps Safety","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Steam_HotSurface_Scald","name":"Steam or Hot surface or Scald","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#HospitalInfrastructureandResources","name":"Hospital Infrastructure and Resources","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#LackofCriticalCareBedCapacity","name":"Lack of Critical Care Bed Capacity","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#LackofGeneralBedsCapacity","name":"Lack of General Beds Capacity","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#LackofOperatingTheatreCapacity","name":"Lack of Operating Theatre Capacity","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnsafeSkillMix","name":"Unsafe skill mix","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnsafeStaffLevelsWorkload","name":"Unsafe Staff Levels or Workload","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InfectionPreventionAndControl","name":"Infection Prevention & Control","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ContaminatedUnsterilizedEquipment","name":"Contaminated or unsterilized Equipment.","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ExposuretoHospitalAssociatedInfection","name":"Exposure to Hospital Associated Infection","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#HospitalAssociatedInfection","name":"Hospital Associated Infection","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#LackofIsolationFacilities","name":"Lack of Isolation facilities","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Non-complianceWithInfectionControlMeasures","name":"Non-compliance with Infection Control Measures","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PoorEnvironmentalHygiene","name":"Poor environmental hygiene","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PoorHandHygiene","name":"Poor hand hygiene","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#SharpsInjurySplashExposuretoPatient","name":"Sharps injury or Splash exposure to Patient","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InterpersonalSafety","name":"Interpersonal Safety","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AlcoholMisuse","name":"Alcohol Misuse","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BullyingorIntimidation","name":"Bullying or Intimidation","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ChallengingBehaviour","name":"Challenging Behaviour","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Discrimination","name":"Discrimination","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DrugMisuse","name":"Drug Misuse","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InappropriateBehaviour","name":"Inappropriate Behaviour","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PhysicalAssaultAttemptedPhysicalAssault","name":"Physical Assault or Attempted Physical Assault","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PhysicalRestraintUse","name":"Physical Restraint use","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#SexualAssaultorHarassment","name":"Sexual Assault or Harassment","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#VerbalAbuse","name":"Verbal Abuse","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ITAlertSystems","name":"IT or Alert Systems","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ITDataLoss_NotPatientRelated","name":"IT Data Loss (Not Patient Related)","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ITSystemFailure","name":"IT System Failure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MisuseofInternetorITSystem","name":"Misuse of Internet or IT system","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#TelecommunicationsSystemFailure","name":"Telecommunications System failure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnauthorisedAccesstoITSystem","name":"Unauthorised access to IT System","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#VirusorHackingAttackonITSystem","name":"Virus or Hacking Attack on IT system","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MovingandHandling","name":"Moving and handling","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectTechniqueUsed","name":"Incorrect technique used","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InvolvingaPatient","name":"Involving a Patient","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InvolvingEquipmentorLoad","name":"Involving Equipment or Load","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#NonPatientFall_NearMissFall","name":"Non - Patient Fall or Near miss Fall","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FromChair","name":"From chair","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FromHeight","name":"From Height","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FromLadder","name":"From Ladder","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FromMachine","name":"From Machine","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#FromStanding","name":"From Standing","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#OnStairs","name":"On Stairs","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Other","name":"Other","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#OccupationalHealth","name":"Occupational Health","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BiteInjury","name":"Bite Injury","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Blood_SplashExposure","name":"Blood - splash exposure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BodyFluid_SplashExposure","name":"Body Fluid - splash exposure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#StaffNeedlestickInjury","name":"Staff Needlestick Injury","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#StaffSharpsInjury_NotNeedlestick","name":"Staff Sharps Injury (Not Needlestick)","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PatientAbsconded_UnaccountedAbsence","name":"Patient Absconded or Unaccounted Absence","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AbscondingOffSite_HasCapacity","name":"Absconding off site - has capacity","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AbscondingOffSite_LacksCapacity","name":"Absconding off site - lacks capacity","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AtRiskofAbsconding","name":"At Risk of Absconding","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Missing_UnaccountedAbsence","name":"Missing or Unaccounted Absence","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PatientFallNearMissFall","name":"Patient Fall or Near Miss Fall","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#fromBedorTrolleyorCot","name":"from bed or trolley or Cot","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#fromChairorCommodeorToilet","name":"from chair or commode or toilet","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#fromHeight","name":"from Height","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#fromHoist","name":"from Hoist","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#fromStandingPosition","name":"from standing position","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MovingUnderSupervision","name":"moving under supervision","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MovingWithoutSupervision","name":"moving without supervision","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#onStairs","name":"on stairs","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Procedures","name":"Procedures","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#AdverseReactiontoProcedure","name":"Adverse reaction to procedure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Delayed_CancelledOperation_Procedure","name":"Delayed or cancelled operation or procedure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DiathermyInjury","name":"Diathermy injury","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Failure_DifficultyPerformingProcedure","name":"Failure or Difficulty performing procedure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Graze_Laceration_Bruise","name":"Graze or Laceration or Bruise","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectSurgeryorProcedure","name":"Incorrect Surgery or procedure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IVInfiltratesCausingLocalInflammation","name":"IV infiltrates causing local inflammation","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MissingRetainedSwab_NeedleorDevice","name":"Missing or retained swab or needle or device","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Operation_ProcedureonWrongPatient","name":"Operation or procedure on wrong patient","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PatientPositioningEventLeadingtoInjury","name":"Patient positioning event leading to injury","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PatientventilatedinRecoveryRoom","name":"Patient ventilated in Recovery Room","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PostEpiduralEvent","name":"Post epidural event","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#PostOperativeInfection","name":"Post Operative Infection","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#TracheostomyIncident","name":"Tracheostomy Incident","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnexpectedComplicationDuring_FollowingOperation_Procedure","name":"Unexpected complication during or following operation or procedure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#WrongOperation_Procedure","name":"Wrong operation or procedure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#WrongSiteSurgery_Procedure","name":"Wrong site surgery or procedure","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Radiation","name":"Radiation","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#EquipmentFailure_Malfunction","name":"Equipment Failure or Malfunction","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ExposureGreaterThanIntended","name":"Exposure greater than intended","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ExposureWhereNoneIntended","name":"Exposure where none intended","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ExtravasationofContrast","name":"Extravasation of contrast","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InadvertentDeterministicEffects","name":"Inadvertent Deterministic Effects","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InadvertentExposureToFoetus","name":"Inadvertent Exposure To Foetus","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#InadvertentExposuretoPersonWhoHasRadioiodineTherapy","name":"Inadvertent exposure to person who has radioiodine therapy","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Incorrect3PointChecks","name":"Incorrect 3 Point Checks","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectBodyPartSelected","name":"Incorrect Body Part Selected","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncorrectPatientSelected","name":"Incorrect Patient Selected","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Overexposure","name":"Overexposure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#RadiotherapyDoseVariations","name":"Radiotherapy Dose Variations","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnintentionalExposure","name":"Unintentional Exposure","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnnecessaryExposure","name":"Unnecessary Exposure","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Records_Documentation_Identity","name":"Records or Documentation or Identity","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Absent_IncorrectIDBand","name":"Absent or Incorrect ID band","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BreachofPatientConfidentiality","name":"Breach of Patient confidentiality","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ClinicalRecordsMissing_Unavailable","name":"Clinical records Missing or Unavailable","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DataProtectionBreach","name":"Data Protection breach","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DelayinReceivingMedicalRecords","name":"Delay in receiving medical records","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DuplicateRecords","name":"Duplicate records","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IllegibleDocumentation","name":"Illegible Documentation","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#IncompleteRecords","name":"Incomplete Records","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#LackofValidConsent","name":"Lack of valid consent","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#WrongMedicalRecordsAppliedtoPt","name":"Wrong medical records applied to pt","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Security","name":"Security","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BombThreat","name":"Bomb Threat","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#BreachofSecurity","name":"Breach of Security","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Fraud","name":"Fraud","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#TheftofProperty","name":"Theft of Property","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Trespassing","name":"Trespassing","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Vandalism","name":"Vandalism","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#SelfHarm","name":"Self Harm","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#DeliberateSelfHarm","name":"Deliberate self-harm","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ExpressiontoSelfHarm","name":"Expression to Self-harm","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Suicide_NotUnderCareofPsychiatry","name":"Suicide (not under care of Psychiatry)","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Suicide_UnderCareofPsychiatry","name":"Suicide (under care of Psychiatry)","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnintentionalSelfHarm","name":"Unintentional self-harm","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Struck_Collision","name":"Struck or Collision","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#StruckbyEquipment","name":"Struck by Equipment","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#StruckbyObject","name":"Struck by Object","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#StruckbyVehicle","name":"Struck by Vehicle","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Theft_Loss","name":"Theft or Loss","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#LossofGlasses_Dentures_HearingAids","name":"Loss of Glasses or Dentures or Hearing aids","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#MedicalEquipment_WheelchairEtc","name":"Medical Equipment (wheelchair etc.)","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Theft_LossofProperty","name":"Theft or Loss of Property","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Treatment","name":"Treatment","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#Failure_DelaytoProvideTreatment","name":"Failure or Delay to provide Treatment","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#RefusalofTreatment","name":"Refusal of Treatment","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#TreatmentInappropriateorIncorrect","name":"Treatment Inappropriate or Incorrect","size":1.0}],"size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnplannedEvent","name":"Unplanned Event","children":[{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#ChokingEpisode","name":"Choking Episode","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#SuddenCollapse","name":"Sudden Collapse","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnexpectedDeterioration","name":"Unexpected Deterioration","size":1.0},{"uri":"https://openark.adaptcentre.ie/Ontologies/HAdvIncCats#UnexplainedInjury_UnknownCause","name":"Unexplained Injury or Unknown cause","size":1.0}],"size":1.0}],"size":1.0};
+  console.log(dataset.uri);
+  //var json = JSON.parse(dataset);
+// d3.json("json?language=&root=", function(json) {
+  root = dataset;
+  root.x0 = h / 2;
+  root.y0 = 0;
+
+  function toggleAll(d) {
+    if (d.children) {
+      d.children.forEach(toggleAll);
+      toggle(d);
+    }
+  }
+
+  // Initialize the display to show a few nodes.
+  root.children.forEach(toggleAll);
+  update(root);
+// });
+
+function update(source) {
+  var duration = d3.event && d3.event.altKey ? 5000 : 500;
+
+  // Compute the new tree layout.
+  var nodes = tree.nodes(root).reverse();
+
+  // Normalize for fixed-depth.
+  nodes.forEach(function(d) { d.y = d.depth * 180; });
+
+  // Update the nodes…
+  var node = vis.selectAll("g.node")
+      .data(nodes, function(d) { return d.id || (d.id = ++i); });
+
+  // Enter any new nodes at the parent's previous position.
+  var nodeEnter = node.enter().append("svg:g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
+      .on("click", function(d) { toggle(d); update(d); });
+
+  nodeEnter.append("svg:circle")
+      .attr("r", 1e-6)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+  // add a link to the concept
+  var a = nodeEnter.append("a")
+	  .attr("xlink:href", function(d){ return d.uri; })
+	  .attr("target", "_blank");
+  
+  a.append("svg:text")
+      .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
+      .text(function(d) { return (d.name != null)?d.name:d.uri ; })
+      .style("fill-opacity", 1e-6);
+
+  // Transition nodes to their new position.
+  var nodeUpdate = node.transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; });
+
+  nodeUpdate.select("circle")
+      .attr("r", 6)
+      .style("fill", function(d) { return d._children ? "lightsteelblue" : "#fff"; });
+
+  nodeUpdate.select("text")
+      .style("fill-opacity", 1);
+
+  // Transition exiting nodes to the parent's new position.
+  var nodeExit = node.exit().transition()
+      .duration(duration)
+      .attr("transform", function(d) { return "translate(" + source.y + "," + source.x + ")"; })
+      .remove();
+
+  nodeExit.select("circle")
+      .attr("r", 1e-6);
+
+  nodeExit.select("text")
+      .style("fill-opacity", 1e-6);
+
+  // Update the links…
+  var link = vis.selectAll("path.link")
+      .data(tree.links(nodes), function(d) { return d.target.id; });
+
+  // Enter any new links at the parent's previous position.
+  link.enter().insert("svg:path", "g")
+      .attr("class", "link")
+      .attr("d", function(d) {
+        var o = {x: source.x0, y: source.y0};
+        return diagonal({source: o, target: o});
+      })
+    .transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition links to their new position.
+  link.transition()
+      .duration(duration)
+      .attr("d", diagonal);
+
+  // Transition exiting nodes to the parent's new position.
+  link.exit().transition()
+      .duration(duration)
+      .attr("d", function(d) {
+        var o = {x: source.x, y: source.y};
+        return diagonal({source: o, target: o});
+      })
+      .remove();
+
+  // Stash the old positions for transition.
+  nodes.forEach(function(d) {
+    d.x0 = d.x;
+    d.y0 = d.y;
+  });
+}
+
+// Toggle children.
+function toggle(d) {
+  if (d.children) {
+    d._children = d.children;
+    d.children = null;
+  } else {
+    d.children = d._children;
+    d._children = null;
+  }
+}
+
+    </script>
+    
+    <script>
+        $(document).ready(function () {
+          // add external link behavior to every external link
+          $('text').mouseover(function() {
+            $(this).attr("class", "ext-link");
+          });
+          $('text').mouseout(function() {
+            $(this).attr("class", "");
+          });
+          
+          $('#help-popover').popover({
+        	  html: true,
+              trigger : "click",
+              delay: { show: 0, hide: 400 },
+              content: '<ol><li>Click a blue circle to unfold the tree (white circles are the tree leaves and are inactive).</li><li>Click an open node to fold id.</li><li>Click a label to navigate to this concept URI.</li></ol>',
+              placement: "bottom"
+          });
+          $('#help-popover').css("text-decoration", "underline").css("cursor", "pointer");
+        });         
+    </script>
+  
+</body></html>
