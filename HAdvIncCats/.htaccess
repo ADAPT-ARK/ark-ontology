@@ -1,0 +1,13 @@
+    Options -MultiViews
+
+    RewriteEngine On
+    RewriteBase /Ontologies/HAdvIncCats
+
+    # Rewrite rule to serve HTML content from the vocabulary URI if requeste
+    RewriteCond %{HTTP_ACCEPT} !application/rdf\+xml.*(text/html|application/xhtml\+xml)
+    RewriteCond %{HTTP_ACCEPT} text/html [OR]
+    RewriteCond %{HTTP_ACCEPT} application/xhtml\+xml [OR]
+    RewriteCond %{HTTP_USER_AGENT} ^Mozilla/.*
+    RewriteRule ^$ index.html [R=303,L]
+
+    # DirectoryIndex index.html 
