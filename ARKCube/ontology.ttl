@@ -136,7 +136,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                    rdfs:range :Control ;
                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                    <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                   rdfs:comment "Used to link new controls that are required with a risk in a risk assessment."@en ;
+                   rdfs:comment "Links the additional controls and measures necessary to eliminate or further reduce the level of risk. Consider the hierarchy of controls: elimination/substitution/engineering/administrative/PPE. Try to consider both long and short-term measures."@en ;
                    rdfs:label "has addtional required control"@en .
 
 
@@ -156,7 +156,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 rdfs:range :Person ;
                 <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                 <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
-                rdfs:comment "Used to connect an action with the person assigned to perform it."@en ;
+                rdfs:comment "Used to link an Action with the Person assigned to perform it. Enter the name of the person responsible for the action necessary to mitigate the risk. The person responsible could be the Risk Owner, the Risk Owners Manager, or someone who reports to the Risk Owner, e.g. a CHO can assign an action to any of his/her Management team or to their direct Manager"@en ;
                 rdfs:label "assigned person"@en .
 
 
@@ -260,7 +260,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:range :OrganisationalUnit ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
-                    rdfs:comment "Links a risk assessment with an organisational unit."@en ;
+                    rdfs:comment "Links a Risk Assessment to a department or service (Organisational Unit) in an Organisation."@en ;
                     rdfs:label "has dept/service site"@en .
 
 
@@ -310,7 +310,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:range :Control ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                    rdfs:comment "Used in the HSE risk assessment form to link existing control measures with a risk."@en ;
+                    rdfs:comment "Links a Risk with a description of what administrative/procedural/existing controls measures are currently in place to mitigate the risk. Include engineering controls, policies, procedures, protocols, guidelines (clinical and non-clinical), training, emergency arrangements, preventative maintenance controls etc. When examining existing control measures, consider the adequacy, method of implementation and level of effectiveness in eliminating or minimising risk to the lowest practicable level."@en ;
                     rdfs:label "has existing control"@en .
 
 
@@ -330,7 +330,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                      rdfs:range :OrganisationalUnit ;
                      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                      <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                     rdfs:comment "Links a risk assessment and the relevant organisational unit."@en ;
+                     rdfs:comment "Links a Risk Assessment to a specfic HG/CHO Area."@en ;
                      rdfs:label "has HG/CHO/NAS/function"@en .
 
 
@@ -340,7 +340,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                           rdfs:range :Organisation ;
                           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                          rdfs:comment "Links a risk asssessment with an organisation."@en ;
+                          rdfs:comment "Links a Risk Assessment to a hospital site/service, or Organisation."@en ;
                           rdfs:label "has hospital site/service" .
 
 
@@ -350,7 +350,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:range :Impact ;
            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
            <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-           rdfs:comment "Links a risk and its impact."@en ;
+           rdfs:comment "Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?"@en ;
            rdfs:label "has impact"@en .
 
 
@@ -367,7 +367,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:domain :Risk ;
                rdfs:range :Likelihood ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-               rdfs:comment "Links a risk  to a likelihood of it occurring."@en ;
+               rdfs:comment "Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?"@en ;
                rdfs:label "has likelihood"@en ,
                           "Rob Brennan" .
 
@@ -417,7 +417,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                       rdfs:range :ImpactCategory ;
                       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                      rdfs:comment "HSE risk assessment form."@en ;
+                      rdfs:comment "Links a Risk Assessment with a Primary Impact Category taken from the HSE Risk Assessment Tool, Impact Table."@en ;
                       rdfs:label "has primary impact category"@en .
 
 
@@ -506,11 +506,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRisk
 :hasRisk rdf:type owl:ObjectProperty ;
-         rdfs:domain :RiskAssessmentRecord ;
+         rdfs:domain [ rdf:type owl:Class ;
+                       owl:unionOf ( :Project
+                                     :ProjectAnalysis
+                                     :RiskAssessmentRecord
+                                   )
+                     ] ;
          rdfs:range :Risk ;
          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-         rdfs:comment "Links a risk assessment to a risk."@en ;
+         rdfs:comment "Links a Risk Assessment Record, a Project, a Project Analysis or a Stage to a risk."@en ;
          rdfs:label "has risk"@en .
 
 
@@ -522,6 +527,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                                                                    "Lucy McKenna" ;
                          rdfs:comment "Links a Risk Register to a Risk Assessment Record."@en ;
                          rdfs:label "has risk assessment record"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessor
+:hasRiskAssessor rdf:type owl:ObjectProperty ;
+                 rdfs:domain :RiskAssessmentRecord ;
+                 rdfs:range :Person ;
+                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-05-04T21:23:10+00:00"^^xsd:dateTime ;
+                 rdfs:comment "Links a Risk Assessment to the Person(s) who completed it."@en ;
+                 rdfs:label "has risk assessor"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour
@@ -549,7 +564,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:range :RiskDescription ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                    rdfs:comment "Use ICC (impact, cause, context) format when describing risk."@en ;
+                    rdfs:comment "Links a Risk to its description. When describing risk it is important to describe the risk using the ‘ICC’  (impact, cause, context) approach. Describe the potential ‘IMPACT’ if the risk were materialised. Describe the ‘CAUSAL FACTORS’ that could result in the risk materialising. Ensure that the ‘CONTEXT’ of the risk is clear, e.g. is the risk ‘target’ well defined (e.g. staff, service user), department, hospital etc.) and the ‘nature’ of the risk clear (e.g. financial, safety, physical loss, perception, etc.)."@en ;
                     rdfs:label "has risk description"@en .
 
 
@@ -568,14 +583,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:range :Person ;
               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+              rdfs:comment "Links a Risk to the Person with the responsibility to assess and manage the risk in line with organisational policy i.e. normally the Line Manager of Service / Area. The Person who will be held accountable for the Risk and its effective control." ;
               rdfs:label "has risk owner"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating
 :hasRiskRating rdf:type owl:ObjectProperty ;
+               rdfs:domain :Risk ;
                rdfs:range :RiskRating ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
+               rdfs:comment "Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25)." ;
                rdfs:label "has risk rating" .
 
 
@@ -585,7 +603,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:range :RiskStatus ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-               rdfs:comment "Links a risk to its current status."@en ;
+               rdfs:comment "Links a Risk to its current status: ‘Open’, ‘Monitor’ or ‘Closed’. Open, i.e. additional controls have been identified as necessary. Monitor, i.e. existing controls are deemed adequate to manage the risk but these need to be periodically reviewed. Closed, i.e. that the risk no longer exists e.g. where an unsuitable premises is replaced by a suitable one."@en ;
                rdfs:label "has risk status"@en .
 
 
@@ -642,7 +660,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:range :OrganisationalUnit ;
               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-              rdfs:comment "Links a risk assessment with a healthcare division."@en ;
+              rdfs:comment "Links a Risk Assessment to a healthcare division."@en ;
               rdfs:label "has division"@en .
 
 
@@ -823,7 +841,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
          rdfs:range xsd:dateTime ;
          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-         rdfs:comment "Used to link an action with the date it is due."@en ;
+         rdfs:comment "Used to link an Action to the date by which implementation of the actions to mitigate the risk are due."@en ;
          rdfs:label "due date"@en .
 
 
@@ -955,7 +973,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                   rdfs:domain :RiskAssessmentRecord ;
                   <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                   <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
-                  rdfs:comment "A risk assesment identifier."@en ;
+                  rdfs:comment "The identifier of a Risk Assessment."@en ;
                   rdfs:label "unique ID number"@en .
 
 
@@ -966,15 +984,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             <http://purl.org/dc/elements/1.1/date> "2020-09-29t09:09:10+00:00" ;
             rdfs:comment "The source from which the risk was identified e.g. Incident Management, Audit, Health and Safety Risk Assessment, Inspection Report, Complaint."@en ;
             rdfs:label "risk source"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#riskType
-:riskType rdf:type owl:DatatypeProperty ;
-          rdfs:domain :RiskAssessmentRecord ;
-          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-          rdfs:comment "Links a risk assessment with a risk type."@en ;
-          rdfs:label "risk type"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#score
@@ -1971,6 +1980,31 @@ Familiarity gained by personal experience, vicariously or through collective pro
                       rdfs:label "Dublin City University"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance
+:Governance rdf:type owl:NamedIndividual ,
+                     :RiskType ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            <http://purl.org/dc/elements/1.1/date> "2021-05-04T20:30:14+00:00"^^xsd:dateTime ;
+            rdfs:comment "A method or system of management (of operational risk) required to assure that human systems work."@en ;
+            rdfs:label "Governance"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources
+:HumanResources rdf:type owl:NamedIndividual ,
+                         :RiskType ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-05-04T20:30:45+00:00"^^xsd:dateTime ;
+                rdfs:label "Human Resources"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety
+:PatientCareAndSafety rdf:type owl:NamedIndividual ,
+                               :RiskType ;
+                      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                      <http://purl.org/dc/elements/1.1/date> "2021-05-04T20:30:56+00:00"^^xsd:dateTime ;
+                      rdfs:label "Patient Care and Safety (Provision of Care)"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#TrinityCollegeDublin
 :TrinityCollegeDublin rdf:type owl:NamedIndividual ,
                                :Organisation ;
@@ -2216,7 +2250,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 :operational rdf:type owl:NamedIndividual ,
                       :RiskType ;
              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-             <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:46:14+00:00" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:46:14+00:00"^^xsd:dateTime ;
              rdfs:comment "As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks." ;
              rdfs:label "Operational" .
 
@@ -2274,7 +2308,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 :strategic rdf:type owl:NamedIndividual ,
                     :RiskType ;
            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-           <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:45:13+00:00" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:45:13+00:00"^^xsd:dateTime ;
            rdfs:comment "As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan." ;
            rdfs:label "Strategic"@en .
 

@@ -227,7 +227,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used to link new controls that are required with a risk in a risk assessment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links the additional controls and measures necessary to eliminate or further reduce the level of risk. Consider the hierarchy of controls: elimination/substitution/engineering/administrative/PPE. Try to consider both long and short-term measures.</rdfs:comment>
         <rdfs:label xml:lang="en">has addtional required control</rdfs:label>
     </owl:ObjectProperty>
     
@@ -255,7 +255,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used to connect an action with the person assigned to perform it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to link an Action with the Person assigned to perform it. Enter the name of the person responsible for the action necessary to mitigate the risk. The person responsible could be the Risk Owner, the Risk Owners Manager, or someone who reports to the Risk Owner, e.g. a CHO can assign an action to any of his/her Management team or to their direct Manager</rdfs:comment>
         <rdfs:label xml:lang="en">assigned person</rdfs:label>
     </owl:ObjectProperty>
     
@@ -402,7 +402,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29 09:09:10</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment with an organisational unit.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to a department or service (Organisational Unit) in an Organisation.</rdfs:comment>
         <rdfs:label xml:lang="en">has dept/service site</rdfs:label>
     </owl:ObjectProperty>
     
@@ -472,7 +472,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used in the HSE risk assessment form to link existing control measures with a risk.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk with a description of what administrative/procedural/existing controls measures are currently in place to mitigate the risk. Include engineering controls, policies, procedures, protocols, guidelines (clinical and non-clinical), training, emergency arrangements, preventative maintenance controls etc. When examining existing control measures, consider the adequacy, method of implementation and level of effectiveness in eliminating or minimising risk to the lowest practicable level.</rdfs:comment>
         <rdfs:label xml:lang="en">has existing control</rdfs:label>
     </owl:ObjectProperty>
     
@@ -500,7 +500,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment and the relevant organisational unit.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to a specfic HG/CHO Area.</rdfs:comment>
         <rdfs:label xml:lang="en">has HG/CHO/NAS/function</rdfs:label>
     </owl:ObjectProperty>
     
@@ -514,7 +514,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk asssessment with an organisation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to a hospital site/service, or Organisation.</rdfs:comment>
         <rdfs:label>has hospital site/service</rdfs:label>
     </owl:ObjectProperty>
     
@@ -528,7 +528,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk and its impact.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?</rdfs:comment>
         <rdfs:label xml:lang="en">has impact</rdfs:label>
     </owl:ObjectProperty>
     
@@ -553,7 +553,7 @@
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk  to a likelihood of it occurring.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?</rdfs:comment>
         <rdfs:label xml:lang="en">has likelihood</rdfs:label>
         <rdfs:label>Rob Brennan</rdfs:label>
     </owl:ObjectProperty>
@@ -623,7 +623,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE risk assessment form.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment with a Primary Impact Category taken from the HSE Risk Assessment Tool, Impact Table.</rdfs:comment>
         <rdfs:label xml:lang="en">has primary impact category</rdfs:label>
     </owl:ObjectProperty>
     
@@ -752,11 +752,19 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRisk">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"/>
+                    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment to a risk.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment Record, a Project, a Project Analysis or a Stage to a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk</rdfs:label>
     </owl:ObjectProperty>
     
@@ -772,6 +780,20 @@
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment xml:lang="en">Links a Risk Register to a Risk Assessment Record.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk assessment record</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessor -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessor">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T21:23:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to the Person(s) who completed it.</rdfs:comment>
+        <rdfs:label xml:lang="en">has risk assessor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -811,7 +833,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Use ICC (impact, cause, context) format when describing risk.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk to its description. When describing risk it is important to describe the risk using the ‘ICC’  (impact, cause, context) approach. Describe the potential ‘IMPACT’ if the risk were materialised. Describe the ‘CAUSAL FACTORS’ that could result in the risk materialising. Ensure that the ‘CONTEXT’ of the risk is clear, e.g. is the risk ‘target’ well defined (e.g. staff, service user), department, hospital etc.) and the ‘nature’ of the risk clear (e.g. financial, safety, physical loss, perception, etc.).</rdfs:comment>
         <rdfs:label xml:lang="en">has risk description</rdfs:label>
     </owl:ObjectProperty>
     
@@ -838,6 +860,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment>Links a Risk to the Person with the responsibility to assess and manage the risk in line with organisational policy i.e. normally the Line Manager of Service / Area. The Person who will be held accountable for the Risk and its effective control.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk owner</rdfs:label>
     </owl:ObjectProperty>
     
@@ -847,9 +870,11 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
+        <rdfs:comment>Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25).</rdfs:comment>
         <rdfs:label>has risk rating</rdfs:label>
     </owl:ObjectProperty>
     
@@ -863,7 +888,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk to its current status.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk to its current status: ‘Open’, ‘Monitor’ or ‘Closed’. Open, i.e. additional controls have been identified as necessary. Monitor, i.e. existing controls are deemed adequate to manage the risk but these need to be periodically reviewed. Closed, i.e. that the risk no longer exists e.g. where an unsuitable premises is replaced by a suitable one.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk status</rdfs:label>
     </owl:ObjectProperty>
     
@@ -944,7 +969,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment with a healthcare division.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to a healthcare division.</rdfs:comment>
         <rdfs:label xml:lang="en">has division</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1214,7 +1239,7 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used to link an action with the date it is due.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to link an Action to the date by which implementation of the actions to mitigate the risk are due.</rdfs:comment>
         <rdfs:label xml:lang="en">due date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1406,7 +1431,7 @@
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29 09:09:10</dc:date>
-        <rdfs:comment xml:lang="en">A risk assesment identifier.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The identifier of a Risk Assessment.</rdfs:comment>
         <rdfs:label xml:lang="en">unique ID number</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1421,19 +1446,6 @@
         <dc:date>2020-09-29t09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">The source from which the risk was identified e.g. Incident Management, Audit, Health and Safety Risk Assessment, Inspection Report, Complaint.</rdfs:comment>
         <rdfs:label xml:lang="en">risk source</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#riskType -->
-
-
-    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskType">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment with a risk type.</rdfs:comment>
-        <rdfs:label xml:lang="en">risk type</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2880,6 +2892,43 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T20:30:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A method or system of management (of operational risk) required to assure that human systems work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Governance</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T20:30:45+00:00</dc:date>
+        <rdfs:label xml:lang="en">Human Resources</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T20:30:56+00:00</dc:date>
+        <rdfs:label xml:lang="en">Patient Care and Safety (Provision of Care)</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#TrinityCollegeDublin -->
 
 
@@ -3259,7 +3308,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#operational">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
         <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date>2021-03-10T14:46:14+00:00</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T14:46:14+00:00</dc:date>
         <rdfs:comment>As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks.</rdfs:comment>
         <rdfs:label>Operational</rdfs:label>
     </owl:NamedIndividual>
@@ -3341,7 +3390,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
         <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date>2021-03-10T14:45:13+00:00</dc:date>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T14:45:13+00:00</dc:date>
         <rdfs:comment>As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan.</rdfs:comment>
         <rdfs:label xml:lang="en">Strategic</rdfs:label>
     </owl:NamedIndividual>

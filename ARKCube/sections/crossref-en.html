@@ -1416,6 +1416,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#assignedPerson">assigned person</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#designedBy"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy">designed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskAssessor"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessor">has risk assessor</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskCoordinator"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskCoordinator">has risk coordinator</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskOwner"
@@ -2024,6 +2026,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription">has risk description</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskOwner"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskOwner">has risk owner</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskRating"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating">has risk rating</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskStatus"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskStatus">has risk status</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskType"
@@ -2106,11 +2110,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division">has division</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasHospitalSiteOrService"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService">has hospital site/service</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRisk"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRisk">has risk</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#riskType"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskType">risk type</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#riskAssessmentId"
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskAssessor"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessor">has risk assessor</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#riskAssessmentId"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId">unique ID number</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -2431,8 +2433,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#operational"
+            <a href="#Governance"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance">Governance</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#HumanResources"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources">Human Resources</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#operational"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#operational">Operational</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#PatientCareAndSafety"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety">Patient Care and Safety (Provision of Care)</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#strategic"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic">Strategic</a>
             <sup class="type-ni" title="named individual">ni</sup>
@@ -2917,6 +2925,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord">has risk assessment record</a>
       </li>
       <li>
+         <a href="#hasRiskAssessor"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessor">has risk assessor</a>
+      </li>
+      <li>
          <a href="#hasRiskColour"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskColour">has risk colour</a>
       </li>
@@ -3043,7 +3055,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#assignedPerson</p>
       <div class="comment">
-         <span class="markdown">Used to connect an action with the person assigned to perform it.</span>
+         <span class="markdown">Used to link an Action with the Person assigned to perform it. Enter the name of the person responsible for the action necessary to mitigate the risk. The person responsible could be the Risk Owner, the Risk Owners Manager, or someone who reports to the Risk Owner, e.g. a CHO can assign an action to any of his/her Management team or to their direct Manager</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3113,7 +3125,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#additionalControl</p>
       <div class="comment">
-         <span class="markdown">Used to link new controls that are required with a risk in a risk assessment.</span>
+         <span class="markdown">Links the additional controls and measures necessary to eliminate or further reduce the level of risk. Consider the hierarchy of controls: elimination/substitution/engineering/administrative/PPE. Try to consider both long and short-term measures.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3427,7 +3439,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite</p>
       <div class="comment">
-         <span class="markdown">Links a risk assessment with an organisational unit.</span>
+         <span class="markdown">Links a Risk Assessment to a department or service (Organisational Unit) in an Organisation.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3497,7 +3509,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division</p>
       <div class="comment">
-         <span class="markdown">Links a risk assessment with a healthcare division.</span>
+         <span class="markdown">Links a Risk Assessment to a healthcare division.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3628,7 +3640,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasExistingControl</p>
       <div class="comment">
-         <span class="markdown">Used in the HSE risk assessment form to link existing control measures with a risk.</span>
+         <span class="markdown">Links a Risk with a description of what administrative/procedural/existing controls measures are currently in place to mitigate the risk. Include engineering controls, policies, procedures, protocols, guidelines (clinical and non-clinical), training, emergency arrangements, preventative maintenance controls etc. When examining existing control measures, consider the adequacy, method of implementation and level of effectiveness in eliminating or minimising risk to the lowest practicable level.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3698,7 +3710,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction</p>
       <div class="comment">
-         <span class="markdown">Links a risk assessment and the relevant organisational unit.</span>
+         <span class="markdown">Links a Risk Assessment to a specfic HG/CHO Area.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3733,7 +3745,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService</p>
       <div class="comment">
-         <span class="markdown">Links a risk asssessment with an organisation.</span>
+         <span class="markdown">Links a Risk Assessment to a hospital site/service, or Organisation.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3768,7 +3780,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact</p>
       <div class="comment">
-         <span class="markdown">Links a risk and its impact.</span>
+         <span class="markdown">Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3829,7 +3841,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood</p>
       <div class="comment">
-         <span class="markdown">Links a risk  to a likelihood of it occurring.</span>
+         <span class="markdown">Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3985,7 +3997,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasPrimaryImpactArea</p>
       <div class="comment">
-         <span class="markdown">HSE risk assessment form.</span>
+         <span class="markdown">Links a Risk Assessment with a Primary Impact Category taken from the HSE Risk Assessment Tool, Impact Table.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -4333,7 +4345,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRisk</p>
       <div class="comment">
-         <span class="markdown">Links a risk assessment to a risk.</span>
+         <span class="markdown">Links a Risk Assessment Record, a Project, a Project Analysis or a Stage to a risk.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -4347,6 +4359,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dl>
             <dt>has domain</dt>
             <dd>
+               <a href="#Project"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project">Project</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#ProjectAnalysis"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
                <a href="#RiskAssessmentRecord"
                   title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord">Risk Assessment Record (Form)</a>
                <sup class="type-c" title="class">c</sup>
@@ -4387,6 +4407,41 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <dd>
                <a href="#RiskAssessmentRecord"
                   title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord">Risk Assessment Record (Form)</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRiskAssessor">
+      <h3>has risk assessor<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessor</p>
+      <div class="comment">
+         <span class="markdown">Links a Risk Assessment to the Person(s) who completed it.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>04T21:23:10+00:00/05/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#RiskAssessmentRecord"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord">Risk Assessment Record (Form)</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Person"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">Person</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -4504,7 +4559,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskDescription</p>
       <div class="comment">
-         <span class="markdown">Use ICC (impact, cause, context) format when describing risk.</span>
+         <span class="markdown">Links a Risk to its description. When describing risk it is important to describe the risk using the ‘ICC’  (impact, cause, context) approach. Describe the potential ‘IMPACT’ if the risk were materialised. Describe the ‘CAUSAL FACTORS’ that could result in the risk materialising. Ensure that the ‘CONTEXT’ of the risk is clear, e.g. is the risk ‘target’ well defined (e.g. staff, service user), department, hospital etc.) and the ‘nature’ of the risk clear (e.g. financial, safety, physical loss, perception, etc.).</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -4570,6 +4625,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </h3>
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskOwner</p>
+      <div class="comment">
+         <span class="markdown">Links a Risk to the Person with the responsibility to assess and manage the risk in line with organisational policy i.e. normally the Line Manager of Service / Area. The Person who will be held accountable for the Risk and its effective control.</span>
+      </div>
       <dl>
          <dt>Date:</dt>
          <dd>29T09:09:10+00:00/09/2020</dd>
@@ -4602,6 +4660,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </h3>
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating</p>
+      <div class="comment">
+         <span class="markdown">Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25).</span>
+      </div>
       <dl>
          <dt>Date:</dt>
          <dd>22T09:53:21+00:00/09/2020</dd>
@@ -4612,6 +4673,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Risk"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk">Risk</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#RiskRating"
@@ -4629,7 +4696,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskStatus</p>
       <div class="comment">
-         <span class="markdown">Links a risk to its current status.</span>
+         <span class="markdown">Links a Risk to its current status: ‘Open’, ‘Monitor’ or ‘Closed’. Open, i.e. additional controls have been identified as necessary. Monitor, i.e. existing controls are deemed adequate to manage the risk but these need to be periodically reviewed. Closed, i.e. that the risk no longer exists e.g. where an unsuitable premises is replaced by a suitable one.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -5191,10 +5258,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskSource">risk source</a>
       </li>
       <li>
-         <a href="#riskType"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskType">risk type</a>
-      </li>
-      <li>
          <a href="#score"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">score</a>
       </li>
@@ -5460,7 +5523,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#dueDate</p>
       <div class="comment">
-         <span class="markdown">Used to link an action with the date it is due.</span>
+         <span class="markdown">Used to link an Action to the date by which implementation of the actions to mitigate the risk are due.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -5870,35 +5933,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dl>
       </div>
    </div>
-   <div class="entity" id="riskType">
-      <h3>risk type<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#riskType</p>
-      <div class="comment">
-         <span class="markdown">Links a risk assessment with a risk type.</span>
-      </div>
-      <dl>
-         <dt>Date:</dt>
-         <dd>29T09:09:10+00:00/09/2020</dd>
-      </dl>
-      <dl>
-         <dt>Authors:</dt>
-         <dd>Rob Brennan</dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#RiskAssessmentRecord"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord">Risk Assessment Record (Form)</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="score">
       <h3>score<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -5986,7 +6020,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId</p>
       <div class="comment">
-         <span class="markdown">A risk assesment identifier.</span>
+         <span class="markdown">The identifier of a Risk Assessment.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -6124,6 +6158,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#environment">Environment</a>
       </li>
       <li>
+         <a href="#Governance"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance">Governance</a>
+      </li>
+      <li>
          <a href="#lowRisk"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowRisk">Green (Low Risk)</a>
       </li>
@@ -6150,6 +6188,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <li>
          <a href="#highViability"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability">High Viability</a>
+      </li>
+      <li>
+         <a href="#HumanResources"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources">Human Resources</a>
       </li>
       <li>
          <a href="#likely"
@@ -6210,6 +6252,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <li>
          <a href="#operational"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#operational">Operational</a>
+      </li>
+      <li>
+         <a href="#PatientCareAndSafety"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety">Patient Care and Safety (Provision of Care)</a>
       </li>
       <li>
          <a href="#possible"
@@ -6551,6 +6597,33 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Governance">
+      <h3>Governance<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance</p>
+      <div class="comment">
+         <span class="markdown">A method or system of management (of operational risk) required to assure that human systems work.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>04T20:30:14+00:00/05/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#RiskType"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType">Risk Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="lowRisk">
       <h3>Green (Low Risk)<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
@@ -6670,6 +6743,30 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dd>
             <a href="#Viability"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability">Viability</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HumanResources">
+      <h3>Human Resources<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources</p>
+      <dl>
+         <dt>Date:</dt>
+         <dd>04T20:30:45+00:00/05/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#RiskType"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType">Risk Type</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -6954,6 +7051,30 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <dl>
          <dt>Date:</dt>
          <dd>10T14:46:14+00:00/03/2021</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#RiskType"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType">Risk Type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PatientCareAndSafety">
+      <h3>Patient Care and Safety (Provision of Care)<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety</p>
+      <dl>
+         <dt>Date:</dt>
+         <dd>04T20:30:56+00:00/05/2021</dd>
       </dl>
       <dl>
          <dt>Authors:</dt>
