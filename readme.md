@@ -1,5 +1,5 @@
 # ARK Ontologies
-This repository is used to update the ARK ontologies (Cube, Amarach, Platform) and Terminologies (Risk and Health) and provides a content negotiation configuration following Linked Data guidelines.
+This repository is used to update the ARK ontologies (Cube, Amarach, Platform) and Terminologies (Risk, Health HAdvIncCats) and provides a content negotiation configuration following Linked Data guidelines.
 	
 ## To update the ontologies on your local machine
 1. Clone the repository to your local machine
