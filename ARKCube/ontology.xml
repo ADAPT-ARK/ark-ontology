@@ -394,20 +394,6 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29 09:09:10</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to a department or service (Organisational Unit) in an Organisation.</rdfs:comment>
-        <rdfs:label xml:lang="en">has dept/service site</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDimension -->
 
 
@@ -488,20 +474,6 @@
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
         <rdfs:comment xml:lang="en">Connects risk verifaction assessment with gain achieved</rdfs:comment>
         <rdfs:label xml:lang="en">has gain achieved</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to a specfic HG/CHO Area.</rdfs:comment>
-        <rdfs:label xml:lang="en">has HG/CHO/NAS/function</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -961,20 +933,6 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#OrganisationalUnit"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to a healthcare division.</rdfs:comment>
-        <rdfs:label xml:lang="en">has division</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability -->
 
 
@@ -1299,6 +1257,42 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite">
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29 09:09:10</dc:date>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to a department or service in an Organisation.</rdfs:comment>
+        <rdfs:label xml:lang="en">has dept/service site</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction">
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to a specfic HG/CHO Area.</rdfs:comment>
+        <rdfs:label xml:lang="en">has HG/CHO/NAS/function</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division">
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to a healthcare division.</rdfs:comment>
+        <rdfs:label xml:lang="en">has division</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#importance -->
 
 
@@ -1471,7 +1465,7 @@
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used to hold a signature of the responsibel person in a risk assessment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to hold a signature of the responsible person in a risk assessment.</rdfs:comment>
         <rdfs:label xml:lang="en">signature</rdfs:label>
     </owl:DatatypeProperty>
     

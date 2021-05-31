@@ -254,16 +254,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:label "has delivery"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite
-:hasDeptServiceSite rdf:type owl:ObjectProperty ;
-                    rdfs:domain :RiskAssessmentRecord ;
-                    rdfs:range :OrganisationalUnit ;
-                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-                    <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
-                    rdfs:comment "Links a Risk Assessment to a department or service (Organisational Unit) in an Organisation."@en ;
-                    rdfs:label "has dept/service site"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDimension
 :hasDimension rdf:type owl:ObjectProperty ;
               rdfs:domain :Question ;
@@ -322,16 +312,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" ;
                  rdfs:comment "Connects risk verifaction assessment with gain achieved"@en ;
                  rdfs:label "has gain achieved"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction
-:hasHgChoNasFunction rdf:type owl:ObjectProperty ;
-                     rdfs:domain :RiskAssessmentRecord ;
-                     rdfs:range :OrganisationalUnit ;
-                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                     rdfs:comment "Links a Risk Assessment to a specfic HG/CHO Area."@en ;
-                     rdfs:label "has HG/CHO/NAS/function"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService
@@ -654,16 +634,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                    rdfs:label "has sustainability"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division
-:has_division rdf:type owl:ObjectProperty ;
-              rdfs:domain :RiskAssessmentRecord ;
-              rdfs:range :OrganisationalUnit ;
-              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-              rdfs:comment "Links a Risk Assessment to a healthcare division."@en ;
-              rdfs:label "has division"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#has_viability
 :has_viability rdf:type owl:ObjectProperty ;
                rdfs:range :Viability ;
@@ -883,6 +853,30 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
       rdfs:label "file" .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite
+:hasDeptServiceSite rdf:type owl:DatatypeProperty ;
+                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                    <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
+                    rdfs:comment "Links a Risk Assessment to a department or service in an Organisation."@en ;
+                    rdfs:label "has dept/service site"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction
+:hasHgChoNasFunction rdf:type owl:DatatypeProperty ;
+                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                     rdfs:comment "Links a Risk Assessment to a specfic HG/CHO Area."@en ;
+                     rdfs:label "has HG/CHO/NAS/function"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division
+:has_division rdf:type owl:DatatypeProperty ;
+              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+              rdfs:comment "Links a Risk Assessment to a healthcare division."@en ;
+              rdfs:label "has division"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#importance
 :importance rdf:type owl:DatatypeProperty ;
             rdfs:domain :ProjectAnalysis ;
@@ -1001,7 +995,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:domain :Person ;
            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
            <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-           rdfs:comment "Used to hold a signature of the responsibel person in a risk assessment."@en ;
+           rdfs:comment "Used to hold a signature of the responsible person in a risk assessment."@en ;
            rdfs:label "signature"@en .
 
 
