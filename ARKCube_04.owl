@@ -564,6 +564,19 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-14T20:49:04+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a Project to its Description.</rdfs:comment>
+        <rdfs:label xml:lang="en">has project description</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain">
@@ -2180,6 +2193,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription -->
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-14T20:53:04+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A description of a Project.</rdfs:comment>
+        <rdfs:label xml:lang="en">Project Description</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain -->
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain">
@@ -2712,6 +2737,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects -->
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2021-01-29T09:52:00+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Risks relating to the procedures/technologies etc. employed to achieve particular objectives and projects. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:label xml:lang="en">ObjectiveAnsProjects</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety">
@@ -2740,7 +2777,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks to the public reputation of the organisation and their effects. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
         <rdfs:label xml:lang="en">Adverse Publicity/Reputation</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2755,7 +2792,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Probability: 99%. Actual Frequency: At least monthly. A type of Risk Likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Almost Certain</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2778,7 +2815,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks which threaten the organisation’s ability to deliver its services and serve the community. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
         <rdfs:label xml:lang="en">Business Continuity</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2794,14 +2831,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards -->
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance">
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
-        <rdfs:label xml:lang="en">Compliance </rdfs:label>
+        <rdfs:comment xml:lang="en">Risks   associated   with   compliance   with   requirements   in   relation   to   the   standards  set  out  in  relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:label xml:lang="en">Compliance with Standards</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -2823,7 +2860,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks  which  threaten  the  prevention,  limitation,  elimination,  abatement  or  reduction   of   environmental   pollution   and   the   preservation   of   a   quality   environment. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
         <rdfs:label xml:lang="en">Environment</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2835,7 +2872,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks  relating  to  procedures/systems/accounting  records  which  expose  the  organisation to financial risks, including risks to assets. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
         <rdfs:label></rdfs:label>
         <rdfs:label>Financial Loss</rdfs:label>
     </owl:NamedIndividual>
@@ -2848,7 +2885,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks  which  may  contribute  to  the  physical  or  psychological  harm  of  an  individual. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
         <rdfs:label xml:lang="en">Harm to a Person</rdfs:label>
     </owl:NamedIndividual>
     
@@ -2917,7 +2954,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Probability: 75%. Actual Frequency: Bimonthly. A type of Risk Likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Likely</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3044,18 +3081,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People -->
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
-        <rdfs:label xml:lang="en">Objectives/People</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#open -->
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#open">
@@ -3087,7 +3112,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date xml:lang="en">2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Probability: 50%. Actual Frequency: Occurs every 1-2 years. A type of Risk Likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Possible</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3102,7 +3127,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date xml:lang="en">2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Probability: 1%. Actual Frequency: Occurs every 5 years or more. A type of Risk Likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Rare/Remote</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3114,7 +3139,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks  which  threaten  the  delivery  of  a  service  provision  to  service  users  in terms  of  quality,  in  a  comfortable,  caring  and  safe  environment,  delivered  in  a  calm  and  reassuring  way;  having  information  to  make  choices,  to  feel  confident  and  to  feel  in  control;  being  listened  to  and  talked  to  as  an  equal;  being treated with honesty, respect and dignity. A type of Risk Impact Category described in the Impact Table.</rdfs:comment>
         <rdfs:label xml:lang="en">Service User Experience</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3174,7 +3199,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">HSE definition. A type of Risk Assessment likelihood.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Probability: 10%. Actual Frequency: Occurs every 2-5 years. A type of Risk Likelihood.</rdfs:comment>
         <rdfs:label xml:lang="en">Unlikely</rdfs:label>
     </owl:NamedIndividual>
     
