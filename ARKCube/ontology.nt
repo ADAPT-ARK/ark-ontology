@@ -365,6 +365,15 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Project with all the analysis done on the Project."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "has project analysis"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://purl.org/dc/elements/1.1/date> "2021-06-14T20:49:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project to its Description."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has project description"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskMitigation> .
@@ -1536,6 +1545,14 @@ _:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Project analysis is a high-level ark project analysis used to identify values, loss, efficacy etc"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Project Analysis"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> <http://purl.org/dc/elements/1.1/date> "2021-06-14T20:53:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of a Project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Project Description"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid92 .
@@ -1951,6 +1968,14 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources> <http://purl.org/dc/elements/1.1/date> "2021-05-04T20:30:45+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources> <http://www.w3.org/2000/01/rdf-schema#label> "Human Resources"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks relating to the procedures/technologies etc. employed to achieve particular objectives and projects. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects> <http://www.w3.org/2000/01/rdf-schema#label> "ObjectiveAnsProjects"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType> .
@@ -1970,7 +1995,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks to the public reputation of the organisation and their effects. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation> <http://www.w3.org/2000/01/rdf-schema#label> "Adverse Publicity/Reputation"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain
@@ -1981,7 +2006,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 99%. Actual Frequency: At least monthly. A type of Risk Likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/2000/01/rdf-schema#label> "Almost Certain"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal
@@ -1996,7 +2021,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks which threaten the organisation’s ability to deliver its services and serve the community. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://www.w3.org/2000/01/rdf-schema#label> "Business Continuity"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#closed
@@ -2005,13 +2030,13 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/2000/01/rdf-schema#comment> "Closed, i.e. that the risk no longer exists e.g. where an unsuitable premises is replaced by a suitable one." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/2000/01/rdf-schema#label> "Closed"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/2000/01/rdf-schema#label> "Compliance "@en .
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks   associated   with   compliance   with   requirements   in   relation   to   the   standards  set  out  in  relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards> <http://www.w3.org/2000/01/rdf-schema#label> "Compliance with Standards"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2025,7 +2050,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#environment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#environment> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#environment> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#environment> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#environment> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks  which  threaten  the  prevention,  limitation,  elimination,  abatement  or  reduction   of   environmental   pollution   and   the   preservation   of   a   quality   environment. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#environment> <http://www.w3.org/2000/01/rdf-schema#label> "Environment"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss
@@ -2033,7 +2058,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks  relating  to  procedures/systems/accounting  records  which  expose  the  organisation to financial risks, including risks to assets. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://www.w3.org/2000/01/rdf-schema#label> "" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#financialLoss> <http://www.w3.org/2000/01/rdf-schema#label> "Financial Loss" .
 # 
@@ -2042,7 +2067,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks  which  may  contribute  to  the  physical  or  psychological  harm  of  an  individual. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#harmToAPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Harm to a Person"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery
@@ -2083,7 +2108,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 75%. Actual Frequency: Bimonthly. A type of Risk Likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://www.w3.org/2000/01/rdf-schema#label> "Likely"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery
@@ -2155,14 +2180,6 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Monitor, i.e. existing controls are deemed adequate to manage the risk but these need to be periodically reviewed." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/2000/01/rdf-schema#label> "Monitor"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People> <http://www.w3.org/2000/01/rdf-schema#label> "Objectives/People"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#open
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus> .
@@ -2185,7 +2202,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 50%. Actual Frequency: Occurs every 1-2 years. A type of Risk Likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possible> <http://www.w3.org/2000/01/rdf-schema#label> "Possible"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote
@@ -2196,7 +2213,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 1%. Actual Frequency: Occurs every 5 years or more. A type of Risk Likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/2000/01/rdf-schema#label> "Rare/Remote"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience
@@ -2204,7 +2221,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Impact Category described in the Impact Table."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "Risks  which  threaten  the  delivery  of  a  service  provision  to  service  users  in terms  of  quality,  in  a  comfortable,  caring  and  safe  environment,  delivered  in  a  calm  and  reassuring  way;  having  information  to  make  choices,  to  feel  confident  and  to  feel  in  control;  being  listened  to  and  talked  to  as  an  equal;  being treated with honesty, respect and dignity. A type of Risk Impact Category described in the Impact Table."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Service User Experience"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#stJamesHospital
@@ -2244,7 +2261,7 @@ _:genid142 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://www.w3.org/2000/01/rdf-schema#comment> "HSE definition. A type of Risk Assessment likelihood."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 10%. Actual Frequency: Occurs every 2-5 years. A type of Risk Likelihood."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely> <http://www.w3.org/2000/01/rdf-schema#label> "Unlikely"@en .
 # 
 # 

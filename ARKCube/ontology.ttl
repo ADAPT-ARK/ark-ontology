@@ -409,6 +409,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:label "has project analysis"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription
+:hasProjectDescription rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Project ;
+                       rdfs:range :ProjectDescription ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-06-14T20:49:04+00:00"^^xsd:dateTime ;
+                       rdfs:comment "Links a Project to its Description."@en ;
+                       rdfs:label "has project description"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain
 :hasProjectedGain rdf:type owl:ObjectProperty ;
                   rdfs:domain :RiskMitigation ;
@@ -1600,6 +1610,15 @@ Familiarity gained by personal experience, vicariously or through collective pro
                  rdfs:label "Project Analysis"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription
+:ProjectDescription rdf:type owl:Class ;
+                    rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKProjects#DataEntity> ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-06-14T20:53:04+00:00"^^xsd:dateTime ;
+                    rdfs:comment "A description of a Project."@en ;
+                    rdfs:label "Project Description"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain
 :ProjectedGain rdf:type owl:Class ;
                rdfs:subClassOf [ owl:intersectionOf ( :LossOrGain
@@ -1991,6 +2010,15 @@ Familiarity gained by personal experience, vicariously or through collective pro
                 rdfs:label "Human Resources"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects
+:ObjectivesAndProjects rdf:type owl:NamedIndividual ,
+                                :ImpactCategory ;
+                       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
+                       rdfs:comment "Risks relating to the procedures/technologies etc. employed to achieve particular objectives and projects. A type of Risk Impact Category described in the Impact Table."@en ;
+                       rdfs:label "ObjectiveAnsProjects"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety
 :PatientCareAndSafety rdf:type owl:NamedIndividual ,
                                :RiskType ;
@@ -2012,7 +2040,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                       :ImpactCategory ;
                              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                              <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-                             rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
+                             rdfs:comment "Risks to the public reputation of the organisation and their effects. A type of Risk Impact Category described in the Impact Table."@en ;
                              rdfs:label "Adverse Publicity/Reputation"@en .
 
 
@@ -2024,7 +2052,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                :score "5"^^xsd:int ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-               rdfs:comment "HSE definition. A type of Risk Assessment likelihood."@en ;
+               rdfs:comment "Probability: 99%. Actual Frequency: At least monthly. A type of Risk Likelihood."@en ;
                rdfs:label "Almost Certain"@en .
 
 
@@ -2041,7 +2069,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                              :ImpactCategory ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-                    rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
+                    rdfs:comment "Risks which threaten the organisation’s ability to deliver its services and serve the community. A type of Risk Impact Category described in the Impact Table."@en ;
                     rdfs:label "Business Continuity"@en .
 
 
@@ -2052,13 +2080,13 @@ Familiarity gained by personal experience, vicariously or through collective pro
         rdfs:label "Closed"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance
-:compliance rdf:type owl:NamedIndividual ,
-                     :ImpactCategory ;
-            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-            <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-            rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
-            rdfs:label "Compliance "@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#complianceWithStandards
+:complianceWithStandards rdf:type owl:NamedIndividual ,
+                                  :ImpactCategory ;
+                         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                         <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
+                         rdfs:comment "Risks   associated   with   compliance   with   requirements   in   relation   to   the   standards  set  out  in  relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards. A type of Risk Impact Category described in the Impact Table."@en ;
+                         rdfs:label "Compliance with Standards"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade
@@ -2074,7 +2102,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                       :ImpactCategory ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
              <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-             rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
+             rdfs:comment "Risks  which  threaten  the  prevention,  limitation,  elimination,  abatement  or  reduction   of   environmental   pollution   and   the   preservation   of   a   quality   environment. A type of Risk Impact Category described in the Impact Table."@en ;
              rdfs:label "Environment"@en .
 
 
@@ -2083,7 +2111,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                         :ImpactCategory ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-               rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
+               rdfs:comment "Risks  relating  to  procedures/systems/accounting  records  which  expose  the  organisation to financial risks, including risks to assets. A type of Risk Impact Category described in the Impact Table."@en ;
                rdfs:label "" ,
                           "Financial Loss" .
 
@@ -2093,7 +2121,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                         :ImpactCategory ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-               rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
+               rdfs:comment "Risks  which  may  contribute  to  the  physical  or  psychological  harm  of  an  individual. A type of Risk Impact Category described in the Impact Table."@en ;
                rdfs:label "Harm to a Person"@en .
 
 
@@ -2141,7 +2169,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         :score "4"^^xsd:int ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-        rdfs:comment "HSE definition. A type of Risk Assessment likelihood."@en ;
+        rdfs:comment "Probability: 75%. Actual Frequency: Bimonthly. A type of Risk Likelihood."@en ;
         rdfs:label "Likely"@en .
 
 
@@ -2227,15 +2255,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
          rdfs:label "Monitor"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#objectives-People
-:objectives-People rdf:type owl:NamedIndividual ,
-                            :ImpactCategory ;
-                   <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-                   <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-                   rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
-                   rdfs:label "Objectives/People"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#open
 :open rdf:type owl:NamedIndividual ,
                :RiskStatus ;
@@ -2260,7 +2279,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
           :score "3"^^xsd:int ;
           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en ;
-          rdfs:comment "HSE definition. A type of Risk Assessment likelihood."@en ;
+          rdfs:comment "Probability: 50%. Actual Frequency: Occurs every 1-2 years. A type of Risk Likelihood."@en ;
           rdfs:label "Possible"@en .
 
 
@@ -2272,7 +2291,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
             :score "1"^^xsd:int ;
             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en ;
-            rdfs:comment "HSE definition. A type of Risk Assessment likelihood."@en ;
+            rdfs:comment "Probability: 1%. Actual Frequency: Occurs every 5 years or more. A type of Risk Likelihood."@en ;
             rdfs:label "Rare/Remote"@en .
 
 
@@ -2281,7 +2300,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                 :ImpactCategory ;
                        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                        <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
-                       rdfs:comment "HSE definition. A type of Risk Impact Category described in the Impact Table."@en ;
+                       rdfs:comment "Risks  which  threaten  the  delivery  of  a  service  provision  to  service  users  in terms  of  quality,  in  a  comfortable,  caring  and  safe  environment,  delivered  in  a  calm  and  reassuring  way;  having  information  to  make  choices,  to  feel  confident  and  to  feel  in  control;  being  listened  to  and  talked  to  as  an  equal;  being treated with honesty, respect and dignity. A type of Risk Impact Category described in the Impact Table."@en ;
                        rdfs:label "Service User Experience"@en .
 
 
@@ -2326,7 +2345,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
           :score "2"^^xsd:int ;
           <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
-          rdfs:comment "HSE definition. A type of Risk Assessment likelihood."@en ;
+          rdfs:comment "Probability: 10%. Actual Frequency: Occurs every 2-5 years. A type of Risk Likelihood."@en ;
           rdfs:label "Unlikely"@en .
 
 
