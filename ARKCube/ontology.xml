@@ -478,20 +478,6 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to a hospital site/service, or Organisation.</rdfs:comment>
-        <rdfs:label>has hospital site/service</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact -->
 
 
@@ -542,6 +528,20 @@
         <rdfs:comment>This property links the project phase with Mechanism.</rdfs:comment>
         <rdfs:label xml:lang="en">has mechanism</rdfs:label>
         <owl:inverseOf>isMechanismOf</owl:inverseOf>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to an organisation or a hospital site/service e.g. University Hospital Galway/Disability Service.</rdfs:comment>
+        <rdfs:label xml:lang="en">has organisation or hospital site/service</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1277,8 +1277,20 @@
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite">
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29 09:09:10</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to a department or service in an Organisation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a risk assessment to a department or service e.g. Maternity Service/St Joseph’s Residential Unit.</rdfs:comment>
         <rdfs:label xml:lang="en">has dept/service site</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision">
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a risk assessment to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health &amp; Wellbeing, HR etc.</rdfs:comment>
+        <rdfs:label xml:lang="en">has division</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1289,20 +1301,8 @@
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction">
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to a specfic HG/CHO Area.</rdfs:comment>
-        <rdfs:label xml:lang="en">has HG/CHO/NAS/function</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division -->
-
-
-    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division">
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to a healthcare division.</rdfs:comment>
-        <rdfs:label xml:lang="en">has division</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a risk assessment to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8.</rdfs:comment>
+        <rdfs:label xml:lang="en">has HG/CHO/NAS/Function</rdfs:label>
     </owl:DatatypeProperty>
     
 

@@ -144,10 +144,9 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator">
-        <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
-        <rdfs:comment xml:lang="en">Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Project or Risk Register with a user who is a collaborator. The collaborator has a read/write/add subproject rights but not access grant rights.</rdfs:comment>
         <rdfs:label xml:lang="en">has collaborator</rdfs:label>
     </owl:ObjectProperty>
     
@@ -157,10 +156,9 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner">
-        <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
-        <rdfs:comment xml:lang="en">Relates the Project with its owning User(s). The owner has a full read/write/grant access rights.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Project or Risk Register with its owning user(s). The owner has a full read/write/grant access rights.</rdfs:comment>
         <rdfs:label xml:lang="en">has owner</rdfs:label>
     </owl:ObjectProperty>
     
@@ -170,10 +168,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
         <dc:creator>Lucy McKenna</dc:creator>
-        <rdfs:comment xml:lang="en">Links a project to its owning organisation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Project or Risk Register to its owning organisation.</rdfs:comment>
         <rdfs:label xml:lang="en">has owning organisation</rdfs:label>
     </owl:ObjectProperty>
     
@@ -196,50 +194,10 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser">
-        <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
-        <rdfs:comment xml:lang="en">Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a project or risk register to a user with read only access. The read only user can view a specific Project but has no edit or access grant rights.</rdfs:comment>
         <rdfs:label xml:lang="en">has readonly user</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
-        <rdfs:comment xml:lang="en">Relates the collaborating User with a project. </rdfs:comment>
-        <rdfs:label xml:lang="en">is collaborator of</rdfs:label>
-        <owl:inverseOf>hasCollaborator</owl:inverseOf>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
-        <rdfs:comment xml:lang="en">Relates the Owner User with a Project. The owner has a full read/write/grant access rights.</rdfs:comment>
-        <rdfs:label xml:lang="en">is owner of</rdfs:label>
-        <owl:inverseOf>hasOwner</owl:inverseOf>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
-        <rdfs:comment xml:lang="en">Relates the ReadOnlyUser with a Project. </rdfs:comment>
-        <rdfs:label xml:lang="en">is readonly user of</rdfs:label>
-        <owl:inverseOf>hasReadOnlyUser</owl:inverseOf>
     </owl:ObjectProperty>
     
 

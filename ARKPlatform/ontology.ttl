@@ -84,28 +84,26 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator
 :hasCollaborator rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :isCollaboratorOf ;
-                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
+                 rdfs:domain :AccessControlEntity ;
                  rdfs:range :User ;
-                 rdfs:comment "Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights."@en ;
+                 rdfs:comment "Links a Project or Risk Register with a user who is a collaborator. The collaborator has a read/write/add subproject rights but not access grant rights."@en ;
                  rdfs:label "has collaborator"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner
 :hasOwner rdf:type owl:ObjectProperty ;
-          owl:inverseOf :isOwnerOf ;
-          rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
+          rdfs:domain :AccessControlEntity ;
           rdfs:range :User ;
-          rdfs:comment "Relates the Project with its owning User(s). The owner has a full read/write/grant access rights."@en ;
+          rdfs:comment "Links a Project or Risk Register with its owning user(s). The owner has a full read/write/grant access rights."@en ;
           rdfs:label "has owner"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation
 :hasOwningOrganisation rdf:type owl:ObjectProperty ;
-                       rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
+                       rdfs:domain :AccessControlEntity ;
                        rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> ;
                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                       rdfs:comment "Links a project to its owning organisation."@en ;
+                       rdfs:comment "Links a Project or Risk Register to its owning organisation."@en ;
                        rdfs:label "has owning organisation"@en .
 
 
@@ -120,38 +118,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser
 :hasReadOnlyUser rdf:type owl:ObjectProperty ;
-                 owl:inverseOf :isReadOnlyUserOf ;
-                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
+                 rdfs:domain :AccessControlEntity ;
                  rdfs:range :User ;
-                 rdfs:comment "Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right."@en ;
+                 rdfs:comment "Links a project or risk register to a user with read only access. The read only user can view a specific Project but has no edit or access grant rights."@en ;
                  rdfs:label "has readonly user"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf
-:isCollaboratorOf rdf:type owl:ObjectProperty ;
-                  rdfs:domain :User ;
-                  rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
-                  rdfs:comment "Relates the collaborating User with a project. "@en ;
-                  rdfs:label "is collaborator of"@en ;
-                  owl:inverseOf "hasCollaborator" .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf
-:isOwnerOf rdf:type owl:ObjectProperty ;
-           rdfs:domain :User ;
-           rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
-           rdfs:comment "Relates the Owner User with a Project. The owner has a full read/write/grant access rights."@en ;
-           rdfs:label "is owner of"@en ;
-           owl:inverseOf "hasOwner" .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf
-:isReadOnlyUserOf rdf:type owl:ObjectProperty ;
-                  rdfs:domain :User ;
-                  rdfs:range <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> ;
-                  rdfs:comment "Relates the ReadOnlyUser with a Project. "@en ;
-                  rdfs:label "is readonly user of"@en ;
-                  owl:inverseOf "hasReadOnlyUser" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'

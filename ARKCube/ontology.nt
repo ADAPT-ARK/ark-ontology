@@ -280,15 +280,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasGainAchieved> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects risk verifaction assessment with gain achieved"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasGainAchieved> <http://www.w3.org/2000/01/rdf-schema#label> "has gain achieved"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to a hospital site/service, or Organisation."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService> <http://www.w3.org/2000/01/rdf-schema#label> "has hospital site/service" .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription> .
@@ -322,6 +313,15 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the project phase with Mechanism." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism> <http://www.w3.org/2000/01/rdf-schema#label> "has mechanism"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism> <http://www.w3.org/2002/07/owl#inverseOf> "isMechanismOf" .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to an organisation or a hospital site/service e.g. University Hospital Galway/Disability Service."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService> <http://www.w3.org/2000/01/rdf-schema#label> "has organisation or hospital site/service"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -800,22 +800,22 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite> <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to a department or service in an Organisation."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk assessment to a department or service e.g. Maternity Service/St Joseph’s Residential Unit."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite> <http://www.w3.org/2000/01/rdf-schema#label> "has dept/service site"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk assessment to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health & Wellbeing, HR etc."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision> <http://www.w3.org/2000/01/rdf-schema#label> "has division"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to a specfic HG/CHO Area."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has HG/CHO/NAS/function"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to a healthcare division."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division> <http://www.w3.org/2000/01/rdf-schema#label> "has division"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk assessment to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has HG/CHO/NAS/Function"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#importance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#importance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

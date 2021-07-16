@@ -73,26 +73,24 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the Project with its collaborating User. The collaborator has a read/write/add subproject rights but not grant rights."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project or Risk Register with a user who is a collaborator. The collaborator has a read/write/add subproject rights but not access grant rights."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2000/01/rdf-schema#label> "has collaborator"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the Project with its owning User(s). The owner has a full read/write/grant access rights."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project or Risk Register with its owning user(s). The owner has a full read/write/grant access rights."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has owner"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to its owning organisation."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project or Risk Register to its owning organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "has owning organisation"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasPlatformRole
@@ -105,35 +103,10 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2002/07/owl#inverseOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the Project with its ReadOnlyUser. The readonly user can view a specific Project but has no grant right."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project or risk register to a user with read only access. The read only user can view a specific Project but has no edit or access grant rights."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#label> "has readonly user"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the collaborating User with a project. "@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is collaborator of"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isCollaboratorOf> <http://www.w3.org/2002/07/owl#inverseOf> "hasCollaborator" .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the Owner User with a Project. The owner has a full read/write/grant access rights."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf> <http://www.w3.org/2000/01/rdf-schema#label> "is owner of"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isOwnerOf> <http://www.w3.org/2002/07/owl#inverseOf> "hasOwner" .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the ReadOnlyUser with a Project. "@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf> <http://www.w3.org/2000/01/rdf-schema#label> "is readonly user of"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#isReadOnlyUserOf> <http://www.w3.org/2002/07/owl#inverseOf> "hasReadOnlyUser" .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

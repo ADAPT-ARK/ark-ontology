@@ -314,16 +314,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  rdfs:label "has gain achieved"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHospitalSiteOrService
-:hasHospitalSiteOrService rdf:type owl:ObjectProperty ;
-                          rdfs:domain :RiskAssessmentRecord ;
-                          rdfs:range :Organisation ;
-                          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-                          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                          rdfs:comment "Links a Risk Assessment to a hospital site/service, or Organisation."@en ;
-                          rdfs:label "has hospital site/service" .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact
 :hasImpact rdf:type owl:ObjectProperty ;
            rdfs:domain :RiskDescription ;
@@ -360,6 +350,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:comment "This property links the project phase with Mechanism." ;
               rdfs:label "has mechanism"@en ;
               owl:inverseOf "isMechanismOf" .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService
+:hasOrganisationOrHospitalSiteService rdf:type owl:ObjectProperty ;
+                                      rdfs:domain :RiskAssessmentRecord ;
+                                      rdfs:range :Organisation ;
+                                      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+                                      <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+                                      rdfs:comment "Links a Risk Assessment to an organisation or a hospital site/service e.g. University Hospital Galway/Disability Service."@en ;
+                                      rdfs:label "has organisation or hospital site/service"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit
@@ -867,24 +867,24 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :hasDeptServiceSite rdf:type owl:DatatypeProperty ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
-                    rdfs:comment "Links a Risk Assessment to a department or service in an Organisation."@en ;
+                    rdfs:comment "Links a risk assessment to a department or service e.g. Maternity Service/St Joseph’s Residential Unit."@en ;
                     rdfs:label "has dept/service site"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision
+:hasDivision rdf:type owl:DatatypeProperty ;
+             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
+             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+             rdfs:comment "Links a risk assessment to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health & Wellbeing, HR etc."@en ;
+             rdfs:label "has division"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction
 :hasHgChoNasFunction rdf:type owl:DatatypeProperty ;
                      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                      <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                     rdfs:comment "Links a Risk Assessment to a specfic HG/CHO Area."@en ;
-                     rdfs:label "has HG/CHO/NAS/function"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#has_division
-:has_division rdf:type owl:DatatypeProperty ;
-              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-              rdfs:comment "Links a Risk Assessment to a healthcare division."@en ;
-              rdfs:label "has division"@en .
+                     rdfs:comment "Links a risk assessment to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8."@en ;
+                     rdfs:label "has HG/CHO/NAS/Function"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#importance
