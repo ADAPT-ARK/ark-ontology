@@ -9,42 +9,6 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "_:genid8"
-    }, {
-      "@id" : "_:genid6"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ]
-}, {
   "@id" : "http://purl.org/dc/elements/1.1/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -84,13 +48,7 @@
   "@id" : "http://www.w3.org/ns/prov#Entity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#",
@@ -140,7 +98,7 @@
     "@value" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.2"
@@ -183,8 +141,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Entity"
-  }, {
-    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AdminUser",
@@ -248,6 +204,27 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#Entity"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:26:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Status of a user's account settings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Data Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Internal",
@@ -370,15 +347,33 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Personal"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:26:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The status of a user and their account settings."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Status"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "A User of the ARK Platform. A User is a subclass of arkc:Person."
+    "@value" : "A User of the ARK Platform."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser."
+    "@value" : "The user of the project can take three types: Owner, Collaborator, ReadOnlyUser."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -386,6 +381,87 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:23:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The status of a user's account."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "User Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:19:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User account has been approved and is active for use."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Active"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Yalemisew"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-11-13T17:03:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The most recent date that a field was edited on the platform."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "answer date"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "yalemisew"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2019-11-13T17:03:04+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The name/username of the person who answered the question."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "answered by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#boardMember",
@@ -422,6 +498,45 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Clinical Specialist"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:18:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User account has been deleted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Deleted"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:26:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user's email address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "email"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#frontlineStaff",
@@ -491,9 +606,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has owning organisation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasPlatformRole",
@@ -551,6 +663,42 @@
     "@value" : "Operations Manager"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:18:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User request to change their organisation has been approved."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OrgChangeApproved"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:18:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User request to change their organisation is pending."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "OrgChangePending"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#PlatformRole" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -569,6 +717,48 @@
     "@value" : "Organisation Executive"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:26:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user's password."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "password"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:18:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User account is pending approval."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pending"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#PlatformRole" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -581,6 +771,42 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Platform Administrator"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:18:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User request to change their platform role has been approved."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PlatformRoleChangeApproved"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:18:03+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User request to change their platform role is pending."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PlatformRoleChangePending"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#safetyManager",
@@ -601,6 +827,65 @@
     "@value" : "Safety Manager"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:47:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "en",
+    "@value" : "Links a user to a status."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:51:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A token for user who requests a password reset."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "token"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:51:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An expiry date for a token requested by user."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "token expiry"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#unitManager",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#PlatformRole" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -617,5 +902,26 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Unit Manager"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-08-25T23:26:14+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A user's username."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "username"
   } ]
 } ]

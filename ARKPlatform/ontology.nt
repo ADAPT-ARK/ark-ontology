@@ -1,5 +1,5 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://www.w3.org/2002/07/owl#versionIRI> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://www.w3.org/2002/07/owl#versionIRI> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/contributor> "Junli Liang" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/contributor> "Lucy McKenna" .
@@ -71,6 +71,15 @@
 # #################################################################
 # 
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy> <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The name/username of the person who answered the question."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy> <http://www.w3.org/2000/01/rdf-schema#label> "answered by"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
@@ -88,7 +97,6 @@
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project or Risk Register to its owning organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "has owning organisation"@en .
@@ -107,6 +115,15 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project or risk register to a user with read only access. The read only user can view a specific Project but has no edit or access grant rights."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser> <http://www.w3.org/2000/01/rdf-schema#label> "has readonly user"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:47:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Links a user to a status."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -128,6 +145,61 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # #################################################################
 # #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate> <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The most recent date that a field was edited on the platform."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate> <http://www.w3.org/2000/01/rdf-schema#label> "answer date"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://www.w3.org/2000/01/rdf-schema#comment> "A user's email address."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://www.w3.org/2000/01/rdf-schema#label> "email"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#comment> "A user's password."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#label> "password"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/2000/01/rdf-schema#comment> "A token for user who requests a password reset."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/2000/01/rdf-schema#label> "token"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/2000/01/rdf-schema#comment> "An expiry date for a token requested by user." .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/2000/01/rdf-schema#label> "token expiry"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/2000/01/rdf-schema#comment> "A user's username."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/2000/01/rdf-schema#label> "username"@en .
+# 
+# 
+# 
+# #################################################################
+# #
 # #    Classes
 # #
 # #################################################################
@@ -136,35 +208,12 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://www.w3.org/ns/prov#Entity
 <http://www.w3.org/ns/prov#Entity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#Project
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> .
-_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid8 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> .
-_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> <http://purl.org/dc/elements/1.1/date> "2021-04-14T14:28:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity or aggregate, such as a Project or Risk Register, that can be used to control user access to data."@en .
@@ -196,6 +245,14 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual unit or aggregate of data on the ARK Platform."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Data Entity"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Status of a user's account settings."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Data Status"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Internal
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Internal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -246,12 +303,27 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#SpecialCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Special Category personal data, as defined by the General Data Protection Regulation (GDPR) Article 9, is any information that reveals a person's race, ethnic origin, political opinion, religious or philosophical beliefes, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#SpecialCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Special Category"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a user and their account settings."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> <http://purl.org/dc/elements/1.1/description> "A User of the ARK Platform. A User is a subclass of arkc:Person."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> <http://www.w3.org/2000/01/rdf-schema#comment> "The user of the project can take three types. Owner, Collaborator, ReadOnlyUser."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> <http://purl.org/dc/elements/1.1/description> "A User of the ARK Platform."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> <http://www.w3.org/2000/01/rdf-schema#comment> "The user of the project can take three types: Owner, Collaborator, ReadOnlyUser."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> <http://www.w3.org/2000/01/rdf-schema#label> "User"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:23:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a user's account."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> <http://www.w3.org/2000/01/rdf-schema#label> "User Status"@en .
 # 
 # 
 # 
@@ -261,6 +333,14 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #
 # #################################################################
 # 
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:19:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active> <http://www.w3.org/2000/01/rdf-schema#comment> "User account has been approved and is active for use."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active> <http://www.w3.org/2000/01/rdf-schema#label> "Active"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#boardMember
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#boardMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -278,6 +358,14 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#clinicalSpecialist> <http://www.w3.org/2000/01/rdf-schema#comment> "Plays a role in the management of activities and staff resources in an area of specialisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#clinicalSpecialist> <http://www.w3.org/2000/01/rdf-schema#label> "Clinical Specialist"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted> <http://www.w3.org/2000/01/rdf-schema#comment> "User account has been deleted."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted> <http://www.w3.org/2000/01/rdf-schema#label> "Deleted"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#frontlineStaff
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#frontlineStaff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#frontlineStaff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#PlatformRole> .
@@ -294,6 +382,22 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#operationsManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#operationsManager> <http://www.w3.org/2000/01/rdf-schema#label> "Operations Manager"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved> <http://www.w3.org/2000/01/rdf-schema#comment> "User request to change their organisation has been approved."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved> <http://www.w3.org/2000/01/rdf-schema#label> "OrgChangeApproved"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending> <http://www.w3.org/2000/01/rdf-schema#comment> "User request to change their organisation is pending."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending> <http://www.w3.org/2000/01/rdf-schema#label> "OrgChangePending"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#PlatformRole> .
@@ -302,12 +406,36 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive> <http://www.w3.org/2000/01/rdf-schema#comment> "Responsible for all aspects of operations and for overseeing the functioning of the organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation Executive"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending> <http://www.w3.org/2000/01/rdf-schema#comment> "User account is pending approval."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending> <http://www.w3.org/2000/01/rdf-schema#label> "Pending"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#PlatformRole> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrator of the ARK Platform."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator> <http://www.w3.org/2000/01/rdf-schema#label> "Platform Administrator"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved> <http://www.w3.org/2000/01/rdf-schema#comment> "User request to change their platform role has been approved."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved> <http://www.w3.org/2000/01/rdf-schema#label> "PlatformRoleChangeApproved"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending> <http://www.w3.org/2000/01/rdf-schema#comment> "User request to change their platform role is pending."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending> <http://www.w3.org/2000/01/rdf-schema#label> "PlatformRoleChangePending"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#safetyManager
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#safetyManager> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

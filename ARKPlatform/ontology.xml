@@ -10,7 +10,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#">
-        <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform"/>
+        <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#"/>
         <dc:contributor>Ademar Crotti Junior</dc:contributor>
         <dc:contributor>Junli Liang</dc:contributor>
         <dc:contributor>Lucy McKenna</dc:contributor>
@@ -140,6 +140,20 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
+        <dc:creator>yalemisew</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-13T17:03:04+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The name/username of the person who answered the question.</rdfs:comment>
+        <rdfs:label xml:lang="en">answered by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator -->
 
 
@@ -169,7 +183,6 @@
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation">
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment xml:lang="en">Links a Project or Risk Register to its owning organisation.</rdfs:comment>
         <rdfs:label xml:lang="en">has owning organisation</rdfs:label>
@@ -202,6 +215,20 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:47:14+00:00</dc:date>
+        <rdfs:isDefinedBy xml:lang="en">Links a user to a status.</rdfs:isDefinedBy>
+        <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#&apos;has_data_classification&apos; -->
 
 
@@ -225,6 +252,94 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate">
+        <dc:creator>Yalemisew</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-11-13T17:03:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The most recent date that a field was edited on the platform.</rdfs:comment>
+        <rdfs:label xml:lang="en">answer date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:26:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A user&apos;s email address.</rdfs:comment>
+        <rdfs:label xml:lang="en">email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:26:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A user&apos;s password.</rdfs:comment>
+        <rdfs:label xml:lang="en">password</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:51:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A token for user who requests a password reset.</rdfs:comment>
+        <rdfs:label xml:lang="en">token</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:51:14+00:00</dc:date>
+        <rdfs:comment>An expiry date for a token requested by user.</rdfs:comment>
+        <rdfs:label xml:lang="en">token expiry</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:26:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">A user&apos;s username.</rdfs:comment>
+        <rdfs:label xml:lang="en">username</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -241,24 +356,10 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Person -->
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Project -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
     
 
 
@@ -267,22 +368,6 @@
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#&apos;has_data_classification&apos;"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onClass rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-04-14T14:28:36+00:00</dc:date>
         <rdfs:comment xml:lang="en">An entity or aggregate, such as a Project or Risk Register, that can be used to control user access to data.</rdfs:comment>
@@ -334,6 +419,19 @@
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment xml:lang="en">An individual unit or aggregate of data on the ARK Platform.</rdfs:comment>
         <rdfs:label xml:lang="en">Data Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:26:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Status of a user&apos;s account settings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Data Status</rdfs:label>
     </owl:Class>
     
 
@@ -422,14 +520,39 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:26:14+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The status of a user and their account settings.</rdfs:comment>
+        <rdfs:label xml:lang="en">Status</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User -->
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User">
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
-        <dc:description xml:lang="en">A User of the ARK Platform. A User is a subclass of arkc:Person.</dc:description>
-        <rdfs:comment xml:lang="en">The user of the project can take three types. Owner, Collaborator, ReadOnlyUser.</rdfs:comment>
+        <dc:description xml:lang="en">A User of the ARK Platform.</dc:description>
+        <rdfs:comment xml:lang="en">The user of the project can take three types: Owner, Collaborator, ReadOnlyUser.</rdfs:comment>
         <rdfs:label xml:lang="en">User</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:23:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The status of a user&apos;s account.</rdfs:comment>
+        <rdfs:label xml:lang="en">User Status</rdfs:label>
     </owl:Class>
     
 
@@ -443,6 +566,19 @@
      -->
 
 
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:19:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">User account has been approved and is active for use.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active</rdfs:label>
+    </owl:NamedIndividual>
     
 
 
@@ -468,6 +604,19 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-23T18:47:03+00:00</dc:date>
         <rdfs:comment xml:lang="en">Plays a role in the management of activities and staff resources in an area of specialisation.</rdfs:comment>
         <rdfs:label xml:lang="en">Clinical Specialist</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:18:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">User account has been deleted.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deleted</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -498,6 +647,32 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:18:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">User request to change their organisation has been approved.</rdfs:comment>
+        <rdfs:label xml:lang="en">OrgChangeApproved</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:18:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">User request to change their organisation is pending.</rdfs:comment>
+        <rdfs:label xml:lang="en">OrgChangePending</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive -->
 
 
@@ -511,6 +686,19 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:18:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">User account is pending approval.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pending</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator -->
 
 
@@ -519,6 +707,32 @@
         <dc:creator>Lucy McKenna</dc:creator>
         <rdfs:comment xml:lang="en">An administrator of the ARK Platform.</rdfs:comment>
         <rdfs:label xml:lang="en">Platform Administrator</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:18:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">User request to change their platform role has been approved.</rdfs:comment>
+        <rdfs:label xml:lang="en">PlatformRoleChangeApproved</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:18:03+00:00</dc:date>
+        <rdfs:comment xml:lang="en">User request to change their platform role is pending.</rdfs:comment>
+        <rdfs:label xml:lang="en">PlatformRoleChangePending</rdfs:label>
     </owl:NamedIndividual>
     
 
