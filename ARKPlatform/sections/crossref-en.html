@@ -48,6 +48,10 @@ This section provides details for each class and property defined by Access Risk
             title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Public">Public</a>
       </li>
       <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
+      </li>
+      <li>
          <a href="#Restricted"
             title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Restricted">Restricted</a>
       </li>
@@ -209,6 +213,12 @@ This section provides details for each class and property defined by Access Risk
             <span class="dotted" title="http://www.w3.org/ns/prov#Entity">entity</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#answeredBy"
@@ -225,7 +235,7 @@ This section provides details for each class and property defined by Access Risk
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus</p>
       <div class="comment">
-         <span class="markdown">Status of a user's account settings.</span>
+         <span class="markdown">The status of a unit or collection of data on the ARK Platform.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -241,18 +251,6 @@ This section provides details for each class and property defined by Access Risk
             <a href="#Status"
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status">Status</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#orgChangeApproved"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved">OrgChangeApproved</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#orgChangePending"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending">OrgChangePending</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#platformRoleChangeApproved"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved">PlatformRoleChangeApproved</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#platformRoleChangePending"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending">PlatformRoleChangePending</a>
-            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -401,6 +399,41 @@ This section provides details for each class and property defined by Access Risk
          </dd>
       </dl>
    </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">
+      <h3>Report<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#Report</p>
+      <div class="comment">
+         <span class="markdown">A written account of an activity or investigation.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>18T13:07:08+00:00/11/2019</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Yalemisew</dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#DataEntity"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">Data Entity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasOwner"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner">has owner</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOwningOrganisation"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation">has owning organisation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Restricted">
       <h3>Restricted<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -461,7 +494,7 @@ This section provides details for each class and property defined by Access Risk
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status</p>
       <div class="comment">
-         <span class="markdown">The status of a user and their account settings.</span>
+         <span class="markdown">The status of an entity or agent on the ARK Platform.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -550,7 +583,7 @@ This section provides details for each class and property defined by Access Risk
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus</p>
       <div class="comment">
-         <span class="markdown">The status of a user's account.</span>
+         <span class="markdown">The status of a user and their account settings.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -573,8 +606,16 @@ This section provides details for each class and property defined by Access Risk
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active">Active</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#deleted"
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted">Deleted</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#orgChangeApproved"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved">OrgChangeApproved</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#orgChangePending"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending">OrgChangePending</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#pending"
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending">Pending</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#platformRoleChangeApproved"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved">PlatformRoleChangeApproved</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#platformRoleChangePending"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending">PlatformRoleChangePending</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -720,11 +761,16 @@ This section provides details for each class and property defined by Access Risk
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner</p>
       <div class="comment">
-         <span class="markdown">Links a Project or Risk Register with its owning user(s). The owner has a full read/write/grant access rights.</span>
+         <span class="markdown">Links a Project, Risk Register or Report with its owning user(s). The owner has full read/write/grant access rights.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
+            <dd>
+               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#AccessControlEntity"
                   title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">Access Control Entity</a>
@@ -747,7 +793,7 @@ This section provides details for each class and property defined by Access Risk
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation</p>
       <div class="comment">
-         <span class="markdown">Links a Project or Risk Register to its owning organisation.</span>
+         <span class="markdown">Links a Project, Risk Register or Report to its owning organisation.</span>
       </div>
       <dl>
          <dt>Authors:</dt>
@@ -756,6 +802,11 @@ This section provides details for each class and property defined by Access Risk
       <div class="description">
          <dl>
             <dt>has domain</dt>
+            <dd>
+               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dd>
                <a href="#AccessControlEntity"
                   title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">Access Control Entity</a>
@@ -862,8 +913,8 @@ This section provides details for each class and property defined by Access Risk
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#answerDate"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate">answer date</a>
+         <a href="#date"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date">date</a>
       </li>
       <li>
          <a href="#email"
@@ -886,24 +937,32 @@ This section provides details for each class and property defined by Access Risk
             title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username">username</a>
       </li>
    </ul>
-   <div class="entity" id="answerDate">
-      <h3>answer date<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="date">
+      <h3>date<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answerDate</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date</p>
       <div class="comment">
-         <span class="markdown">The most recent date that a field was edited on the platform.</span>
+         <span class="markdown">Captures a date on the ARK Platform. For example, the date when an entity or agent was created, edited or deleted from the platform.</span>
       </div>
       <dl>
          <dt>Date:</dt>
-         <dd>13T17:03:14+00:00/11/2019</dd>
+         <dd>27T15:11:31+00:00/08/2021</dd>
       </dl>
       <dl>
          <dt>Authors:</dt>
-         <dd>Yalemisew</dd>
+         <dd>Lucy McKenna</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="email">
       <h3>email<sup class="type-dp" title="data property">dp</sup>
@@ -1308,8 +1367,8 @@ This section provides details for each class and property defined by Access Risk
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#DataStatus"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus">Data Status</a>
+            <a href="#UserStatus"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus">User Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1335,8 +1394,8 @@ This section provides details for each class and property defined by Access Risk
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#DataStatus"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus">Data Status</a>
+            <a href="#UserStatus"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus">User Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1412,8 +1471,8 @@ This section provides details for each class and property defined by Access Risk
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#DataStatus"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus">Data Status</a>
+            <a href="#UserStatus"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus">User Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1439,8 +1498,8 @@ This section provides details for each class and property defined by Access Risk
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#DataStatus"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus">Data Status</a>
+            <a href="#UserStatus"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus">User Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

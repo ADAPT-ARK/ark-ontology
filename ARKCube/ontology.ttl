@@ -130,6 +130,46 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 rdfs:label "assigned person"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#citesAsAuthority
+:citesAsAuthority rdf:type owl:ObjectProperty ;
+                  rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+                  rdfs:range :Evidence ;
+                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+                  rdfs:comment "The cited evidence provides an authoritative description or definition of the subject under discussion."@en ;
+                  rdfs:label "cites as authority"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#citesAsPotentialSolution
+:citesAsPotentialSolution rdf:type owl:ObjectProperty ;
+                          rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+                          rdfs:range :Evidence ;
+                          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                          <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+                          rdfs:comment "The cited evidence provides or contains a possible solution to the issues being discussed."@en ;
+                          rdfs:label "cites as potential solution"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#citesAsRelated
+:citesAsRelated rdf:type owl:ObjectProperty ;
+                rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+                rdfs:range :Evidence ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+                rdfs:comment "The evidence is related to the project."@en ;
+                rdfs:label "cites as related"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#citesForInformation
+:citesForInformation rdf:type owl:ObjectProperty ;
+                     rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+                     rdfs:range :Evidence ;
+                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+                     rdfs:comment "The evidence is a source of information on the subject under discussion."@en ;
+                     rdfs:label "cites for information"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy
 :designedBy rdf:type owl:ObjectProperty ;
             rdfs:domain :Project ;
@@ -139,6 +179,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             rdfs:comment "The person who designed the project analysis and the cube questionnaire."@en ,
                          "The user who designed the project."@en ;
             rdfs:label "designed by"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#discusses
+:discusses rdf:type owl:ObjectProperty ;
+           rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+           rdfs:range :Evidence ;
+           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+           rdfs:comment "The project discusses statements, ideas or conclusions presented in the evidence."@en ;
+           rdfs:label "discusses"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer
@@ -473,6 +523,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                       rdfs:label "has reliability of gain"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReport
+:hasReport rdf:type owl:ObjectProperty ;
+           rdfs:domain :Project ;
+           rdfs:range :Report ;
+           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+           <http://purl.org/dc/elements/1.1/date> "2021-09-14T10:09:32+00:00"^^xsd:dateTime ;
+           rdfs:comment "Links a Project to a Report."@en ;
+           rdfs:label "has report"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasResidualRiskRating
 :hasResidualRiskRating rdf:type owl:ObjectProperty ;
                        rdfs:domain :RiskVerificationAssessment ;
@@ -608,11 +668,12 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
-          rdfs:domain :ProjectAnalysis ;
+          rdfs:domain :HandoverReport ,
+                      :ProjectAnalysis ;
           rdfs:range :Stage ;
           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
           <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" ;
-          rdfs:comment "A project analysis has different stages." ;
+          rdfs:comment "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages." ;
           rdfs:label "has stage"@en .
 
 
@@ -680,6 +741,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
           rdfs:label "member of"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#obtainsSupportFrom
+:obtainsSupportFrom rdf:type owl:ObjectProperty ;
+                    rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+                    rdfs:range :Evidence ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+                    rdfs:comment "The project obtains intellectual or factual support from the evidence."@en ;
+                    rdfs:label "obtains support from"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#postIn
 :postIn rdf:type owl:ObjectProperty ;
         rdfs:domain :Post ;
@@ -688,6 +759,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
         <http://purl.org/dc/elements/1.1/date> "2021-04-14T17:03:04+00:00"^^xsd:dateTime ;
         rdfs:comment "Links a Post to an Organisation."@en ;
         rdfs:label "post in"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#refutes
+:refutes rdf:type owl:ObjectProperty ;
+         rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+         rdfs:range :Evidence ;
+         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+         <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+         rdfs:comment "The project refutes statements, ideas or conclusions presented in the evidence."@en ;
+         rdfs:label "refutes"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#reportAnalysisTo
@@ -719,6 +800,36 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:15:41+00:00"^^xsd:dateTimeStamp ;
            rdfs:comment "A reporting relationship between Persons or Posts in an Organisation."@en ;
            rdfs:label "reports to"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#supports
+:supports rdf:type owl:ObjectProperty ;
+          rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+          rdfs:range :Evidence ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+          rdfs:comment "The project supports statements, ideas or conclusions presented in the evidence."@en ;
+          rdfs:label "supports"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#updates
+:updates rdf:type owl:ObjectProperty ;
+         rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+         rdfs:range :Evidence ;
+         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+         <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+         rdfs:comment "The project updates statements, ideas, hypotheses or understanding presented in the evidence."@en ;
+         rdfs:label "updates"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#usesDataFrom
+:usesDataFrom rdf:type owl:ObjectProperty ;
+              rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+              rdfs:range :Evidence ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
+              rdfs:comment "The project uses data presented in the evidence."@en ;
+              rdfs:label "uses data from"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith
@@ -854,12 +965,29 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
       rdfs:label "file" .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#handoverTo
+:handoverTo rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            <http://purl.org/dc/elements/1.1/date> "2021-09-15T09:53:21+00:00"^^xsd:dateTime ;
+            rdfs:comment "The person, department or unit to whom a project is handed over."@en ;
+            rdfs:label "handover to"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceStationSite
 :hasDeptServiceStationSite rdf:type owl:DatatypeProperty ;
                            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                            <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
                            rdfs:comment "Links a risk assessment to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit."@en ;
                            rdfs:label "has dept/service/station site"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDistribution
+:hasDistribution rdf:type owl:DatatypeProperty ;
+                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-09-15T11:53:21+00:00"^^xsd:dateTime ;
+                 rdfs:comment "The people, groups, departments or organisations with whom a report can be shared/distributed."@en ;
+                 rdfs:label "has distribution"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision
@@ -896,14 +1024,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#name
 :name rdf:type owl:DatatypeProperty ;
-      rdfs:domain :OrganisationalUnit ,
-                  :Person ;
+      rdfs:domain :Organisation ,
+                  :Person ,
+                  <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                  <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
       rdfs:range rdfs:Literal ;
       <http://purl.org/dc/elements/1.1/contributor> "Lucy McKenna" ;
       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
       <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
       <http://purl.org/dc/elements/1.1/modified> "2021-04-23T17:22:07+00:00"^^xsd:dateTime ;
-      rdfs:comment "Holds the name of a person or organisational unit as a string."@en ;
+      rdfs:comment "Holds the name of an entity or agent as a string."@en ;
       rdfs:label "name"@en .
 
 
@@ -1026,6 +1156,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#version
 :version rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Project ;
          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:55+00:00" ;
          rdfs:comment "The version of the project."@en ;
@@ -1216,6 +1347,15 @@ rdfs:Resource rdf:type owl:Class .
           rdfs:label "Evidence" .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#EvidenceReport
+:EvidenceReport rdf:type owl:Class ;
+                rdfs:subClassOf :Report ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-09-14T10:14:32+00:00"^^xsd:dateTime ;
+                rdfs:comment "A report on the evidence linked to a project."@en ;
+                rdfs:label "Evidence Report"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact
 :ExtremeImpact rdf:type owl:Class ;
                rdfs:subClassOf [ owl:intersectionOf ( :Impact
@@ -1230,6 +1370,15 @@ rdfs:Resource rdf:type owl:Class .
                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
                rdfs:comment "Uses HSE impact table for definition."@en ;
                rdfs:label "Extreme Impact"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#FinalReport
+:FinalReport rdf:type owl:Class ;
+             rdfs:subClassOf :Report ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-09-14T10:09:32+00:00"^^xsd:dateTime ;
+             rdfs:comment "A report that summarises a completed project."@en ;
+             rdfs:label "Final Report"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#FunctionalSystem
@@ -1265,6 +1414,15 @@ rdfs:Resource rdf:type owl:Class .
       <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:27:46+00:00" ;
       rdfs:comment "An aim or desired outcome."@en ;
       rdfs:label "Goal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport
+:HandoverReport rdf:type owl:Class ;
+                rdfs:subClassOf :Report ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-09-14T10:15:32+00:00"^^xsd:dateTime ;
+                rdfs:comment "A report for handing over a project from one stage to another."@en ;
+                rdfs:label "Handover Report"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact
@@ -2097,6 +2255,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactAdversePublicity-Reputation
 :extremeImpactAdversePublicity-Reputation rdf:type owl:NamedIndividual ,
                                                    :ExtremeImpact ;
+                                          :score "5"^^xsd:int ;
                                           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                                           rdfs:comment "National/International media/adverse publicity, > than 3 days. Editorial follows days of news stories & features in National papers.Public confidence in the organisation undermined.HSE use of resources questioned. CEO’s performance questioned. Calls for individual HSE officials to be sanctioned. Taoiseach/Minister forced to comment or intervene. Questions in the Dáil. Public calls (at national level) for specific remedial actions to be taken. Court action. Public (independent) Inquiry."@en ;
@@ -2106,6 +2265,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactBusinessContinuity
 :extremeImpactBusinessContinuity rdf:type owl:NamedIndividual ,
                                           :ExtremeImpact ;
+                                 :score "5"^^xsd:int ;
                                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                  <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                                  rdfs:comment "Permanent loss of core service or facility.Disruption to facility leading to significant ‘knock on’ effect."@en ;
@@ -2115,6 +2275,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactCompliance
 :extremeImpactCompliance rdf:type owl:NamedIndividual ,
                                   :ExtremeImpact ;
+                         :score "5"^^xsd:int ;
                          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                          <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                          rdfs:comment "Gross failure to meet external standards. Repeated failure to meet national norms and standards/regulations. Severely critical report with possible major reputational or financial implications."@en ;
@@ -2124,6 +2285,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactEnvironment
 :extremeImpactEnvironment rdf:type owl:NamedIndividual ,
                                    :ExtremeImpact ;
+                          :score "5"^^xsd:int ;
                           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                           <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                           rdfs:comment "Toxic release affecting off-site with detrimental effect requiring outside assistance."@en ;
@@ -2133,6 +2295,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactFinance
 :extremeImpactFinance rdf:type owl:NamedIndividual ,
                                :ExtremeImpact ;
+                      :score "5"^^xsd:int ;
                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                       <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                       rdfs:comment ">2.0% budget deficit."@en ;
@@ -2142,6 +2305,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHarmToAPerson
 :extremeImpactHarmToAPerson rdf:type owl:NamedIndividual ,
                                      :ExtremeImpact ;
+                            :score "5"^^xsd:int ;
                             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                             <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                             rdfs:comment "Incident leading to death or major permanent incapacity. Event which impacts on large number of service users or member of the public. Permanent psychosocial functioning incapacity."@en ;
@@ -2151,6 +2315,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactObjectivesAndProjects
 :extremeImpactObjectivesAndProjects rdf:type owl:NamedIndividual ,
                                              :ExtremeImpact ;
+                                    :score "5"^^xsd:int ;
                                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                     <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                                     rdfs:comment "Inability to meet project objectives. Reputation of the organisation seriously damaged."@en ;
@@ -2160,6 +2325,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactServiceUserExperience
 :extremeImpactServiceUserExperience rdf:type owl:NamedIndividual ,
                                              :ExtremeImpact ;
+                                    :score "5"^^xsd:int ;
                                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                     <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
                                     rdfs:comment "Totally unsatisfactory service user outcome resulting in long term effects, or extremely poor experience of care provision."@en ;
@@ -2283,6 +2449,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactAdversePublicity-Reputation
 :majorImpactAdversePublicity-Reputation rdf:type owl:NamedIndividual ,
                                                  :MajorImpact ;
+                                        :score "4"^^xsd:int ;
                                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                         <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                                         rdfs:comment "National media/adverse publicity, less than 3 days. News stories & features in national papers. Local media – long term adverse publicity.Public confidence in the organisation undermined. HSE use of resources questioned. Minister may make comment. Possible questions in the Dáil. Public calls (at national level) for specific remedial actions to be taken possible HSE review/investigation."@en ;
@@ -2292,6 +2459,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactBusinessContinuity
 :majorImpactBusinessContinuity rdf:type owl:NamedIndividual ,
                                         :MajorImpact ;
+                               :score "4"^^xsd:int ;
                                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                                rdfs:comment "Sustained loss of service which has serious impact on delivery of service user care or service resulting in major contingency plans being involved."@en ;
@@ -2301,6 +2469,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactCompliance
 :majorImpactCompliance rdf:type owl:NamedIndividual ,
                                 :MajorImpact ;
+                       :score "4"^^xsd:int ;
                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                        <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                        rdfs:comment "Repeated failure to meet external standards. Failure to meet national norms and standards/Regulations (e.g. Mental Health, Child Care Act etc). Critical report or substantial number of significant findings and/or lack of adherence to regulations."@en ;
@@ -2310,6 +2479,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactEnvironment
 :majorImpactEnvironment rdf:type owl:NamedIndividual ,
                                  :MajorImpact ;
+                        :score "4"^^xsd:int ;
                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                         <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                         rdfs:comment "Release affecting minimal off-site area requiring external assistance (fire brigade, radiation, protection service, etc.)"@en ;
@@ -2319,6 +2489,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactFinance
 :majorImpactFinance rdf:type owl:NamedIndividual ,
                              :MajorImpact ;
+                    :score "4"^^xsd:int ;
                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                     <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                     rdfs:comment "1.0-2.0% budget deficit."@en ;
@@ -2328,6 +2499,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHarmToAPerson
 :majorImpactHarmToAPerson rdf:type owl:NamedIndividual ,
                                    :MajorImpact ;
+                          :score "4"^^xsd:int ;
                           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                           <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                           rdfs:comment "Major injuries/long term incapacity or disability (loss of limb) requiring medical treatment and/or counselling. Impaired psychosocial functioning greater than six months."@en ;
@@ -2337,6 +2509,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactObjectivesAndProjects
 :majorImpactObjectivesAndProjects rdf:type owl:NamedIndividual ,
                                            :MajorImpact ;
+                                  :score "4"^^xsd:int ;
                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                   <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                                   rdfs:comment "Significant project over-run."@en ;
@@ -2346,6 +2519,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactServiceUserExperience
 :majorImpactServiceUserExperience rdf:type owl:NamedIndividual ,
                                            :MajorImpact ;
+                                  :score "4"^^xsd:int ;
                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                   <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^xsd:dateTime ;
                                   rdfs:comment "Unsatisfactory service user experience related to poor treatment resulting in long term effects."@en ;
@@ -2400,6 +2574,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactAdversePublicity-Reputation
 :minorImpactAdversePublicity-Reputation rdf:type owl:NamedIndividual ,
                                                  :MinorImpact ;
+                                        :score "2"^^xsd:int ;
                                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                         <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                                         rdfs:comment "Local media coverage – short term. Some public concern. Minor effect on staff morale/public attitudes. Internal review necessary."@en ;
@@ -2409,6 +2584,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactBusinessContinuity
 :minorImpactBusinessContinuity rdf:type owl:NamedIndividual ,
                                         :MinorImpact ;
+                               :score "2"^^xsd:int ;
                                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                                rdfs:comment "Short term disruption to service with minor impact on service user care."@en ;
@@ -2418,6 +2594,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactCompliance
 :minorImpactCompliance rdf:type owl:NamedIndividual ,
                                 :MinorImpact ;
+                       :score "2"^^xsd:int ;
                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                        <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                        rdfs:comment "Single failure to meet internal PPPGs. Minor recommendations which can be easily addressed by local management."@en ;
@@ -2427,6 +2604,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactEnvironment
 :minorImpactEnvironment rdf:type owl:NamedIndividual ,
                                  :MinorImpact ;
+                        :score "2"^^xsd:int ;
                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                         <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                         rdfs:comment "On site release contained by organisation."@en ;
@@ -2436,6 +2614,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactFinance
 :minorImpactFinance rdf:type owl:NamedIndividual ,
                              :MinorImpact ;
+                    :score "2"^^xsd:int ;
                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                     <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                     rdfs:comment "0.33-0.5% budget deficit."@en ;
@@ -2445,6 +2624,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHarmToAPerson
 :minorImpactHarmToAPerson rdf:type owl:NamedIndividual ,
                                    :MinorImpact ;
+                          :score "2"^^xsd:int ;
                           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                           <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                           rdfs:comment "Minor injury or illness, first aid treatment required. <3 days absence. <3 days extended hospital stay. Impaired psychosocial functioning greater than 3 days less than one month."@en ;
@@ -2454,6 +2634,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactObjectivesAndProjects
 :minorImpactObjectivesAndProjects rdf:type owl:NamedIndividual ,
                                            :MinorImpact ;
+                                  :score "2"^^xsd:int ;
                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                   <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                                   rdfs:comment "Minor reduction in scope, quality or schedule."@en ;
@@ -2463,6 +2644,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactServiceUserExperience
 :minorImpactServiceUserExperience rdf:type owl:NamedIndividual ,
                                            :MinorImpact ;
+                                  :score "2"^^xsd:int ;
                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                   <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                                   rdfs:comment "Unsatisfactory service user experience related to less than optimal treatment and/or inadequate information, not being to talked to & treated as an equal; or not being treated with honesty, dignity & respect – readily resolvable."@en ;
@@ -2472,6 +2654,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactAdversePublicity-Reputation
 :moderateImpactAdversePublicity-Reputation rdf:type owl:NamedIndividual ,
                                                     :ModerateImpact ;
+                                           :score "3"^^xsd:int ;
                                            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:49:14+00:00"^^xsd:dateTime ;
                                            rdfs:comment "Local media – adverse publicity.Significant effect on staff morale & public perception of the organisation. Public calls (at local level) for specific remedial actions. Comprehensive review/investigation necessary."@en ;
@@ -2481,6 +2664,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactBusinessContinuity
 :moderateImpactBusinessContinuity rdf:type owl:NamedIndividual ,
                                            :ModerateImpact ;
+                                  :score "3"^^xsd:int ;
                                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                   <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                                   rdfs:comment "Some disruption in service with unacceptable impact on service user care. Temporary loss of ability to provide service."@en ;
@@ -2490,6 +2674,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactCompliance
 :moderateImpactCompliance rdf:type owl:NamedIndividual ,
                                    :ModerateImpact ;
+                          :score "3"^^xsd:int ;
                           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                           <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                           rdfs:comment "Repeated failure to meet internal PPPGs. Important recommendations that can be addressed with an appropriate management action plan."@en ;
@@ -2499,6 +2684,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactEnvironment
 :moderateImpactEnvironment rdf:type owl:NamedIndividual ,
                                     :ModerateImpact ;
+                           :score "3"^^xsd:int ;
                            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                            <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                            rdfs:comment "On site release contained by organisation."@en ;
@@ -2508,6 +2694,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactFinance
 :moderateImpactFinance rdf:type owl:NamedIndividual ,
                                 :ModerateImpact ;
+                       :score "3"^^xsd:int ;
                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                        <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                        rdfs:comment "0.5-1.0% budget deficit."@en ;
@@ -2517,6 +2704,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHarmToAPerson
 :moderateImpactHarmToAPerson rdf:type owl:NamedIndividual ,
                                       :ModerateImpact ;
+                             :score "3"^^xsd:int ;
                              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                              <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                              rdfs:comment "Significant injury requiring medical treatment e.g. Fracture and/or counselling. Agency reportable, e.g. HSA, Gardaí (violent and aggressive acts). >3 Days absence. 3-8 Days extended hospital Stay. Impaired psychosocial functioning greater than one month less than six months."@en ;
@@ -2526,6 +2714,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactObjectivesAndProjects
 :moderateImpactObjectivesAndProjects rdf:type owl:NamedIndividual ,
                                               :ModerateImpact ;
+                                     :score "3"^^xsd:int ;
                                      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                      <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                                      rdfs:comment "Reduction in scope or quality of project; project objectives or schedule."@en ;
@@ -2535,6 +2724,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactServiceUserExperience
 :moderateImpactServiceUserExperience rdf:type owl:NamedIndividual ,
                                               :ModerateImpact ;
+                                     :score "3"^^xsd:int ;
                                      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                      <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                                      rdfs:comment "Unsatisfactory service user experience related to less than optimal treatment resulting in short term effects (less than 1 week)."@en ;
@@ -2551,6 +2741,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactAdversePublicity-Reputation
 :negligibleImpactAdversePublicity-Reputation rdf:type owl:NamedIndividual ,
                                                       :NegligibleImpact ;
+                                             :score "1"^^xsd:int ;
                                              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                              <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^xsd:dateTime ;
                                              rdfs:comment "Rumours, no media coverage. No public concerns voiced.Little effect on staff morale. No review/investigation necessary."@en ;
@@ -2560,6 +2751,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactBusinessContinuity
 :negligibleImpactBusinessContinuity rdf:type owl:NamedIndividual ,
                                              :NegligibleImpact ;
+                                    :score "1"^^xsd:int ;
                                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                     <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:15:34+00:00"^^xsd:dateTime ;
                                     rdfs:comment "Interruption in a service which does not impact on the delivery of service user care or the ability to continue to provide service."@en ;
@@ -2569,6 +2761,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactCompliance
 :negligibleImpactCompliance rdf:type owl:NamedIndividual ,
                                      :NegligibleImpact ;
+                            :score "1"^^xsd:int ;
                             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                             <http://purl.org/dc/elements/1.1/date> "2021-08-25T18:56:12+00:00"^^xsd:dateTime ;
                             rdfs:comment "Minor non-compliance with internal PPPGs. Small number of minor issues requiring improvement."@en ;
@@ -2578,6 +2771,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactEnvironment
 :negligibleImpactEnvironment rdf:type owl:NamedIndividual ,
                                       :NegligibleImpact ;
+                             :score "1"^^xsd:int ;
                              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                              <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:18:56+00:00"^^xsd:dateTime ;
                              rdfs:label "Negligible Impact - Environment"@en .
@@ -2586,6 +2780,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactFinance
 :negligibleImpactFinance rdf:type owl:NamedIndividual ,
                                   :NegligibleImpact ;
+                         :score "1"^^xsd:int ;
                          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                          <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:18:11+00:00"^^xsd:dateTime ;
                          rdfs:comment "0.33% budget deficit."@en ;
@@ -2595,6 +2790,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHarmToAPerson
 :negligibleImpactHarmToAPerson rdf:type owl:NamedIndividual ,
                                         :NegligibleImpact ;
+                               :score "1"^^xsd:int ;
                                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                <http://purl.org/dc/elements/1.1/date> "2021-08-25T17:32:12+00:00"^^xsd:dateTime ;
                                rdfs:comment "Adverse event leading to minor injury not requiring first aid. No impaired Psychosocial functioning."@en ;
@@ -2604,6 +2800,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactObjectivesAndProjects
 :negligibleImpactObjectivesAndProjects rdf:type owl:NamedIndividual ,
                                                 :NegligibleImpact ;
+                                       :score "1"^^xsd:int ;
                                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                        <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:15:34+00:00"^^xsd:dateTime ;
                                        rdfs:comment "Barely noticeable reduction in scope, quality or schedule."@en ;
@@ -2613,6 +2810,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactServiceUserExperience
 :negligibleImpactServiceUserExperience rdf:type owl:NamedIndividual ,
                                                 :NegligibleImpact ;
+                                       :score "1"^^xsd:int ;
                                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna"@en ;
                                        <http://purl.org/dc/elements/1.1/date> "2021-08-25T17:27:12+00:00"^^xsd:dateTime ;
                                        rdfs:comment "Reduced quality of service user experience related to inadequate provision of information."@en ;
