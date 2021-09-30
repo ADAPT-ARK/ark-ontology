@@ -7,11 +7,11 @@
 @base <https://openark.adaptcentre.ie/Ontologies/ARKCube#> .
 
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> rdf:type owl:Ontology ;
-                                                      owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKCube#> ;
+                                                      owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKCube> ;
                                                       <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior"@en ,
                                                                                                     "Junli Liang"@en ,
                                                                                                     "Natalia Duda"@en ,
-                                                                                                    "Nick Mcdonald"@en ,
+                                                                                                    "Nick McDonald"@en ,
                                                                                                     "Rob Brennan"@en ,
                                                                                                     "Lucy McKenna" ;
                                                       <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ,
@@ -20,7 +20,7 @@
                                                       <http://purl.org/dc/elements/1.1/modified> "08/02/2021" ;
                                                       <http://purl.org/dc/elements/1.1/publisher> "https://openark.adaptcentre.ie/" ;
                                                       <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
-                                                      <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube  Ontology"@en ;
+                                                      <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Cube Ontology"@en ;
                                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkc" ;
                                                       <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKCube#" ;
                                                       rdfs:comment "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ;
@@ -355,7 +355,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood
 :hasLikelihood rdf:type owl:ObjectProperty ;
                rdfs:domain :Risk ;
-               rdfs:range :Likelihood ;
+               rdfs:range :HSELikelihood ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
                rdfs:comment "Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?"@en ;
                rdfs:label "has likelihood"@en ,
@@ -848,7 +848,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency
 :actualFrequency rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :Likelihood ;
+                 rdfs:domain :HSELikelihood ;
                  rdfs:range rdf:PlainLiteral ;
                  <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                  <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
@@ -1047,7 +1047,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#probability
 :probability rdf:type owl:DatatypeProperty ;
-             rdfs:domain :Likelihood ;
+             rdfs:domain :HSELikelihood ;
              rdfs:range xsd:float ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
              <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en ;
@@ -1130,8 +1130,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                                 :Context ,
                                 :Control ,
                                 :GainAchieved ,
+                                :HSELikelihood ,
                                 :Impact ,
-                                :Likelihood ,
                                 :Mechanism ,
                                 :Outcome ,
                                 :PotentialLoss ,
@@ -1295,6 +1295,15 @@ rdfs:Resource rdf:type owl:Class .
          rdfs:label "Culture"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood
+:DFBLikelihood rdf:type owl:Class ;
+               rdfs:subClassOf :Likelihood ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-09-28T16:53:21+00:00"@en ;
+               rdfs:comment "Likelihood ratings as per Dublin Fire Brigade's Risk Rating Matrix."@en ;
+               rdfs:label "DFB Likelihood"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable
 :Deliverable rdf:type owl:Class ;
              rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
@@ -1376,7 +1385,7 @@ rdfs:Resource rdf:type owl:Class .
                                  rdf:type owl:Class
                                ] ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
-               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
+               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
                rdfs:comment "Uses HSE impact table for definition."@en ;
                rdfs:label "Extreme Impact"@en .
 
@@ -1434,6 +1443,15 @@ rdfs:Resource rdf:type owl:Class .
       rdfs:label "Goal"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood
+:HSELikelihood rdf:type owl:Class ;
+               rdfs:subClassOf :Likelihood ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-09-28T16:53:21+00:00"@en ;
+               rdfs:comment "Likelihood ratings as per the HSE Risk Assessment Tool."@en ;
+               rdfs:label "HSE Likelihood"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport
 :HandoverReport rdf:type owl:Class ;
                 rdfs:subClassOf :Report ;
@@ -1465,7 +1483,7 @@ rdfs:Resource rdf:type owl:Class .
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-        rdfs:comment "The imact of a Risk. Used for risk description in ICC (impact, cause, context) format. The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event."@en ;
+        rdfs:comment "The imact of a Risk. Used for risk description following the ICC (impact, cause, context) approach. The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event."@en ;
         rdfs:label "Impact"@en .
 
 
@@ -1511,8 +1529,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
             <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00"@en ;
-            rdfs:comment "The chance of something happening (also described as the probability or frequency of an event occurring)."@en ;
-            rdfs:label "Likelihood"@en .
+            rdfs:comment "The chance of something happening (also described as the probability or frequency of an event occurring)."@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain
@@ -2085,6 +2102,15 @@ Familiarity gained by personal experience, vicariously or through collective pro
              rdfs:label "Sensemaking"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity
+:Severity rdf:type owl:Class ;
+          rdfs:subClassOf :Impact ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+          rdfs:comment "The severity of the impact of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix."@en ;
+          rdfs:label "Severity"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Social
 :Social rdf:type owl:Class ;
         rdfs:subClassOf :SystemDimension ;
@@ -2111,6 +2137,24 @@ Familiarity gained by personal experience, vicariously or through collective pro
        rdfs:label "Stage"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#StatusReport
+:StatusReport rdf:type owl:Class ;
+              rdfs:subClassOf :Report ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              <http://purl.org/dc/elements/1.1/date> "2021-09-28T09:09:10+00:00"^^xsd:dateTime ;
+              rdfs:comment "A report that provides an update on the status of a project."@en ;
+              rdfs:label "Status Report"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#StatusReportTemplate
+:StatusReportTemplate rdf:type owl:Class ;
+                      rdfs:subClassOf :ReportTemplate ;
+                      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                      <http://purl.org/dc/elements/1.1/date> "2021-09-28T09:09:10+00:00"^^xsd:dateTime ;
+                      rdfs:comment "A template for a status report."@en ;
+                      rdfs:label "Status Report Template"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability
 :Sustainability rdf:type owl:Class ;
                 rdfs:subClassOf :ObligationToActRating ;
@@ -2126,6 +2170,15 @@ Familiarity gained by personal experience, vicariously or through collective pro
                  <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:28:50+00:00" ;
                  rdfs:comment "This focuses on the Goals, Process, Social, and Knowledge and Information."@en ;
                  rdfs:label "System Dimension"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#UnspecifiedImpact
+:UnspecifiedImpact rdf:type owl:Class ;
+                   rdfs:subClassOf :Impact ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-09-28T16:53:21+00:00"^^xsd:dateTime ;
+                   rdfs:comment "No impact level specified."@en ;
+                   rdfs:label "Unspecified Impact"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage
@@ -2227,7 +2280,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain
 :almostCertain rdf:type owl:NamedIndividual ,
-                        :Likelihood ;
+                        :HSELikelihood ;
                :actualFrequency "At least monthly" ;
                :probability "0.99"^^xsd:float ;
                :score "5"^^xsd:int ;
@@ -2254,6 +2307,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     rdfs:label "Business Continuity"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophic
+:catastrophic rdf:type owl:NamedIndividual ,
+                       :Severity ;
+              :score "5"^^xsd:int ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+              rdfs:comment "Death or multiple irreversible injuries."@en ;
+              rdfs:label "Catastrophic"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#closed
 :closed rdf:type owl:NamedIndividual ,
                  :RiskStatus ;
@@ -2268,6 +2331,65 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <http://purl.org/dc/elements/1.1/date> "2021-01-29T09:52:00+00:00" ;
             rdfs:comment "Risks associated with compliance with requirements in relation to the standards set out in relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards. A type of Risk Impact Category described in the HSE Risk Assessment Tool."@en ;
             rdfs:label "Compliance"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbAlmostCertain
+:dfbAlmostCertain rdf:type owl:NamedIndividual ,
+                           :DFBLikelihood ;
+                  :score "5"^^xsd:int ;
+                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+                  rdfs:comment "Inadequate health and safety controls, an accident will occur."@en ;
+                  rdfs:label "Almost Certain"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbPossible
+:dfbPossible rdf:type owl:NamedIndividual ,
+                      :DFBLikelihood ;
+             :score "3"^^xsd:int ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+             rdfs:comment "If the situation is not well managed an accident is likely to occur."@en ;
+             rdfs:label "Possible"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbRare
+:dfbRare rdf:type owl:NamedIndividual ,
+                  :DFBLikelihood ;
+         :score "1"^^xsd:int ;
+         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+         <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+         rdfs:comment "Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken."@en ;
+         rdfs:label "Rare"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbUnlikely
+:dfbUnlikely rdf:type owl:NamedIndividual ,
+                      :DFBLikelihood ;
+             :score "2"^^xsd:int ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+             rdfs:comment "The situation is well under control, but occasional lapses could occur."@en ;
+             rdfs:label "Unlikely"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbUnspecifiedLikelihood
+:dfbUnspecifiedLikelihood rdf:type owl:NamedIndividual ,
+                                   :DFBLikelihood ;
+                          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                          <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+                          rdfs:comment "No likelihood level specified."@en ;
+                          rdfs:label "Unspecified Likelihood"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbVeryLikely
+:dfbVeryLikely rdf:type owl:NamedIndividual ,
+                        :DFBLikelihood ;
+               :score "4"^^xsd:int ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+               rdfs:comment "Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident."@en ;
+               rdfs:label "Very Likely"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade
@@ -2429,7 +2551,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#likely
 :likely rdf:type owl:NamedIndividual ,
-                 :Likelihood ;
+                 :HSELikelihood ;
         :actualFrequency "Bimonthly" ;
         :probability "0.75"^^xsd:float ;
         :score "4"^^xsd:int ;
@@ -2606,6 +2728,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
                  rdfs:label "Medium Viability"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minor
+:minor rdf:type owl:NamedIndividual ,
+                :Severity ;
+       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+       <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+       rdfs:comment "1"@en ,
+                    "No injury."@en ;
+       rdfs:label "Minor"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactAdversePublicity-Reputation
 :minorImpactAdversePublicity-Reputation rdf:type owl:NamedIndividual ,
                                                  :MinorImpact ;
@@ -2684,6 +2816,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                   <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^xsd:dateTime ;
                                   rdfs:comment "Unsatisfactory service user experience related to less than optimal treatment and/or inadequate information, not being to talked to & treated as an equal; or not being treated with honesty, dignity & respect – readily resolvable."@en ;
                                   rdfs:label "Minor Impact - Service User Experience"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderate
+:moderate rdf:type owl:NamedIndividual ,
+                   :Severity ;
+          :score "2"^^xsd:int ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+          rdfs:comment "Injury / harm that is of a temporary nature and results in less than 3 days absence."@en ;
+          rdfs:label "Moderate"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactAdversePublicity-Reputation
@@ -2852,12 +2994,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                        rdfs:label "Negligible Impact - Service User Experience"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#noPriority
-:noPriority rdf:type owl:NamedIndividual ,
-                     :Priority ;
-            rdfs:label "None"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#open
 :open rdf:type owl:NamedIndividual ,
                :RiskStatus ;
@@ -2876,7 +3012,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#possible
 :possible rdf:type owl:NamedIndividual ,
-                   :Likelihood ;
+                   :HSELikelihood ;
           :actualFrequency "Occurs every 1-2 years" ;
           :probability "0.5"^^xsd:float ;
           :score "3"^^xsd:int ;
@@ -2888,7 +3024,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote
 :rareRemote rdf:type owl:NamedIndividual ,
-                     :Likelihood ;
+                     :HSELikelihood ;
             :actualFrequency "Occurs every 5 years" ;
             :probability "0.01"^^xsd:float ;
             :score "1"^^xsd:int ;
@@ -2896,6 +3032,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en ;
             rdfs:comment "Probability: 1%. Actual Frequency: Occurs every 5 years or more."@en ;
             rdfs:label "Rare/Remote"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#serious
+:serious rdf:type owl:NamedIndividual ,
+                  :Severity ;
+         :score "3"^^xsd:int ;
+         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+         <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+         rdfs:comment "Injury / harm that is of a temporary nature and results in more than 3 days absence but not more than 28 days."@en ;
+         rdfs:label "Serious"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience
@@ -2942,7 +3088,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely
 :unlikely rdf:type owl:NamedIndividual ,
-                   :Likelihood ;
+                   :HSELikelihood ;
           :actualFrequency "Occurs every 2-3 years" ;
           :probability "0.1"^^xsd:float ;
           :score "2"^^xsd:int ;
@@ -2950,6 +3096,79 @@ Familiarity gained by personal experience, vicariously or through collective pro
           <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
           rdfs:comment "Probability: 10%. Actual Frequency: Occurs every 2-5 years."@en ;
           rdfs:label "Unlikely"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedDelivery
+:unspecifiedDelivery rdf:type owl:NamedIndividual ,
+                              :Delivery ;
+                     rdfs:label "Unspecified Delivery" .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedEfficacy
+:unspecifiedEfficacy rdf:type owl:NamedIndividual ,
+                              :Efficacy ;
+                     rdfs:label "Unspecified Efficacy"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImportance
+:unspecifiedImportance rdf:type owl:NamedIndividual ,
+                                :Importance ;
+                       rdfs:label "Unspecified Importance"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedLikelihood
+:unspecifiedLikelihood rdf:type owl:NamedIndividual ,
+                                :HSELikelihood ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-09-28T09:09:10+00:00"^^xsd:dateTime ;
+                       rdfs:comment "No likelihood level specified."@en ;
+                       rdfs:label "Unspecified Likelihood"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedPrimaryImpactCategory
+:unspecifiedPrimaryImpactCategory rdf:type owl:NamedIndividual ,
+                                           :ImpactCategory ;
+                                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                                  <http://purl.org/dc/elements/1.1/date> "2021-09-28T09:09:10+00:00"^^xsd:dateTime ;
+                                  rdfs:comment "No primary impact category specified."@en ;
+                                  rdfs:label "Unspecified Primary Impact Category"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedPriority
+:unspecifiedPriority rdf:type owl:NamedIndividual ,
+                              :Priority ;
+                     rdfs:label "Unspecified Priority"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedSeverity
+:unspecifiedSeverity rdf:type owl:NamedIndividual ,
+                              :Severity ;
+                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+                     rdfs:comment "No severity level specified."@en ;
+                     rdfs:label "Unspecified Severity"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedSustainability
+:unspecifiedSustainability rdf:type owl:NamedIndividual ,
+                                    :Sustainability ;
+                           rdfs:label "Unspecified Sustainability"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedViability
+:unspecifiedViability rdf:type owl:NamedIndividual ,
+                               :Viability ;
+                      rdfs:label "Unspecified Viability"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#verySerious
+:verySerious rdf:type owl:NamedIndividual ,
+                      :Severity ;
+             :score "4"^^xsd:int ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
+             rdfs:comment "Injury resulting in more than 28 days absence / irreversible injury / permanent disablement."@en ;
+             rdfs:label "Very Serious"@en .
 
 
 #################################################################
