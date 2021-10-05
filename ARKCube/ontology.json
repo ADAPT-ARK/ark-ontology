@@ -1282,6 +1282,9 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ReportTemplate"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Extreme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -2515,14 +2518,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The severity of the impact of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix."
+    "@value" : "The severity of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Severity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Social",
@@ -5142,6 +5145,9 @@
     "@value" : "Low Viability"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#major",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactAdversePublicity-Reputation",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -5422,6 +5428,10 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Minor"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "1"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactAdversePublicity-Reputation",
@@ -6671,6 +6681,13 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Unspecified Priority"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedRiskRating",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unspecified Risk Rating"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedSeverity",

@@ -2104,10 +2104,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity
 :Severity rdf:type owl:Class ;
-          rdfs:subClassOf :Impact ;
+          rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
           <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
-          rdfs:comment "The severity of the impact of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix."@en ;
+          rdfs:comment "The severity of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix."@en ;
           rdfs:label "Severity"@en .
 
 
@@ -2225,6 +2225,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                       <http://purl.org/dc/elements/1.1/date> "2021-04-23T17:06:12+00:00"^^xsd:dateTime ;
                       rdfs:label "Dublin City University"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Extreme
+:Extreme rdf:type owl:NamedIndividual .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance
@@ -2603,6 +2607,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
               rdfs:label "Low Viability"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#major
+:major rdf:type owl:NamedIndividual .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactAdversePublicity-Reputation
 :majorImpactAdversePublicity-Reputation rdf:type owl:NamedIndividual ,
                                                  :MajorImpact ;
@@ -2731,6 +2739,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#minor
 :minor rdf:type owl:NamedIndividual ,
                 :Severity ;
+       :score "1"^^xsd:int ;
        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
        <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^xsd:dateTime ;
        rdfs:comment "1"@en ,
@@ -3138,6 +3147,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
 :unspecifiedPriority rdf:type owl:NamedIndividual ,
                               :Priority ;
                      rdfs:label "Unspecified Priority"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedRiskRating
+:unspecifiedRiskRating rdf:type owl:NamedIndividual ,
+                                :RiskRating ;
+                       rdfs:label "Unspecified Risk Rating"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedSeverity

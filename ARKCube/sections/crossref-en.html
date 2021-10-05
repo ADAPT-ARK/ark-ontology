@@ -1302,9 +1302,7 @@ This section provides details for each class and property defined by Access Risk
          <dd/>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Severity"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity">Severity</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#UnspecifiedImpact"
+            <a href="#UnspecifiedImpact"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#UnspecifiedImpact">Unspecified Impact</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -2967,6 +2965,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#lowRisk">Green (Low Risk)</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#highRisk"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#highRisk">Red (High Risk)</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#unspecifiedRiskRating"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedRiskRating">Unspecified Risk Rating</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -3170,7 +3170,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity</p>
       <div class="comment">
-         <span class="markdown">The severity of the impact of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix.</span>
+         <span class="markdown">The severity of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix.</span>
       </div>
       <dl>
          <dt>Date:</dt>
@@ -3183,8 +3183,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#Impact"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact">Impact</a>
+            <span class="dotted"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has members</dt>
@@ -7845,6 +7845,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedPriority">Unspecified Priority</a>
       </li>
       <li>
+         <a href="#unspecifiedRiskRating"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedRiskRating">Unspecified Risk Rating</a>
+      </li>
+      <li>
          <a href="#unspecifiedSeverity"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedSeverity">Unspecified Severity</a>
       </li>
@@ -9250,6 +9254,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <a href="#Severity"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity">Severity</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has facts</dt>
+         <dd>
+            <a href="#score"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">score</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"1"^^<span class="dotted" title="http://www.w3.org/2001/XMLSchema#int">int</span>
+            </span>
          </dd>
       </dl>
    </div>
@@ -10832,6 +10844,22 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dd>
             <a href="#Priority"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority">Priority</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="unspecifiedRiskRating">
+      <h3>Unspecified Risk Rating<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedRiskRating</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#RiskRating"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating">Risk Rating</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
