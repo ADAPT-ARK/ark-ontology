@@ -126,7 +126,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 rdfs:range :Person ;
                 <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                 <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
-                rdfs:comment "Used to link an Action with the Person assigned to perform it. Enter the name of the person responsible for the action necessary to mitigate the risk. The person responsible could be the Risk Owner, the Risk Owners Manager, or someone who reports to the Risk Owner, e.g. a CHO can assign an action to any of his/her Management team or to their direct Manager"@en ;
+                rdfs:comment "Used to link an Action with the Person assigned to perform it. Enter the name of the person responsible for the action necessary to mitigate the risk. The person responsible could be the Risk Owner, the Risk Owners Manager, or someone who reports to the Risk Owner, e.g. a CHO can assign an action to any of their Management team or to their direct Manager."@en ;
                 rdfs:label "assigned person"@en .
 
 
@@ -603,7 +603,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:range :Person ;
                     <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                    rdfs:comment "Links risk to risk coordinator in risk assessment."@en ;
+                    rdfs:comment "Links a risk to the risk management coordinator involved in the risk assessment."@en ;
                     rdfs:label "has risk coordinator"@en .
 
 
@@ -632,7 +632,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               rdfs:range :Person ;
               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
               <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-              rdfs:comment "Links a Risk to the Person with the responsibility to assess and manage the risk in line with organisational policy i.e. normally the Line Manager of Service / Area. The Person who will be held accountable for the Risk and its effective control." ;
+              rdfs:comment "Links a risk to the person with the responsibility to assess and manage the risk in line with organisational policy i.e. normally the Line Manager of Service / Area. This is the individual who will be held accountable for the risk and its effective control. The maxim of the ‘risk take is the risk owner’ should be taken."@en ;
               rdfs:label "has risk owner"@en .
 
 
@@ -662,7 +662,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:range :RiskType ;
              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
              <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:37:52.608523" ;
-             rdfs:comment "Links a risk to a specific risk type." ;
+             rdfs:comment "Links a risk to the specific type of risk being assessed." ;
              rdfs:label "has risk type" .
 
 
@@ -873,6 +873,13 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             rdfs:label "answer text"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#approvalStatus
+:approvalStatus rdf:type owl:DatatypeProperty ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^xsd:dateTime ;
+                rdfs:label "approval status"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#artefactText
 :artefactText rdf:type owl:DatatypeProperty ;
               rdfs:domain :Artefact ;
@@ -1037,6 +1044,13 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
       rdfs:label "name"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected
+:personsAffected rdf:type owl:DatatypeProperty ;
+                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                 <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^xsd:dateTime ;
+                 rdfs:label "persons affected" .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss
 :potentialLoss rdf:type owl:DatatypeProperty ;
                rdfs:domain :ProjectAnalysis ;
@@ -1053,6 +1067,13 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en ;
              rdfs:comment "Defines the probability of a risk likelihood category."@en ;
              rdfs:label "probability"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes
+:progressNotes rdf:type owl:DatatypeProperty ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:01:01+00:00"^^xsd:dateTime ;
+               rdfs:label "progress notes"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus
@@ -1085,6 +1106,13 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
               <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:49+00:00" ;
               rdfs:comment "The text of the cube question. This represents the actual question asked."@en ;
               rdfs:label "question text"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewDate
+:reviewDate rdf:type owl:DatatypeProperty ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^xsd:dateTime ;
+            rdfs:label "review date"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId
@@ -1251,7 +1279,7 @@ rdfs:Resource rdf:type owl:Class .
                        ] ;
        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
        <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-       rdfs:comment "The cause of a Risk. Used for risk description in ICC (impact, cause, context) format."@en ;
+       rdfs:comment "The cause of a risk. Something that brings about an effect. Used for a risk description in ICC (impact, cause, context) format."@en ;
        rdfs:label "Cause"@en .
 
 
@@ -1268,7 +1296,8 @@ rdfs:Resource rdf:type owl:Class .
                          ] ;
          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:24+00:00" ;
-         rdfs:comment "Wider circumstances of the system."@en ;
+         rdfs:comment """To establish the context means to define the external and internal parameters that organizations must consider when they manage risk. 
+An organization’s external context includes its external stakeholders, its local, national, and international environment, as well as any external factors that influence its objectives. An organization’s internal context includes its internal stakeholders, its approach to governance, its contractual relationships, and its capabilities, culture, and standards."""@en ;
          rdfs:label "Context"@en .
 
 
@@ -1282,7 +1311,7 @@ rdfs:Resource rdf:type owl:Class .
                          ] ;
          <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
          <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-         rdfs:comment "A mechanism, process, procedure or action which can be verified, which seeks to reduce the likelihood and/or consequence of a risk. Controls include any process, policy, device, practice, or other  actions which modify risk. They can exist or be required as additional in order to further mitigate the risk."@en ;
+         rdfs:comment "Any measure or action that modifies or regulates risk. Controls include any policy, procedure, practice, process, technology, technique, method,  or device that modifies or regulates risk. They can exist or be required as additional in order to further mitigate the risk. Risk treatments become controls, or modify existing controls, once they are implemented. A mechanism, process, procedure or action which can be verified, that seeks to reduce the likelihood and/or consequence of a risk."@en ;
          rdfs:label "Control"@en .
 
 
@@ -1301,7 +1330,7 @@ rdfs:Resource rdf:type owl:Class .
                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                <http://purl.org/dc/elements/1.1/date> "2021-09-28T16:53:21+00:00"@en ;
                rdfs:comment "Likelihood ratings as per Dublin Fire Brigade's Risk Rating Matrix."@en ;
-               rdfs:label "DFB Likelihood"@en .
+               rdfs:label "Likelihood (DFB)"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable
@@ -1332,7 +1361,7 @@ rdfs:Resource rdf:type owl:Class .
               rdfs:subClassOf :Stage ;
               <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
               <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
-              rdfs:comment "A develop stage question is a cube  question which is asked at the development stage of the cube questionnaire."@en ;
+              rdfs:comment "A develop stage question is a Cube question which is asked at the development stage of the Cube questionnaire."@en ;
               rdfs:label "Develop Stage"@en .
 
 
@@ -1449,7 +1478,7 @@ rdfs:Resource rdf:type owl:Class .
                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                <http://purl.org/dc/elements/1.1/date> "2021-09-28T16:53:21+00:00"@en ;
                rdfs:comment "Likelihood ratings as per the HSE Risk Assessment Tool."@en ;
-               rdfs:label "HSE Likelihood"@en .
+               rdfs:label "Likelihood (HSE)"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport
@@ -1483,7 +1512,7 @@ rdfs:Resource rdf:type owl:Class .
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-        rdfs:comment "The imact of a Risk. Used for risk description following the ICC (impact, cause, context) approach. The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event."@en ;
+        rdfs:comment "The impact of a Risk. The powerful effect that something has on somebody/something. The outcome or consequence of an event affecting objectives. It can be expressed either qualitatively or quantitatively, being a loss, disadvantage or gain. There may be a range of possible outcomes associated with an event. Used for risk description following the ICC (impact, cause, context) approach."@en ;
         rdfs:label "Impact"@en .
 
 
@@ -1501,7 +1530,7 @@ rdfs:Resource rdf:type owl:Class .
                 rdfs:subClassOf :Stage ;
                 <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
                 <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
-                rdfs:comment "An implement stage question is a cube question which is asked at the implementation stage of the cube questionnaire."@en ;
+                rdfs:comment "Implementation is the execution of a plan. A Cube question which is asked at the implementation stage of the Cube questionnaire."@en ;
                 rdfs:label "Implement Stage"@en .
 
 
@@ -1529,7 +1558,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
             <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00"@en ;
-            rdfs:comment "The chance of something happening (also described as the probability or frequency of an event occurring)."@en .
+            rdfs:comment "The chance of something happening (also described as the probability or frequency of an event occurring)."@en ;
+            rdfs:label "Likelihood" .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain
@@ -1577,7 +1607,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                            ] ;
            <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
            <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:31+00:00" ;
-           rdfs:comment "The way in which something is transformed, produced, circulated."@en ;
+           rdfs:comment "The way in which something is transformed, produced, circulated. A mechanism is a device that transforms input forces and movement into a desired set of output forces and movement. Underlying entities, processes, or (social) structures which operate in particular contexts to generate outcomes of interest."@en ;
            rdfs:label "Mechanism"@en .
 
 
@@ -1673,7 +1703,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                          ] ;
          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:39+00:00" ;
-         rdfs:comment "The end product of a purposive activity."@en ;
+         rdfs:comment "The end product of a purposive activity. Outcomes can be either intended or unintended, can be proximal, intermediate or final, and result from the activation of different mechanisms in different contexts."@en ;
          rdfs:label "Outcome"@en .
 
 
@@ -1696,7 +1726,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   rdfs:subClassOf :Stage ;
                   <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
                   <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
-                  rdfs:comment "A plan and prepare stage question is a cube question which is asked at the planning stage of the cube questionnaire."@en ;
+                  rdfs:comment "Planning is the process of thinking about the activities required to achieve a desired goal. These activities are then represented in a Plan. Preparation means to make ready or suitable in advance for the implementation of a plan. A Cube question which is asked at the planning stage of the Cube questionnaire."@en ;
                   rdfs:label "Plan and Prepare Stage"@en .
 
 
@@ -1739,7 +1769,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
               rdfs:subClassOf :Stage ;
               <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
               <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:22:54+00:00" ;
-              rdfs:comment "A problem stage question is a cube question which is asked at the problem stage of the cube questionnaire"@en ;
+              rdfs:comment "A matter or situation regarded as unwelcome or harmful and needing to be dealt with and overcome. A Cube question which is asked at the problem stage of the cube questionnaire."@en ;
               rdfs:label "Problem Stage"@en .
 
 
@@ -1955,7 +1985,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                rdf:type owl:Class
                              ] ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
-             rdfs:comment "The context of a Risk. Used for risk description in ICC (impact, cause, context) format. Used to relate HSE concept of the context of a risk to CUBE concept of context."@en ;
+             rdfs:comment "Establishing the context means to define the external and internal factors that the HSE and its services must consider when they manage risk. Used for risk description in ICC (impact, cause, context) format. Used to relate HSE concept of the context of a risk to CUBE concept of context."@en ;
              rdfs:label "Risk Context"@en .
 
 
@@ -2125,7 +2155,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                rdfs:subClassOf :Stage ;
                <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
                <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
-               rdfs:comment "A solution stage question is a cube question which is asked at the solution stage of the cube questionnaire."@en ;
+               rdfs:comment "The solution has to change the basis of how the mechanism results in the unwanted outcome in the problem phase; this may involve changing the mechanism directly or it may involve changing some other element that in turn influences the way in which the mechanism works. Recommendations propose Control measures to mitigate the risk. A Cube question which is asked at the solution stage of the Cube questionnaire."@en ;
                rdfs:label "Solution Stage"@en .
 
 
@@ -2195,7 +2225,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   rdfs:subClassOf :Stage ;
                   <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
                   <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" ;
-                  rdfs:comment "A verify stage question is a cube  question which is asked at the verification stage of the cube questionnaire."@en ;
+                  rdfs:comment "Verification is the process of determining whether or not the outcomes of a project fulfill the requirements established during the solution stage as well as associated  requirements for planning and implementation. Embedding implies that a particular feature becomes a permanent and noticeable feature of the system or organisation. A Cube question which is asked at the verification stage of the Cube questionnaire."@en ;
                   rdfs:label "Verify and Embed Stage"@en .
 
 
@@ -2254,6 +2284,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                          :RiskType ;
                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                 <http://purl.org/dc/elements/1.1/date> "2021-05-04T20:30:45+00:00"^^xsd:dateTime ;
+                rdfs:comment "The workforce of an organisation."@en ;
                 rdfs:label "Human Resources"@en .
 
 
@@ -2271,6 +2302,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                :RiskType ;
                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                       <http://purl.org/dc/elements/1.1/date> "2021-05-04T20:30:56+00:00"^^xsd:dateTime ;
+                      rdfs:comment "Providing safe access to levels of care and/or the services necessary to meet patient needs."@en ;
                       rdfs:label "Patient Care and Safety (Provision of Care)"@en .
 
 
@@ -2429,7 +2461,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                  :score "5"^^xsd:int ;
                                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                                  <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^xsd:dateTime ;
-                                 rdfs:comment "Permanent loss of core service or facility.Disruption to facility leading to significant ‘knock on’ effect."@en ;
+                                 rdfs:comment "Permanent loss of core service or facility. Disruption to facility leading to significant ‘knock on’ effect."@en ;
                                  rdfs:label "Extreme Impact - Business Continuity"@en .
 
 
