@@ -179,6 +179,14 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents and links the answer to the question." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasAnswer> <http://www.w3.org/2000/01/rdf-schema#label> "has answer"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus> <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an approval status to a risk assessment."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has approval status"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence> .
@@ -816,12 +824,6 @@ _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#answerText> <http://www.w3.org/2000/01/rdf-schema#comment> "The a textual answer to the cube question."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#answerText> <http://www.w3.org/2000/01/rdf-schema#label> "answer text"@en .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#approvalStatus
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#approvalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#approvalStatus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#approvalStatus> <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#approvalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "approval status"@en .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#artefactText
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#artefactText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#artefactText> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact> .
@@ -1181,6 +1183,14 @@ _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:27+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://www.w3.org/2000/01/rdf-schema#comment> "A written account in response to a question asked."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> <http://www.w3.org/2000/01/rdf-schema#label> "Answer"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> <http://purl.org/dc/elements/1.1/date> "2021-12-03T15:00:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The approval status of a risk assessment."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Approval Status"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2279,12 +2289,26 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 99%. Actual Frequency: At least monthly."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain> <http://www.w3.org/2000/01/rdf-schema#label> "Almost Certain"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval> <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval> <http://www.w3.org/2000/01/rdf-schema#label> "Awaiting Final Approval"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:14:34+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal> <http://www.w3.org/2000/01/rdf-schema#label> "Beacon Renal"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#beingReviewed
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#beingReviewed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#beingReviewed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#beingReviewed> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#beingReviewed> <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#beingReviewed> <http://www.w3.org/2000/01/rdf-schema#label> "Being Reviewed"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2308,6 +2332,13 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskStatus> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/2000/01/rdf-schema#comment> "Closed, i.e. that the risk no longer exists e.g. where an unsuitable premises is replaced by a suitable one." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/2000/01/rdf-schema#label> "Closed"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#closedApproval
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#closedApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#closedApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#closedApproval> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#closedApproval> <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#closedApproval> <http://www.w3.org/2000/01/rdf-schema#label> "Closed"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2449,6 +2480,13 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "Totally unsatisfactory service user outcome resulting in long term effects, or extremely poor experience of care provision."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Service User Experience"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval> <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval> <http://www.w3.org/2000/01/rdf-schema#label> "Final Approval"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#finance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#finance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#finance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory> .
@@ -2499,6 +2537,13 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highViability> <http://www.w3.org/2000/01/rdf-schema#label> "High Viability"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#inHoldingAwaitingReview
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#inHoldingAwaitingReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#inHoldingAwaitingReview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#inHoldingAwaitingReview> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#inHoldingAwaitingReview> <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#inHoldingAwaitingReview> <http://www.w3.org/2000/01/rdf-schema#label> "In Holding, Awaiting Review"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#likely
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likely> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2935,6 +2980,13 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 1%. Actual Frequency: Occurs every 5 years or more."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote> <http://www.w3.org/2000/01/rdf-schema#label> "Rare/Remote"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected> <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected> <http://www.w3.org/2000/01/rdf-schema#label> "Rejected"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#serious
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .

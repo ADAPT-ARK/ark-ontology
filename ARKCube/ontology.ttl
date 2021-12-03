@@ -206,6 +206,15 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:label "has answer"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus
+:hasApprovalStatus rdf:type owl:ObjectProperty ;
+                   rdfs:range :ApprovalStatus ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^xsd:dateTime ;
+                   rdfs:comment "Links an approval status to a risk assessment."@en ;
+                   rdfs:label "has approval status"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact
 :hasArtefact rdf:type owl:ObjectProperty ;
              rdfs:domain :Evidence ;
@@ -883,13 +892,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
             rdfs:label "answer text"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#approvalStatus
-:approvalStatus rdf:type owl:DatatypeProperty ;
-                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-                <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^xsd:dateTime ;
-                rdfs:label "approval status"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#artefactText
 :artefactText rdf:type owl:DatatypeProperty ;
               rdfs:domain :Artefact ;
@@ -1277,6 +1279,15 @@ rdfs:Resource rdf:type owl:Class .
         <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:27+00:00" ;
         rdfs:comment "A written account in response to a question asked."@en ;
         rdfs:label "Answer"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus
+:ApprovalStatus rdf:type owl:Class ;
+                rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-12-03T15:00:27+00:00"^^xsd:dateTime ;
+                rdfs:comment "The approval status of a risk assessment."@en ;
+                rdfs:label "Approval Status"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Artefact
@@ -2365,12 +2376,28 @@ Familiarity gained by personal experience, vicariously or through collective pro
                rdfs:label "Almost Certain"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval
+:awaitingFinalApproval rdf:type owl:NamedIndividual ,
+                                :ApprovalStatus ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^xsd:dateTime ;
+                       rdfs:label "Awaiting Final Approval"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal
 :beaconRenal rdf:type owl:NamedIndividual ,
                       :Organisation ;
              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
              <http://purl.org/dc/elements/1.1/date> "2021-03-26T14:14:34+00:00"^^xsd:dateTime ;
              rdfs:label "Beacon Renal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#beingReviewed
+:beingReviewed rdf:type owl:NamedIndividual ,
+                        :ApprovalStatus ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^xsd:dateTime ;
+               rdfs:label "Being Reviewed"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#businessContinuity
@@ -2397,6 +2424,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
                  :RiskStatus ;
         rdfs:comment "Closed, i.e. that the risk no longer exists e.g. where an unsuitable premises is replaced by a suitable one." ;
         rdfs:label "Closed"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#closedApproval
+:closedApproval rdf:type owl:NamedIndividual ,
+                         :ApprovalStatus ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^xsd:dateTime ;
+                rdfs:label "Closed"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance
@@ -2555,6 +2590,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
                                     rdfs:label "Extreme Impact - Service User Experience"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval
+:finalApproval rdf:type owl:NamedIndividual ,
+                        :ApprovalStatus ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^xsd:dateTime ;
+               rdfs:label "Final Approval"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#finance
 :finance rdf:type owl:NamedIndividual ,
                   :ImpactCategory ;
@@ -2613,6 +2656,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
 :highViability rdf:type owl:NamedIndividual ,
                         :Viability ;
                rdfs:label "High Viability"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#inHoldingAwaitingReview
+:inHoldingAwaitingReview rdf:type owl:NamedIndividual ,
+                                  :ApprovalStatus ;
+                         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                         <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^xsd:dateTime ;
+                         rdfs:label "In Holding, Awaiting Review"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#likely
@@ -3104,6 +3155,14 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en ;
             rdfs:comment "Probability: 1%. Actual Frequency: Occurs every 5 years or more."@en ;
             rdfs:label "Rare/Remote"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected
+:rejected rdf:type owl:NamedIndividual ,
+                   :ApprovalStatus ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          <http://purl.org/dc/elements/1.1/date> "2021-12-03T14:12:27+00:00"^^xsd:dateTime ;
+          rdfs:label "Rejected"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#serious
