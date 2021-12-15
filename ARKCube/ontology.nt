@@ -4,10 +4,9 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/contributor> "Junli Liang"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/contributor> "Natalia Duda"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/contributor> "Nick McDonald"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/contributor> "Rob Brennan"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/contributor> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/description> "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/modified> "08/02/2021" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> <http://purl.org/dc/elements/1.1/publisher> "https://openark.adaptcentre.ie/" .
@@ -471,6 +470,13 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "Links entites in ARK Cube to related concepts in ARK terminologies." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> <http://www.w3.org/2000/01/rdf-schema#label> "has related concept" .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject> <http://purl.org/dc/elements/1.1/date> "2021-12-15T18:16:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Links one project to another in order to indicate that they are related in some way."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject> <http://www.w3.org/2000/01/rdf-schema#label> "has related project"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskImplementationAssessment> .
@@ -627,10 +633,11 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relate a Project with its subproject. A Project can have one or more subprojects within it."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to a subproject. A subproject is a project that is a part of a larger project. A Project can have one or more subprojects."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/2000/01/rdf-schema#label> "has subproject"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion
@@ -641,6 +648,14 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion> <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:16:56+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents and links the subquestion of a question" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion> <http://www.w3.org/2000/01/rdf-schema#label> "has subquestion"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject> <http://purl.org/dc/elements/1.1/date> "2021-12-15T18:16:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a subproject to a larger parent project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject> <http://www.w3.org/2000/01/rdf-schema#label> "has superproject"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSustainability
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSustainability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1294,7 +1309,7 @@ _:genid34 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> <http://purl.org/dc/elements/1.1/date> "2021-02-08T15:43:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of obligation to act rating associated with the verify stage of a project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> <http://www.w3.org/2000/01/rdf-schema#comment> "The extent to which plans and improvements have been delivered and are performing consistently."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#DevelopStage
@@ -1310,7 +1325,7 @@ _:genid34 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> <http://purl.org/dc/elements/1.1/description> "A type of obligation to act rating Identified during the CUBE solution stage."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> <http://purl.org/dc/elements/1.1/description> "The extent to which the solution or improvement can overcome the problem and produce the required result."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy> <http://www.w3.org/2000/01/rdf-schema#label> "Efficacy"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence
@@ -1467,7 +1482,7 @@ _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Implementation is the execution of a plan. A Cube question which is asked at the implementation stage of the Cube questionnaire."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Implementation is the execution of a plan. To monitor implementation is to supervise and to continually check and critically observe; to determine the current status and to assess whether required or expected performance levels are being achieved; and to adjust the activity as required."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImplementStage> <http://www.w3.org/2000/01/rdf-schema#label> "Implement Stage"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance
@@ -1475,7 +1490,7 @@ _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> <http://purl.org/dc/elements/1.1/description> "A type of obligation to act rating identified during the CUBE problem stage."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> <http://purl.org/dc/elements/1.1/description> "The extent to which the problem is deserving of serious attention because it has great (actual or potential) effects on people or things, or great value is at stake."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance> <http://www.w3.org/2000/01/rdf-schema#label> "Importance"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#InformationKnowledge
@@ -1675,7 +1690,7 @@ _:genid76 <http://www.w3.org/2002/07/owl#minCardinality> "1"^^<http://www.w3.org
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Planning is the process of thinking about the activities required to achieve a desired goal. These activities are then represented in a Plan. Preparation means to make ready or suitable in advance for the implementation of a plan. A Cube question which is asked at the planning stage of the Cube questionnaire."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the diverse activities required to achieve a desired goal and represent these in a plan. Prepares for the implementation of the plan."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#PlanPrepareStage> <http://www.w3.org/2000/01/rdf-schema#label> "Plan and Prepare Stage"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Post
@@ -1710,7 +1725,7 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority> <http://purl.org/dc/elements/1.1/date> "2019-11-19T16:20:56+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority> <http://www.w3.org/2000/01/rdf-schema#comment> "The fact or condition of being regarded or treated as more important than others."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority> <http://www.w3.org/2000/01/rdf-schema#comment> "The significance of an item (compared to all the Cube dimensions) in contributing to defining the context, identifying key mechanisms or describing critical outcomes, in a particular phase of an ARK Project."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority> <http://www.w3.org/2000/01/rdf-schema#label> "Priority"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage
@@ -1718,7 +1733,7 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:22:54+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage> <http://www.w3.org/2000/01/rdf-schema#comment> "A matter or situation regarded as unwelcome or harmful and needing to be dealt with and overcome. A Cube question which is asked at the problem stage of the cube questionnaire."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the ‘as-is’ situation and identifies aspects which may not be working as well as they could be, leading to potential damage, harm or other unwanted outcomes. Describes the relevant dimensions of the problem space."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProblemStage> <http://www.w3.org/2000/01/rdf-schema#label> "Problem Stage"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#ProcessSequence
@@ -2126,7 +2141,7 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage> <http://www.w3.org/2000/01/rdf-schema#comment> "The solution has to change the basis of how the mechanism results in the unwanted outcome in the problem phase; this may involve changing the mechanism directly or it may involve changing some other element that in turn influences the way in which the mechanism works. Recommendations propose Control measures to mitigate the risk. A Cube question which is asked at the solution stage of the Cube questionnaire."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a potential ‘to-be’ situation in which the problem dimensions are addressed with an effective solution or improvement. Identifies control measures that can prevent unwanted outcomes."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#SolutionStage> <http://www.w3.org/2000/01/rdf-schema#label> "Solution Stage"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage
@@ -2157,7 +2172,7 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability> <http://purl.org/dc/elements/1.1/date> "2021-02-08T15:43:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of obligation to act rating identified during the Implementation stage."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability> <http://www.w3.org/2000/01/rdf-schema#comment> "The extent to which the elements of the plan are being implemented in a way that sustains the expected performance level."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Sustainability> <http://www.w3.org/2000/01/rdf-schema#label> "Sustainability"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#SystemDimension
@@ -2188,7 +2203,7 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage> <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:26:37+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Verification is the process of determining whether or not the outcomes of a project fulfill the requirements established during the solution stage as well as associated  requirements for planning and implementation. Embedding implies that a particular feature becomes a permanent and noticeable feature of the system or organisation. A Cube question which is asked at the verification stage of the Cube questionnaire."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Verification determines whether or not the outcomes of a project fulfil the requirements established during the Solution Stage, taking into account the quality of planning and implementation. Embedding implies that a particular feature has become a permanent and noticeable feature of the system or organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage> <http://www.w3.org/2000/01/rdf-schema#label> "Verify and Embed Stage"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability
@@ -2196,7 +2211,7 @@ _:genid136 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> <http://purl.org/dc/elements/1.1/description> "A type of obligation to act rating identfied during the CUBE plan stage."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> <http://purl.org/dc/elements/1.1/description> "The extent to which the plan is able to work as intended and succeed in achieving its objectives."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability> <http://www.w3.org/2000/01/rdf-schema#label> "Viability"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity

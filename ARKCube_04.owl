@@ -16,10 +16,9 @@
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube"/>
         <dc:contributor xml:lang="en">Ademar Crotti Junior</dc:contributor>
         <dc:contributor xml:lang="en">Junli Liang</dc:contributor>
-        <dc:contributor>Lucy McKenna</dc:contributor>
         <dc:contributor xml:lang="en">Natalia Duda</dc:contributor>
         <dc:contributor xml:lang="en">Nick McDonald</dc:contributor>
-        <dc:contributor xml:lang="en">Rob Brennan</dc:contributor>
+        <dc:creator>Lucy McKenna</dc:creator>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:creator xml:lang="en">Yalemisew Abgaz</dc:creator>
         <dc:description xml:lang="en">The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology).</dc:description>
@@ -717,6 +716,17 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject">
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-12-15T18:16:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links one project to another in order to indicate that they are related in some way.</rdfs:comment>
+        <rdfs:label xml:lang="en">has related project</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasReliabilityOfGain">
@@ -935,10 +945,11 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject">
+        <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
-        <rdfs:comment xml:lang="en">Relate a Project with its subproject. A Project can have one or more subprojects within it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a project to a subproject. A subproject is a project that is a part of a larger project. A Project can have one or more subprojects.</rdfs:comment>
         <rdfs:label xml:lang="en">has subproject</rdfs:label>
     </owl:ObjectProperty>
     
@@ -953,6 +964,18 @@
         <dc:date>2020-01-27T16:16:56+00:00</dc:date>
         <rdfs:comment>Represents and links the subquestion of a question</rdfs:comment>
         <rdfs:label xml:lang="en">has subquestion</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject">
+        <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-12-15T18:16:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a subproject to a larger parent project.</rdfs:comment>
+        <rdfs:label xml:lang="en">has superproject</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1881,7 +1904,7 @@ An organization’s external context includes its external stakeholders, its loc
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-08T15:43:16+00:00</dc:date>
-        <rdfs:comment xml:lang="en">A type of obligation to act rating associated with the verify stage of a project.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The extent to which plans and improvements have been delivered and are performing consistently.</rdfs:comment>
         <rdfs:label xml:lang="en">Delivery</rdfs:label>
     </owl:Class>
     
@@ -1905,7 +1928,7 @@ An organization’s external context includes its external stakeholders, its loc
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
-        <dc:description xml:lang="en">A type of obligation to act rating Identified during the CUBE solution stage.</dc:description>
+        <dc:description xml:lang="en">The extent to which the solution or improvement can overcome the problem and produce the required result.</dc:description>
         <rdfs:label xml:lang="en">Efficacy</rdfs:label>
     </owl:Class>
     
@@ -2119,7 +2142,7 @@ An organization’s external context includes its external stakeholders, its loc
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-13T15:26:37+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Implementation is the execution of a plan. A Cube question which is asked at the implementation stage of the Cube questionnaire.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Implementation is the execution of a plan. To monitor implementation is to supervise and to continually check and critically observe; to determine the current status and to assess whether required or expected performance levels are being achieved; and to adjust the activity as required.</rdfs:comment>
         <rdfs:label xml:lang="en">Implement Stage</rdfs:label>
     </owl:Class>
     
@@ -2131,7 +2154,7 @@ An organization’s external context includes its external stakeholders, its loc
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
-        <dc:description xml:lang="en">A type of obligation to act rating identified during the CUBE problem stage.</dc:description>
+        <dc:description xml:lang="en">The extent to which the problem is deserving of serious attention because it has great (actual or potential) effects on people or things, or great value is at stake.</dc:description>
         <rdfs:label xml:lang="en">Importance</rdfs:label>
     </owl:Class>
     
@@ -2385,7 +2408,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-13T15:26:37+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Planning is the process of thinking about the activities required to achieve a desired goal. These activities are then represented in a Plan. Preparation means to make ready or suitable in advance for the implementation of a plan. A Cube question which is asked at the planning stage of the Cube questionnaire.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies the diverse activities required to achieve a desired goal and represent these in a plan. Prepares for the implementation of the plan.</rdfs:comment>
         <rdfs:label xml:lang="en">Plan and Prepare Stage</rdfs:label>
     </owl:Class>
     
@@ -2431,7 +2454,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-19T16:20:56+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The fact or condition of being regarded or treated as more important than others.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The significance of an item (compared to all the Cube dimensions) in contributing to defining the context, identifying key mechanisms or describing critical outcomes, in a particular phase of an ARK Project.</rdfs:comment>
         <rdfs:label xml:lang="en">Priority</rdfs:label>
     </owl:Class>
     
@@ -2443,7 +2466,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-13T15:22:54+00:00</dc:date>
-        <rdfs:comment xml:lang="en">A matter or situation regarded as unwelcome or harmful and needing to be dealt with and overcome. A Cube question which is asked at the problem stage of the cube questionnaire.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes the ‘as-is’ situation and identifies aspects which may not be working as well as they could be, leading to potential damage, harm or other unwanted outcomes. Describes the relevant dimensions of the problem space.</rdfs:comment>
         <rdfs:label xml:lang="en">Problem Stage</rdfs:label>
     </owl:Class>
     
@@ -2959,7 +2982,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-13T15:26:37+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The solution has to change the basis of how the mechanism results in the unwanted outcome in the problem phase; this may involve changing the mechanism directly or it may involve changing some other element that in turn influences the way in which the mechanism works. Recommendations propose Control measures to mitigate the risk. A Cube question which is asked at the solution stage of the Cube questionnaire.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Describes a potential ‘to-be’ situation in which the problem dimensions are addressed with an effective solution or improvement. Identifies control measures that can prevent unwanted outcomes.</rdfs:comment>
         <rdfs:label xml:lang="en">Solution Stage</rdfs:label>
     </owl:Class>
     
@@ -3006,7 +3029,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-08T15:43:16+00:00</dc:date>
-        <rdfs:comment xml:lang="en">A type of obligation to act rating identified during the Implementation stage.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The extent to which the elements of the plan are being implemented in a way that sustains the expected performance level.</rdfs:comment>
         <rdfs:label xml:lang="en">Sustainability</rdfs:label>
     </owl:Class>
     
@@ -3053,7 +3076,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>Yalemisew</dc:creator>
         <dc:date>2019-11-13T15:26:37+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Verification is the process of determining whether or not the outcomes of a project fulfill the requirements established during the solution stage as well as associated  requirements for planning and implementation. Embedding implies that a particular feature becomes a permanent and noticeable feature of the system or organisation. A Cube question which is asked at the verification stage of the Cube questionnaire.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Verification determines whether or not the outcomes of a project fulfil the requirements established during the Solution Stage, taking into account the quality of planning and implementation. Embedding implies that a particular feature has become a permanent and noticeable feature of the system or organisation.</rdfs:comment>
         <rdfs:label xml:lang="en">Verify and Embed Stage</rdfs:label>
     </owl:Class>
     
@@ -3065,7 +3088,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObligationToActRating"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date>2020-12-18T13:34:27+00:00</dc:date>
-        <dc:description xml:lang="en">A type of obligation to act rating identfied during the CUBE plan stage.</dc:description>
+        <dc:description xml:lang="en">The extent to which the plan is able to work as intended and succeed in achieving its objectives.</dc:description>
         <rdfs:label xml:lang="en">Viability</rdfs:label>
     </owl:Class>
     
