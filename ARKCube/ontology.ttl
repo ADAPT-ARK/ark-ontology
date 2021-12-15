@@ -528,6 +528,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject
 :hasRelatedProject rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Project ;
+                   rdfs:range :Project ;
                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                    <http://purl.org/dc/elements/1.1/date> "2021-12-15T18:16:10+00:00"^^xsd:dateTime ;
                    rdfs:comment "Links one project to another in order to indicate that they are related in some way."@en ;
@@ -721,6 +723,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject
 :hasSuperProject rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasRelatedProject ;
+                 rdfs:domain :Project ;
+                 rdfs:range :Project ;
                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                  <http://purl.org/dc/elements/1.1/date> "2021-12-15T18:16:10+00:00"^^xsd:dateTime ;
                  rdfs:comment "Links a subproject to a larger parent project."@en ;
