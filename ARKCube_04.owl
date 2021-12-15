@@ -719,6 +719,8 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-12-15T18:16:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links one project to another in order to indicate that they are related in some way.</rdfs:comment>
@@ -972,6 +974,8 @@
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSuperProject">
         <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-12-15T18:16:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a subproject to a larger parent project.</rdfs:comment>
