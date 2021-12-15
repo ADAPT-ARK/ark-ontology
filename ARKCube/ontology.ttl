@@ -503,7 +503,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:range :Question ;
              <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
              <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:05:48+00:00" ;
-             rdfs:comment "A cube questionnaire has cube question." ;
+             rdfs:comment "Links a CUBE questionnaire to a CUBE question." ;
              rdfs:label "has question"@en ;
              owl:inverseOf "isQuestionOf" .
 
@@ -513,7 +513,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                   rdfs:range :Questionnaire ;
                   <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                   <http://purl.org/dc/elements/1.1/date> "2020-11-17T14:22:10+00:00"^^xsd:dateTime ;
-                  rdfs:comment "Used to link a project with a CUBE analysis questionnaire."@en ;
+                  rdfs:comment "Used to link a Project with a CUBE analysis questionnaire."@en ;
                   rdfs:label "has questionnaire"@en .
 
 
@@ -764,6 +764,14 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            <http://purl.org/dc/elements/1.1/date> "2020-01-27T16:10:48+00:00" ;
            rdfs:comment "The person who provides information about the project questions."@en ;
            rdfs:label "informant"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf
+:isQuestionOf rdf:type owl:ObjectProperty ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              <http://purl.org/dc/elements/1.1/date> "2021-12-15T18:37:10+00:00"^^xsd:dateTime ;
+              rdfs:comment "Links a CUBE question to a CUBE questionnaire."@en ;
+              rdfs:label "is question of"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#memberOf
