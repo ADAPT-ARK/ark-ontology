@@ -121,6 +121,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :FollowUpProjectOf rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :derivedFrom ;
                    owl:inverseOf :hasFollowUpProject ;
+                   rdfs:domain :Project ;
+                   rdfs:range :Project ;
                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                    <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
                    rdfs:comment "Links a follow-up project to its original project."@en ;
@@ -196,6 +198,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ,
                                 :hasRelatedProject ;
              owl:inverseOf :hasDerivedProject ;
+             rdfs:domain :Project ;
+             rdfs:range :Project ;
              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
              <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
              rdfs:comment "Links a project to the project from which it was derived. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project."@en ;
@@ -320,6 +324,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :hasDerivedProject rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ,
                                       :hasRelatedProject ;
+                   rdfs:domain :Project ;
+                   rdfs:range :Project ;
                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                    <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
                    rdfs:comment "Links a project to a derived project. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project."@en ;
@@ -379,6 +385,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasFollowUpProject
 :hasFollowUpProject rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :hasDerivedProject ;
+                    rdfs:domain :Project ;
+                    rdfs:range :Project ;
                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                     <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
                     rdfs:comment "Links a project to a follow-up project."@en ;
@@ -618,6 +626,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasRevisionOf> ,
                                 :hasDerivedProject ;
              owl:inverseOf :revisionOf ;
+             rdfs:domain :Project ;
+             rdfs:range :Project ;
              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
              <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
              rdfs:comment "Links a project to a revised version of the project."@en ;
@@ -910,6 +920,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 :revisionOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasRevisionOf> ,
                                :derivedFrom ;
+            rdfs:domain :Project ;
+            rdfs:range :Project ;
             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
             <http://purl.org/dc/elements/1.1/date> "2022-02-01T18:16:10+00:00"^^xsd:dateTime ;
             rdfs:comment "Links a revised version of a project to its original."@en ;
