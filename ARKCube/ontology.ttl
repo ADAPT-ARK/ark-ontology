@@ -109,6 +109,24 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://www.w3.org/ns/prov#wasDerivedFrom
+<http://www.w3.org/ns/prov#wasDerivedFrom> rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/ns/prov#wasRevisionOf
+<http://www.w3.org/ns/prov#wasRevisionOf> rdf:type owl:ObjectProperty .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#FollowUpProjectOf
+:FollowUpProjectOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :derivedFrom ;
+                   owl:inverseOf :hasFollowUpProject ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
+                   rdfs:comment "Links a follow-up project to its original project."@en ;
+                   rdfs:label "follow-up project of"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#additionalControl
 :additionalControl rdf:type owl:ObjectProperty ;
                    rdfs:domain :Risk ;
@@ -171,6 +189,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                      <http://purl.org/dc/elements/1.1/date> "2021-09-14T13:19:43+00:00"^^xsd:dateTime ;
                      rdfs:comment "The evidence is a source of information on the subject under discussion."@en ;
                      rdfs:label "cites for information"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFrom
+:derivedFrom rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ,
+                                :hasRelatedProject ;
+             owl:inverseOf :hasDerivedProject ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
+             rdfs:comment "Links a project to the project from which it was derived. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project."@en ;
+             rdfs:label "derived from"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy
@@ -287,6 +316,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
              rdfs:label "has delivery"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDerivedProject
+:hasDerivedProject rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ,
+                                      :hasRelatedProject ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
+                   rdfs:comment "Links a project to a derived project. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project."@en ;
+                   rdfs:label "has derived project"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDimension
 :hasDimension rdf:type owl:ObjectProperty ;
               rdfs:domain :Question ;
@@ -335,6 +374,15 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
                     rdfs:comment "Links a Risk with a description of what administrative/procedural/existing controls measures are currently in place to mitigate the risk. Include engineering controls, policies, procedures, protocols, guidelines (clinical and non-clinical), training, emergency arrangements, preventative maintenance controls etc. When examining existing control measures, consider the adequacy, method of implementation and level of effectiveness in eliminating or minimising risk to the lowest practicable level."@en ;
                     rdfs:label "has existing control"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasFollowUpProject
+:hasFollowUpProject rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :hasDerivedProject ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
+                    rdfs:comment "Links a project to a follow-up project."@en ;
+                    rdfs:label "has follow-up project"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasGainAchieved
@@ -565,6 +613,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                        rdfs:label "has residual risk rating"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRevision
+:hasRevision rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasRevisionOf> ,
+                                :hasDerivedProject ;
+             owl:inverseOf :revisionOf ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
+             rdfs:comment "Links a project to a revised version of the project."@en ;
+             rdfs:label "has revision"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRisk
 :hasRisk rdf:type owl:ObjectProperty ;
          rdfs:domain [ rdf:type owl:Class ;
@@ -706,7 +765,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdf:type owl:TransitiveProperty ;
                rdfs:domain :Project ;
                rdfs:range :Project ;
-               rdfs:comment "Links a project to a subproject. A subproject is a project that is a part of a larger project. A Project can have one or more subprojects."@en ;
+               rdfs:comment "Links a parent project to a child project. A Project can have one or more subprojects."@en ;
                rdfs:label "has subproject"@en .
 
 
@@ -727,7 +786,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                  rdfs:range :Project ;
                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                  <http://purl.org/dc/elements/1.1/date> "2021-12-15T18:16:10+00:00"^^xsd:dateTime ;
-                 rdfs:comment "Links a subproject to a larger parent project."@en ;
+                 rdfs:comment "Links a child project to its parent project."@en ;
                  rdfs:label "has superproject"@en .
 
 
@@ -845,6 +904,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            <http://purl.org/dc/elements/1.1/date> "2021-03-10T11:15:41+00:00"^^xsd:dateTimeStamp ;
            rdfs:comment "A reporting relationship between Persons or Posts in an Organisation."@en ;
            rdfs:label "reports to"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#revisionOf
+:revisionOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasRevisionOf> ,
+                               :derivedFrom ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            <http://purl.org/dc/elements/1.1/date> "2022-02-01T18:16:10+00:00"^^xsd:dateTime ;
+            rdfs:comment "Links a revised version of a project to its original."@en ;
+            rdfs:label "revision of"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#supports
@@ -1270,14 +1339,11 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Action
 :Action rdf:type owl:Class ;
-        rdfs:subClassOf [ owl:intersectionOf ( :Control
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :textualDescription ;
-                                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:string
-                                               ]
-                                             ) ;
-                          rdf:type owl:Class
+        rdfs:subClassOf :Control ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :textualDescription ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
@@ -1295,14 +1361,11 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer
 :Answer rdf:type owl:Class ;
-        rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :hasEvidence ;
-                                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                 owl:onClass :Evidence
-                                               ]
-                                             ) ;
-                          rdf:type owl:Class
+        rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasEvidence ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Evidence
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
         <http://purl.org/dc/elements/1.1/date> "2019-11-13T15:29:27+00:00" ;
@@ -1338,14 +1401,11 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Cause
 :Cause rdf:type owl:Class ;
-       rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :textualDescription ;
-                                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                owl:onDataRange rdf:PlainLiteral
-                                              ]
-                                            ) ;
-                         rdf:type owl:Class
+       rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :textualDescription ;
+                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange rdf:PlainLiteral
                        ] ;
        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
        <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
@@ -1355,14 +1415,11 @@ rdfs:Resource rdf:type owl:Class .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Context
 :Context rdf:type owl:Class ;
-         rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty :textualDescription ;
-                                                  owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                  owl:onDataRange rdf:PlainLiteral
-                                                ]
-                                              ) ;
-                           rdf:type owl:Class
+         rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :textualDescription ;
+                           owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange rdf:PlainLiteral
                          ] ;
          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:24+00:00" ;
@@ -1475,13 +1532,10 @@ An organization’s external context includes its external stakeholders, its loc
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact
 :ExtremeImpact rdf:type owl:Class ;
-               rdfs:subClassOf [ owl:intersectionOf ( :Impact
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty :score ;
-                                                        owl:hasValue "5"^^xsd:int
-                                                      ]
-                                                    ) ;
-                                 rdf:type owl:Class
+               rdfs:subClassOf :Impact ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :score ;
+                                 owl:hasValue "5"^^xsd:int
                                ] ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^xsd:dateTime ;
@@ -1518,14 +1572,11 @@ An organization’s external context includes its external stakeholders, its loc
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved
 :GainAchieved rdf:type owl:Class ;
-              rdfs:subClassOf [ owl:intersectionOf ( :LossOrGain
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :textualDescription ;
-                                                       owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                       owl:onDataRange rdf:PlainLiteral
-                                                     ]
-                                                   ) ;
-                                rdf:type owl:Class
+              rdfs:subClassOf :LossOrGain ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :textualDescription ;
+                                owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange rdf:PlainLiteral
                               ] ;
               <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
               <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" ;
@@ -1571,14 +1622,11 @@ An organization’s external context includes its external stakeholders, its loc
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact
 :Impact rdf:type owl:Class ;
-        rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :textualDescription ;
-                                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange rdf:PlainLiteral
-                                               ]
-                                             ) ;
-                          rdf:type owl:Class
+        rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :textualDescription ;
+                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange rdf:PlainLiteral
                         ] ;
         <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
         <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
@@ -1634,14 +1682,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain
 :LossOrGain rdf:type owl:Class ;
-            rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                                   [ rdf:type owl:Restriction ;
-                                                     owl:onProperty :textualDescription ;
-                                                     owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                     owl:onDataRange rdf:PlainLiteral
-                                                   ]
-                                                 ) ;
-                              rdf:type owl:Class
+            rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :textualDescription ;
+                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange rdf:PlainLiteral
                             ] ;
             <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
             <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"@en ;
@@ -1651,13 +1696,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact
 :MajorImpact rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :Impact
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :score ;
-                                                      owl:hasValue "4"^^xsd:int
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
+             rdfs:subClassOf :Impact ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :score ;
+                               owl:hasValue "4"^^xsd:int
                              ] ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
@@ -1667,13 +1709,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism
 :Mechanism rdf:type owl:Class ;
-           rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                                  [ rdf:type owl:Restriction ;
-                                                    owl:onProperty :textualDescription ;
-                                                    owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                                  ]
-                                                ) ;
-                             rdf:type owl:Class
+           rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :textualDescription ;
+                             owl:minCardinality "1"^^xsd:nonNegativeInteger
                            ] ;
            <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
            <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:31+00:00" ;
@@ -1683,13 +1722,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact
 :MinorImpact rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :Impact
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :score ;
-                                                      owl:hasValue "2"^^xsd:int
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
+             rdfs:subClassOf :Impact ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :score ;
+                               owl:hasValue "2"^^xsd:int
                              ] ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
@@ -1699,13 +1735,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact
 :ModerateImpact rdf:type owl:Class ;
-                rdfs:subClassOf [ owl:intersectionOf ( :Impact
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty :score ;
-                                                         owl:hasValue "3"^^xsd:int
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
+                rdfs:subClassOf :Impact ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :score ;
+                                  owl:hasValue "3"^^xsd:int
                                 ] ;
                 <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                 <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
@@ -1715,13 +1748,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact
 :NegligibleImpact rdf:type owl:Class ;
-                  rdfs:subClassOf [ owl:intersectionOf ( :Impact
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty :score ;
-                                                           owl:hasValue "1"^^xsd:int
-                                                         ]
-                                                       ) ;
-                                    rdf:type owl:Class
+                  rdfs:subClassOf :Impact ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :score ;
+                                    owl:hasValue "1"^^xsd:int
                                   ] ;
                   <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                   <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10"@en ;
@@ -1763,13 +1793,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome
 :Outcome rdf:type owl:Class ;
-         rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                                [ rdf:type owl:Restriction ;
-                                                  owl:onProperty :textualDescription ;
-                                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
-                                                ]
-                                              ) ;
-                           rdf:type owl:Class
+         rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :textualDescription ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
                          ] ;
          <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-01-28T16:34:39+00:00" ;
@@ -1810,14 +1837,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss
 :PotentialLoss rdf:type owl:Class ;
-               rdfs:subClassOf [ owl:intersectionOf ( :LossOrGain
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty :textualDescription ;
-                                                        owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                        owl:onDataRange rdf:PlainLiteral
-                                                      ]
-                                                    ) ;
-                                 rdf:type owl:Class
+               rdfs:subClassOf :LossOrGain ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :textualDescription ;
+                                 owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                 owl:onDataRange rdf:PlainLiteral
                                ] ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"@en ;
@@ -1861,14 +1885,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis
 :ProjectAnalysis rdf:type owl:Class ;
-                 rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :hasStage ;
-                                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                          owl:onClass :Stage
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
+                 rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasStage ;
+                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onClass :Stage
                                  ] ;
                  <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                  <http://purl.org/dc/elements/1.1/date> "2021-01-12T16:28:00+00:00"@en ;
@@ -1893,8 +1914,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedGain
 :ProjectedGain rdf:type owl:Class ;
-               rdfs:subClassOf [ owl:intersectionOf ( :LossOrGain
-                                                      [ rdf:type owl:Restriction ;
+               rdfs:subClassOf :LossOrGain ,
+                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                         owl:onProperty :isProjected ;
                                                         owl:hasValue "true"^^xsd:boolean
                                                       ]
@@ -1914,8 +1935,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedReliabilityOfGain
 :ProjectedReliabilityOfGain rdf:type owl:Class ;
-                            rdfs:subClassOf [ owl:intersectionOf ( :ReliabilityOfGain
-                                                                   [ rdf:type owl:Restriction ;
+                            rdfs:subClassOf :ReliabilityOfGain ,
+                                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :isProjected ;
                                                                      owl:hasValue "true"^^xsd:boolean
                                                                    ]
@@ -1935,13 +1956,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectedRiskRating
 :ProjectedRiskRating rdf:type owl:Class ;
-                     rdfs:subClassOf [ owl:intersectionOf ( :RiskRating
-                                                            [ rdf:type owl:Restriction ;
-                                                              owl:onProperty :isProjected ;
-                                                              owl:hasValue "true"^^xsd:boolean
-                                                            ]
-                                                          ) ;
-                                       rdf:type owl:Class
+                     rdfs:subClassOf :RiskRating ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :isProjected ;
+                                       owl:hasValue "true"^^xsd:boolean
                                      ] ;
                      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                      <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"^^xsd:dateTime ;
@@ -1971,14 +1989,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ReliabilityOfGain
 :ReliabilityOfGain rdf:type owl:Class ;
-                   rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :textualDescription ;
-                                                            owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                            owl:onDataRange xsd:string
-                                                          ]
-                                                        ) ;
-                                     rdf:type owl:Class
+                   rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :textualDescription ;
+                                     owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                     owl:onDataRange xsd:string
                                    ] ;
                    <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
                    <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00" ;
@@ -2045,14 +2060,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskContext
 :RiskContext rdf:type owl:Class ;
-             rdfs:subClassOf [ owl:intersectionOf ( :Context
-                                                    [ rdf:type owl:Restriction ;
-                                                      owl:onProperty :textualDescription ;
-                                                      owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                      owl:onDataRange rdf:PlainLiteral
-                                                    ]
-                                                  ) ;
-                               rdf:type owl:Class
+             rdfs:subClassOf :Context ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :textualDescription ;
+                               owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                               owl:onDataRange rdf:PlainLiteral
                              ] ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
              rdfs:comment "Establishing the context means to define the external and internal factors that the HSE and its services must consider when they manage risk. Used for risk description in ICC (impact, cause, context) format. Used to relate HSE concept of the context of a risk to CUBE concept of context."@en ;
@@ -2061,14 +2073,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription
 :RiskDescription rdf:type owl:Class ;
-                 rdfs:subClassOf [ owl:intersectionOf ( <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity>
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty :textualDescription ;
-                                                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                          owl:onDataRange rdf:PlainLiteral
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
+                 rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :textualDescription ;
+                                   owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange rdf:PlainLiteral
                                  ] ;
                  <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
                  rdfs:comment "Desribes a risk in ICC (Impact, Cause, Context) format."@en ,
