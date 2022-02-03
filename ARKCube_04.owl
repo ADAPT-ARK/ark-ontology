@@ -185,7 +185,7 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#FollowUpProjectOf -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#FollowUpProjectOf">
-        <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFrom"/>
+        <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFromProject"/>
         <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasFollowUpProject"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
@@ -279,9 +279,9 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFrom -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFromProject -->
 
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFrom">
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFromProject">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
         <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedProject"/>
         <owl:inverseOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDerivedProject"/>
@@ -290,7 +290,7 @@
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-02-01T18:16:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a project to the project from which it was derived. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project.</rdfs:comment>
-        <rdfs:label xml:lang="en">derived from</rdfs:label>
+        <rdfs:label xml:lang="en">derived from project</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1234,7 +1234,7 @@
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#revisionOf">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
-        <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFrom"/>
+        <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFromProject"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <dc:creator>Lucy McKenna</dc:creator>

@@ -119,7 +119,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#FollowUpProjectOf
 :FollowUpProjectOf rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf :derivedFrom ;
+                   rdfs:subPropertyOf :derivedFromProject ;
                    owl:inverseOf :hasFollowUpProject ;
                    rdfs:domain :Project ;
                    rdfs:range :Project ;
@@ -193,17 +193,17 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                      rdfs:label "cites for information"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFrom
-:derivedFrom rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ,
-                                :hasRelatedProject ;
-             owl:inverseOf :hasDerivedProject ;
-             rdfs:domain :Project ;
-             rdfs:range :Project ;
-             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
-             <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
-             rdfs:comment "Links a project to the project from which it was derived. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project."@en ;
-             rdfs:label "derived from"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFromProject
+:derivedFromProject rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasDerivedFrom> ,
+                                       :hasRelatedProject ;
+                    owl:inverseOf :hasDerivedProject ;
+                    rdfs:domain :Project ;
+                    rdfs:range :Project ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-02-01T18:16:10+00:00"^^xsd:dateTime ;
+                    rdfs:comment "Links a project to the project from which it was derived. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project."@en ;
+                    rdfs:label "derived from project"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy
@@ -919,7 +919,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#revisionOf
 :revisionOf rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasRevisionOf> ,
-                               :derivedFrom ;
+                               :derivedFromProject ;
             rdfs:domain :Project ;
             rdfs:range :Project ;
             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
