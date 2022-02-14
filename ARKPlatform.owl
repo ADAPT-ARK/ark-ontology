@@ -1,35 +1,35 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#"
      xml:base="https://openark.adaptcentre.ie/Ontologies/ARKPlatform"
-     xmlns:arkc="https://openark.adaptcentre.ie/Ontologies/ARKCube#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:vocab="http://purl.org/vocab/vann/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:arkc="https://openark.adaptcentre.ie/Ontologies/ARKCube#"
      xmlns:arkp="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vocab="http://purl.org/vocab/vann/"
+     xmlns:dcterms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#">
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform"/>
-        <dc:modified>18/04/2020</dc:modified>
-        <dc:creator>Yalemisew Abgaz</dc:creator>
-        <dc:modified>31/03/2021</dc:modified>
-        <vocab:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/ARKProjects#</vocab:preferredNamespaceUri>
-        <dc:contributor>Junli Liang</dc:contributor>
         <dc:contributor>Ademar Crotti Junior</dc:contributor>
-        <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
-        <dc:contributor>Nick McDonald</dc:contributor>
-        <dc:title xml:lang="en">Access Risk Knowledge Platform Ontology</dc:title>
-        <dc:publisher>https://www.openark.adaptcentre.ie/</dc:publisher>
-        <dc:contributor>Rob Brennan</dc:contributor>
-        <owl:versionInfo>0.2</owl:versionInfo>
-        <vocab:preferredNamespacePrefix>arkp</vocab:preferredNamespacePrefix>
+        <dc:contributor>Junli Liang</dc:contributor>
         <dc:contributor>Lucy McKenna</dc:contributor>
-        <dc:description xml:lang="en">An ontology for modelling for users, data classifications &amp; access controls on the Access Risk Knowledge (ARK) Platform.</dc:description>
-        <dcterms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
         <dc:contributor>Natalia Duda</dc:contributor>
+        <dc:contributor>Nick McDonald</dc:contributor>
+        <dc:contributor>Rob Brennan</dc:contributor>
+        <dc:creator>Yalemisew Abgaz</dc:creator>
+        <dc:description xml:lang="en">An ontology for modelling for users, data classifications &amp; access controls on the Access Risk Knowledge (ARK) Platform.</dc:description>
+        <dc:modified>18/04/2020</dc:modified>
+        <dc:modified>31/03/2021</dc:modified>
+        <dc:publisher>https://www.openark.adaptcentre.ie/</dc:publisher>
+        <dc:rights>https://creativecommons.org/licenses/by-nc/4.0/</dc:rights>
+        <dc:title xml:lang="en">Access Risk Knowledge Platform Ontology</dc:title>
+        <dcterms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
+        <vocab:preferredNamespacePrefix>arkp</vocab:preferredNamespacePrefix>
+        <vocab:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/ARKProjects#</vocab:preferredNamespaceUri>
+        <owl:versionInfo>0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -208,6 +208,19 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T23:47:14+00:00</dc:date>
         <rdfs:isDefinedBy xml:lang="en">Links a user to a status.</rdfs:isDefinedBy>
         <rdfs:label xml:lang="en">status</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-02-14T16:06:04+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The two-factor authentication (2FA) increments the security of a user account by establishing a second factor of authentication in addition to the username and password process. If 2FA is enabled, the system will send an authorisation link to the registered user&apos;s email to allow access to the ARK Platform. The user&apos;s device information will be encrypted and stored to enable access to the ARK platform from the same device (without sending an authentication link until the device changes). If 2FA is disabled, the authentication process will be based only on the username and password.</rdfs:comment>
+        <rdfs:label xml:lang="en">user device hash string</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -705,5 +718,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.2.3.20160319-0906) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
