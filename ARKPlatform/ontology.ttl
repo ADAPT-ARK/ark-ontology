@@ -7,7 +7,7 @@
 @base <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> .
 
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> rdf:type owl:Ontology ;
-                                                          owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> ;
+                                                          owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKPlatform> ;
                                                           <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior" ,
                                                                                                         "Junli Liang" ,
                                                                                                         "Lucy McKenna" ,
@@ -18,7 +18,7 @@
                                                           <http://purl.org/dc/elements/1.1/description> "An ontology for modelling for users, data classifications & access controls on the Access Risk Knowledge (ARK) Platform."@en ;
                                                           <http://purl.org/dc/elements/1.1/modified> "18/04/2020" ,
                                                                                                      "31/03/2021" ;
-                                                          <http://purl.org/dc/elements/1.1/publisher> "https://www.ark.adaptcentre.ie/" ;
+                                                          <http://purl.org/dc/elements/1.1/publisher> "https://www.openark.adaptcentre.ie/" ;
                                                           <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
                                                           <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Platform Ontology"@en ;
                                                           <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
@@ -102,8 +102,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner
 :hasOwner rdf:type owl:ObjectProperty ;
-          rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> ,
-                      :AccessControlEntity ;
+          rdfs:domain :AccessControlEntity ,
+                      :DataEntity ;
           rdfs:range :User ;
           rdfs:comment "Links a Project, Risk Register or Report with its owning user(s). The owner has full read/write/grant access rights."@en ;
           rdfs:label "has owner"@en .
@@ -111,8 +111,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation
 :hasOwningOrganisation rdf:type owl:ObjectProperty ;
-                       rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> ,
-                                   :AccessControlEntity ;
+                       rdfs:domain :AccessControlEntity ,
+                                   :DataEntity ;
                        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                        rdfs:comment "Links a Project, Risk Register or Report to its owning organisation."@en ;
                        rdfs:label "has owning organisation"@en .
@@ -143,6 +143,16 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
         <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:47:14+00:00"^^xsd:dateTime ;
         rdfs:isDefinedBy "Links a user to a status."@en ;
         rdfs:label "status"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash
+:userAgentHash rdf:type owl:ObjectProperty ;
+               rdfs:domain :AccessControlEntity ;
+               rdfs:range :User ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2022-02-14T16:06:04+00:00"^^xsd:dateTime ;
+               rdfs:comment "The two-factor authentication (2FA) increments the security of a user account by establishing a second factor of authentication in addition to the username and password process. If 2FA is enabled, the system will send an authorisation link to the registered user's email to allow access to the ARK Platform. The user's device information will be encrypted and stored to enable access to the ARK platform from the same device (without sending an authentication link until the device changes). If 2FA is disabled, the authentication process will be based only on the username and password."@en ;
+               rdfs:label "user device hash string"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'
@@ -225,15 +235,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> rdf:type owl:Class .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Report
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> rdf:type owl:Class ;
-                                                           rdfs:subClassOf :DataEntity ;
-                                                           <http://purl.org/dc/elements/1.1/creator> "Yalemisew" ;
-                                                           <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:08+00:00" ;
-                                                           rdfs:comment "A written account of an activity or investigation."@en ;
-                                                           rdfs:label "Report"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity

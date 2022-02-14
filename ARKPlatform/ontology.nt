@@ -1,5 +1,5 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://www.w3.org/2002/07/owl#versionIRI> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://www.w3.org/2002/07/owl#versionIRI> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/contributor> "Junli Liang" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/contributor> "Lucy McKenna" .
@@ -10,7 +10,7 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/description> "An ontology for modelling for users, data classifications & access controls on the Access Risk Knowledge (ARK) Platform."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/modified> "18/04/2020" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/modified> "31/03/2021" .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/publisher> "https://www.ark.adaptcentre.ie/" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/publisher> "https://www.openark.adaptcentre.ie/" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Platform Ontology"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> .
@@ -89,16 +89,16 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project, Risk Register or Report with its owning user(s). The owner has full read/write/grant access rights."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has owner"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project, Risk Register or Report to its owning organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation> <http://www.w3.org/2000/01/rdf-schema#label> "has owning organisation"@en .
@@ -126,6 +126,15 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:47:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "Links a user to a status."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash> <http://purl.org/dc/elements/1.1/date> "2022-02-14T16:06:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash> <http://www.w3.org/2000/01/rdf-schema#comment> "The two-factor authentication (2FA) increments the security of a user account by establishing a second factor of authentication in addition to the username and password process. If 2FA is enabled, the system will send an authorisation link to the registered user's email to allow access to the ARK Platform. The user's device information will be encrypted and stored to enable access to the ARK platform from the same device (without sending an authentication link until the device changes). If 2FA is disabled, the authentication process will be based only on the username and password."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash> <http://www.w3.org/2000/01/rdf-schema#label> "user device hash string"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -213,14 +222,6 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#Report
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:08+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "A written account of an activity or investigation."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> <http://www.w3.org/2000/01/rdf-schema#label> "Report"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

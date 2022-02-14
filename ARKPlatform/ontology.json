@@ -51,26 +51,6 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Yalemisew"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2019-11-18T13:07:08+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A written account of an activity or investigation."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Report"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
-  } ]
-}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/contributor" : [ {
@@ -99,7 +79,7 @@
     "@value" : "31/03/2021"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
-    "@value" : "https://www.ark.adaptcentre.ie/"
+    "@value" : "https://www.openark.adaptcentre.ie/"
   } ],
   "http://purl.org/dc/elements/1.1/rights" : [ {
     "@value" : "https://creativecommons.org/licenses/by-nc/4.0/"
@@ -118,7 +98,7 @@
     "@value" : "https://openark.adaptcentre.ie/Ontologies/ARKProjects#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.2"
@@ -604,9 +584,9 @@
     "@value" : "Links a Project, Risk Register or Report with its owning user(s). The owner has full read/write/grant access rights."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
-  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -626,9 +606,9 @@
     "@value" : "Links a Project, Risk Register or Report to its owning organisation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
-  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -929,6 +909,30 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Unit Manager"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-02-14T16:06:04+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The two-factor authentication (2FA) increments the security of a user account by establishing a second factor of authentication in addition to the username and password process. If 2FA is enabled, the system will send an authorisation link to the registered user's email to allow access to the ARK Platform. The user's device information will be encrypted and stored to enable access to the ARK platform from the same device (without sending an authentication link until the device changes). If 2FA is disabled, the authentication process will be based only on the username and password."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "user device hash string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username",

@@ -48,10 +48,6 @@ This section provides details for each class and property defined by Access Risk
             title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Public">Public</a>
       </li>
       <li>
-         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
-      </li>
-      <li>
          <a href="#Restricted"
             title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Restricted">Restricted</a>
       </li>
@@ -106,6 +102,8 @@ This section provides details for each class and property defined by Access Risk
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation">has owning organisation</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasReadOnlyUser"
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser">has readonly user</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#userAgentHash"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash">user device hash string</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -213,16 +211,14 @@ This section provides details for each class and property defined by Access Risk
             <span class="dotted" title="http://www.w3.org/ns/prov#Entity">entity</span>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#answeredBy"
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy">answered by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOwner"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner">has owner</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasOwningOrganisation"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation">has owning organisation</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -399,41 +395,6 @@ This section provides details for each class and property defined by Access Risk
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">
-      <h3>Report<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#Report</p>
-      <div class="comment">
-         <span class="markdown">A written account of an activity or investigation.</span>
-      </div>
-      <dl>
-         <dt>Date:</dt>
-         <dd>18T13:07:08+00:00/11/2019</dd>
-      </dl>
-      <dl>
-         <dt>Authors:</dt>
-         <dd>Yalemisew</dd>
-      </dl>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#DataEntity"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">Data Entity</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasOwner"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner">has owner</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasOwningOrganisation"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation">has owning organisation</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Restricted">
       <h3>Restricted<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -571,6 +532,8 @@ This section provides details for each class and property defined by Access Risk
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner">has owner</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasReadOnlyUser"
                title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser">has readonly user</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#userAgentHash"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash">user device hash string</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -654,6 +617,10 @@ This section provides details for each class and property defined by Access Risk
       <li>
          <a href="#status"
             title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status">status</a>
+      </li>
+      <li>
+         <a href="#userAgentHash"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash">user device hash string</a>
       </li>
    </ul>
    <div class="entity" id="answeredBy">
@@ -767,13 +734,13 @@ This section provides details for each class and property defined by Access Risk
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
+               <a href="#AccessControlEntity"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">Access Control Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
-               <a href="#AccessControlEntity"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">Access Control Entity</a>
+               <a href="#DataEntity"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">Data Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -803,13 +770,13 @@ This section provides details for each class and property defined by Access Risk
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
+               <a href="#AccessControlEntity"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">Access Control Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
-               <a href="#AccessControlEntity"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">Access Control Entity</a>
+               <a href="#DataEntity"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">Data Entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -904,6 +871,41 @@ This section provides details for each class and property defined by Access Risk
             <dd>
                <a href="#Status"
                   title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status">Status</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="userAgentHash">
+      <h3>user device hash string<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash</p>
+      <div class="comment">
+         <span class="markdown">The two-factor authentication (2FA) increments the security of a user account by establishing a second factor of authentication in addition to the username and password process. If 2FA is enabled, the system will send an authorisation link to the registered user's email to allow access to the ARK Platform. The user's device information will be encrypted and stored to enable access to the ARK platform from the same device (without sending an authentication link until the device changes). If 2FA is disabled, the authentication process will be based only on the username and password.</span>
+      </div>
+      <dl>
+         <dt>Date:</dt>
+         <dd>14T16:06:04+00:00/02/2022</dd>
+      </dl>
+      <dl>
+         <dt>Authors:</dt>
+         <dd>Lucy McKenna</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#AccessControlEntity"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">Access Control Entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#User"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User">User</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
