@@ -1,0 +1,513 @@
+@prefix : <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> .
+
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> rdf:type owl:Ontology ;
+                                                          owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKPlatform> ;
+                                                          <http://purl.org/dc/elements/1.1/contributor> "Ademar Crotti Junior" ,
+                                                                                                        "Junli Liang" ,
+                                                                                                        "Lucy McKenna" ,
+                                                                                                        "Natalia Duda" ,
+                                                                                                        "Nick McDonald" ,
+                                                                                                        "Rob Brennan" ;
+                                                          <http://purl.org/dc/elements/1.1/creator> "Yalemisew Abgaz" ;
+                                                          <http://purl.org/dc/elements/1.1/description> "An ontology for modelling for users, data classifications & access controls on the Access Risk Knowledge (ARK) Platform."@en ;
+                                                          <http://purl.org/dc/elements/1.1/modified> "18/04/2020" ,
+                                                                                                     "31/03/2021" ;
+                                                          <http://purl.org/dc/elements/1.1/publisher> "https://www.openark.adaptcentre.ie/" ;
+                                                          <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by-nc/4.0/" ;
+                                                          <http://purl.org/dc/elements/1.1/title> "Access Risk Knowledge Platform Ontology"@en ;
+                                                          <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
+                                                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkp" ;
+                                                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKProjects#" ;
+                                                          owl:versionInfo "0.2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/modified
+<http://purl.org/dc/elements/1.1/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#inverseOf
+owl:inverseOf rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#answeredBy
+:answeredBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :DataEntity ;
+            rdfs:range :User ;
+            <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+            <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:04+00:00"^^xsd:dateTime ;
+            rdfs:comment "The name/username of the person who answered the question."@en ;
+            rdfs:label "answered by"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCollaborator
+:hasCollaborator rdf:type owl:ObjectProperty ;
+                 rdfs:domain :AccessControlEntity ;
+                 rdfs:range :User ;
+                 rdfs:comment "Links a Project or Risk Register with a user who is a collaborator. The collaborator has a read/write/add subproject rights but not access grant rights."@en ;
+                 rdfs:label "has collaborator"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwner
+:hasOwner rdf:type owl:ObjectProperty ;
+          rdfs:domain :AccessControlEntity ,
+                      :DataEntity ;
+          rdfs:range :User ;
+          rdfs:comment "Links a Project, Risk Register or Report with its owning user(s). The owner has full read/write/grant access rights."@en ;
+          rdfs:label "has owner"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasOwningOrganisation
+:hasOwningOrganisation rdf:type owl:ObjectProperty ;
+                       rdfs:domain :AccessControlEntity ,
+                                   :DataEntity ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       rdfs:comment "Links a Project, Risk Register or Report to its owning organisation."@en ;
+                       rdfs:label "has owning organisation"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasPlatformRole
+:hasPlatformRole rdf:type owl:ObjectProperty ;
+                 rdfs:domain :User ;
+                 rdfs:range :PlatformRole ;
+                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                 rdfs:comment "Links a User to their Platform Role."@en ;
+                 rdfs:label "has platform role"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasReadOnlyUser
+:hasReadOnlyUser rdf:type owl:ObjectProperty ;
+                 rdfs:domain :AccessControlEntity ;
+                 rdfs:range :User ;
+                 rdfs:comment "Links a project or risk register to a user with read only access. The read only user can view a specific Project but has no edit or access grant rights."@en ;
+                 rdfs:label "has readonly user"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#status
+:status rdf:type owl:ObjectProperty ;
+        rdfs:domain :User ;
+        rdfs:range :Status ;
+        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+        <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:47:14+00:00"^^xsd:dateTime ;
+        rdfs:isDefinedBy "Links a user to a status."@en ;
+        rdfs:label "status"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#userAgentHash
+:userAgentHash rdf:type owl:ObjectProperty ;
+               rdfs:domain :AccessControlEntity ;
+               rdfs:range :User ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2022-02-14T16:06:04+00:00"^^xsd:dateTime ;
+               rdfs:comment "The two-factor authentication (2FA) increments the security of a user account by establishing a second factor of authentication in addition to the username and password process. If 2FA is enabled, the system will send an authorisation link to the registered user's email to allow access to the ARK Platform. The user's device information will be encrypted and stored to enable access to the ARK platform from the same device (without sending an authentication link until the device changes). If 2FA is disabled, the authentication process will be based only on the username and password."@en ;
+               rdfs:label "user device hash string"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> rdf:type owl:ObjectProperty ;
+                                                                                  rdfs:domain [ rdf:type owl:Class ;
+                                                                                                owl:unionOf ( :AccessControlEntity
+                                                                                                              :DataEntity
+                                                                                                            )
+                                                                                              ] ;
+                                                                                  rdfs:range :DataClassification ;
+                                                                                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                                                                                  rdfs:comment "Ascribes a data classification level to an Entity." ;
+                                                                                  rdfs:label "has data classification" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:dateTime ;
+      <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+      <http://purl.org/dc/elements/1.1/date> "2021-08-27T15:11:31+00:00"^^xsd:dateTime ;
+      rdfs:comment "Captures a date on the ARK Platform. For example, the date when an entity or agent was created, edited or deleted from the platform."@en ;
+      rdfs:label "date"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email
+:email rdf:type owl:DatatypeProperty ;
+       rdfs:domain :User ;
+       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+       <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^xsd:dateTime ;
+       rdfs:comment "A user's email address."@en ;
+       rdfs:label "email"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password
+:password rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :User ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^xsd:dateTime ;
+          rdfs:comment "A user's password."@en ;
+          rdfs:label "password"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token
+:token rdf:type owl:DatatypeProperty ;
+       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+       <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^xsd:dateTime ;
+       rdfs:comment "A token for user who requests a password reset."@en ;
+       rdfs:label "token"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry
+:tokenExpiry rdf:type owl:DatatypeProperty ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^xsd:dateTime ;
+             rdfs:comment "An expiry date for a token requested by user." ;
+             rdfs:label "token expiry"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username
+:username rdf:type owl:DatatypeProperty ;
+          rdfs:domain :User ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^xsd:dateTime ;
+          rdfs:comment "A user's username."@en ;
+          rdfs:label "username"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Person
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity
+:AccessControlEntity rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                     <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                     <http://purl.org/dc/elements/1.1/date> "2021-04-14T14:28:36+00:00"^^xsd:dateTime ;
+                     rdfs:comment "An entity or aggregate, such as a Project or Risk Register, that can be used to control user access to data."@en ;
+                     rdfs:label "Access Control Entity"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AdminUser
+:AdminUser rdf:type owl:Class ;
+           rdfs:subClassOf :User ;
+           <http://purl.org/dc/elements/1.1/creator> "Ademar" ;
+           rdfs:comment "An admin user has access to all projects." ;
+           rdfs:label "AdminUser" .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Confidential
+:Confidential rdf:type owl:Class ;
+              rdfs:subClassOf :DataClassification ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              rdfs:comment "Confidential information is defined as information which is protected by Irish and/or E.U. legislation or regulations, HSE policies or legal contracts. The unauthorised or accidental disclosure of this information could adversely impact the organisation, its patients, its staff and its business partners."@en ;
+              rdfs:label "Confidential"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification
+:DataClassification rdf:type owl:Class ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    rdfs:comment "Use to classifiy the sensitivity of data e.g., a project, an analysis or part of an analysis.  Data classification values are adapted from the HSE Information Classification & Handling Policy."@en ;
+                    rdfs:label "Data Classification"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity
+:DataEntity rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            rdfs:comment "An individual unit or aggregate of data on the ARK Platform."@en ;
+            rdfs:label "Data Entity"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataStatus
+:DataStatus rdf:type owl:Class ;
+            rdfs:subClassOf :Status ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^xsd:dateTime ;
+            rdfs:comment "The status of a unit or collection of data on the ARK Platform."@en ;
+            rdfs:label "Data Status"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Internal
+:Internal rdf:type owl:Class ;
+          rdfs:subClassOf :DataClassification ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          rdfs:comment "Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released."@en ;
+          rdfs:label "Internal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#LocalAdminUser
+:LocalAdminUser rdf:type owl:Class ;
+                rdfs:subClassOf :User .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#NotSet
+:NotSet rdf:type owl:Class ;
+        rdfs:subClassOf :DataClassification ;
+        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+        <http://purl.org/dc/elements/1.1/date> "2021-04-14T14:26:51+00:00"^^xsd:dateTime ;
+        rdfs:comment "The data classification level has not been set."@en ;
+        rdfs:label "Not Set"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Personal
+:Personal rdf:type owl:Class ;
+          rdfs:subClassOf :Restricted ;
+          <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+          rdfs:comment "Restricted information that contains personal data. Personal data, as defined by the General Data Protection Regulation (GDPR), is any data that relates to a person or that could be used to identify a person."@en ;
+          rdfs:label "Personal"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#PlatformRole
+:PlatformRole rdf:type owl:Class ;
+              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+              rdfs:comment "The role of a User on the ARK Platform."@en ;
+              rdfs:label "Platform Role"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Public
+:Public rdf:type owl:Class ;
+        rdfs:subClassOf :DataClassification ;
+        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+        rdfs:comment "Public information is defined as information that is available to the general public and is intended for distribution outside an organisation. There would be no impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released."@en ;
+        rdfs:label "Public"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Restricted
+:Restricted rdf:type owl:Class ;
+            rdfs:subClassOf :DataClassification ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            rdfs:comment "Restricted information is defined as highly sensitive confidential information. The unauthorised or accidental disclosure of this information would seriously and adversely impact the organisation, its patients, its staff and its business partners."@en ;
+            rdfs:label "Restricted"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#SpecialCategory
+:SpecialCategory rdf:type owl:Class ;
+                 rdfs:subClassOf :Personal ;
+                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                 rdfs:comment "Special Category personal data, as defined by the General Data Protection Regulation (GDPR) Article 9, is any information that reveals a person's race, ethnic origin, political opinion, religious or philosophical beliefes, trade union membership, genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person’s sex life or sexual orientation."@en ;
+                 rdfs:label "Special Category"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Status
+:Status rdf:type owl:Class ;
+        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+        <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^xsd:dateTime ;
+        rdfs:comment "The status of an entity or agent on the ARK Platform."@en ;
+        rdfs:label "Status"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User
+:User rdf:type owl:Class ;
+      rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> ;
+      <http://purl.org/dc/elements/1.1/description> "A User of the ARK Platform."@en ;
+      rdfs:comment "The user of the project can take three types: Owner, Collaborator, ReadOnlyUser."@en ;
+      rdfs:label "User"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#UserStatus
+:UserStatus rdf:type owl:Class ;
+            rdfs:subClassOf :Status ;
+            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+            <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:23:03+00:00"^^xsd:dateTime ;
+            rdfs:comment "The status of a user and their account settings."@en ;
+            rdfs:label "User Status"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#active
+:active rdf:type owl:NamedIndividual ,
+                 :UserStatus ;
+        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+        <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:19:03+00:00"^^xsd:dateTime ;
+        rdfs:comment "User account has been approved and is active for use."@en ;
+        rdfs:label "Active"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#boardMember
+:boardMember rdf:type owl:NamedIndividual ,
+                      :PlatformRole ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:48:03+00:00"^^xsd:dateTime ;
+             rdfs:comment "Member of the governing body of an organisation. Responsible for developing and reviewing the organisation’s mission and strategy. Guides the organisation’s long-term goals and policies."@en ;
+             rdfs:label "Board Member"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#clinicalSpecialist
+:clinicalSpecialist rdf:type owl:NamedIndividual ,
+                             :PlatformRole ;
+                    <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                    <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:03+00:00"^^xsd:dateTime ;
+                    rdfs:comment "Plays a role in the management of activities and staff resources in an area of specialisation."@en ;
+                    rdfs:label "Clinical Specialist"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#deleted
+:deleted rdf:type owl:NamedIndividual ,
+                  :UserStatus ;
+         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+         <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^xsd:dateTime ;
+         rdfs:comment "User account has been deleted."@en ;
+         rdfs:label "Deleted"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#frontlineStaff
+:frontlineStaff rdf:type owl:NamedIndividual ,
+                         :PlatformRole ;
+                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:03+00:00"^^xsd:dateTime ;
+                rdfs:comment "Including, but not limited to, firefighters, doctors, nurses, midwives, paramedics, healthcare assistants, social work practitioners and allied health staff who work directly with service users."@en ;
+                rdfs:label "Frontline Staff"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#operationsManager
+:operationsManager rdf:type owl:NamedIndividual ,
+                            :PlatformRole ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:46:47+00:00"^^xsd:dateTime ;
+                   rdfs:comment "Responsible for managing the delivery of quality service user care. This includes, but is not limited to, maintaining, ordering and distributing appropriate Personal Protective Equipment (PPE)."@en ;
+                   rdfs:label "Operations Manager"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangeApproved
+:orgChangeApproved rdf:type owl:NamedIndividual ,
+                            :UserStatus ;
+                   <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                   <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^xsd:dateTime ;
+                   rdfs:comment "User request to change their organisation has been approved."@en ;
+                   rdfs:label "OrgChangeApproved"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#orgChangePending
+:orgChangePending rdf:type owl:NamedIndividual ,
+                           :UserStatus ;
+                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                  <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^xsd:dateTime ;
+                  rdfs:comment "User request to change their organisation is pending."@en ;
+                  rdfs:label "OrgChangePending"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#organisationExecutive
+:organisationExecutive rdf:type owl:NamedIndividual ,
+                                :PlatformRole ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:47:33+00:00"^^xsd:dateTime ;
+                       rdfs:comment "Responsible for all aspects of operations and for overseeing the functioning of the organisation."@en ;
+                       rdfs:label "Organisation Executive"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#pending
+:pending rdf:type owl:NamedIndividual ,
+                  :UserStatus ;
+         <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+         <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^xsd:dateTime ;
+         rdfs:comment "User account is pending approval."@en ;
+         rdfs:label "Pending"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformAdministrator
+:platformAdministrator rdf:type owl:NamedIndividual ,
+                                :PlatformRole ;
+                       <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                       rdfs:comment "An administrator of the ARK Platform."@en ;
+                       rdfs:label "Platform Administrator"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangeApproved
+:platformRoleChangeApproved rdf:type owl:NamedIndividual ,
+                                     :UserStatus ;
+                            <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                            <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^xsd:dateTime ;
+                            rdfs:comment "User request to change their platform role has been approved."@en ;
+                            rdfs:label "PlatformRoleChangeApproved"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#platformRoleChangePending
+:platformRoleChangePending rdf:type owl:NamedIndividual ,
+                                    :UserStatus ;
+                           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+                           <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:18:03+00:00"^^xsd:dateTime ;
+                           rdfs:comment "User request to change their platform role is pending."@en ;
+                           rdfs:label "PlatformRoleChangePending"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#safetyManager
+:safetyManager rdf:type owl:NamedIndividual ,
+                        :PlatformRole ;
+               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+               <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:16+00:00"^^xsd:dateTime ;
+               rdfs:comment "Directs the collection, measurement and presentation of data required for monitoring service quality and service user safety indicators. Assures compliance with regulations and standards."@en ;
+               rdfs:label "Safety Manager"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#unitManager
+:unitManager rdf:type owl:NamedIndividual ,
+                      :PlatformRole ;
+             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
+             <http://purl.org/dc/elements/1.1/date> "2021-03-23T18:49:54+00:00"^^xsd:dateTime ;
+             rdfs:comment "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en ;
+             rdfs:label "Unit Manager"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
