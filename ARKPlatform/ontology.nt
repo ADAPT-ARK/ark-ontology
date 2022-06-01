@@ -139,14 +139,14 @@
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 _:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataClassification> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#'has_data_classification'> <http://www.w3.org/2000/01/rdf-schema#comment> "Ascribes a data classification level to an Entity." .
@@ -163,6 +163,9 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#date> <http://purl.org/dc/elements/1.1/date> "2021-08-27T15:11:31+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -188,6 +191,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/2000/01/rdf-schema#comment> "A token for user who requests a password reset."@en .
@@ -195,6 +199,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/2000/01/rdf-schema#comment> "An expiry date for a token requested by user." .
@@ -272,6 +277,10 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Internal> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Internal> <http://www.w3.org/2000/01/rdf-schema#comment> "Internal information is defined as information that is only intended for internal distribution within an organisation. In the majority of instances there would be no significant impact on the organisation, its staff, clients or patients if this type of information was mishandled or accidentally released."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#Internal> <http://www.w3.org/2000/01/rdf-schema#label> "Internal"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#LocalAdminUser
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#LocalAdminUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#LocalAdminUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#NotSet
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#NotSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -465,4 +474,4 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#unitManager> <http://www.w3.org/2000/01/rdf-schema#comment> "Manager of a particular area or group of staff within an organisation e.g. ward manager, nursing manager."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#unitManager> <http://www.w3.org/2000/01/rdf-schema#label> "Unit Manager"@en .
 # 
-# Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

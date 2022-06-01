@@ -966,7 +966,9 @@ An organization’s external context includes its external stakeholders, its loc
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#evidenceText"
+            <a href="#evidenceRule"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule">evidence rule</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#evidenceText"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceText">evidence text</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasArtefact"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasArtefact">has artefact</a>
@@ -1290,12 +1292,6 @@ An organization’s external context includes its external stakeholders, its loc
             <a href="#Report"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasStage"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage">has stage</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -2794,7 +2790,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDimension">has dimension</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSubquestion"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubquestion">has subquestion</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isQuestionOf"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf">is question of</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#questionText"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText">question text</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -2837,6 +2837,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dd>
             <a href="#hasQuestionnaire"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasQuestionnaire">has questionnaire</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#isQuestionOf"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf">is question of</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -2925,9 +2927,17 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#FinalReport">Final Report</a>
             <sup class="type-c" title="class">c</sup>, <a href="#HandoverReport"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport">Handover Report</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ReportTemplate"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ReportTemplate">Report Template</a>
             <sup class="type-c" title="class">c</sup>, <a href="#StatusReport"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#StatusReport">Status Report</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasStage"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage">has stage</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -2958,6 +2968,12 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dd>Lucy McKenna</dd>
       </dl>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Report"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#EvidenceReportTemplate"
@@ -6775,13 +6791,13 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#HandoverReport"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport">Handover Report</a>
+               <a href="#ProjectAnalysis"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
-               <a href="#ProjectAnalysis"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis">Project Analysis</a>
+               <a href="#Report"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report">Report</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -7053,6 +7069,22 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Lucy McKenna</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Question"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Questionnaire"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire">Questionnaire</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="memberOf">
       <h3>member of<sup class="type-op" title="object property">op</sup>
@@ -7734,6 +7766,29 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>yalemisew</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="answerText">
       <h3>answer text<sup class="type-dp" title="data property">dp</sup>
@@ -7823,6 +7878,29 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>yalemisew</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="dataStatus">
       <h3>data status<sup class="type-dp" title="data property">dp</sup>
@@ -7841,6 +7919,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
                <a href="http://www.w3.org/2002/07/owl#Thing"
                   target="_blank"
                   title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -7909,6 +7999,29 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>yalemisew</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="dueDate">
       <h3>due date<sup class="type-dp" title="data property">dp</sup>
@@ -7994,6 +8107,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>yalemisew</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Evidence"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence">Evidence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="evidenceText">
       <h3>evidence text<sup class="type-dp" title="data property">dp</sup>
@@ -8100,6 +8223,19 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   target="_blank"
                   title="http://www.w3.org/2002/07/owl#topDataProperty">top data property</a>
             </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -8111,7 +8247,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceStationSite</p>
       <div class="comment">
-         <span class="markdown">Links a risk assessment to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit.</span>
+         <span class="markdown">Links a risk to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit.</span>
       </div>
       <dl>
          <dt>Date:
@@ -8123,6 +8259,23 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Rob Brennan</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasDistribution">
       <h3>has distribution<sup class="type-dp" title="data property">dp</sup>
@@ -8144,6 +8297,23 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Lucy McKenna</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasDivision">
       <h3>has division<sup class="type-dp" title="data property">dp</sup>
@@ -8153,7 +8323,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision</p>
       <div class="comment">
-         <span class="markdown">Links a risk assessment to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health &amp; Wellbeing, HR etc.</span>
+         <span class="markdown">Links a risk to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health &amp; Wellbeing, HR etc.</span>
       </div>
       <dl>
          <dt>Date:
@@ -8165,6 +8335,23 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Rob Brennan</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasHgChoNasFunction">
       <h3>has HG/CHO/NAS/Function<sup class="type-dp" title="data property">dp</sup>
@@ -8174,7 +8361,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction</p>
       <div class="comment">
-         <span class="markdown">Links a risk assessment to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8.</span>
+         <span class="markdown">Links a risk to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8.</span>
       </div>
       <dl>
          <dt>Date:
@@ -8186,6 +8373,23 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Rob Brennan</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="importance">
       <h3>importance<sup class="type-dp" title="data property">dp</sup>
@@ -8234,6 +8438,29 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Rob Brennan</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="name">
       <h3>name<sup class="type-dp" title="data property">dp</sup>
@@ -8309,6 +8536,23 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Lucy McKenna</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="potentialLoss">
       <h3>potential loss<sup class="type-dp" title="data property">dp</sup>
@@ -8391,6 +8635,29 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Lucy McKenna</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="projectStatus">
       <h3>project status<sup class="type-dp" title="data property">dp</sup>
@@ -8493,6 +8760,16 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>yalemisew</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Question"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Question">Question</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="reviewDate">
       <h3>review date<sup class="type-dp" title="data property">dp</sup>
@@ -8511,6 +8788,34 @@ Familiarity gained by personal experience, vicariously or through collective pro
                     </dt>
          <dd>Lucy McKenna</dd>
       </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTimeStamp"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTimeStamp">date time stamp</a>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="riskSource">
       <h3>risk source<sup class="type-dp" title="data property">dp</sup>
@@ -8565,6 +8870,25 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </dl>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://www.w3.org/2002/07/owl#Thing"
+                  target="_blank"
+                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#int"

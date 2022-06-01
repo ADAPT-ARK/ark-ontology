@@ -1107,8 +1107,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-13T17:06:09+00:00</dc:date>
@@ -1216,6 +1216,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-12-15T18:37:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a CUBE question to a CUBE questionnaire.</rdfs:comment>
@@ -1435,6 +1437,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-01-27T17:06:19+00:00</dc:date>
         <rdfs:comment xml:lang="en">Data that can support/comes from some analytics.</rdfs:comment>
@@ -1488,6 +1493,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#comment">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-02-25T12:35:59+00:00</dc:date>
         <rdfs:comment xml:lang="en">A comment provided about the project.</rdfs:comment>
@@ -1501,6 +1509,8 @@
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <rdfs:comment xml:lang="en">The status of the data. Deleted when the data is deleted by the user.</rdfs:comment>
         <rdfs:label xml:lang="en">data status</rdfs:label>
@@ -1512,6 +1522,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-13T17:02:42+00:00</dc:date>
         <rdfs:comment xml:lang="en">The date on which the project is designed.</rdfs:comment>
@@ -1550,6 +1563,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2020-01-27T17:07:55+00:00</dc:date>
         <rdfs:comment xml:lang="en">A rule provided to evaluate evidence.</rdfs:comment>
@@ -1593,6 +1607,8 @@
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#handoverTo">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-15T09:53:21+00:00</dc:date>
         <rdfs:comment xml:lang="en">The person, department or unit to whom a project is handed over.</rdfs:comment>
@@ -1605,9 +1621,11 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceStationSite">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29 09:09:10</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a risk to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit.</rdfs:comment>
         <rdfs:label xml:lang="en">has dept/service/station site</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1617,6 +1635,8 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDistribution">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-15T11:53:21+00:00</dc:date>
         <rdfs:comment xml:lang="en">The people, groups, departments or organisations with whom a report can be shared/distributed.</rdfs:comment>
@@ -1629,9 +1649,11 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health &amp; Wellbeing, HR etc.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a risk to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health &amp; Wellbeing, HR etc.</rdfs:comment>
         <rdfs:label xml:lang="en">has division</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1641,9 +1663,11 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk assessment to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a risk to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8.</rdfs:comment>
         <rdfs:label xml:lang="en">has HG/CHO/NAS/Function</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -1665,6 +1689,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-12-18T13:34:27+00:00</dc:date>
         <rdfs:comment xml:lang="en">Used to annotate a value, for example a risk, that is predicted or estimated.</rdfs:comment>
@@ -1696,6 +1723,8 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-21T13:04:21+00:00</dc:date>
         <rdfs:label>persons affected</rdfs:label>
@@ -1733,6 +1762,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-21T13:01:01+00:00</dc:date>
         <rdfs:label xml:lang="en">progress notes</rdfs:label>
@@ -1780,6 +1812,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-13T17:03:49+00:00</dc:date>
         <rdfs:comment xml:lang="en">The text of the cube question. This represents the actual question asked.</rdfs:comment>
@@ -1792,6 +1825,10 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewDate">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-21T13:04:21+00:00</dc:date>
         <rdfs:label xml:lang="en">review date</rdfs:label>
@@ -1829,6 +1866,9 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
@@ -2933,6 +2973,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ReportTemplate">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-15T11:38:03+00:00</dc:date>
         <rdfs:comment xml:lang="en">A report format template.</rdfs:comment>

@@ -760,8 +760,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 :hasStage rdf:type owl:ObjectProperty ;
-          rdfs:domain :HandoverReport ,
-                      :ProjectAnalysis ;
+          rdfs:domain :ProjectAnalysis ,
+                      :Report ;
           rdfs:range :Stage ;
           <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
           <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" ;
@@ -837,6 +837,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isQuestionOf
 :isQuestionOf rdf:type owl:ObjectProperty ;
+              rdfs:domain :Question ;
+              rdfs:range :Questionnaire ;
               <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
               <http://purl.org/dc/elements/1.1/date> "2021-12-15T18:37:10+00:00"^^xsd:dateTime ;
               rdfs:comment "Links a CUBE question to a CUBE questionnaire."@en ;
@@ -987,6 +989,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData
 :analyticsData rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ,
+                           <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                           <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
                <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
                <http://purl.org/dc/elements/1.1/date> "2020-01-27T17:06:19+00:00" ;
                rdfs:comment "Data that can support/comes from some analytics."@en ;
@@ -1024,6 +1029,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#comment
 :comment rdf:type owl:DatatypeProperty ;
+         rdfs:domain owl:Thing ,
+                     <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                     <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
          <http://purl.org/dc/elements/1.1/date> "2020-02-25T12:35:59+00:00" ;
          rdfs:comment "A comment provided about the project."@en ;
@@ -1032,7 +1040,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#dataStatus
 :dataStatus rdf:type owl:DatatypeProperty ;
-            rdfs:domain owl:Thing ;
+            rdfs:domain owl:Thing ,
+                        <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                        <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
             rdfs:range rdfs:Literal ;
             rdfs:comment "The status of the data. Deleted when the data is deleted by the user."@en ;
             rdfs:label "data status"@en .
@@ -1040,6 +1050,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate
 :designDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain owl:Thing ,
+                        <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                        <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
             <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
             <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:02:42+00:00" ;
             rdfs:comment "The date on which the project is designed."@en ;
@@ -1066,6 +1079,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#evidenceRule
 :evidenceRule rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Evidence ;
               <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
               <http://purl.org/dc/elements/1.1/date> "2020-01-27T17:07:55+00:00" ;
               rdfs:comment "A rule provided to evaluate evidence."@en ;
@@ -1097,6 +1111,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#handoverTo
 :handoverTo rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                        <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
             <http://purl.org/dc/elements/1.1/date> "2021-09-15T09:53:21+00:00"^^xsd:dateTime ;
             rdfs:comment "The person, department or unit to whom a project is handed over."@en ;
@@ -1105,14 +1121,18 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceStationSite
 :hasDeptServiceStationSite rdf:type owl:DatatypeProperty ;
+                           rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                                       <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
                            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                            <http://purl.org/dc/elements/1.1/date> "2020-09-29 09:09:10" ;
-                           rdfs:comment "Links a risk assessment to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit."@en ;
+                           rdfs:comment "Links a risk to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit."@en ;
                            rdfs:label "has dept/service/station site"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDistribution
 :hasDistribution rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                             <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                  <http://purl.org/dc/elements/1.1/date> "2021-09-15T11:53:21+00:00"^^xsd:dateTime ;
                  rdfs:comment "The people, groups, departments or organisations with whom a report can be shared/distributed."@en ;
@@ -1121,17 +1141,21 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision
 :hasDivision rdf:type owl:DatatypeProperty ;
+             rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                         <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
              <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-             rdfs:comment "Links a risk assessment to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health & Wellbeing, HR etc."@en ;
+             rdfs:comment "Links a risk to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health & Wellbeing, HR etc."@en ;
              rdfs:label "has division"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction
 :hasHgChoNasFunction rdf:type owl:DatatypeProperty ;
+                     rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                                 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
                      <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                      <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" ;
-                     rdfs:comment "Links a risk assessment to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8."@en ;
+                     rdfs:comment "Links a risk to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8."@en ;
                      rdfs:label "has HG/CHO/NAS/Function"@en .
 
 
@@ -1145,6 +1169,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#isProjected
 :isProjected rdf:type owl:DatatypeProperty ;
+             rdfs:domain owl:Thing ,
+                         <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                         <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
              <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en ;
              <http://purl.org/dc/elements/1.1/date> "2020-12-18T13:34:27+00:00"^^xsd:dateTime ;
              rdfs:comment "Used to annotate a value, for example a risk, that is predicted or estimated."@en ;
@@ -1168,6 +1195,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected
 :personsAffected rdf:type owl:DatatypeProperty ;
+                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                             <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
                  <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                  <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^xsd:dateTime ;
                  rdfs:label "persons affected" .
@@ -1193,6 +1222,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes
 :progressNotes rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ,
+                           <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                           <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
                <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:01:01+00:00"^^xsd:dateTime ;
                rdfs:label "progress notes"@en .
@@ -1224,6 +1256,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#questionText
 :questionText rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Question ;
               <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
               <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:03:49+00:00" ;
               rdfs:comment "The text of the cube question. This represents the actual question asked."@en ;
@@ -1232,6 +1265,10 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewDate
 :reviewDate rdf:type owl:DatatypeProperty ;
+            rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                        <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
+            rdfs:range xsd:dateTime ,
+                       xsd:dateTimeStamp ;
             <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
             <http://purl.org/dc/elements/1.1/date> "2021-10-21T13:04:21+00:00"^^xsd:dateTime ;
             rdfs:label "review date"@en .
@@ -1257,6 +1294,9 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#score
 :score rdf:type owl:DatatypeProperty ;
+       rdfs:domain owl:Thing ,
+                   <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
+                   <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ;
        rdfs:range xsd:int ;
        <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
        <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
@@ -2024,6 +2064,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#ReportTemplate
 :ReportTemplate rdf:type owl:Class ;
+                rdfs:subClassOf :Report ;
                 <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
                 <http://purl.org/dc/elements/1.1/date> "2021-09-15T11:38:03+00:00"^^xsd:dateTime ;
                 rdfs:comment "A report format template."@en ;
