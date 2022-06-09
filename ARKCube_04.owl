@@ -604,6 +604,20 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to an organisation or a hospital site/service.</rdfs:comment>
+        <rdfs:label>has hospital site/service</rdfs:label>
+        <rdfs:label xml:lang="en">has organisation site/service</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit -->
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit">
@@ -1003,20 +1017,6 @@
         <dc:date>2021-03-10T14:37:52.608523</dc:date>
         <rdfs:comment>Links a risk to the specific type of risk being assessed.</rdfs:comment>
         <rdfs:label>has risk type</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService -->
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to an organisation or a hospital site/service.</rdfs:comment>
-        <rdfs:label>has hospital site/service</rdfs:label>
-        <rdfs:label xml:lang="en">has organisation site/service</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -2126,7 +2126,7 @@ An organization’s external context includes its external stakeholders, its loc
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Uses HSE impact table for definition.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Uses HSE primary impact table for definition.</rdfs:comment>
         <rdfs:label xml:lang="en">Extreme</rdfs:label>
     </owl:Class>
     
@@ -2260,6 +2260,7 @@ An organization’s external context includes its external stakeholders, its loc
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:59:21+00:00</dc:date>
+        <rdfs:comment>Risk impact scoring based on the HSE Risk Assessment Tool.</rdfs:comment>
         <rdfs:label xml:lang="en">Impact (HSE)</rdfs:label>
     </owl:Class>
     
@@ -2331,7 +2332,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The probability that an unsafe event or condition might occur.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The probability that an unsafe event or condition might occur. Likelihood scoring based on the Aer Lingus risk matrix.</rdfs:comment>
         <rdfs:label xml:lang="en">Likelihood (Aer Lingus)</rdfs:label>
     </owl:Class>
     
@@ -2343,7 +2344,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date xml:lang="en">2021-09-28T16:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The chance of something happening (also described as the probability or frequency of an event occurring).</rdfs:comment>
+        <rdfs:comment>Likelihood scoring based on the DFB risk matrix.</rdfs:comment>
         <rdfs:label xml:lang="en">Likelihood (DFB)</rdfs:label>
     </owl:Class>
     
@@ -2355,7 +2356,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date xml:lang="en">2021-09-28T16:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The chance of something happening (also described as the probability or frequency of an event occurring).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Likelihood scoring based on the HSE Risk Assessment Tool.</rdfs:comment>
         <rdfs:label xml:lang="en">Likelihood (HSE)</rdfs:label>
     </owl:Class>
     
@@ -2392,7 +2393,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Defined by HSE impact table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defined by HSE primary impact table.</rdfs:comment>
         <rdfs:label xml:lang="en">Major</rdfs:label>
     </owl:Class>
     
@@ -2428,7 +2429,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Defined by HSE impact table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defined by HSE primary impact table.</rdfs:comment>
         <rdfs:label xml:lang="en">Minor</rdfs:label>
     </owl:Class>
     
@@ -2446,7 +2447,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Defined by HSE impact table.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Defined by HSE primary impact table.</rdfs:comment>
         <rdfs:label xml:lang="en">Moderate</rdfs:label>
     </owl:Class>
     
@@ -2464,7 +2465,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date xml:lang="en">2020-09-29 09:09:10</dc:date>
-        <rdfs:comment xml:lang="en">Uses HSE impact table definition.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Uses HSE primary impact table definition.</rdfs:comment>
         <rdfs:label xml:lang="en">Negligible</rdfs:label>
     </owl:Class>
     
@@ -3151,7 +3152,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:17:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Possible consequences of an unsafe event or condition, taking as reference the worst foreseeable situation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Possible consequences of an unsafe event or condition, taking as reference the worst foreseeable situation. Severity scoring based on the Aer Lingus risk matrix.</rdfs:comment>
         <rdfs:label>Severity (Aer Lingus)</rdfs:label>
     </owl:Class>
     
@@ -3163,6 +3164,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment>Severity scoring based on the DFB risk matrix.</rdfs:comment>
         <rdfs:label xml:lang="en">Severity (DFB)</rdfs:label>
     </owl:Class>
     
@@ -3455,11 +3457,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
-        <probability>90-100%</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.9,1.0]</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Inadequate health and safety controls, an accident will occur.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Inadequate health and safety controls, an accident will occur. Probability 90-100%.</rdfs:comment>
         <rdfs:label xml:lang="en">Almost Certain</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3715,7 +3717,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
-        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0E-6</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0E-6</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
@@ -3729,7 +3731,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
-        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0E-5</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0E-5</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
@@ -3865,11 +3867,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
-        <probability>60-90%</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.6,0.9]</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident. Probability: 60-90%.</rdfs:comment>
         <rdfs:label xml:lang="en">Likely</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4529,11 +4531,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
-        <probability>30-60%</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.3,0.6]</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">If the situation is not well managed an accident is likely to occur.</rdfs:comment>
+        <rdfs:comment xml:lang="en">If the situation is not well managed an accident is likely to occur. Probability 30-60%.</rdfs:comment>
         <rdfs:label xml:lang="en">Possible</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4558,7 +4560,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
-        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.0E-4</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0E-4</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
@@ -4572,11 +4574,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
-        <probability>&lt;10%</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">&lt;0.1</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken. Probability: &lt;10%.</rdfs:comment>
         <rdfs:label xml:lang="en">Rare</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4612,7 +4614,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
-        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2.0E-4</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0E-4</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
@@ -4696,11 +4698,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
-        <probability>10-30%</probability>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.1,0.3]</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The situation is well under control, but occasional lapses could occur.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The situation is well under control, but occasional lapses could occur. Probability 10-30%.</rdfs:comment>
         <rdfs:label xml:lang="en">Unlikely</rdfs:label>
     </owl:NamedIndividual>
     
