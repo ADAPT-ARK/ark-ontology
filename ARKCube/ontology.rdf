@@ -242,7 +242,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used to link an Action with the Person assigned to perform it. Enter the name of the person responsible for the action necessary to mitigate the risk. The person responsible could be the Risk Owner, the Risk Owners Manager, or someone who reports to the Risk Owner, e.g. a CHO can assign an action to any of their Management team or to their direct Manager.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The name of the person responsible for the action necessary to mitigate the risk. The Action Owner is responsible for reporting on progress relating to the achievement of the action assigned to them. The Action Owner should be one of the following, the Risk Owner, a member of the Risk Owner’s Management Team or the person to whom the Risk Owner reports.</rdfs:comment>
         <rdfs:label xml:lang="en">assigned person</rdfs:label>
     </owl:ObjectProperty>
     
@@ -373,6 +373,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasApprovalStatus">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ApprovalStatus"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-21T13:04:21+00:00</dc:date>
@@ -632,7 +633,7 @@
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood">
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?</rdfs:comment>
         <rdfs:label xml:lang="en">has likelihood</rdfs:label>
@@ -655,16 +656,17 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService -->
 
 
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to an organisation or a hospital site/service e.g. University Hospital Galway/Disability Service.</rdfs:comment>
-        <rdfs:label xml:lang="en">has organisation or hospital site/service</rdfs:label>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to an organisation or a hospital site/service.</rdfs:comment>
+        <rdfs:label xml:lang="en">has organisation site/service</rdfs:label>
+        <rdfs:label>has hospital site/service</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -972,7 +974,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T21:23:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to the Person(s) who completed it.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The person(s) who completed the risk assessment.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk assessor</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1014,7 +1016,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk to the risk management coordinator involved in the risk assessment.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The role of the Risk Coordinator is to assist with the initial assessment of the risk by providing expertise on the subject matter of the risk being assessed and following this to assist with its ongoing review and monitoring.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk coordinator</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1055,7 +1057,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk to the person with the responsibility to assess and manage the risk in line with organisational policy i.e. normally the Line Manager of Service / Area. This is the individual who will be held accountable for the risk and its effective control. The maxim of the ‘risk take is the risk owner’ should be taken.</rdfs:comment>
+        <rdfs:comment xml:lang="en">All risks require assignment of a Risk Owner and it is the responsibility of the Risk Owner to ensure that the risk is assessed and managed in line with organisational policy. This includes ensuring that any actions identified as required to manage the risk have been assigned to an Action Owner along with an agreed date for completion of the action. The Risk Owner is normally the Manager of the area/service in which the risk is identified. It is the responsibility of the Risk Owner to notify risks or actions where appropriate. This is the individual who will be held accountable for the risk and its effective control.</rdfs:comment>
         <rdfs:label xml:lang="en">has risk owner</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1093,7 +1095,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date>2021-03-10T14:37:52.608523</dc:date>
@@ -1251,6 +1253,18 @@
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-14T13:19:43+00:00</dc:date>
         <rdfs:comment xml:lang="en">The project obtains intellectual or factual support from the evidence.</rdfs:comment>
         <rdfs:label xml:lang="en">obtains support from</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-21T13:04:21+00:00</dc:date>
+        <rdfs:label>persons affected</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1423,7 +1437,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
@@ -1479,7 +1493,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#assessmentDate">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
@@ -1617,16 +1631,16 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceStationSite -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite -->
 
 
-    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceStationSite">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29 09:09:10</dc:date>
         <rdfs:comment xml:lang="en">Links a risk to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit.</rdfs:comment>
-        <rdfs:label xml:lang="en">has dept/service/station site</rdfs:label>
+        <rdfs:label xml:lang="en">has dept/service site</rdfs:label>
+        <rdfs:label>has station</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1649,8 +1663,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a risk to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health &amp; Wellbeing, HR etc.</rdfs:comment>
@@ -1663,8 +1676,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasHgChoNasFunction">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordHSE"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a risk to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8.</rdfs:comment>
@@ -1719,19 +1731,6 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected -->
-
-
-    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-21T13:04:21+00:00</dc:date>
-        <rdfs:label>persons affected</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss -->
 
 
@@ -1748,7 +1747,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <dc:creator xml:lang="en">Rob Brennan</dc:creator>
         <dc:date xml:lang="en">2020-09-23T09:53:21+00:00</dc:date>
@@ -1762,9 +1761,8 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-10-21T13:01:01+00:00</dc:date>
         <rdfs:label xml:lang="en">progress notes</rdfs:label>
@@ -1821,12 +1819,25 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewComments -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewComments">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-08T18:02:21+00:00</dc:date>
+        <rdfs:label xml:lang="en">review comments</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewDate -->
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewDate">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <dc:creator>Lucy McKenna</dc:creator>
@@ -1840,7 +1851,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29 09:09:10</dc:date>
         <rdfs:comment xml:lang="en">The identifier of a Risk Assessment.</rdfs:comment>
@@ -1900,8 +1911,8 @@
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Context"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss"/>
@@ -2018,6 +2029,7 @@
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">In order to mitigate or reduce risks, additional actions (controls) may be required. These should be described in a manner that will result in a tangible deliverable and be capable of being assigned to a specified post holder for implementation.</rdfs:comment>
         <rdfs:label xml:lang="en">Action</rdfs:label>
     </owl:Class>
     
@@ -2168,19 +2180,6 @@ An organization’s external context includes its external stakeholders, its loc
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date xml:lang="en">2021-09-28T16:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Likelihood ratings as per Dublin Fire Brigade&apos;s Risk Rating Matrix.</rdfs:comment>
-        <rdfs:label xml:lang="en">Likelihood (DFB)</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable -->
 
 
@@ -2281,11 +2280,11 @@ An organization’s external context includes its external stakeholders, its loc
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE -->
 
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#score"/>
@@ -2294,8 +2293,8 @@ An organization’s external context includes its external stakeholders, its loc
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Uses HSE impact table for definition.</rdfs:comment>
-        <rdfs:label xml:lang="en">Extreme Impact</rdfs:label>
+        <rdfs:comment xml:lang="en">Uses HSE primary impact table for definition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Extreme</rdfs:label>
     </owl:Class>
     
 
@@ -2372,19 +2371,6 @@ An organization’s external context includes its external stakeholders, its loc
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date xml:lang="en">2021-09-28T16:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Likelihood ratings as per the HSE Risk Assessment Tool.</rdfs:comment>
-        <rdfs:label xml:lang="en">Likelihood (HSE)</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport -->
 
 
@@ -2415,7 +2401,7 @@ An organization’s external context includes its external stakeholders, its loc
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription"/>
@@ -2438,8 +2424,33 @@ An organization’s external context includes its external stakeholders, its loc
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The primary area impacted by a Risk. The HSE Risk Assessment tool identifies eight primary impact areas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The primary area impacted by a risk.</rdfs:comment>
         <rdfs:label xml:lang="en">Primary Impact Category</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:59:21+00:00</dc:date>
+        <rdfs:comment>Risk impact scoring based on the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:label xml:lang="en">Impact (HSE)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date xml:lang="en">2022-06-01T18:59:21+00:00</dc:date>
+        <rdfs:label xml:lang="en">Impact Severity</rdfs:label>
     </owl:Class>
     
 
@@ -2497,6 +2508,45 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The probability that an unsafe event or condition might occur. Likelihood scoring based on the Aer Lingus risk matrix.</rdfs:comment>
+        <rdfs:label xml:lang="en">Likelihood (Aer Lingus)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date xml:lang="en">2021-09-28T16:53:21+00:00</dc:date>
+        <rdfs:comment>Likelihood scoring based on the DFB risk matrix.</rdfs:comment>
+        <rdfs:label xml:lang="en">Likelihood (DFB)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date xml:lang="en">2021-09-28T16:53:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Likelihood scoring based on the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:label xml:lang="en">Likelihood (HSE)</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain -->
 
 
@@ -2517,11 +2567,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE -->
 
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#score"/>
@@ -2530,8 +2580,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Defined by HSE impact table.</rdfs:comment>
-        <rdfs:label xml:lang="en">Major Impact</rdfs:label>
+        <rdfs:comment xml:lang="en">Defined by HSE primary impact table.</rdfs:comment>
+        <rdfs:label xml:lang="en">Major</rdfs:label>
     </owl:Class>
     
 
@@ -2555,11 +2605,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE -->
 
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#score"/>
@@ -2568,17 +2618,17 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Defined by HSE impact table.</rdfs:comment>
-        <rdfs:label xml:lang="en">Minor Impact</rdfs:label>
+        <rdfs:comment xml:lang="en">Defined by HSE primary impact table.</rdfs:comment>
+        <rdfs:label xml:lang="en">Minor</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE -->
 
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#score"/>
@@ -2587,17 +2637,17 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Defined by HSE impact table.</rdfs:comment>
-        <rdfs:label xml:lang="en">Moderate Impact</rdfs:label>
+        <rdfs:comment xml:lang="en">Defined by HSE primary impact table.</rdfs:comment>
+        <rdfs:label xml:lang="en">Moderate</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE -->
 
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#score"/>
@@ -2606,8 +2656,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date xml:lang="en">2020-09-29 09:09:10</dc:date>
-        <rdfs:comment xml:lang="en">Uses HSE impact table definition.</rdfs:comment>
-        <rdfs:label xml:lang="en">Negligible Impact</rdfs:label>
+        <rdfs:comment xml:lang="en">Uses HSE primary impact table definition.</rdfs:comment>
+        <rdfs:label xml:lang="en">Negligible</rdfs:label>
     </owl:Class>
     
 
@@ -3033,8 +3083,57 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Used to collect risk information from a risk assessment, for example in a risk register.</rdfs:comment>
         <rdfs:label xml:lang="en">Risk Assessment Record (Form)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordAerLingus -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordAerLingus">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-08T09:09:10+00:00</dc:date>
+        <rdfs:label xml:lang="en">Risk Assessment Record Aer Lingus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-08T09:09:10+00:00</dc:date>
+        <rdfs:label xml:lang="en">Risk Assessment Record DFB</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordHSE -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordHSE">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-08T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields.</rdfs:comment>
+        <rdfs:label xml:lang="en">Risk Assessment Record HSE</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordHSE"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-08T09:09:10+00:00</dc:date>
+        <rdfs:label xml:lang="en">Risk Assessment Record SJH</rdfs:label>
     </owl:Class>
     
 
@@ -3173,7 +3272,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </rdfs:subClassOf>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The estimated level of risk taking into consideration the existing controls in place. Defined by cross-referencing the impact and likelihood in the risk matrix.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The estimated level of risk taking into consideration the existing controls in place. Defined by cross-referencing the impact severity and likelihood in the risk matrix.</rdfs:comment>
         <rdfs:label xml:lang="en">Risk Rating</rdfs:label>
     </owl:Class>
     
@@ -3214,6 +3313,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:date>2021-03-10T14:41:26+00:00</dc:date>
         <rdfs:comment>The type of risk being assessed in a risk assessment form.</rdfs:comment>
         <rdfs:label>Risk Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date xml:lang="en">2022-06-08T09:09:10+00:00</dc:date>
+        <rdfs:label xml:lang="en">Risk Type SJH</rdfs:label>
     </owl:Class>
     
 
@@ -3259,11 +3370,37 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:17:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The extent of the damage to the institution, its people, and its goals and objectives resulting from a risk event occurring.</rdfs:comment>
+        <rdfs:label xml:lang="en">Severity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:17:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Possible consequences of an unsafe event or condition, taking as reference the worst foreseeable situation. Severity scoring based on the Aer Lingus risk matrix.</rdfs:comment>
+        <rdfs:label>Severity (Aer Lingus)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The severity of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix.</rdfs:comment>
-        <rdfs:label xml:lang="en">Severity</rdfs:label>
+        <rdfs:comment>Severity scoring based on the DFB risk matrix.</rdfs:comment>
+        <rdfs:label xml:lang="en">Severity (DFB)</rdfs:label>
     </owl:Class>
     
 
@@ -3302,6 +3439,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:date>2019-11-13T15:21:31+00:00</dc:date>
         <rdfs:comment xml:lang="en">A stage is the stage on the cube questionnaire.</rdfs:comment>
         <rdfs:label xml:lang="en">Stage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date xml:lang="en">2022-06-08T09:09:10+00:00</dc:date>
+        <rdfs:label xml:lang="en">Standard Risk Assessment Record</rdfs:label>
     </owl:Class>
     
 
@@ -3379,6 +3528,19 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T09:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">No likelihood specified.</rdfs:comment>
         <rdfs:label xml:lang="en">Unspecified Likelihood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#UnspecifiedSeverity -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#UnspecifiedSeverity">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
+        <dc:creator xml:lang="en">Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:02:10+00:00</dc:date>
+        <rdfs:comment>No severity rating specified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unspecified Severity</rdfs:label>
     </owl:Class>
     
 
@@ -3482,10 +3644,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T20:30:14+00:00</dc:date>
-        <rdfs:comment xml:lang="en">A method or system of management (of operational risk) required to assure that human systems work.</rdfs:comment>
         <rdfs:label xml:lang="en">Governance</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3495,23 +3656,22 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T20:30:45+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The workforce of an organisation.</rdfs:comment>
         <rdfs:label xml:lang="en">Human Resources</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesProjects -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects">
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesProjects">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks relating to the procedures/technologies etc. employed to achieve particular objectives and projects.A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks relating to the procedures/technologies etc. employed to achieve particular objectives and projects.</rdfs:comment>
         <rdfs:label xml:lang="en">Objectives/Projects</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3521,10 +3681,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-05-04T20:30:56+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Providing safe access to levels of care and/or the services necessary to meet patient needs.</rdfs:comment>
         <rdfs:label xml:lang="en">Patient Care and Safety (Provision of Care)</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3542,24 +3701,39 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicityReputation -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation">
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicityReputation">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks to the public reputation of the organisation and their effects. A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks to the public reputation of the organisation and their effects.</rdfs:comment>
         <rdfs:label xml:lang="en">Adverse Publicity/Reputation</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.9,1.0]</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Inadequate health and safety controls, an accident will occur. Probability 90-100%.</rdfs:comment>
+        <rdfs:label xml:lang="en">Almost Certain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <actualFrequency>At least monthly</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.99</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
@@ -3614,17 +3788,31 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks which threaten the organisation’s ability to deliver its services and serve the community. A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks which threaten the organisation’s ability to deliver its services and serve the community.</rdfs:comment>
         <rdfs:label xml:lang="en">Business Continuity</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophic -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophic">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus"/>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:23:12+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: Fatalities or destruction of equipment / loss of aircraft. Qualified (Injury): Fatal. Qualified (Damage): Complete destruction of equipment, grounding of operation. Qualified (ICAO): Total loss or hull loss. Qualified (Operational Impact): Prolonged fleet grounding. Organisational Impact: Change in public perception of Airline&apos;s reputation.</rdfs:comment>
+        <rdfs:label xml:lang="en">Catastrophic</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
@@ -3664,78 +3852,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks associated with compliance with requirements in relation to the standards set out in relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards. A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks associated with compliance with requirements in relation to the standards set out in relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards.</rdfs:comment>
         <rdfs:label xml:lang="en">Compliance</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbAlmostCertain -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbAlmostCertain">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood"/>
-        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Inadequate health and safety controls, an accident will occur.</rdfs:comment>
-        <rdfs:label xml:lang="en">Almost Certain</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbPossible -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbPossible">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood"/>
-        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">If the situation is not well managed an accident is likely to occur.</rdfs:comment>
-        <rdfs:label xml:lang="en">Possible</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbRare -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbRare">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood"/>
-        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken.</rdfs:comment>
-        <rdfs:label xml:lang="en">Rare</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbUnlikely -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbUnlikely">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood"/>
-        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">The situation is well under control, but occasional lapses could occur.</rdfs:comment>
-        <rdfs:label xml:lang="en">Unlikely</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbVeryLikely -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbVeryLikely">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood"/>
-        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident.</rdfs:comment>
-        <rdfs:label xml:lang="en">Very Likely</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3759,17 +3877,17 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks which threaten the prevention, limitation, elimination, abatement or reduction of environmental   pollution and the preservation of a quality environment. A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks which threaten the prevention, limitation, elimination, abatement or reduction of environmental   pollution and the preservation of a quality environment.</rdfs:comment>
         <rdfs:label xml:lang="en">Environment</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactAdversePublicity-Reputation -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactAdversePublicity-Reputation">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
@@ -3779,11 +3897,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactBusinessContinuity -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactBusinessContinuity">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
@@ -3793,11 +3911,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactCompliance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactCompliance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
@@ -3807,11 +3925,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactEnvironment -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactEnvironment">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
@@ -3821,11 +3939,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactFinance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactFinance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
@@ -3835,11 +3953,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHarmToAPerson -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHarmToAPerson">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
@@ -3849,11 +3967,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactObjectivesAndProjects -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactObjectivesAndProjects">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
@@ -3863,16 +3981,46 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactServiceUserExperience -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactServiceUserExperience">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:33:47+00:00</dc:date>
         <rdfs:comment xml:lang="en">Totally unsatisfactory service user outcome resulting in long term effects, or extremely poor experience of care provision.</rdfs:comment>
         <rdfs:label xml:lang="en">Extreme Impact - Service User Experience</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0E-6</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: Unlikely to occur. Qualified (Calendar): No event in more than 10 years. Qualified (Context): Has occurred in industry but not in Aer Lingus. Qualified (per flight): Less than 1 out of 750,000 flights. Probability: &gt;2 x 10^(minus 6).</rdfs:comment>
+        <rdfs:label xml:lang="en">Extremely Improbable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0E-5</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: Not llikely to, but could, occur. Qualified (Calendar): More than twice a year. Qualified (Context): Sporadic occurrence in Aer Lingus. Qualified (per flight): 1 out of 35,000 flights. Probability: &gt;3 x 10^(minus 5).</rdfs:comment>
+        <rdfs:label xml:lang="en">Extremely Remote</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3896,7 +4044,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks relating to procedures/systems/accounting records which expose the organisation to financial risks, including risks to assets. A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks relating to procedures/systems/accounting records which expose the organisation to financial risks, including risks to assets.</rdfs:comment>
         <rdfs:label xml:lang="en">Finance</rdfs:label>
     </owl:NamedIndividual>
     
@@ -3909,8 +4057,22 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks  which  may  contribute  to  the  physical  or  psychological  harm  of  an  individual.A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks  which  may  contribute  to  the  physical  or  psychological  harm  of  an  individual.</rdfs:comment>
         <rdfs:label xml:lang="en">Harm to a Person</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus"/>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:23:12+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: A large reduction in safety margins, physical distress or a workload such that operators cannot be relied upon to perform their tasks accurately or completely. Serious injury. Mahor equipment damage. Qualified (Injury): Serious injuries and/or permanent disability with serious illness or health impairment. Qualified (Damage): Significant damage leading to prolonged loss of service, cost impact. Qualified (ICAO): Accident with serious injuries and/or significant damage to aircraft. Qualified (Operational Impact): Fleet grounded for a brief period. Organisational Impact: Extended national or international media coverage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Hazardous</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -3997,11 +4159,26 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#likely -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#likely">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.6,0.9]</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident. Probability: 60-90%.</rdfs:comment>
+        <rdfs:label xml:lang="en">Likely</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <actualFrequency>Bimonthly</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.75</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
@@ -4090,11 +4267,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactAdversePublicity-Reputation -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactAdversePublicity-Reputation">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
@@ -4104,11 +4281,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactBusinessContinuity -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactBusinessContinuity">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
@@ -4118,11 +4295,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactCompliance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactCompliance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
@@ -4132,11 +4309,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactEnvironment -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactEnvironment">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
@@ -4146,11 +4323,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactFinance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactFinance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
@@ -4160,11 +4337,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHarmToAPerson -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHarmToAPerson">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
@@ -4174,11 +4351,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactObjectivesAndProjects -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactObjectivesAndProjects">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
@@ -4188,16 +4365,30 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactServiceUserExperience -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactServiceUserExperience">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T20:18:16+00:00</dc:date>
         <rdfs:comment xml:lang="en">Unsatisfactory service user experience related to poor treatment resulting in long term effects.</rdfs:comment>
         <rdfs:label xml:lang="en">Major Impact - Service User Experience</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus"/>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:23:12+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: A significant reduction in safety margins, a reduction in the ability of the operators to cope with adverse operating conditions as a result of increase in workload, or as a result of conditions impairing their efficiency. Serious incident. Injury to persons. Qualified (Injury): Serious but non-permanent injuries (e.g. lost time injury). Qualified (Damage): Damage leading to delay or operational impact. Qualified (ICAO): Serious incident with injuries or substantial damage. Qualified (Operational Impact): Aircraft grounded temporarily. Organisational Impact: Short term negative media coverage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Major</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4275,26 +4466,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minor -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minor">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
-        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">1</rdfs:comment>
-        <rdfs:comment xml:lang="en">No injury.</rdfs:comment>
-        <rdfs:label xml:lang="en">Minor</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactAdversePublicity-Reputation -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactAdversePublicity-Reputation">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4304,11 +4480,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactBusinessContinuity -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactBusinessContinuity">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4318,11 +4494,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactCompliance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactCompliance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4332,11 +4508,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactEnvironment -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactEnvironment">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4346,11 +4522,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactFinance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactFinance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4360,11 +4536,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHarmToAPerson -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHarmToAPerson">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4374,11 +4550,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactObjectivesAndProjects -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactObjectivesAndProjects">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4388,11 +4564,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactServiceUserExperience -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactServiceUserExperience">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:58:36+00:00</dc:date>
@@ -4402,25 +4578,39 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderate -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderate">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
-        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus"/>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Injury / harm that is of a temporary nature and results in less than 3 days absence.</rdfs:comment>
-        <rdfs:label xml:lang="en">Moderate</rdfs:label>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T17:23:12+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: Nusance event: Operating limitations, Use of emergency procedures, Minor incident with little consequences. Does not impede a person, aurcraft or process from continuing to operate. Qualified (Injury): First aid treatment only. Qualified (Damage): Little adverse consequence, minor damage not preventing work. Qualified (ICAO): Incident with minor damage or injury. Qualified (Operational Impact): Minor delay. Organisational Impact: No media coverage.</rdfs:comment>
+        <rdfs:label xml:lang="en">Minor</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactAdversePublicity-Reputation -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactAdversePublicity-Reputation">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB"/>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">No injury.</rdfs:comment>
+        <rdfs:label xml:lang="en">Minor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:49:14+00:00</dc:date>
@@ -4430,11 +4620,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactBusinessContinuity -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactBusinessContinuity">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
@@ -4444,11 +4634,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactCompliance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactCompliance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
@@ -4458,11 +4648,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactEnvironment -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactEnvironment">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
@@ -4472,11 +4662,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactFinance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactFinance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
@@ -4486,11 +4676,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHarmToAPerson -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHarmToAPerson">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
@@ -4500,11 +4690,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactObjectivesAndProjects -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactObjectivesAndProjects">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
@@ -4514,16 +4704,30 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactServiceUserExperience -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactServiceUserExperience">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
         <rdfs:comment xml:lang="en">Unsatisfactory service user experience related to less than optimal treatment resulting in short term effects (less than 1 week).</rdfs:comment>
         <rdfs:label xml:lang="en">Moderate Impact  - Service User Experience</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB"/>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Injury / harm that is of a temporary nature and results in less than 3 days absence.</rdfs:comment>
+        <rdfs:label xml:lang="en">Moderate</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4539,11 +4743,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactAdversePublicity-Reputation -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactAdversePublicity-Reputation">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:17:44+00:00</dc:date>
@@ -4553,11 +4757,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactBusinessContinuity -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactBusinessContinuity">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:15:34+00:00</dc:date>
@@ -4567,11 +4771,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactCompliance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactCompliance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T18:56:12+00:00</dc:date>
@@ -4581,11 +4785,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactEnvironment -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactEnvironment">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:18:56+00:00</dc:date>
@@ -4595,11 +4799,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactFinance -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactFinance">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:18:11+00:00</dc:date>
@@ -4609,11 +4813,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHarmToAPerson -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHarmToAPerson">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T17:32:12+00:00</dc:date>
@@ -4623,11 +4827,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactObjectivesAndProjects -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactObjectivesAndProjects">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T19:15:34+00:00</dc:date>
@@ -4637,11 +4841,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactServiceUserExperience -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactServiceUserExperience">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
         <dc:creator xml:lang="en">Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T17:27:12+00:00</dc:date>
@@ -4669,17 +4873,32 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T14:46:14+00:00</dc:date>
-        <rdfs:comment>As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks.</rdfs:comment>
         <rdfs:label>Operational</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#possible -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#possible">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.3,0.6]</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">If the situation is not well managed an accident is likely to occur. Probability 30-60%.</rdfs:comment>
+        <rdfs:label xml:lang="en">Possible</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <actualFrequency>Occurs every 1-2 years</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.5</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
@@ -4691,11 +4910,41 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0E-4</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: Likely to occur. Qualified (Calendar): More than once a week. Qualified (Context): Has occurred many times in Aer Lingus. Qualified (per flight): 1 out of 1500 flights. Probability: &gt;7 x 10^(minus 4).</rdfs:comment>
+        <rdfs:label xml:lang="en">Probable</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">&lt;0.1</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken. Probability: &lt;10%.</rdfs:comment>
+        <rdfs:label xml:lang="en">Rare</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <actualFrequency>Occurs every 5 years</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.01</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">1</score>
@@ -4719,11 +4968,26 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#serious -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#serious">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0E-4</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-06-01T18:22:21+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Plain: Could occur, or has occurred. Qualified (Calendar): More than once a month. Qualified (Context): Has occurred in Aer Lingus. Qualified (per flight): 1 out of 6000 flights. Probability: &gt;2 x 10^(minus 4).</rdfs:comment>
+        <rdfs:label xml:lang="en">Remote</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
@@ -4740,7 +5004,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2021-01-29T09:52:00+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Risks which threaten the delivery of a service provision to  service users in terms of quality, in a  comfortable,  caring  and  safe  environment,  delivered  in  a  calm  and reassuring  way;  having  information  to  make  choices,  to  feel  confident  and  to  feel  in  control;  being  listened  to  and talked  to as an  equal;  being treated with honesty, respect and dignity. A type of Risk Impact Category described in the HSE Risk Assessment Tool.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Risks which threaten the delivery of a service provision to  service users in terms of quality, in a  comfortable,  caring  and  safe  environment,  delivered  in  a  calm  and reassuring  way;  having  information  to  make  choices,  to  feel  confident  and  to  feel  in  control;  being  listened  to  and talked  to as an  equal;  being treated with honesty, respect and dignity.</rdfs:comment>
         <rdfs:label xml:lang="en">Service User Experience</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4777,7 +5041,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-03-10T14:45:13+00:00</dc:date>
-        <rdfs:comment>As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A strategic risk has the ability to impact on the achievement/delivery of the organisation&apos;s strategic objectives/directions. Strategic risks relate to the highest level of objective for the organisation, which typically have a long-term focus and are linked to the organisation&apos;s strategic plan.</rdfs:comment>
         <rdfs:label xml:lang="en">Strategic</rdfs:label>
     </owl:NamedIndividual>
     
@@ -4795,11 +5059,26 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB"/>
+        <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">[0.1,0.3]</probability>
+        <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">The situation is well under control, but occasional lapses could occur. Probability 10-30%.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unlikely</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <actualFrequency>Occurs every 2-3 years</actualFrequency>
         <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.1</probability>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</score>
@@ -4831,25 +5110,25 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImpactCategory -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImpactCategory">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
+        <dc:creator>Lucy McKenna</dc:creator>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">No primary impact category specified.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unspecified Primary Impact Category</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImportance -->
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImportance">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance"/>
         <rdfs:label xml:lang="en">Unspecified Importance</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedPrimaryImpactCategory -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedPrimaryImpactCategory">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory"/>
-        <dc:creator>Lucy McKenna</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">No primary impact category specified.</rdfs:comment>
-        <rdfs:label xml:lang="en">Unspecified Primary Impact Category</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -4878,7 +5157,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedSeverity">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
         <rdfs:comment xml:lang="en">No severity level specified.</rdfs:comment>
@@ -4907,11 +5185,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#verySerious -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#verySerious">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"/>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB"/>
         <score rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</score>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T11:09:10+00:00</dc:date>
