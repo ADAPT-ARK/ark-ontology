@@ -1500,6 +1500,12 @@ An organization’s external context includes its external stakeholders, its loc
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity">Severity</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#score"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">score</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="ImplementStage">
@@ -1648,6 +1654,18 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#UnspecifiedLikelihood">Unspecified Likelihood</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#actualFrequency"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">actual frequency</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#probability"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">probability</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#score"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">score</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#textualDescription"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription">textual description</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="LikelihoodAerLingus">
@@ -1760,16 +1778,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <a href="#Likelihood"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood">Likelihood</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#actualFrequency"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">actual frequency</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#probability"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">probability</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#textualDescription"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription">textual description</a>
-            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -5992,7 +6000,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact</p>
       <div class="comment">
-         <span class="markdown">Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?</span>
+         <span class="markdown">Links a Risk to its Impact Severity. What Impact Severity score would you give the risk?</span>
       </div>
       <dl>
          <dt>Date:
@@ -6057,7 +6065,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood</p>
       <div class="comment">
-         <span class="markdown">Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?</span>
+         <span class="markdown">Links a risk to the likelihood of it occurring. What likelihood score would you give the risk?</span>
       </div>
       <dl>
          <dt>Date:
@@ -7136,7 +7144,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating</p>
       <div class="comment">
-         <span class="markdown">Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25).</span>
+         <span class="markdown">Links a Risk to its Risk Rating. Multiplying the inherent Impact Severity by the Likelihood will give the risk rating.</span>
       </div>
       <dl>
          <dt>Date:
@@ -8263,8 +8271,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#LikelihoodHSE"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE">Likelihood (HSE)</a>
+               <a href="#Likelihood"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood">Likelihood</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is also defined as</dt>
@@ -9064,8 +9072,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#LikelihoodHSE"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE">Likelihood (HSE)</a>
+               <a href="#Likelihood"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood">Likelihood</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is also defined as</dt>
@@ -9341,21 +9349,13 @@ Familiarity gained by personal experience, vicariously or through collective pro
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://www.w3.org/2002/07/owl#Thing"
-                  target="_blank"
-                  title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+               <a href="#ImpactSeverity"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity">Impact Severity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
-               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
-                  target="_blank"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity">access control entity</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dd>
-               <a href="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
-                  target="_blank"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
+               <a href="#Likelihood"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood">Likelihood</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is also defined as</dt>
@@ -9451,8 +9451,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>
-               <a href="#LikelihoodHSE"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE">Likelihood (HSE)</a>
+               <a href="#Likelihood"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood">Likelihood</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dd>

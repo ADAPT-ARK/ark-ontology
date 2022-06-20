@@ -615,7 +615,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk to its Impact Severity. What Impact Severity score would you give the risk?</rdfs:comment>
         <rdfs:label xml:lang="en">has impact</rdfs:label>
     </owl:ObjectProperty>
     
@@ -641,7 +641,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a risk to the likelihood of it occurring. What likelihood score would you give the risk?</rdfs:comment>
         <rdfs:label xml:lang="en">has likelihood</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1061,7 +1061,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating"/>
         <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
-        <rdfs:comment>Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a Risk to its Risk Rating. Multiplying the inherent Impact Severity by the Likelihood will give the risk rating.</rdfs:comment>
         <rdfs:label>has risk rating</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1442,7 +1442,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
     </owl:DatatypeProperty>
     
 
@@ -1747,7 +1747,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
     </owl:DatatypeProperty>
     
 
@@ -1872,9 +1872,8 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">
-        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
     </owl:DatatypeProperty>
     
 
@@ -1902,7 +1901,7 @@
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome"/>
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss"/>

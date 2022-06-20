@@ -413,7 +413,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
            rdfs:range :Impact ;
            <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
            <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-           rdfs:comment "Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?"@en ;
+           rdfs:comment "Links a Risk to its Impact Severity. What Impact Severity score would you give the risk?"@en ;
            rdfs:label "has impact"@en .
 
 
@@ -431,7 +431,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:range :LikelihoodHSE ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-               rdfs:comment "Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?"@en ;
+               rdfs:comment "Links a risk to the likelihood of it occurring. What likelihood score would you give the risk?"@en ;
                rdfs:label "has likelihood"@en .
 
 
@@ -728,7 +728,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                rdfs:range :RiskRating ;
                <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" ;
                <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" ;
-               rdfs:comment "Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25)." ;
+               rdfs:comment "Links a Risk to its Risk Rating. Multiplying the inherent Impact Severity by the Likelihood will give the risk rating."@en ;
                rdfs:label "has risk rating" .
 
 
@@ -992,7 +992,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency
 :actualFrequency rdf:type owl:DatatypeProperty ;
-                 rdfs:domain :LikelihoodHSE .
+                 rdfs:domain :Likelihood .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData
@@ -1209,7 +1209,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#probability
 :probability rdf:type owl:DatatypeProperty ;
-             rdfs:domain :LikelihoodHSE .
+             rdfs:domain :Likelihood .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes
@@ -1294,9 +1294,8 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#score
 :score rdf:type owl:DatatypeProperty ;
-       rdfs:domain owl:Thing ,
-                   <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> ,
-                   <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
+       rdfs:domain :ImpactSeverity ,
+                   :Likelihood .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#signature
@@ -1316,7 +1315,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                                 :Control ,
                                 :GainAchieved ,
                                 :Impact ,
-                                :LikelihoodHSE ,
+                                :Likelihood ,
                                 :Mechanism ,
                                 :Outcome ,
                                 :PotentialLoss ,

@@ -370,7 +370,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk to its Impact Severity. What Impact Severity score would you give the risk?"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImpact> <http://www.w3.org/2000/01/rdf-schema#label> "has impact"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasImportance
@@ -386,7 +386,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk to the likelihood of it occurring. What likelihood score would you give the risk?"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#label> "has likelihood"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism
@@ -659,7 +659,7 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskRating> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25)." .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk to its Risk Rating. Multiplying the inherent Impact Severity by the Likelihood will give the risk rating."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskRating> <http://www.w3.org/2000/01/rdf-schema#label> "has risk rating" .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskStatus
@@ -915,7 +915,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1110,7 +1110,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#probability
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1185,9 +1185,8 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#score
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#signature
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1205,7 +1204,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#textualDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#PotentialLoss> .
