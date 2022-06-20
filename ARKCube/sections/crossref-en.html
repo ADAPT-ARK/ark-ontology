@@ -2159,8 +2159,8 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#hasOrganisationSiteService"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService">has organisation site/service</a>
+            <a href="#hasSiteService"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService">has site/service</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#memberOf"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#memberOf">member of</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#postIn"
@@ -4181,10 +4181,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite">has dept/service site</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#hasDivision"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDivision">has division</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasOrganisationSiteService"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService">has organisation site/service</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasRiskType"
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRiskType"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType">has risk type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasSiteService"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService">has site/service</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#riskAssessmentId"
                title="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskAssessmentId">unique ID number</a>
             <sup class="type-dp" title="data property">dp</sup>
@@ -4650,10 +4650,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism">has mechanism</a>
       </li>
       <li>
-         <a href="#hasOrganisationSiteService"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService">has organisation site/service</a>
-      </li>
-      <li>
          <a href="#hasOrganisationalUnit"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit">has organisational unit</a>
       </li>
@@ -4776,6 +4772,10 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <li>
          <a href="#hasRiskType"
             title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType">has risk type</a>
+      </li>
+      <li>
+         <a href="#hasSiteService"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService">has site/service</a>
       </li>
       <li>
          <a href="#hasStage"
@@ -5834,7 +5834,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule</p>
       <div class="comment">
-         <span class="markdown">Represents and links evidence rule with  question.</span>
+         <span class="markdown">Represents and links an evidence rule with a question.</span>
       </div>
       <dl>
          <dt>Date:
@@ -6064,6 +6064,11 @@ Familiarity gained by personal experience, vicariously or through collective pro
         </dt>
          <dd>22T09:53:21+00:00/09/2020</dd>
       </dl>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Rob Brennan</dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -6107,43 +6112,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
             <dd>
                <a href="#Mechanism"
                   title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism">Mechanism</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasOrganisationSiteService">
-      <h3>has organisation site/service<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService</p>
-      <div class="comment">
-         <span class="markdown">Links a Risk Assessment to an organisation or a hospital site/service.</span>
-      </div>
-      <dl>
-         <dt>Date:
-        </dt>
-         <dd>29T09:09:10+00:00/09/2020</dd>
-      </dl>
-      <dl>
-         <dt>Authors:
-                    </dt>
-         <dd>Rob Brennan</dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#StandardRiskAssessmentRecord"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord">Standard Risk Assessment Record</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Organisation"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation">Organisation</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -6327,7 +6295,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis</p>
       <div class="comment">
-         <span class="markdown">Relates a Project with all the analysis done on the Project.</span>
+         <span class="markdown">Relates a project to an analysis of the project.</span>
       </div>
       <div class="description">
          <dl>
@@ -6354,7 +6322,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription</p>
       <div class="comment">
-         <span class="markdown">Links a Project to its Description.</span>
+         <span class="markdown">Links a project to its description.</span>
       </div>
       <dl>
          <dt>Date:
@@ -7271,6 +7239,43 @@ Familiarity gained by personal experience, vicariously or through collective pro
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasSiteService">
+      <h3>has site/service<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService</p>
+      <div class="comment">
+         <span class="markdown">Links a Risk Assessment to an organisation or a hospital site/service.</span>
+      </div>
+      <dl>
+         <dt>Date:
+        </dt>
+         <dd>29T09:09:10+00:00/09/2020</dd>
+      </dl>
+      <dl>
+         <dt>Authors:
+                    </dt>
+         <dd>Rob Brennan</dd>
+      </dl>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StandardRiskAssessmentRecord"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord">Standard Risk Assessment Record</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Organisation"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation">Organisation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="hasStage">
       <h3>has stage<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -8086,7 +8091,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
    <ul class="hlist">
       <li>
          <a href="#actualFrequency"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">actual frequency</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">
+            <span>actual frequency</span>
+         </a>
       </li>
       <li>
          <a href="#analyticsData"
@@ -8174,7 +8181,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </li>
       <li>
          <a href="#probability"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">probability</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">
+            <span>probability</span>
+         </a>
       </li>
       <li>
          <a href="#progressNotes"
@@ -8210,7 +8219,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </li>
       <li>
          <a href="#score"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">score</a>
+            title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">
+            <span>score</span>
+         </a>
       </li>
       <li>
          <a href="#signature"
@@ -8248,19 +8259,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </h3>
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency</p>
-      <div class="comment">
-         <span class="markdown">Defines the range of the likelihood value for a risk in terms of frequency.</span>
-      </div>
-      <dl>
-         <dt>Date:
-        </dt>
-         <dd>22T09:53:21+00:00/09/2020</dd>
-      </dl>
-      <dl>
-         <dt>Authors:
-                    </dt>
-         <dd>Rob Brennan</dd>
-      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -8269,11 +8267,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   title="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE">Likelihood (HSE)</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
+            <dt>is also defined as</dt>
             <dd>
-               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral"
-                  target="_blank"
-                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral">plain literal</a>
+               <a href="#actualFrequency">annotation property</a>
             </dd>
          </dl>
       </div>
@@ -9064,19 +9060,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </h3>
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#probability</p>
-      <div class="comment">
-         <span class="markdown">Defines the probability of a risk likelihood category.</span>
-      </div>
-      <dl>
-         <dt>Date:
-        </dt>
-         <dd>23T09:53:21+00:00/09/2020</dd>
-      </dl>
-      <dl>
-         <dt>Authors:
-                    </dt>
-         <dd>Rob Brennan</dd>
-      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -9085,11 +9068,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   title="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE">Likelihood (HSE)</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
+            <dt>is also defined as</dt>
             <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#float"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
+               <a href="#probability">annotation property</a>
             </dd>
          </dl>
       </div>
@@ -9356,19 +9337,6 @@ Familiarity gained by personal experience, vicariously or through collective pro
       </h3>
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKCube#score</p>
-      <div class="comment">
-         <span class="markdown">Defines a numerical value for a risk rating, risk likelihood or impact based on the HSE risk tables.</span>
-      </div>
-      <dl>
-         <dt>Date:
-        </dt>
-         <dd>22T09:53:21+00:00/09/2020</dd>
-      </dl>
-      <dl>
-         <dt>Authors:
-                    </dt>
-         <dd>Rob Brennan</dd>
-      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -9390,11 +9358,9 @@ Familiarity gained by personal experience, vicariously or through collective pro
                   title="https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity">data entity</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
-            <dt>has range</dt>
+            <dt>is also defined as</dt>
             <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#int"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+               <a href="#score">annotation property</a>
             </dd>
          </dl>
       </div>

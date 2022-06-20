@@ -73,14 +73,17 @@
 # http://www.w3.org/ns/prov#n
 <http://www.w3.org/ns/prov#n> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#:actualFrequency
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#:actualFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#:probability
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#:probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#probability
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#:score
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#:score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#score
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
 # 
 # 
 # 
@@ -329,7 +332,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule> <http://purl.org/dc/elements/1.1/date> "2019-11-18T13:07:41+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents and links evidence rule with  question." .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents and links an evidence rule with a question." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule> <http://www.w3.org/2000/01/rdf-schema#label> "has evidence rule"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasEvidenceRule> <http://www.w3.org/2002/07/owl#deprecated> "true"@en .
 # 
@@ -381,10 +384,10 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#label> "has likelihood"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood> <http://www.w3.org/2000/01/rdf-schema#label> "Rob Brennan" .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -394,16 +397,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links the project phase with Mechanism." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism> <http://www.w3.org/2000/01/rdf-schema#label> "has mechanism"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism> <http://www.w3.org/2002/07/owl#inverseOf> "isMechanismOf" .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to an organisation or a hospital site/service."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://www.w3.org/2000/01/rdf-schema#label> "has organisation site/service"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService> <http://www.w3.org/2000/01/rdf-schema#label> "has hospital site/service" .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -452,7 +445,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Project with all the analysis done on the Project."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a project to an analysis of the project."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "has project analysis"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription
@@ -461,7 +454,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://purl.org/dc/elements/1.1/date> "2021-06-14T20:49:04+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project to its Description."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to its description."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has project description"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectedGain
@@ -686,6 +679,16 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType> <http://purl.org/dc/elements/1.1/date> "2021-03-10T14:37:52.608523" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a risk to the specific type of risk being assessed." .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskType> <http://www.w3.org/2000/01/rdf-schema#label> "has risk type" .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to an organisation or a hospital site/service."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#label> "has site/service"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#label> "has hospital site/service" .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -913,11 +916,6 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the range of the likelihood value for a risk in terms of frequency."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "actual frequency"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1113,11 +1111,6 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#probability
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the probability of a risk likelihood category."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1195,11 +1188,6 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a numerical value for a risk rating, risk likelihood or impact based on the HSE risk tables."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#label> "score"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#signature
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#signature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -2378,23 +2366,23 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.9,1.0]"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "Inadequate health and safety controls, an accident will occur. Probability 90-100%."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Almost Certain"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.9,1.0]"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "At least monthly" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.99"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 99%. Actual Frequency: At least monthly."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <http://www.w3.org/2000/01/rdf-schema#label> "Almost Certain"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "At least monthly" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.99"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2428,20 +2416,20 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T17:23:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: Fatalities or destruction of equipment / loss of aircraft. Qualified (Injury): Fatal. Qualified (Damage): Complete destruction of equipment, grounding of operation. Qualified (ICAO): Total loss or hull loss. Qualified (Operational Impact): Prolonged fleet grounding. Organisational Impact: Change in public perception of Airline's reputation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Catastrophic"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "Death or multiple irreversible injuries."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Catastrophic"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#closed
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#closed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2482,94 +2470,94 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#comment> "National/International media/adverse publicity, > than 3 days. Editorial follows days of news stories & features in National papers.Public confidence in the organisation undermined.HSE use of resources questioned. CEO’s performance questioned. Calls for individual HSE officials to be sanctioned. Taoiseach/Minister forced to comment or intervene. Questions in the Dáil. Public calls (at national level) for specific remedial actions to be taken. Court action. Public (independent) Inquiry."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Adverse Publicity/Reputation"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#comment> "Permanent loss of core service or facility. Disruption to facility leading to significant ‘knock on’ effect."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Business Continuity"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Gross failure to meet external standards. Repeated failure to meet national norms and standards/regulations. Severely critical report with possible major reputational or financial implications."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Compliance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "Toxic release affecting off-site with detrimental effect requiring outside assistance."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Environment"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#comment> ">2.0% budget deficit."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Finance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident leading to death or major permanent incapacity. Event which impacts on large number of service users or member of the public. Permanent psychosocial functioning incapacity."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Harm to a Person"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#comment> "Inability to meet project objectives. Reputation of the organisation seriously damaged."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Objectives/Projects"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:33:47+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "Totally unsatisfactory service user outcome resulting in long term effects, or extremely poor experience of care provision."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Extreme Impact - Service User Experience"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "2.0E-6"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T18:22:21+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: Unlikely to occur. Qualified (Calendar): No event in more than 10 years. Qualified (Context): Has occurred in industry but not in Aer Lingus. Qualified (per flight): Less than 1 out of 750,000 flights. Probability: >2 x 10^(minus 6)."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Extremely Improbable"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "2.0E-6"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "3.0E-5"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T18:22:21+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: Not llikely to, but could, occur. Qualified (Calendar): More than twice a year. Qualified (Context): Sporadic occurrence in Aer Lingus. Qualified (per flight): 1 out of 35,000 flights. Probability: >3 x 10^(minus 5)."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Extremely Remote"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "3.0E-5"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#finalApproval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2597,11 +2585,11 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T17:23:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: A large reduction in safety margins, physical distress or a workload such that operators cannot be relied upon to perform their tasks accurately or completely. Serious injury. Mahor equipment damage. Qualified (Injury): Serious injuries and/or permanent disability with serious illness or health impairment. Qualified (Damage): Significant damage leading to prolonged loss of service, cost impact. Qualified (ICAO): Accident with serious injuries and/or significant damage to aircraft. Qualified (Operational Impact): Fleet grounded for a brief period. Organisational Impact: Extended national or international media coverage."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Hazardous"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2648,23 +2636,23 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.6,0.9]"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident. Probability: 60-90%."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Likely"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.6,0.9]"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Bimonthly" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.75"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 75%. Actual Frequency: Bimonthly."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <http://www.w3.org/2000/01/rdf-schema#label> "Likely"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Bimonthly" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.75"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#lowDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2707,83 +2695,83 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#comment> "National media/adverse publicity, less than 3 days. News stories & features in national papers. Local media – long term adverse publicity.Public confidence in the organisation undermined. HSE use of resources questioned. Minister may make comment. Possible questions in the Dáil. Public calls (at national level) for specific remedial actions to be taken possible HSE review/investigation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Adverse Publicity/Reputation"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#comment> "Sustained loss of service which has serious impact on delivery of service user care or service resulting in major contingency plans being involved."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Business Continuity"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Repeated failure to meet external standards. Failure to meet national norms and standards/Regulations (e.g. Mental Health, Child Care Act etc). Critical report or substantial number of significant findings and/or lack of adherence to regulations."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Compliance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "Release affecting minimal off-site area requiring external assistance (fire brigade, radiation, protection service, etc.)"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Environment"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#comment> "1.0-2.0% budget deficit."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Finance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "Major injuries/long term incapacity or disability (loss of limb) requiring medical treatment and/or counselling. Impaired psychosocial functioning greater than six months."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Harm to a Person"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#comment> "Significant project over-run."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Objectives/Projects"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/date> "2021-08-25T20:18:16+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "Unsatisfactory service user experience related to poor treatment resulting in long term effects."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Major Impact - Service User Experience"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T17:23:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: A significant reduction in safety margins, a reduction in the ability of the operators to cope with adverse operating conditions as a result of increase in workload, or as a result of conditions impairing their efficiency. Serious incident. Injury to persons. Qualified (Injury): Serious but non-permanent injuries (e.g. lost time injury). Qualified (Damage): Damage leading to delay or operational impact. Qualified (ICAO): Serious incident with injuries or substantial damage. Qualified (Operational Impact): Aircraft grounded temporarily. Organisational Impact: Short term negative media coverage."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Major"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -2826,173 +2814,173 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#comment> "Local media coverage – short term. Some public concern. Minor effect on staff morale/public attitudes. Internal review necessary."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Adverse Publicity/Reputation"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#comment> "Short term disruption to service with minor impact on service user care."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Business Continuity"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Single failure to meet internal PPPGs. Minor recommendations which can be easily addressed by local management."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Compliance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "On site release contained by organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Environment"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#comment> "0.33-0.5% budget deficit."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Finance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "Minor injury or illness, first aid treatment required. <3 days absence. <3 days extended hospital stay. Impaired psychosocial functioning greater than 3 days less than one month."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Harm to a Person"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#comment> "Minor reduction in scope, quality or schedule."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Objectives/Projects"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:58:36+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "Unsatisfactory service user experience related to less than optimal treatment and/or inadequate information, not being to talked to & treated as an equal; or not being treated with honesty, dignity & respect – readily resolvable."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Impact - Service User Experience"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T17:23:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: Nusance event: Operating limitations, Use of emergency procedures, Minor incident with little consequences. Does not impede a person, aurcraft or process from continuing to operate. Qualified (Injury): First aid treatment only. Qualified (Damage): Little adverse consequence, minor damage not preventing work. Qualified (ICAO): Incident with minor damage or injury. Qualified (Operational Impact): Minor delay. Organisational Impact: No media coverage."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Minor"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "No injury."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Minor"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:49:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#comment> "Local media – adverse publicity.Significant effect on staff morale & public perception of the organisation. Public calls (at local level) for specific remedial actions. Comprehensive review/investigation necessary."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Adverse Publicity/Reputation"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#comment> "Some disruption in service with unacceptable impact on service user care. Temporary loss of ability to provide service."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Business Continuity"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Repeated failure to meet internal PPPGs. Important recommendations that can be addressed with an appropriate management action plan."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Compliance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "On site release contained by organisation."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Environment"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#comment> "0.5-1.0% budget deficit."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Finance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "Significant injury requiring medical treatment e.g. Fracture and/or counselling. Agency reportable, e.g. HSA, Gardaí (violent and aggressive acts). >3 Days absence. 3-8 Days extended hospital Stay. Impaired psychosocial functioning greater than one month less than six months."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Harm to a Person"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#comment> "Reduction in scope or quality of project; project objectives or schedule."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Objectives/Projects"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "Unsatisfactory service user experience related to less than optimal treatment resulting in short term effects (less than 1 week)."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate Impact  - Service User Experience"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "Injury / harm that is of a temporary nature and results in less than 3 days absence."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Moderate"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3003,74 +2991,74 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:17:44+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#comment> "Rumours, no media coverage. No public concerns voiced.Little effect on staff morale. No review/investigation necessary."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Adverse Publicity/Reputation"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:15:34+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#comment> "Interruption in a service which does not impact on the delivery of service user care or the ability to continue to provide service."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Business Continuity"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T18:56:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Minor non-compliance with internal PPPGs. Small number of minor issues requiring improvement."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Compliance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:18:56+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#comment> "Nuisance Release."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Environment"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:18:11+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#comment> "0.33% budget deficit."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Finance"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <http://purl.org/dc/elements/1.1/date> "2021-08-25T17:32:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "Adverse event leading to minor injury not requiring first aid. No impaired Psychosocial functioning."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Harm to a Person"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <http://purl.org/dc/elements/1.1/date> "2021-08-25T19:15:34+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#comment> "Barely noticeable reduction in scope, quality or schedule."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Objectives/Projects"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <http://purl.org/dc/elements/1.1/date> "2021-08-25T17:27:12+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#comment> "Reduced quality of service user experience related to inadequate provision of information."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <http://www.w3.org/2000/01/rdf-schema#label> "Negligible Impact - Service User Experience"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#open
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3089,54 +3077,54 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.3,0.6]"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "If the situation is not well managed an accident is likely to occur. Probability 30-60%."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Possible"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.3,0.6]"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 1-2 years" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.5"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 50%. Actual Frequency: Occurs every 1-2 years."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <http://www.w3.org/2000/01/rdf-schema#label> "Possible"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 1-2 years" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.5"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "7.0E-4"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T18:22:21+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: Likely to occur. Qualified (Calendar): More than once a week. Qualified (Context): Has occurred many times in Aer Lingus. Qualified (per flight): 1 out of 1500 flights. Probability: >7 x 10^(minus 4)."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Probable"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "7.0E-4"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "<0.1"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken. Probability: <10%."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Rare"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "<0.1"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 5 years" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.01"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 1%. Actual Frequency: Occurs every 5 years or more."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <http://www.w3.org/2000/01/rdf-schema#label> "Rare/Remote"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 5 years" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.01"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#rejected> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3148,21 +3136,21 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "2.0E-4"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <http://purl.org/dc/elements/1.1/date> "2022-06-01T18:22:21+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <http://www.w3.org/2000/01/rdf-schema#comment> "Plain: Could occur, or has occurred. Qualified (Calendar): More than once a month. Qualified (Context): Has occurred in Aer Lingus. Qualified (per flight): 1 out of 6000 flights. Probability: >2 x 10^(minus 4)."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <http://www.w3.org/2000/01/rdf-schema#label> "Remote"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "2.0E-4"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "Injury / harm that is of a temporary nature and results in more than 3 days absence but not more than 28 days."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Serious"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3204,23 +3192,23 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.1,0.3]"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "The situation is well under control, but occasional lapses could occur. Probability 10-30%."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Unlikely"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "[0.1,0.3]"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 2-3 years" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.1"^^<http://www.w3.org/2001/XMLSchema#float> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <http://purl.org/dc/elements/1.1/date> "2020-09-29T09:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Probability: 10%. Actual Frequency: Occurs every 2-5 years."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <http://www.w3.org/2000/01/rdf-schema#label> "Unlikely"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> "Occurs every 2-3 years" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> "0.1"^^<http://www.w3.org/2001/XMLSchema#float> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedDelivery
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedDelivery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -3275,11 +3263,35 @@ _:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <http://purl.org/dc/elements/1.1/date> "2021-09-28T11:09:10+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#comment> "Injury resulting in more than 28 days absence / irreversible injury / permanent disablement."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <http://www.w3.org/2000/01/rdf-schema#label> "Very Serious"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB> <https://openark.adaptcentre.ie/Ontologies/ARKCube#score> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the range of the likelihood value for a risk in terms of frequency."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "actual frequency"@en .
+# 
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://purl.org/dc/elements/1.1/date> "2020-09-23T09:53:21+00:00"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the probability of a risk likelihood category."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#probability> <http://www.w3.org/2000/01/rdf-schema#label> "probability"@en .
+# 
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://purl.org/dc/elements/1.1/date> "2020-09-22T09:53:21+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a numerical value for a risk rating, risk likelihood or impact based on the HSE risk tables."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#score> <http://www.w3.org/2000/01/rdf-schema#label> "score"@en .
 # 
 # 
 # 
