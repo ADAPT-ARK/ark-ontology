@@ -507,7 +507,7 @@
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer"/>
         <dc:creator>yalemisew</dc:creator>
         <dc:date>2019-11-18T13:07:41+00:00</dc:date>
-        <rdfs:comment>Represents and links evidence rule with  question.</rdfs:comment>
+        <rdfs:comment>Represents and links an evidence rule with a question.</rdfs:comment>
         <rdfs:label xml:lang="en">has evidence rule</rdfs:label>
         <owl:deprecated xml:lang="en">true</owl:deprecated>
     </owl:ObjectProperty>
@@ -583,9 +583,9 @@
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood">
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"/>
+        <dc:creator>Rob Brennan</dc:creator>
         <dc:date>2020-09-22T09:53:21+00:00</dc:date>
         <rdfs:comment xml:lang="en">Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?</rdfs:comment>
-        <rdfs:label>Rob Brennan</rdfs:label>
         <rdfs:label xml:lang="en">has likelihood</rdfs:label>
     </owl:ObjectProperty>
     
@@ -600,20 +600,6 @@
         <rdfs:comment>This property links the project phase with Mechanism.</rdfs:comment>
         <rdfs:label xml:lang="en">has mechanism</rdfs:label>
         <owl:inverseOf>isMechanismOf</owl:inverseOf>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService -->
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationSiteService">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
-        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
-        <dc:creator>Rob Brennan</dc:creator>
-        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Risk Assessment to an organisation or a hospital site/service.</rdfs:comment>
-        <rdfs:label>has hospital site/service</rdfs:label>
-        <rdfs:label xml:lang="en">has organisation site/service</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -686,7 +672,7 @@
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasProjectAnalysis">
         <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"/>
-        <rdfs:comment xml:lang="en">Relates a Project with all the analysis done on the Project.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a project to an analysis of the project.</rdfs:comment>
         <rdfs:label xml:lang="en">has project analysis</rdfs:label>
     </owl:ObjectProperty>
     
@@ -699,7 +685,7 @@
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectDescription"/>
         <dc:creator>Lucy McKenna</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-14T20:49:04+00:00</dc:date>
-        <rdfs:comment xml:lang="en">Links a Project to its Description.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a project to its description.</rdfs:comment>
         <rdfs:label xml:lang="en">has project description</rdfs:label>
     </owl:ObjectProperty>
     
@@ -1017,6 +1003,20 @@
         <dc:date>2021-03-10T14:37:52.608523</dc:date>
         <rdfs:comment>Links a risk to the specific type of risk being assessed.</rdfs:comment>
         <rdfs:label>has risk type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService -->
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"/>
+        <dc:creator>Rob Brennan</dc:creator>
+        <dc:date>2020-09-29T09:09:10+00:00</dc:date>
+        <rdfs:comment xml:lang="en">Links a Risk Assessment to an organisation or a hospital site/service.</rdfs:comment>
+        <rdfs:label>has hospital site/service</rdfs:label>
+        <rdfs:label xml:lang="en">has site/service</rdfs:label>
     </owl:ObjectProperty>
     
 
