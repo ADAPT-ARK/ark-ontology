@@ -669,13 +669,13 @@
     "@value" : "Nick McDonald"
   } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  }, {
     "@language" : "en",
     "@value" : "Rob Brennan"
   }, {
     "@language" : "en",
     "@value" : "Yalemisew Abgaz"
-  }, {
-    "@value" : "Lucy McKenna"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
@@ -712,15 +712,6 @@
     "@value" : "0.81"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#:actualFrequency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#:probability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#:score",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Action",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -728,6 +719,10 @@
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@value" : "2020-09-29T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "In order to mitigate or reduce risks, additional actions (controls) may be required. These should be described in a manner that will result in a tangible deliverable and be capable of being assigned to a specified post holder for implementation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -757,6 +752,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-05-25T13:05:12+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Aer Lingus"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer",
@@ -922,27 +930,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@language" : "en",
-    "@value" : "2021-09-28T16:53:21+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Likelihood ratings as per Dublin Fire Brigade's Risk Rating Matrix."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Likelihood (DFB)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable",
@@ -1113,7 +1100,7 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Extreme",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1124,14 +1111,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Uses HSE impact table for definition."
+    "@value" : "Uses HSE primary impact table for definition."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Extreme Impact"
+    "@value" : "Extreme"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"
   }, {
     "@id" : "_:genid23"
   } ]
@@ -1272,7 +1259,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Governance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -1280,34 +1267,9 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2021-05-04T20:30:14+00:00"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A method or system of management (of operational risk) required to assure that human systems work."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Governance"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@language" : "en",
-    "@value" : "2021-09-28T16:53:21+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Likelihood ratings as per the HSE Risk Assessment Tool."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Likelihood (HSE)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport",
@@ -1353,17 +1315,13 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HumanResources",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2021-05-04T20:30:45+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The workforce of an organisation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1387,7 +1345,7 @@
     "@value" : "Impact"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity"
   }, {
     "@id" : "_:genid25"
   } ]
@@ -1402,11 +1360,48 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The primary area impacted by a Risk. The HSE Risk Assessment tool identifies eight primary impact areas."
+    "@value" : "The primary area impacted by a risk."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Primary Impact Category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T18:59:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk impact scoring based on the HSE Risk Assessment Tool."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Impact (HSE)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2022-06-01T18:59:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Impact Severity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
@@ -1493,6 +1488,68 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T18:22:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The probability that an unsafe event or condition might occur. Likelihood scoring based on the Aer Lingus risk matrix."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Likelihood (Aer Lingus)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2021-09-28T16:53:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Likelihood scoring based on the DFB risk matrix."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Likelihood (DFB)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2021-09-28T16:53:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Likelihood scoring based on the HSE Risk Assessment Tool."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Likelihood (HSE)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LossOrGain",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -1516,7 +1573,7 @@
     "@id" : "_:genid26"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1526,14 +1583,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Defined by HSE impact table."
+    "@value" : "Defined by HSE primary impact table."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Major Impact"
+    "@value" : "Major"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"
   }, {
     "@id" : "_:genid27"
   } ]
@@ -1560,7 +1617,7 @@
     "@id" : "_:genid28"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1570,19 +1627,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Defined by HSE impact table."
+    "@value" : "Defined by HSE primary impact table."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Minor Impact"
+    "@value" : "Minor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"
   }, {
     "@id" : "_:genid29"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1592,19 +1649,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Defined by HSE impact table."
+    "@value" : "Defined by HSE primary impact table."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Moderate Impact"
+    "@value" : "Moderate"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"
   }, {
     "@id" : "_:genid30"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1615,19 +1672,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Uses HSE impact table definition."
+    "@value" : "Uses HSE primary impact table definition."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Negligible Impact"
+    "@value" : "Negligible"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactHSE"
   }, {
     "@id" : "_:genid31"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesAndProjects",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ObjectivesProjects",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -1637,7 +1694,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks relating to the procedures/technologies etc. employed to achieve particular objectives and projects.A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks relating to the procedures/technologies etc. employed to achieve particular objectives and projects."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1733,17 +1790,13 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#PatientCareAndSafety",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2021-05-04T20:30:56+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Providing safe access to levels of care and/or the services necessary to meet patient needs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2121,6 +2174,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Report Template"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk",
@@ -2176,7 +2232,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields."
+    "@value" : "Used to collect risk information from a risk assessment, for example in a risk register."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2184,6 +2240,78 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-08T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Assessment Record Aer Lingus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-08T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Assessment Record DFB"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-08T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Used to collect risk information from a risk assessment, for example in a risk register. Supports HSE risk assessment form fields."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Assessment Record HSE"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-08T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Assessment Record SJH"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordHSE"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskContext",
@@ -2300,7 +2428,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The estimated level of risk taking into consideration the existing controls in place. Defined by cross-referencing the impact and likelihood in the risk matrix."
+    "@value" : "The estimated level of risk taking into consideration the existing controls in place. Defined by cross-referencing the impact severity and likelihood in the risk matrix."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2371,6 +2499,23 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskTypeSJH",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2022-06-08T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Risk Type SJH"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskVerificationAssessment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -2419,18 +2564,58 @@
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-28T11:09:10+00:00"
+    "@value" : "2022-06-01T17:17:10+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The severity of a risk. Used by Dublin Fire Brigade as part of their Risk Rating Matrix."
+    "@value" : "The extent of the damage to the institution, its people, and its goals and objectives resulting from a risk event occurring."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Severity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T17:17:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Possible consequences of an unsafe event or condition, taking as reference the worst foreseeable situation. Severity scoring based on the Aer Lingus risk matrix."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Severity (Aer Lingus)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-09-28T11:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Severity scoring based on the DFB risk matrix."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Severity (DFB)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Social",
@@ -2488,6 +2673,23 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Stage"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@language" : "en",
+    "@value" : "2022-06-08T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Standard Risk Assessment Record"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StatusReport",
@@ -2626,6 +2828,27 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#UnspecifiedSeverity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T17:02:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "No severity rating specified."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unspecified Severity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#VerifyEmbedStage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -2668,7 +2891,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
   } ],
@@ -2680,7 +2903,7 @@
     "@value" : "Defines the range of the likelihood value for a risk in terms of frequency."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2713,7 +2936,7 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Control"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicity-Reputation",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicityReputation",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -2723,15 +2946,41 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks to the public reputation of the organisation and their effects. A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks to the public reputation of the organisation and their effects."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Adverse Publicity/Reputation"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertain",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-09-28T11:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Inadequate health and safety controls, an accident will occur. Probability 90-100%."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Almost Certain"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "[0.9,1.0]"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#almostCertainHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
   } ],
@@ -2769,6 +3018,13 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Data that can support/comes from some analytics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2829,7 +3085,7 @@
     "@value" : "The date of the risk assessment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2850,7 +3106,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Used to link an Action with the Person assigned to perform it. Enter the name of the person responsible for the action necessary to mitigate the risk. The person responsible could be the Risk Owner, the Risk Owners Manager, or someone who reports to the Risk Owner, e.g. a CHO can assign an action to any of their Management team or to their direct Manager."
+    "@value" : "The name of the person responsible for the action necessary to mitigate the risk. The Action Owner is responsible for reporting on progress relating to the achievement of the action assigned to them. The Action Owner should be one of the following, the Risk Owner, a member of the Risk Owner’s Management Team or the person to whom the Risk Owner reports."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"
@@ -2915,15 +3171,37 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks which threaten the organisation’s ability to deliver its services and serve the community. A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks which threaten the organisation’s ability to deliver its services and serve the community."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Business Continuity"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophic",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T17:23:12+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: Fatalities or destruction of equipment / loss of aircraft. Qualified (Injury): Fatal. Qualified (Damage): Complete destruction of equipment, grounding of operation. Qualified (ICAO): Total loss or hull loss. Qualified (Operational Impact): Prolonged fleet grounding. Organisational Impact: Change in public perception of Airline's reputation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Catastrophic"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#catastrophicSeverityDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3088,6 +3366,13 @@
     "@language" : "en",
     "@value" : "A comment provided about the project."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "comment"
@@ -3103,7 +3388,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks associated with compliance with requirements in relation to the standards set out in relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards. A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks associated with compliance with requirements in relation to the standards set out in relation  to  the  organisation  and  delivery  of  high  quality  services i.e. Statutory, Clinical, Professional and Management Standards."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3118,6 +3403,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3171,6 +3460,13 @@
     "@language" : "en",
     "@value" : "The date on which the project is designed."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "design date"
@@ -3200,116 +3496,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbAlmostCertain",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-28T11:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Inadequate health and safety controls, an accident will occur."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Almost Certain"
-  } ],
-  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "5"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbPossible",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-28T11:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "If the situation is not well managed an accident is likely to occur."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Possible"
-  } ],
-  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "3"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbRare",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-28T11:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Rare"
-  } ],
-  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbUnlikely",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-28T11:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The situation is well under control, but occasional lapses could occur."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Unlikely"
-  } ],
-  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "2"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#dfbVeryLikely",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#DFBLikelihood" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-28T11:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Very Likely"
-  } ],
-  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "4"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#discusses",
@@ -3403,7 +3589,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks which threaten the prevention, limitation, elimination, abatement or reduction of environmental   pollution and the preservation of a quality environment. A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks which threaten the prevention, limitation, elimination, abatement or reduction of environmental   pollution and the preservation of a quality environment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3421,6 +3607,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A rule provided to evaluate evidence."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Evidence"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3456,8 +3645,8 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactAdversePublicity-Reputation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEAdversePublicityReputation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3478,8 +3667,8 @@
     "@value" : "5"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactBusinessContinuity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEBusinessContinuity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3500,8 +3689,8 @@
     "@value" : "5"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactCompliance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSECompliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3522,8 +3711,8 @@
     "@value" : "5"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactEnvironment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3544,8 +3733,8 @@
     "@value" : "5"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactFinance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEFinance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3566,8 +3755,8 @@
     "@value" : "5"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHarmToAPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEHarmToAPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3588,8 +3777,8 @@
     "@value" : "5"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactObjectivesAndProjects",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEObjectivesProjects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3610,8 +3799,8 @@
     "@value" : "5"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactServiceUserExperience",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremeImpactHSEServiceUserExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ExtremeImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -3630,6 +3819,58 @@
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "5"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyImprobableAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T18:22:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: Unlikely to occur. Qualified (Calendar): No event in more than 10 years. Qualified (Context): Has occurred in industry but not in Aer Lingus. Qualified (per flight): Less than 1 out of 750,000 flights. Probability: >2 x 10^(minus 6)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Extremely Improbable"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "2.0E-6"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#extremelyRemoteAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T18:22:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: Not llikely to, but could, occur. Qualified (Calendar): More than twice a year. Qualified (Context): Sporadic occurrence in Aer Lingus. Qualified (per flight): 1 out of 35,000 flights. Probability: >3 x 10^(minus 5)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Extremely Remote"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "3.0E-5"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#file",
@@ -3677,7 +3918,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks relating to procedures/systems/accounting records which expose the organisation to financial risks, including risks to assets. A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks relating to procedures/systems/accounting records which expose the organisation to financial risks, including risks to assets."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3697,6 +3938,11 @@
     "@language" : "en",
     "@value" : "The person, department or unit to whom a project is handed over."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "handover to"
@@ -3715,7 +3961,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks  which  may  contribute  to  the  physical  or  psychological  harm  of  an  individual.A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks  which  may  contribute  to  the  physical  or  psychological  harm  of  an  individual."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3757,6 +4003,9 @@
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Links an approval status to a risk assessment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -3919,7 +4168,7 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Delivery"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceStationSite",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDeptServiceSite",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
@@ -3929,11 +4178,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a risk assessment to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit."
+    "@value" : "Links a risk to a department, service or station e.g. Maternity Service/St Joseph’s Residential Unit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has dept/service/station site"
+    "@value" : "has dept/service site"
+  }, {
+    "@value" : "has station"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDerivedProject",
@@ -3999,6 +4253,11 @@
     "@language" : "en",
     "@value" : "The people, groups, departments or organisations with whom a report can be shared/distributed."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has distribution"
@@ -4014,7 +4273,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a risk assessment to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health & Wellbeing, HR etc."
+    "@value" : "Links a risk to a division e.g. Social Care, Primary Care, Acute Hospital, Mental Health, Health & Wellbeing, HR etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4077,7 +4339,7 @@
     "@value" : "2019-11-18T13:07:41+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Represents and links evidence rule with  question."
+    "@value" : "Represents and links an evidence rule with a question."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Answer"
@@ -4175,7 +4437,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a risk assessment to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8."
+    "@value" : "Links a risk to a specfic Hospital Group, Community Healthcare Organisation, National Ambulance Service or Function e.g. RCSI, CHO8."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordHSE"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -4192,7 +4457,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a Risk to its Impact. Based on the HSE Risk Matrix – what Impact score would you give the risk (1-5)?"
+    "@value" : "Links a Risk to its Impact Severity. What Impact Severity score would you give the risk?"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskDescription"
@@ -4225,12 +4490,15 @@
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasLikelihood",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Rob Brennan"
+  } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@value" : "2020-09-22T09:53:21+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a risk to the likelihood of it occurring. Based on the HSE Risk Matrix – what likelihood score would you give the risk (1-5)?"
+    "@value" : "Links a risk to the likelihood of it occurring. What likelihood score would you give the risk?"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
@@ -4238,11 +4506,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has likelihood"
-  }, {
-    "@value" : "Rob Brennan"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasMechanism",
@@ -4265,29 +4531,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@value" : "isMechanismOf"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationOrHospitalSiteService",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Rob Brennan"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2020-09-29T09:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Links a Risk Assessment to an organisation or a hospital site/service e.g. University Hospital Galway/Disability Service."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has organisation or hospital site/service"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasOrganisationalUnit",
@@ -4404,7 +4647,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Relates a Project with all the analysis done on the Project."
+    "@value" : "Relates a project to an analysis of the project."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
@@ -4428,7 +4671,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a Project to its Description."
+    "@value" : "Links a project to its description."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Project"
@@ -4741,10 +4984,10 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRiskAssessmentRecord",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  }, {
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2021-04-15T22:46:04+00:00"
-  }, {
-    "@value" : "Lucy McKenna"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -4772,7 +5015,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a Risk Assessment to the Person(s) who completed it."
+    "@value" : "The person(s) who completed the risk assessment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
@@ -4842,7 +5085,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a risk to the risk management coordinator involved in the risk assessment."
+    "@value" : "The role of the Risk Coordinator is to assist with the initial assessment of the risk by providing expertise on the subject matter of the risk being assessed and following this to assist with its ongoing review and monitoring."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
@@ -4909,7 +5152,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a risk to the person with the responsibility to assess and manage the risk in line with organisational policy i.e. normally the Line Manager of Service / Area. This is the individual who will be held accountable for the risk and its effective control. The maxim of the ‘risk take is the risk owner’ should be taken."
+    "@value" : "All risks require assignment of a Risk Owner and it is the responsibility of the Risk Owner to ensure that the risk is assessed and managed in line with organisational policy. This includes ensuring that any actions identified as required to manage the risk have been assigned to an Action Owner along with an agreed date for completion of the action. The Risk Owner is normally the Manager of the area/service in which the risk is identified. It is the responsibility of the Risk Owner to notify risks or actions where appropriate. This is the individual who will be held accountable for the risk and its effective control."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
@@ -4931,7 +5174,8 @@
     "@value" : "2020-09-22T09:53:21+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a Risk to its Risk Rating. Based on the HSE Risk Matrix – multiplying the inherent Impact by the likelihood will give the risk rating (1-25)."
+    "@language" : "en",
+    "@value" : "Links a Risk to its Risk Rating. Multiplying the inherent Impact Severity by the Likelihood will give the risk rating."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
@@ -4978,13 +5222,38 @@
     "@value" : "Links a risk to the specific type of risk being assessed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has risk type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskType"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2020-09-29T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Links a Risk Assessment to an organisation or a hospital site/service."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has hospital site/service"
+  }, {
+    "@language" : "en",
+    "@value" : "has site/service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage",
@@ -4999,9 +5268,9 @@
     "@value" : "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HandoverReport"
-  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -5113,6 +5382,28 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hazardousSeverityAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T17:23:12+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: A large reduction in safety margins, physical distress or a workload such that operators cannot be relied upon to perform their tasks accurately or completely. Serious injury. Mahor equipment damage. Qualified (Injury): Serious injuries and/or permanent disability with serious illness or health impairment. Qualified (Damage): Significant damage leading to prolonged loss of service, cost impact. Qualified (ICAO): Accident with serious injuries and/or significant damage to aircraft. Qualified (Operational Impact): Fleet grounded for a brief period. Organisational Impact: Extended national or international media coverage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hazardous"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "3"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#highDelivery",
@@ -5252,6 +5543,13 @@
     "@language" : "en",
     "@value" : "Used to annotate a value, for example a risk, that is predicted or estimated."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#AccessControlEntity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is projected"
@@ -5270,13 +5568,45 @@
     "@language" : "en",
     "@value" : "Links a CUBE question to a CUBE questionnaire."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "is question of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Questionnaire"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#likely",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-09-28T11:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Inadequate health and safety controls in place. If conditions remain unchanged there is a high probability of an accident. Probability: 60-90%."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Likely"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "[0.6,0.9]"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "4"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#likelyHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
   } ],
@@ -5355,8 +5685,8 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#major",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactAdversePublicity-Reputation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEAdversePublicityReputation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5377,8 +5707,8 @@
     "@value" : "4"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactBusinessContinuity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEBusinessContinuity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5399,8 +5729,8 @@
     "@value" : "4"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactCompliance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSECompliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5421,8 +5751,8 @@
     "@value" : "4"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactEnvironment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5443,8 +5773,8 @@
     "@value" : "4"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactFinance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEFinance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5465,8 +5795,8 @@
     "@value" : "4"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHarmToAPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEHarmToAPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5487,8 +5817,8 @@
     "@value" : "4"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactObjectivesAndProjects",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEObjectivesProjects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5509,8 +5839,8 @@
     "@value" : "4"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactServiceUserExperience",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorImpactHSEServiceUserExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MajorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5529,6 +5859,28 @@
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "4"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#majorSeverityAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T17:23:12+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: A significant reduction in safety margins, a reduction in the ability of the operators to cope with adverse operating conditions as a result of increase in workload, or as a result of conditions impairing their efficiency. Serious incident. Injury to persons. Qualified (Injury): Serious but non-permanent injuries (e.g. lost time injury). Qualified (Damage): Damage leading to delay or operational impact. Qualified (ICAO): Serious incident with injuries or substantial damage. Qualified (Operational Impact): Aircraft grounded temporarily. Organisational Impact: Short term negative media coverage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Major"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#mediumDelivery",
@@ -5616,33 +5968,8 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Lucy McKenna"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2021-09-28T11:09:10+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "1"
-  }, {
-    "@language" : "en",
-    "@value" : "No injury."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Minor"
-  } ],
-  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "1"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactAdversePublicity-Reputation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEAdversePublicityReputation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5663,8 +5990,8 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactBusinessContinuity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEBusinessContinuity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5685,8 +6012,8 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactCompliance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSECompliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5707,8 +6034,8 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactEnvironment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5729,8 +6056,8 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactFinance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEFinance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5751,8 +6078,8 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHarmToAPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEHarmToAPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5773,8 +6100,8 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactObjectivesAndProjects",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEObjectivesProjects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5795,8 +6122,8 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactServiceUserExperience",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorImpactHSEServiceUserExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#MinorImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5817,8 +6144,30 @@
     "@value" : "2"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T17:23:12+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: Nusance event: Operating limitations, Use of emergency procedures, Minor incident with little consequences. Does not impede a person, aurcraft or process from continuing to operate. Qualified (Injury): First aid treatment only. Qualified (Damage): Little adverse consequence, minor damage not preventing work. Qualified (ICAO): Incident with minor damage or injury. Qualified (Operational Impact): Minor delay. Organisational Impact: No media coverage."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Minor"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#minorSeverityDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5828,19 +6177,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Injury / harm that is of a temporary nature and results in less than 3 days absence."
+    "@value" : "No injury."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Moderate"
+    "@value" : "Minor"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
-    "@value" : "2"
+    "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactAdversePublicity-Reputation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEAdversePublicityReputation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5861,8 +6210,8 @@
     "@value" : "3"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactBusinessContinuity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEBusinessContinuity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5883,8 +6232,8 @@
     "@value" : "3"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactCompliance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSECompliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5905,8 +6254,8 @@
     "@value" : "3"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactEnvironment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5927,8 +6276,8 @@
     "@value" : "3"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactFinance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEFinance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5949,8 +6298,8 @@
     "@value" : "3"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHarmToAPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEHarmToAPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5971,8 +6320,8 @@
     "@value" : "3"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactObjectivesAndProjects",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEObjectivesProjects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -5993,8 +6342,8 @@
     "@value" : "3"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactServiceUserExperience",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateImpactHSEServiceUserExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ModerateImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6013,6 +6362,28 @@
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#int",
     "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#moderateSeverityDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-09-28T11:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Injury / harm that is of a temporary nature and results in less than 3 days absence."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Moderate"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#monitor",
@@ -6061,8 +6432,8 @@
     "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactAdversePublicity-Reputation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEAdversePublicityReputation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6083,8 +6454,8 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactBusinessContinuity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEBusinessContinuity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6105,8 +6476,8 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactCompliance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSECompliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6127,8 +6498,8 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactEnvironment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEEnvironment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6149,8 +6520,8 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactFinance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEFinance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6171,8 +6542,8 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHarmToAPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEHarmToAPerson",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6193,8 +6564,8 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactObjectivesAndProjects",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEObjectivesProjects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6215,8 +6586,8 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactServiceUserExperience",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpact" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#negligibleImpactHSEServiceUserExperience",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#NegligibleImpactHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@language" : "en",
     "@value" : "Lucy McKenna"
@@ -6285,14 +6656,15 @@
     "@value" : "2021-03-10T14:46:14+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "As described in the HSE Integrated Risk Management Policy - Part 1, operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks."
+    "@language" : "en",
+    "@value" : "Operational risks relate to the day-to-day delivery of activities, operational business plans and objectives. Operational risks typically have a short-term focus. Whilst they may impact a number of areas of the service, this does not necessarily make them a strategic risk. Operational risks may have the ability to impact strategic and other operational risks."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Operational"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#personsAffected",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6300,12 +6672,41 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2021-10-21T13:04:21+00:00"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "persons affected"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#possible",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-09-28T11:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If the situation is not well managed an accident is likely to occur. Probability 30-60%."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Possible"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "[0.3,0.6]"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "3"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#possibleHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@language" : "en",
     "@value" : "Rob Brennan"
@@ -6376,7 +6777,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@language" : "en",
     "@value" : "Rob Brennan"
@@ -6390,7 +6791,7 @@
     "@value" : "Defines the probability of a risk likelihood category."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6398,6 +6799,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#probableAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T18:22:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: Likely to occur. Qualified (Calendar): More than once a week. Qualified (Context): Has occurred many times in Aer Lingus. Qualified (per flight): 1 out of 1500 flights. Probability: >7 x 10^(minus 4)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Probable"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "7.0E-4"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "4"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes",
@@ -6409,9 +6836,15 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2021-10-21T13:01:01+00:00"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "progress notes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#projectStatus",
@@ -6477,13 +6910,42 @@
     "@language" : "en",
     "@value" : "The text of the cube question. This represents the actual question asked."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Question"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "question text"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemote",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#rareDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-09-28T11:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Accidents could only happen under certain conditions. The situation is very well controlled, and all reasonable precautions have been taken. Probability: <10%."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rare"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "<0.1"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#rareRemoteHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@language" : "en",
     "@value" : "Rob Brennan"
@@ -6553,6 +7015,104 @@
     "@value" : "Rejected"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#relatedToContext",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Rob Brennan, Junli Liang"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2023-05-23T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If this property is present, then this data entity describes information that is related to the Context of the problem, system or risk being analysed. This may be used for Rationalist analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to context"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Context"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#relatedToMechanism",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Rob Brennan, Junli Liang"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2023-05-23T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If this property is present, then this data entity describes information that is related to the Mechanism of the problem, system or risk being analysed. This may be used for Rationalist analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to mechanism"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#relatedToOutcome",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Rob Brennan, Junli Liang"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2023-05-23T09:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "If this property is present, then this data entity describes information that is related to the Outcome of the problem, system or risk being analysed. This may be used for Rationalist analysis."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related to outcome"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Outcome"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#remoteAerLingus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodAerLingus" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-01T18:22:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Plain: Could occur, or has occurred. Qualified (Calendar): More than once a month. Qualified (Context): Has occurred in Aer Lingus. Qualified (per flight): 1 out of 6000 flights. Probability: >2 x 10^(minus 4)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Remote"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "2.0E-4"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "3"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#reportAnalysisTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -6597,6 +7157,26 @@
     "@id" : "_:genid14"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewComments",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2022-06-08T18:02:21+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "review comments"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#reviewDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -6606,9 +7186,19 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2021-10-21T13:04:21+00:00"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordDFB"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecordSJH"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "review date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  }, {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTimeStamp"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#revisionOf",
@@ -6653,7 +7243,7 @@
     "@value" : "The identifier of a Risk Assessment."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#RiskAssessmentRecord"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#StandardRiskAssessmentRecord"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6681,7 +7271,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#score",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Rob Brennan"
   } ],
@@ -6692,6 +7282,11 @@
     "@language" : "en",
     "@value" : "Defines a numerical value for a risk rating, risk likelihood or impact based on the HSE risk tables."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactSeverity"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "score"
@@ -6700,8 +7295,8 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#serious",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#seriousSeverityDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -6732,7 +7327,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Risks which threaten the delivery of a service provision to  service users in terms of quality, in a  comfortable,  caring  and  safe  environment,  delivered  in  a  calm  and reassuring  way;  having  information  to  make  choices,  to  feel  confident  and  to  feel  in  control;  being  listened  to  and talked  to as an  equal;  being treated with honesty, respect and dignity. A type of Risk Impact Category described in the HSE Risk Assessment Tool."
+    "@value" : "Risks which threaten the delivery of a service provision to  service users in terms of quality, in a  comfortable,  caring  and  safe  environment,  delivered  in  a  calm  and reassuring  way;  having  information  to  make  choices,  to  feel  confident  and  to  feel  in  control;  being  listened  to  and talked  to as an  equal;  being treated with honesty, respect and dignity."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6800,7 +7395,8 @@
     "@value" : "2021-03-10T14:45:13+00:00"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "As described in the HSE Integrated Risk Management Policy - Part 1, a strategic risk has the ability to impact on the achievement/delivery of the HSE’s strategic objectives/directions. Strategic risks relate to the highest level of objective for the HSE, which typically have a long-term focus and are linked to the HSE’s Strategic Plan."
+    "@language" : "en",
+    "@value" : "A strategic risk has the ability to impact on the achievement/delivery of the organisation's strategic objectives/directions. Strategic risks relate to the highest level of objective for the organisation, which typically have a long-term focus and are linked to the organisation's strategic plan."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -6855,9 +7451,9 @@
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#GainAchieved"
   }, {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood"
-  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Impact"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Likelihood"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Mechanism"
   }, {
@@ -6894,8 +7490,34 @@
     "@value" : "Tusla"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikely",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#HSELikelihood" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodDFB" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Lucy McKenna"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2021-09-28T11:09:10+00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The situation is well under control, but occasional lapses could occur. Probability 10-30%."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unlikely"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#probability" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#float",
+    "@value" : "[0.1,0.3]"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKCube#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#int",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unlikelyHSE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#LikelihoodHSE" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@language" : "en",
     "@value" : "Rob Brennan"
@@ -6937,14 +7559,7 @@
     "@value" : "Unspecified Efficacy"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImportance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Unspecified Importance"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedPrimaryImpactCategory",
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImpactCategory",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#ImpactCategory" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
@@ -6962,6 +7577,13 @@
     "@value" : "Unspecified Primary Impact Category"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedImportance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Importance" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unspecified Importance"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedPriority",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Priority" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -6977,7 +7599,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#unspecifiedSeverity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
@@ -7147,8 +7769,8 @@
     "@value" : "version"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#verySerious",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#Severity" ],
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#verySeriousSeverityDFB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://openark.adaptcentre.ie/Ontologies/ARKCube#SeverityDFB" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Lucy McKenna"
   } ],
