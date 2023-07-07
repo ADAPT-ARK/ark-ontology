@@ -2,7 +2,7 @@
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+<ul class="hlist">
    <li>
       <a href="#Action"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action">Action</a>
@@ -403,7 +403,7 @@ This ontology has the following classes and properties.</span>
       <a href="#Viability"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Viability">Viability</a>
    </li>
-</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+</ul><h4>Object Properties</h4><ul class="hlist">
    <li>
       <a href="#assignedPerson"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#assignedPerson">assigned person</a>
@@ -713,6 +713,18 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#refutes">refutes</a>
    </li>
    <li>
+      <a href="#relatedToContext"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#relatedToContext">related to context</a>
+   </li>
+   <li>
+      <a href="#relatedToMechanism"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#relatedToMechanism">related to mechanism</a>
+   </li>
+   <li>
+      <a href="#relatedToOutcome"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#relatedToOutcome">related to outcome</a>
+   </li>
+   <li>
       <a href="#reportAnalysisTo"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#reportAnalysisTo">report analysis to</a>
    </li>
@@ -740,13 +752,7 @@ This ontology has the following classes and properties.</span>
       <a href="#worksWith"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#worksWith">works with</a>
    </li>
-</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
-   <li>
-      <a href="#actualFrequency"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">
-         <span>actual frequency</span>
-      </a>
-   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
    <li>
       <a href="#analyticsData"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#analyticsData">analytics data</a>
@@ -832,12 +838,6 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#potentialLoss">potential loss</a>
    </li>
    <li>
-      <a href="#probability"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">
-         <span>probability</span>
-      </a>
-   </li>
-   <li>
       <a href="#progressNotes"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#progressNotes">progress notes</a>
    </li>
@@ -870,12 +870,6 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#riskSource">risk source</a>
    </li>
    <li>
-      <a href="#score"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">
-         <span>score</span>
-      </a>
-   </li>
-   <li>
       <a href="#signature"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#signature">signature</a>
    </li>
@@ -903,14 +897,110 @@ This ontology has the following classes and properties.</span>
       <a href="#version"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#version">version</a>
    </li>
-</ul><h4>Named Individuals</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+</ul><h4>Annotation Properties</h4><ul class="hlist">
+   <li>
+      <a href="#actualFrequency"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#actualFrequency">
+         <span>actual frequency</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#category" title="http://www.w3.org/ns/prov#category">
+         <span>category</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#component" title="http://www.w3.org/ns/prov#component">
+         <span>component</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/contributor" title="http://purl.org/dc/elements/1.1/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/date" title="http://purl.org/dc/elements/1.1/date">
+         <span>date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#definition" title="http://www.w3.org/ns/prov#definition">
+         <span>definition</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#dm" title="http://www.w3.org/ns/prov#dm">
+         <span>dm</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2002/07/owl#inverseOf" title="http://www.w3.org/2002/07/owl#inverseOf">
+         <span>inverse of</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/modified" title="http://purl.org/dc/elements/1.1/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#n" title="http://www.w3.org/ns/prov#n">
+         <span>n</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred namespace prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred namespace uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#probability"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#probability">
+         <span>probability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/publisher" title="http://purl.org/dc/elements/1.1/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/rights" title="http://purl.org/dc/elements/1.1/rights">
+         <span>rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#score"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#score">
+         <span>score</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
    <li>
       <a href="#adversePublicityReputation"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#adversePublicityReputation">Adverse Publicity/Reputation</a>
-   </li>
-   <li>
-      <a href="#AerLingus"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#AerLingus">Aer Lingus</a>
    </li>
    <li>
       <a href="#almostCertainDFB"
@@ -927,10 +1017,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#awaitingFinalApproval"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#awaitingFinalApproval">Awaiting Final Approval</a>
-   </li>
-   <li>
-      <a href="#beaconRenal"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#beaconRenal">Beacon Renal</a>
    </li>
    <li>
       <a href="#beingReviewed"
@@ -959,14 +1045,6 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#compliance"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#compliance">Compliance</a>
-   </li>
-   <li>
-      <a href="#DublinCityUniversity"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#DublinCityUniversity">Dublin City University</a>
-   </li>
-   <li>
-      <a href="#dublinFireBrigade"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#dublinFireBrigade">Dublin Fire Brigade</a>
    </li>
    <li>
       <a href="#environment"
@@ -1329,24 +1407,8 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#serviceUserExperience">Service User Experience</a>
    </li>
    <li>
-      <a href="#stJamesHospital"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#stJamesHospital">St. James's Hospital</a>
-   </li>
-   <li>
-      <a href="#stewartsCare"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#stewartsCare">Stewarts Care</a>
-   </li>
-   <li>
       <a href="#strategic"
          title="https://openark.adaptcentre.ie/Ontologies/ARKCube#strategic">Strategic</a>
-   </li>
-   <li>
-      <a href="#TrinityCollegeDublin"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#TrinityCollegeDublin">Trinity College Dublin</a>
-   </li>
-   <li>
-      <a href="#tusla"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKCube#tusla">Tusla</a>
    </li>
    <li>
       <a href="#unlikelyDFB"
