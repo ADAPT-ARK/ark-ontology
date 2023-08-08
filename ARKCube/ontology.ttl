@@ -213,6 +213,18 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                     rdfs:label "derived from project"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage
+:describesStage rdf:type owl:ObjectProperty ;
+                rdfs:domain :ProjectAnalysis ,
+                            :Report ;
+                rdfs:range :Stage ;
+                <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
+                <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" ;
+                <http://purl.org/dc/elements/1.1/modified> "2023-08-07T07:00:00"^^xsd:dateTime ;
+                rdfs:comment "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages." ;
+                rdfs:label "describes stage"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy
 :designedBy rdf:type owl:ObjectProperty ;
             rdfs:domain :Project ;
@@ -765,17 +777,6 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
                 rdfs:comment "Links a Risk Assessment to an organisation or a hospital site/service."@en ;
                 rdfs:label "has site/service"@en ,
                            "has hospital site/service" .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
-:hasStage rdf:type owl:ObjectProperty ;
-          rdfs:domain :ProjectAnalysis ,
-                      :Report ;
-          rdfs:range :Stage ;
-          <http://purl.org/dc/elements/1.1/creator> "yalemisew" ;
-          <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" ;
-          rdfs:comment "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages." ;
-          rdfs:label "has stage"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject
@@ -1990,7 +1991,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 :ProjectAnalysis rdf:type owl:Class ;
                  rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> ,
                                  [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasStage ;
+                                   owl:onProperty :describesStage ;
                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                    owl:onClass :Stage
                                  ] ;
@@ -2072,7 +2073,7 @@ Familiarity gained by personal experience, vicariously or through collective pro
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Question
 :Question rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasStage ;
+                            owl:onProperty :describesStage ;
                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onClass :Stage
                           ] ;

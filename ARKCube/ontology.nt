@@ -185,6 +185,17 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFromProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a project to the project from which it was derived. A derivation is a transformation of a project into another, an update of a project resulting in a new one, or the construction of a new project based on a pre-existing project."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#derivedFromProject> <http://www.w3.org/2000/01/rdf-schema#label> "derived from project"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://purl.org/dc/elements/1.1/modified> "2023-08-07T07:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages." .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> <http://www.w3.org/2000/01/rdf-schema#label> "describes stage"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#designedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Project> .
@@ -693,16 +704,6 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Risk Assessment to an organisation or a hospital site/service."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#label> "has site/service"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSiteService> <http://www.w3.org/2000/01/rdf-schema#label> "has hospital site/service" .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Report> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://purl.org/dc/elements/1.1/creator> "yalemisew" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://purl.org/dc/elements/1.1/date> "2019-11-13T17:06:09+00:00" .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages." .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> <http://www.w3.org/2000/01/rdf-schema#label> "has stage"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -1818,7 +1819,7 @@ _:genid35 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/1999/02
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#DataEntity> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> .
 _:genid36 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid36 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis> <http://purl.org/dc/elements/1.1/creator> "Rob Brennan"@en .
@@ -1898,7 +1899,7 @@ _:genid47 <http://www.w3.org/2002/07/owl#hasValue> "true"^^<http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage> .
 _:genid48 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid48 <http://www.w3.org/2002/07/owl#onClass> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage> .
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#Question> <http://purl.org/dc/elements/1.1/creator> "Yalemisew" .

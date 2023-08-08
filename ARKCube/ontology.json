@@ -259,7 +259,7 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage"
   } ]
 }, {
   "@id" : "_:genid37",
@@ -360,7 +360,7 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage"
   } ]
 }, {
   "@id" : "_:genid49",
@@ -3393,6 +3393,34 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasDerivedProject"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#describesStage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "yalemisew"
+  } ],
+  "http://purl.org/dc/elements/1.1/date" : [ {
+    "@value" : "2019-11-13T17:06:09+00:00"
+  } ],
+  "http://purl.org/dc/elements/1.1/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2023-08-07T07:00:00"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "describes stage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#designDate",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -5185,30 +5213,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Organisation"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasStage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "yalemisew"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@value" : "2019-11-13T17:06:09+00:00"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "Links a Project Analysis to a particular Stage of a Project. Also links a Handover Report to its associated stages."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#ProjectAnalysis"
-  }, {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Report"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has stage"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasSubProject",
