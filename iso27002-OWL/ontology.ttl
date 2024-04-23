@@ -1,0 +1,1963 @@
+@prefix : <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> .
+
+<https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> rdf:type owl:Ontology ;
+                                                                       owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> ;
+                                                                       <http://purl.org/dc/elements/1.1/title> "Cybersecurity Terminology"@en ;
+                                                                       <http://purl.org/dc/terms/abstract> "This taxonomy defines the cybersecurity terms, taken from the ISO27002 document, that are used on the ARK Platform."@en ;
+                                                                       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                                              "Rob Brennan" ;
+                                                                       <http://purl.org/dc/terms/created> "2024-04-08"^^xsd:date ;
+                                                                       <http://purl.org/dc/terms/description> "This taxonomy defines the cybersecurity terms, taken from the ISO27002 document, that are used on the ARK Platform."@en ;
+                                                                       <http://purl.org/dc/terms/modified> "2024-04-08"^^xsd:date ;
+                                                                       <http://purl.org/dc/terms/publisher> <https://openark.adaptcentre.ie> ;
+                                                                       <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                       <http://purl.org/dc/terms/title> "Cybersecurity Terminology"@en ;
+                                                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkcscOWL" ;
+                                                                       <http://purl.org/vocab/vann/preferredNamespaceUri> <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> ;
+                                                                       rdfs:comment "This taxonomy defines the cybersecurity terms, taken from the ISO27002 document, that are used on the ARK Platform."@en ;
+                                                                       owl:versionInfo "0.1" ;
+                                                                       <https://w3id.org/widoco/vocab#introduction> "This taxonomy defines the cybersecurity terms, taken from the ISO27002 document, that are used on the ARK Platform."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#introduction
+<https://w3id.org/widoco/vocab#introduction> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AcceptableUseOfInformationAndOtherAssociatedAssets
+:AcceptableUseOfInformationAndOtherAssociatedAssets rdf:type owl:Class ;
+                                                    rdfs:subClassOf :Preventive ;
+                                                    <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                           "Rob Brennan" ;
+                                                    <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                    <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                    <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                    rdfs:comment "See ISO27002:2022" ;
+                                                    rdfs:label "Acceptable use of information and other associated assets"@en ;
+                                                    <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                                          :Availability ,
+                                                                                                                          :Confidentiality ,
+                                                                                                                          :Governance_and_Ecosystem ,
+                                                                                                                          :Information_protection ,
+                                                                                                                          :Integerity ,
+                                                                                                                          :Protect ,
+                                                                                                                          :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AccessControl
+:AccessControl rdf:type owl:Class ;
+               rdfs:subClassOf :Preventive ;
+               <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                      "Rob Brennan" ;
+               <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+               <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+               <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+               rdfs:comment "See ISO27002:2022" ;
+               rdfs:label "Access control"@en ;
+               <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                     :Confidentiality ,
+                                                                                     :Identity_and_access_management ,
+                                                                                     :Integerity ,
+                                                                                     :Proection ,
+                                                                                     :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AccessRights
+:AccessRights rdf:type owl:Class ;
+              rdfs:subClassOf :Preventive ;
+              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                     "Rob Brennan" ;
+              <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+              <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+              <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+              rdfs:comment "See ISO27002:2022" ;
+              rdfs:label "Access rights"@en ;
+              <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                    :Confidentiality ,
+                                                                                    :Identity_and_access_management ,
+                                                                                    :Integerity ,
+                                                                                    :Protect ,
+                                                                                    :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AccessToSourceCode
+:AccessToSourceCode rdf:type owl:Class ;
+                    rdfs:subClassOf :Preventive ;
+                    <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                           "Rob Brennan" ;
+                    <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                    <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                    <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                    rdfs:comment "See ISO27002:2022" ;
+                    rdfs:label "Access to source code"@en ;
+                    <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                          :Availability ,
+                                                                                          :Confidentiality ,
+                                                                                          :Identity_and_access_management ,
+                                                                                          :Integerity ,
+                                                                                          :Protect ,
+                                                                                          :Protection ,
+                                                                                          :Secure_configuration .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AddressingInformationSecurityWithinSupplierAgreements
+:AddressingInformationSecurityWithinSupplierAgreements rdf:type owl:Class ;
+                                                       rdfs:subClassOf :Preventive ;
+                                                       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                              "Rob Brennan" ;
+                                                       <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                       <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                       <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                       rdfs:comment "See ISO27002:2022" ;
+                                                       rdfs:label "Addressing information security within supplier agreements"@en ;
+                                                       <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                             :Confidentiality ,
+                                                                                                                             :Governance_and_Ecosystem ,
+                                                                                                                             :Identify ,
+                                                                                                                             :Integerity ,
+                                                                                                                             :Protection ,
+                                                                                                                             :Supplier_relationships_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ApplicationSecurityRequirements
+:ApplicationSecurityRequirements rdf:type owl:Class ;
+                                 rdfs:subClassOf :Preventive ;
+                                 <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                        "Rob Brennan" ;
+                                 <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                 <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                 <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                 rdfs:comment "See ISO27002:2022" ;
+                                 rdfs:label "Application security requirements"@en ;
+                                 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                       :Availability ,
+                                                                                                       :Confidentiality ,
+                                                                                                       :Defence ,
+                                                                                                       :Integerity ,
+                                                                                                       :Protect ,
+                                                                                                       :Protection ,
+                                                                                                       :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AssessmentAndDecisionOnInformationSecurityEvents
+:AssessmentAndDecisionOnInformationSecurityEvents rdf:type owl:Class ;
+                                                  rdfs:subClassOf :Detective ;
+                                                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                         "Rob Brennan" ;
+                                                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                  rdfs:comment "See ISO27002:2022" ;
+                                                  rdfs:label "Assessment and decision on information security events"@en ;
+                                                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                        :Confidentiality ,
+                                                                                                                        :Defence ,
+                                                                                                                        :Detect ,
+                                                                                                                        :Information_security_event_management ,
+                                                                                                                        :Integerity ,
+                                                                                                                        :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AuthenticationInformation
+:AuthenticationInformation rdf:type owl:Class ;
+                           rdfs:subClassOf :Preventive ;
+                           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                  "Rob Brennan" ;
+                           <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                           <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                           <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                           rdfs:comment "See ISO27002:2022" ;
+                           rdfs:label "Authentication information"@en ;
+                           <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                 :Confidentiality ,
+                                                                                                 :Identity_and_access_management ,
+                                                                                                 :Integerity ,
+                                                                                                 :Protect ,
+                                                                                                 :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#CablingSecurity
+:CablingSecurity rdf:type owl:Class ;
+                 rdfs:subClassOf :Preventive ;
+                 <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                        "Rob Brennan" ;
+                 <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                 <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                 <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                 rdfs:comment "See ISO27002:2022" ;
+                 rdfs:label "Cabling security"@en ;
+                 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                       :Confidentiality ,
+                                                                                       :Physical_security ,
+                                                                                       :Protect ,
+                                                                                       :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#CapacityManagement
+:CapacityManagement rdf:type owl:Class ;
+                    rdfs:subClassOf :Detective ,
+                                    :Preventive ;
+                    <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                           "Rob Brennan" ;
+                    <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                    <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                    <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                    rdfs:comment "See ISO27002:2022" ;
+                    rdfs:label "Capacity management"@en ;
+                    <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                          :Continuity ,
+                                                                                          :Detect ,
+                                                                                          :Governance_and_Ecosystem ,
+                                                                                          :Identify ,
+                                                                                          :Integerity ,
+                                                                                          :Protect ,
+                                                                                          :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ChangeManagement
+:ChangeManagement rdf:type owl:Class ;
+                  rdfs:subClassOf :Preventive ;
+                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                         "Rob Brennan" ;
+                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                  rdfs:comment "See ISO27002:2022" ;
+                  rdfs:label "Change management"@en ;
+                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                        :Availability ,
+                                                                                        :Confidentiality ,
+                                                                                        :Integerity ,
+                                                                                        :Protect ,
+                                                                                        :Protection ,
+                                                                                        :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ClassificationOfInformation
+:ClassificationOfInformation rdf:type owl:Class ;
+                             rdfs:subClassOf :Preventive ;
+                             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                    "Rob Brennan" ;
+                             <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                             <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                             <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                             rdfs:comment "See ISO27002:2022" ;
+                             rdfs:label "Classification of information"@en ;
+                             <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                   :Confidentiality ,
+                                                                                                   :Defence ,
+                                                                                                   :Identify ,
+                                                                                                   :Information_protection ,
+                                                                                                   :Integerity ,
+                                                                                                   :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ClearDeskAndClearScreen
+:ClearDeskAndClearScreen rdf:type owl:Class ;
+                         rdfs:subClassOf :Preventive ;
+                         <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                "Rob Brennan" ;
+                         <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                         <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                         <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                         rdfs:comment "See ISO27002:2022" ;
+                         rdfs:label "Clear desk and clear screen"@en ;
+                         <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Confidentiality ,
+                                                                                               :Physical_security ,
+                                                                                               :Protect ,
+                                                                                               :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ClockSynchronization
+:ClockSynchronization rdf:type owl:Class ;
+                      rdfs:subClassOf :Detective ;
+                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                             "Rob Brennan" ;
+                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                      rdfs:comment "See ISO27002:2022" ;
+                      rdfs:label "Clock synchronization"@en ;
+                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Defence ,
+                                                                                            :Detect ,
+                                                                                            :Information_security_event_management ,
+                                                                                            :Integerity ,
+                                                                                            :Protect ,
+                                                                                            :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#CollectionOfEvidence
+:CollectionOfEvidence rdf:type owl:Class ;
+                      rdfs:subClassOf :Corrective ;
+                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                             "Rob Brennan" ;
+                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                      rdfs:comment "See ISO27002:2022" ;
+                      rdfs:label "Collection of evidence"@en ;
+                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                            :Confidentiality ,
+                                                                                            :Defence ,
+                                                                                            :Detect ,
+                                                                                            :Information_security_event_management ,
+                                                                                            :Integerity ,
+                                                                                            :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ComplianceWithPoliciesRulesAndStandardsForInformationSecurity
+:ComplianceWithPoliciesRulesAndStandardsForInformationSecurity rdf:type owl:Class ;
+                                                               rdfs:subClassOf :Preventive ;
+                                                               <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                                      "Rob Brennan" ;
+                                                               <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                               <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                               <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                               rdfs:comment "See ISO27002:2022" ;
+                                                               rdfs:label "Compliance with policies, rules and standards for information security"@en ;
+                                                               <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                                     :Confidentiality ,
+                                                                                                                                     :Governance_and_Ecosystem ,
+                                                                                                                                     :Identify ,
+                                                                                                                                     :Information_security_assurance ,
+                                                                                                                                     :Integerity ,
+                                                                                                                                     :Legal_and_compliance ,
+                                                                                                                                     :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ConfidentialityOrNon-disclosureAgreements
+:ConfidentialityOrNon-disclosureAgreements rdf:type owl:Class ;
+                                           rdfs:subClassOf :Preventive ;
+                                           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                  "Rob Brennan" ;
+                                           <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                           <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                           <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                           rdfs:comment "See ISO27002:2022" ;
+                                           rdfs:label "Confidentiality or non-disclosure agreements"@en ;
+                                           <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                                 :Availability ,
+                                                                                                                 :Confidentiality ,
+                                                                                                                 :Governance_and_Ecosystem ,
+                                                                                                                 :Human_resource_security ,
+                                                                                                                 :Information_protection ,
+                                                                                                                 :Integerity ,
+                                                                                                                 :Protect ,
+                                                                                                                 :Supplier_relationships .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ConfigurationManagement
+:ConfigurationManagement rdf:type owl:Class ;
+                         rdfs:subClassOf :Preventive ;
+                         <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                "Rob Brennan" ;
+                         <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                         <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                         <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                         rdfs:comment "See ISO27002:2022" ;
+                         rdfs:label "Configuration management"@en ;
+                         <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                               :Confidentiality ,
+                                                                                               :Integerity ,
+                                                                                               :Protect ,
+                                                                                               :Protection ,
+                                                                                               :Secure_configuration .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ContactWithAuthorities
+:ContactWithAuthorities rdf:type owl:Class ;
+                        rdfs:subClassOf :Corrective ,
+                                        :Preventive ;
+                        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                               "Rob Brennan" ;
+                        <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                        <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                        <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                        rdfs:comment "See ISO27002:2022" ;
+                        rdfs:label "Contact with authorities"@en ;
+                        <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                              :Confidentiality ,
+                                                                                              :Defence ,
+                                                                                              :Governance ,
+                                                                                              :Identify ,
+                                                                                              :Integerity ,
+                                                                                              :Protect ,
+                                                                                              :Recover ,
+                                                                                              :Resillience ,
+                                                                                              :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ContactWithSpecialInterestGroups
+:ContactWithSpecialInterestGroups rdf:type owl:Class ;
+                                  rdfs:subClassOf :Corrective ,
+                                                  :Preventive ;
+                                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                         "Rob Brennan" ;
+                                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                  rdfs:comment "See ISO27002:2022" ;
+                                  rdfs:label "Contact with special interest groups"@en ;
+                                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                        :Confidentiality ,
+                                                                                                        :Defence ,
+                                                                                                        :Govrnance ,
+                                                                                                        :Integerity ,
+                                                                                                        :Protect ,
+                                                                                                        :Recover ,
+                                                                                                        :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective
+:Corrective rdf:type owl:Class ;
+            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                   "Rob Brennan" ;
+            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+            rdfs:comment "See ISO27002:2022" ;
+            rdfs:label "Corrective"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DataLeakagePrevention
+:DataLeakagePrevention rdf:type owl:Class ;
+                       rdfs:subClassOf :Detective ,
+                                       :Preventive ;
+                       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                              "Rob Brennan" ;
+                       <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                       <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                       <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                       rdfs:comment "See ISO27002:2022" ;
+                       rdfs:label "Data leakage prevention"@en ;
+                       <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Confidentiality ,
+                                                                                             :Detect ,
+                                                                                             :Information_protection ,
+                                                                                             :Protect ,
+                                                                                             :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DataMasking
+:DataMasking rdf:type owl:Class ;
+             rdfs:subClassOf :Preventive ;
+             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                    "Rob Brennan" ;
+             <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+             <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+             <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+             rdfs:comment "See ISO27002:2022" ;
+             rdfs:label "Data masking"@en ;
+             <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Confidentiality ,
+                                                                                   :Information_protection ,
+                                                                                   :Protect ,
+                                                                                   :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective
+:Detective rdf:type owl:Class ;
+           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                  "Rob Brennan" ;
+           <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+           <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+           <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+           rdfs:comment "See ISO27002:2022" ;
+           rdfs:label "Detective"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DisciplinaryProcess
+:DisciplinaryProcess rdf:type owl:Class ;
+                     rdfs:subClassOf :Corrective ,
+                                     :Preventive ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                     rdfs:comment "See ISO27002:2022" ;
+                     rdfs:label "Disciplinary process"@en ;
+                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                           :Confidentiality ,
+                                                                                           :Governance_and_Ecosystem ,
+                                                                                           :Human_resource_security ,
+                                                                                           :Integerity ,
+                                                                                           :Protect ,
+                                                                                           :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DocumentedOperatingProcedures
+:DocumentedOperatingProcedures rdf:type owl:Class ;
+                               rdfs:subClassOf :Corrective ,
+                                               :Preventive ;
+                               <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                      "Rob Brennan" ;
+                               <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                               <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                               <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                               rdfs:comment "See ISO27002:2022" ;
+                               rdfs:label "Documented operating procedures"@en ;
+                               <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                     :Asset_management ,
+                                                                                                     :Availability ,
+                                                                                                     :Confidentiality ,
+                                                                                                     :Continuity ,
+                                                                                                     :Defence ,
+                                                                                                     :Governance_and_Eocosystem ,
+                                                                                                     :Identity_and_access_management ,
+                                                                                                     :Information_security_event_management ,
+                                                                                                     :Integerity ,
+                                                                                                     :Physical_security ,
+                                                                                                     :Protect ,
+                                                                                                     :Protection ,
+                                                                                                     :Recover ,
+                                                                                                     :Secure_configuration ,
+                                                                                                     :System_and_network_security ,
+                                                                                                     :Threat_and_vulnera-bility_management .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#EquipmentMaintenance
+:EquipmentMaintenance rdf:type owl:Class ;
+                      rdfs:subClassOf :Preventive ;
+                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                             "Rob Brennan" ;
+                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                      rdfs:comment "See ISO27002:2022" ;
+                      rdfs:label "Equipment maintenance"@en ;
+                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                            :Availability ,
+                                                                                            :Confidentiality ,
+                                                                                            :Integerity ,
+                                                                                            :Physical_security ,
+                                                                                            :Protect ,
+                                                                                            :Protection ,
+                                                                                            :Resilience .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#EquipmentSitingAndProtection
+:EquipmentSitingAndProtection rdf:type owl:Class ;
+                              rdfs:subClassOf :Preventive ;
+                              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                     "Rob Brennan" ;
+                              <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                              <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                              <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                              rdfs:comment "See ISO27002:2022" ;
+                              rdfs:label "Equipment siting and protection"@en ;
+                              <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                    :Availability ,
+                                                                                                    :Confidentiality ,
+                                                                                                    :Integerity ,
+                                                                                                    :Physical_security ,
+                                                                                                    :Protect ,
+                                                                                                    :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ICTReadinessForBusinessContinuity
+:ICTReadinessForBusinessContinuity rdf:type owl:Class ;
+                                   rdfs:subClassOf :Corrective ;
+                                   <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                          "Rob Brennan" ;
+                                   <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                   <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                   <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                   rdfs:comment "See ISO27002:2022" ;
+                                   rdfs:label "ICT readiness for business continuity"@en ;
+                                   <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                         :Continuity ,
+                                                                                                         :Resilience ,
+                                                                                                         :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#IdentityManagement
+:IdentityManagement rdf:type owl:Class ;
+                    rdfs:subClassOf :Preventive ;
+                    <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                           "Rob Brennan" ;
+                    <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                    <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                    <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                    rdfs:comment "See ISO27002:2022" ;
+                    rdfs:label "Identity management"@en ;
+                    <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                          :Confidentiality ,
+                                                                                          :Identity_and_access_management ,
+                                                                                          :Integerity ,
+                                                                                          :Protect ,
+                                                                                          :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#IndependentReviewOfInformationSecurity
+:IndependentReviewOfInformationSecurity rdf:type owl:Class ;
+                                        rdfs:subClassOf :Corrective ,
+                                                        :Preventive ;
+                                        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                               "Rob Brennan" ;
+                                        <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                        <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                        <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                        rdfs:comment "See ISO27002:2022" ;
+                                        rdfs:label "Independent review of information security"@en ;
+                                        <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                              :Confidentiality ,
+                                                                                                              :Governance_and_Ecosystem ,
+                                                                                                              :Identify ,
+                                                                                                              :Information_security_event_management ,
+                                                                                                              :Integerity ,
+                                                                                                              :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationAccessRestriction
+:InformationAccessRestriction rdf:type owl:Class ;
+                              rdfs:subClassOf :Preventive ;
+                              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                     "Rob Brennan" ;
+                              <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                              <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                              <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                              rdfs:comment "See ISO27002:2022" ;
+                              rdfs:label "Information access restriction"@en ;
+                              <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                    :Confidentiality ,
+                                                                                                    :Identity_and_access_management ,
+                                                                                                    :Integerity ,
+                                                                                                    :Protect ,
+                                                                                                    :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationBackup
+:InformationBackup rdf:type owl:Class ;
+                   rdfs:subClassOf :Corrective ;
+                   <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                          "Rob Brennan" ;
+                   <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                   <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                   <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                   rdfs:comment "See ISO27002:2022" ;
+                   rdfs:label "Information backup"@en ;
+                   <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                         :Continuity ,
+                                                                                         :Integerity ,
+                                                                                         :Protection ,
+                                                                                         :Recover .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationDeletion
+:InformationDeletion rdf:type owl:Class ;
+                     rdfs:subClassOf :Preventive ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                     rdfs:comment "See ISO27002:2022" ;
+                     rdfs:label "Information deletion"@en ;
+                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Confidentiality ,
+                                                                                           :Information_protection ,
+                                                                                           :Legal_and_compliance ,
+                                                                                           :Protect ,
+                                                                                           :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityAwarenessEducationAndTraining
+:InformationSecurityAwarenessEducationAndTraining rdf:type owl:Class ;
+                                                  rdfs:subClassOf :Preventive ;
+                                                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                         "Rob Brennan" ;
+                                                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                  rdfs:comment "See ISO27002:2022" ;
+                                                  rdfs:label "Information security awareness, education and training"@en ;
+                                                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                        :Confidentiality ,
+                                                                                                                        :Governance_and_Ecosystem ,
+                                                                                                                        :Human_resource_security ,
+                                                                                                                        :Integerity ,
+                                                                                                                        :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityDuringDisruption
+:InformationSecurityDuringDisruption rdf:type owl:Class ;
+                                     rdfs:subClassOf :Corrective ,
+                                                     :Preventive ;
+                                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                            "Rob Brennan" ;
+                                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                     rdfs:comment "See ISO27002:2022" ;
+                                     rdfs:label "Information security during disruption"@en ;
+                                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                           :Confidentiality ,
+                                                                                                           :Continuity ,
+                                                                                                           :Integerity ,
+                                                                                                           :Protect ,
+                                                                                                           :Protection ,
+                                                                                                           :Resilience ,
+                                                                                                           :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityEventReporting
+:InformationSecurityEventReporting rdf:type owl:Class ;
+                                   rdfs:subClassOf :Detective ;
+                                   <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                          "Rob Brennan" ;
+                                   <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                   <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                   <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                   rdfs:comment "See ISO27002:2022" ;
+                                   rdfs:label "Information security event reporting"@en ;
+                                   <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                         :Confidentiality ,
+                                                                                                         :Defence ,
+                                                                                                         :Detect ,
+                                                                                                         :Information_security_event_management ,
+                                                                                                         :Integerity .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityForUseOfCloudServices
+:InformationSecurityForUseOfCloudServices rdf:type owl:Class ;
+                                          rdfs:subClassOf :Preventive ;
+                                          <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                 "Rob Brennan" ;
+                                          <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                          <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                          <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                          rdfs:comment "See ISO27002:2022" ;
+                                          rdfs:label "Information security for use of cloud services"@en ;
+                                          <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                :Confidentiality ,
+                                                                                                                :Governance_and_Ecosystem ,
+                                                                                                                :Information_security_assurance ,
+                                                                                                                :Integerity ,
+                                                                                                                :Protect ,
+                                                                                                                :Protection ,
+                                                                                                                :Supplier_relationships_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityInProjectManagement
+:InformationSecurityInProjectManagement rdf:type owl:Class ;
+                                        rdfs:subClassOf :Preventive ;
+                                        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                               "Rob Brennan" ;
+                                        <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                        <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                        <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                        rdfs:comment "See ISO27002:2022" ;
+                                        rdfs:label "Information security in project management"@en ;
+                                        <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                              :Confidentiality ,
+                                                                                                              :Governance ,
+                                                                                                              :Governance_and_Ecossystem ,
+                                                                                                              :Identify ,
+                                                                                                              :Integerity ,
+                                                                                                              :Protect ,
+                                                                                                              :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityInSupplierRelationships
+:InformationSecurityInSupplierRelationships rdf:type owl:Class ;
+                                            rdfs:subClassOf :Preventive ;
+                                            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                   "Rob Brennan" ;
+                                            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                            rdfs:comment "See ISO27002:2022" ;
+                                            rdfs:label "Information security in supplier relationships"@en ;
+                                            <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                  :Confidentiality ,
+                                                                                                                  :Governance_and_Ecosystem ,
+                                                                                                                  :Identify ,
+                                                                                                                  :Integerity ,
+                                                                                                                  :Protection ,
+                                                                                                                  :Supplier_relationships_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityIncidentManagementPlanningAndPreparation
+:InformationSecurityIncidentManagementPlanningAndPreparation rdf:type owl:Class ;
+                                                             rdfs:subClassOf :Preventive ;
+                                                             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                                    "Rob Brennan" ;
+                                                             <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                             <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                             <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                             rdfs:comment "See ISO27002:2022" ;
+                                                             rdfs:label "Information security incident management planning and preparation"@en ;
+                                                             <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                                   :Confidentiality ,
+                                                                                                                                   :Defence ,
+                                                                                                                                   :Governance ,
+                                                                                                                                   :Identity_and_access_management ,
+                                                                                                                                   :Integerity ,
+                                                                                                                                   :Recover ,
+                                                                                                                                   :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityRolesAndResponsibilities
+:InformationSecurityRolesAndResponsibilities rdf:type owl:Class ;
+                                             rdfs:subClassOf :Preventive ;
+                                             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                    "Rob Brennan" ;
+                                             <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                             <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                             <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                             rdfs:comment "See ISO27002:2022" ;
+                                             rdfs:label "Information security roles and responsibilities"@en ;
+                                             <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                   :Confidentiality ,
+                                                                                                                   :Governance ,
+                                                                                                                   :Governance_and_Ecosystem ,
+                                                                                                                   :Identify ,
+                                                                                                                   :Integerity ,
+                                                                                                                   :Protection ,
+                                                                                                                   :Resilience .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationTransfer
+:InformationTransfer rdf:type owl:Class ;
+                     rdfs:subClassOf :Preventive ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                     rdfs:comment "See ISO27002:2022" ;
+                     rdfs:label "Information transfer"@en ;
+                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                           :Availability ,
+                                                                                           :Confidentiality ,
+                                                                                           :Defence ,
+                                                                                           :Information_protection ,
+                                                                                           :Integerity ,
+                                                                                           :Protect ,
+                                                                                           :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InstallationOfSoftwareOnOperationalSystems
+:InstallationOfSoftwareOnOperationalSystems rdf:type owl:Class ;
+                                            rdfs:subClassOf :Preventive ;
+                                            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                   "Rob Brennan" ;
+                                            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                            rdfs:comment "See ISO27002:2022" ;
+                                            rdfs:label "Installation of software on operational systems"@en ;
+                                            <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                                  :Availability ,
+                                                                                                                  :Confidentiality ,
+                                                                                                                  :Integerity ,
+                                                                                                                  :Protect ,
+                                                                                                                  :Protection ,
+                                                                                                                  :Secure_configuration .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#IntellectualPropertyRights
+:IntellectualPropertyRights rdf:type owl:Class ;
+                            rdfs:subClassOf :Preventive ;
+                            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                   "Rob Brennan" ;
+                            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                            rdfs:comment "See ISO27002:2022" ;
+                            rdfs:label "Intellectual property rights"@en ;
+                            <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                  :Confidentiality ,
+                                                                                                  :Governance_and_Ecosystem ,
+                                                                                                  :Identify ,
+                                                                                                  :Integerity ,
+                                                                                                  :Legal_and_compliance .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InventoryOfInformationAndOtherAssociatedAssets
+:InventoryOfInformationAndOtherAssociatedAssets rdf:type owl:Class ;
+                                                rdfs:subClassOf :Preventive ;
+                                                <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                       "Rob Brennan" ;
+                                                <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                rdfs:comment "See ISO27002:2022" ;
+                                                rdfs:label "Inventory of information and other associated assets"@en ;
+                                                <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                                      :Availability ,
+                                                                                                                      :Confidentiality ,
+                                                                                                                      :Governance_and_Ecosystem ,
+                                                                                                                      :Identify ,
+                                                                                                                      :Integerity ,
+                                                                                                                      :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#LabellingOfInformation
+:LabellingOfInformation rdf:type owl:Class ;
+                        rdfs:subClassOf :Preventive ;
+                        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                               "Rob Brennan" ;
+                        <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                        <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                        <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                        rdfs:comment "See ISO27002:2022" ;
+                        rdfs:label "Labelling of information"@en ;
+                        <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                              :Confidentiality ,
+                                                                                              :Defence ,
+                                                                                              :Information_protection ,
+                                                                                              :Integerity ,
+                                                                                              :Protect ,
+                                                                                              :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#LearningFromInformationSecurityIncidents
+:LearningFromInformationSecurityIncidents rdf:type owl:Class ;
+                                          rdfs:subClassOf :Preventive ;
+                                          <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                 "Rob Brennan" ;
+                                          <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                          <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                          <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                          rdfs:comment "See ISO27002:2022" ;
+                                          rdfs:label "Learning from information security incidents"@en ;
+                                          <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                :Confidentiality ,
+                                                                                                                :Defence ,
+                                                                                                                :Identify ,
+                                                                                                                :Information_security_event_management ,
+                                                                                                                :Integerity ,
+                                                                                                                :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#LegalStatutoryRegulatoryAndContractualRequirements
+:LegalStatutoryRegulatoryAndContractualRequirements rdf:type owl:Class ;
+                                                    rdfs:subClassOf :Preventive ;
+                                                    <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                           "Rob Brennan" ;
+                                                    <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                    <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                    <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                    rdfs:comment "See ISO27002:2022" ;
+                                                    rdfs:label "Legal, statutory, regulatory and contractual requirements"@en ;
+                                                    <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                          :Confidentiality ,
+                                                                                                                          :Governance_and_Ecosystem ,
+                                                                                                                          :Identify ,
+                                                                                                                          :Integerity ,
+                                                                                                                          :Legal_and_compliance ,
+                                                                                                                          :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Logging
+:Logging rdf:type owl:Class ;
+         rdfs:subClassOf :Detective ;
+         <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                "Rob Brennan" ;
+         <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+         <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+         <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+         rdfs:comment "See ISO27002:2022" ;
+         rdfs:label "Logging"@en ;
+         <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                               :Confidentiality ,
+                                                                               :Defence ,
+                                                                               :Detect ,
+                                                                               :Information_security_event_management ,
+                                                                               :Integerity ,
+                                                                               :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ManagementOfTechnicalVulnerabilities
+:ManagementOfTechnicalVulnerabilities rdf:type owl:Class ;
+                                      rdfs:subClassOf :Preventive ;
+                                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                             "Rob Brennan" ;
+                                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                      rdfs:comment "See ISO27002:2022" ;
+                                      rdfs:label "Management of technical vulnerabilities"@en ;
+                                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                            :Confidentiality ,
+                                                                                                            :Defence ,
+                                                                                                            :Governance_and_Ecosystem ,
+                                                                                                            :Identify ,
+                                                                                                            :Integerity ,
+                                                                                                            :Protect ,
+                                                                                                            :Protection ,
+                                                                                                            :Threat_and_vulnerability_management .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ManagementResponsibilities
+:ManagementResponsibilities rdf:type owl:Class ;
+                            rdfs:subClassOf :Preventive ;
+                            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                   "Rob Brennan" ;
+                            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                            rdfs:comment "See ISO27002:2022" ;
+                            rdfs:label "Management responsibilities"@en ;
+                            <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                  :Confidentiality ,
+                                                                                                  :Governance ,
+                                                                                                  :Governance_and_Ecosystem ,
+                                                                                                  :Identify ,
+                                                                                                  :Integerity .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ManagingInformationSecurityInTheICTSupplyChain
+:ManagingInformationSecurityInTheICTSupplyChain rdf:type owl:Class ;
+                                                rdfs:subClassOf :Preventive ;
+                                                <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                       "Rob Brennan" ;
+                                                <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                rdfs:comment "See ISO27002:2022" ;
+                                                rdfs:label "Managing information security in the ICT supply chain"@en ;
+                                                <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                      :Confidentiality ,
+                                                                                                                      :Governance_and_Ecosystem ,
+                                                                                                                      :Identify ,
+                                                                                                                      :Integerity ,
+                                                                                                                      :Protection ,
+                                                                                                                      :Supplier_relationships_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#MonitoringActivities
+:MonitoringActivities rdf:type owl:Class ;
+                      rdfs:subClassOf :Corrective ,
+                                      :Detective ;
+                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                             "Rob Brennan" ;
+                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                      rdfs:comment "See ISO27002:2022" ;
+                      rdfs:label "Monitoring activities"@en ;
+                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                            :Confidentiality ,
+                                                                                            :Defemce ,
+                                                                                            :Detect ,
+                                                                                            :Information_security_event_management ,
+                                                                                            :Integerity ,
+                                                                                            :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#MonitoringReviewAndChangeManagementOfSupplierServices
+:MonitoringReviewAndChangeManagementOfSupplierServices rdf:type owl:Class ;
+                                                       rdfs:subClassOf :Preventive ;
+                                                       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                              "Rob Brennan" ;
+                                                       <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                       <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                       <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                       rdfs:comment "See ISO27002:2022" ;
+                                                       rdfs:label "Monitoring, review and change management of supplier services"@en ;
+                                                       <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                             :Confidentiality ,
+                                                                                                                             :Defence ,
+                                                                                                                             :Governance_and_Ecosystem ,
+                                                                                                                             :Identify ,
+                                                                                                                             :Information_security_assurance ,
+                                                                                                                             :Integerity ,
+                                                                                                                             :Protection ,
+                                                                                                                             :Supplier_relationships_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#NetworksSecurity
+:NetworksSecurity rdf:type owl:Class ;
+                  rdfs:subClassOf :Detective ,
+                                  :Preventive ;
+                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                         "Rob Brennan" ;
+                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                  rdfs:comment "See ISO27002:2022" ;
+                  rdfs:label "Networks security"@en ;
+                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                        :Confidentiality ,
+                                                                                        :Detect ,
+                                                                                        :Integerity ,
+                                                                                        :Protect ,
+                                                                                        :Protection ,
+                                                                                        :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls
+:OrganizationalControls rdf:type owl:Class ;
+                        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                               "Rob Brennan" ;
+                        <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                        <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                        <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                        rdfs:comment "See ISO27002:2022" ;
+                        rdfs:label "Organizational controls"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OutsourcedDevelopment
+:OutsourcedDevelopment rdf:type owl:Class ;
+                       rdfs:subClassOf :Detective ,
+                                       :Preventive ;
+                       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                              "Rob Brennan" ;
+                       <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                       <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                       <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                       rdfs:comment "See ISO27002:2022" ;
+                       rdfs:label "Outsourced development"@en ;
+                       <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                             :Availability ,
+                                                                                             :Confidentiality ,
+                                                                                             :Detect ,
+                                                                                             :Governance_and_Ecosystem ,
+                                                                                             :Identify ,
+                                                                                             :Integerity ,
+                                                                                             :Protect ,
+                                                                                             :Protection ,
+                                                                                             :Supplier_relationships_security ,
+                                                                                             :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls
+:PeopleControls rdf:type owl:Class ;
+                <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                       "Rob Brennan" ;
+                <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                rdfs:comment "See ISO27002:2022" ;
+                rdfs:label "People controls"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls
+:PhysicalControls rdf:type owl:Class ;
+                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                         "Rob Brennan" ;
+                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                  rdfs:comment "See ISO27002:2022" ;
+                  rdfs:label "Physical controls"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalEntry
+:PhysicalEntry rdf:type owl:Class ;
+               rdfs:subClassOf :Preventive ;
+               <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                      "Rob Brennan" ;
+               <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+               <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+               <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+               rdfs:comment "See ISO27002:2022" ;
+               rdfs:label "Physical entry"@en ;
+               <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                     :Confidentiality ,
+                                                                                     :Identity_and_access_management ,
+                                                                                     :Integerity ,
+                                                                                     :Physical_security ,
+                                                                                     :Protect ,
+                                                                                     :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalSecurityMonitoring
+:PhysicalSecurityMonitoring rdf:type owl:Class ;
+                            rdfs:subClassOf :Detective ,
+                                            :Preventive ;
+                            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                   "Rob Brennan" ;
+                            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                            rdfs:comment "See ISO27002:2022" ;
+                            rdfs:label "Physical security monitoring"@en ;
+                            <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                  :Confidentiality ,
+                                                                                                  :Defence ,
+                                                                                                  :Detect ,
+                                                                                                  :Integerity ,
+                                                                                                  :Physical_security ,
+                                                                                                  :Protect ,
+                                                                                                  :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalSecurityPerimeters
+:PhysicalSecurityPerimeters rdf:type owl:Class ;
+                            rdfs:subClassOf :Preventive ;
+                            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                   "Rob Brennan" ;
+                            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                            rdfs:comment "See ISO27002:2022" ;
+                            rdfs:label "Physical security perimeters"@en ;
+                            <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                  :Confidentiality ,
+                                                                                                  :Integerity ,
+                                                                                                  :Physical_security ,
+                                                                                                  :Protect ,
+                                                                                                  :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PoliciesForInformationSecurity
+:PoliciesForInformationSecurity rdf:type owl:Class ;
+                                rdfs:subClassOf :Preventive ;
+                                <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                       "Rob Brennan" ;
+                                <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                rdfs:comment "See ISO27002:2022" ;
+                                rdfs:label "Policies for information security"@en ;
+                                <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                      :Confidentiality ,
+                                                                                                      :Governance ,
+                                                                                                      :Governance_and_Ecosystem ,
+                                                                                                      :Identify ,
+                                                                                                      :Integerity ,
+                                                                                                      :Resilience .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive
+:Preventive rdf:type owl:Class ;
+            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                   "Rob Brennan" ;
+            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+            rdfs:comment "See ISO27002:2022" ;
+            rdfs:label "Preventive"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PrivacyAndProtectionOfPII
+:PrivacyAndProtectionOfPII rdf:type owl:Class ;
+                           rdfs:subClassOf :Preventive ;
+                           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                  "Rob Brennan" ;
+                           <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                           <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                           <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                           rdfs:comment "See ISO27002:2022" ;
+                           rdfs:label "Privacy and protection of PII"@en ;
+                           <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                 :Confidentiality ,
+                                                                                                 :Identify ,
+                                                                                                 :Information_protection ,
+                                                                                                 :Integerity ,
+                                                                                                 :Legal_and_compliance ,
+                                                                                                 :Protect ,
+                                                                                                 :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PrivilegedAccessRights
+:PrivilegedAccessRights rdf:type owl:Class ;
+                        rdfs:subClassOf :Preventive ;
+                        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                               "Rob Brennan" ;
+                        <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                        <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                        <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                        rdfs:comment "See ISO27002:2022" ;
+                        rdfs:label "Privileged access rights"@en ;
+                        <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                              :Confidentiality ,
+                                                                                              :Identity_and_access_management ,
+                                                                                              :Integerity ,
+                                                                                              :Protect ,
+                                                                                              :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectingAgainstPhysicalAndEnvironmentalThreats
+:ProtectingAgainstPhysicalAndEnvironmentalThreats rdf:type owl:Class ;
+                                                  rdfs:subClassOf :Preventive ;
+                                                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                         "Rob Brennan" ;
+                                                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                  rdfs:comment "See ISO27002:2022" ;
+                                                  rdfs:label "Protecting against physical and environmental threats"@en ;
+                                                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                        :Confidentiality ,
+                                                                                                                        :Integerity ,
+                                                                                                                        :Physical_security ,
+                                                                                                                        :Protect ,
+                                                                                                                        :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectionAgainstMalware
+:ProtectionAgainstMalware rdf:type owl:Class ;
+                          rdfs:subClassOf :Corrective ,
+                                          :Detective ,
+                                          :Preventive ;
+                          <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                 "Rob Brennan" ;
+                          <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                          <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                          <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                          rdfs:comment "See ISO27002:2022" ;
+                          rdfs:label "Protection against malware"@en ;
+                          <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                :Confidentiality ,
+                                                                                                :Defence ,
+                                                                                                :Detect ,
+                                                                                                :Information_protection ,
+                                                                                                :Integerity ,
+                                                                                                :Protect ,
+                                                                                                :Protection ,
+                                                                                                :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectionOfInformationSystemsDuringAuditTesting
+:ProtectionOfInformationSystemsDuringAuditTesting rdf:type owl:Class ;
+                                                  rdfs:subClassOf :Preventive ;
+                                                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                         "Rob Brennan" ;
+                                                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                  rdfs:comment "See ISO27002:2022" ;
+                                                  rdfs:label "Protection of information systems during audit testing"@en ;
+                                                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                                        :Confidentiality ,
+                                                                                                                        :Gveronance_and_Ecosystem ,
+                                                                                                                        :Information_protection ,
+                                                                                                                        :Integerity ,
+                                                                                                                        :Protect ,
+                                                                                                                        :Protection ,
+                                                                                                                        :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectionOfRecords
+:ProtectionOfRecords rdf:type owl:Class ;
+                     rdfs:subClassOf :Preventive ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                     rdfs:comment "See ISO27002:2022" ;
+                     rdfs:label "Protection of records"@en ;
+                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                           :Availability ,
+                                                                                           :Confidentiality ,
+                                                                                           :Defence ,
+                                                                                           :Identify ,
+                                                                                           :Information_protection ,
+                                                                                           :Integerity ,
+                                                                                           :Legal_and_compliance ,
+                                                                                           :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#RedundancyOfInformationProcessingFacilities
+:RedundancyOfInformationProcessingFacilities rdf:type owl:Class ;
+                                             rdfs:subClassOf :Preventive ;
+                                             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                    "Rob Brennan" ;
+                                             <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                             <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                             <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                             rdfs:comment "See ISO27002:2022" ;
+                                             rdfs:label "Redundancy of information processing facilities"@en ;
+                                             <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                                   :Availability ,
+                                                                                                                   :Continuity ,
+                                                                                                                   :Protect ,
+                                                                                                                   :Protection ,
+                                                                                                                   :Resilience .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#RemoteWorking
+:RemoteWorking rdf:type owl:Class ;
+               rdfs:subClassOf :Preventive ;
+               <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                      "Rob Brennan" ;
+               <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+               <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+               <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+               rdfs:comment "See ISO27002:2022" ;
+               rdfs:label "Remote working"@en ;
+               <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                     :Availability ,
+                                                                                     :Confidentiality ,
+                                                                                     :Information_protection ,
+                                                                                     :Integerity ,
+                                                                                     :Physical_security ,
+                                                                                     :Protect ,
+                                                                                     :Protection ,
+                                                                                     :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ResponseToInformationSecurityIncidents
+:ResponseToInformationSecurityIncidents rdf:type owl:Class ;
+                                        rdfs:subClassOf :Corrective ;
+                                        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                               "Rob Brennan" ;
+                                        <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                        <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                        <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                        rdfs:comment "See ISO27002:2022" ;
+                                        rdfs:label "Response to information security incidents"@en ;
+                                        <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                              :Confidentiality ,
+                                                                                                              :Defence ,
+                                                                                                              :Information_security_event_management ,
+                                                                                                              :Integerity ,
+                                                                                                              :Recover ,
+                                                                                                              :Respond .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ResponsibilitiesAfterTerminationOrChangeOfEmployment
+:ResponsibilitiesAfterTerminationOrChangeOfEmployment rdf:type owl:Class ;
+                                                      rdfs:subClassOf :Preventive ;
+                                                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                             "Rob Brennan" ;
+                                                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                      rdfs:comment "See ISO27002:2022" ;
+                                                      rdfs:label "Responsibilities after termination or change of employment"@en ;
+                                                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                                            :Availability ,
+                                                                                                                            :Confidentiality ,
+                                                                                                                            :Governance_and_Ecosystem ,
+                                                                                                                            :Human_resource_security ,
+                                                                                                                            :Integerity ,
+                                                                                                                            :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ReturnOfAssets
+:ReturnOfAssets rdf:type owl:Class ;
+                rdfs:subClassOf :Preventive ;
+                <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                       "Rob Brennan" ;
+                <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                rdfs:comment "See ISO27002:2022" ;
+                rdfs:label "Return of assets"@en ;
+                <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                      :Availability ,
+                                                                                      :Confidentiality ,
+                                                                                      :Integerity ,
+                                                                                      :Protect ,
+                                                                                      :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Screening
+:Screening rdf:type owl:Class ;
+           rdfs:subClassOf :Preventive ;
+           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                  "Rob Brennan" ;
+           <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+           <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+           <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+           rdfs:comment "See ISO27002:2022" ;
+           rdfs:label "Screening"@en ;
+           <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                 :Confidentiality ,
+                                                                                 :Governance_and_Ecosystem ,
+                                                                                 :Human_resource_security ,
+                                                                                 :Integerity ,
+                                                                                 :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureAuthentication
+:SecureAuthentication rdf:type owl:Class ;
+                      rdfs:subClassOf :Preventive ;
+                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                             "Rob Brennan" ;
+                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                      rdfs:comment "See ISO27002:2022" ;
+                      rdfs:label "Secure authentication"@en ;
+                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                            :Confidentiality ,
+                                                                                            :Identity_and_access_management ,
+                                                                                            :Integerity ,
+                                                                                            :Protect ,
+                                                                                            :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureCoding
+:SecureCoding rdf:type owl:Class ;
+              rdfs:subClassOf :Preventive ;
+              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                     "Rob Brennan" ;
+              <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+              <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+              <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+              rdfs:comment "See ISO27002:2022" ;
+              rdfs:label "Secure coding"@en ;
+              <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                    :Availability ,
+                                                                                    :Confidentiality ,
+                                                                                    :Integerity ,
+                                                                                    :Protect ,
+                                                                                    :Protection ,
+                                                                                    :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureDevelopmentLifeCycle
+:SecureDevelopmentLifeCycle rdf:type owl:Class ;
+                            rdfs:subClassOf :Preventive ;
+                            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                   "Rob Brennan" ;
+                            <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                            <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                            <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                            rdfs:comment "See ISO27002:2022" ;
+                            rdfs:label "Secure development life cycle"@en ;
+                            <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                  :Availability ,
+                                                                                                  :Confidentiality ,
+                                                                                                  :Integerity ,
+                                                                                                  :Protect ,
+                                                                                                  :Protection ,
+                                                                                                  :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureDisposalOrRe-useOfEquipment
+:SecureDisposalOrRe-useOfEquipment rdf:type owl:Class ;
+                                   rdfs:subClassOf :Preventive ;
+                                   <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                          "Rob Brennan" ;
+                                   <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                   <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                   <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                   rdfs:comment "See ISO27002:2022" ;
+                                   rdfs:label "Secure disposal or re-use of equipment"@en ;
+                                   <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                         :Confidentiality ,
+                                                                                                         :Physical_security ,
+                                                                                                         :Protect ,
+                                                                                                         :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureSystemArchitectureAndEngineeringPrinciples
+:SecureSystemArchitectureAndEngineeringPrinciples rdf:type owl:Class ;
+                                                  rdfs:subClassOf :Preventive ;
+                                                  <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                         "Rob Brennan" ;
+                                                  <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                  <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                  <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                  rdfs:comment "See ISO27002:2022" ;
+                                                  rdfs:label "Secure system architecture and engineering principles"@en ;
+                                                  <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                                        :Availability ,
+                                                                                                                        :Confidentiality ,
+                                                                                                                        :Integerity ,
+                                                                                                                        :Protect ,
+                                                                                                                        :Protection ,
+                                                                                                                        :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecuringOfficesRoomsAndFacilities
+:SecuringOfficesRoomsAndFacilities rdf:type owl:Class ;
+                                   rdfs:subClassOf :Preventive ;
+                                   <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                          "Rob Brennan" ;
+                                   <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                   <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                   <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                   rdfs:comment "See ISO27002:2022" ;
+                                   rdfs:label "Securing offices, rooms and facilities"@en ;
+                                   <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                         :Availability ,
+                                                                                                         :Confidentiality ,
+                                                                                                         :Integerity ,
+                                                                                                         :Physical_security ,
+                                                                                                         :Protect ,
+                                                                                                         :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecurityOfAssetsOff-premises
+:SecurityOfAssetsOff-premises rdf:type owl:Class ;
+                              rdfs:subClassOf :Preventive ;
+                              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                     "Rob Brennan" ;
+                              <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                              <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                              <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                              rdfs:comment "See ISO27002:2022" ;
+                              rdfs:label "Security of assets off-premises"@en ;
+                              <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                                    :Availability ,
+                                                                                                    :Confidentiality ,
+                                                                                                    :Integerity ,
+                                                                                                    :Physical_security ,
+                                                                                                    :Protect ,
+                                                                                                    :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecurityOfNetworkServices
+:SecurityOfNetworkServices rdf:type owl:Class ;
+                           rdfs:subClassOf :Preventive ;
+                           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                  "Rob Brennan" ;
+                           <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                           <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                           <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                           rdfs:comment "See ISO27002:2022" ;
+                           rdfs:label "Security of network services"@en ;
+                           <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                 :Confidentiality ,
+                                                                                                 :Integerity ,
+                                                                                                 :Protect ,
+                                                                                                 :Protection ,
+                                                                                                 :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecurityTestingInDevelopmentAndAcceptance
+:SecurityTestingInDevelopmentAndAcceptance rdf:type owl:Class ;
+                                           rdfs:subClassOf :Preventive ;
+                                           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                  "Rob Brennan" ;
+                                           <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                           <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                           <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                           rdfs:comment "See ISO27002:2022" ;
+                                           rdfs:label "Security testing in development and acceptance"@en ;
+                                           <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                                 :Availability ,
+                                                                                                                 :Confidentiality ,
+                                                                                                                 :Identify ,
+                                                                                                                 :Information_security_assurance ,
+                                                                                                                 :Integerity ,
+                                                                                                                 :Protection ,
+                                                                                                                 :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SegregationOfDuties
+:SegregationOfDuties rdf:type owl:Class ;
+                     rdfs:subClassOf :Preventive ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                     rdfs:comment "See ISO27002:2022" ;
+                     rdfs:label "Segregation of duties"@en ;
+                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> ,
+                                                                                           :Availability ,
+                                                                                           :Confidentiality ,
+                                                                                           :Governance ,
+                                                                                           :Governance_and_Ecosystem ,
+                                                                                           :Identity_and_access_management ,
+                                                                                           :Integerity ,
+                                                                                           :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SegregationOfNetworks
+:SegregationOfNetworks rdf:type owl:Class ;
+                       rdfs:subClassOf :Preventive ;
+                       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                              "Rob Brennan" ;
+                       <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                       <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                       <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                       rdfs:comment "See ISO27002:2022" ;
+                       rdfs:label "Segregation of networks"@en ;
+                       <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                             :Confidentiality ,
+                                                                                             :Integerity ,
+                                                                                             :Protect ,
+                                                                                             :Protection ,
+                                                                                             :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SeparationOfDevelopmentTestAndProductionEnvironments
+:SeparationOfDevelopmentTestAndProductionEnvironments rdf:type owl:Class ;
+                                                      rdfs:subClassOf :Preventive ;
+                                                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                             "Rob Brennan" ;
+                                                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                                      rdfs:comment "See ISO27002:2022" ;
+                                                      rdfs:label "Separation of development, test and production environments"@en ;
+                                                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                                            :Availability ,
+                                                                                                                            :Confidentiality ,
+                                                                                                                            :Integerity ,
+                                                                                                                            :Protect ,
+                                                                                                                            :Protection ,
+                                                                                                                            :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#StorageMedia
+:StorageMedia rdf:type owl:Class ;
+              rdfs:subClassOf :Preventive ;
+              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                     "Rob Brennan" ;
+              <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+              <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+              <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+              rdfs:comment "See ISO27002:2022" ;
+              rdfs:label "Storage media"@en ;
+              <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                    :Availability ,
+                                                                                    :Confidentiality ,
+                                                                                    :Integerity ,
+                                                                                    :Physical_security ,
+                                                                                    :Protect ,
+                                                                                    :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SupportingUtilities
+:SupportingUtilities rdf:type owl:Class ;
+                     rdfs:subClassOf :Detective ,
+                                     :Preventive ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                     rdfs:comment "See ISO27002:2022" ;
+                     rdfs:label "Supporting utilities"@en ;
+                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                           :Detect ,
+                                                                                           :Integerity ,
+                                                                                           :Physical_security ,
+                                                                                           :Protect ,
+                                                                                           :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls
+:TechnologicalControls rdf:type owl:Class ;
+                       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                              "Rob Brennan" ;
+                       <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                       <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                       <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                       rdfs:comment "See ISO27002:2022" ;
+                       rdfs:label "Technological controls"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TermsAndConditionsOfEmployment
+:TermsAndConditionsOfEmployment rdf:type owl:Class ;
+                                rdfs:subClassOf :Preventive ;
+                                <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                       "Rob Brennan" ;
+                                <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                rdfs:comment "See ISO27002:2022" ;
+                                rdfs:label "Terms and conditions of employment"@en ;
+                                <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                                      :Confidentiality ,
+                                                                                                      :Governance_and_Ecosystem ,
+                                                                                                      :Human_resource_security ,
+                                                                                                      :Integerity ,
+                                                                                                      :Protect .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TestInformation
+:TestInformation rdf:type owl:Class ;
+                 rdfs:subClassOf :Preventive ;
+                 <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                        "Rob Brennan" ;
+                 <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                 <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                 <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                 rdfs:comment "See ISO27002:2022" ;
+                 rdfs:label "Test information"@en ;
+                 <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Confidentiality ,
+                                                                                       :Information_protection ,
+                                                                                       :Integerity ,
+                                                                                       :Protect ,
+                                                                                       :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ThreatIntelligence
+:ThreatIntelligence rdf:type owl:Class ;
+                    rdfs:subClassOf :Corrective ,
+                                    :Detective ,
+                                    :Preventive ;
+                    <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                           "Rob Brennan" ;
+                    <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                    <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                    <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                    rdfs:comment "See ISO27002:2022" ;
+                    rdfs:label "Threat intelligence"@en ;
+                    <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                          :Confidentiality ,
+                                                                                          :Defence ,
+                                                                                          :Detect ,
+                                                                                          :Identigy ,
+                                                                                          :Integerity ,
+                                                                                          :Resillience ,
+                                                                                          :Respond ,
+                                                                                          :Threat_and_vulnerability_management .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#UseOfCryptography
+:UseOfCryptography rdf:type owl:Class ;
+                   rdfs:subClassOf :Preventive ;
+                   <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                          "Rob Brennan" ;
+                   <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                   <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                   <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                   rdfs:comment "See ISO27002:2022" ;
+                   rdfs:label "Use of cryptography"@en ;
+                   <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                         :Confidentiality ,
+                                                                                         :Integerity ,
+                                                                                         :Protect ,
+                                                                                         :Protection ,
+                                                                                         :Secure_configuration .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#UseOfPrivilegedUtilityPrograms
+:UseOfPrivilegedUtilityPrograms rdf:type owl:Class ;
+                                rdfs:subClassOf :Preventive ;
+                                <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                       "Rob Brennan" ;
+                                <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                                <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                                <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                                rdfs:comment "See ISO27002:2022" ;
+                                rdfs:label "Use of privileged utility programs"@en ;
+                                <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Application_security ,
+                                                                                                      :Availability ,
+                                                                                                      :Confidentiality ,
+                                                                                                      :Integerity ,
+                                                                                                      :Protect ,
+                                                                                                      :Protection ,
+                                                                                                      :Secure_configuration ,
+                                                                                                      :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#UserEndpointDevices
+:UserEndpointDevices rdf:type owl:Class ;
+                     rdfs:subClassOf :Preventive ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                     <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                     rdfs:comment "See ISO27002:2022" ;
+                     rdfs:label "User endpoint devices"@en ;
+                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Asset_management ,
+                                                                                           :Availability ,
+                                                                                           :Confidentiality ,
+                                                                                           :Information_protection ,
+                                                                                           :Integerity ,
+                                                                                           :Protect ,
+                                                                                           :Protection .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#WebFiltering
+:WebFiltering rdf:type owl:Class ;
+              rdfs:subClassOf :Preventive ;
+              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                     "Rob Brennan" ;
+              <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+              <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+              <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+              rdfs:comment "See ISO27002:2022" ;
+              rdfs:label "Web filtering"@en ;
+              <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                    :Confidentiality ,
+                                                                                    :Integerity ,
+                                                                                    :Protect ,
+                                                                                    :Protection ,
+                                                                                    :System_and_network_security .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#WorkingInSecureAreas
+:WorkingInSecureAreas rdf:type owl:Class ;
+                      rdfs:subClassOf :Preventive ;
+                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                             "Rob Brennan" ;
+                      <http://purl.org/dc/terms/created> "2024-03-14"^^xsd:date ;
+                      <http://purl.org/dc/terms/creator> "ISO/IEC" ;
+                      <http://purl.org/dc/terms/title> "ISO/IEC 27002:2022(E)" ;
+                      rdfs:comment "See ISO27002:2022" ;
+                      rdfs:label "Working in secure areas"@en ;
+                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept> :Availability ,
+                                                                                            :Confidentiality ,
+                                                                                            :Integerity ,
+                                                                                            :Physical_security ,
+                                                                                            :Protect ,
+                                                                                            :Protection .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
