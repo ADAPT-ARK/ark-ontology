@@ -11,9 +11,6 @@
   "@id" : "http://purl.org/dc/terms/created",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/creator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -26,7 +23,7 @@
   "@id" : "http://purl.org/dc/terms/rights",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/title",
+  "@id" : "http://purl.org/dc/terms/source",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
@@ -37,6 +34,12 @@
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -74,7 +77,7 @@
   "http://purl.org/dc/terms/rights" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@language" : "en",
     "@value" : "Cybersecurity Terminology"
   } ],
@@ -100,7 +103,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AcceptableUseOfInformationAndOtherAssociatedAssets",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -110,21 +113,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Acceptable use of information and other associated assets"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -145,7 +150,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AccessControl",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -155,21 +160,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Access control"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -186,7 +193,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AccessRights",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -196,21 +203,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Access rights"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -227,7 +236,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AccessToSourceCode",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -237,21 +246,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Access to source code"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -272,7 +283,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AddressingInformationSecurityWithinSupplierAgreements",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -282,21 +293,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Addressing information security within supplier agreements"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -315,7 +328,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ApplicationSecurityRequirements",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -325,21 +338,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Application security requirements"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -360,7 +375,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AssessmentAndDecisionOnInformationSecurityEvents",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -370,21 +385,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Assessment and decision on information security events"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -403,7 +420,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#AuthenticationInformation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -413,21 +430,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Authentication information"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -444,7 +463,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#CablingSecurity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -454,21 +473,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Cabling security"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -483,7 +504,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#CapacityManagement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -493,23 +514,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Capacity management"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Capacity management"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -530,7 +553,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ChangeManagement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -540,21 +563,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Change management"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -573,7 +598,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ClassificationOfInformation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -583,21 +608,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Classification of information"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -616,7 +643,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ClearDeskAndClearScreen",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -626,21 +653,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Clear desk and clear screen"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Confidentiality"
@@ -653,7 +682,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ClockSynchronization",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -663,21 +692,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Clock synchronization"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Defence"
@@ -694,7 +725,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#CollectionOfEvidence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -704,21 +735,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Collection of evidence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -737,7 +770,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ComplianceWithPoliciesRulesAndStandardsForInformationSecurity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -747,21 +780,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Compliance with policies, rules and standards for information security"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -782,7 +817,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ConfidentialityOrNon-disclosureAgreements",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -792,21 +827,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Confidentiality or non-disclosure agreements"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -829,7 +866,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ConfigurationManagement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -839,21 +876,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Configuration management"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -870,7 +909,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ContactWithAuthorities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -880,23 +919,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Contact with authorities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Contact with authorities"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -921,7 +962,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ContactWithSpecialInterestGroups",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -931,23 +972,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Contact with special interest groups"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Contact with special interest groups"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -978,22 +1021,22 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Corrective"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DataLeakagePrevention",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1003,23 +1046,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Data leakage prevention"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Data leakage prevention"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Confidentiality"
@@ -1034,7 +1079,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DataMasking",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1044,21 +1089,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Data masking"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Confidentiality"
@@ -1081,22 +1128,22 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Detective"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DisciplinaryProcess",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1106,23 +1153,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Disciplinary process"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Disciplinary process"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1141,7 +1190,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#DocumentedOperatingProcedures",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1151,23 +1200,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Documented operating procedures"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Documented operating procedures"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -1206,7 +1257,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#EquipmentMaintenance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1216,21 +1267,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Equipment maintenance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -1251,7 +1304,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#EquipmentSitingAndProtection",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1261,21 +1314,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Equipment siting and protection"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -1294,7 +1349,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ICTReadinessForBusinessContinuity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1304,21 +1359,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "ICT readiness for business continuity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1331,7 +1388,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#IdentityManagement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1341,21 +1398,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Identity management"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1372,7 +1431,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#IndependentReviewOfInformationSecurity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1382,23 +1441,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Independent review of information security"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Independent review of information security"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1417,7 +1478,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationAccessRestriction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1427,21 +1488,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information access restriction"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1458,7 +1521,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationBackup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1468,21 +1531,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information backup"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1497,7 +1562,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationDeletion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1507,21 +1572,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information deletion"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Confidentiality"
@@ -1536,7 +1603,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityAwarenessEducationAndTraining",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1546,21 +1613,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information security awareness, education and training"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1577,7 +1646,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityDuringDisruption",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1587,23 +1656,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Information security during disruption"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Information security during disruption"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1624,7 +1695,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityEventReporting",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1634,21 +1705,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information security event reporting"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1665,7 +1738,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityForUseOfCloudServices",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1675,21 +1748,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information security for use of cloud services"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1710,7 +1785,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityInProjectManagement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1720,21 +1795,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information security in project management"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1755,7 +1832,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityInSupplierRelationships",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1765,21 +1842,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information security in supplier relationships"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1798,7 +1877,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityIncidentManagementPlanningAndPreparation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1808,21 +1887,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information security incident management planning and preparation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1843,7 +1924,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationSecurityRolesAndResponsibilities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1853,21 +1934,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information security roles and responsibilities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -1888,7 +1971,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InformationTransfer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1898,21 +1981,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Information transfer"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -1933,7 +2018,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InstallationOfSoftwareOnOperationalSystems",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1943,21 +2028,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Installation of software on operational systems"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -1976,7 +2063,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#IntellectualPropertyRights",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -1986,21 +2073,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Intellectual property rights"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2017,7 +2106,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#InventoryOfInformationAndOtherAssociatedAssets",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2027,21 +2116,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Inventory of information and other associated assets"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -2060,7 +2151,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#LabellingOfInformation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2070,21 +2161,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Labelling of information"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2103,7 +2196,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#LearningFromInformationSecurityIncidents",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2113,21 +2206,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Learning from information security incidents"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2146,7 +2241,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#LegalStatutoryRegulatoryAndContractualRequirements",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2156,21 +2251,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Legal, statutory, regulatory and contractual requirements"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2189,7 +2286,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Logging",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2199,21 +2296,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Logging"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2232,7 +2331,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ManagementOfTechnicalVulnerabilities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2242,21 +2341,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Management of technical vulnerabilities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2279,7 +2380,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ManagementResponsibilities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2289,21 +2390,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Management responsibilities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2320,7 +2423,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ManagingInformationSecurityInTheICTSupplyChain",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2330,21 +2433,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Managing information security in the ICT supply chain"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2363,7 +2468,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#MonitoringActivities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2373,23 +2478,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Monitoring activities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Monitoring activities"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2408,7 +2515,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#MonitoringReviewAndChangeManagementOfSupplierServices",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2418,21 +2525,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Monitoring, review and change management of supplier services"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2455,7 +2564,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#NetworksSecurity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2465,23 +2574,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Networks security"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Networks security"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2510,22 +2621,22 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Organizational controls"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OutsourcedDevelopment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2535,23 +2646,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Outsourced development"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Outsourced development"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -2588,16 +2701,16 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "People controls"
   } ]
@@ -2613,22 +2726,22 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Physical controls"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalEntry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2638,21 +2751,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Physical entry"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2671,7 +2786,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalSecurityMonitoring",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2681,23 +2796,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Physical security monitoring"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Physical security monitoring"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2718,7 +2835,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalSecurityPerimeters",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2728,18 +2845,20 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Physical security perimeters"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2756,7 +2875,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PoliciesForInformationSecurity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2766,21 +2885,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Policies for information security"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2809,22 +2930,22 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Preventive"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PrivacyAndProtectionOfPII",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2834,21 +2955,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Privacy and protection of PII"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2869,7 +2992,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PrivilegedAccessRights",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2879,21 +3002,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Privileged access rights"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2910,7 +3035,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectingAgainstPhysicalAndEnvironmentalThreats",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2920,21 +3045,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Protecting against physical and environmental threats"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -2951,7 +3078,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectionAgainstMalware",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -2961,25 +3088,27 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Protection against malware"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Protection against malware"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3002,7 +3131,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectionOfInformationSystemsDuringAuditTesting",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3012,21 +3141,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Protection of information systems during audit testing"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3047,7 +3178,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ProtectionOfRecords",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3057,21 +3188,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Protection of records"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3094,7 +3227,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#RedundancyOfInformationProcessingFacilities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3104,21 +3237,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Redundancy of information processing facilities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3135,7 +3270,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#RemoteWorking",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3145,21 +3280,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Remote working"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3182,7 +3319,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ResponseToInformationSecurityIncidents",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3192,21 +3329,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Response to information security incidents"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3225,7 +3364,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ResponsibilitiesAfterTerminationOrChangeOfEmployment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3235,21 +3374,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Responsibilities after termination or change of employment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3268,7 +3409,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ReturnOfAssets",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3278,21 +3419,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Return of assets"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3309,7 +3452,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Screening",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3319,21 +3462,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Screening"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3350,7 +3495,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureAuthentication",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3360,21 +3505,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Secure authentication"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3391,7 +3538,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureCoding",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3401,21 +3548,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Secure coding"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -3434,7 +3583,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureDevelopmentLifeCycle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3444,21 +3593,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Secure development life cycle"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -3477,7 +3628,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureDisposalOrRe-useOfEquipment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3487,21 +3638,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Secure disposal or re-use of equipment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3516,7 +3669,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecureSystemArchitectureAndEngineeringPrinciples",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3526,21 +3679,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Secure system architecture and engineering principles"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -3559,7 +3714,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecuringOfficesRoomsAndFacilities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3569,21 +3724,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Securing offices, rooms and facilities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3602,7 +3759,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecurityOfAssetsOff-premises",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3612,21 +3769,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Security of assets off-premises"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3645,7 +3804,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecurityOfNetworkServices",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3655,21 +3814,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Security of network services"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3686,7 +3847,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SecurityTestingInDevelopmentAndAcceptance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3696,21 +3857,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Security testing in development and acceptance"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -3731,7 +3894,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SegregationOfDuties",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3741,21 +3904,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Segregation of duties"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
@@ -3776,7 +3941,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SegregationOfNetworks",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3786,21 +3951,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Segregation of networks"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3817,7 +3984,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SeparationOfDevelopmentTestAndProductionEnvironments",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3827,21 +3994,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Separation of development, test and production environments"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -3860,7 +4029,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#StorageMedia",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3870,21 +4039,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Storage media"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -3903,7 +4074,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#SupportingUtilities",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3913,23 +4084,25 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Supporting utilities"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Supporting utilities"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -3956,22 +4129,22 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Technological controls"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TermsAndConditionsOfEmployment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -3981,21 +4154,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PeopleControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Terms and conditions of employment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -4012,7 +4187,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TestInformation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -4022,21 +4197,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Test information"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Confidentiality"
@@ -4051,7 +4228,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#ThreatIntelligence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -4061,25 +4238,27 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "See ISO27002:2022"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Threat intelligence"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective"
   }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Detective"
   }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#OrganizationalControls"
+  }, {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "See ISO27002:2022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
+    "@language" : "en",
+    "@value" : "Threat intelligence"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -4102,7 +4281,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#UseOfCryptography",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -4112,21 +4291,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Use of cryptography"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -4143,7 +4324,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#UseOfPrivilegedUtilityPrograms",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -4153,21 +4334,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Use of privileged utility programs"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Application_security"
@@ -4188,7 +4371,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#UserEndpointDevices",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -4198,21 +4381,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "User endpoint devices"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Asset_management"
@@ -4231,7 +4416,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#WebFiltering",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -4241,21 +4426,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#TechnologicalControls"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Web filtering"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
@@ -4272,7 +4459,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#WorkingInSecureAreas",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -4282,21 +4469,23 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2024-03-14"
   } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "ISO/IEC"
-  } ],
-  "http://purl.org/dc/terms/title" : [ {
+  "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO/IEC 27002:2022(E)"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#PhysicalControls"
+  }, {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
     "@value" : "See ISO27002:2022"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+  "http://www.w3.org/2004/02/skos/core#prefLabel" : [ {
     "@language" : "en",
     "@value" : "Working in secure areas"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Preventive"
   } ],
   "https://openark.adaptcentre.ie/Ontologies/ARKCube#hasRelatedConcept" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Availability"
