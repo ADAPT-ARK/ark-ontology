@@ -193,10 +193,21 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
        rdfs:label "email"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId
+:hasCKANUserId rdf:type owl:DatatypeProperty ;
+               rdfs:domain :User ;
+               rdfs:range xsd:string ;
+               <http://purl.org/dc/elements/1.1/creator> "Junli Liang" ;
+               <http://purl.org/dc/elements/1.1/date> "2024-05-15T23T00:00:00"^^xsd:dateTime ;
+               rdfs:comment "The user's CKAN (ARKEvidence) user ID."@en ;
+               rdfs:label "has CKAN (ARKEvidence) user ID"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password
 :password rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdfs:domain :User ;
+          rdfs:range xsd:string ;
           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
           <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^xsd:dateTime ;
           rdfs:comment "A user's password."@en ;
@@ -206,6 +217,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token
 :token rdf:type owl:DatatypeProperty ;
        rdfs:domain :User ;
+       rdfs:range xsd:string ;
        <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
        <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^xsd:dateTime ;
        rdfs:comment "A token for user who requests a password reset."@en ;
@@ -215,6 +227,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry
 :tokenExpiry rdf:type owl:DatatypeProperty ;
              rdfs:domain :User ;
+             rdfs:range xsd:string ;
              <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
              <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^xsd:dateTime ;
              rdfs:comment "An expiry date for a token requested by user." ;
@@ -224,6 +237,7 @@ owl:inverseOf rdf:type owl:AnnotationProperty .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username
 :username rdf:type owl:DatatypeProperty ;
           rdfs:domain :User ;
+          rdfs:range xsd:string ;
           <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" ;
           <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^xsd:dateTime ;
           rdfs:comment "A user's username."@en ;

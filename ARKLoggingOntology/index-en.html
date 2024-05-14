@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>ARK Logging Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#","name":"ARK Logging Ontology", "headline":"Document describing the ontology https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#", "dateReleased":"2024-05-14T00:00:00Z", "dateModified":"2024-05-14T00:00:00Z", "version":"0.1", "author":[{"@type":"Person","name":"Junli Liang"}], "contributor":[{"@type":"Person","name":"Junli Liang"},{"@type":"Person","name":"Rob Brennan"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>ARK Logging Ontology</h1>
+<h2>Release: 2024-05-14T00:00:00Z</h2>
+
+
+<dl>
+<dt>Modified on: 2024-05-14T00:00:00Z</dt>
+<dt>This version:</dt>
+<dd><a href="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology">https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#">https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#</a></dd>
+<dt>Revision:</dt>
+<dd>0.1</dd>
+<dt>Authors:</dt>
+<dd>Junli Liang</dd>
+
+<dt>Contributors:</dt>
+<dd>Junli Liang</dd><dd>Rob Brennan</dd>
+
+<dt>Publisher:</dt>
+<dd>https://www.openark.adaptcentre.ie/</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://insertlicenseURIhere.example.org" target="_blank"><img src="https://img.shields.io/badge/License-license%20name%20goes%20here-blue.svg" alt="http://insertlicenseURIhere.example.org" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Junli Liang. ARK Logging Ontology. Revision: 0.1. Retrieved from: https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+This is a placeholder text for the abstract. The abstract should contain a couple of sentences summarizing the ontology and its purpose.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>arkLog</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#&gt;</td></tr>
+<tr><td><b>arkc</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/ARKCube#&gt;</td></tr>
+<tr><td><b>arkp</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/ARKPlatform#&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>rlog</b></td><td>&lt;http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">ARK Logging Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">has event</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">has endpoint</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">IP4 address</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">user ID</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click">Click</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter">Filter</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log">General Log</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login">Login</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout">Logout</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">New User Signup</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">Organization Change</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset">Password Reset</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">Password Update</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">Platform Role Change</a>
+   </li>
+   <li>
+      <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">Search</a>
+   </li>
+</ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">ARK Logging Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">ARK Logging Ontology that is used to generate network/audit logs</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for ARK Logging Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by ARK Logging Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">
+      <h3>Event<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event</p>
+      <div class="comment">
+         <span class="markdown">An event that is logged.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/2002/07/owl#Thing"
+               target="_blank"
+               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">IP4 address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">has endpoint</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">user ID</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">has event</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click">Click</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter">Filter</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log">General Log</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login">Login</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout">Logout</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">New User Signup</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">Organization Change</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset">Password Reset</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">Password Update</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">Platform Role Change</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">Search</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">has event</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">
+      <h3>has event<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent</p>
+      <div class="comment">
+         <span class="markdown">links a log entry to a log event.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"
+                  target="_blank"
+                  title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry">log entry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">has endpoint</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">IP4 address</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">user ID</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">
+      <h3>has endpoint<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint</p>
+      <div class="comment">
+         <span class="markdown">record the endpoint of the request that is going to send to.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">
+      <h3>IP4 address<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address</p>
+      <div class="comment">
+         <span class="markdown">record the IP4 address of a client who performed the event. The IP4 address should be encrypted.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">
+      <h3>user ID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId</p>
+      <div class="comment">
+         <span class="markdown">record the user ID of the user who performed the event.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click">Click</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter">Filter</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log">General Log</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login">Login</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout">Logout</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">New User Signup</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">Organization Change</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset">Password Reset</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">Password Update</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">Platform Role Change</a>
+      </li>
+      <li>
+         <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">Search</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click">
+      <h3>Click<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click</p>
+      <div class="comment">
+         <span class="markdown">Click event</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter">
+      <h3>Filter<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter</p>
+      <div class="comment">
+         <span class="markdown">Filter event</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log">
+      <h3>General Log<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log</p>
+      <div class="comment">
+         <span class="markdown">General log event</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login">
+      <h3>Login<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login</p>
+      <div class="comment">
+         <span class="markdown">SUCCESS: Valid email and password entered in sign-in page → successful login. FAILURE: Invalid email or password entered in sign-in page → failed login.</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout">
+      <h3>Logout<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout</p>
+      <div class="comment">
+         <span class="markdown">Sign out selected in user menu → successful logout</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">
+      <h3>New User Signup<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup</p>
+      <div class="comment">
+         <span class="markdown">New user registration submitted through page linked in user invite email</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">
+      <h3>Organization Change<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange</p>
+      <div class="comment">
+         <span class="markdown">Organization changed in Your Profile &gt; Details page</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset">
+      <h3>Password Reset<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset</p>
+      <div class="comment">
+         <span class="markdown">Successful password reset request using Forgot Password feature in sign-in page</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">
+      <h3>Password Update<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate</p>
+      <div class="comment">
+         <span class="markdown">New password submitted through Change Password modal in Your Profile &gt; Details page</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">
+      <h3>Platform Role Change<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange</p>
+      <div class="comment">
+         <span class="markdown">Platform role changed in Your Profile &gt; Details page</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">
+      <h3>Search<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search</p>
+      <div class="comment">
+         <span class="markdown">Search event</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>

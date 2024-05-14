@@ -1,0 +1,397 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#"
+     xml:base="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#">
+        <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:description xml:lang="en">ARK Logging Ontology that is used to generate network/audit logs</terms:description>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <terms:publisher>https://www.openark.adaptcentre.ie/</terms:publisher>
+        <terms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
+        <terms:rights>https://creativecommons.org/licenses/by-nc/4.0/</terms:rights>
+        <terms:title xml:lang="en">ARK Logging Ontology</terms:title>
+        <vann:preferredNamespacePrefix>arkLog</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#</vann:preferredNamespaceUri>
+        <owl:versionInfo>0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">
+        <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">links a log entry to a log event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">record the endpoint of the request that is going to send to.</rdfs:comment>
+        <rdfs:label xml:lang="en">has endpoint</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">record the IP4 address of a client who performed the event. The IP4 address should be encrypted.</rdfs:comment>
+        <rdfs:label xml:lang="en">IP4 address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">record the user ID of the user who performed the event.</rdfs:comment>
+        <rdfs:label xml:lang="en">user ID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry -->
+
+
+    <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"/>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14:00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">An event that is logged.</rdfs:comment>
+        <rdfs:label xml:lang="en">Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">Click event</rdfs:comment>
+        <rdfs:label xml:lang="en">Click</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">Filter event</rdfs:comment>
+        <rdfs:label xml:lang="en">Filter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">General log event</rdfs:comment>
+        <rdfs:label xml:lang="en">General Log</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">SUCCESS: Valid email and password entered in sign-in page → successful login. FAILURE: Invalid email or password entered in sign-in page → failed login.</rdfs:comment>
+        <rdfs:label xml:lang="en">Login</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">Sign out selected in user menu → successful logout</rdfs:comment>
+        <rdfs:label xml:lang="en">Logout</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">New user registration submitted through page linked in user invite email</rdfs:comment>
+        <rdfs:label xml:lang="en">New User Signup</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">Organization changed in Your Profile &gt; Details page</rdfs:comment>
+        <rdfs:label xml:lang="en">Organization Change</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">Successful password reset request using Forgot Password feature in sign-in page</rdfs:comment>
+        <rdfs:label xml:lang="en">Password Reset</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">New password submitted through Change Password modal in Your Profile &gt; Details page</rdfs:comment>
+        <rdfs:label xml:lang="en">Password Update</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">Platform role changed in Your Profile &gt; Details page</rdfs:comment>
+        <rdfs:label xml:lang="en">Platform Role Change</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-05-14T00:00:00Z</terms:modified>
+        <rdfs:comment xml:lang="en">Search event</rdfs:comment>
+        <rdfs:label xml:lang="en">Search</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,154 @@
+@prefix arkLog: <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> .
+@prefix arkc: <https://openark.adaptcentre.ie/Ontologies/ARKCube#> .
+@prefix arkp: <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> .
+
+arkLog: a owl:Ontology ;
+	owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology> ;
+	dcterms:contributor  "Junli Liang" , "Rob Brennan" ;
+	dcterms:creator "Junli Liang" ;
+	dcterms:description "ARK Logging Ontology that is used to generate network/audit logs"@en ;
+  dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+  dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:publisher "https://www.openark.adaptcentre.ie/" ;
+	dcterms:rights "https://creativecommons.org/licenses/by-nc/4.0/" ;
+	dcterms:title "ARK Logging Ontology"@en ;
+	<http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
+	<http://purl.org/vocab/vann/preferredNamespacePrefix> "arkLog" ;
+	<http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#" ;
+	owl:versionInfo "0.1" .
+
+arkLog:Event a rdfs:Class ;
+		a owl:Class ;
+		rdfs:label "Event"@en ;
+		rdfs:comment "An event that is logged."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:modified "2024-05-14:00:00:00Z"^^xsd:dateTime ;
+		rdfs:subClassOf owl:Thing .
+
+arkLog:hasEvent a owl:ObjectProperty ;
+		rdfs:label "has event"@en ;
+		rdfs:comment "links a log entry to a log event."@en ;
+		rdfs:domain rlog:LogEntry ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		rdfs:range arkLog:Event .
+
+arkLog:userId a owl:DatatypeProperty ;
+		rdfs:label "user ID"@en ;
+		rdfs:comment "record the user ID of the user who performed the event."@en ;
+		rdfs:domain arkLog:Event ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		rdfs:range xsd:string .
+
+arkLog:ip4Address a owl:DatatypeProperty ;
+		rdfs:label "IP4 address"@en ; 
+		rdfs:comment "record the IP4 address of a client who performed the event. The IP4 address should be encrypted."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		rdfs:domain arkLog:Event ;
+		rdfs:range xsd:string .
+
+arkLog:hasEndpoint a owl:DatatypeProperty ;
+		rdfs:label "has endpoint"@en ;
+		rdfs:comment "record the endpoint of the request that is going to send to."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		rdfs:domain arkLog:Event ;
+		rdfs:range xsd:string .
+
+# instances of arkLog:Event
+arkLog:log a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "General Log"@en ;
+	rdfs:comment "General log event"@en 
+	.
+
+arkLog:click a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Click"@en ;
+	rdfs:comment "Click event"@en 
+	.
+
+arkLog:search a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Search"@en ;
+	rdfs:comment "Search event"@en 
+	.
+
+arkLog:filter a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Filter"@en ;
+	rdfs:comment "Filter event"@en 
+	.
+
+arkLog:newUserSignup a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "New User Signup"@en ;
+	rdfs:comment "New user registration submitted through page linked in user invite email"@en 
+	.
+
+arkLog:login a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Login"@en ;
+	rdfs:comment """SUCCESS: Valid email and password entered in sign-in page → successful login. FAILURE: Invalid email or password entered in sign-in page → failed login."""@en
+	.
+
+arkLog:logout a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Logout"@en ;
+	rdfs:comment "Sign out selected in user menu → successful logout"@en 
+	.
+
+arkLog:passwordReset a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Password Reset"@en ;
+	rdfs:comment "Successful password reset request using Forgot Password feature in sign-in page"@en 
+	.
+
+arkLog:passwordUpdate a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Password Update"@en ;
+	rdfs:comment "New password submitted through Change Password modal in Your Profile > Details page"@en 
+	.
+
+arkLog:orgChange a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Organization Change"@en ;
+	rdfs:comment "Organization changed in Your Profile > Details page"@en 
+	.
+
+arkLog:platformRoleChange a arkLog:Event ;
+	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	rdfs:label "Platform Role Change"@en ;
+	rdfs:comment "Platform role changed in Your Profile > Details page"@en 
+	.

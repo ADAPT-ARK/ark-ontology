@@ -180,10 +180,20 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://www.w3.org/2000/01/rdf-schema#comment> "A user's email address."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#email> <http://www.w3.org/2000/01/rdf-schema#label> "email"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId> <http://purl.org/dc/elements/1.1/creator> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId> <http://purl.org/dc/elements/1.1/date> "2024-05-15T23T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId> <http://www.w3.org/2000/01/rdf-schema#comment> "The user's CKAN (ARKEvidence) user ID."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#hasCKANUserId> <http://www.w3.org/2000/01/rdf-schema#label> "has CKAN (ARKEvidence) user ID"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#password> <http://www.w3.org/2000/01/rdf-schema#comment> "A user's password."@en .
@@ -192,6 +202,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#token> <http://www.w3.org/2000/01/rdf-schema#comment> "A token for user who requests a password reset."@en .
@@ -200,6 +211,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:51:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#tokenExpiry> <http://www.w3.org/2000/01/rdf-schema#comment> "An expiry date for a token requested by user." .
@@ -208,6 +220,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#User> .
+<https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://purl.org/dc/elements/1.1/creator> "Lucy McKenna" .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://purl.org/dc/elements/1.1/date> "2021-08-25T23:26:14+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://openark.adaptcentre.ie/Ontologies/ARKPlatform#username> <http://www.w3.org/2000/01/rdf-schema#comment> "A user's username."@en .
