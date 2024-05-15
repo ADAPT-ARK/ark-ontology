@@ -1,0 +1,166 @@
+@prefix : <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> .
+
+<https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+                                                                    <http://purl.org/dc/elements/1.1/title> "NIOSH Control Ontology"@en ;
+                                                                    <http://purl.org/dc/terms/abstract> "This ontology defines the sets of owl classes to be used to instantiate Controls"@en ;
+                                                                    <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                                           "Nick McDonald" ,
+                                                                                                           "Rob Brennan" ;
+                                                                    <http://purl.org/dc/terms/created> "2024-05-15"^^xsd:date ;
+                                                                    <http://purl.org/dc/terms/description> "This ontology defines the sets of owl classes to be used to instantiate Controls"@en ;
+                                                                    <http://purl.org/dc/terms/modified> "2024-05-15"^^xsd:date ;
+                                                                    <http://purl.org/dc/terms/publisher> <https://openark.adaptcentre.ie> ;
+                                                                    <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/4.0/> ;
+                                                                    <http://purl.org/dc/terms/source> "NIOSH Control Ontology"@en ;
+                                                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkNIOSH" ;
+                                                                    <http://purl.org/vocab/vann/preferredNamespaceUri> <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+                                                                    rdfs:comment "This ontology defines the sets of owl classes to be used to instantiate Controls"@en ;
+                                                                    owl:versionInfo "0.1" ;
+                                                                    <https://w3id.org/widoco/vocab#introduction> "This ontology defines the sets of owl classes to be used to instantiate Controls"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/widoco/vocab#introduction
+<https://w3id.org/widoco/vocab#introduction> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ContorlOntology#NIOSHControls
+<https://openark.adaptcentre.ie/Ontologies/NIOSH-ContorlOntology#NIOSHControls> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#AdministrativeControls
+:AdministrativeControls rdf:type owl:Class ;
+                        rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/NIOSH-ContorlOntology#NIOSHControls> ;
+                        <http://purl.org/dc/terms/created> "2024-05-15"^^xsd:date ;
+                        <http://purl.org/dc/terms/creator> "Nick McDonald" ;
+                        rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "Administrative controls change the way work is done or give workers more information by providing workers with relevant procedures, training, or warnings. They’re often used together with higher-level controls."@en ;
+                        <http://www.w3.org/2004/02/skos/core#prefLabel> "Administrative Controls"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Elimination
+:Elimination rdf:type owl:Class ;
+             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/NIOSH-ContorlOntology#NIOSHControls> ;
+             <http://purl.org/dc/terms/created> "2024-05-15"^^xsd:date ;
+             <http://purl.org/dc/terms/creator> "Nick McDonald" ;
+             rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Elimination makes sure the hazard no longer exists. Most effective method"@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Elimination"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#EngineeringControls
+:EngineeringControls rdf:type owl:Class ;
+                     rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/NIOSH-ContorlOntology#NIOSHControls> ;
+                     <http://purl.org/dc/terms/created> "2024-05-15"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "Nick McDonald" ;
+                     rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Engineering controls reduce exposure by preventing hazards from coming into contact with workers. They still allow workers to do their jobs, though."@en ;
+                     <http://www.w3.org/2004/02/skos/core#prefLabel> "Engineering Controls"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#NIOSHControls
+:NIOSHControls rdf:type owl:Class ;
+               <http://purl.org/dc/terms/created> "2024-05-15"^^xsd:date ;
+               <http://purl.org/dc/terms/creator> "Nick McDonald" ;
+               rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+               <http://www.w3.org/2004/02/skos/core#prefLabel> "NIOSH Controls"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#PersonalProtectiveEquipment
+:PersonalProtectiveEquipment rdf:type owl:Class ;
+                             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/NIOSH-ContorlOntology#NIOSHControls> ;
+                             <http://purl.org/dc/terms/created> "2024-05-15"^^xsd:date ;
+                             <http://purl.org/dc/terms/creator> "Nick McDonald" ;
+                             rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Personal protective equipment (PPE) includes clothing and devices to protect workers. PPE needs constant effort and attention (including proper use and training) from workers. Higher-level controls aren’t always feasible, and PPE might be needed in conjunction with other control measures. Least effective contols."@en ;
+                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Personal protective equipment"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Subsitution
+:Subsitution rdf:type owl:Class ;
+             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/NIOSH-ContorlOntology#NIOSHControls> ;
+             <http://purl.org/dc/terms/created> "2024-05-15"^^xsd:date ;
+             <http://purl.org/dc/terms/creator> "Nick McDonald" ;
+             rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Substitution means changing out a material or process to reduce the hazard."@en ;
+             <http://www.w3.org/2004/02/skos/core#prefLabel> "Substitution"@en .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
