@@ -16,13 +16,13 @@ arkLog: a owl:Ontology ;
 	dcterms:creator "Junli Liang" ;
 	dcterms:description "ARK Logging Ontology that is used to generate network/audit logs"@en ;
   dcterms:created "2024-05-14"^^xsd:date ;
-  dcterms:modified "2024-05-14"^^xsd:date ;
+  dcterms:modified "2024-05-16"^^xsd:date ;
 	dcterms:publisher "https://www.openark.adaptcentre.ie/" ;
 	dcterms:rights "https://creativecommons.org/licenses/by-nc/4.0/" ;
 	dcterms:title "ARK Logging Ontology"@en ;
 	<http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
 	<http://purl.org/vocab/vann/preferredNamespacePrefix> "arkLog" ;
-	<http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#" ;
+	<http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#" ;
 	owl:versionInfo "0.1" .
 
 arkLog:Event a rdfs:Class ;
@@ -31,8 +31,8 @@ arkLog:Event a rdfs:Class ;
 		rdfs:comment "An event that is logged."@en ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
-		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-		dcterms:modified "2024-05-14:00:00:00Z"^^xsd:dateTime ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:subClassOf owl:Thing .
 
 arkLog:hasEvent a owl:ObjectProperty ;
@@ -41,27 +41,28 @@ arkLog:hasEvent a owl:ObjectProperty ;
 		rdfs:domain rlog:LogEntry ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
-		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:range arkLog:Event .
 
 arkLog:userId a owl:DatatypeProperty ;
 		rdfs:label "user ID"@en ;
 		rdfs:comment "record the user ID of the user who performed the event."@en ;
-		rdfs:domain arkLog:Event ;
+		rdfs:domain rlog:LogEntry ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
-		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:range xsd:string .
+
 
 arkLog:ip4Address a owl:DatatypeProperty ;
 		rdfs:label "IP4 address"@en ; 
 		rdfs:comment "record the IP4 address of a client who performed the event. The IP4 address should be encrypted."@en ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
-		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:domain arkLog:Event ;
 		rdfs:range xsd:string .
 
@@ -70,85 +71,245 @@ arkLog:hasEndpoint a owl:DatatypeProperty ;
 		rdfs:comment "record the endpoint of the request that is going to send to."@en ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
-		dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-		dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:domain arkLog:Event ;
 		rdfs:range xsd:string .
 
+arkLog:ColourCode a rdfs:Class ;
+		a owl:Class ;
+		rdfs:label "Colour Code"@en ;
+		rdfs:comment "HTML Colour code to represent level of a log"@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
+		rdfs:subClassOf owl:Thing .
+
+arkLog:hasColourCode a owl:ObjectProperty ;
+		rdfs:label "has colour code"@en ;
+		rdfs:comment "Link a ColourCode to HTML color code in string"@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
+		rdfs:domain arkLog:ColourCode ;
+		rdfs:range xsd:string .
+
+arkLog:levelCode a owl:DatatypeProperty ;
+		rdfs:label "level code"@en ;
+		rdfs:comment "record the level code of the log. Useful in filtering, sorting"@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
+		rdfs:domain arkLog:Level ;
+		rdfs:range xsd:integer .
+	
+arkLog:Level a rdfs:Class, owl:Class ;
+		rdfs:label "Level"@en ;
+		rdfs:comment "A level of the log."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-14"^^xsd:date ;
+		rdfs:subClassOf rlog:Level .
+
+# instances of arkLog:Level
+arkLog:success a arkLog:Level ;
+	arkLog:levelCode "4"^^xsd:integer ;
+	arkLog:hasColourCode arkLog:green ;
+	rdfs:label "SUCCESS"@en ;
+	rdfs:comment "indicates that the operation completed successfully."@en 
+	.
+
+arkLog:debug a arkLog:Level ;
+	arkLog:levelCode "5"^^xsd:integer ;
+	arkLog:hasColourCode arkLog:lightGrey ;
+	rdfs:label "DEBUG"@en ;
+	rdfs:comment "intended for logging detailed information about the system for debugging purposes."@en 
+	.
+
+arkLog:info a arkLog:Level ;
+	arkLog:levelCode "3"^^xsd:integer ;
+	arkLog:hasColourCode arkLog:lightBlue ;
+	rdfs:label "INFO"@en ;
+	rdfs:comment "includes messages that provide a record of the normal operation of the system."@en 
+	.
+
+arkLog:warn a arkLog:Level ;
+	arkLog:levelCode "2"^^xsd:integer ;
+	arkLog:hasColourCode arkLog:yellow ;
+	rdfs:label "WARN"@en ;
+	rdfs:comment "signifies potential issues that may lead to errors or unexpected behavior in the future if not addressed."@en 
+	.
+
+arkLog:error a arkLog:Level ;
+	arkLog:levelCode "1"^^xsd:integer ;
+	arkLog:hasColourCode arkLog:red ;
+	rdfs:label "ERROR"@en ;
+	rdfs:comment "indicates error conditions that impair some operation but are less severe than critical situations."@en 
+	.
+
+# instances of arkLog:ColourCode
+arkLog:red a arkLog:ColourCode ;
+	arkLog:hasColourCode "#DC3545"^^xsd:string ;
+	rdfs:label "Error colour (red)"@en ;
+	rdfs:comment "Represents the error level."@en 
+	.
+
+arkLog:yellow a arkLog:ColourCode ;
+	arkLog:hasColourCode "#FFC107"^^xsd:string ;
+	rdfs:label "Warning colour (Yellow)"@en ;
+	rdfs:comment "Represents the warning level."@en 
+	.
+
+arkLog:green a arkLog:ColourCode ;
+	arkLog:hasColourCode "#28A745"^^xsd:string ;
+	rdfs:label "Success colour (green)"@en ;
+	rdfs:comment "Represents the success level."@en 
+	.
+
+arkLog:lightBlue a arkLog:ColourCode ;
+	arkLog:hasColourCode "#17A2B8"^^xsd:string ;
+	rdfs:label "Info colour (light blue)"@en ;
+	rdfs:comment "Represents the info level."@en 
+	.
+
+arkLog:lightGrey a arkLog:ColourCode ;
+	arkLog:hasColourCode "#6C757D"^^xsd:string ;
+	rdfs:label "Debug colour (light grey)"@en ;
+	rdfs:comment "Represents the debug level."@en 
+	.
+
 # instances of arkLog:Event
 arkLog:log a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "General Log"@en ;
 	rdfs:comment "General log event"@en 
 	.
 
 arkLog:click a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Click"@en ;
 	rdfs:comment "Click event"@en 
 	.
 
 arkLog:search a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Search"@en ;
 	rdfs:comment "Search event"@en 
 	.
 
 arkLog:filter a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Filter"@en ;
 	rdfs:comment "Filter event"@en 
 	.
 
 arkLog:newUserSignup a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "New User Signup"@en ;
 	rdfs:comment "New user registration submitted through page linked in user invite email"@en 
 	.
 
 arkLog:login a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Login"@en ;
 	rdfs:comment """SUCCESS: Valid email and password entered in sign-in page → successful login. FAILURE: Invalid email or password entered in sign-in page → failed login."""@en
 	.
 
 arkLog:logout a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Logout"@en ;
 	rdfs:comment "Sign out selected in user menu → successful logout"@en 
 	.
 
 arkLog:passwordReset a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Password Reset"@en ;
 	rdfs:comment "Successful password reset request using Forgot Password feature in sign-in page"@en 
 	.
 
 arkLog:passwordUpdate a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Password Update"@en ;
 	rdfs:comment "New password submitted through Change Password modal in Your Profile > Details page"@en 
 	.
 
 arkLog:orgChange a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Organization Change"@en ;
 	rdfs:comment "Organization changed in Your Profile > Details page"@en 
 	.
 
 arkLog:platformRoleChange a arkLog:Event ;
-	dcterms:created "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-	dcterms:modified "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Platform Role Change"@en ;
 	rdfs:comment "Platform role changed in Your Profile > Details page"@en 
+	.
+
+# aggregate event class
+arkLog:ResourceAccessEvent a rdfs:Class ;
+		a owl:Class ;
+		rdfs:label "Resource Access Event"@en ;
+		rdfs:comment "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-16"^^xsd:date ;
+		dcterms:modified "2024-05-16"^^xsd:date ;
+		rdfs:subClassOf arkLog:Event .
+
+arkLog:resourceId a owl:DatatypeProperty ;
+		rdfs:label "resource ID"@en ;
+		rdfs:comment "record the ID of the resource that is accessed."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-16"^^xsd:date ;
+		dcterms:modified "2024-05-16"^^xsd:date ;
+		rdfs:domain arkLog:ResourceAccessEvent ;
+		rdfs:range xsd:string .
+
+# instances of arkLog:ResourceAccessEvent
+arkLog:AccessEvidence a arkLog:ResourceAccessEvent ;
+	dcterms:created "2024-05-16"^^xsd:date ;
+	dcterms:modified "2024-05-16"^^xsd:date ;
+	rdfs:label "Access Dataset"@en ;
+	rdfs:comment "User accesses evidence"@en ;
+	rdfs:subClassOf arkLog:ResourceAccessEvent
+	.
+
+arkLog:AccessProjectEvent a arkLog:ResourceAccessEvent ;
+	dcterms:created "2024-05-16"^^xsd:date ;
+	dcterms:modified "2024-05-16"^^xsd:date ;
+	rdfs:label "Access Project"@en ;
+	rdfs:comment "User accesses a project"@en ;
+	rdfs:subClassOf arkLog:ResourceAccessEvent
+	.
+
+arkLog:AccessRiskRegisterEvent a arkLog:ResourceAccessEvent ;
+	dcterms:created "2024-05-16"^^xsd:date ;
+	dcterms:modified "2024-05-16"^^xsd:date ;
+	rdfs:label "Access Risk Register"@en ;
+	rdfs:comment "User accesses risk register"@en ;
+	rdfs:subClassOf arkLog:ResourceAccessEvent
+	.
+
+arkLog:AccessControlEvent a arkLog:ResourceAccessEvent ;
+	dcterms:created "2024-05-16"^^xsd:date ;
+	dcterms:modified "2024-05-16"^^xsd:date ;
+	rdfs:label "Access Control"@en ;
+	rdfs:subClassOf arkLog:ResourceAccessEvent ;
+	rdfs:comment "User accesses arkc:Control"@en 
 	.

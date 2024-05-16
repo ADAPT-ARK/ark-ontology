@@ -1,4 +1,7 @@
 [ {
+  "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
@@ -55,7 +58,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-14"
+    "@value" : "2024-05-16"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "https://www.openark.adaptcentre.ie/"
@@ -73,13 +76,143 @@
     "@value" : "arkLog"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@value" : "https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#"
+    "@value" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "0.1"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User accesses arkc:Control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access Control"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User accesses evidence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access Dataset"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User accesses a project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access Project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "User accesses risk register"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Access Risk Register"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "HTML Colour code to represent level of a log"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Colour Code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event",
@@ -90,15 +223,15 @@
     "@value" : "Rob Brennan"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Junli Liang"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14:00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -112,15 +245,75 @@
     "@id" : "http://www.w3.org/2002/07/owl#Thing"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A level of the log."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Resource Access Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -134,15 +327,57 @@
     "@value" : "Click"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#debug",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "intended for logging detailed information about the system for debugging purposes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "DEBUG"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#error",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "indicates error conditions that impair some operation but are less severe than critical situations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ERROR"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -156,6 +391,56 @@
     "@value" : "Filter"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the success level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Success colour (green)"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@value" : "#28A745"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Link a ColourCode to HTML color code in string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has colour code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -164,15 +449,15 @@
     "@value" : "Rob Brennan"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Junli Liang"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -197,15 +482,15 @@
     "@value" : "Rob Brennan"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Junli Liang"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -222,6 +507,27 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#info",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "includes messages that provide a record of the normal operation of the system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "INFO"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "3"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -230,15 +536,15 @@
     "@value" : "Rob Brennan"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Junli Liang"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -255,15 +561,82 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "record the level code of the log. Useful in filtering, sorting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "level code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the info level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Info colour (light blue)"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@value" : "#17A2B8"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the debug level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Debug colour (light grey)"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@value" : "#6C757D"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -280,12 +653,12 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -302,12 +675,12 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -324,12 +697,12 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -346,12 +719,12 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -368,12 +741,12 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -390,12 +763,12 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -412,12 +785,12 @@
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -431,15 +804,65 @@
     "@value" : "Platform Role Change"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the error level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Error colour (red)"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@value" : "#DC3545"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "record the ID of the resource that is accessed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "resource ID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
@@ -453,6 +876,27 @@
     "@value" : "Search"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#success",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "indicates that the operation completed successfully."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "SUCCESS"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "4"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -461,22 +905,22 @@
     "@value" : "Rob Brennan"
   } ],
   "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://purl.org/dc/terms/creator" : [ {
     "@value" : "Junli Liang"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "@value" : "2024-05-14T00:00:00Z"
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "record the user ID of the user who performed the event."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+    "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -484,5 +928,43 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#warn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "signifies potential issues that may lead to errors or unexpected behavior in the future if not addressed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "WARN"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "2"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the warning level."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Warning colour (Yellow)"
+  } ],
+  "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode" : [ {
+    "@value" : "#FFC107"
   } ]
 } ]

@@ -13,13 +13,13 @@
                                                                  <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
                                                                  <http://purl.org/dc/terms/creator> "Junli Liang" ;
                                                                  <http://purl.org/dc/terms/description> "ARK Logging Ontology that is used to generate network/audit logs"@en ;
-                                                                 <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+                                                                 <http://purl.org/dc/terms/modified> "2024-05-16"^^xsd:date ;
                                                                  <http://purl.org/dc/terms/publisher> "https://www.openark.adaptcentre.ie/" ;
                                                                  <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ,
                                                                                                    "https://creativecommons.org/licenses/by-nc/4.0/" ;
                                                                  <http://purl.org/dc/terms/title> "ARK Logging Ontology"@en ;
                                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkLog" ;
-                                                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/arkLoggingOntology#" ;
+                                                                 <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#" ;
                                                                  owl:versionInfo "0.1" .
 
 #################################################################
@@ -78,15 +78,20 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode
+:hasColourCode rdf:type owl:ObjectProperty ;
+               rdfs:domain :ColourCode .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
           rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry> ;
           rdfs:range :Event ;
           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                  "Rob Brennan" ;
-          <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+          <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
           <http://purl.org/dc/terms/creator> "Junli Liang" ;
-          <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+          <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
           rdfs:comment "links a log entry to a log event."@en ;
           rdfs:label "has event"@en .
 
@@ -95,15 +100,20 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode
+:hasColourCode rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint
 :hasEndpoint rdf:type owl:DatatypeProperty ;
              rdfs:domain :Event ;
              rdfs:range xsd:string ;
              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                     "Rob Brennan" ;
-             <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+             <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
              <http://purl.org/dc/terms/creator> "Junli Liang" ;
-             <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+             <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
              rdfs:comment "record the endpoint of the request that is going to send to."@en ;
              rdfs:label "has endpoint"@en .
 
@@ -114,22 +124,48 @@ xsd:date rdf:type rdfs:Datatype .
             rdfs:range xsd:string ;
             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                    "Rob Brennan" ;
-            <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+            <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
             <http://purl.org/dc/terms/creator> "Junli Liang" ;
-            <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+            <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
             rdfs:comment "record the IP4 address of a client who performed the event. The IP4 address should be encrypted."@en ;
             rdfs:label "IP4 address"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode
+:levelCode rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Level ;
+           rdfs:range xsd:integer ;
+           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                  "Rob Brennan" ;
+           <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+           <http://purl.org/dc/terms/creator> "Junli Liang" ;
+           <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+           rdfs:comment "record the level code of the log. Useful in filtering, sorting"@en ;
+           rdfs:label "level code"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId
+:resourceId rdf:type owl:DatatypeProperty ;
+            rdfs:domain :ResourceAccessEvent ;
+            rdfs:range xsd:string ;
+            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                   "Rob Brennan" ;
+            <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+            <http://purl.org/dc/terms/creator> "Junli Liang" ;
+            <http://purl.org/dc/terms/modified> "2024-05-16"^^xsd:date ;
+            rdfs:comment "record the ID of the resource that is accessed."@en ;
+            rdfs:label "resource ID"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId
 :userId rdf:type owl:DatatypeProperty ;
-        rdfs:domain :Event ;
+        rdfs:domain <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry> ;
         rdfs:range xsd:string ;
         <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                "Rob Brennan" ;
-        <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+        <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
         <http://purl.org/dc/terms/creator> "Junli Liang" ;
-        <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+        <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
         rdfs:comment "record the user ID of the user who performed the event."@en ;
         rdfs:label "user ID"@en .
 
@@ -138,8 +174,44 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level> rdf:type owl:Class .
+
+
 ###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent
+:AccessControlEvent rdf:type owl:Class ;
+                    rdfs:subClassOf :ResourceAccessEvent .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence
+:AccessEvidence rdf:type owl:Class ;
+                rdfs:subClassOf :ResourceAccessEvent .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent
+:AccessProjectEvent rdf:type owl:Class ;
+                    rdfs:subClassOf :ResourceAccessEvent .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent
+:AccessRiskRegisterEvent rdf:type owl:Class ;
+                         rdfs:subClassOf :ResourceAccessEvent .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode
+:ColourCode rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                   "Rob Brennan" ;
+            <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+            <http://purl.org/dc/terms/creator> "Junli Liang" ;
+            <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+            rdfs:comment "HTML Colour code to represent level of a log"@en ;
+            rdfs:label "Colour Code"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event
@@ -147,40 +219,135 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:subClassOf owl:Thing ;
        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                               "Rob Brennan" ;
-       <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+       <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
        <http://purl.org/dc/terms/creator> "Junli Liang" ;
-       <http://purl.org/dc/terms/modified> "2024-05-14:00:00:00Z"^^xsd:dateTime ;
+       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
        rdfs:comment "An event that is logged."@en ;
        rdfs:label "Event"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level
+:Level rdf:type owl:Class ;
+       rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level> ;
+       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                              "Rob Brennan" ;
+       <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+       <http://purl.org/dc/terms/creator> "Junli Liang" ;
+       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+       rdfs:comment "A level of the log."@en ;
+       rdfs:label "Level"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent
+:ResourceAccessEvent rdf:type owl:Class ;
+                     rdfs:subClassOf :Event ;
+                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                            "Rob Brennan" ;
+                     <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                     <http://purl.org/dc/terms/creator> "Junli Liang" ;
+                     <http://purl.org/dc/terms/modified> "2024-05-16"^^xsd:date ;
+                     rdfs:comment "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence."@en ;
+                     rdfs:label "Resource Access Event"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent
+:AccessControlEvent rdf:type owl:NamedIndividual ,
+                             :ResourceAccessEvent .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence
+:AccessEvidence rdf:type owl:NamedIndividual ,
+                         :ResourceAccessEvent .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent
+:AccessProjectEvent rdf:type owl:NamedIndividual ,
+                             :ResourceAccessEvent .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent
+:AccessRiskRegisterEvent rdf:type owl:NamedIndividual ,
+                                  :ResourceAccessEvent .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click
 :click rdf:type owl:NamedIndividual ,
                 :Event ;
-       <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-       <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+       <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
        rdfs:comment "Click event"@en ;
        rdfs:label "Click"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#debug
+:debug rdf:type owl:NamedIndividual ,
+                :Level ;
+       :hasColourCode :lightGrey ;
+       :levelCode 5 ;
+       rdfs:comment "intended for logging detailed information about the system for debugging purposes."@en ;
+       rdfs:label "DEBUG"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#error
+:error rdf:type owl:NamedIndividual ,
+                :Level ;
+       :hasColourCode :red ;
+       :levelCode 1 ;
+       rdfs:comment "indicates error conditions that impair some operation but are less severe than critical situations."@en ;
+       rdfs:label "ERROR"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter
 :filter rdf:type owl:NamedIndividual ,
                  :Event ;
-        <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-        <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+        <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+        <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
         rdfs:comment "Filter event"@en ;
         rdfs:label "Filter"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green
+:green rdf:type owl:NamedIndividual ,
+                :ColourCode ;
+       :hasColourCode "#28A745" ;
+       rdfs:comment "Represents the success level."@en ;
+       rdfs:label "Success colour (green)"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#info
+:info rdf:type owl:NamedIndividual ,
+               :Level ;
+      :hasColourCode :lightBlue ;
+      :levelCode 3 ;
+      rdfs:comment "includes messages that provide a record of the normal operation of the system."@en ;
+      rdfs:label "INFO"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue
+:lightBlue rdf:type owl:NamedIndividual ,
+                    :ColourCode ;
+           :hasColourCode "#17A2B8" ;
+           rdfs:comment "Represents the info level."@en ;
+           rdfs:label "Info colour (light blue)"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey
+:lightGrey rdf:type owl:NamedIndividual ,
+                    :ColourCode ;
+           :hasColourCode "#6C757D" ;
+           rdfs:comment "Represents the debug level."@en ;
+           rdfs:label "Debug colour (light grey)"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log
 :log rdf:type owl:NamedIndividual ,
               :Event ;
-     <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-     <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+     <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+     <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
      rdfs:comment "General log event"@en ;
      rdfs:label "General Log"@en .
 
@@ -188,8 +355,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login
 :login rdf:type owl:NamedIndividual ,
                 :Event ;
-       <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-       <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+       <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
        rdfs:comment "SUCCESS: Valid email and password entered in sign-in page → successful login. FAILURE: Invalid email or password entered in sign-in page → failed login."@en ;
        rdfs:label "Login"@en .
 
@@ -197,8 +364,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout
 :logout rdf:type owl:NamedIndividual ,
                  :Event ;
-        <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-        <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+        <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+        <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
         rdfs:comment "Sign out selected in user menu → successful logout"@en ;
         rdfs:label "Logout"@en .
 
@@ -206,8 +373,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup
 :newUserSignup rdf:type owl:NamedIndividual ,
                         :Event ;
-               <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-               <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+               <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+               <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
                rdfs:comment "New user registration submitted through page linked in user invite email"@en ;
                rdfs:label "New User Signup"@en .
 
@@ -215,8 +382,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange
 :orgChange rdf:type owl:NamedIndividual ,
                     :Event ;
-           <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-           <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+           <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+           <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
            rdfs:comment "Organization changed in Your Profile > Details page"@en ;
            rdfs:label "Organization Change"@en .
 
@@ -224,8 +391,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset
 :passwordReset rdf:type owl:NamedIndividual ,
                         :Event ;
-               <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-               <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+               <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+               <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
                rdfs:comment "Successful password reset request using Forgot Password feature in sign-in page"@en ;
                rdfs:label "Password Reset"@en .
 
@@ -233,8 +400,8 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate
 :passwordUpdate rdf:type owl:NamedIndividual ,
                          :Event ;
-                <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-                <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+                <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+                <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
                 rdfs:comment "New password submitted through Change Password modal in Your Profile > Details page"@en ;
                 rdfs:label "Password Update"@en .
 
@@ -242,19 +409,90 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange
 :platformRoleChange rdf:type owl:NamedIndividual ,
                              :Event ;
-                    <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-                    <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+                    <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+                    <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
                     rdfs:comment "Platform role changed in Your Profile > Details page"@en ;
                     rdfs:label "Platform Role Change"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red
+:red rdf:type owl:NamedIndividual ,
+              :ColourCode ;
+     :hasColourCode "#DC3545" ;
+     rdfs:comment "Represents the error level."@en ;
+     rdfs:label "Error colour (red)"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search
 :search rdf:type owl:NamedIndividual ,
                  :Event ;
-        <http://purl.org/dc/terms/created> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
-        <http://purl.org/dc/terms/modified> "2024-05-14T00:00:00Z"^^xsd:dateTime ;
+        <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+        <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
         rdfs:comment "Search event"@en ;
         rdfs:label "Search"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#success
+:success rdf:type owl:NamedIndividual ,
+                  :Level ;
+         :hasColourCode :green ;
+         :levelCode 4 ;
+         rdfs:comment "indicates that the operation completed successfully."@en ;
+         rdfs:label "SUCCESS"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#warn
+:warn rdf:type owl:NamedIndividual ,
+               :Level ;
+      :hasColourCode :yellow ;
+      :levelCode 2 ;
+      rdfs:comment "signifies potential issues that may lead to errors or unexpected behavior in the future if not addressed."@en ;
+      rdfs:label "WARN"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow
+:yellow rdf:type owl:NamedIndividual ,
+                 :ColourCode ;
+        :hasColourCode "#FFC107" ;
+        rdfs:comment "Represents the warning level."@en ;
+        rdfs:label "Warning colour (Yellow)"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:AccessControlEvent <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                    <http://purl.org/dc/terms/modified> "2024-05-16"^^xsd:date ;
+                    rdfs:comment "User accesses arkc:Control"@en ;
+                    rdfs:label "Access Control"@en .
+
+
+:AccessEvidence <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                <http://purl.org/dc/terms/modified> "2024-05-16"^^xsd:date ;
+                rdfs:comment "User accesses evidence"@en ;
+                rdfs:label "Access Dataset"@en .
+
+
+:AccessProjectEvent <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                    <http://purl.org/dc/terms/modified> "2024-05-16"^^xsd:date ;
+                    rdfs:comment "User accesses a project"@en ;
+                    rdfs:label "Access Project"@en .
+
+
+:AccessRiskRegisterEvent <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                         <http://purl.org/dc/terms/modified> "2024-05-16"^^xsd:date ;
+                         rdfs:comment "User accesses risk register"@en ;
+                         rdfs:label "Access Risk Register"@en .
+
+
+:hasColourCode <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                      "Rob Brennan" ;
+               <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+               <http://purl.org/dc/terms/creator> "Junli Liang" ;
+               <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+               rdfs:comment "Link a ColourCode to HTML color code in string"@en ;
+               rdfs:label "has colour code"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
