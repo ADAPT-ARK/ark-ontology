@@ -519,7 +519,14 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Control
 <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Control> rdf:type owl:Class ;
-                                                                             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
+                                                                             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> ;
+                                                                             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                                                                                    "Rob Brennan" ;
+                                                                             <http://purl.org/dc/terms/created> "2024-05-08"^^xsd:date ;
+                                                                             <http://purl.org/dc/terms/source> "ISO/IEC 27002:2022(E)" ;
+                                                                             rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> ;
+                                                                             <http://www.w3.org/2004/02/skos/core#definition> "An ISO control is defined as a measure that modifies or maintains risk. Some of the controls in this document are controls that modify risk, while others maintain risk. An information security policy, for example, can only maintain risk, whereas compliance with the information security policy can modify risk.  Moreover, some controls describe the same generic measure in different risk contexts. This document provides a generic mixture of organizational, people, physical and technological information security controls derived from internationally recognized best practices."@en ;
+                                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ISO Control"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Corrective
@@ -2128,7 +2135,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#Control
 <https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#Control> rdf:type owl:Class ;
-                                                                            rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
+                                                                            rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> ;
+                                                                            <http://purl.org/dc/terms/contributor> "Nick McDonald" ;
+                                                                            <http://purl.org/dc/terms/created> "2024-05-08"^^xsd:date ;
+                                                                            <http://purl.org/dc/terms/source> <https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/> ;
+                                                                            rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#> ;
+                                                                            <http://www.w3.org/2004/02/skos/core#definition> "Controls are measures that maintain and/or modify risk. In the HSE, a control is a measure that is in place, is working effectively and operating to reduce either the likelihood or impact of a risk."@en ;
+                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "HSE ERM Control"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#ControlOwner
@@ -2362,7 +2375,12 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Control
 <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Control> rdf:type owl:Class ;
-                                                                          rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
+                                                                          rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> ;
+                                                                          <http://purl.org/dc/terms/contributor> "Nick McDonald" ;
+                                                                          <http://purl.org/dc/terms/created> "2024-05-08"^^xsd:date ;
+                                                                          rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
+                                                                          <http://www.w3.org/2004/02/skos/core#definition> ""@en ;
+                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NIOSH Control"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Elimination
@@ -2403,53 +2421,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                                               rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
                                                                               <http://www.w3.org/2004/02/skos/core#definition> "Substitution means changing out a material or process to reduce the hazard."@en ;
                                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Substitution"@en .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Control
-<https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Control> rdf:type owl:NamedIndividual ,
-                                                                                      <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#Control
-<https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#Control> rdf:type owl:NamedIndividual ,
-                                                                                     <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Control
-<https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Control> rdf:type owl:NamedIndividual ,
-                                                                                   <https://openark.adaptcentre.ie/Ontologies/ARKCube#Control> .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-<https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#Control> <http://purl.org/dc/terms/contributor> "Junli Liang" ,
-                                                                                                                    "Rob Brennan" ;
-                                                                             <http://purl.org/dc/terms/created> "2024-05-08"^^xsd:date ;
-                                                                             <http://purl.org/dc/terms/source> "ISO/IEC 27002:2022(E)" ;
-                                                                             rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/CybersecurityControl-OWL#> ;
-                                                                             <http://www.w3.org/2004/02/skos/core#definition> "An ISO control is defined as a measure that modifies or maintains risk. Some of the controls in this document are controls that modify risk, while others maintain risk. An information security policy, for example, can only maintain risk, whereas compliance with the information security policy can modify risk.  Moreover, some controls describe the same generic measure in different risk contexts. This document provides a generic mixture of organizational, people, physical and technological information security controls derived from internationally recognized best practices."@en ;
-                                                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "ISO Control"@en .
-
-
-<https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#Control> <http://purl.org/dc/terms/contributor> "Nick McDonald" ;
-                                                                            <http://purl.org/dc/terms/created> "2024-05-08"^^xsd:date ;
-                                                                            <http://purl.org/dc/terms/source> <https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/> ;
-                                                                            rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/HSE-ERM-ControlOntology#> ;
-                                                                            <http://www.w3.org/2004/02/skos/core#definition> "Controls are measures that maintain and/or modify risk. In the HSE, a control is a measure that is in place, is working effectively and operating to reduce either the likelihood or impact of a risk."@en ;
-                                                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "HSE ERM Control"@en .
-
-
-<https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#Control> <http://purl.org/dc/terms/contributor> "Nick McDonald" ;
-                                                                          <http://purl.org/dc/terms/created> "2024-05-08"^^xsd:date ;
-                                                                          rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/NIOSH-ControlOntology#> ;
-                                                                          <http://www.w3.org/2004/02/skos/core#definition> ""@en ;
-                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "NIOSH Control"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
