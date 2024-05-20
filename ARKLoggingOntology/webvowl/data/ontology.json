@@ -22,12 +22,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Junli Liang",
+        "value" : "Rob Brennan",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Rob Brennan",
+        "value" : "Junli Liang",
         "type" : "label"
       } ],
       "created" : [ {
@@ -62,7 +62,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2024-05-16",
+        "value" : "2024-05-20",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -87,61 +87,92 @@
   },
   "namespace" : [ ],
   "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Datatype"
+  }, {
     "id" : "3",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "4",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "2",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "8",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "17",
-    "type" : "owl:Class"
-  }, {
-    "id" : "20",
-    "type" : "rdfs:Datatype"
-  }, {
     "id" : "7",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "1",
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "9",
     "type" : "owl:Class"
   }, {
-    "id" : "14",
-    "type" : "owl:Class"
+    "id" : "10",
+    "type" : "rdfs:Literal"
   }, {
     "id" : "12",
     "type" : "owl:Class"
   }, {
     "id" : "16",
-    "type" : "owl:Class"
-  }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "10",
-    "type" : "owl:Class"
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "6",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
+    "id" : "21",
     "type" : "owl:Class"
   }, {
-    "id" : "33",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
-    "type" : "owl:Thing"
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
+    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry",
+    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+    "instances" : 0,
+    "annotations" : {
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024-05-16",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2024-05-17",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ResourceAccessLogEntry",
+      "en" : "Resource Access Log"
+    },
+    "comment" : {
+      "en" : "Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
     "id" : "3",
@@ -158,16 +189,53 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "2",
+    "id" : "7",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
     "id" : "8",
     "label" : {
-      "IRI-based" : "string"
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource",
+    "baseIri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "individuals" : [ {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platform",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "comment" : {
+        "en" : "ARK Platform client"
+      },
+      "labels" : {
+        "IRI-based" : "platform",
+        "en" : "ARK Platform client"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#nodeServer",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "comment" : {
+        "en" : "ARK Backend server"
+      },
+      "labels" : {
+        "IRI-based" : "nodeServer",
+        "en" : "ARK Backend server"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "9"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "10",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
     }
   }, {
     "iri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry",
@@ -176,26 +244,27 @@
     "label" : {
       "IRI-based" : "LogEntry"
     },
+    "subClasses" : [ "1" ],
     "attributes" : [ "external" ],
-    "id" : "17"
+    "id" : "12"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "20",
+    "id" : "16",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#string",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "7",
+    "id" : "6",
     "label" : {
       "IRI-based" : "string"
     }
   }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent",
+    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "instances" : 4,
+    "instances" : 0,
     "annotations" : {
       "creator" : [ {
         "identifier" : "creator",
@@ -217,13 +286,58 @@
       "created" : [ {
         "identifier" : "created",
         "language" : "undefined",
+        "value" : "2024-05-14",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2024-05-14",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "LogEntry",
+      "en" : "Log Entry"
+    },
+    "subClasses" : [ "0" ],
+    "comment" : {
+      "en" : "A log entry in ARK."
+    },
+    "id" : "1",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent",
+    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+    "instances" : 0,
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Junli Liang",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Junli Liang",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Rob Brennan",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
         "value" : "2024-05-16",
         "type" : "label"
       } ],
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2024-05-16",
+        "value" : "2024-05-17",
         "type" : "label"
       } ]
     },
@@ -231,93 +345,214 @@
       "IRI-based" : "ResourceAccessEvent",
       "en" : "Resource Access Event"
     },
-    "subClasses" : [ "12", "16", "14", "10" ],
+    "individuals" : [ {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-16",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User accesses a project"
+      },
+      "labels" : {
+        "IRI-based" : "projectAccessEvent",
+        "en" : "Access arkc:Project event"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User edits data entity"
+      },
+      "labels" : {
+        "IRI-based" : "dataEntityEditEvent",
+        "en" : "Edit arkc:DataEntity event"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-16",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User accesses arkc:Control"
+      },
+      "labels" : {
+        "IRI-based" : "controlAccessEvent",
+        "en" : "Access arkc:Control event"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-16",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User accesses evidence"
+      },
+      "labels" : {
+        "IRI-based" : "evidenceAccessEvent",
+        "en" : "Access arkc:Evidence event"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-16",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User accesses risk register"
+      },
+      "labels" : {
+        "IRI-based" : "riskRegisterAccessEvent",
+        "en" : "Access arkc:RiskRegister event"
+      }
+    } ],
     "comment" : {
-      "en" : "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence."
+      "en" : "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message"
     },
-    "id" : "1",
-    "superClasses" : [ "6" ]
+    "id" : "21",
+    "superClasses" : [ "18" ]
   }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+    "iri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode",
+    "baseIri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog",
     "instances" : 0,
-    "annotations" : {
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ]
-    },
     "label" : {
-      "IRI-based" : "AccessEvidence",
-      "en" : "Access arkc:Evidence event"
+      "IRI-based" : "StatusCode"
     },
-    "comment" : {
-      "en" : "User accesses evidence"
-    },
-    "id" : "14",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "instances" : 0,
-    "annotations" : {
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "AccessControlEvent",
-      "en" : "Access arkc:Control event"
-    },
-    "comment" : {
-      "en" : "User accesses arkc:Control"
-    },
-    "id" : "12",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "instances" : 0,
-    "annotations" : {
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "AccessProjectEvent",
-      "en" : "Access arkc:Project event"
-    },
-    "comment" : {
-      "en" : "User accesses a project"
-    },
-    "id" : "16",
-    "superClasses" : [ "1" ]
+    "individuals" : [ {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code200",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "codeId" : [ {
+          "identifier" : "codeId",
+          "language" : "undefined",
+          "value" : "200",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The request succeeded. The result meaning of \"success\" depends on the HTTP method: GET, POST"
+      },
+      "labels" : {
+        "IRI-based" : "code200",
+        "en" : "OK"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code400",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "codeId" : [ {
+          "identifier" : "codeId",
+          "language" : "undefined",
+          "value" : "400",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."
+      },
+      "labels" : {
+        "IRI-based" : "code400",
+        "en" : "Bad Request"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code500",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "codeId" : [ {
+          "identifier" : "codeId",
+          "language" : "undefined",
+          "value" : "500",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "The server has encountered a situation it does not know how to handle."
+      },
+      "labels" : {
+        "IRI-based" : "code500",
+        "en" : "Internal Server Error"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code401",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "codeId" : [ {
+          "identifier" : "codeId",
+          "language" : "undefined",
+          "value" : "401",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Although the HTTP standard specifies \"unauthorized\", semantically this response means \"unauthenticated\". That is, the client must authenticate itself to get the requested response."
+      },
+      "labels" : {
+        "IRI-based" : "code401",
+        "en" : "Unauthorized"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "24"
   }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
@@ -332,12 +567,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Junli Liang",
+        "value" : "Rob Brennan",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Rob Brennan",
+        "value" : "Junli Liang",
         "type" : "label"
       } ],
       "created" : [ {
@@ -411,42 +646,8 @@
     "comment" : {
       "en" : "A level of the log."
     },
-    "id" : "25",
-    "superClasses" : [ "27" ]
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "22",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "instances" : 0,
-    "annotations" : {
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "AccessRiskRegisterEvent",
-      "en" : "Access arkc:RiskRegister event"
-    },
-    "comment" : {
-      "en" : "User accesses risk register"
-    },
-    "id" : "10",
-    "superClasses" : [ "1" ]
+    "id" : "23",
+    "superClasses" : [ "26" ]
   }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
@@ -487,54 +688,6 @@
       "en" : "Event"
     },
     "individuals" : [ {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "annotations" : {
-        "created" : [ {
-          "identifier" : "created",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ],
-        "modified" : [ {
-          "identifier" : "modified",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Platform role changed in Your Profile > Details page"
-      },
-      "labels" : {
-        "IRI-based" : "platformRoleChange",
-        "en" : "Platform Role Change"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "annotations" : {
-        "created" : [ {
-          "identifier" : "created",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ],
-        "modified" : [ {
-          "identifier" : "modified",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Search event"
-      },
-      "labels" : {
-        "IRI-based" : "search",
-        "en" : "Search"
-      }
-    }, {
       "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate",
       "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
       "annotations" : {
@@ -557,6 +710,30 @@
       "labels" : {
         "IRI-based" : "passwordUpdate",
         "en" : "Password Update"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToActive",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User status changed to Active"
+      },
+      "labels" : {
+        "IRI-based" : "userStatusChangeToActive",
+        "en" : "User Status Change to Active"
       }
     }, {
       "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#log",
@@ -583,31 +760,31 @@
         "en" : "General Log"
       }
     }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange",
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToDeleted",
       "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
       "annotations" : {
         "created" : [ {
           "identifier" : "created",
           "language" : "undefined",
-          "value" : "2024-05-14",
+          "value" : "2024-05-17",
           "type" : "label"
         } ],
         "modified" : [ {
           "identifier" : "modified",
           "language" : "undefined",
-          "value" : "2024-05-14",
+          "value" : "2024-05-17",
           "type" : "label"
         } ]
       },
       "comment" : {
-        "en" : "Organization changed in Your Profile > Details page"
+        "en" : "User status changed to Deleted"
       },
       "labels" : {
-        "IRI-based" : "orgChange",
-        "en" : "Organization Change"
+        "IRI-based" : "userStatusChangeToDeleted",
+        "en" : "User Status Change to Deleted"
       }
     }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout",
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userPlatformRoleChange",
       "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
       "annotations" : {
         "created" : [ {
@@ -624,11 +801,11 @@
         } ]
       },
       "comment" : {
-        "en" : "Sign out selected in user menu → successful logout"
+        "en" : "User Platform role changed"
       },
       "labels" : {
-        "IRI-based" : "logout",
-        "en" : "Logout"
+        "IRI-based" : "userPlatformRoleChange",
+        "en" : "User Platform Role Change"
       }
     }, {
       "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup",
@@ -653,54 +830,6 @@
       "labels" : {
         "IRI-based" : "newUserSignup",
         "en" : "New User Signup"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "annotations" : {
-        "created" : [ {
-          "identifier" : "created",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ],
-        "modified" : [ {
-          "identifier" : "modified",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Successful password reset request using Forgot Password feature in sign-in page"
-      },
-      "labels" : {
-        "IRI-based" : "passwordReset",
-        "en" : "Password Reset"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "annotations" : {
-        "created" : [ {
-          "identifier" : "created",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ],
-        "modified" : [ {
-          "identifier" : "modified",
-          "language" : "undefined",
-          "value" : "2024-05-14",
-          "type" : "label"
-        } ]
-      },
-      "comment" : {
-        "en" : "Filter event"
-      },
-      "labels" : {
-        "IRI-based" : "filter",
-        "en" : "Filter"
       }
     }, {
       "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#login",
@@ -750,12 +879,180 @@
         "IRI-based" : "click",
         "en" : "Click"
       }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToPending",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User organisation changed to Pending"
+      },
+      "labels" : {
+        "IRI-based" : "userOrgChangeToPending",
+        "en" : "User Organisation Change to Pending"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Search event"
+      },
+      "labels" : {
+        "IRI-based" : "search",
+        "en" : "Search"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToPending",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User status changed to Pending"
+      },
+      "labels" : {
+        "IRI-based" : "userStatusChangeToPending",
+        "en" : "User Status Change to Pending"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToApproved",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-17",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "User organisation changed to Approved"
+      },
+      "labels" : {
+        "IRI-based" : "userOrgChangeToApproved",
+        "en" : "User Organisation Change to Approved"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Sign out selected in user menu → successful logout"
+      },
+      "labels" : {
+        "IRI-based" : "logout",
+        "en" : "Logout"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#filter",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Filter event"
+      },
+      "labels" : {
+        "IRI-based" : "filter",
+        "en" : "Filter"
+      }
+    }, {
+      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset",
+      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+      "annotations" : {
+        "created" : [ {
+          "identifier" : "created",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ],
+        "modified" : [ {
+          "identifier" : "modified",
+          "language" : "undefined",
+          "value" : "2024-05-14",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "en" : "Successful password reset request using Forgot Password feature in sign-in page"
+      },
+      "labels" : {
+        "IRI-based" : "passwordReset",
+        "en" : "Password Reset"
+      }
     } ],
-    "subClasses" : [ "1" ],
+    "subClasses" : [ "21" ],
     "comment" : {
       "en" : "An event that is logged."
     },
-    "id" : "6"
+    "id" : "18"
   }, {
     "iri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level",
     "baseIri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog",
@@ -763,212 +1060,51 @@
     "label" : {
       "IRI-based" : "Level"
     },
-    "subClasses" : [ "25" ],
+    "subClasses" : [ "23" ],
     "attributes" : [ "external" ],
-    "id" : "27"
-  }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "instances" : 0,
-    "annotations" : {
-      "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Junli Liang",
-        "type" : "label"
-      } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Rob Brennan",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Junli Liang",
-        "type" : "label"
-      } ],
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2024-05-14",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2024-05-14",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "ColourCode",
-      "en" : "Colour Code"
-    },
-    "individuals" : [ {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "comment" : {
-        "en" : "Represents the debug level."
-      },
-      "labels" : {
-        "IRI-based" : "lightGrey",
-        "en" : "Debug colour (light grey)"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "comment" : {
-        "en" : "Represents the error level."
-      },
-      "labels" : {
-        "IRI-based" : "red",
-        "en" : "Error colour (red)"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "comment" : {
-        "en" : "Represents the info level."
-      },
-      "labels" : {
-        "IRI-based" : "lightBlue",
-        "en" : "Info colour (light blue)"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "comment" : {
-        "en" : "Represents the success level."
-      },
-      "labels" : {
-        "IRI-based" : "green",
-        "en" : "Success colour (green)"
-      }
-    }, {
-      "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow",
-      "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-      "comment" : {
-        "en" : "Represents the warning level."
-      },
-      "labels" : {
-        "IRI-based" : "yellow",
-        "en" : "Warning colour (Yellow)"
-      }
-    } ],
-    "comment" : {
-      "en" : "HTML Colour code to represent level of a log"
-    },
-    "id" : "33"
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "34",
-    "label" : {
-      "undefined" : "Thing"
-    }
+    "id" : "26"
   } ],
   "property" : [ {
-    "id" : "0",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "5",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "9",
-    "type" : "rdf:Property"
-  }, {
     "id" : "11",
-    "type" : "rdf:Property"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "13",
-    "type" : "rdf:Property"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "15",
-    "type" : "rdf:Property"
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "18",
+    "id" : "17",
     "type" : "owl:objectProperty"
   }, {
     "id" : "19",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "21",
+    "id" : "20",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "23",
+    "id" : "22",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "24",
+    "id" : "25",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "26",
+    "id" : "27",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "28",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "29",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "30",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "31",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "32",
-    "type" : "rdfs:SubClassOf"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "range" : "2",
-    "annotations" : {
-      "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Junli Liang",
-        "type" : "label"
-      } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Rob Brennan",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Junli Liang",
-        "type" : "label"
-      } ],
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2024-05-16",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "resourceId",
-      "en" : "resource ID"
-    },
-    "domain" : "1",
-    "comment" : {
-      "en" : "record the ID of the resource that is accessed."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "0"
-  }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "range" : "7",
+    "range" : "6",
     "annotations" : {
       "creator" : [ {
         "identifier" : "creator",
@@ -979,12 +1115,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Rob Brennan",
+        "value" : "Junli Liang",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Junli Liang",
+        "value" : "Rob Brennan",
         "type" : "label"
       } ],
       "created" : [ {
@@ -1004,48 +1140,81 @@
       "IRI-based" : "hasEndpoint",
       "en" : "has endpoint"
     },
-    "domain" : "6",
+    "domain" : "1",
     "comment" : {
       "en" : "record the endpoint of the request that is going to send to."
     },
     "attributes" : [ "datatype" ],
     "id" : "5"
   }, {
-    "domain" : "1",
-    "range" : "10",
-    "id" : "9",
-    "label" : {
-      "IRI-based" : "6",
-      "undefined" : "is a"
-    }
-  }, {
-    "domain" : "1",
     "range" : "12",
-    "id" : "11",
-    "label" : {
-      "IRI-based" : "7",
-      "undefined" : "is a"
-    }
-  }, {
     "domain" : "1",
-    "range" : "14",
-    "id" : "13",
-    "label" : {
-      "IRI-based" : "8",
-      "undefined" : "is a"
-    }
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "11"
   }, {
-    "domain" : "1",
+    "iri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message",
+    "baseIri" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "message"
+    },
+    "domain" : "8",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "13"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId",
+    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
     "range" : "16",
-    "id" : "15",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Junli Liang",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Junli Liang",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Rob Brennan",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024-05-16",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2024-05-17",
+        "type" : "label"
+      } ]
+    },
     "label" : {
-      "IRI-based" : "9",
-      "undefined" : "is a"
-    }
+      "IRI-based" : "entityId",
+      "en" : "Entity ID"
+    },
+    "domain" : "0",
+    "comment" : {
+      "en" : "record the ID of the entity that is accessed."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "15"
   }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "range" : "6",
+    "range" : "18",
     "annotations" : {
       "creator" : [ {
         "identifier" : "creator",
@@ -1081,12 +1250,12 @@
       "IRI-based" : "hasEvent",
       "en" : "has event"
     },
-    "domain" : "17",
+    "domain" : "1",
     "comment" : {
       "en" : "links a log entry to a log event."
     },
     "attributes" : [ "object" ],
-    "id" : "18"
+    "id" : "17"
   }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
@@ -1101,12 +1270,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Junli Liang",
+        "value" : "Rob Brennan",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Rob Brennan",
+        "value" : "Junli Liang",
         "type" : "label"
       } ],
       "created" : [ {
@@ -1126,61 +1295,16 @@
       "IRI-based" : "ip4Address",
       "en" : "IP4 address"
     },
-    "domain" : "6",
+    "domain" : "1",
     "comment" : {
       "en" : "record the IP4 address of a client who performed the event. The IP4 address should be encrypted."
     },
     "attributes" : [ "datatype" ],
     "id" : "19"
   }, {
-    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode",
-    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "range" : "20",
-    "annotations" : {
-      "creator" : [ {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Junli Liang",
-        "type" : "label"
-      } ],
-      "contributor" : [ {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Junli Liang",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Rob Brennan",
-        "type" : "label"
-      } ],
-      "created" : [ {
-        "identifier" : "created",
-        "language" : "undefined",
-        "value" : "2024-05-14",
-        "type" : "label"
-      } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2024-05-14",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "hasColourCode",
-      "en" : "has colour code"
-    },
-    "domain" : "22",
-    "comment" : {
-      "en" : "Link a ColourCode to HTML color code in string"
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "21"
-  }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
-    "range" : "8",
+    "range" : "7",
     "annotations" : {
       "creator" : [ {
         "identifier" : "creator",
@@ -1191,12 +1315,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Junli Liang",
+        "value" : "Rob Brennan",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Rob Brennan",
+        "value" : "Junli Liang",
         "type" : "label"
       } ],
       "created" : [ {
@@ -1216,12 +1340,12 @@
       "IRI-based" : "userId",
       "en" : "user ID"
     },
-    "domain" : "17",
+    "domain" : "1",
     "comment" : {
       "en" : "record the user ID of the user who performed the event."
     },
     "attributes" : [ "datatype" ],
-    "id" : "23"
+    "id" : "20"
   }, {
     "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode",
     "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
@@ -1236,12 +1360,12 @@
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Rob Brennan",
+        "value" : "Junli Liang",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Junli Liang",
+        "value" : "Rob Brennan",
         "type" : "label"
       } ],
       "created" : [ {
@@ -1261,41 +1385,66 @@
       "IRI-based" : "levelCode",
       "en" : "level code"
     },
-    "domain" : "25",
+    "domain" : "23",
     "comment" : {
       "en" : "record the level code of the log. Useful in filtering, sorting"
     },
     "attributes" : [ "datatype" ],
-    "id" : "24"
+    "id" : "22"
   }, {
-    "range" : "27",
-    "domain" : "25",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "26"
+    "iri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode",
+    "baseIri" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology",
+    "range" : "2",
+    "annotations" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Junli Liang",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Junli Liang",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Rob Brennan",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2024-05-16",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2024-05-16",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hexCode",
+      "en" : "hex code"
+    },
+    "domain" : "23",
+    "comment" : {
+      "en" : "record the hex code of the log level."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "25"
   }, {
-    "range" : "1",
-    "domain" : "14",
-    "attributes" : [ "anonymous", "object" ],
+    "range" : "18",
+    "domain" : "21",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "26",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "28"
-  }, {
-    "range" : "1",
-    "domain" : "16",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "29"
-  }, {
-    "range" : "6",
-    "domain" : "1",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "30"
-  }, {
-    "range" : "1",
-    "domain" : "10",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "31"
-  }, {
-    "range" : "1",
-    "domain" : "12",
-    "attributes" : [ "anonymous", "object" ],
-    "id" : "32"
   } ]
 }

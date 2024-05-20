@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#","name":"ARK Logging Ontology", "headline":"Document describing the ontology https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#", "dateReleased":"2024-05-14", "dateModified":"2024-05-16", "version":"0.1", "author":[{"@type":"Person","name":"Junli Liang"}], "contributor":[{"@type":"Person","name":"Junli Liang"},{"@type":"Person","name":"Rob Brennan"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#","name":"ARK Logging Ontology", "headline":"Document describing the ontology https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#", "dateReleased":"2024-05-14", "dateModified":"2024-05-20", "version":"0.1", "author":[{"@type":"Person","name":"Junli Liang"}], "contributor":[{"@type":"Person","name":"Junli Liang"},{"@type":"Person","name":"Rob Brennan"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -59,7 +59,7 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2024-05-16</dt>
+<dt>Modified on: 2024-05-20</dt>
 <dt>This version:</dt>
 <dd><a href="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology">https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology</a></dd>
 <dt>Latest version:</dt>
@@ -128,34 +128,6 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#AccessControlEvent"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">
-         <span>Access arkc:Control event</span>
-      </a>
-   </li>
-   <li>
-      <a href="#AccessEvidence"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">
-         <span>Access arkc:Evidence event</span>
-      </a>
-   </li>
-   <li>
-      <a href="#AccessProjectEvent"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">
-         <span>Access arkc:Project event</span>
-      </a>
-   </li>
-   <li>
-      <a href="#AccessRiskRegisterEvent"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">
-         <span>Access arkc:RiskRegister event</span>
-      </a>
-   </li>
-   <li>
-      <a href="#ColourCode"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
-   </li>
-   <li>
       <a href="#Event"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
    </li>
@@ -164,18 +136,20 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level">Level</a>
    </li>
    <li>
+      <a href="#LogEntry"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">Log Entry</a>
+   </li>
+   <li>
       <a href="#ResourceAccessEvent"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
+   </li>
+   <li>
+      <a href="#ResourceAccessLogEntry"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry">Resource Access Log</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
-   <li>
-      <a href="#hasColourCode"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">
-         <span>has colour code</span>
-      </a>
-   </li>
    <li>
       <a href="#hasEvent"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">has event</a>
@@ -184,14 +158,16 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#hasColourCode"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">
-         <span>has colour code</span>
-      </a>
+      <a href="#entityId"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId">Entity ID</a>
    </li>
    <li>
       <a href="#hasEndpoint"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">has endpoint</a>
+   </li>
+   <li>
+      <a href="#hexCode"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
    </li>
    <li>
       <a href="#ip4Address"
@@ -202,39 +178,99 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode">level code</a>
    </li>
    <li>
-      <a href="#resourceId"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId">resource ID</a>
-   </li>
-   <li>
       <a href="#userId"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">user ID</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId"
+         title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId">
+         <span>code id</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+         <span>contributor</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred namespace prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred namespace uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">
+         <span>rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+         <span>title</span>
+      </a>
    </li>
 </ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#AccessControlEvent"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">
-         <span>Access arkc:Control event</span>
-      </a>
+      <a href="#controlAccessEvent"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent">Access arkc:Control event</a>
    </li>
    <li>
-      <a href="#AccessEvidence"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">
-         <span>Access arkc:Evidence event</span>
-      </a>
+      <a href="#evidenceAccessEvent"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent">Access arkc:Evidence event</a>
    </li>
    <li>
-      <a href="#AccessProjectEvent"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">
-         <span>Access arkc:Project event</span>
-      </a>
+      <a href="#projectAccessEvent"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent">Access arkc:Project event</a>
    </li>
    <li>
-      <a href="#AccessRiskRegisterEvent"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">
-         <span>Access arkc:RiskRegister event</span>
-      </a>
+      <a href="#riskRegisterAccessEvent"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent">Access arkc:RiskRegister event</a>
+   </li>
+   <li>
+      <a href="#nodeServer"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#nodeServer">ARK Backend server</a>
+   </li>
+   <li>
+      <a href="#platform"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platform">ARK Platform client</a>
+   </li>
+   <li>
+      <a href="#code400"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code400">Bad Request</a>
    </li>
    <li>
       <a href="#click"
@@ -245,16 +281,12 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#debug">DEBUG</a>
    </li>
    <li>
-      <a href="#lightGrey"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey">Debug colour (light grey)</a>
+      <a href="#dataEntityEditEvent"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent">Edit arkc:DataEntity event</a>
    </li>
    <li>
       <a href="#error"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#error">ERROR</a>
-   </li>
-   <li>
-      <a href="#red"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red">Error colour (red)</a>
    </li>
    <li>
       <a href="#filter"
@@ -269,8 +301,8 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#info">INFO</a>
    </li>
    <li>
-      <a href="#lightBlue"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue">Info colour (light blue)</a>
+      <a href="#code500"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code500">Internal Server Error</a>
    </li>
    <li>
       <a href="#login"
@@ -285,8 +317,8 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">New User Signup</a>
    </li>
    <li>
-      <a href="#orgChange"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">Organization Change</a>
+      <a href="#code200"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code200">OK</a>
    </li>
    <li>
       <a href="#passwordReset"
@@ -297,10 +329,6 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">Password Update</a>
    </li>
    <li>
-      <a href="#platformRoleChange"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">Platform Role Change</a>
-   </li>
-   <li>
       <a href="#search"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">Search</a>
    </li>
@@ -309,16 +337,36 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#success">SUCCESS</a>
    </li>
    <li>
-      <a href="#green"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green">Success colour (green)</a>
+      <a href="#code401"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code401">Unauthorized</a>
+   </li>
+   <li>
+      <a href="#userOrgChangeToApproved"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToApproved">User Organisation Change to Approved</a>
+   </li>
+   <li>
+      <a href="#userOrgChangeToPending"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToPending">User Organisation Change to Pending</a>
+   </li>
+   <li>
+      <a href="#userPlatformRoleChange"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userPlatformRoleChange">User Platform Role Change</a>
+   </li>
+   <li>
+      <a href="#userStatusChangeToActive"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToActive">User Status Change to Active</a>
+   </li>
+   <li>
+      <a href="#userStatusChangeToDeleted"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToDeleted">User Status Change to Deleted</a>
+   </li>
+   <li>
+      <a href="#userStatusChangeToPending"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToPending">User Status Change to Pending</a>
    </li>
    <li>
       <a href="#warn"
          title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#warn">WARN</a>
-   </li>
-   <li>
-      <a href="#yellow"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow">Warning colour (Yellow)</a>
    </li>
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
 </div>
@@ -339,34 +387,6 @@ This section provides details for each class and property defined by ARK Logging
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#AccessControlEvent"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">
-            <span>Access arkc:Control event</span>
-         </a>
-      </li>
-      <li>
-         <a href="#AccessEvidence"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">
-            <span>Access arkc:Evidence event</span>
-         </a>
-      </li>
-      <li>
-         <a href="#AccessProjectEvent"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">
-            <span>Access arkc:Project event</span>
-         </a>
-      </li>
-      <li>
-         <a href="#AccessRiskRegisterEvent"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">
-            <span>Access arkc:RiskRegister event</span>
-         </a>
-      </li>
-      <li>
-         <a href="#ColourCode"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
-      </li>
-      <li>
          <a href="#Event"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
       </li>
@@ -375,130 +395,18 @@ This section provides details for each class and property defined by ARK Logging
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level">Level</a>
       </li>
       <li>
+         <a href="#LogEntry"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">Log Entry</a>
+      </li>
+      <li>
          <a href="#ResourceAccessEvent"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
       </li>
+      <li>
+         <a href="#ResourceAccessLogEntry"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry">Resource Access Log</a>
+      </li>
    </ul>
-   <div class="entity" id="AccessControlEvent">
-      <h3>Access arkc:Control event<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#ResourceAccessEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#AccessControlEvent">named individual</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="AccessEvidence">
-      <h3>Access arkc:Evidence event<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#ResourceAccessEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#AccessEvidence">named individual</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="AccessProjectEvent">
-      <h3>Access arkc:Project event<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#ResourceAccessEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#AccessProjectEvent">named individual</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="AccessRiskRegisterEvent">
-      <h3>Access arkc:RiskRegister event<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#ResourceAccessEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#AccessRiskRegisterEvent">named individual</a>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="ColourCode">
-      <h3>Colour Code<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode</p>
-      <div class="comment">
-         <span class="markdown">HTML Colour code to represent level of a log</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="http://www.w3.org/2002/07/owl#Thing"
-               target="_blank"
-               title="http://www.w3.org/2002/07/owl#Thing">thing</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#lightGrey"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey">Debug colour (light grey)</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#red"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red">Error colour (red)</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#lightBlue"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue">Info colour (light blue)</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#green"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green">Success colour (green)</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#yellow"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow">Warning colour (Yellow)</a>
-            <sup class="type-ni" title="named individual">ni</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Event">
       <h3>Event<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -523,14 +431,6 @@ This section provides details for each class and property defined by ARK Logging
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#ip4Address"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">IP4 address</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEndpoint"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">has endpoint</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasEvent"
@@ -551,16 +451,24 @@ This section provides details for each class and property defined by ARK Logging
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#logout">Logout</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#newUserSignup"
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">New User Signup</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#orgChange"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">Organization Change</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#passwordReset"
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordReset">Password Reset</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#passwordUpdate"
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">Password Update</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#platformRoleChange"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">Platform Role Change</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#search"
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">Search</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#userOrgChangeToApproved"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToApproved">User Organisation Change to Approved</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#userOrgChangeToPending"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToPending">User Organisation Change to Pending</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#userPlatformRoleChange"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userPlatformRoleChange">User Platform Role Change</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#userStatusChangeToActive"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToActive">User Status Change to Active</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#userStatusChangeToDeleted"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToDeleted">User Status Change to Deleted</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#userStatusChangeToPending"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToPending">User Status Change to Pending</a>
             <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
@@ -585,7 +493,9 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#levelCode"
+            <a href="#hexCode"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#levelCode"
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode">level code</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -605,6 +515,44 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
       </dl>
    </div>
+   <div class="entity" id="LogEntry">
+      <h3>Log Entry<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry</p>
+      <div class="comment">
+         <span class="markdown">A log entry in ARK.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"
+               target="_blank"
+               title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry">log entry</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ResourceAccessLogEntry"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry">Resource Access Log</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#ip4Address"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">IP4 address</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEndpoint"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">has endpoint</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">has event</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#userId"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">user ID</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ResourceAccessEvent">
       <h3>Resource Access Event<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -613,7 +561,7 @@ This section provides details for each class and property defined by ARK Logging
       <p>
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent</p>
       <div class="comment">
-         <span class="markdown">An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence.</span>
+         <span class="markdown">An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -622,35 +570,44 @@ This section provides details for each class and property defined by ARK Logging
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has sub-classes</dt>
+         <dt>has members</dt>
          <dd>
-            <a href="#AccessControlEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">Access arkc:Control event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#AccessEvidence"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">Access arkc:Evidence event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#AccessProjectEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">Access arkc:Project event</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#AccessRiskRegisterEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">Access arkc:RiskRegister event</a>
+            <a href="#controlAccessEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent">Access arkc:Control event</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#evidenceAccessEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent">Access arkc:Evidence event</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#projectAccessEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent">Access arkc:Project event</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#riskRegisterAccessEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent">Access arkc:RiskRegister event</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#dataEntityEditEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent">Edit arkc:DataEntity event</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ResourceAccessLogEntry">
+      <h3>Resource Access Log<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry</p>
+      <div class="comment">
+         <span class="markdown">Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#LogEntry"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">Log Entry</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#resourceId"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId">resource ID</a>
+            <a href="#entityId"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId">Entity ID</a>
             <sup class="type-dp" title="data property">dp</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#AccessControlEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">Access arkc:Control event</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AccessEvidence"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">Access arkc:Evidence event</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AccessProjectEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">Access arkc:Project event</a>
-            <sup class="type-ni" title="named individual">ni</sup>, <a href="#AccessRiskRegisterEvent"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">Access arkc:RiskRegister event</a>
-            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -660,38 +617,10 @@ This section provides details for each class and property defined by ARK Logging
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasColourCode"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">
-            <span>has colour code</span>
-         </a>
-      </li>
-      <li>
          <a href="#hasEvent"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">has event</a>
       </li>
    </ul>
-   <div class="entity" id="hasColourCode">
-      <h3>has colour code<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ColourCode"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#hasColourCode">data property</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="hasEvent">
       <h3>has event<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -706,9 +635,8 @@ This section provides details for each class and property defined by ARK Logging
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"
-                  target="_blank"
-                  title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry">log entry</a>
+               <a href="#LogEntry"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">Log Entry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -726,14 +654,16 @@ This section provides details for each class and property defined by ARK Logging
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#hasColourCode"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">
-            <span>has colour code</span>
-         </a>
+         <a href="#entityId"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId">Entity ID</a>
       </li>
       <li>
          <a href="#hasEndpoint"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">has endpoint</a>
+      </li>
+      <li>
+         <a href="#hexCode"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
       </li>
       <li>
          <a href="#ip4Address"
@@ -744,32 +674,40 @@ This section provides details for each class and property defined by ARK Logging
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#levelCode">level code</a>
       </li>
       <li>
-         <a href="#resourceId"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId">resource ID</a>
-      </li>
-      <li>
          <a href="#userId"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">user ID</a>
       </li>
    </ul>
-   <div class="entity" id="hasColourCode">
-      <h3>has colour code<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="entityId">
+      <h3>Entity ID<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId</p>
+      <div class="comment">
+         <span class="markdown">record the ID of the entity that is accessed.</span>
+      </div>
       <div class="description">
          <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message"
+                  target="_blank"
+                  title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message">message</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ResourceAccessLogEntry"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry">Resource Access Log</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="http://www.w3.org/2001/XMLSchema#string"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-            <dt>is also defined as</dt>
-            <dd>
-               <a href="#hasColourCode">object property</a>
             </dd>
          </dl>
       </div>
@@ -788,8 +726,35 @@ This section provides details for each class and property defined by ARK Logging
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+               <a href="#LogEntry"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">Log Entry</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hexCode">
+      <h3>hex code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode</p>
+      <div class="comment">
+         <span class="markdown">record the hex code of the log level.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Level"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level">Level</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -815,8 +780,8 @@ This section provides details for each class and property defined by ARK Logging
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Event"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+               <a href="#LogEntry"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">Log Entry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -855,33 +820,6 @@ This section provides details for each class and property defined by ARK Logging
          </dl>
       </div>
    </div>
-   <div class="entity" id="resourceId">
-      <h3>resource ID<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId</p>
-      <div class="comment">
-         <span class="markdown">record the ID of the resource that is accessed.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#ResourceAccessEvent"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="userId">
       <h3>user ID<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -896,9 +834,8 @@ This section provides details for each class and property defined by ARK Logging
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"
-                  target="_blank"
-                  title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry">log entry</a>
+               <a href="#LogEntry"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">Log Entry</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -912,32 +849,187 @@ This section provides details for each class and property defined by ARK Logging
    </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="annotationproperties">
+   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId"
+            title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId">
+            <span>code id</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/contributor" title="http://purl.org/dc/terms/contributor">
+            <span>contributor</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+            <span>created</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/creator" title="http://purl.org/dc/terms/creator">
+            <span>creator</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/description" title="http://purl.org/dc/terms/description">
+            <span>description</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+            <span>modified</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+            title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+            <span>preferred namespace prefix</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+            <span>preferred namespace uri</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+            <span>publisher</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">
+            <span>rights</span>
+         </a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/title" title="http://purl.org/dc/terms/title">
+            <span>title</span>
+         </a>
+      </li>
+   </ul>
+   <div class="entity" id="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId">
+      <h3>code id<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/contributor">
+      <h3>contributor<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/contributor</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/created">
+      <h3>created<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/creator">
+      <h3>creator<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/creator</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/description">
+      <h3>description<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/description</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/modified">
+      <h3>modified<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+      <h3>preferred namespace prefix<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+   </div>
+   <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+      <h3>preferred namespace uri<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/publisher">
+      <h3>publisher<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/rights">
+      <h3>rights<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/rights</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/title">
+      <h3>title<sup class="type-ap" title="annotation property">ap</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/title</p>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
       <li>
-         <a href="#AccessControlEvent"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">
-            <span>Access arkc:Control event</span>
-         </a>
+         <a href="#controlAccessEvent"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent">Access arkc:Control event</a>
       </li>
       <li>
-         <a href="#AccessEvidence"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">
-            <span>Access arkc:Evidence event</span>
-         </a>
+         <a href="#evidenceAccessEvent"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent">Access arkc:Evidence event</a>
       </li>
       <li>
-         <a href="#AccessProjectEvent"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">
-            <span>Access arkc:Project event</span>
-         </a>
+         <a href="#projectAccessEvent"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent">Access arkc:Project event</a>
       </li>
       <li>
-         <a href="#AccessRiskRegisterEvent"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">
-            <span>Access arkc:RiskRegister event</span>
-         </a>
+         <a href="#riskRegisterAccessEvent"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent">Access arkc:RiskRegister event</a>
+      </li>
+      <li>
+         <a href="#nodeServer"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#nodeServer">ARK Backend server</a>
+      </li>
+      <li>
+         <a href="#platform"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platform">ARK Platform client</a>
+      </li>
+      <li>
+         <a href="#code400"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code400">Bad Request</a>
       </li>
       <li>
          <a href="#click"
@@ -948,16 +1040,12 @@ This section provides details for each class and property defined by ARK Logging
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#debug">DEBUG</a>
       </li>
       <li>
-         <a href="#lightGrey"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey">Debug colour (light grey)</a>
+         <a href="#dataEntityEditEvent"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent">Edit arkc:DataEntity event</a>
       </li>
       <li>
          <a href="#error"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#error">ERROR</a>
-      </li>
-      <li>
-         <a href="#red"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red">Error colour (red)</a>
       </li>
       <li>
          <a href="#filter"
@@ -972,8 +1060,8 @@ This section provides details for each class and property defined by ARK Logging
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#info">INFO</a>
       </li>
       <li>
-         <a href="#lightBlue"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue">Info colour (light blue)</a>
+         <a href="#code500"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code500">Internal Server Error</a>
       </li>
       <li>
          <a href="#login"
@@ -988,8 +1076,8 @@ This section provides details for each class and property defined by ARK Logging
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#newUserSignup">New User Signup</a>
       </li>
       <li>
-         <a href="#orgChange"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">Organization Change</a>
+         <a href="#code200"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code200">OK</a>
       </li>
       <li>
          <a href="#passwordReset"
@@ -1000,10 +1088,6 @@ This section provides details for each class and property defined by ARK Logging
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate">Password Update</a>
       </li>
       <li>
-         <a href="#platformRoleChange"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">Platform Role Change</a>
-      </li>
-      <li>
          <a href="#search"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#search">Search</a>
       </li>
@@ -1012,25 +1096,48 @@ This section provides details for each class and property defined by ARK Logging
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#success">SUCCESS</a>
       </li>
       <li>
-         <a href="#green"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green">Success colour (green)</a>
+         <a href="#code401"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code401">Unauthorized</a>
+      </li>
+      <li>
+         <a href="#userOrgChangeToApproved"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToApproved">User Organisation Change to Approved</a>
+      </li>
+      <li>
+         <a href="#userOrgChangeToPending"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToPending">User Organisation Change to Pending</a>
+      </li>
+      <li>
+         <a href="#userPlatformRoleChange"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userPlatformRoleChange">User Platform Role Change</a>
+      </li>
+      <li>
+         <a href="#userStatusChangeToActive"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToActive">User Status Change to Active</a>
+      </li>
+      <li>
+         <a href="#userStatusChangeToDeleted"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToDeleted">User Status Change to Deleted</a>
+      </li>
+      <li>
+         <a href="#userStatusChangeToPending"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToPending">User Status Change to Pending</a>
       </li>
       <li>
          <a href="#warn"
             title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#warn">WARN</a>
       </li>
-      <li>
-         <a href="#yellow"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow">Warning colour (Yellow)</a>
-      </li>
    </ul>
-   <div class="entity" id="AccessControlEvent">
+   <div class="entity" id="controlAccessEvent">
       <h3>Access arkc:Control event<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent</p>
+      <div class="comment">
+         <span class="markdown">User accesses arkc:Control</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -1038,19 +1145,18 @@ This section provides details for each class and property defined by ARK Logging
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#AccessControlEvent">class</a>
-         </dd>
       </dl>
    </div>
-   <div class="entity" id="AccessEvidence">
+   <div class="entity" id="evidenceAccessEvent">
       <h3>Access arkc:Evidence event<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent</p>
+      <div class="comment">
+         <span class="markdown">User accesses evidence</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -1058,19 +1164,18 @@ This section provides details for each class and property defined by ARK Logging
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#AccessEvidence">class</a>
-         </dd>
       </dl>
    </div>
-   <div class="entity" id="AccessProjectEvent">
+   <div class="entity" id="projectAccessEvent">
       <h3>Access arkc:Project event<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent</p>
+      <div class="comment">
+         <span class="markdown">User accesses a project</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -1078,19 +1183,18 @@ This section provides details for each class and property defined by ARK Logging
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
-         <dd>
-            <a href="#AccessProjectEvent">class</a>
-         </dd>
       </dl>
    </div>
-   <div class="entity" id="AccessRiskRegisterEvent">
+   <div class="entity" id="riskRegisterAccessEvent">
       <h3>Access arkc:RiskRegister event<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent</p>
+      <div class="comment">
+         <span class="markdown">User accesses risk register</span>
+      </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
@@ -1098,9 +1202,65 @@ This section provides details for each class and property defined by ARK Logging
                title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is also defined as</dt>
+      </dl>
+   </div>
+   <div class="entity" id="nodeServer">
+      <h3>ARK Backend server<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#nodeServer</p>
+      <div class="comment">
+         <span class="markdown">ARK Backend server</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
          <dd>
-            <a href="#AccessRiskRegisterEvent">class</a>
+            <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource"
+               target="_blank"
+               title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource">resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="platform">
+      <h3>ARK Platform client<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platform</p>
+      <div class="comment">
+         <span class="markdown">ARK Platform client</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource"
+               target="_blank"
+               title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource">resource</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="code400">
+      <h3>Bad Request<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code400</p>
+      <div class="comment">
+         <span class="markdown">The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"
+               target="_blank"
+               title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode">status code</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1142,11 +1302,10 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <a href="#lightGrey"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey">Debug colour (light grey)</a>
+            <a href="#hexCode"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"#6C757D"</span>
          </dd>
          <dd>
             <a href="#levelCode"
@@ -1159,29 +1318,22 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
       </dl>
    </div>
-   <div class="entity" id="lightGrey">
-      <h3>Debug colour (light grey)<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="dataEntityEditEvent">
+      <h3>Edit arkc:DataEntity event<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent</p>
       <div class="comment">
-         <span class="markdown">Represents the debug level.</span>
+         <span class="markdown">User edits data entity</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#ColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
+            <a href="#ResourceAccessEvent"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">Resource Access Event</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has facts</dt>
-         <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="literal">"#6C757D"</span>
          </dd>
       </dl>
    </div>
@@ -1204,11 +1356,10 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <a href="#red"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red">Error colour (red)</a>
+            <a href="#hexCode"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"#DC3545"</span>
          </dd>
          <dd>
             <a href="#levelCode"
@@ -1218,32 +1369,6 @@ This section provides details for each class and property defined by ARK Logging
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </span>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="red">
-      <h3>Error colour (red)<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red</p>
-      <div class="comment">
-         <span class="markdown">Represents the error level.</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#ColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has facts</dt>
-         <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="literal">"#DC3545"</span>
          </dd>
       </dl>
    </div>
@@ -1304,11 +1429,10 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <a href="#lightBlue"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue">Info colour (light blue)</a>
+            <a href="#hexCode"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"#17A2B8"</span>
          </dd>
          <dd>
             <a href="#levelCode"
@@ -1321,29 +1445,23 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
       </dl>
    </div>
-   <div class="entity" id="lightBlue">
-      <h3>Info colour (light blue)<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="code500">
+      <h3>Internal Server Error<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code500</p>
       <div class="comment">
-         <span class="markdown">Represents the info level.</span>
+         <span class="markdown">The server has encountered a situation it does not know how to handle.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#ColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
+            <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"
+               target="_blank"
+               title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode">status code</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has facts</dt>
-         <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="literal">"#17A2B8"</span>
          </dd>
       </dl>
    </div>
@@ -1404,21 +1522,22 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
       </dl>
    </div>
-   <div class="entity" id="orgChange">
-      <h3>Organization Change<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="code200">
+      <h3>OK<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code200</p>
       <div class="comment">
-         <span class="markdown">Organization changed in Your Profile &gt; Details page</span>
+         <span class="markdown">The request succeeded. The result meaning of "success" depends on the HTTP method: GET, POST</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Event"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"
+               target="_blank"
+               title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode">status code</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -1451,25 +1570,6 @@ This section provides details for each class and property defined by ARK Logging
          <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#passwordUpdate</p>
       <div class="comment">
          <span class="markdown">New password submitted through Change Password modal in Your Profile &gt; Details page</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#Event"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="platformRoleChange">
-      <h3>Platform Role Change<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange</p>
-      <div class="comment">
-         <span class="markdown">Platform role changed in Your Profile &gt; Details page</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
@@ -1518,11 +1618,10 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <a href="#green"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green">Success colour (green)</a>
+            <a href="#hexCode"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"#28A745"</span>
          </dd>
          <dd>
             <a href="#levelCode"
@@ -1535,29 +1634,137 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
       </dl>
    </div>
-   <div class="entity" id="green">
-      <h3>Success colour (green)<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="code401">
+      <h3>Unauthorized<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code401</p>
       <div class="comment">
-         <span class="markdown">Represents the success level.</span>
+         <span class="markdown">Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response.</span>
       </div>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#ColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
+            <a href="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"
+               target="_blank"
+               title="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode">status code</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>has facts</dt>
+      </dl>
+   </div>
+   <div class="entity" id="userOrgChangeToApproved">
+      <h3>User Organisation Change to Approved<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToApproved</p>
+      <div class="comment">
+         <span class="markdown">User organisation changed to Approved</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
          <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="literal">"#28A745"</span>
+            <a href="#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="userOrgChangeToPending">
+      <h3>User Organisation Change to Pending<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToPending</p>
+      <div class="comment">
+         <span class="markdown">User organisation changed to Pending</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="userPlatformRoleChange">
+      <h3>User Platform Role Change<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userPlatformRoleChange</p>
+      <div class="comment">
+         <span class="markdown">User Platform role changed</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="userStatusChangeToActive">
+      <h3>User Status Change to Active<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToActive</p>
+      <div class="comment">
+         <span class="markdown">User status changed to Active</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="userStatusChangeToDeleted">
+      <h3>User Status Change to Deleted<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToDeleted</p>
+      <div class="comment">
+         <span class="markdown">User status changed to Deleted</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="userStatusChangeToPending">
+      <h3>User Status Change to Pending<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToPending</p>
+      <div class="comment">
+         <span class="markdown">User status changed to Pending</span>
+      </div>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Event"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">Event</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -1580,11 +1787,10 @@ This section provides details for each class and property defined by ARK Logging
          </dd>
          <dt>has facts</dt>
          <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <a href="#yellow"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow">Warning colour (Yellow)</a>
+            <a href="#hexCode"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">hex code</a>
+            <sup class="type-dp" title="data property">dp</sup> 
+            <span class="literal">"#FFC107"</span>
          </dd>
          <dd>
             <a href="#levelCode"
@@ -1594,32 +1800,6 @@ This section provides details for each class and property defined by ARK Logging
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
             </span>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="yellow">
-      <h3>Warning colour (Yellow)<sup class="type-ni" title="named individual">ni</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow</p>
-      <div class="comment">
-         <span class="markdown">Represents the warning level.</span>
-      </div>
-      <dl class="description">
-         <dt>belongs to</dt>
-         <dd>
-            <a href="#ColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">Colour Code</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>has facts</dt>
-         <dd>
-            <a href="#hasColourCode"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">has colour code</a>
-            <sup class="type-op" title="object property">op</sup> 
-            <span class="literal">"#FFC107"</span>
          </dd>
       </dl>
    </div>

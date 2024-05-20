@@ -6,6 +6,7 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rlog="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ARKLoggingOntology="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#">
@@ -16,7 +17,7 @@
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
         <terms:creator>Junli Liang</terms:creator>
         <terms:description xml:lang="en">ARK Logging Ontology that is used to generate network/audit logs</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-20</terms:modified>
         <terms:publisher>https://www.openark.adaptcentre.ie/</terms:publisher>
         <terms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
         <terms:rights>https://creativecommons.org/licenses/by-nc/4.0/</terms:rights>
@@ -37,6 +38,13 @@
      -->
 
 
+    
+
+
+    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId -->
+
+
+    <owl:AnnotationProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId"/>
     
 
 
@@ -141,20 +149,11 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode -->
-
-
-    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent -->
 
 
     <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent">
-        <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"/>
         <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
@@ -179,11 +178,27 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode -->
+    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message -->
 
 
-    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">
+    <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message"/>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId">
+        <rdfs:subPropertyOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">record the ID of the entity that is accessed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity ID</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -192,7 +207,7 @@
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
@@ -205,11 +220,28 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode -->
+
+
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hexCode">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
+        <rdfs:comment xml:lang="en">record the hex code of the log level.</rdfs:comment>
+        <rdfs:label xml:lang="en">hex code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address -->
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
@@ -239,28 +271,11 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId -->
-
-
-    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#resourceId">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <terms:contributor>Junli Liang</terms:contributor>
-        <terms:contributor>Rob Brennan</terms:contributor>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
-        <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
-        <rdfs:comment xml:lang="en">record the ID of the resource that is accessed.</rdfs:comment>
-        <rdfs:label xml:lang="en">resource ID</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId -->
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId">
-        <rdfs:domain rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
@@ -299,55 +314,17 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent -->
+    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource -->
 
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:Class>
+    <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource"/>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence -->
+    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode -->
 
 
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:Class>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:Class>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:Class>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-        <terms:contributor>Junli Liang</terms:contributor>
-        <terms:contributor>Rob Brennan</terms:contributor>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
-        <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
-        <rdfs:comment xml:lang="en">HTML Colour code to represent level of a log</rdfs:comment>
-        <rdfs:label xml:lang="en">Colour Code</rdfs:label>
-    </owl:Class>
+    <owl:Class rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"/>
     
 
 
@@ -383,6 +360,22 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry">
+        <rdfs:subClassOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
+        <rdfs:comment xml:lang="en">A log entry in ARK.</rdfs:comment>
+        <rdfs:label xml:lang="en">Log Entry</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent -->
 
 
@@ -392,9 +385,22 @@
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
         <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
-        <rdfs:comment xml:lang="en">An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence.</rdfs:comment>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message</rdfs:comment>
         <rdfs:label xml:lang="en">Resource Access Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource Access Log</rdfs:label>
     </owl:Class>
     
 
@@ -411,42 +417,6 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click -->
 
 
@@ -460,12 +430,86 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code200 -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code200">
+        <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"/>
+        <rlog:codeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</rlog:codeId>
+        <rdfs:comment xml:lang="en">The request succeeded. The result meaning of &quot;success&quot; depends on the HTTP method: GET, POST</rdfs:comment>
+        <rdfs:label xml:lang="en">OK</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code400 -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code400">
+        <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"/>
+        <rlog:codeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</rlog:codeId>
+        <rdfs:comment xml:lang="en">The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing).</rdfs:comment>
+        <rdfs:label xml:lang="en">Bad Request</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code401 -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code401">
+        <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"/>
+        <rlog:codeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</rlog:codeId>
+        <rdfs:comment xml:lang="en">Although the HTTP standard specifies &quot;unauthorized&quot;, semantically this response means &quot;unauthenticated&quot;. That is, the client must authenticate itself to get the requested response.</rdfs:comment>
+        <rdfs:label xml:lang="en">Unauthorized</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code500 -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#code500">
+        <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode"/>
+        <rlog:codeId rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</rlog:codeId>
+        <rdfs:comment xml:lang="en">The server has encountered a situation it does not know how to handle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Internal Server Error</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User accesses arkc:Control</rdfs:comment>
+        <rdfs:label xml:lang="en">Access arkc:Control event</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User edits data entity</rdfs:comment>
+        <rdfs:label xml:lang="en">Edit arkc:DataEntity event</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#debug -->
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#debug">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"/>
-        <hasColourCode rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey"/>
+        <hexCode>#6C757D</hexCode>
         <levelCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</levelCode>
         <rdfs:comment xml:lang="en">intended for logging detailed information about the system for debugging purposes.</rdfs:comment>
         <rdfs:label xml:lang="en">DEBUG</rdfs:label>
@@ -478,10 +522,23 @@
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#error">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"/>
-        <hasColourCode rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red"/>
+        <hexCode>#DC3545</hexCode>
         <levelCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</levelCode>
         <rdfs:comment xml:lang="en">indicates error conditions that impair some operation but are less severe than critical situations.</rdfs:comment>
         <rdfs:label xml:lang="en">ERROR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User accesses evidence</rdfs:comment>
+        <rdfs:label xml:lang="en">Access arkc:Evidence event</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -499,51 +556,15 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"/>
-        <hasColourCode>#28A745</hasColourCode>
-        <rdfs:comment xml:lang="en">Represents the success level.</rdfs:comment>
-        <rdfs:label xml:lang="en">Success colour (green)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#info -->
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#info">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"/>
-        <hasColourCode rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue"/>
+        <hexCode>#17A2B8</hexCode>
         <levelCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</levelCode>
         <rdfs:comment xml:lang="en">includes messages that provide a record of the normal operation of the system.</rdfs:comment>
         <rdfs:label xml:lang="en">INFO</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightBlue">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"/>
-        <hasColourCode>#17A2B8</hasColourCode>
-        <rdfs:comment xml:lang="en">Represents the info level.</rdfs:comment>
-        <rdfs:label xml:lang="en">Info colour (light blue)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#lightGrey">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"/>
-        <hasColourCode>#6C757D</hasColourCode>
-        <rdfs:comment xml:lang="en">Represents the debug level.</rdfs:comment>
-        <rdfs:label xml:lang="en">Debug colour (light grey)</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -600,15 +621,13 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#nodeServer -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#orgChange">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
-        <rdfs:comment xml:lang="en">Organization changed in Your Profile &gt; Details page</rdfs:comment>
-        <rdfs:label xml:lang="en">Organization Change</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#nodeServer">
+        <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource"/>
+        <rdfs:comment xml:lang="en">ARK Backend server</rdfs:comment>
+        <rdfs:label xml:lang="en">ARK Backend server</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -639,27 +658,39 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platform -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platformRoleChange">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
-        <rdfs:comment xml:lang="en">Platform role changed in Your Profile &gt; Details page</rdfs:comment>
-        <rdfs:label xml:lang="en">Platform Role Change</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#platform">
+        <rdf:type rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource"/>
+        <rdfs:comment xml:lang="en">ARK Platform client</rdfs:comment>
+        <rdfs:label xml:lang="en">ARK Platform client</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#red">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"/>
-        <hasColourCode>#DC3545</hasColourCode>
-        <rdfs:comment xml:lang="en">Represents the error level.</rdfs:comment>
-        <rdfs:label xml:lang="en">Error colour (red)</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User accesses a project</rdfs:comment>
+        <rdfs:label xml:lang="en">Access arkc:Project event</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User accesses risk register</rdfs:comment>
+        <rdfs:label xml:lang="en">Access arkc:RiskRegister event</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -682,10 +713,88 @@
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#success">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"/>
-        <hasColourCode rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#green"/>
+        <hexCode>#28A745</hexCode>
         <levelCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</levelCode>
         <rdfs:comment xml:lang="en">indicates that the operation completed successfully.</rdfs:comment>
         <rdfs:label xml:lang="en">SUCCESS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToApproved -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToApproved">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User organisation changed to Approved</rdfs:comment>
+        <rdfs:label xml:lang="en">User Organisation Change to Approved</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToPending -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userOrgChangeToPending">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User organisation changed to Pending</rdfs:comment>
+        <rdfs:label xml:lang="en">User Organisation Change to Pending</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userPlatformRoleChange -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userPlatformRoleChange">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
+        <rdfs:comment xml:lang="en">User Platform role changed</rdfs:comment>
+        <rdfs:label xml:lang="en">User Platform Role Change</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToActive -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToActive">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User status changed to Active</rdfs:comment>
+        <rdfs:label xml:lang="en">User Status Change to Active</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToDeleted -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToDeleted">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User status changed to Deleted</rdfs:comment>
+        <rdfs:label xml:lang="en">User Status Change to Deleted</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToPending -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userStatusChangeToPending">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <rdfs:comment xml:lang="en">User status changed to Pending</rdfs:comment>
+        <rdfs:label xml:lang="en">User Status Change to Pending</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -695,68 +804,11 @@
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#warn">
         <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level"/>
-        <hasColourCode rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow"/>
+        <hexCode>#FFC107</hexCode>
         <levelCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</levelCode>
         <rdfs:comment xml:lang="en">signifies potential issues that may lead to errors or unexpected behavior in the future if not addressed.</rdfs:comment>
         <rdfs:label xml:lang="en">WARN</rdfs:label>
     </owl:NamedIndividual>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow -->
-
-
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#yellow">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ColourCode"/>
-        <hasColourCode>#FFC107</hasColourCode>
-        <rdfs:comment xml:lang="en">Represents the warning level.</rdfs:comment>
-        <rdfs:label xml:lang="en">Warning colour (Yellow)</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotations
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessControlEvent">
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
-        <rdfs:comment xml:lang="en">User accesses arkc:Control</rdfs:comment>
-        <rdfs:label xml:lang="en">Access arkc:Control event</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessEvidence">
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
-        <rdfs:comment xml:lang="en">User accesses evidence</rdfs:comment>
-        <rdfs:label xml:lang="en">Access arkc:Evidence event</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessProjectEvent">
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
-        <rdfs:comment xml:lang="en">User accesses a project</rdfs:comment>
-        <rdfs:label xml:lang="en">Access arkc:Project event</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#AccessRiskRegisterEvent">
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:modified>
-        <rdfs:comment xml:lang="en">User accesses risk register</rdfs:comment>
-        <rdfs:label xml:lang="en">Access arkc:RiskRegister event</rdfs:label>
-    </rdf:Description>
-    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasColourCode">
-        <terms:contributor>Junli Liang</terms:contributor>
-        <terms:contributor>Rob Brennan</terms:contributor>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
-        <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
-        <rdfs:comment xml:lang="en">Link a ColourCode to HTML color code in string</rdfs:comment>
-        <rdfs:label xml:lang="en">has colour code</rdfs:label>
-    </rdf:Description>
 </rdf:RDF>
 
 
