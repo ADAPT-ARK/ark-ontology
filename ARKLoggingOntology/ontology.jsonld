@@ -1,8 +1,8 @@
 [ {
-  "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level",
+  "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry",
+  "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource",
@@ -97,6 +97,36 @@
     "@value" : "0.1"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-14"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A log entry in ARK."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Log Entry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -157,36 +187,6 @@
     "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/contributor" : [ {
-    "@value" : "Junli Liang"
-  }, {
-    "@value" : "Rob Brennan"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-14"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Junli Liang"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-14"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A log entry in ARK."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Log Entry"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry"
-  } ]
-}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -236,7 +236,7 @@
     "@value" : "Resource Access Log"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click",
@@ -522,7 +522,7 @@
     "@value" : "record the endpoint of the request that is going to send to."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -555,7 +555,7 @@
     "@value" : "links a log entry to a log event."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -642,7 +642,7 @@
     "@value" : "record the IP4 address of a client who performed the event. The IP4 address should be encrypted."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -955,7 +955,7 @@
     "@value" : "record the user ID of the user who performed the event."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",

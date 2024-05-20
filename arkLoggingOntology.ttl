@@ -38,26 +38,26 @@ arkLog:Event a rdfs:Class ;
 arkLog:hasEvent a owl:ObjectProperty ;
 		rdfs:label "has event"@en ;
 		rdfs:comment "links a log entry to a log event."@en ;
-		rdfs:domain arkLog:LogEntry ;
+		rdfs:domain arkLog:Entry ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
 		dcterms:created "2024-05-14"^^xsd:date ;
 		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:range arkLog:Event .
 
-arkLog:LogEntry a rdfs:Class, owl:Class ;
+arkLog:Entry a rdfs:Class, owl:Class ;
 		rdfs:label "Log Entry"@en ;
 		rdfs:comment "A log entry in ARK."@en ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
 		dcterms:created "2024-05-14"^^xsd:date ;
 		dcterms:modified "2024-05-14"^^xsd:date ;
-		rdfs:subClassOf rlog:LogEntry .
+		rdfs:subClassOf rlog:Entry .
 
 arkLog:userId a owl:DatatypeProperty ;
 		rdfs:label "user ID"@en ;
 		rdfs:comment "record the user ID of the user who performed the event."@en ;
-		rdfs:domain arkLog:LogEntry ;
+		rdfs:domain arkLog:Entry ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
 		dcterms:created "2024-05-14"^^xsd:date ;
@@ -81,7 +81,7 @@ arkLog:ip4Address a owl:DatatypeProperty ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
 		dcterms:created "2024-05-14"^^xsd:date ;
 		dcterms:modified "2024-05-14"^^xsd:date ;
-		rdfs:domain arkLog:LogEntry ;
+		rdfs:domain arkLog:Entry ;
 		rdfs:range xsd:string .
 
 arkLog:hasEndpoint a owl:DatatypeProperty ;
@@ -91,7 +91,7 @@ arkLog:hasEndpoint a owl:DatatypeProperty ;
 	dcterms:contributor "Junli Liang", "Rob Brennan" ;
 	dcterms:created "2024-05-14"^^xsd:date ;
 	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:domain arkLog:LogEntry ;
+	rdfs:domain arkLog:Entry ;
 	rdfs:range xsd:string 
 	.
 
@@ -296,7 +296,7 @@ arkLog:userStatusChangeToPending a arkLog:Event ;
 arkLog:ResourceAccessLogEntry a rdfs:Class, owl:Class ;
 	dcterms:created "2024-05-16"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:subClassOf arkLog:LogEntry ;
+	rdfs:subClassOf arkLog:Entry ;
 	rdfs:label "Resource Access Log"@en ;
 	rdfs:comment "Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }"@en 
 	.

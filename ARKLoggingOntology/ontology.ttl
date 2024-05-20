@@ -84,7 +84,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
-          rdfs:domain :LogEntry ;
+          rdfs:domain :Entry ;
           rdfs:range :Event ;
           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                  "Rob Brennan" ;
@@ -119,7 +119,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEndpoint
 :hasEndpoint rdf:type owl:DatatypeProperty ;
-             rdfs:domain :LogEntry ;
+             rdfs:domain :Entry ;
              rdfs:range xsd:string ;
              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                     "Rob Brennan" ;
@@ -145,7 +145,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ip4Address
 :ip4Address rdf:type owl:DatatypeProperty ;
-            rdfs:domain :LogEntry ;
+            rdfs:domain :Entry ;
             rdfs:range xsd:string ;
             <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                    "Rob Brennan" ;
@@ -171,7 +171,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#userId
 :userId rdf:type owl:DatatypeProperty ;
-        rdfs:domain :LogEntry ;
+        rdfs:domain :Entry ;
         rdfs:range xsd:string ;
         <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                "Rob Brennan" ;
@@ -186,12 +186,12 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
+###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry> rdf:type owl:Class .
+
+
 ###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level> rdf:type owl:Class .
-
-
-###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry
-<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry> rdf:type owl:Class .
 
 
 ###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Resource
@@ -200,6 +200,18 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode> rdf:type owl:Class .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry
+:Entry rdf:type owl:Class ;
+       rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry> ;
+       <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                              "Rob Brennan" ;
+       <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
+       <http://purl.org/dc/terms/creator> "Junli Liang" ;
+       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+       rdfs:comment "A log entry in ARK."@en ;
+       rdfs:label "Log Entry"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event
@@ -226,18 +238,6 @@ xsd:date rdf:type rdfs:Datatype .
        rdfs:label "Level"@en .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#LogEntry
-:LogEntry rdf:type owl:Class ;
-          rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#LogEntry> ;
-          <http://purl.org/dc/terms/contributor> "Junli Liang" ,
-                                                 "Rob Brennan" ;
-          <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
-          <http://purl.org/dc/terms/creator> "Junli Liang" ;
-          <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
-          rdfs:comment "A log entry in ARK."@en ;
-          rdfs:label "Log Entry"@en .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent
 :ResourceAccessEvent rdf:type owl:Class ;
                      rdfs:subClassOf :Event ;
@@ -252,7 +252,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry
 :ResourceAccessLogEntry rdf:type owl:Class ;
-                        rdfs:subClassOf :LogEntry ;
+                        rdfs:subClassOf :Entry ;
                         <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
                         <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
                         rdfs:comment "Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }"@en ;
