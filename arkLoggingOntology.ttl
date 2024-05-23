@@ -297,8 +297,8 @@ arkLog:ResourceAccessLogEntry a rdfs:Class, owl:Class ;
 	dcterms:created "2024-05-16"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
 	rdfs:subClassOf arkLog:Entry ;
-	rdfs:label "Resource Access Log"@en ;
-	rdfs:comment "Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }"@en 
+	rdfs:label "Resource Access Log Entry"@en ;
+	rdfs:comment "Log entry for resource access events"@en 
 	.
 
 arkLog:entityId a owl:DatatypeProperty ;
@@ -321,6 +321,18 @@ arkLog:ResourceAccessEvent a rdfs:Class ;
 	dcterms:created "2024-05-16"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
 	rdfs:subClassOf arkLog:Event 
+	.
+
+arkLog:hasResourceAccessEvent a owl:ObjectProperty ;
+	rdfs:label "has resource access event"@en ;
+	rdfs:comment "links a log entry to a resource access event."@en ;
+	rdfs:domain arkLog:ResourceAccessLogEntry ;
+	dcterms:creator "Junli Liang" ;
+	dcterms:contributor "Junli Liang", "Rob Brennan" ;
+	dcterms:created "2024-05-16"^^xsd:date ;
+	dcterms:modified "2024-05-17"^^xsd:date ;
+	rdfs:range arkLog:ResourceAccessEvent ;
+	rdfs:subPropertyOf arkLog:hasEvent 
 	.
 
 # instances of arkLog:ResourceAccessEvent
