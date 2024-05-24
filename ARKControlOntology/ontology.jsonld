@@ -23,16 +23,19 @@
   "@id" : "http://purl.org/dc/terms/publisher",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/rights",
+  "@id" : "http://purl.org/dc/terms/source",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/terms/source",
+  "@id" : "http://purl.org/ontology/bibo/status",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://schema.org/codeRepository",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
@@ -79,18 +82,20 @@
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://openark.adaptcentre.ie"
   } ],
-  "http://purl.org/dc/terms/rights" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/4.0/"
-  } ],
   "http://purl.org/dc/terms/source" : [ {
-    "@language" : "en",
-    "@value" : "ARK Controls Ontology"
+    "@value" : "ISO 27002:2022(E), https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/, https://www.cdc.gov/niosh/learning/safetyculturehc/module-3/2.html"
+  } ],
+  "http://purl.org/ontology/bibo/status" : [ {
+    "@value" : "<http://purl.org/ontology/bibo/status/draft>"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "arkctl"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"
+  } ],
+  "http://schema.org/codeRepository" : [ {
+    "@id" : "https://gogs.adaptcentre.ie/ARK/Ontologies/src/master/ARKControlOntology"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -105,6 +110,9 @@
   "https://w3id.org/widoco/vocab#introduction" : [ {
     "@language" : "en",
     "@value" : "This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform."
+  } ],
+  "https://w3id.org/widoco/vocab#rdfxmlSerialization" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#AcceptableUseOfInformationAndOtherAssociatedAssets",
@@ -7741,5 +7749,8 @@
   } ]
 }, {
   "@id" : "https://w3id.org/widoco/vocab#introduction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/widoco/vocab#rdfxmlSerialization",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 } ]

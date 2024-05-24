@@ -6,11 +6,13 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:vocab="https://w3id.org/widoco/vocab#"
+     xmlns:schema="http://schema.org/"
      xmlns:ARKCube="https://openark.adaptcentre.ie/Ontologies/ARKCube#">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#">
         <owl:versionIRI rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
@@ -23,13 +25,15 @@
         <terms:description xml:lang="en">This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform.</terms:description>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-24</terms:modified>
         <terms:publisher rdf:resource="https://openark.adaptcentre.ie"/>
-        <terms:rights rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:source xml:lang="en">ARK Controls Ontology</terms:source>
+        <terms:source>ISO 27002:2022(E), https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/, https://www.cdc.gov/niosh/learning/safetyculturehc/module-3/2.html</terms:source>
+        <bibo:status>&lt;http://purl.org/ontology/bibo/status/draft&gt;</bibo:status>
         <vann:preferredNamespacePrefix>arkctl</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
+        <schema:codeRepository rdf:resource="https://gogs.adaptcentre.ie/ARK/Ontologies/src/master/ARKControlOntology"/>
         <rdfs:comment xml:lang="en">This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform.</rdfs:comment>
         <owl:versionInfo>0.1</owl:versionInfo>
         <vocab:introduction xml:lang="en">This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform.</vocab:introduction>
+        <vocab:rdfxmlSerialization rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl"/>
     </owl:Ontology>
     
 
@@ -102,17 +106,17 @@
     
 
 
-    <!-- http://purl.org/dc/terms/rights -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
-    
-
-
     <!-- http://purl.org/dc/terms/source -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
     
 
 
@@ -127,6 +131,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
     
 
 
@@ -162,6 +173,13 @@
 
 
     <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#introduction"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#rdfxmlSerialization -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#rdfxmlSerialization"/>
     
 
 
