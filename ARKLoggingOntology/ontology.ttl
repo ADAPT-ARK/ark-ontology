@@ -12,15 +12,14 @@
                                                                                                         "Rob Brennan" ;
                                                                  <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
                                                                  <http://purl.org/dc/terms/creator> "Junli Liang" ;
-                                                                 <http://purl.org/dc/terms/description> "ARK Logging Ontology that is used to generate network/audit logs"@en ;
-                                                                 <http://purl.org/dc/terms/modified> "2024-05-20"^^xsd:date ;
+                                                                 <http://purl.org/dc/terms/description> "This ontology dedines owl classes and properties, that are used to generate network/audit logs"@en ;
+                                                                 <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc/4.0/> ;
+                                                                 <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
                                                                  <http://purl.org/dc/terms/publisher> "https://www.openark.adaptcentre.ie/" ;
-                                                                 <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ,
-                                                                                                   "https://creativecommons.org/licenses/by-nc/4.0/" ;
                                                                  <http://purl.org/dc/terms/title> "ARK Logging Ontology"@en ;
                                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkLog" ;
                                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#" ;
-                                                                 owl:versionInfo "0.1" .
+                                                                 owl:versionInfo "0.0.2" .
 
 #################################################################
 #    Annotation properties
@@ -46,16 +45,16 @@
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/rights
-<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
@@ -82,6 +81,20 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent
+:hasEntityAccessEvent rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :hasEvent ;
+                      rdfs:domain :EntityAccessLogEntry ;
+                      rdfs:range :EntityAccessEvent ;
+                      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                             "Rob Brennan" ;
+                      <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                      <http://purl.org/dc/terms/creator> "Junli Liang" ;
+                      <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
+                      rdfs:comment "links a log entry to a entity access event."@en ;
+                      rdfs:label "has entity access event"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent
 :hasEvent rdf:type owl:ObjectProperty ;
           rdfs:domain :Entry ;
@@ -99,20 +112,15 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message
-<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message> rdf:type owl:DatatypeProperty .
-
-
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId
 :entityId rdf:type owl:DatatypeProperty ;
-          rdfs:subPropertyOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message> ;
-          rdfs:domain :ResourceAccessLogEntry ;
+          rdfs:domain :EntityAccessLogEntry ;
           rdfs:range xsd:string ;
           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                  "Rob Brennan" ;
           <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
           <http://purl.org/dc/terms/creator> "Junli Liang" ;
-          <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
+          <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
           rdfs:comment "record the ID of the entity that is accessed."@en ;
           rdfs:label "Entity ID"@en .
 
@@ -202,6 +210,27 @@ xsd:date rdf:type rdfs:Datatype .
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode> rdf:type owl:Class .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent
+:EntityAccessEvent rdf:type owl:Class ;
+                   rdfs:subClassOf :Event ;
+                   <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                          "Rob Brennan" ;
+                   <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                   <http://purl.org/dc/terms/creator> "Junli Liang" ;
+                   <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
+                   rdfs:comment "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via arkLog:resourceId"@en ;
+                   rdfs:label "Entity Access Event"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry
+:EntityAccessLogEntry rdf:type owl:Class ;
+                      rdfs:subClassOf :Entry ;
+                      <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
+                      <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
+                      rdfs:comment "Log entry for entity access events"@en ;
+                      rdfs:label "Entity Access Log entry"@en .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry
 :Entry rdf:type owl:Class ;
        rdfs:subClassOf <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry> ;
@@ -209,21 +238,20 @@ xsd:date rdf:type rdfs:Datatype .
                                               "Rob Brennan" ;
        <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
        <http://purl.org/dc/terms/creator> "Junli Liang" ;
-       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+       <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
        rdfs:comment "A log entry in ARK."@en ;
-       rdfs:label "Log Entry"@en .
+       rdfs:label "ARK Log Entry"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event
 :Event rdf:type owl:Class ;
-       rdfs:subClassOf owl:Thing ;
        <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                               "Rob Brennan" ;
        <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
        <http://purl.org/dc/terms/creator> "Junli Liang" ;
-       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
+       <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
        rdfs:comment "An event that is logged."@en ;
-       rdfs:label "Event"@en .
+       rdfs:label "ARK Log event"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level
@@ -233,30 +261,9 @@ xsd:date rdf:type rdfs:Datatype .
                                               "Rob Brennan" ;
        <http://purl.org/dc/terms/created> "2024-05-14"^^xsd:date ;
        <http://purl.org/dc/terms/creator> "Junli Liang" ;
-       <http://purl.org/dc/terms/modified> "2024-05-14"^^xsd:date ;
-       rdfs:comment "A level of the log."@en ;
-       rdfs:label "Level"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent
-:ResourceAccessEvent rdf:type owl:Class ;
-                     rdfs:subClassOf :Event ;
-                     <http://purl.org/dc/terms/contributor> "Junli Liang" ,
-                                                            "Rob Brennan" ;
-                     <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
-                     <http://purl.org/dc/terms/creator> "Junli Liang" ;
-                     <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
-                     rdfs:comment "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message"@en ;
-                     rdfs:label "Resource Access Event"@en .
-
-
-###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry
-:ResourceAccessLogEntry rdf:type owl:Class ;
-                        rdfs:subClassOf :Entry ;
-                        <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
-                        <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
-                        rdfs:comment "Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }"@en ;
-                        rdfs:label "Resource Access Log"@en .
+       <http://purl.org/dc/terms/modified> "2024-05-27"^^xsd:date ;
+       rdfs:comment "A level of the log, that is used in ARK."@en ;
+       rdfs:label "ARK Log entry level"@en .
 
 
 #################################################################
@@ -306,7 +313,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent
 :controlAccessEvent rdf:type owl:NamedIndividual ,
-                             :ResourceAccessEvent ;
+                             :EntityAccessEvent ;
                     <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
                     <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
                     rdfs:comment "User accesses arkc:Control"@en ;
@@ -315,7 +322,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent
 :dataEntityEditEvent rdf:type owl:NamedIndividual ,
-                              :ResourceAccessEvent ;
+                              :EntityAccessEvent ;
                      <http://purl.org/dc/terms/created> "2024-05-17"^^xsd:date ;
                      <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
                      rdfs:comment "User edits data entity"@en ;
@@ -342,7 +349,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent
 :evidenceAccessEvent rdf:type owl:NamedIndividual ,
-                              :ResourceAccessEvent ;
+                              :EntityAccessEvent ;
                      <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
                      <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
                      rdfs:comment "User accesses evidence"@en ;
@@ -437,7 +444,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent
 :projectAccessEvent rdf:type owl:NamedIndividual ,
-                             :ResourceAccessEvent ;
+                             :EntityAccessEvent ;
                     <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
                     <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
                     rdfs:comment "User accesses a project"@en ;
@@ -446,7 +453,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent
 :riskRegisterAccessEvent rdf:type owl:NamedIndividual ,
-                                  :ResourceAccessEvent ;
+                                  :EntityAccessEvent ;
                          <http://purl.org/dc/terms/created> "2024-05-16"^^xsd:date ;
                          <http://purl.org/dc/terms/modified> "2024-05-17"^^xsd:date ;
                          rdfs:comment "User accesses risk register"@en ;

@@ -8,51 +8,52 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @base <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> .
 
 arkLog: a owl:Ontology ;
 	owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology> ;
 	dcterms:contributor  "Junli Liang" , "Rob Brennan" ;
 	dcterms:creator "Junli Liang" ;
-	dcterms:description "ARK Logging Ontology that is used to generate network/audit logs"@en ;
+	dcterms:description "This ontology dedines owl classes and properties, that are used to generate network/audit logs"@en ;
   dcterms:created "2024-05-14"^^xsd:date ;
-  dcterms:modified "2024-05-20"^^xsd:date ;
+  dcterms:modified "2024-05-27"^^xsd:date ;
 	dcterms:publisher "https://www.openark.adaptcentre.ie/" ;
-	dcterms:rights "https://creativecommons.org/licenses/by-nc/4.0/" ;
+	dcterms:license <https://creativecommons.org/licenses/by-nc/4.0/> ;
 	dcterms:title "ARK Logging Ontology"@en ;
-	<http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> ;
-	<http://purl.org/vocab/vann/preferredNamespacePrefix> "arkLog" ;
-	<http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#" ;
-	owl:versionInfo "0.1" .
-
-arkLog:Event a rdfs:Class ;
-		a owl:Class ;
-		rdfs:label "Event"@en ;
-		rdfs:comment "An event that is logged."@en ;
-		dcterms:creator "Junli Liang" ;
-		dcterms:contributor "Junli Liang", "Rob Brennan" ;
-		dcterms:created "2024-05-14"^^xsd:date ;
-		dcterms:modified "2024-05-14"^^xsd:date ;
-		rdfs:subClassOf owl:Thing .
-
-arkLog:hasEvent a owl:ObjectProperty ;
-		rdfs:label "has event"@en ;
-		rdfs:comment "links a log entry to a log event."@en ;
-		rdfs:domain arkLog:Entry ;
-		dcterms:creator "Junli Liang" ;
-		dcterms:contributor "Junli Liang", "Rob Brennan" ;
-		dcterms:created "2024-05-14"^^xsd:date ;
-		dcterms:modified "2024-05-14"^^xsd:date ;
-		rdfs:range arkLog:Event .
+	vann:preferredNamespacePrefix "arkLog" ;
+	vann:preferredNamespaceUri "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#" ;
+	owl:versionInfo "0.0.2" .
 
 arkLog:Entry a rdfs:Class, owl:Class ;
-		rdfs:label "Log Entry"@en ;
+		rdfs:label "ARK Log Entry"@en ;
 		rdfs:comment "A log entry in ARK."@en ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
 		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-27"^^xsd:date ;
+		rdfs:subClassOf rlog:Entry 
+		.
+
+arkLog:Event a rdfs:Class ;
+		a owl:Class ;
+		rdfs:label "ARK Log event"@en ;
+		rdfs:comment "An event that is logged."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14"^^xsd:date ;
+		dcterms:modified "2024-05-27"^^xsd:date 
+		.
+
+arkLog:hasEvent a owl:ObjectProperty ;
+		rdfs:label "has event"@en ;
+		rdfs:comment "links a log entry to a log event."@en ;
+		dcterms:creator "Junli Liang" ;
+		dcterms:contributor "Junli Liang", "Rob Brennan" ;
+		dcterms:created "2024-05-14"^^xsd:date ;
 		dcterms:modified "2024-05-14"^^xsd:date ;
-		rdfs:subClassOf rlog:Entry .
+		rdfs:domain arkLog:Entry ;
+		rdfs:range arkLog:Event .
 
 arkLog:userId a owl:DatatypeProperty ;
 		rdfs:label "user ID"@en ;
@@ -62,7 +63,8 @@ arkLog:userId a owl:DatatypeProperty ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
 		dcterms:created "2024-05-14"^^xsd:date ;
 		dcterms:modified "2024-05-14"^^xsd:date ;
-		rdfs:range xsd:string .
+		rdfs:range xsd:string 
+		.
 
 arkLog:hexCode a owl:DatatypeProperty ;
 		rdfs:label "hex code"@en ;
@@ -72,7 +74,8 @@ arkLog:hexCode a owl:DatatypeProperty ;
 		dcterms:created "2024-05-16"^^xsd:date ;
 		dcterms:modified "2024-05-16"^^xsd:date ;
 		rdfs:domain arkLog:Level ;
-		rdfs:range xsd:string .
+		rdfs:range xsd:string 
+		.
 
 arkLog:ip4Address a owl:DatatypeProperty ;
 		rdfs:label "IP4 address"@en ; 
@@ -82,7 +85,8 @@ arkLog:ip4Address a owl:DatatypeProperty ;
 		dcterms:created "2024-05-14"^^xsd:date ;
 		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:domain arkLog:Entry ;
-		rdfs:range xsd:string .
+		rdfs:range xsd:string 
+		.
 
 arkLog:hasEndpoint a owl:DatatypeProperty ;
 	rdfs:label "has endpoint"@en ;
@@ -103,202 +107,26 @@ arkLog:levelCode a owl:DatatypeProperty ;
 		dcterms:created "2024-05-14"^^xsd:date ;
 		dcterms:modified "2024-05-14"^^xsd:date ;
 		rdfs:domain arkLog:Level ;
-		rdfs:range xsd:integer .
+		rdfs:range xsd:integer 
+		.
 	
 arkLog:Level a rdfs:Class, owl:Class ;
-		rdfs:label "Level"@en ;
-		rdfs:comment "A level of the log."@en ;
+		rdfs:label "ARK Log entry level"@en ;
+		rdfs:comment "A level of the log, that is used in ARK."@en ;
 		dcterms:creator "Junli Liang" ;
 		dcterms:contributor "Junli Liang", "Rob Brennan" ;
 		dcterms:created "2024-05-14"^^xsd:date ;
-		dcterms:modified "2024-05-14"^^xsd:date ;
-		rdfs:subClassOf rlog:Level .
-
-# instances of arkLog:Level
-arkLog:success a arkLog:Level ;
-	arkLog:levelCode "4"^^xsd:integer ;
-	arkLog:hexCode "#28A745"^^xsd:string ;
-	rdfs:label "SUCCESS"@en ;
-	rdfs:comment "indicates that the operation completed successfully."@en 
-	.
-
-arkLog:debug a arkLog:Level ;
-	arkLog:levelCode "5"^^xsd:integer ;
-	arkLog:hexCode "#6C757D"^^xsd:string ;
-	rdfs:label "DEBUG"@en ;
-	rdfs:comment "intended for logging detailed information about the system for debugging purposes."@en 
-	.
-
-arkLog:info a arkLog:Level ;
-	arkLog:levelCode "3"^^xsd:integer ;
-	arkLog:hexCode "#17A2B8"^^xsd:string ;
-	rdfs:label "INFO"@en ;
-	rdfs:comment "includes messages that provide a record of the normal operation of the system."@en 
-	.
-
-arkLog:warn a arkLog:Level ;
-	arkLog:levelCode "2"^^xsd:integer ;
-	arkLog:hexCode "#FFC107"^^xsd:string ;
-	rdfs:label "WARN"@en ;
-	rdfs:comment "signifies potential issues that may lead to errors or unexpected behavior in the future if not addressed."@en 
-	.
-
-arkLog:error a arkLog:Level ;
-	arkLog:levelCode "1"^^xsd:integer ;
-	arkLog:hexCode "#DC3545"^^xsd:string ;
-	rdfs:label "ERROR"@en ;
-	rdfs:comment "indicates error conditions that impair some operation but are less severe than critical situations."@en 
-	.
-
-# instances of rlog:StatusCode
-arkLog:code200 a rlog:StatusCode ;
-	rlog:codeId "200"^^xsd:integer ;
-	rdfs:label "OK"@en ;
-	rdfs:comment """The request succeeded. The result meaning of "success" depends on the HTTP method: GET, POST"""@en 
-	.
-
-arkLog:code401 a rlog:StatusCode ;
-	rlog:codeId "401"^^xsd:integer ;
-	rdfs:label "Unauthorized"@en ;
-	rdfs:comment """Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response."""@en 
-	.
-
-arkLog:code400 a rlog:StatusCode ;
-	rlog:codeId "400"^^xsd:integer ;
-	rdfs:label "Bad Request"@en ;
-	rdfs:comment """The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."""@en 
-	.
-
-arkLog:code500 a rlog:StatusCode ;
-	rlog:codeId "500"^^xsd:integer ;
-	rdfs:label "Internal Server Error"@en ;
-	rdfs:comment """The server has encountered a situation it does not know how to handle."""@en 
-	.
-
-# instances of rlog:Resource
-arkLog:platform a rlog:Resource ;
-	rdfs:label "ARK Platform client"@en ;
-	rdfs:comment "ARK Platform client"@en 
-	.
-
-arkLog:nodeServer a rlog:Resource ;
-	rdfs:label "ARK Backend server"@en ;
-	rdfs:comment "ARK Backend server"@en 
-	.
-
-# instances of arkLog:Event
-arkLog:log a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "General Log"@en ;
-	rdfs:comment "General log event"@en 
-	.
-
-arkLog:click a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "Click"@en ;
-	rdfs:comment "Click event"@en 
-	.
-
-arkLog:search a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "Search"@en ;
-	rdfs:comment "Search event"@en 
-	.
-
-arkLog:filter a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "Filter"@en ;
-	rdfs:comment "Filter event"@en 
-	.
-
-arkLog:newUserSignup a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "New User Signup"@en ;
-	rdfs:comment "New user registration submitted through page linked in user invite email"@en 
-	.
-
-arkLog:login a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "Login"@en ;
-	rdfs:comment """SUCCESS: Valid email and password entered in sign-in page → successful login. FAILURE: Invalid email or password entered in sign-in page → failed login."""@en
-	.
-
-arkLog:logout a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "Logout"@en ;
-	rdfs:comment "Sign out selected in user menu → successful logout"@en 
-	.
-
-arkLog:passwordReset a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "Password Reset"@en ;
-	rdfs:comment "Successful password reset request using Forgot Password feature in sign-in page"@en 
-	.
-
-arkLog:passwordUpdate a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "Password Update"@en ;
-	rdfs:comment "New password submitted through Change Password modal in Your Profile > Details page"@en 
-	.
-
-arkLog:userOrgChangeToApproved a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:label "User Organisation Change to Approved"@en ;
-	rdfs:comment "User organisation changed to Approved"@en
-	.
-
-arkLog:userOrgChangeToPending a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:label "User Organisation Change to Pending"@en ;
-	rdfs:comment "User organisation changed to Pending"@en
-	.
-
-arkLog:userPlatformRoleChange a arkLog:Event ;
-	dcterms:created "2024-05-14"^^xsd:date ;
-	dcterms:modified "2024-05-14"^^xsd:date ;
-	rdfs:label "User Platform Role Change"@en ;
-	rdfs:comment "User Platform role changed"@en 
-	.
-
-arkLog:userStatusChangeToActive a arkLog:Event ;
-	dcterms:created "2024-05-17"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:label "User Status Change to Active"@en ;
-	rdfs:comment "User status changed to Active"@en
-	.
-
-arkLog:userStatusChangeToDeleted a arkLog:Event ;
-	dcterms:created "2024-05-17"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:label "User Status Change to Deleted"@en ;
-	rdfs:comment "User status changed to Deleted"@en
-	.
-
-arkLog:userStatusChangeToPending a arkLog:Event ;
-	dcterms:created "2024-05-17"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:label "User Status Change to Pending"@en ;
-	rdfs:comment "User status changed to Pending"@en
-	.
+		dcterms:modified "2024-05-27"^^xsd:date ;
+		rdfs:subClassOf rlog:Level 
+		.
 
 # aggregate event class
-arkLog:ResourceAccessLogEntry a rdfs:Class, owl:Class ;
+arkLog:EntityAccessLogEntry a rdfs:Class, owl:Class ;
 	dcterms:created "2024-05-16"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
+	dcterms:modified "2024-05-27"^^xsd:date ;
 	rdfs:subClassOf arkLog:Entry ;
-	rdfs:label "Resource Access Log Entry"@en ;
-	rdfs:comment "Log entry for resource access events"@en 
+	rdfs:label "Entity Access Log entry"@en ;
+	rdfs:comment "Log entry for entity access events"@en 
 	.
 
 arkLog:entityId a owl:DatatypeProperty ;
@@ -307,57 +135,235 @@ arkLog:entityId a owl:DatatypeProperty ;
 	dcterms:creator "Junli Liang" ;
 	dcterms:contributor "Junli Liang", "Rob Brennan" ;
 	dcterms:created "2024-05-16"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:subPropertyOf rlog:message ;
-	rdfs:domain arkLog:ResourceAccessLogEntry ;
-	rdfs:range xsd:string .
+	dcterms:modified "2024-05-27"^^xsd:date ;
+	rdfs:domain arkLog:EntityAccessLogEntry ;
+	rdfs:range xsd:string 
+	.
 
-arkLog:ResourceAccessEvent a rdfs:Class ;
-	a owl:Class ;
-	rdfs:label "Resource Access Event"@en ;
-	rdfs:comment "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message"@en ;
+arkLog:EntityAccessEvent a rdfs:Class, owl:Class ;
+	rdfs:label "Entity Access Event"@en ;
+	rdfs:comment "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via arkLog:resourceId"@en ;
 	dcterms:creator "Junli Liang" ;
 	dcterms:contributor "Junli Liang", "Rob Brennan" ;
 	dcterms:created "2024-05-16"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
+	dcterms:modified "2024-05-27"^^xsd:date ;
 	rdfs:subClassOf arkLog:Event 
 	.
 
-arkLog:hasResourceAccessEvent a owl:ObjectProperty ;
-	rdfs:label "has resource access event"@en ;
-	rdfs:comment "links a log entry to a resource access event."@en ;
-	rdfs:domain arkLog:ResourceAccessLogEntry ;
+arkLog:hasEntityAccessEvent a owl:ObjectProperty ;
+	rdfs:label "has entity access event"@en ;
+	rdfs:comment "links a log entry to a entity access event."@en ;
+	rdfs:domain arkLog:EntityAccessLogEntry ;
 	dcterms:creator "Junli Liang" ;
 	dcterms:contributor "Junli Liang", "Rob Brennan" ;
 	dcterms:created "2024-05-16"^^xsd:date ;
-	dcterms:modified "2024-05-17"^^xsd:date ;
-	rdfs:range arkLog:ResourceAccessEvent ;
+	dcterms:modified "2024-05-27"^^xsd:date ;
+	rdfs:range arkLog:EntityAccessEvent ;
 	rdfs:subPropertyOf arkLog:hasEvent 
 	.
 
-# instances of arkLog:ResourceAccessEvent
-arkLog:evidenceAccessEvent a arkLog:ResourceAccessEvent ;
+# instances of arkLog:Level
+arkLog:success a arkLog:Level, owl:NamedIndividual ;
+	arkLog:levelCode "4"^^xsd:integer ;
+	arkLog:hexCode "#28A745"^^xsd:string ;
+	rdfs:label "SUCCESS"@en ;
+	rdfs:comment "indicates that the operation completed successfully."@en 
+	.
+
+arkLog:debug a arkLog:Level, owl:NamedIndividual ;
+	arkLog:levelCode "5"^^xsd:integer ;
+	arkLog:hexCode "#6C757D"^^xsd:string ;
+	rdfs:label "DEBUG"@en ;
+	rdfs:comment "intended for logging detailed information about the system for debugging purposes."@en 
+	.
+
+arkLog:info a arkLog:Level, owl:NamedIndividual ;
+	arkLog:levelCode "3"^^xsd:integer ;
+	arkLog:hexCode "#17A2B8"^^xsd:string ;
+	rdfs:label "INFO"@en ;
+	rdfs:comment "includes messages that provide a record of the normal operation of the system."@en 
+	.
+
+arkLog:warn a arkLog:Level, owl:NamedIndividual ;
+	arkLog:levelCode "2"^^xsd:integer ;
+	arkLog:hexCode "#FFC107"^^xsd:string ;
+	rdfs:label "WARN"@en ;
+	rdfs:comment "signifies potential issues that may lead to errors or unexpected behavior in the future if not addressed."@en 
+	.
+
+arkLog:error a arkLog:Level, owl:NamedIndividual ;
+	arkLog:levelCode "1"^^xsd:integer ;
+	arkLog:hexCode "#DC3545"^^xsd:string ;
+	rdfs:label "ERROR"@en ;
+	rdfs:comment "indicates error conditions that impair some operation but are less severe than critical situations."@en 
+	.
+
+# instances of rlog:StatusCode
+arkLog:code200 a rlog:StatusCode, owl:NamedIndividual ;
+	rlog:codeId "200"^^xsd:integer ;
+	rdfs:label "OK"@en ;
+	rdfs:comment """The request succeeded. The result meaning of "success" depends on the HTTP method: GET, POST"""@en 
+	.
+
+arkLog:code401 a rlog:StatusCode, owl:NamedIndividual ;
+	rlog:codeId "401"^^xsd:integer ;
+	rdfs:label "Unauthorized"@en ;
+	rdfs:comment """Although the HTTP standard specifies "unauthorized", semantically this response means "unauthenticated". That is, the client must authenticate itself to get the requested response."""@en 
+	.
+
+arkLog:code400 a rlog:StatusCode, owl:NamedIndividual ;
+	rlog:codeId "400"^^xsd:integer ;
+	rdfs:label "Bad Request"@en ;
+	rdfs:comment """The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."""@en 
+	.
+
+arkLog:code500 a rlog:StatusCode, owl:NamedIndividual ;
+	rlog:codeId "500"^^xsd:integer ;
+	rdfs:label "Internal Server Error"@en ;
+	rdfs:comment """The server has encountered a situation it does not know how to handle."""@en 
+	.
+
+# instances of rlog:Resource
+arkLog:platform a rlog:Resource, owl:NamedIndividual ;
+	rdfs:label "ARK Platform client"@en ;
+	rdfs:comment "ARK Platform client"@en 
+	.
+
+arkLog:nodeServer a rlog:Resource, owl:NamedIndividual ;
+	rdfs:label "ARK Backend server"@en ;
+	rdfs:comment "ARK Backend server"@en 
+	.
+
+# instances of arkLog:Event
+arkLog:log a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "General Log"@en ;
+	rdfs:comment "General log event"@en 
+	.
+
+arkLog:click a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "Click"@en ;
+	rdfs:comment "Click event"@en 
+	.
+
+arkLog:search a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "Search"@en ;
+	rdfs:comment "Search event"@en 
+	.
+
+arkLog:filter a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "Filter"@en ;
+	rdfs:comment "Filter event"@en 
+	.
+
+arkLog:newUserSignup a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "New User Signup"@en ;
+	rdfs:comment "New user registration submitted through page linked in user invite email"@en 
+	.
+
+arkLog:login a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "Login"@en ;
+	rdfs:comment """SUCCESS: Valid email and password entered in sign-in page → successful login. FAILURE: Invalid email or password entered in sign-in page → failed login."""@en
+	.
+
+arkLog:logout a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "Logout"@en ;
+	rdfs:comment "Sign out selected in user menu → successful logout"@en 
+	.
+
+arkLog:passwordReset a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "Password Reset"@en ;
+	rdfs:comment "Successful password reset request using Forgot Password feature in sign-in page"@en 
+	.
+
+arkLog:passwordUpdate a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "Password Update"@en ;
+	rdfs:comment "New password submitted through Change Password modal in Your Profile > Details page"@en 
+	.
+
+arkLog:userOrgChangeToApproved a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-17"^^xsd:date ;
+	rdfs:label "User Organisation Change to Approved"@en ;
+	rdfs:comment "User organisation changed to Approved"@en
+	.
+
+arkLog:userOrgChangeToPending a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-17"^^xsd:date ;
+	rdfs:label "User Organisation Change to Pending"@en ;
+	rdfs:comment "User organisation changed to Pending"@en
+	.
+
+arkLog:userPlatformRoleChange a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-14"^^xsd:date ;
+	dcterms:modified "2024-05-14"^^xsd:date ;
+	rdfs:label "User Platform Role Change"@en ;
+	rdfs:comment "User Platform role changed"@en 
+	.
+
+arkLog:userStatusChangeToActive a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-17"^^xsd:date ;
+	dcterms:modified "2024-05-17"^^xsd:date ;
+	rdfs:label "User Status Change to Active"@en ;
+	rdfs:comment "User status changed to Active"@en
+	.
+
+arkLog:userStatusChangeToDeleted a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-17"^^xsd:date ;
+	dcterms:modified "2024-05-17"^^xsd:date ;
+	rdfs:label "User Status Change to Deleted"@en ;
+	rdfs:comment "User status changed to Deleted"@en
+	.
+
+arkLog:userStatusChangeToPending a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-05-17"^^xsd:date ;
+	dcterms:modified "2024-05-17"^^xsd:date ;
+	rdfs:label "User Status Change to Pending"@en ;
+	rdfs:comment "User status changed to Pending"@en
+	.
+
+
+# instances of arkLog:EntityAccessEvent
+arkLog:evidenceAccessEvent a arkLog:EntityAccessEvent ;
 	dcterms:created "2024-05-16"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
 	rdfs:label "Access arkc:Evidence event"@en ;
 	rdfs:comment "User accesses evidence"@en 
 	.
 
-arkLog:projectAccessEvent a arkLog:ResourceAccessEvent ;
+arkLog:projectAccessEvent a arkLog:EntityAccessEvent ;
 	dcterms:created "2024-05-16"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
 	rdfs:label "Access arkc:Project event"@en ;
 	rdfs:comment "User accesses a project"@en 
 	.
 
-arkLog:riskRegisterAccessEvent a arkLog:ResourceAccessEvent ;
+arkLog:riskRegisterAccessEvent a arkLog:EntityAccessEvent ;
 	dcterms:created "2024-05-16"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
 	rdfs:label "Access arkc:RiskRegister event"@en ;
 	rdfs:comment "User accesses risk register"@en 
 	.
 
-arkLog:controlAccessEvent a arkLog:ResourceAccessEvent ;
+arkLog:controlAccessEvent a arkLog:EntityAccessEvent ;
 	dcterms:created "2024-05-16"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
 	rdfs:label "Access arkc:Control event"@en ;
@@ -365,7 +371,7 @@ arkLog:controlAccessEvent a arkLog:ResourceAccessEvent ;
 	.
 
 # potential future events
-arkLog:dataEntityEditEvent a arkLog:ResourceAccessEvent ;
+arkLog:dataEntityEditEvent a arkLog:EntityAccessEvent ;
 	dcterms:created "2024-05-17"^^xsd:date ;
 	dcterms:modified "2024-05-17"^^xsd:date ;
 	rdfs:label "Edit arkc:DataEntity event"@en ;

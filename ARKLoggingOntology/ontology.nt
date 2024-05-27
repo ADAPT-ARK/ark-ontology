@@ -4,15 +4,14 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/created> "2024-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/creator> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/description> "ARK Logging Ontology that is used to generate network/audit logs"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/modified> "2024-05-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/description> "This ontology dedines owl classes and properties, that are used to generate network/audit logs"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-nc/4.0/> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/publisher> "https://www.openark.adaptcentre.ie/" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/rights> <https://creativecommons.org/licenses/by/3.0/at/deed.en> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/rights> "https://creativecommons.org/licenses/by-nc/4.0/" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/dc/terms/title> "ARK Logging Ontology"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkLog" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1" .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
 # 
 # 
 # #################################################################
@@ -37,14 +36,14 @@
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/publisher
 <http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/terms/rights
-<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/title
 <http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -76,6 +75,19 @@
 # #################################################################
 # 
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://purl.org/dc/terms/contributor> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://purl.org/dc/terms/creator> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "links a log entry to a entity access event."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#label> "has entity access event"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> .
@@ -97,19 +109,15 @@
 # #################################################################
 # 
 # 
-# http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message
-<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-# 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://purl.org/dc/terms/contributor> "Junli Liang" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://purl.org/dc/terms/creator> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://www.w3.org/2000/01/rdf-schema#comment> "record the ID of the entity that is accessed."@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId> <http://www.w3.org/2000/01/rdf-schema#label> "Entity ID"@en .
 # 
@@ -194,6 +202,25 @@
 # http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#StatusCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://purl.org/dc/terms/contributor> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://purl.org/dc/terms/creator> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via arkLog:resourceId"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Access Event"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "Log entry for entity access events"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Entity Access Log entry"@en .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry> .
@@ -201,20 +228,19 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://purl.org/dc/terms/created> "2024-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://purl.org/dc/terms/creator> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://purl.org/dc/terms/modified> "2024-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://www.w3.org/2000/01/rdf-schema#comment> "A log entry in ARK."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://www.w3.org/2000/01/rdf-schema#label> "Log Entry"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> <http://www.w3.org/2000/01/rdf-schema#label> "ARK Log Entry"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://purl.org/dc/terms/contributor> "Junli Liang" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://purl.org/dc/terms/created> "2024-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://purl.org/dc/terms/creator> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://purl.org/dc/terms/modified> "2024-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An event that is logged."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> <http://www.w3.org/2000/01/rdf-schema#label> "ARK Log event"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -223,28 +249,9 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://purl.org/dc/terms/created> "2024-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://purl.org/dc/terms/creator> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://purl.org/dc/terms/modified> "2024-05-14"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://www.w3.org/2000/01/rdf-schema#comment> "A level of the log."@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://www.w3.org/2000/01/rdf-schema#label> "Level"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://purl.org/dc/terms/contributor> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://purl.org/dc/terms/creator> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Access Event"@en .
-# 
-# https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Access Log"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://purl.org/dc/terms/modified> "2024-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://www.w3.org/2000/01/rdf-schema#comment> "A level of the log, that is used in ARK."@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level> <http://www.w3.org/2000/01/rdf-schema#label> "ARK Log entry level"@en .
 # 
 # 
 # 
@@ -293,7 +300,7 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "User accesses arkc:Control"@en .
@@ -301,7 +308,7 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent> <http://purl.org/dc/terms/created> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "User edits data entity"@en .
@@ -325,7 +332,7 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "User accesses evidence"@en .
@@ -409,7 +416,7 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "User accesses a project"@en .
@@ -417,7 +424,7 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent> .
+<https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent> <http://purl.org/dc/terms/created> "2024-05-16"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent> <http://purl.org/dc/terms/modified> "2024-05-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "User accesses risk register"@en .

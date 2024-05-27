@@ -14,9 +14,6 @@
   "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#codeId",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
-}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -29,13 +26,13 @@
   "@id" : "http://purl.org/dc/terms/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/modified",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/publisher",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/terms/rights",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
@@ -66,19 +63,17 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "ARK Logging Ontology that is used to generate network/audit logs"
+    "@value" : "This ontology dedines owl classes and properties, that are used to generate network/audit logs"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by-nc/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-20"
+    "@value" : "2024-05-27"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "https://www.openark.adaptcentre.ie/"
-  } ],
-  "http://purl.org/dc/terms/rights" : [ {
-    "@id" : "https://creativecommons.org/licenses/by/3.0/at/deed.en"
-  }, {
-    "@value" : "https://creativecommons.org/licenses/by-nc/4.0/"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -94,7 +89,59 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1"
+    "@value" : "0.0.2"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-27"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via arkLog:resourceId"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entity Access Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-27"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Log entry for entity access events"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Entity Access Log entry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry",
@@ -113,7 +160,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-14"
+    "@value" : "2024-05-27"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -121,7 +168,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Log Entry"
+    "@value" : "ARK Log Entry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Entry"
@@ -143,7 +190,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-14"
+    "@value" : "2024-05-27"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -151,10 +198,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+    "@value" : "ARK Log event"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Level",
@@ -173,70 +217,18 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-14"
+    "@value" : "2024-05-27"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A level of the log."
+    "@value" : "A level of the log, that is used in ARK."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Level"
+    "@value" : "ARK Log entry level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#Level"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/contributor" : [ {
-    "@value" : "Junli Liang"
-  }, {
-    "@value" : "Rob Brennan"
-  } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-16"
-  } ],
-  "http://purl.org/dc/terms/creator" : [ {
-    "@value" : "Junli Liang"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-17"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Resource Access Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"
-  } ]
-}, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-16"
-  } ],
-  "http://purl.org/dc/terms/modified" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-17"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Resource Access Log"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#click",
@@ -344,7 +336,7 @@
     "@value" : "2024-05-17"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -366,7 +358,7 @@
     "@value" : "2024-05-17"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -414,14 +406,14 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-05-17"
+    "@value" : "2024-05-27"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "record the ID of the entity that is accessed."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -429,9 +421,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#error",
@@ -466,7 +455,7 @@
     "@value" : "2024-05-17"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -530,6 +519,42 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-16"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Junli Liang"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-05-27"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "links a log entry to a entity access event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has entity access event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent",
@@ -856,7 +881,7 @@
     "@value" : "2024-05-17"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -878,7 +903,7 @@
     "@value" : "2024-05-17"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",

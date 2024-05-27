@@ -16,15 +16,14 @@
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
         <terms:creator>Junli Liang</terms:creator>
-        <terms:description xml:lang="en">ARK Logging Ontology that is used to generate network/audit logs</terms:description>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-20</terms:modified>
+        <terms:description xml:lang="en">This ontology dedines owl classes and properties, that are used to generate network/audit logs</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by-nc/4.0/"/>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
         <terms:publisher>https://www.openark.adaptcentre.ie/</terms:publisher>
-        <terms:rights rdf:resource="https://creativecommons.org/licenses/by/3.0/at/deed.en"/>
-        <terms:rights>https://creativecommons.org/licenses/by-nc/4.0/</terms:rights>
         <terms:title xml:lang="en">ARK Logging Ontology</terms:title>
         <vann:preferredNamespacePrefix>arkLog</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#</vann:preferredNamespaceUri>
-        <owl:versionInfo>0.1</owl:versionInfo>
+        <owl:versionInfo>0.0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -76,6 +75,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
     <!-- http://purl.org/dc/terms/modified -->
 
 
@@ -87,13 +93,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/rights -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
     
 
 
@@ -149,6 +148,24 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEntityAccessEvent">
+        <rdfs:subPropertyOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry"/>
+        <rdfs:range rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
+        <rdfs:comment xml:lang="en">links a log entry to a entity access event.</rdfs:comment>
+        <rdfs:label xml:lang="en">has entity access event</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#hasEvent -->
 
 
@@ -178,25 +195,17 @@
     
 
 
-    <!-- http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message -->
-
-
-    <owl:DatatypeProperty rdf:about="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message"/>
-    
-
-
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId -->
 
 
     <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#entityId">
-        <rdfs:subPropertyOf rdf:resource="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#message"/>
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry"/>
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
         <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
         <rdfs:comment xml:lang="en">record the ID of the entity that is accessed.</rdfs:comment>
         <rdfs:label xml:lang="en">Entity ID</rdfs:label>
     </owl:DatatypeProperty>
@@ -328,6 +337,35 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:creator>Junli Liang</terms:creator>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
+        <rdfs:comment xml:lang="en">An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via arkLog:resourceId</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity Access Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessLogEntry">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
+        <rdfs:comment xml:lang="en">Log entry for entity access events</rdfs:comment>
+        <rdfs:label xml:lang="en">Entity Access Log entry</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry -->
 
 
@@ -337,9 +375,9 @@
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
         <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
         <rdfs:comment xml:lang="en">A log entry in ARK.</rdfs:comment>
-        <rdfs:label xml:lang="en">Log Entry</rdfs:label>
+        <rdfs:label xml:lang="en">ARK Log Entry</rdfs:label>
     </owl:Class>
     
 
@@ -348,14 +386,13 @@
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event">
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
         <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
         <rdfs:comment xml:lang="en">An event that is logged.</rdfs:comment>
-        <rdfs:label xml:lang="en">Event</rdfs:label>
+        <rdfs:label xml:lang="en">ARK Log event</rdfs:label>
     </owl:Class>
     
 
@@ -369,38 +406,9 @@
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:created>
         <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-14</terms:modified>
-        <rdfs:comment xml:lang="en">A level of the log.</rdfs:comment>
-        <rdfs:label xml:lang="en">Level</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Event"/>
-        <terms:contributor>Junli Liang</terms:contributor>
-        <terms:contributor>Rob Brennan</terms:contributor>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
-        <terms:creator>Junli Liang</terms:creator>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
-        <rdfs:comment xml:lang="en">An event that is related to accessing a resource i.e. arkc:Project, arkc:Evidence. The resource Id should be linked to a log via rlog:message</rdfs:comment>
-        <rdfs:label xml:lang="en">Resource Access Event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry -->
-
-
-    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessLogEntry">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#Entry"/>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
-        <rdfs:comment xml:lang="en">Log entry for resource access events. the message associated should be in the JSON format: {field, stage, }</rdfs:comment>
-        <rdfs:label xml:lang="en">Resource Access Log</rdfs:label>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-27</terms:modified>
+        <rdfs:comment xml:lang="en">A level of the log, that is used in ARK.</rdfs:comment>
+        <rdfs:label xml:lang="en">ARK Log entry level</rdfs:label>
     </owl:Class>
     
 
@@ -482,7 +490,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#controlAccessEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
         <rdfs:comment xml:lang="en">User accesses arkc:Control</rdfs:comment>
@@ -495,7 +503,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#dataEntityEditEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:created>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
         <rdfs:comment xml:lang="en">User edits data entity</rdfs:comment>
@@ -534,7 +542,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#evidenceAccessEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
         <rdfs:comment xml:lang="en">User accesses evidence</rdfs:comment>
@@ -673,7 +681,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#projectAccessEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
         <rdfs:comment xml:lang="en">User accesses a project</rdfs:comment>
@@ -686,7 +694,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#riskRegisterAccessEvent">
-        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#ResourceAccessEvent"/>
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#EntityAccessEvent"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-16</terms:created>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-17</terms:modified>
         <rdfs:comment xml:lang="en">User accesses risk register</rdfs:comment>
