@@ -2633,7 +2633,12 @@ arkcyt:Risk a skos:Concept ;
 
 arkcyt: a owl:Ontology,
         skos:ConceptScheme ;
+        dcat:Distribution ;
     rdfs:label "ARK Cybersecurity Terminology"@en ;
+    dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:publisher <https://openark.adaptcentre.ie> ;
+    dcterms:format "text/turtle" ;
     dcterms:abstract "This taxonomy defines cybersecurity terms, taken from ISO and NIST documents, that are used to model this domain on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO terms."@en ;
     dcterms:contributor "Junli Liang",
         "Rob Brennan" ;
@@ -2644,5 +2649,14 @@ arkcyt: a owl:Ontology,
     vocab:preferredNamespaceUri arkcyt: ;
     rdfs:comment "This taxonomy defines cybersecurity terms, taken from ISO and NIST documents, that are used to model this domain on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO terms."@en ;
     owl:versionInfo "0.1" ;
+    sw:status sw:unstable ;
+    dcat:accessURL <https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology/ontology.ttl> ;
+    owl:versionIRI arkctl: ;
+    dcat:byteSize "250KB" ;
+    dcat:downloadURL <https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology/ontology.ttl> ;
+    widoco:rdfxmlSerialization <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl> .
     skos:prefLabel "ARK Cybersecurity Terminology"@en .
 
+arkcyt:RightsStatement a dcterms:RightsStatement ;
+    rdfs:label "©2024 ARK"@en ;
+    dcterms:rights "This work is licensed under a Creative Commons Attribution 4.0 International License." .
