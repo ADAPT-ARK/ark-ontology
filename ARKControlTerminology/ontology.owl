@@ -1,27 +1,45 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#"
      xml:base="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:bibo="http://purl.org/ontology/bibo/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:vocab="https://w3id.org/widoco/vocab#"
+     xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#">
         <terms:abstract xml:lang="en">This taxonomy defines cybersecurity terms, taken from ISO and NIST documents, that are used to model this domain on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO terms.</terms:abstract>
+        <terms:accessRights rdf:resource="http://publications.europa.eu/resource/authority/access-right/PUBLIC"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-04-08</terms:created>
         <terms:description xml:lang="en">This taxonomy defines cybersecurity terms, taken from ISO and NIST documents, that are used to model this domain on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO terms.</terms:description>
+        <terms:format>text/turtle</terms:format>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-29</terms:modified>
+        <terms:rights rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#RightsStatement"/>
+        <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/draft"/>
         <vann:preferredNamespacePrefix>arkcyt</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#"/>
+        <schema:codeRepository rdf:resource="https://gogs.adaptcentre.ie/ARK/Ontologies/src/master/ARKControlOntology"/>
+        <schema:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <rdfs:comment xml:lang="en">This taxonomy defines cybersecurity terms, taken from ISO and NIST documents, that are used to model this domain on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO terms.</rdfs:comment>
         <rdfs:label xml:lang="en">ARK Cybersecurity Terminology</rdfs:label>
         <owl:versionInfo>0.1</owl:versionInfo>
+        <ns:status rdf:resource="http://www.w3.org/2003/06/sw-vocab-status/ns#unstable"/>
         <skos:prefLabel xml:lang="en">ARK Cybersecurity Terminology</skos:prefLabel>
+        <dcat:accessURL rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl"/>
+        <dcat:byteSize>250KB</dcat:byteSize>
+        <dcat:downloadURL rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl"/>
+        <vocab:introduction xml:lang="en">This taxonomy defines cybersecurity terms, taken from ISO and NIST documents, that are used to model this domain on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO terms.</vocab:introduction>
+        <vocab:rdfxmlSerialization rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl"/>
     </owl:Ontology>
     
 
@@ -42,6 +60,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/abstract"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/accessRights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accessRights"/>
     
 
 
@@ -66,6 +91,20 @@
     
 
 
+    <!-- http://purl.org/dc/terms/format -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
     <!-- http://purl.org/dc/terms/modified -->
 
 
@@ -73,10 +112,24 @@
     
 
 
+    <!-- http://purl.org/dc/terms/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
+    
+
+
     <!-- http://purl.org/dc/terms/source -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/source"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/status"/>
     
 
 
@@ -91,6 +144,27 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    
+
+
+    <!-- http://schema.org/codeRepository -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/codeRepository"/>
+    
+
+
+    <!-- http://schema.org/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/license"/>
+    
+
+
+    <!-- http://www.w3.org/2003/06/sw-vocab-status/ns#status -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2003/06/sw-vocab-status/ns#status"/>
     
 
 
@@ -129,6 +203,41 @@
     
 
 
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#accessURL"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#byteSize -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#byteSize"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#introduction -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#introduction"/>
+    
+
+
+    <!-- https://w3id.org/widoco/vocab#rdfxmlSerialization -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/widoco/vocab#rdfxmlSerialization"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -160,6 +269,13 @@
     
 
 
+    <!-- http://purl.org/dc/terms/RightsStatement -->
+
+
+    <owl:Class rdf:about="http://purl.org/dc/terms/RightsStatement"/>
+    
+
+
     <!-- http://www.w3.org/2004/02/skos/core#Concept -->
 
 
@@ -171,6 +287,13 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
     
 
 
@@ -191,6 +314,7 @@
 
     <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
     </owl:NamedIndividual>
     
 
@@ -2382,6 +2506,17 @@
         <skos:definition xml:lang="en">statement describing what is to be achieved as a result of a review (3.59)</skos:definition>
         <skos:inScheme rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#"/>
         <skos:prefLabel xml:lang="en">Review objective</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#RightsStatement -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#RightsStatement">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <terms:rights>This work is licensed under a Creative Commons Attribution 4.0 International License.</terms:rights>
+        <rdfs:label xml:lang="en">©2024 ARK</rdfs:label>
     </owl:NamedIndividual>
     
 
