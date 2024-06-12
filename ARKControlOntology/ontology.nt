@@ -12,7 +12,10 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/dc/terms/modified> "2024-05-24"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/dc/terms/publisher> "https://openark.adaptcentre.ie" .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/dc/terms/rights> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/dc/terms/rights> _:genid1 .
+_:genid1 <http://www.w3.org/2000/01/rdf-schema#label> "©2024 ARK"@en .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/RightsStatement> .
+<http://purl.org/dc/terms/RightsStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/dc/terms/source> "ISO 27002:2022(E), https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/, https://www.cdc.gov/niosh/learning/safetyculturehc/module-3/2.html" .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/unstable> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkctl" .
@@ -156,6 +159,13 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionOwner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionOwner> <http://www.w3.org/2000/01/rdf-schema#label> "has action owner"@en .
 # 
+# https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> .
+<https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#range> <xsd:string> .
+<xsd:string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlGroup> .
@@ -183,7 +193,6 @@
 # https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasStatus
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> .
-<https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasStatus> <http://www.w3.org/2000/01/rdf-schema#range> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasStatus> <http://purl.org/dc/terms/contributor> "Junli Liang" .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasStatus> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
@@ -230,13 +239,6 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://purl.org/dc/terms/contributor> "Junli Liang" .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://purl.org/dc/terms/created> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#comment> "Text that describes edit history/update of an action"@en .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#label> "has action update"@en .
 # 
 # 
 # 
@@ -248,7 +250,6 @@
 # 
 # 
 # http://purl.org/dc/terms/RightsStatement
-<http://purl.org/dc/terms/RightsStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -367,7 +368,7 @@
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner> <http://purl.org/dc/terms/contributor> "Junli Liang" .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner> <http://purl.org/dc/terms/created> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -838,6 +839,15 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A gorup that persons can share controls with each other, add metameta to describe the controls in the group, and create custom control hierachies. "@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Control group"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> <http://purl.org/dc/terms/contributor> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> <http://purl.org/dc/terms/created> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner> <http://www.w3.org/2000/01/rdf-schema#label> "Control owner"@en .
 # 
 # https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Corrective
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Corrective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -2722,7 +2732,6 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> <http://purl.org/dc/terms/contributor> "Junli Liang" .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> <http://purl.org/dc/terms/created> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> <http://www.w3.org/2000/01/rdf-schema#comment> "A class that indicates an action's status"@en .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status"@en .
@@ -3391,6 +3400,8 @@
 <https://openark.adaptcentre.ie/Ontologies/nioshControlOntology#Subsitution> <http://www.w3.org/2004/02/skos/core#definition> "Substitution means changing out a material or process to reduce the hazard."@en .
 <https://openark.adaptcentre.ie/Ontologies/nioshControlOntology#Subsitution> <http://www.w3.org/2004/02/skos/core#prefLabel> "Substitution"@en .
 # 
+# xsd:string
+# 
 # 
 # 
 # #################################################################
@@ -3404,9 +3415,40 @@
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Dataset> .
 # 
-# https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/RightsStatement> .
-<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement> <http://www.w3.org/2000/01/rdf-schema#label> "©2024 ARK"@en .
+# https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://purl.org/dc/terms/contributor> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://purl.org/dc/terms/created> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of an action is Completed"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed> <http://www.w3.org/2000/01/rdf-schema#label> "Action status: Completed"@en .
+# 
+# https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://purl.org/dc/terms/contributor> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://purl.org/dc/terms/created> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of an action is Open"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open> <http://www.w3.org/2000/01/rdf-schema#label> "Action status: Open"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://purl.org/dc/terms/contributor> "Junli Liang" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://purl.org/dc/terms/contributor> "Rob Brennan" .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://purl.org/dc/terms/created> "2024-06-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#comment> "Text that describes edit history/update of an action"@en .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> .
+<https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate> <http://www.w3.org/2000/01/rdf-schema#label> "has action update"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

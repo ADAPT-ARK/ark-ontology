@@ -9,20 +9,30 @@
 @prefix rlog: <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix dct: <http://www.w3.org/ns/dcat#> .
 @base <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#> .
 
-arkLog: a owl:Ontology ;
+arkLog: a owl:Ontology, dct:Dataset ;
 	owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology> ;
 	dcterms:contributor  "Junli Liang" , "Rob Brennan" ;
 	dcterms:creator "Junli Liang" ;
 	dcterms:description "This ontology dedines owl classes and properties, that are used to generate network/audit logs"@en ;
   dcterms:created "2024-05-14"^^xsd:date ;
-  dcterms:modified "2024-05-27"^^xsd:date ;
+  dcterms:modified "2024-06-11"^^xsd:date ;
 	dcterms:publisher "https://www.openark.adaptcentre.ie/" ;
 	dcterms:license <https://creativecommons.org/licenses/by-nc/4.0/> ;
 	dcterms:title "ARK Logging Ontology"@en ;
+	dcterms:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ;
+	dcterms: [
+		a dcterms:RightsStatement ;
+		rdfs:label "2024 ARK" ;
+	] ;
 	vann:preferredNamespacePrefix "arkLog" ;
 	vann:preferredNamespaceUri "https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology#" ;
+	dct:accessURL <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology/ontology.ttl> ;
+	dct:format "text/turtle" ;
+	dct:downloadURL <https://openark.adaptcentre.ie/Ontologies/ARKLoggingOntology/ontology.ttl> ;
+	dct:byteSize "5.5 KB" ;
 	owl:versionInfo "0.0.2" .
 
 arkLog:Entry a rdfs:Class, owl:Class ;
@@ -217,6 +227,18 @@ arkLog:code400 a rlog:StatusCode, owl:NamedIndividual ;
 	rdfs:comment """The server cannot or will not process the request due to something that is perceived to be a client error (e.g., malformed request syntax, invalid request message framing, or deceptive request routing)."""@en 
 	.
 
+arkLog:code404 a rlog:StatusCode, owl:NamedIndividual ;
+	rlog:codeId "404"^^xsd:integer ;
+	rdfs:label "Not Found"@en ;
+	rdfs:comment """The requested resource could not be found but may be available in the future. Subsequent requests by the client are permissible."""@en 
+	.
+
+arkLog:code409 a rlog:StatusCode, owl:NamedIndividual ;
+	rlog:codeId "409"^^xsd:integer ;
+	rdfs:label "Conflict"@en ;
+	rdfs:comment """Indicates that the request could not be processed because of conflict in the request, such as user account conflict."""@en 
+	.
+
 arkLog:code500 a rlog:StatusCode, owl:NamedIndividual ;
 	rlog:codeId "500"^^xsd:integer ;
 	rdfs:label "Internal Server Error"@en ;
@@ -242,6 +264,13 @@ arkLog:log a arkLog:Event, owl:NamedIndividual ;
 	rdfs:comment "General log event"@en 
 	.
 
+arkLog:save a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-06-11"^^xsd:date ;
+	dcterms:modified "2024-06-11"^^xsd:date ;
+	rdfs:label "Save"@en ;
+	rdfs:comment "Event for users clicking save button "@en 
+	.
+
 arkLog:click a arkLog:Event, owl:NamedIndividual ;
 	dcterms:created "2024-05-14"^^xsd:date ;
 	dcterms:modified "2024-05-14"^^xsd:date ;
@@ -261,6 +290,13 @@ arkLog:filter a arkLog:Event, owl:NamedIndividual ;
 	dcterms:modified "2024-05-14"^^xsd:date ;
 	rdfs:label "Filter"@en ;
 	rdfs:comment "Filter event"@en 
+	.
+
+arkLog:userLastActivetimeUpdate a arkLog:Event, owl:NamedIndividual ;
+	dcterms:created "2024-06-11"^^xsd:date ;
+	dcterms:modified "2024-06-11"^^xsd:date ;
+	rdfs:label "User Last Activetime Update"@en ;
+	rdfs:comment "User last activetime updated"@en 
 	.
 
 arkLog:newUserSignup a arkLog:Event, owl:NamedIndividual ;

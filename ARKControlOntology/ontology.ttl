@@ -20,7 +20,7 @@
                                                                  <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                                                  <http://purl.org/dc/terms/modified> "2024-05-24"^^xsd:date ;
                                                                  <http://purl.org/dc/terms/publisher> "https://openark.adaptcentre.ie" ;
-                                                                 <http://purl.org/dc/terms/rights> :RightsStatement ;
+                                                                 <http://purl.org/dc/terms/rights> _:genid1 ;
                                                                  <http://purl.org/dc/terms/source> "ISO 27002:2022(E), https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/, https://www.cdc.gov/niosh/learning/safetyculturehc/module-3/2.html" ;
                                                                  <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/unstable> ;
                                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkctl" ;
@@ -35,6 +35,9 @@
                                                                  <http://www.w3.org/ns/dcat#downloadURL> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl> ;
                                                                  <https://w3id.org/widoco/vocab#introduction> "This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO controls."@en ;
                                                                  <https://w3id.org/widoco/vocab#rdfxmlSerialization> <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl> .
+
+_:genid1 rdf:type <http://purl.org/dc/terms/RightsStatement> ;
+          rdfs:label "©2024 ARK"@en .
 
 #################################################################
 #    Annotation properties
@@ -177,6 +180,12 @@ xsd:date rdf:type rdfs:Datatype .
                 rdfs:label "has action owner"@en .
 
 
+###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate
+:hasActionUpdate rdf:type owl:ObjectProperty ;
+                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> ;
+                 rdfs:range <xsd:string> .
+
+
 ###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl
 :hasControl rdf:type owl:ObjectProperty ;
             rdfs:domain :ControlGroup ;
@@ -251,14 +260,7 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate
-:hasActionUpdate rdf:type owl:DatatypeProperty ;
-                 rdfs:domain <https://openark.adaptcentre.ie/Ontologies/ARKCube#Action> ;
-                 <http://purl.org/dc/terms/contributor> "Junli Liang" ,
-                                                        "Rob Brennan" ;
-                 <http://purl.org/dc/terms/created> "2024-06-05"^^xsd:date ;
-                 rdfs:comment "Text that describes edit history/update of an action"@en ;
-                 rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> ;
-                 rdfs:label "has action update"@en .
+:hasActionUpdate rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -391,7 +393,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner
 :ActionOwner rdf:type owl:Class ;
-             rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> ;
+             rdfs:subClassOf :ControlOwner ;
              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                     "Rob Brennan" ;
              <http://purl.org/dc/terms/created> "2024-06-05"^^xsd:date ;
@@ -878,6 +880,16 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:comment "A gorup that persons can share controls with each other, add metameta to describe the controls in the group, and create custom control hierachies. "@en ;
               rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> ;
               rdfs:label "Control group"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner
+:ControlOwner rdf:type owl:Class ;
+              rdfs:subClassOf <https://openark.adaptcentre.ie/Ontologies/ARKCube#Person> ;
+              <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                     "Rob Brennan" ;
+              <http://purl.org/dc/terms/created> "2024-06-05"^^xsd:date ;
+              rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> ;
+              rdfs:label "Control owner"@en .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Corrective
@@ -2833,7 +2845,6 @@ xsd:date rdf:type rdfs:Datatype .
 :Status rdf:type owl:Class ;
         <http://purl.org/dc/terms/contributor> "Junli Liang" ,
                                                "Rob Brennan" ;
-        <http://purl.org/dc/terms/created> "2024-06-05"^^xsd:date ;
         rdfs:comment "A class that indicates an action's status"@en ;
         rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> ;
         rdfs:label "Status"@en .
@@ -3555,6 +3566,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                              <http://www.w3.org/2004/02/skos/core#prefLabel> "Substitution"@en .
 
 
+###  xsd:string
+<xsd:string> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -3564,10 +3579,38 @@ xsd:date rdf:type rdfs:Datatype .
                                                                          <http://www.w3.org/ns/dcat#Dataset> .
 
 
-###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement
-:RightsStatement rdf:type owl:NamedIndividual ,
-                          <http://purl.org/dc/terms/RightsStatement> ;
-                 rdfs:label "©2024 ARK"@en .
+###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed
+:completed rdf:type owl:NamedIndividual ,
+                    :Status ;
+           <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                  "Rob Brennan" ;
+           <http://purl.org/dc/terms/created> "2024-06-05"^^xsd:date ;
+           rdfs:comment "The status of an action is Completed"@en ;
+           rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> ;
+           rdfs:label "Action status: Completed"@en .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open
+:open rdf:type owl:NamedIndividual ,
+               :Status ;
+      <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                             "Rob Brennan" ;
+      <http://purl.org/dc/terms/created> "2024-06-05"^^xsd:date ;
+      rdfs:comment "The status of an action is Open"@en ;
+      rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> ;
+      rdfs:label "Action status: Open"@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:hasActionUpdate <http://purl.org/dc/terms/contributor> "Junli Liang" ,
+                                                        "Rob Brennan" ;
+                 <http://purl.org/dc/terms/created> "2024-06-05"^^xsd:date ;
+                 rdfs:comment "Text that describes edit history/update of an action"@en ;
+                 rdfs:isDefinedBy <https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#> ;
+                 rdfs:label "has action update"@en .
 
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

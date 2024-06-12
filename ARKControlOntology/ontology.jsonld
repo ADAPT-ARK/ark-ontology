@@ -1,4 +1,13 @@
 [ {
+  "@id" : "_:genid1",
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://purl.org/dc/terms/RightsStatement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "©2024 ARK"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -126,7 +135,7 @@
     "@value" : "https://openark.adaptcentre.ie"
   } ],
   "http://purl.org/dc/terms/rights" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement"
+    "@id" : "_:genid1"
   } ],
   "http://purl.org/dc/terms/source" : [ {
     "@value" : "ISO 27002:2022(E), https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/, https://www.cdc.gov/niosh/learning/safetyculturehc/module-3/2.html"
@@ -478,7 +487,7 @@
     "@value" : "Action owner"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#AddressingInformationSecurityWithinSupplierAgreements",
@@ -1619,6 +1628,28 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AccessControlEntity"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-06-05"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Control owner"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Corrective",
@@ -5393,16 +5424,6 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#Protection"
   } ]
 }, {
-  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://purl.org/dc/terms/RightsStatement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "©2024 ARK"
-  } ]
-}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Screening",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -6291,10 +6312,6 @@
   }, {
     "@value" : "Rob Brennan"
   } ],
-  "http://purl.org/dc/terms/created" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-06-05"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "A class that indicates an action's status"
@@ -7024,6 +7041,32 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlTerminology#Protection"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-06-05"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The status of an action is Completed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Action status: Completed"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionOwner",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://purl.org/dc/terms/contributor" : [ {
@@ -7057,7 +7100,7 @@
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Junli Liang"
   }, {
@@ -7080,6 +7123,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has action update"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "xsd:string"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl",
@@ -7228,6 +7274,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Risk"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@value" : "Junli Liang"
+  }, {
+    "@value" : "Rob Brennan"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-06-05"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The status of an action is Open"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Action status: Open"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AccessControlEntity",
@@ -8326,4 +8398,7 @@
 }, {
   "@id" : "https://w3id.org/widoco/vocab#rdfxmlSerialization",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "xsd:string",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

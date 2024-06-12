@@ -30,7 +30,7 @@
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-24</terms:modified>
         <terms:publisher>https://openark.adaptcentre.ie</terms:publisher>
-        <terms:rights rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement"/>
+        <terms:rights rdf:nodeID="genid1"/>
         <terms:source>ISO 27002:2022(E), https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/, https://www.cdc.gov/niosh/learning/safetyculturehc/module-3/2.html</terms:source>
         <bibo:status rdf:resource="http://purl.org/ontology/bibo/unstable"/>
         <vann:preferredNamespacePrefix>arkctl</vann:preferredNamespacePrefix>
@@ -46,6 +46,10 @@
         <vocab:introduction xml:lang="en">This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO controls.</vocab:introduction>
         <vocab:rdfxmlSerialization rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology/ontology.ttl"/>
     </owl:Ontology>
+    <rdf:Description rdf:nodeID="genid1">
+        <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
+        <rdfs:label xml:lang="en">©2024 ARK</rdfs:label>
+    </rdf:Description>
     
 
 
@@ -305,6 +309,16 @@
     
 
 
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate -->
+
+
+    <owl:ObjectProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate">
+        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"/>
+        <rdfs:range rdf:resource="xsd:string"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl -->
 
 
@@ -415,15 +429,7 @@
     <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate -->
 
 
-    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate">
-        <rdfs:domain rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"/>
-        <terms:contributor>Junli Liang</terms:contributor>
-        <terms:contributor>Rob Brennan</terms:contributor>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</terms:created>
-        <rdfs:comment xml:lang="en">Text that describes edit history/update of an action</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
-        <rdfs:label xml:lang="en">has action update</rdfs:label>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate"/>
     
 
 
@@ -589,7 +595,7 @@
 
 
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner">
-        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner"/>
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</terms:created>
@@ -1144,6 +1150,20 @@
         <rdfs:comment xml:lang="en">A gorup that persons can share controls with each other, add metameta to describe the controls in the group, and create custom control hierachies. </rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
         <rdfs:label xml:lang="en">Control group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner -->
+
+
+    <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner">
+        <rdfs:subClassOf rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</terms:created>
+        <rdfs:isDefinedBy rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
+        <rdfs:label xml:lang="en">Control owner</rdfs:label>
     </owl:Class>
     
 
@@ -3383,7 +3403,6 @@
     <owl:Class rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status">
         <terms:contributor>Junli Liang</terms:contributor>
         <terms:contributor>Rob Brennan</terms:contributor>
-        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</terms:created>
         <rdfs:comment xml:lang="en">A class that indicates an action&apos;s status</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
         <rdfs:label xml:lang="en">Status</rdfs:label>
@@ -4290,6 +4309,13 @@
     
 
 
+    <!-- xsd:string -->
+
+
+    <owl:Class rdf:about="xsd:string"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -4311,13 +4337,53 @@
     
 
 
-    <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement -->
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed -->
 
 
-    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement">
-        <rdf:type rdf:resource="http://purl.org/dc/terms/RightsStatement"/>
-        <rdfs:label xml:lang="en">©2024 ARK</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</terms:created>
+        <rdfs:comment xml:lang="en">The status of an action is Completed</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
+        <rdfs:label xml:lang="en">Action status: Completed</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open -->
+
+
+    <owl:NamedIndividual rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open">
+        <rdf:type rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status"/>
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</terms:created>
+        <rdfs:comment xml:lang="en">The status of an action is Open</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
+        <rdfs:label xml:lang="en">Action status: Open</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate">
+        <terms:contributor>Junli Liang</terms:contributor>
+        <terms:contributor>Rob Brennan</terms:contributor>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-05</terms:created>
+        <rdfs:comment xml:lang="en">Text that describes edit history/update of an action</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#"/>
+        <rdfs:label xml:lang="en">has action update</rdfs:label>
+    </rdf:Description>
 </rdf:RDF>
 
 

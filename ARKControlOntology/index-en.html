@@ -100,24 +100,25 @@ This ontology defines sets of Control classes and their hierachies, taken from t
 <table>
 <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
 <tbody>
+<tr><td><b>arkc</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/ARKCube#&gt;</td></tr>
 <tr><td><b>arkctl</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#&gt;</td></tr>
+<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
 <tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
 <tr><td><b>dcat</b></td><td>&lt;http://www.w3.org/ns/dcat#&gt;</td></tr>
 <tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
 <tr><td><b>hseErmControlOntology</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/hseErmControlOntology#&gt;</td></tr>
 <tr><td><b>nioshControlOntology</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/nioshControlOntology#&gt;</td></tr>
-<tr><td><b>ns1</b></td><td>&lt;https://openark.adaptcentre.ie/Ontologies/ARKCube#&gt;</td></tr>
-<tr><td><b>ns2</b></td><td>&lt;https://w3id.org/widoco/vocab#&gt;</td></tr>
-<tr><td><b>ns3</b></td><td>&lt;http://schema.org/&gt;</td></tr>
 <tr><td><b>ns4</b></td><td>&lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt;</td></tr>
-<tr><td><b>ns5</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
 <tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
 <tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
 <tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>schema</b></td><td>&lt;http://schema.org/&gt;</td></tr>
 <tr><td><b>skos</b></td><td>&lt;http://www.w3.org/2004/02/skos/core#&gt;</td></tr>
 <tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>vocab</b></td><td>&lt;https://w3id.org/widoco/vocab#&gt;</td></tr>
 <tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
 <tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+<tr><td><b>xsd1</b></td><td>&lt;xsd:&gt;</td></tr>
 </tbody>
 </table>
 </div>
@@ -240,6 +241,10 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#ControlGroup"
          title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlGroup">Control group</a>
+   </li>
+   <li>
+      <a href="#ControlOwner"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner">Control owner</a>
    </li>
    <li>
       <a href="#https://openark.adaptcentre.ie/Ontologies/hseErmControlOntology#ControlOwner"
@@ -681,6 +686,12 @@ This ontology has the following classes and properties.</span>
          title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionOwner">has action owner</a>
    </li>
    <li>
+      <a href="#hasActionUpdate"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate">
+         <span>has action update</span>
+      </a>
+   </li>
+   <li>
       <a href="#hasControl"
          title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl">has control</a>
    </li>
@@ -700,13 +711,6 @@ This ontology has the following classes and properties.</span>
       <a href="#hasTargetRisk"
          title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasTargetRisk">has target risk</a>
    </li>
-</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    class="hlist">
-   <li>
-      <a href="#hasActionUpdate"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate">has action update</a>
-   </li>
 </ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
@@ -717,8 +721,12 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#RightsStatement"
-         title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement">©2024 ARK</a>
+      <a href="#completed"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed">Action status: Completed</a>
+   </li>
+   <li>
+      <a href="#open"
+         title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open">Action status: Open</a>
    </li>
 </ul><iframe align="center" width="100%" height ="500px" src="webvowl/index.html"></iframe> 
 </div>
@@ -845,6 +853,10 @@ This section provides details for each class and property defined by ARK Control
       <li>
          <a href="#ControlGroup"
             title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlGroup">Control group</a>
+      </li>
+      <li>
+         <a href="#ControlOwner"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner">Control owner</a>
       </li>
       <li>
          <a href="#https://openark.adaptcentre.ie/Ontologies/hseErmControlOntology#ControlOwner"
@@ -1498,9 +1510,8 @@ This section provides details for each class and property defined by ARK Control
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
-               target="_blank"
-               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">person</a>
+            <a href="#ControlOwner"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner">Control owner</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -2184,6 +2195,35 @@ This section provides details for each class and property defined by ARK Control
             <a href="#hasSubControlGroup"
                title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasSubControlGroup">has sub control group</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ControlOwner">
+      <h3>Control owner<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ControlOwner</p>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#">https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person"
+               target="_blank"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ActionOwner"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#ActionOwner">Action owner</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -5707,6 +5747,14 @@ This section provides details for each class and property defined by ARK Control
                title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasStatus">has status</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#completed"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed">Action status: Completed</a>
+            <sup class="type-ni" title="named individual">ni</sup>, <a href="#open"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open">Action status: Open</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="StorageMedia">
@@ -6325,6 +6373,12 @@ This section provides details for each class and property defined by ARK Control
             title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionOwner">has action owner</a>
       </li>
       <li>
+         <a href="#hasActionUpdate"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate">
+            <span>has action update</span>
+         </a>
+      </li>
+      <li>
          <a href="#hasControl"
             title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasControl">has control</a>
       </li>
@@ -6384,6 +6438,32 @@ This section provides details for each class and property defined by ARK Control
                   title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Person">person</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasActionUpdate">
+      <h3>has action update<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"
+                  target="_blank"
+                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action">action</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="xsd:string" target="_blank" title="xsd:string">xsd:string</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is also defined as</dt>
+            <dd>data property</dd>
          </dl>
       </div>
    </div>
@@ -6567,44 +6647,6 @@ This section provides details for each class and property defined by ARK Control
    </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-     id="dataproperties">
-   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#hasActionUpdate"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate">has action update</a>
-      </li>
-   </ul>
-   <div class="entity" id="hasActionUpdate">
-      <h3>has action update<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#hasActionUpdate</p>
-      <div class="comment">
-         <span class="markdown">Text that describes edit history/update of an action</span>
-      </div>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#">https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#</a>
-         </dd>
-      </dl>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action"
-                  target="_blank"
-                  title="https://openark.adaptcentre.ie/Ontologies/ARKCube#Action">action</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
      id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>
    <ul class="hlist">
@@ -6615,8 +6657,12 @@ This section provides details for each class and property defined by ARK Control
          </a>
       </li>
       <li>
-         <a href="#RightsStatement"
-            title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement">©2024 ARK</a>
+         <a href="#completed"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed">Action status: Completed</a>
+      </li>
+      <li>
+         <a href="#open"
+            title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open">Action status: Open</a>
       </li>
    </ul>
    <div class="entity" id="">
@@ -6636,19 +6682,52 @@ This section provides details for each class and property defined by ARK Control
          </dd>
       </dl>
    </div>
-   <div class="entity" id="RightsStatement">
-      <h3>©2024 ARK<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="completed">
+      <h3>Action status: Completed<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#RightsStatement</p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#completed</p>
+      <div class="comment">
+         <span class="markdown">The status of an action is Completed</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#">https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#</a>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="http://purl.org/dc/terms/RightsStatement"
-               target="_blank"
-               title="http://purl.org/dc/terms/RightsStatement">rights statement</a>
+            <a href="#Status"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status">Status</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="open">
+      <h3>Action status: Open<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#open</p>
+      <div class="comment">
+         <span class="markdown">The status of an action is Open</span>
+      </div>
+      <dl class="definedBy">
+         <dt>Is defined by</dt>
+         <dd>
+            <a href="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#">https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#</a>
+         </dd>
+      </dl>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#Status"
+               title="https://openark.adaptcentre.ie/Ontologies/ARKControlOntology#Status">Status</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -6658,7 +6737,6 @@ This section provides details for each class and property defined by ARK Control
 <div   class="entity">
 <sup class="type-c" title="Classes">c</sup>: Classes <br/>
 <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
-<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
 <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
 </div>
 </div>
