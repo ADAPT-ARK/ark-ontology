@@ -1,0 +1,3265 @@
+@prefix : <https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology#> .
+@prefix arkc: <https://openark.adaptcentre.ie/Ontologies/ARKCube#> .
+@prefix arkcyt: <https://openark.adaptcentre.ie/Ontologies/CybersecurityTerminology#> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema1: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix sw: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vocab: <http://purl.org/vocab/vann/> .
+@prefix widoco: <https://w3id.org/widoco/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AcceptableUseOfInformationAndOtherAssociatedAssets a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Acceptable use of information and other associated assets"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Rules for the acceptable use and procedures for handling information and other associated assets
+should be identified, documented and implemented."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Rules for the acceptable use and procedures for handling information and other associated assets
+should be identified, documented and implemented."""@en ;
+    skos:prefLabel "Acceptable use of information and other associated assets"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:AccessControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Access control"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Rules to control physical and logical access to information and other associated assets should be
+established and implemented based on business and information security requirements."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Rules to control physical and logical access to information and other associated assets should be
+established and implemented based on business and information security requirements."""@en ;
+    skos:prefLabel "Access control"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Proection,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Proection,
+        arkcyt:Protect .
+
+:AccessRights a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Access rights"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Access rights to information and other associated assets should be provisioned, reviewed, modified
+and removed in accordance with the organization’s topic-specific policy on and rules for access control."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Access rights to information and other associated assets should be provisioned, reviewed, modified
+and removed in accordance with the organization’s topic-specific policy on and rules for access control."""@en ;
+    skos:prefLabel "Access rights"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:AccessToSourceCode a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Access to source code"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Read and write access to source code, development tools and software libraries should be appropriately
+managed."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Read and write access to source code, development tools and software libraries should be appropriately
+managed."""@en ;
+    skos:prefLabel "Access to source code"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration .
+
+:Action a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Action"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Actions are a future measure that will maintain and/or modify a risk. In the HSE, an action is a future measure to further reduce either the likelihood or impact of a risk."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HseControl ;
+    skos:definition "Actions are a future measure that will maintain and/or modify a risk. In the HSE, an action is a future measure to further reduce either the likelihood or impact of a risk."@en ;
+    skos:prefLabel "Action"@en .
+
+:ActionOwner a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Action owner"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "A person responsible for particular action"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ControlOwner .
+
+:AddressingInformationSecurityWithinSupplierAgreements a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Addressing information security within supplier agreements"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Relevant information security requirements should be established and agreed with each supplier based
+on the type of supplier relationship."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Relevant information security requirements should be established and agreed with each supplier based
+on the type of supplier relationship."""@en ;
+    skos:prefLabel "Addressing information security within supplier agreements"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity .
+
+:AdministrativeControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Administrative Control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    rdfs:comment "Administrative controls change the way work is done or give workers more information by providing workers with relevant procedures, training, or warnings. They’re often used together with higher-level controls. "@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NioshControl ;
+    skos:definition "Administrative controls change the way work is done or give workers more information by providing workers with relevant procedures, training, or warnings. They’re often used together with higher-level controls. "@en ;
+    skos:prefLabel "Administrative Control"@en .
+
+:ApplicationSecurityRequirements a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Application security requirements"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information security requirements should be identified, specified and approved when developing or
+acquiring applications."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Information security requirements should be identified, specified and approved when developing or
+acquiring applications."""@en ;
+    skos:prefLabel "Application security requirements"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:AssessmentAndDecisionOnInformationSecurityEvents a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Assessment and decision on information security events"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should assess information security events and decide if they are to be categorized as
+information security incidents."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :OrganizationalControl ;
+    skos:definition """The organization should assess information security events and decide if they are to be categorized as
+information security incidents."""@en ;
+    skos:prefLabel "Assessment and decision on information security events"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Respond .
+
+:AuthenticationInformation a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Authentication information"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Allocation and management of authentication information should be controlled by a management
+process, including advising personnel on the appropriate handling of authentication information."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Allocation and management of authentication information should be controlled by a management
+process, including advising personnel on the appropriate handling of authentication information."""@en ;
+    skos:prefLabel "Authentication information"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:CablingSecurity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Cabling security"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Cables carrying power, data or supporting information services should be protected from interception,
+interference or damage."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition """Cables carrying power, data or supporting information services should be protected from interception,
+interference or damage."""@en ;
+    skos:prefLabel "Cabling security"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:CapacityManagement a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Capacity management"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The use of resources should be monitored and adjusted in line with current and expected capacity
+requirements."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :Preventive,
+        :TechnologicalControl ;
+    skos:definition """The use of resources should be monitored and adjusted in line with current and expected capacity
+requirements."""@en ;
+    skos:prefLabel "Capacity management"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Detect,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Detect,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:ChangeManagement a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Change management"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Changes to information processing facilities and information systems should be subject to change
+management procedures."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Changes to information processing facilities and information systems should be subject to change
+management procedures."""@en ;
+    skos:prefLabel "Change management"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:ClassificationOfInformation a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Classification of information"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information should be classified according to the information security needs of the organization based
+on confidentiality, integrity, availability and relevant interested party requirements."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Information should be classified according to the information security needs of the organization based
+on confidentiality, integrity, availability and relevant interested party requirements."""@en ;
+    skos:prefLabel "Classification of information"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Identify,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Identify,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protection .
+
+:ClearDeskAndClearScreen a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Clear desk and clear screen"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Clear desk rules for papers and removable storage media and clear screen rules for information
+processing facilities should be defined and appropriately enforced."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition """Clear desk rules for papers and removable storage media and clear screen rules for information
+processing facilities should be defined and appropriately enforced."""@en ;
+    skos:prefLabel "Clear desk and clear screen"@en ;
+    skos:related arkcyt:Confidentiality,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Confidentiality,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:ClockSynchronization a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Clock synchronization"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The clocks of information processing systems used by the organization should be synchronized to
+approved time sources."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :TechnologicalControl ;
+    skos:definition """The clocks of information processing systems used by the organization should be synchronized to
+approved time sources."""@en ;
+    skos:prefLabel "Clock synchronization"@en ;
+    skos:related arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:CollectionOfEvidence a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Collection of evidence"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should establish and implement procedures for the identification, collection,
+acquisition and preservation of evidence related to information security events."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl ;
+    skos:definition """The organization should establish and implement procedures for the identification, collection,
+acquisition and preservation of evidence related to information security events."""@en ;
+    skos:prefLabel "Collection of evidence"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Respond .
+
+:ComplianceWithPoliciesRulesAndStandardsForInformationSecurity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Compliance with policies, rules and standards for information security"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Compliance with the organization’s information security policy, topic-specific policies, rules and
+standards should be regularly reviewed."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Compliance with the organization’s information security policy, topic-specific policies, rules and
+standards should be regularly reviewed."""@en ;
+    skos:prefLabel "Compliance with policies, rules and standards for information security"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect .
+
+:ConfidentialityOrNondisclosureAgreements a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Confidentiality or non-disclosure agreements"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Confidentiality or non-disclosure agreements reflecting the organization’s needs for the protection of
+information should be identified, documented, regularly reviewed and signed by personnel and other
+relevant interested parties."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PeopleControl,
+        :Preventive ;
+    skos:definition """Confidentiality or non-disclosure agreements reflecting the organization’s needs for the protection of
+information should be identified, documented, regularly reviewed and signed by personnel and other
+relevant interested parties."""@en ;
+    skos:prefLabel "Confidentiality or non-disclosure agreements"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:SupplierRelationshipsSecurity ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:SupplierRelationshipsSecurity .
+
+:ConfigurationManagement a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Configuration management"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Configurations, including security configurations, of hardware, software, services and networks should
+be established, documented, implemented, monitored and reviewed."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Configurations, including security configurations, of hardware, software, services and networks should
+be established, documented, implemented, monitored and reviewed."""@en ;
+    skos:prefLabel "Configuration management"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration .
+
+:ContactWithAuthorities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Contact with authorities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "The organization should establish and maintain contact with relevant authorities."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl,
+        :Preventive ;
+    skos:definition "The organization should establish and maintain contact with relevant authorities."@en ;
+    skos:prefLabel "Contact with authorities"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Governance,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Recover,
+        arkcyt:Resillience,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Governance,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Recover,
+        arkcyt:Resillience,
+        arkcyt:Respond .
+
+:ContactWithSpecialInterestGroups a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Contact with special interest groups"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should establish and maintain contact with special interest groups or other specialist
+security forums and professional associations."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl,
+        :Preventive ;
+    skos:definition """The organization should establish and maintain contact with special interest groups or other specialist
+security forums and professional associations."""@en ;
+    skos:prefLabel "Contact with special interest groups"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Govrnance,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Recover,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Govrnance,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Recover,
+        arkcyt:Respond .
+
+:ControlGroup a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Control group"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "A group that persons can share controls with each other, add metameta to describe the controls in the group, and create custom control hierachies. "@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf arkc:AccessControlEntity .
+
+:ControlOwner a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Control owner"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf arkc:Person .
+
+:Corrective a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Corrective"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)" ;
+    rdfs:comment "The control acts after an information security incident occurs."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ISOControl ;
+    skos:definition "The control acts after an information security incident occurs."@en ;
+    skos:prefLabel "Corrective"@en .
+
+:CorrectiveControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Corrective control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Corrective controls are designed to correct errors or undesirable events which have occurred and will prevent further occurrences."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ReactiveControl ;
+    skos:definition "Corrective controls are designed to correct errors or undesirable events which have occurred and will prevent further occurrences."@en ;
+    skos:prefLabel "Corrective control"@en .
+
+:DataLeakagePrevention a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Data leakage prevention"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Data leakage prevention measures should be applied to systems, networks and any other devices that
+process, store or transmit sensitive information."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Data leakage prevention measures should be applied to systems, networks and any other devices that
+process, store or transmit sensitive information."""@en ;
+    skos:prefLabel "Data leakage prevention"@en ;
+    skos:related arkcyt:Confidentiality,
+        arkcyt:Detect,
+        arkcyt:InformationProtection,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Confidentiality,
+        arkcyt:Detect,
+        arkcyt:InformationProtection,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:DataMasking a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Data masking"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Data masking should be used in accordance with the organization’s topic-specific policy on access
+control and other related topic-specific policies, and business requirements, taking applicable
+legislation into consideration."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Data masking should be used in accordance with the organization’s topic-specific policy on access
+control and other related topic-specific policies, and business requirements, taking applicable
+legislation into consideration."""@en ;
+    skos:prefLabel "Data masking"@en ;
+    skos:related arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:Detective a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Detective"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)" ;
+    rdfs:comment "The control that is intended to prevent the occurrence of an information security incident."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ISOControl ;
+    skos:definition "The control that is intended to prevent the occurrence of an information security incident."@en ;
+    skos:prefLabel "Detective"@en .
+
+:DetectiveControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Detective control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Detective controls are designed to search for and identify errors or undesirable events after they have occurred so that corrective actions can be taken."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ReactiveControl ;
+    skos:definition "Detective controls are designed to search for and identify errors or undesirable events after they have occurred so that corrective actions can be taken."@en ;
+    skos:prefLabel "Detective control"@en .
+
+:DirectiveControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Directive control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Directive controls give direction. These can be, for example, statutory obligations, regulatory standards including professional standards, or other organisational requirements or instructions, many of which are converted into policies, procedures, circulars, standard operating procedures and training."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ProactiveControl ;
+    skos:definition "Directive controls give direction. These can be, for example, statutory obligations, regulatory standards including professional standards, or other organisational requirements or instructions, many of which are converted into policies, procedures, circulars, standard operating procedures and training."@en ;
+    skos:prefLabel "Directive control"@en .
+
+:DisciplinaryProcess a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Disciplinary process"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """A disciplinary process should be formalized and communicated to take actions against personnel and
+other relevant interested parties who have committed an information security policy violation"""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :PeopleControl,
+        :Preventive ;
+    skos:definition """A disciplinary process should be formalized and communicated to take actions against personnel and
+other relevant interested parties who have committed an information security policy violation"""@en ;
+    skos:prefLabel "Disciplinary process"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Respond .
+
+:DocumentedOperatingProcedures a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Documented operating procedures"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Operating procedures for information processing facilities should be documented and made available
+to personnel who need them."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Operating procedures for information processing facilities should be documented and made available
+to personnel who need them."""@en ;
+    skos:prefLabel "Documented operating procedures"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Continuity,
+        arkcyt:Defence,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Recover,
+        arkcyt:SecureConfiguration,
+        arkcyt:SystemAndNetworkSecurity,
+        arkcyt:ThreatAndVulnerabilityManagement ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Continuity,
+        arkcyt:Defence,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Recover,
+        arkcyt:SecureConfiguration,
+        arkcyt:SystemAndNetworkSecurity,
+        arkcyt:ThreatAndVulnerabilityManagement .
+
+:Elimination a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Elimination"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    rdfs:comment "Elimination makes sure the hazard no longer exists. Most effective method"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NioshControl ;
+    skos:definition "Elimination makes sure the hazard no longer exists. Most effective method"@en ;
+    skos:prefLabel "Elimination"@en .
+
+:EngineeringControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Engineering Control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    rdfs:comment "Engineering controls reduce exposure by preventing hazards from coming into contact with workers. They still allow workers to do their jobs, though."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NioshControl ;
+    skos:definition "Engineering controls reduce exposure by preventing hazards from coming into contact with workers. They still allow workers to do their jobs, though."@en ;
+    skos:prefLabel "Engineering Control"@en .
+
+:EquipmentMaintenance a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Equipment maintenance"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Equipment should be maintained correctly to ensure availability, integrity and confidentiality of
+information."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition """Equipment should be maintained correctly to ensure availability, integrity and confidentiality of
+information."""@en ;
+    skos:prefLabel "Equipment maintenance"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Resilience ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Resilience .
+
+:EquipmentSitingAndProtection a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Equipment siting and protection"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Equipment should be sited securely and protected."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition "Equipment should be sited securely and protected."@en ;
+    skos:prefLabel "Equipment siting and protection"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:ExternalAssuranceProviders a rdfs:Class,
+        owl:Class ;
+    rdfs:label "External Assurance providers"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "assurance from external independent assurance providers such as Regulators."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HseControl ;
+    skos:definition "assurance from external independent assurance providers such as Regulators."@en ;
+    skos:prefLabel "External Assurance providers"@en .
+
+:HseControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "HSE ERM Control"@en ;
+    dcterms:contributor "Nick McDonald" ;
+    dcterms:created "2024-05-08"^^xsd:date ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/"^^xsd:string ;
+    rdfs:comment "Controls are measures that maintain and/or modify risk. In the HSE, a control is a measure that is in place, is working effectively and operating to reduce either the likelihood or impact of a risk."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf arkc:Control ;
+    skos:definition "Controls are measures that maintain and/or modify risk. In the HSE, a control is a measure that is in place, is working effectively and operating to reduce either the likelihood or impact of a risk."@en ;
+    skos:prefLabel "HSE ERM Control"@en .
+
+:ICTReadinessForBusinessContinuity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "ICT readiness for business continuity"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """ICT readiness should be planned, implemented, maintained and tested based on business continuity
+objectives and ICT continuity requirements."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl ;
+    skos:definition """ICT readiness should be planned, implemented, maintained and tested based on business continuity
+objectives and ICT continuity requirements."""@en ;
+    skos:prefLabel "ICT readiness for business continuity"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Resilience,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Resilience,
+        arkcyt:Respond .
+
+:ISOControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "ISO Control"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-05-08"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)" ;
+    rdfs:comment "An ISO control is defined as a measure that modifies or maintains risk. Some of the controls in this document are controls that modify risk, while others maintain risk. An information security policy, for example, can only maintain risk, whereas compliance with the information security policy can modify risk.  Moreover, some controls describe the same generic measure in different risk contexts. This document provides a generic mixture of organizational, people, physical and technological information security controls derived from internationally recognized best practices."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf arkc:Control ;
+    skos:definition "An ISO control is defined as a measure that modifies or maintains risk. Some of the controls in this document are controls that modify risk, while others maintain risk. An information security policy, for example, can only maintain risk, whereas compliance with the information security policy can modify risk.  Moreover, some controls describe the same generic measure in different risk contexts. This document provides a generic mixture of organizational, people, physical and technological information security controls derived from internationally recognized best practices."@en ;
+    skos:prefLabel "ISO Control"@en .
+
+:IdentityManagement a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Identity management"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "The full life cycle of identities should be managed."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition "The full life cycle of identities should be managed."@en ;
+    skos:prefLabel "Identity management"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:IndependentReviewOfInformationSecurity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Independent review of information security"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization’s approach to managing information security and its implementation including people,
+processes and technologies should be reviewed independently at planned intervals, or when significant
+changes occur."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl,
+        :Preventive ;
+    skos:definition """The organization’s approach to managing information security and its implementation including people,
+processes and technologies should be reviewed independently at planned intervals, or when significant
+changes occur."""@en ;
+    skos:prefLabel "Independent review of information security"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect .
+
+:InformationAccessRestriction a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information access restriction"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Access to information and other associated assets should be restricted in accordance with the
+established topic-specific policy on access control."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Access to information and other associated assets should be restricted in accordance with the
+established topic-specific policy on access control."""@en ;
+    skos:prefLabel "Information access restriction"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:InformationBackup a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information backup"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Backup copies of information, software and systems should be maintained and regularly tested in
+accordance with the agreed topic-specific policy on backup."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :TechnologicalControl ;
+    skos:definition """Backup copies of information, software and systems should be maintained and regularly tested in
+accordance with the agreed topic-specific policy on backup."""@en ;
+    skos:prefLabel "Information backup"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:Recover ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:Recover .
+
+:InformationDeletion a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information deletion"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information stored in information systems, devices or in any other storage media should be deleted
+when no longer required."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Information stored in information systems, devices or in any other storage media should be deleted
+when no longer required."""@en ;
+    skos:prefLabel "Information deletion"@en ;
+    skos:related arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:InformationSecurityAwarenessEducationAndTraining a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security awareness, education and training"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Personnel of the organization and relevant interested parties should receive appropriate information
+security awareness, education and training and regular updates of the organization's information
+security policy, topic-specific policies and procedures, as relevant for their job function."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PeopleControl,
+        :Preventive ;
+    skos:definition """Personnel of the organization and relevant interested parties should receive appropriate information
+security awareness, education and training and regular updates of the organization's information
+security policy, topic-specific policies and procedures, as relevant for their job function."""@en ;
+    skos:prefLabel "Information security awareness, education and training"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect .
+
+:InformationSecurityDuringDisruption a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security during disruption"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should plan how to maintain information security at an appropriate level during
+disruption."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl,
+        :Preventive ;
+    skos:definition """The organization should plan how to maintain information security at an appropriate level during
+disruption."""@en ;
+    skos:prefLabel "Information security during disruption"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Continuity,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Resilience,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Continuity,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Resilience,
+        arkcyt:Respond .
+
+:InformationSecurityEventReporting a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security event reporting"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should provide a mechanism for personnel to report observed or suspected
+information security events through appropriate channels in a timely manner."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :PeopleControl ;
+    skos:definition """The organization should provide a mechanism for personnel to report observed or suspected
+information security events through appropriate channels in a timely manner."""@en ;
+    skos:prefLabel "Information security event reporting"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity .
+
+:InformationSecurityForUseOfCloudServices a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security for use of cloud services"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Processes for acquisition, use, management and exit from cloud services should be established in
+accordance with the organization’s information security requirements."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Processes for acquisition, use, management and exit from cloud services should be established in
+accordance with the organization’s information security requirements."""@en ;
+    skos:prefLabel "Information security for use of cloud services"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity .
+
+:InformationSecurityInProjectManagement a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security in project management"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Information security should be integrated into project management."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition "Information security should be integrated into project management."@en ;
+    skos:prefLabel "Information security in project management"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:InformationSecurityInSupplierRelationships a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security in supplier relationships"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Processes and procedures should be defined and implemented to manage the information security
+risks associated with the use of supplier’s products or services."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Processes and procedures should be defined and implemented to manage the information security
+risks associated with the use of supplier’s products or services."""@en ;
+    skos:prefLabel "Information security in supplier relationships"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity .
+
+:InformationSecurityIncidentManagementPlanningAndPreparation a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security incident management planning and preparation"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should plan and prepare for managing information security incidents by defining,
+establishing and communicating information security incident management processes, roles and
+responsibilities."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """The organization should plan and prepare for managing information security incidents by defining,
+establishing and communicating information security incident management processes, roles and
+responsibilities."""@en ;
+    skos:prefLabel "Information security incident management planning and preparation"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Governance,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Recover,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Governance,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Recover,
+        arkcyt:Respond .
+
+:InformationSecurityRolesAndResponsibilities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information security roles and responsibilities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Information security roles and responsibilities should be defined and allocated according to the organization needs."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition "Information security roles and responsibilities should be defined and allocated according to the organization needs."@en ;
+    skos:prefLabel "Information security roles and responsibilities"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:Resilience ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:Resilience .
+
+:InformationTransfer a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Information transfer"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information transfer rules, procedures, or agreements should be in place for all types of transfer
+facilities within the organization and between the organization and other parties."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Information transfer rules, procedures, or agreements should be in place for all types of transfer
+facilities within the organization and between the organization and other parties."""@en ;
+    skos:prefLabel "Information transfer"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:InstallationOfSoftwareOnOperationalSystems a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Installation of software on operational systems"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Procedures and measures should be implemented to securely manage software installation on
+operational systems."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Procedures and measures should be implemented to securely manage software installation on
+operational systems."""@en ;
+    skos:prefLabel "Installation of software on operational systems"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration .
+
+:IntellectualPropertyRights a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Intellectual property rights"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "The organization should implement appropriate procedures to protect intellectual property rights"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition "The organization should implement appropriate procedures to protect intellectual property rights"@en ;
+    skos:prefLabel "Intellectual property rights"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance .
+
+:InventoryOfInformationAndOtherAssociatedAssets a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Inventory of information and other associated assets"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """An inventory of information and other associated assets, including owners, should be developed and
+maintained."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """An inventory of information and other associated assets, including owners, should be developed and
+maintained."""@en ;
+    skos:prefLabel "Inventory of information and other associated assets"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection .
+
+:LabellingOfInformation a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Labelling of information"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """An appropriate set of procedures for information labelling should be developed and implemented in
+accordance with the information classification scheme adopted by the organization."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """An appropriate set of procedures for information labelling should be developed and implemented in
+accordance with the information classification scheme adopted by the organization."""@en ;
+    skos:prefLabel "Labelling of information"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:LearningFromInformationSecurityIncidents a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Learning from information security incidents"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Knowledge gained from information security incidents should be used to strengthen and improve the
+information security controls."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Knowledge gained from information security incidents should be used to strengthen and improve the
+information security controls."""@en ;
+    skos:prefLabel "Learning from information security incidents"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect .
+
+:LegalStatutoryRegulatoryAndContractualRequirements a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Legal, statutory, regulatory and contractual requirements"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Legal, statutory, regulatory and contractual requirements relevant to information security and the
+organization’s approach to meet these requirements should be identified, documented and kept up to
+date."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Legal, statutory, regulatory and contractual requirements relevant to information security and the
+organization’s approach to meet these requirements should be identified, documented and kept up to
+date."""@en ;
+    skos:prefLabel "Legal, statutory, regulatory and contractual requirements"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protection .
+
+:Logging a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Logging"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Logs that record activities, exceptions, faults and other relevant events should be produced, stored,
+protected and analysed."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :TechnologicalControl ;
+    skos:definition """Logs that record activities, exceptions, faults and other relevant events should be produced, stored,
+protected and analysed."""@en ;
+    skos:prefLabel "Logging"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Protection .
+
+:ManagementOfTechnicalVulnerabilities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Management of technical vulnerabilities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information about technical vulnerabilities of information systems in use should be obtained, the
+organization’s exposure to such vulnerabilities should be evaluated and appropriate measures should
+be taken."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Information about technical vulnerabilities of information systems in use should be obtained, the
+organization’s exposure to such vulnerabilities should be evaluated and appropriate measures should
+be taken."""@en ;
+    skos:prefLabel "Management of technical vulnerabilities"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:ThreatAndVulnerabilityManagement ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:ThreatAndVulnerabilityManagement .
+
+:ManagementResponsibilities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Management responsibilities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Management should require all personnel to apply information security in accordance with the established information security policy, topic-specific policies and procedures of the organization."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition "Management should require all personnel to apply information security in accordance with the established information security policy, topic-specific policies and procedures of the organization."@en ;
+    skos:prefLabel "Management responsibilities"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity .
+
+:ManagingInformationSecurityInTheICTSupplyChain a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Managing information security in the ICT supply chain"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Processes and procedures should be defined and implemented to manage the information security
+risks associated with the ICT products and services supply chain."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Processes and procedures should be defined and implemented to manage the information security
+risks associated with the ICT products and services supply chain."""@en ;
+    skos:prefLabel "Managing information security in the ICT supply chain"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity .
+
+:MonitoringActivities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Monitoring activities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Networks, systems and applications should be monitored for anomalous behaviour and appropriate
+actions taken to evaluate potential information security incidents."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :Detective,
+        :TechnologicalControl ;
+    skos:definition """Networks, systems and applications should be monitored for anomalous behaviour and appropriate
+actions taken to evaluate potential information security incidents."""@en ;
+    skos:prefLabel "Monitoring activities"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defemce,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defemce,
+        arkcyt:Detect,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Respond .
+
+:MonitoringReviewAndChangeManagementOfSupplierServices a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Monitoring, review and change management of supplier services"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should regularly monitor, review, evaluate and manage change in supplier information
+security practices and service delivery."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """The organization should regularly monitor, review, evaluate and manage change in supplier information
+security practices and service delivery."""@en ;
+    skos:prefLabel "Monitoring, review and change management of supplier services"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity .
+
+:NetworksSecurity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Networks security"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Networks and network devices should be secured, managed and controlled to protect information in
+systems and applications."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Networks and network devices should be secured, managed and controlled to protect information in
+systems and applications."""@en ;
+    skos:prefLabel "Networks security"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Detect,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Detect,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:NioshControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "NIOSH Control"@en ;
+    dcterms:contributor "Nick McDonald" ;
+    dcterms:created "2024-05-08"^^xsd:date ;
+    rdfs:comment "Controls are measures that maintain and/or modify risk. In the NIOSH hierarchy, a control is a measure that is in place, is working effectively and operating to reduce either the likelihood or impact of a risk."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf arkc:Control ;
+    skos:definition "Controls are measures that maintain and/or modify risk. In the NIOSH hierarchy, a control is a measure that is in place, is working effectively and operating to reduce either the likelihood or impact of a risk."@en ;
+    skos:prefLabel "NIOSH Control"@en .
+
+:OrganizationalControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Organizational control"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Controls that are implemented by the organization to manage information security risks."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ISOControl ;
+    skos:definition "Controls that are implemented by the organization to manage information security risks."@en ;
+    skos:prefLabel "Organizational control"@en .
+
+:OutsourcedDevelopment a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Outsourced development"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should direct, monitor and review the activities related to outsourced system
+development."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :Preventive,
+        :TechnologicalControl ;
+    skos:definition """The organization should direct, monitor and review the activities related to outsourced system
+development."""@en ;
+    skos:prefLabel "Outsourced development"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Detect,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Detect,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SupplierRelationshipsSecurity,
+        arkcyt:SystemAndNetworkSecurity .
+
+:PeopleControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "People control"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Controls that are implemented to manage information security risks related to people."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ISOControl ;
+    skos:definition "Controls that are implemented to manage information security risks related to people."@en ;
+    skos:prefLabel "People control"@en .
+
+:PersonalProtectiveEquipment a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Personal protective equipment"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    rdfs:comment "Personal protective equipment (PPE) includes clothing and devices to protect workers. PPE needs constant effort and attention (including proper use and training) from workers. Higher-level controls aren’t always feasible, and PPE might be needed in conjunction with other control measures. Least effective contols."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NioshControl ;
+    skos:definition "Personal protective equipment (PPE) includes clothing and devices to protect workers. PPE needs constant effort and attention (including proper use and training) from workers. Higher-level controls aren’t always feasible, and PPE might be needed in conjunction with other control measures. Least effective contols."@en ;
+    skos:prefLabel "Personal protective equipment"@en .
+
+:PhysicalControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Physical control"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Controls that are implemented to manage information security risks related to physical security."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ISOControl ;
+    skos:definition "Controls that are implemented to manage information security risks related to physical security."@en ;
+    skos:prefLabel "Physical control"@en .
+
+:PhysicalEntry a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Physical entry"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Secure areas should be protected by appropriate entry controls and access points."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition "Secure areas should be protected by appropriate entry controls and access points."@en ;
+    skos:prefLabel "Physical entry"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:PhysicalSecurityMonitoring a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Physical security monitoring"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Premises should be continuously monitored for unauthorized physical access."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :PhysicalControl,
+        :Preventive ;
+    skos:definition "Premises should be continuously monitored for unauthorized physical access."@en ;
+    skos:prefLabel "Physical security monitoring"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:PhysicalSecurityPerimeters a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Physical security perimeters"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    rdfs:comment """Security perimeters should be defined and used to protect areas that contain information and other
+associated assets."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition """Security perimeters should be defined and used to protect areas that contain information and other
+associated assets."""@en ;
+    skos:prefLabel "Physical security perimeters"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:PoliciesForInformationSecurity a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Policies for information security"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Information security policy and topic-specific policies should be defined, approved by management, published, communicated to and acknowledged by relevant personnel and relevant interested parties, and reviewed at planned intervals and if significant changes occur."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition "Information security policy and topic-specific policies should be defined, approved by management, published, communicated to and acknowledged by relevant personnel and relevant interested parties, and reviewed at planned intervals and if significant changes occur."@en ;
+    skos:prefLabel "Policies for information security"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Resilience ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:Identify,
+        arkcyt:Integerity,
+        arkcyt:Resilience .
+
+:PreventativeControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Preventative control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Preventative controls are controls designed to stop, discourage, pre-empt or limit the possibility of an undesirable event before it occurs."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ProactiveControl ;
+    skos:definition "Preventative controls are controls designed to stop, discourage, pre-empt or limit the possibility of an undesirable event before it occurs."@en ;
+    skos:prefLabel "Preventative control"@en .
+
+:Preventive a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Preventive"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)" ;
+    rdfs:comment "The control acts when an information security incident occurs."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ISOControl ;
+    skos:definition "The control acts when an information security incident occurs."@en ;
+    skos:prefLabel "Preventive"@en .
+
+:PrivacyAndProtectionOfPII a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Privacy and protection of PII"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The organization should identify and meet the requirements regarding the preservation of privacy and
+protection of PII according to applicable laws and regulations and contractual requirements"""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """The organization should identify and meet the requirements regarding the preservation of privacy and
+protection of PII according to applicable laws and regulations and contractual requirements"""@en ;
+    skos:prefLabel "Privacy and protection of PII"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Identify,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Identify,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:PrivilegedAccessRights a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Privileged access rights"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "The allocation and use of privileged access rights should be restricted and managed."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "The allocation and use of privileged access rights should be restricted and managed."@en ;
+    skos:prefLabel "Privileged access rights"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:ProactiveControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Proactive control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Proactive controls are put in place before the risk materialises"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HseControl ;
+    skos:definition "Proactive controls are put in place before the risk materialises"@en ;
+    skos:prefLabel "Proactive control"@en .
+
+:ProtectingAgainstPhysicalAndEnvironmentalThreats a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Protecting against physical and environmental threats"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Protection against physical and environmental threats, such as natural disasters and other intentional
+or unintentional physical threats to infrastructure should be designed and implemented."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition """Protection against physical and environmental threats, such as natural disasters and other intentional
+or unintentional physical threats to infrastructure should be designed and implemented."""@en ;
+    skos:prefLabel "Protecting against physical and environmental threats"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:ProtectionAgainstMalware a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Protection against malware"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Protection against malware should be implemented and supported by appropriate user awareness."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :Detective,
+        :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Protection against malware should be implemented and supported by appropriate user awareness."@en ;
+    skos:prefLabel "Protection against malware"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:ProtectionOfInformationSystemsDuringAuditTesting a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Protection of information systems during audit testing"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Audit tests and other assurance activities involving assessment of operational systems should be
+planned and agreed between the tester and appropriate management."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Audit tests and other assurance activities involving assessment of operational systems should be
+planned and agreed between the tester and appropriate management."""@en ;
+    skos:prefLabel "Protection of information systems during audit testing"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:ProtectionOfRecords a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Protection of records"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Records should be protected from loss, destruction, falsification, unauthorized access and unauthorized
+release"""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Records should be protected from loss, destruction, falsification, unauthorized access and unauthorized
+release"""@en ;
+    skos:prefLabel "Protection of records"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Identify,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Identify,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:LegalAndCompliance,
+        arkcyt:Protect .
+
+:ReactiveControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Reactive control"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Reactive controlsfocus on what happens after the risk occurs or which identify weaknesses in our current controls"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HseControl ;
+    skos:definition "Reactive controlsfocus on what happens after the risk occurs or which identify weaknesses in our current controls"@en ;
+    skos:prefLabel "Reactive control"@en .
+
+:RedundancyOfInformationProcessingFacilities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Redundancy of information processing facilities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information processing facilities should be implemented with redundancy sufficient to meet availability
+requirements."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Information processing facilities should be implemented with redundancy sufficient to meet availability
+requirements."""@en ;
+    skos:prefLabel "Redundancy of information processing facilities"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Resilience ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Continuity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:Resilience .
+
+:RemoteWorking a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Remote working"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Security measures should be implemented when personnel are working remotely to protect information
+accessed, processed or stored outside the organization’s premises."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PeopleControl,
+        :Preventive ;
+    skos:definition """Security measures should be implemented when personnel are working remotely to protect information
+accessed, processed or stored outside the organization’s premises."""@en ;
+    skos:prefLabel "Remote working"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:ResponseToInformationSecurityIncidents a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Response to information security incidents"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Information security incidents should be responded to in accordance with the documented procedures."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :OrganizationalControl ;
+    skos:definition "Information security incidents should be responded to in accordance with the documented procedures."@en ;
+    skos:prefLabel "Response to information security incidents"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Recover,
+        arkcyt:Respond ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:InformationSecurityEventManagement,
+        arkcyt:Integerity,
+        arkcyt:Recover,
+        arkcyt:Respond .
+
+:ResponsibilitiesAfterTerminationOrChangeOfEmployment a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Responsibilities after termination or change of employment"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information security responsibilities and duties that remain valid after termination or change of
+employment should be defined, enforced and communicated to relevant personnel and other interested
+parties."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PeopleControl,
+        :Preventive ;
+    skos:definition """Information security responsibilities and duties that remain valid after termination or change of
+employment should be defined, enforced and communicated to relevant personnel and other interested
+parties."""@en ;
+    skos:prefLabel "Responsibilities after termination or change of employment"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect .
+
+:ReturnOfAssets a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Return of assets"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Personnel and other interested parties as appropriate should return all the organization’s assets in
+their possession upon change or termination of their employment, contract or agreement."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Personnel and other interested parties as appropriate should return all the organization’s assets in
+their possession upon change or termination of their employment, contract or agreement."""@en ;
+    skos:prefLabel "Return of assets"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:RiskTreatment a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Risk treatment"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "Risk treatment is the process to modify risk. "@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HseControl ;
+    skos:definition "Risk treatment is the process to modify risk. "@en ;
+    skos:prefLabel "Risk treatment"@en .
+
+:Screening a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Screening"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Background verification checks on all candidates to become personnel should be carried out prior to
+joining the organization and on an ongoing basis taking into consideration applicable laws, regulations
+and ethics and be proportional to the business requirements, the classification of the information to be
+accessed and the perceived risks."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PeopleControl,
+        :Preventive ;
+    skos:definition """Background verification checks on all candidates to become personnel should be carried out prior to
+joining the organization and on an ongoing basis taking into consideration applicable laws, regulations
+and ethics and be proportional to the business requirements, the classification of the information to be
+accessed and the perceived risks."""@en ;
+    skos:prefLabel "Screening"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect .
+
+:SecureAuthentication a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Secure authentication"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Secure authentication technologies and procedures should be implemented based on information
+access restrictions and the topic-specific policy on access control"""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Secure authentication technologies and procedures should be implemented based on information
+access restrictions and the topic-specific policy on access control"""@en ;
+    skos:prefLabel "Secure authentication"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:SecureCoding a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Secure coding"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Secure coding principles should be applied to software development."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Secure coding principles should be applied to software development."@en ;
+    skos:prefLabel "Secure coding"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:SecureDevelopmentLifeCycle a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Secure development life cycle"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Rules for the secure development of software and systems should be established and applied."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Rules for the secure development of software and systems should be established and applied."@en ;
+    skos:prefLabel "Secure development life cycle"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:SecureDisposalOrReuseOfEquipment a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Secure disposal or re-use of equipment"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Items of equipment containing storage media should be verified to ensure that any sensitive data and
+licensed software has been removed or securely overwritten prior to disposal or re-use"""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition """Items of equipment containing storage media should be verified to ensure that any sensitive data and
+licensed software has been removed or securely overwritten prior to disposal or re-use"""@en ;
+    skos:prefLabel "Secure disposal or re-use of equipment"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Confidentiality,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Confidentiality,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:SecureSystemArchitectureAndEngineeringPrinciples a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Secure system architecture and engineering principles"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Principles for engineering secure systems should be established, documented, maintained and applied
+to any information system development activities. """@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Principles for engineering secure systems should be established, documented, maintained and applied
+to any information system development activities. """@en ;
+    skos:prefLabel "Secure system architecture and engineering principles"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:SecuringOfficesRoomsAndFacilities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Securing offices, rooms and facilities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Physical security for offices, rooms and facilities should be designed and implemented."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition "Physical security for offices, rooms and facilities should be designed and implemented."@en ;
+    skos:prefLabel "Securing offices, rooms and facilities"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:SecurityOfAssetsOffpremises a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Security of assets off-premises"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Off-site assets should be protected."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition "Off-site assets should be protected."@en ;
+    skos:prefLabel "Security of assets off-premises"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:SecurityOfNetworkServices a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Security of network services"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Security mechanisms, service levels and service requirements of network services should be identified,
+implemented and monitored."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Security mechanisms, service levels and service requirements of network services should be identified,
+implemented and monitored."""@en ;
+    skos:prefLabel "Security of network services"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:SecurityTestingInDevelopmentAndAcceptance a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Security testing in development and acceptance"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Security testing processes should be defined and implemented in the development life cycle."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Security testing processes should be defined and implemented in the development life cycle."@en ;
+    skos:prefLabel "Security testing in development and acceptance"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Identify,
+        arkcyt:InformationSecurityAssurance,
+        arkcyt:Integerity,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:SegregationOfDuties a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Segregation of duties"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Conflicting duties and conflicting areas of responsibility should be segregated."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :OrganizationalControl,
+        :Preventive ;
+    skos:definition "Conflicting duties and conflicting areas of responsibility should be segregated."@en ;
+    skos:prefLabel "Segregation of duties"@en ;
+    skos:related arkcyt:,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Governance,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:IdentityAndAccessManagement,
+        arkcyt:Integerity,
+        arkcyt:Protect .
+
+:SegregationOfNetworks a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Segregation of networks"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Groups of information services, users and information systems should be segregated in the
+organization’s networks."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Groups of information services, users and information systems should be segregated in the
+organization’s networks."""@en ;
+    skos:prefLabel "Segregation of networks"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:SeparationOfDevelopmentTestAndProductionEnvironments a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Separation of development, test and production environments"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Development, testing and production environments should be separated and secured"@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Development, testing and production environments should be separated and secured"@en ;
+    skos:prefLabel "Separation of development, test and production environments"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:Status a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Status"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    rdfs:comment "A class that indicates an action's status"@en ;
+    rdfs:isDefinedBy : .
+
+:StorageMedia a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Storage media"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Storage media should be managed through their life cycle of acquisition, use, transportation and
+disposal in accordance with the organization’s classification scheme and handling requirements"""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition """Storage media should be managed through their life cycle of acquisition, use, transportation and
+disposal in accordance with the organization’s classification scheme and handling requirements"""@en ;
+    skos:prefLabel "Storage media"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:Subsitution a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Substitution"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    rdfs:comment "Substitution means changing out a material or process to reduce the hazard."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :NioshControl ;
+    skos:definition "Substitution means changing out a material or process to reduce the hazard."@en ;
+    skos:prefLabel "Substitution"@en .
+
+:SupportingUtilities a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Supporting utilities"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information processing facilities should be protected from power failures and other disruptions caused
+by failures in supporting utilities."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Detective,
+        :PhysicalControl,
+        :Preventive ;
+    skos:definition """Information processing facilities should be protected from power failures and other disruptions caused
+by failures in supporting utilities."""@en ;
+    skos:prefLabel "Supporting utilities"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Detect,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Detect,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:TechnologicalControl a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Technological control"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Controls that are implemented using technology."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :ISOControl ;
+    skos:definition "Controls that are implemented using technology."@en ;
+    skos:prefLabel "Technological control"@en .
+
+:TermsAndConditionsOfEmployment a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Terms and conditions of employment"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The employment contractual agreements should state the personnel’s and the organization’s
+responsibilities for information security."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PeopleControl,
+        :Preventive ;
+    skos:definition """The employment contractual agreements should state the personnel’s and the organization’s
+responsibilities for information security."""@en ;
+    skos:prefLabel "Terms and conditions of employment"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:GovernanceAndEcosystem,
+        arkcyt:HumanResourceSecurity,
+        arkcyt:Integerity,
+        arkcyt:Protect .
+
+:TestInformation a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Test information"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Test information should be appropriately selected, protected and managed."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Test information should be appropriately selected, protected and managed."@en ;
+    skos:prefLabel "Test information"@en ;
+    skos:related arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:ThreatIntelligence a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Threat intelligence"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Information relating to information security threats should be collected and analysed to produce threat
+intelligence."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Corrective,
+        :Detective,
+        :OrganizationalControl,
+        :Preventive ;
+    skos:definition """Information relating to information security threats should be collected and analysed to produce threat
+intelligence."""@en ;
+    skos:prefLabel "Threat intelligence"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:Identigy,
+        arkcyt:Integerity,
+        arkcyt:Resillience,
+        arkcyt:Respond,
+        arkcyt:ThreatAndVulnerabilityManagement ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Defence,
+        arkcyt:Detect,
+        arkcyt:Identigy,
+        arkcyt:Integerity,
+        arkcyt:Resillience,
+        arkcyt:Respond,
+        arkcyt:ThreatAndVulnerabilityManagement .
+
+:TreatmentPlan a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Treatment plan"@en ;
+    dcterms:created "2024-05-15"^^xsd:date ;
+    dcterms:creator "Nick McDonald" ;
+    dcterms:source "https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/" ;
+    rdfs:comment "treatment plans detail both action and effective control plans, to minimise the likelihood and impact of the identified risk."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :HseControl ;
+    skos:definition "treatment plans detail both action and effective control plans, to minimise the likelihood and impact of the identified risk."@en ;
+    skos:prefLabel "Treatment plan"@en .
+
+:UseOfCryptography a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Use of cryptography"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """Rules for the effective use of cryptography, including cryptographic key management, should be defined
+and implemented."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """Rules for the effective use of cryptography, including cryptographic key management, should be defined
+and implemented."""@en ;
+    skos:prefLabel "Use of cryptography"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration .
+
+:UseOfPrivilegedUtilityPrograms a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Use of privileged utility programs"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment """The use of utility programs that can be capable of overriding system and application controls should be
+restricted and tightly controlled."""@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition """The use of utility programs that can be capable of overriding system and application controls should be
+restricted and tightly controlled."""@en ;
+    skos:prefLabel "Use of privileged utility programs"@en ;
+    skos:related arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:ApplicationSecurity,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SecureConfiguration,
+        arkcyt:SystemAndNetworkSecurity .
+
+:UserEndpointDevices a rdfs:Class,
+        owl:Class ;
+    rdfs:label "User endpoint devices"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Information stored on, processed by or accessible via user endpoint devices should be protected."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Information stored on, processed by or accessible via user endpoint devices should be protected."@en ;
+    skos:prefLabel "User endpoint devices"@en ;
+    skos:related arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:AssetManagement,
+        arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:InformationProtection,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:WebFiltering a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Web filtering"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Access to external websites should be managed to reduce exposure to malicious content."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :Preventive,
+        :TechnologicalControl ;
+    skos:definition "Access to external websites should be managed to reduce exposure to malicious content."@en ;
+    skos:prefLabel "Web filtering"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:Protect,
+        arkcyt:Protection,
+        arkcyt:SystemAndNetworkSecurity .
+
+:WorkingInSecureAreas a rdfs:Class,
+        owl:Class ;
+    rdfs:label "Working in secure areas"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-03-14"^^xsd:date ;
+    dcterms:source "ISO/IEC 27002:2022(E)"^^xsd:string ;
+    rdfs:comment "Security measures for working in secure areas should be designed and implemented."@en ;
+    rdfs:isDefinedBy : ;
+    rdfs:subClassOf :PhysicalControl,
+        :Preventive ;
+    skos:definition "Security measures for working in secure areas should be designed and implemented."@en ;
+    skos:prefLabel "Working in secure areas"@en ;
+    skos:related arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection ;
+    arkc:hasRelatedConcept arkcyt:Availability,
+        arkcyt:Confidentiality,
+        arkcyt:Integerity,
+        arkcyt:PhysicalSecurity,
+        arkcyt:Protect,
+        arkcyt:Protection .
+
+:completed a owl:NamedIndividual,
+        :Status ;
+    rdfs:label "Completed"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "The status of an action is Completed"@en ;
+    rdfs:isDefinedBy : .
+
+:hasActionOwner a owl:ObjectProperty ;
+    rdfs:label "has action owner"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "Links a https://openark.adaptcentre.ie/Ontologies/ARKCube#Person to an action"@en ;
+    rdfs:domain arkc:Control ;
+    rdfs:isDefinedBy : ;
+    rdfs:range arkc:Person ;
+    rdfs:subPropertyOf arkc:hasControlOwner .
+
+:hasActionUpdate a owl:DatatypeProperty ;
+    rdfs:label "has action update"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "Text that describes edit history/update of an action"@en ;
+    rdfs:domain arkc:Action ;
+    rdfs:isDefinedBy : ;
+    rdfs:range <xsd:string> .
+
+:hasControl a owl:ObjectProperty ;
+    rdfs:label "has control"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "Links a control to a contorl group"@en ;
+    rdfs:domain :ControlGroup ;
+    rdfs:isDefinedBy : ;
+    rdfs:range arkc:Control .
+
+:hasControlOwner a owl:ObjectProperty ;
+    rdfs:label "has control owner"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "Links a https://openark.adaptcentre.ie/Ontologies/ARKCube#Person to a control"@en ;
+    rdfs:domain arkc:Control ;
+    rdfs:isDefinedBy : ;
+    rdfs:range arkc:Person ;
+    rdfs:subPropertyOf arkc:assignedPerson .
+
+:hasStatus a owl:ObjectProperty ;
+    rdfs:label "has status"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "Links a status to an action"@en ;
+    rdfs:domain arkc:Action ;
+    rdfs:isDefinedBy : ;
+    rdfs:range :Status .
+
+:hasSubControlGroup a owl:ObjectProperty ;
+    rdfs:label "has sub control group"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "Link to create contorl group hierarchy "@en ;
+    rdfs:domain :ControlGroup ;
+    rdfs:isDefinedBy : ;
+    rdfs:range :ControlGroup .
+
+:hasTargetRisk a owl:ObjectProperty ;
+    rdfs:label "has target risk"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "Links an action to a risk"@en ;
+    rdfs:domain arkc:Action ;
+    rdfs:isDefinedBy : ;
+    rdfs:range arkc:Risk .
+
+:open a owl:NamedIndividual,
+        :Status ;
+    rdfs:label "Open"@en ;
+    dcterms:contributor "Junli Liang",
+        "Rob Brennan" ;
+    dcterms:created "2024-06-05"^^xsd:date ;
+    rdfs:comment "The status of an action is Open"@en ;
+    rdfs:isDefinedBy : .
+
+:RightsStatement a dcterms:RightsStatement ;
+    rdfs:label "©2024 ARK"@en .
+
+: a owl:Ontology,
+        dcat:Dataset ;
+    dc:title "ARK Controls Ontology"@en ;
+    dcterms:abstract "This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO controls."@en ;
+    dcterms:accessRights "http://publications.europa.eu/resource/authority/access-right/PUBLIC"@en ;
+    dcterms:contributor "Junli Liang",
+        "Nick McDonald",
+        "Rob Brennan" ;
+    dcterms:created "2024-05-16"^^xsd:date ;
+    dcterms:description "This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO controls."@en ;
+    dcterms:format "text/turtle" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcterms:modified "2024-05-24"^^xsd:date ;
+    dcterms:publisher "https://openark.adaptcentre.ie" ;
+    dcterms:rights :RightsStatement ;
+    dcterms:source "ISO 27002:2022(E), https://www2.healthservice.hse.ie/organisation/national-pppgs/hse-integrated-risk-management-policy/, https://www.cdc.gov/niosh/learning/safetyculturehc/module-3/2.html"^^xsd:string ;
+    bibo:status bibo:unstable ;
+    vocab:preferredNamespacePrefix "arkctl" ;
+    vocab:preferredNamespaceUri : ;
+    schema1:codeRepository <https://gogs.adaptcentre.ie/ARK/Ontologies/src/master/ARKControlsOntology> ;
+    schema1:license <https://creativecommons.org/licenses/by/4.0/> ;
+    rdfs:comment "This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO controls."@en ;
+    owl:versionIRI <https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology/ontology.ttl> ;
+    owl:versionInfo "0.1" ;
+    sw:status sw:unstable ;
+    dcat:accessURL <https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology/ontology.ttl> ;
+    dcat:byteSize "450KB" ;
+    dcat:downloadURL <https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology/ontology.ttl> ;
+    widoco:introduction "This ontology defines sets of Control classes and their hierachies, taken from the ISO27002 document, HSE documents, that are used on the ARK Platform. Due to copyright restrictions, no definitions are provided for ISO controls."@en ;
+    widoco:rdfxmlSerialization <https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology/ontology.ttl> .
+
