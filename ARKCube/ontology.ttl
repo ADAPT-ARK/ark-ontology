@@ -21,22 +21,21 @@
                                                                                          "Rob Brennan" ,
                                                                                          "Yalemisew Abgaz" ;
                                                       <http://purl.org/dc/terms/description> "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ;
-                                                      <http://purl.org/dc/terms/format> "text/turtle" ;
                                                       <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> ;
-                                                      <http://purl.org/dc/terms/modified> "2024-12-06"^^xsd:date ;
+                                                      <http://purl.org/dc/terms/modified> "2025-02-04"^^xsd:date ;
                                                       <http://purl.org/dc/terms/publisher> "https://openark.adaptcentre.ie" ;
                                                       <http://purl.org/dc/terms/rights> <https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology#RightsStatement> ;
+                                                      <http://purl.org/dc/terms/title> "Access Risk Knowledge Cube Ontology"@en ;
                                                       <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/unstable> ;
                                                       <http://purl.org/vocab/vann/preferredNamespacePrefix> "arkc" ;
                                                       <http://purl.org/vocab/vann/preferredNamespaceUri> <https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology#> ;
                                                       <http://schema.org/codeRepository> <https://gogs.adaptcentre.ie/ARK/Ontologies/src/master/ARKCube> ;
                                                       <http://schema.org/license> <https://creativecommons.org/licenses/by/4.0/> ;
                                                       rdfs:comment "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ;
-                                                      owl:versionInfo "0.83" ;
+                                                      owl:versionInfo "0.84" ;
                                                       <http://www.w3.org/2003/06/sw-vocab-status/ns#status> <http://www.w3.org/2003/06/sw-vocab-status/ns#unstable> ;
-                                                      <http://www.w3.org/ns/dcat#accessURL> <https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl> ;
-                                                      <http://www.w3.org/ns/dcat#byteSize> "450KB" ;
-                                                      <http://www.w3.org/ns/dcat#downloadURL> <https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl> ;
+                                                      <http://www.w3.org/ns/dcat#dataset> :Dataset ;
+                                                      <http://www.w3.org/ns/dcat#service> :AccessService ;
                                                       <https://w3id.org/widoco/vocab#introduction> "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."@en ;
                                                       <https://w3id.org/widoco/vocab#rdfxmlSerialization> <https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl> .
 
@@ -112,6 +111,10 @@
 <http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/ontology/bibo/status
 <http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
 
@@ -136,6 +139,10 @@
 <http://www.w3.org/2003/06/sw-vocab-status/ns#status> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/ns/dcat#accessService
+<http://www.w3.org/ns/dcat#accessService> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/ns/dcat#accessURL
 <http://www.w3.org/ns/dcat#accessURL> rdf:type owl:AnnotationProperty .
 
@@ -144,8 +151,28 @@
 <http://www.w3.org/ns/dcat#byteSize> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/ns/dcat#dataset
+<http://www.w3.org/ns/dcat#dataset> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#distribution
+<http://www.w3.org/ns/dcat#distribution> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/ns/dcat#downloadURL
 <http://www.w3.org/ns/dcat#downloadURL> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#endpointDescription
+<http://www.w3.org/ns/dcat#endpointDescription> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#endpointURL
+<http://www.w3.org/ns/dcat#endpointURL> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/dcat#service
+<http://www.w3.org/ns/dcat#service> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/widoco/vocab#introduction
@@ -1510,8 +1537,20 @@ rdfs:Resource rdf:type owl:Class .
 <http://www.w3.org/2004/02/skos/core#Concept> rdf:type owl:Class .
 
 
+###  http://www.w3.org/ns/dcat#AccessService
+<http://www.w3.org/ns/dcat#AccessService> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Catalog
+<http://www.w3.org/ns/dcat#Catalog> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/ns/dcat#Dataset
 <http://www.w3.org/ns/dcat#Dataset> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/dcat#Distribution
+<http://www.w3.org/ns/dcat#Distribution> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Agent
@@ -2421,7 +2460,32 @@ Familiarity gained by personal experience, vicariously or through collective pro
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#
 <https://openark.adaptcentre.ie/Ontologies/ARKCube#> rdf:type owl:NamedIndividual ,
-                                                              <http://www.w3.org/ns/dcat#Dataset> .
+                                                              <http://www.w3.org/ns/dcat#Catalog> .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#AccessService
+:AccessService rdf:type owl:NamedIndividual ,
+                        <http://www.w3.org/ns/dcat#AccessService> ;
+               <http://www.w3.org/ns/dcat#endpointDescription> "Access Risk Knowledge Cube Ontology - dcat:AccessService definition"@en ;
+               <http://www.w3.org/ns/dcat#endpointURL> <https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl> .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Dataset
+:Dataset rdf:type owl:NamedIndividual ,
+                  <http://www.w3.org/ns/dcat#Dataset> ;
+         <http://purl.org/dc/terms/description> "Access Risk Knowledge Cube Ontology - dcat:Dataset definition"@en ;
+         <http://purl.org/dc/terms/title> "Access Risk Knowledge Cube Ontology - dcat:Dataset definition"@en ;
+         <http://www.w3.org/ns/dcat#distribution> :Distribution .
+
+
+###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Distribution
+:Distribution rdf:type owl:NamedIndividual ,
+                       <http://www.w3.org/ns/dcat#Distribution> ;
+              <http://purl.org/dc/terms/format> "text/turtle" ;
+              <http://www.w3.org/ns/dcat#accessService> :AccessService ;
+              <http://www.w3.org/ns/dcat#accessURL> <https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl> ;
+              <http://www.w3.org/ns/dcat#byteSize> "450KB" ;
+              <http://www.w3.org/ns/dcat#downloadURL> <https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl> .
 
 
 ###  https://openark.adaptcentre.ie/Ontologies/ARKCube#Extreme

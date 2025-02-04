@@ -53,6 +53,9 @@
   "@id" : "http://purl.org/dc/terms/rights",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/ontology/bibo/status",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -80,8 +83,20 @@
   "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://www.w3.org/ns/dcat#AccessService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Catalog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://www.w3.org/ns/dcat#Dataset",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#Distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#accessService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/dcat#accessURL",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -89,7 +104,22 @@
   "@id" : "http://www.w3.org/ns/dcat#byteSize",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://www.w3.org/ns/dcat#dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/ns/dcat#downloadURL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#endpointDescription",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#endpointURL",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/dcat#service",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://www.w3.org/ns/prov#Agent",
@@ -140,21 +170,22 @@
     "@language" : "en",
     "@value" : "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."
   } ],
-  "http://purl.org/dc/terms/format" : [ {
-    "@value" : "text/turtle"
-  } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2024-12-06"
+    "@value" : "2025-02-04"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@value" : "https://openark.adaptcentre.ie"
   } ],
   "http://purl.org/dc/terms/rights" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKControlsOntology#RightsStatement"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Access Risk Knowledge Cube Ontology"
   } ],
   "http://purl.org/ontology/bibo/status" : [ {
     "@id" : "http://purl.org/ontology/bibo/unstable"
@@ -172,7 +203,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+    "@id" : "http://www.w3.org/ns/dcat#Catalog"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -182,25 +213,35 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.83"
+    "@value" : "0.84"
   } ],
   "http://www.w3.org/2003/06/sw-vocab-status/ns#status" : [ {
     "@id" : "http://www.w3.org/2003/06/sw-vocab-status/ns#unstable"
   } ],
-  "http://www.w3.org/ns/dcat#accessURL" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl"
+  "http://www.w3.org/ns/dcat#dataset" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Dataset"
   } ],
-  "http://www.w3.org/ns/dcat#byteSize" : [ {
-    "@value" : "450KB"
-  } ],
-  "http://www.w3.org/ns/dcat#downloadURL" : [ {
-    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl"
+  "http://www.w3.org/ns/dcat#service" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AccessService"
   } ],
   "https://w3id.org/widoco/vocab#introduction" : [ {
     "@language" : "en",
     "@value" : "The ARK Cube ontology represents the concepts and relationships that are represented in organisational change and its risk. To analyse the organisational change and the risks associated with it, the Centre for Innovative Human Systems, Trinity College Dublin (Prof Nick McDonald and his team) developed the cube methodology which uses a series of questions categorised into project phases, dimensions and aspects of reality. The ARKCube ontology models the cube methodology and modelled the process, content and outcome of such processes (ARK Cube ontology)."
   } ],
   "https://w3id.org/widoco/vocab#rdfxmlSerialization" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AccessService",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#AccessService"
+  } ],
+  "http://www.w3.org/ns/dcat#endpointDescription" : [ {
+    "@language" : "en",
+    "@value" : "Access Risk Knowledge Cube Ontology - dcat:AccessService definition"
+  } ],
+  "http://www.w3.org/ns/dcat#endpointURL" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl"
   } ]
 }, {
@@ -421,6 +462,23 @@
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AspectOfReality"
   } ]
 }, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Dataset",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "Access Risk Knowledge Cube Ontology - dcat:Dataset definition"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Access Risk Knowledge Cube Ontology - dcat:Dataset definition"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Dataset"
+  } ],
+  "http://www.w3.org/ns/dcat#distribution" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Distribution"
+  } ]
+}, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Deliverable",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
@@ -485,6 +543,27 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Stage"
+  } ]
+}, {
+  "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Distribution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/format" : [ {
+    "@value" : "text/turtle"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/dcat#Distribution"
+  } ],
+  "http://www.w3.org/ns/dcat#accessService" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#AccessService"
+  } ],
+  "http://www.w3.org/ns/dcat#accessURL" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl"
+  } ],
+  "http://www.w3.org/ns/dcat#byteSize" : [ {
+    "@value" : "450KB"
+  } ],
+  "http://www.w3.org/ns/dcat#downloadURL" : [ {
+    "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube/ontology.ttl"
   } ]
 }, {
   "@id" : "https://openark.adaptcentre.ie/Ontologies/ARKCube#Efficacy",
